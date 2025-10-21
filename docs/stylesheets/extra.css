@@ -7,7 +7,7 @@
 [data-md-color-scheme="slate"] {
     --md-primary-fg-color:        #0077b6;
 
-    // Default color shades 
+    /* Default color shades */
    --md-default-fg-color:               hsla(0, 0%, 100%, 1); 
    --md-default-fg-color--light:        hsla(0, 0%, 100%, 0.87); 
    --md-default-fg-color--lighter:      hsla(0, 0%, 100%, 0.32); 
@@ -17,19 +17,19 @@
    --md-default-bg-color--lighter:      hsla(232, 15%, 21%, 0.26); 
    --md-default-bg-color--lightest:     hsla(232, 15%, 21%, 0.07); 
   
-   // Code color shades 
+   /* Code color shades */
    --md-code-bg-color:                  hsla(232, 15%, 18%, 1); 
    --md-code-fg-color:                  hsla(60, 30%, 96%, 1); 
   
-   // Text color shades 
+   /* Text color shades */
    --md-text-color:                     var(--md-default-fg-color--light); 
    --md-text-link-color:                var(--md-primary-fg-color); 
   
-   // Admonition color shades 
+   /* Admonition color shades */
    --md-admonition-bg-color:            hsla(0, 0%, 100%, 0.025); 
    --md-admonition-fg-color:            var(--md-default-fg-color); 
   
-   // Footer color shades 
+   /* Footer color shades */
    --md-footer-bg-color:                hsla(232, 15%, 12%, 0.87); 
    --md-footer-bg-color--dark:          hsla(232, 15%, 10%, 1); 
   }
@@ -57,5 +57,79 @@
   max-width: none;
 }
 
+/* Centrar tablas */
+.md-typeset table {
+  margin: 0 auto !important;
+  display: table !important;
+}
 
+.md-typeset .centered-table {
+  margin: 0 auto !important;
+}
+
+/* Centrar específicamente la tabla de conectores coaxiales */
+.md-typeset table:has(th:contains("Conector macho")) {
+  margin: 0 auto !important;
+}
+
+/* Aumentar tamaño de fuente para encabezados H3, H4 y H5 */
+.md-typeset h3 {
+  font-size: 1.4em !important;
+}
+
+.md-typeset h4 {
+  font-size: 1.3em !important;
+}
+
+.md-typeset h5 {
+  font-size: 1.2em !important;
+}
+
+.md-typeset h6 {
+  font-size: 1.1em !important;
+}
+
+/* Estilos para el mapa embebido de cables submarinos */
+.map-container {
+  position: relative;
+  background: #f8f9fa;
+  border: 2px solid #0077b6 !important;
+  border-radius: 8px !important;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15) !important;
+  margin: 20px 0 !important;
+}
+
+.map-container iframe {
+  border: none !important;
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 600px;
+}
+
+/* Fallback para navegadores que no soportan iframe */
+.map-container::before {
+  content: "🌐 Cargando mapa interactivo...";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #0077b6;
+  font-size: 1.2em;
+  z-index: 1;
+}
+
+.map-container iframe:not([src=""])::before {
+  display: none;
+}
+
+/* Responsive para dispositivos móviles */
+@media (max-width: 768px) {
+  .map-container {
+    height: 400px !important;
+  }
   
+  .map-container iframe {
+    min-height: 400px;
+  }
+}

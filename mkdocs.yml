@@ -1,19 +1,26 @@
-site_name: Redes de Area Local
+site_name: Redes de Área Local
+site_description: Apuntes para el módulo profesional de Redes de Área Local del ciclo formativo de grado medio de Sistemas Microinformáticos y Redes.
+# site_author: Francisco Javier Hernández Illán
+# site_favicon: imagenes/ral.svg
 site_url: https://fjavier-hernandez.github.io/ral/
 use_directory_urls: false
 
 nav:
   - "Inicio": "index.md"
-  # - "1.- UD1. ShellScripting":
-  # - "2.- UD2: PowerShell":
-  # - "3.- UD3: Administración de procesos del sistema":
-  # - "4.- Servicios de Directorio Libres: LDAP":
-  # - "5.- Servicios de Directorio Propietarios: Active Directory":
-  # - "6.- Integración de sistemas operativos en red libres y propietarios":
-  # - "7.- Información del sistema":
-  # - "8.- Servicios de acceso y administración remota":
-  # - "9.- Administración de Servidores de Impresión":
-  - Tags: "tags.md"
+  - "1. Introducción a las redes": "01ir.md"
+  - "2. Arquitecturas de redes": "02arquitecturas.md"
+  - "3. Capa física": "03fisica.md"
+  # - "4. Sistemas de Cableado estructurado": "04estructurado.md"
+  # - "5. Capa de Enlace": "05enlace.md"
+  # - "6. Capa de red": "06red.md"
+  # - "7. Enrutamiento, Subnetting y VLANs": "07enrutamiento.md"
+  # - "8. Capa de transporte": "08transporte.md"
+  # - "9. NAT y Protocolo IPv6": "09nat_ipv6.md"
+  # - "10. Capa de aplicación": "10aplicacion.md"
+  # - "11. Resolución de conflictos en una red local": "11conflictos.md"
+  # - "12. Protección, vigilancia y soporte de redes": "12proteccion.md"
+
+  # - Tags: "tags.md"
 
 theme:
   language: es

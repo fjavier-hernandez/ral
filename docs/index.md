@@ -53,7 +53,7 @@ A continuación, en la siguiente tabla y a modo de mapa general, se muestran las
 
 | Unidades de Trabajo   | RA1 | RA2 | RA3 | RA4 | RA5 | RA6 |
 |-----------------------|:---:|:---:|:---:|:---:|:---:|:---:|
-| [1. Introducción a las redes]()                     | X   |     |     |     |     |     |
+| [1. Introducción a las redes](01ir.md)                     | X   |     |     |     |     |     |
 | [2. Arquitecturas de redes]()                       | X   |     |     |     |     |     |
 | [3. Capa física]()                                  |     | X   | X   | X   |     |    |
 | [4. Sistemas de Cableado estructurado]()            | X   | X   | X   |     |     |    |
@@ -68,7 +68,7 @@ A continuación, en la siguiente tabla y a modo de mapa general, se muestran las
 | **Total - 233 h** <br> **Porcentaje**                          | X<br>15% | X<br>15%  | X<br>20% | X<br>20% | X<br>15%  | X<br>15% | X<br>15%  | 
 
 
-```mermaid
+``` mermaid
 timeline
     title Planificación temporal - Redes de Área Local
     section 1ª Evaluación
@@ -81,7 +81,6 @@ timeline
     section 3ª Evaluación
         Transporte: NAT/IPv6 : 9.- NAT y Protocolo IPv6
         Aplicación : 10.- Capa de aplicación: 11.- Resolución de conflictos en una red local: 12.- Protección, vigilancia y soporte de redes
-
 ```
 
 ## Evaluación
