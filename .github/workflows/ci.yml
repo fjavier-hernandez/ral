@@ -25,7 +25,9 @@ jobs:
         with:
           key: ${{ github.ref }}
           path: .cache
-      - run: pip install mkdocs-material mkdocs-print-site-plugin mkdocs-tags-plugin mkdocs-social-plugin
+      - run: pip install mkdocs-material
+      - run: pip install mkdocs-print-site-plugin
+      - run: pip install mkdocs-social-plugin
       - run: mkdocs build
       - uses: actions/upload-pages-artifact@v3
         with:
