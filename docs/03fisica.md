@@ -1,7 +1,6 @@
 ---
 title: Capa Física - Infraestructura y Elementos de Red
 description: Medios de transmisión, cableado en edificios para redes locales y Elementos de una Red.
-subtitle: Infraestructura de Red y Elementos de una Red.
 ---
 
 # :material-power-plug: CAPA FÍSICA
