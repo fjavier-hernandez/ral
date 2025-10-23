@@ -1,7 +1,6 @@
 ---
 title: Arquitecturas - Arquitecturas de las Redes
 description: Normlización de las redes, arquitecturas de las comunicaciones y Esquemas LAN.
-subtitle: Introducción Redes
 # tags:
 #     - Arquitecturas Redes
 #     - RA1
