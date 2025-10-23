@@ -260,17 +260,6 @@ Los conectores más utilizados en redes de datos son:
 
 La posición de los cables en el conector, llamada de forma técnica **terminación**, está regulada en la norma **TIA/EIA-568-B**. Esta norma define dos terminaciones:
 
-<!-- | Pin | T568A | T568B | Par T568A | Par T568B |
-|-----|-------|-------|-----------|-----------|
-| 1 | Blanco/Verde | Blanco/Naranja | Par 3 | Par 2 |
-| 2 | Verde | Naranja | Par 3 | Par 2 |
-| 3 | Blanco/Naranja | Blanco/Verde | Par 2 | Par 3 |
-| 4 | Azul | Azul | Par 1 | Par 1 |
-| 5 | Blanco/Azul | Blanco/Azul | Par 1 | Par 1 |
-| 6 | Naranja | Verde | Par 2 | Par 3 |
-| 7 | Blanco/Marrón | Blanco/Marrón | Par 4 | Par 4 |
-| 8 | Marrón | Marrón | Par 4 | Par 4 | -->
-
 <figure>
   <img src="imagenes/T568.png" alt="Esquema de las terminaciones T568A y T568B">
   <figcaption>Esquema de las terminaciones de los pares en un conector RJ-45 (T568A y T568B)</figcaption>
@@ -337,14 +326,6 @@ El **cable coaxial** está compuesto por dos conductores concéntricos que compa
 ##### 📊 Tipos de cable coaxial
 
 De toda la familia de cables coaxiales, los más extendidos en el ámbito de las telecomunicaciones son:
-
-<!-- | Tipo de cable | Núcleo | Dieléctrico | Aplicaciones |
-|---------------|--------|-------------|--------------|
-| **RG-58/U** | Cobre sólido (diámetro: 0,9 mm) | Polietileno | Redes Ethernet 10BASE2 (obsoleto) |
-| **RG-58A/U** | Hilos trenzados (19 hilos de 0,18 mm) | Polietileno | Redes Ethernet 10BASE2 (obsoleto) |
-| **RG-59/U** | Cobre sólido (diámetro: 0,60 mm) | Polietileno de baja densidad | Televisión por cable |
-| **RG-6/U** | Cobre rojo sólido (diámetro: 0,75 mm) | Polietileno de baja densidad | Televisión por cable, Internet por cable |
-| **RG-8** | Cobre rojo sólido (diámetro: 2,18 mm) | Polietileno de baja densidad | Redes Ethernet 10BASE5 (obsoleto) | -->
 
 <figure>
   <img src="imagenes/conectores_Coaxial.png" alt="Tipos de cable coaxial">
@@ -486,16 +467,6 @@ La **protección física** de estos cables es una prioridad estratégica, ya que
 - **Zonas de exclusión**: Áreas protegidas alrededor de puntos críticos
 - **Respuesta rápida**: Equipos especializados para reparaciones urgentes
 
-<!-- **Futuro de la infraestructura submarina:**
-
-La demanda creciente de conectividad impulsa **innovaciones tecnológicas** como:
-- **Cables de mayor capacidad**: Tecnologías de multiplexación avanzada
-- **Rutas polares**: Conexiones a través del Ártico para reducir latencia
-- **Cables inteligentes**: Sensores integrados para monitoreo en tiempo real
-- **Reparación autónoma**: Sistemas robóticos para mantenimiento submarino
-
-Esta infraestructura submarina no solo conecta continentes, sino que **moldea la geografía digital del siglo XXI**, determinando qué regiones tienen acceso privilegiado a la conectividad global y influyendo en el desarrollo económico y tecnológico de naciones enteras. -->
-
 ##### 📊 Ventajas y desventajas
 
 **✅ Ventajas:**
@@ -578,14 +549,6 @@ Los cables de fibra óptica se clasifican según su diseño estructural en dos t
 - Mayor facilidad de instalación en espacios reducidos
 - Menor resistencia a la tensión que la estructura holgada
 
-
-
-<!-- **Comparación general:**
-
-La estructura de un cable de fibra óptica puede representarse mediante esquemas que muestran la disposición de estos componentes según el tipo de diseño empleado. -->
-
-
-
 ###### 📊 Clasificación según estándares
 
 La fibra óptica se encuentra estandarizada en la norma **TIA/EIA-568-C**, que define los siguientes tipos:
@@ -614,16 +577,6 @@ Los conectores de fibra óptica también son variados. Sirven para los dos tipos
 
 Los principales tipos de conector para fibra óptica que podemos encontrar en redes son:
 
-<!-- | Conector | Sistema | Nº fibras | Aplicaciones típicas |
-|----------|---------|----------|---------------------|
-| **ST** | Anclaje en giro | 1 | Redes de área local |
-| **FC** | Rosca | 1 | Redes de datos y telecomunicaciones |
-| **SC** | Presión | 1 | Circuito de TV, comprobación de equipos |
-| **LC** | Anclaje con pestaña | 1 | Redes Gigabit Ethernet, multimedia |
-| **MU** | Presión | 1 | Fines médicos y militares |
-| **MT-RJ** | Anclaje con pestaña | 2 | Redes Gigabit Ethernet, redes ATM |
-| **MPO** | Presión (grupos de 4 a 24) | 4-24 | Redes con alto número de conexiones | -->
-
 <figure>
   <img src="imagenes/conectores_Foptica.png" alt="Conectores de fibra óptica">
   <figcaption>Diferentes tipos de conectores de fibra óptica utilizados en redes</figcaption>
@@ -648,55 +601,110 @@ La siguiente imagen ilustra el espectro electromagnético, mostrando cómo cada 
 
 ##### 📡 Bandas de frecuencia
 
-El espectro electromagnético está controlado por las autoridades locales en materia de telecomunicaciones. Los dispositivos inalámbricos trabajan en una banda de frecuencia concreta, que lleva asociada un ancho de banda:
+Las **bandas de frecuencia** son como "carriles" en una autopista. Cada tecnología inalámbrica (Wi-Fi, móvil, radio) tiene su propio "carril" para evitar interferencias.
 
-| Banda de frecuencia | Frecuencia | Longitud de onda | Aplicaciones |
-|-------------------|------------|------------------|--------------|
-| **ELF** (Extremely Low Frequency) | < 3 kHz | > 100 km | Comunicaciones submarinas |
-| **VLF** (Very Low Frequency) | 3 - 30 kHz | 100 - 10 km | Navegación, radio AM |
-| **LF** (Low Frequency) | 30 - 300 kHz | 10 - 1 km | Radio AM de onda larga |
-| **MF** (Medium Frequency) | 300 kHz - 3 MHz | 1 km - 100 m | Radio AM de onda media |
-| **HF** (High Frequency) | 3 - 30 MHz | 100 - 10 m | Radio AM de onda corta |
-| **VHF** (Very High Frequency) | 30 - 300 MHz | 10 - 1 m | Radio FM, TV analógica |
-| **UHF** (Ultra High Frequency) | 300 MHz - 3 GHz | 1 m - 10 cm | TV digital, telefonía móvil |
-| **SHF** (Super High Frequency) | 3 - 30 GHz | 10 - 1 cm | Satélites, radar |
-| **EHF** (Extremely High Frequency) | 30 - 300 GHz | 1 - 0,1 cm | Comunicaciones militares |
+**¿Por qué es importante?**
 
+Imagina que todas las tecnologías usaran la misma frecuencia:
 
+- ❌ La radio interferiría con el Wi-Fi
+- ❌ Los móviles bloquearían la televisión
+- ❌ Sería un caos total
 
-!!! info "<span style='font-size: 1.4em;'><strong>REGULACIÓN EN ESPAÑA</strong></span>"
-    <span style="font-size: 1.3em;">
-    En España esta regulación la ejerce el Ministerio de Industria, Energía y Turismo, a través de la Secretaría de Estado de Telecomunicaciones, de acuerdo a los tratados de las organizaciones internacionales.
-    </span>
+**Solución:**
 
-## 📡 **¿Por qué es importante conocer las bandas de frecuencia?**
+- ✅ Cada tecnología tiene su frecuencia asignada
+- ✅ El gobierno controla qué frecuencia usa cada servicio
+- ✅ Así todo funciona sin problemas
 
-Las **bandas de frecuencia** son como "carriles" en una autopista del espectro electromagnético. Cada banda tiene características específicas que la hacen ideal para ciertos tipos de comunicación.
+**Ejemplos de frecuencias:**
 
-### **🎯 ¿Cómo funciona la asignación de frecuencias?**
+- **Radio AM**: 530-1600 kHz (frecuencias bajas)
+- **Radio FM**: 88-108 MHz (frecuencias medias)
+- **Wi-Fi**: 2.4 GHz y 5 GHz (frecuencias altas)
+- **Móvil 4G/5G**: 700 MHz - 3.5 GHz
 
-**Analogía práctica:**
-Imagina el espectro electromagnético como una **gran autopista de comunicación**. Cada banda de frecuencia es un "carril" específico donde circulan diferentes tipos de señales:
+###### 📑 **Regulación en España:**
 
-- **🛥️ Carril de baja velocidad (VLF/LF)**: Para comunicaciones submarinas y navegación
-- **🚗 Carril medio (MF/HF)**: Para radio AM y comunicaciones de larga distancia  
-- **🏎️ Carril rápido (VHF/UHF)**: Para radio FM, TV y comunicaciones locales
-- **🚁 Carril ultrarrápido (SHF/EHF)**: Para Wi-Fi, satélites y radar
+La atribución de bandas de frecuencias se recoge en el **Cuadro Nacional de Atribución de Frecuencias (CNAF)**, documento oficial disponible en la [página web del Ministerio de Industria, Energía y Turismo](https://avance.digital.gob.es/espectro/Paginas/cnaf.aspx). Es importante verificar la compatibilidad de dispositivos entre países, ya que las asignaciones pueden variar según la normativa local.
 
-### **⚖️ ¿Por qué hay regulación?**
+A continuación se resumen las **principales bandas de frecuencia** utilizadas en las comunicaciones inalámbricas:
 
-**Problema sin regulación:**
-Sin una organización clara, sería como tener todos los vehículos circulando por cualquier carril sin orden, causando:
-- **Interferencias**: Las señales se mezclarían y se bloquearían entre sí
-- **Ineficiencia**: No se aprovecharía bien el espacio disponible
-- **Caos**: Imposible usar servicios como radio, TV o móvil
+<div class="grid cards" markdown>
 
-**Solución con regulación:**
-- **Asignación específica**: Cada servicio tiene su banda reservada
-- **Uso ordenado**: Evita interferencias entre diferentes tecnologías
-- **Eficiencia máxima**: Aprovecha todo el espectro disponible
+-   :material-radio:{ .lg .middle } **Radioondas**
 
-### **📋 Ejemplos prácticos:**
+    ---
+
+    | Banda | Aplicación |
+    |-------|------------|
+    | VLF | Comunicaciones en navegación y submarinos |
+    | LF | Radio AM de onda larga |
+    | MF | Radio AM de onda media |
+    | HF | Radio AM de onda corta |
+    | VHF | Radio FM |
+    | UHF | TDT (Televisión Digital Terrestre) |
+
+-   :material-satellite-variant:{ .lg .middle } **Microondas**
+
+    ---
+
+    | Banda | Aplicación |
+    |-------|------------|
+    | SHF | Bluetooth y ZigBee (redes WPAN) |
+    | | Comunicaciones con radares |
+    | | Redes WLAN y WiMAX |
+    | | TV por satélite |
+    | | Transmisión telefónica |
+
+-   :material-remote:{ .lg .middle } **Infrarrojos**
+
+    ---
+
+    | Banda | Aplicación |
+    |-------|------------|
+    | IR | Mandos a distancia |
+    | | Sistemas de control domótico |
+    | | Comunicación entre dispositivos |
+
+-   :material-wifi:{ .lg .middle } **Banda ISM**
+
+    ---
+
+    | Banda | Aplicación |
+    |-------|------------|
+    | 2,4 GHz | Wi-Fi, Bluetooth |
+    | 5 GHz | Wi-Fi de alta velocidad |
+    | 868 MHz | Dispositivos IoT (Europa) |
+    | 915 MHz | Aplicaciones industriales (América) |
+
+-   :material-lightbulb:{ .lg .middle } **Luz Visible**
+
+    ---
+
+    | Banda | Aplicación |
+    |-------|------------|
+    | 400-700 nm | Comunicaciones ópticas |
+    | | Fibra óptica |
+    | | Láser de comunicación |
+    | | Sistemas Li-Fi |
+    | | Comunicación submarina |
+
+-   :material-atom:{ .lg .middle } **Rayos X/Gamma**
+
+    ---
+
+    | Banda | Aplicación |
+    |-------|------------|
+    | 10⁻¹⁰ - 10⁻¹² m | Comunicaciones espaciales |
+    | | Telescopios espaciales |
+    | | Comunicación interplanetaria |
+    | | Investigación astronómica |
+    | | Sistemas de navegación espacial |
+
+</div>
+
+###### **📋 Ejemplos prácticos:**
 
 | Servicio | Banda asignada | ¿Por qué esta banda? |
 |----------|----------------|----------------------|
@@ -705,9 +713,635 @@ Sin una organización clara, sería como tener todos los vehículos circulando p
 | **Wi-Fi** | 2.4 GHz / 5 GHz | Balance entre alcance y velocidad |
 | **Móvil 4G/5G** | 700 MHz - 3.5 GHz | Optimizado para datos |
 
-A continuación se describen las **principales bandas de frecuencia** utilizadas en las comunicaciones inalámbricas:
+##### 🌐 Estándares inalámbricos
 
-###### 📻 Radioondas
+La gran mayoría de los estándares inalámbricos están desarrollados por el grupo de trabajo **IEEE 802** del Instituto de Ingenieros Eléctricos y Electrónicos. Estos estándares definen las especificaciones técnicas para diferentes tipos de redes inalámbricas, garantizando la interoperabilidad entre dispositivos de diferentes fabricantes.
+
+Los estándares IEEE 802 se organizan según el tipo de red y su alcance:
+
+- **802.11**: Redes de área local inalámbricas (WLAN)
+- **802.15**: Redes de área personal inalámbricas (WPAN)
+- **802.16**: Redes de área metropolitana inalámbricas (WMAN)
+- **802.20**: Redes de área amplia inalámbricas (WWAN)
+
+###### 📱 Estándar para redes WPAN (IEEE 802.15)
+
+El estándar **IEEE 802.15** define las especificaciones para redes de área personal inalámbricas (WPAN), diseñadas para comunicaciones de corta distancia entre dispositivos personales. Se divide en varios grupos especializados:
+
+**Grupos principales:**
+
+<div class="grid cards" markdown>
+
+-   **🔵 IEEE 802.15.1**
+
+    ---
+
+    **Bluetooth**
+    
+    Tecnología más extendida para comunicaciones de corta distancia entre dispositivos personales.
+
+-   **📱 IEEE 802.15.3**
+
+    ---
+
+    **NFC (Near Field Communication)**
+    
+    Tecnología para pagos móviles y transferencia de datos a muy corta distancia.
+
+-   **🕸️ IEEE 802.15.4**
+
+    ---
+
+    **ZigBee**
+    
+    Protocolo para redes de sensores de baja potencia y dispositivos IoT.
+
+</div>
+
+> Los estándares WPAN (como Bluetooth, NFC o ZigBee) permiten la comunicación inalámbrica eficiente entre dispositivos personales próximos, adaptándose a distintas necesidades del entorno digital cotidiano. A continuación, se describen.
+
+🔵 **Bluetooth (IEEE 802.15.1)**
+
+**Bluetooth** es la tecnología que usamos para conectar dispositivos sin cables. Es muy común en nuestros móviles, auriculares, ratones, teclados, etc.
+
+**¿Para qué sirve Bluetooth?**
+
+- **Auriculares**: Conectar cascos inalámbricos al móvil
+- **Ratón y teclado**: Conectar periféricos al ordenador
+- **Altavoces**: Conectar altavoces portátiles
+- **Transferir archivos**: Enviar fotos entre móviles
+
+**Características principales:**
+
+- **Distancia**: Funciona hasta 10 metros aproximadamente
+- **Velocidad**: Rápido para audio y archivos pequeños
+- **Consumo**: Bajo consumo de batería
+- **Fácil**: Se conecta automáticamente
+
+**Tipos de Bluetooth:**
+
+- **Bluetooth básico**: Para auriculares y dispositivos simples
+- **Bluetooth de baja energía**: Para smartwatches y dispositivos que duran mucho con batería
+
+**Versiones principales:**
+
+<div class="grid cards" markdown>
+
+-   **📱 Bluetooth 1.x**
+
+    ---
+
+    **Versión Básica**
+    
+    | Característica | Especificación |
+    |----------------|----------------|
+    | **Velocidad** | 1 Mbps |
+    | **Año** | 1999-2001 |
+    | **Aplicación** | Datos básicos |
+    | **Limitación** | Velocidad baja |
+
+-   **⚡ Bluetooth 2.0 + EDR**
+
+    ---
+
+    **Enhanced Data Rate**
+    
+    | Característica | Especificación |
+    |----------------|----------------|
+    | **Velocidad** | 3 Mbps |
+    | **Año** | 2004 |
+    | **Mejora** | Triple velocidad |
+    | **Uso** | Audio, datos |
+
+-   **🚀 Bluetooth 3.0 + HS**
+
+    ---
+
+    **High Speed**
+    
+    | Característica | Especificación |
+    |----------------|----------------|
+    | **Velocidad** | 24 Mbps |
+    | **Año** | 2009 |
+    | **Tecnología** | Wi-Fi asistido |
+    | **Aplicación** | Transferencias grandes |
+
+-   **🔋 Bluetooth 4.0**
+
+    ---
+
+    **Low Energy (BLE)**
+    
+    | Característica | Especificación |
+    |----------------|----------------|
+    | **Enfoque** | Baja energía |
+    | **Año** | 2010 |
+    | **Aplicación** | IoT, wearables |
+    | **Ventaja** | Batería extendida |
+
+-   **🔥 Bluetooth 5.0**
+
+    ---
+
+    **Mayor Alcance y Velocidad**
+    
+    | Característica | Especificación |
+    |----------------|----------------|
+    | **Alcance** | 4x mayor |
+    | **Velocidad** | 2x mayor |
+    | **Año** | 2016 |
+    | **Aplicación** | IoT avanzado |
+
+-   **📊 Evolución**
+
+    ---
+
+    **Progresión Tecnológica**
+    
+    | Aspecto | Progresión |
+    |---------|------------|
+    | **Velocidad** | 1 → 3 → 24 Mbps |
+    | **Energía** | Alta → Baja |
+    | **Alcance** | Corto → Extendido |
+    | **Uso** | Datos → IoT |
+
+</div>
+
+📱 **NFC (IEEE 802.15.3)**
+
+**NFC** significa "Near Field Communication" (Comunicación de Campo Cercano). Es la tecnología que usamos para pagar con el móvil o pasar información entre dispositivos.
+
+**¿Para qué sirve NFC?**
+
+- **Pagos móviles**: Pagar con el móvil acercándolo al terminal
+- **Tarjetas de visita**: Pasar contactos entre móviles
+- **Acceso**: Abrir puertas o acceder a lugares
+- **Etiquetas inteligentes**: Leer información de etiquetas NFC
+
+**Características principales:**
+
+- **Distancia**: Muy corta (1-4 centímetros)
+- **Velocidad**: Rápida para datos pequeños
+- **Seguridad**: Muy segura para pagos
+- **Fácil**: Solo acercar el dispositivo
+
+**Ejemplos de uso:**
+
+- ✅ Pagar en el supermercado con el móvil
+- ✅ Pasar una foto entre móviles tocándolos
+- ✅ Leer información de un cartel con NFC
+- ✅ Abrir la puerta del trabajo con el móvil
+
+###### 📶 Wi-Fi (IEEE 802.11)
+
+**Wi-Fi** es la tecnología que usamos para conectarnos a Internet sin cables en casa, trabajo, cafeterías, etc. Es la forma más común de conectarse a Internet de forma inalámbrica.
+
+**¿Qué significa Wi-Fi?**
+
+- **Wi-Fi** = "Wireless Fidelity" (Fidelidad Inalámbrica)
+- Permite conectar dispositivos a Internet sin cables
+- Funciona mediante ondas de radio (como la radio FM)
+
+**¿Por qué es importante?**
+
+- **Universal**: Casi todos los dispositivos tienen Wi-Fi
+- **Fácil**: Se conecta automáticamente cuando está cerca
+- **Rápido**: Permite navegar por Internet a alta velocidad
+- **Práctico**: No necesitas cables para conectarte
+
+**Evolución de los estándares Wi-Fi:**
+
+<div class="grid cards" markdown>
+
+-   **📱 IEEE 802.11a**
+
+    ---
+
+    **Wi-Fi 2 (1999)**
+    
+    | Característica | Especificación |
+    |----------------|----------------|
+    | **Bandas** | Solo 5 GHz |
+    | **Velocidad** | Hasta 54 Mbps |
+    | **Tecnología** | OFDM, 12 canales |
+    | **Ventaja** | Menos interferencias |
+
+-   **📶 IEEE 802.11g**
+
+    ---
+
+    **Wi-Fi 3 (2003)**
+    
+    | Característica | Especificación |
+    |----------------|----------------|
+    | **Bandas** | Solo 2,4 GHz |
+    | **Velocidad** | Hasta 54 Mbps |
+    | **Tecnología** | OFDM |
+    | **Compatibilidad** | Con 802.11b |
+
+-   **📡 IEEE 802.11n**
+
+    ---
+
+    **Wi-Fi 4 (2009)**
+    
+    | Característica | Especificación |
+    |----------------|----------------|
+    | **Bandas** | 2,4 GHz y 5 GHz |
+    | **Velocidad** | Hasta 600 Mbps |
+    | **Tecnología** | MIMO, canales 40 MHz |
+    | **Compatibilidad** | Retrocompatible |
+
+-   **🚀 IEEE 802.11ac**
+
+    ---
+
+    **Wi-Fi 5 (2013)**
+    
+    | Característica | Especificación |
+    |----------------|----------------|
+    | **Bandas** | Solo 5 GHz |
+    | **Velocidad** | Hasta 6,77 Gbps |
+    | **Tecnología** | MU-MIMO, 160 MHz |
+    | **Modulación** | 256-QAM |
+
+-   **⚡ IEEE 802.11ax**
+
+    ---
+
+    **Wi-Fi 6 (2019)**
+    
+    | Característica | Especificación |
+    |----------------|----------------|
+    | **Bandas** | 2,4/5/6 GHz |
+    | **Velocidad** | Hasta 9,6 Gbps |
+    | **Tecnología** | OFDMA, TWT |
+    | **Optimización** | IoT, interferencias |
+
+-   **🔥 IEEE 802.11be**
+
+    ---
+
+    **Wi-Fi 7 (2024)**
+    
+    | Característica | Especificación |
+    |----------------|----------------|
+    | **Bandas** | 2,4/5/6 GHz |
+    | **Velocidad** | Hasta 46 Gbps |
+    | **Tecnología** | Multi-Link, 320 MHz |
+    | **Modulación** | 4096-QAM |
+
+</div>
+
+###### 🌐 WiMAX (IEEE 802.16)
+
+**WiMAX** es una tecnología inalámbrica que permite conexión a Internet de alta velocidad en áreas amplias (ciudades o regiones). Su nombre completo es "Worldwide Interoperability for Microwave Access".
+
+**¿Para qué sirve WiMAX?**
+
+- **Internet rural**: Llevar conexión a zonas donde no llega la fibra óptica
+- **Conexión empresarial**: Para empresas que necesitan conexión estable
+- **Emergencias**: Comunicaciones en situaciones de crisis
+
+**Características principales:**
+
+- **Alcance**: Puede cubrir hasta 50 km de distancia
+- **Velocidad**: Hasta 75 Mbps (similar a fibra óptica)
+- **Instalación**: Más rápida que tender cables de fibra
+
+**Tipos de WiMAX:**
+
+**WiMAX Fijo:**
+
+- Se instala en edificios (como una antena de TV)
+- Conexión permanente y estable
+- Ideal para casas y empresas
+
+**WiMAX Móvil:**
+
+- Funciona con dispositivos portátiles
+- Permite moverse mientras se mantiene la conexión
+- Similar a la conexión móvil 4G
+
+**Ventajas:**
+
+- ✅ Llega a zonas rurales donde no hay fibra
+- ✅ Instalación más rápida que cables
+- ✅ Buena velocidad de conexión
+
+**Desventajas:**
+
+- ❌ Menos extendido que otras tecnologías
+- ❌ Puede verse afectado por el clima
+- ❌ Requiere antenas especiales
+
+**Evolución de los estándares WiMAX:**
+
+<div class="grid cards" markdown>
+
+-   **📡 IEEE 802.16**
+
+    ---
+
+    **Estándar Original (2001)**
+    
+    | Característica | Especificación |
+    |----------------|----------------|
+    | **Visión** | Línea de visión requerida |
+    | **Aplicación** | Backhaul fijo |
+    | **Tecnología** | Base para WiMAX |
+    | **Limitación** | Solo entornos despejados |
+
+-   **🏠 IEEE 802.16a**
+
+    ---
+
+    **Sin Línea de Visión (2003)**
+    
+    | Característica | Especificación |
+    |----------------|----------------|
+    | **Visión** | Sin línea de visión (NLOS) |
+    | **Aplicación** | Acceso residencial |
+    | **Ventaja** | Mayor flexibilidad |
+    | **Uso** | Entornos urbanos |
+
+-   **🔧 IEEE 802.16d**
+
+    ---
+
+    **WiMAX Fijo (2004)**
+    
+    | Característica | Especificación |
+    |----------------|----------------|
+    | **Tipo** | Fijo, estabilización |
+    | **Aplicación** | WiMAX fijo |
+    | **Estabilidad** | Alta confiabilidad |
+    | **Instalación** | Permanente |
+
+-   **📱 IEEE 802.16e**
+
+    ---
+
+    **WiMAX Móvil (2005)**
+    
+    | Característica | Especificación |
+    |----------------|----------------|
+    | **Movilidad** | Limitada |
+    | **Aplicación** | WiMAX móvil |
+    | **Handover** | Entre estaciones |
+    | **Competencia** | Tecnologías celulares |
+
+-   **🚀 IEEE 802.16m**
+
+    ---
+
+    **4G WiMAX (2011)**
+    
+    | Característica | Especificación |
+    |----------------|----------------|
+    | **Generación** | 4G |
+    | **Velocidad** | Alta velocidad |
+    | **Aplicación** | Competencia LTE |
+    | **Tecnología** | Avanzada |
+
+-   **📊 Comparativa**
+
+    ---
+
+    **Resumen Evolutivo**
+    
+    | Aspecto | Progresión |
+    |---------|------------|
+    | **Visión** | LOS → NLOS |
+    | **Movilidad** | Fijo → Móvil |
+    | **Velocidad** | Básica → 4G |
+    | **Aplicación** | Backhaul → Consumo |
+
+</div>
+
+##### 📱 Redes móviles (WWAN)
+
+Las **redes móviles** son las que usamos en nuestros teléfonos para conectarnos a Internet y hacer llamadas. Han evolucionado mucho desde los primeros teléfonos hasta los actuales.
+
+**¿Qué significa cada generación?**
+
+- **1G**: Los primeros teléfonos móviles (solo voz, muy básicos)
+- **2G**: Teléfonos digitales (voz + SMS)
+- **3G**: Primeros smartphones con Internet básico
+- **4G**: Internet rápido en móviles (como tenemos ahora)
+- **5G**: Internet súper rápido (el futuro)
+
+**¿Por qué es importante el 5G?**
+
+El **5G** promete ser mucho más rápido que el 4G actual, permitiendo:
+- Descargar películas en segundos
+- Jugar online sin retrasos
+- Conectar muchos más dispositivos a la vez
+
+<div class="grid cards" markdown>
+
+-   **📞 1G**
+
+    ---
+
+    **Primera Generación (1980s)**
+    
+    | Característica | Especificación |
+    |----------------|----------------|
+    | **Velocidad** | 2,4 Kb/s |
+    | **Tipo** | Analógico |
+    | **Aplicación** | Solo voz |
+    | **Limitación** | Sin datos |
+
+-   **📱 2G**
+
+    ---
+
+    **Segunda Generación (1990s)**
+    
+    | Característica | Especificación |
+    |----------------|----------------|
+    | **Velocidad** | 64 Kb/s |
+    | **Tipo** | Digital |
+    | **Estándares** | GSM, CDMA |
+    | **Novedad** | SMS |
+
+-   **🌐 3G**
+
+    ---
+
+    **Tercera Generación (2003)**
+    
+    | Característica | Especificación |
+    |----------------|----------------|
+    | **Velocidad** | 2 Mb/s |
+    | **Aplicación** | Voz + datos |
+    | **Novedad** | Internet móvil |
+    | **Uso** | Navegación web |
+
+-   **🚀 4G**
+
+    ---
+
+    **Cuarta Generación (2009)**
+    
+    | Característica | Especificación |
+    |----------------|----------------|
+    | **Velocidad** | 100 Mb/s |
+    | **Tecnología** | LTE |
+    | **Protocolo** | IP |
+    | **Aplicación** | Banda ancha móvil |
+
+-   **⚡ 5G**
+
+    ---
+
+    **Quinta Generación (2020s)**
+    
+    | Característica | Especificación |
+    |----------------|----------------|
+    | **Velocidad** | 1+ Gb/s |
+    | **Latencia** | <1 ms |
+    | **IoT** | Millones dispositivos |
+    | **Aplicación** | Vehículos autónomos |
+
+-   **📊 Comparativa**
+
+    ---
+
+    **Evolución Tecnológica**
+    
+    | Aspecto | Progresión |
+    |---------|------------|
+    | **Velocidad** | Kb/s → Gb/s |
+    | **Tipo** | Analógico → Digital |
+    | **Uso** | Voz → IoT |
+    | **Aplicación** | Básico → Avanzado |
+
+</div>
+
+## 🛠️ Actividades
+
+!!! tip "Formato de entrega"
+    Para la entrega de las actividades, genera un documento con la práctica descrita a continuación. Deberás crear un archivo PDF con el siguiente formato de nombre: <strong>ACXXX.pdf o PRXXX.pdf</strong>, donde las X representan el número de la actividad. Una vez finalizada la práctica, sube el archivo a Aules (antes de la fecha de vencimiento) para su calificación.</span>
+
+<a name="AC301"></a>
+
+* :simple-readdotcv: **AC301**. (RA2 // CE2a, CE2b // 1-3p). Investiga y documenta las diferentes categorías de cable de par trenzado. Elabora una tabla comparativa con sus características, velocidades máximas y aplicaciones típicas.
+
+<a name="AC302"></a>
+
+* :simple-readdotcv: **AC302**. (RA2 // CE2a, CE2b // 1-3p). Investiga y documenta las características del cable coaxial utilizado en redes locales. Elabora un informe que incluya:
+    - Estructura y composición del cable coaxial
+    - Tipos principales de cable coaxial (RG-59, RG-58, RG-6, etc.) y sus aplicaciones
+    - Ventajas y desventajas frente a otros medios de transmisión
+    - Ejemplos de uso en redes de datos actuales y obsoletas
+
+<a name="RG303"></a>
+
+* 🎯 Reto Grupal **RG303**: Crimpado de Cables de Par Trenzado (RA3 // CE3a, CE3b, CE3c, CE3d). Aplica las técnicas de crimpado de conectores RJ-45 en cables de par trenzado, siguiendo los estándares **T568A** y **T568B**, y demuestra la calidad del trabajo mediante pruebas de conectividad y presentación de resultados ante el resto de grupos.
+
+📋 **[Ver detalles completos del reto →](reto_crimpado_cables.md)**
+
+<a name="AC304"></a>
+
+* :simple-readdotcv: **AC304**. (RA2 // CE2a, CE2b // 1-3p). Realiza una investigación sobre la **fibra óptica** como medio de transmisión guiado. Elabora un resumen que incluya:
+* 
+    - Principio de funcionamiento de la fibra óptica
+    - Estructura y tipos principales de fibra óptica (monomodo y multimodo)
+    - Aplicaciones típicas en redes locales y de área amplia
+    - Ventajas y desventajas frente a otros medios (cobre, inalámbricos)
+    - Medidas de seguridad y precauciones en su manipulación
+
+<a name="AC305"></a>
+
+* :simple-readdotcv: **AC305**. (RA2 // CE2a, CE2b // 1-3p). Investiga y documenta los **medios de transmisión no guiados** utilizados en redes de comunicación. Elabora un informe que incluya:
+* 
+    - Definición y ejemplos de medios no guiados (radiofrecuencia, microondas, infrarrojos, satélite, etc.)
+    - Cuadro comparativo con sus características (alcance, bandas de frecuencia, velocidad, aplicaciones)
+    - Ventajas y limitaciones de los principales tipos
+    - Ejemplos reales de uso en redes tanto en interiores como exteriores
+
+<a name="AC306"></a>
+
+* :simple-readdotcv: **AC306**. (RA2 // CE2a, CE2b // 1-3p). Investiga y elabora una infografía o esquema visual que resuma los **medios de transmisión no guiados** utilizados en redes de comunicación, centrándote en los siguientes aspectos:
+
+    - Clasificación de los medios no guiados (radiofrecuencia, microondas, infrarrojos, luz visible, etc.)
+    - Ejemplos representativos de cada tipo y sus aplicaciones (Wi-Fi, Bluetooth, LTE/5G, satélite, ZigBee, WiMAX, infrarrojos, etc.)
+    - Principales **estándares técnicos** asociados a cada medio (por ejemplo: IEEE 802.11 para Wi-Fi, IEEE 802.15 para Bluetooth/ZigBee, IEEE 802.16 para WiMAX, ITU y 3GPP para tecnologías móviles, etc.)
+    - Ámbitos de aplicación: redes personales, locales, metropolitanas, de área amplia, etc.
+    - Puedes complementar con imágenes, iconos y descripciones breves.
+
+<a name="AC307"></a>
+
+* :simple-readdotcv: **AC307**. (RA2 // CE2a, CE2b // 1-3p). Explora la infraestructura mundial de cables submarinos utilizando la herramienta interactiva [Submarine Cable Map](https://www.submarinecablemap.com) y elabora un informe detallado que incluya:
+
+    - **Análisis geográfico**: Identifica y documenta las principales rutas de cables submarinos que conectan España con otros continentes
+    - **Características técnicas**: Selecciona 3 cables submarinos específicos y documenta sus características técnicas (longitud, capacidad, año de instalación, empresas propietarias)
+    - **Puntos de amarre**: Localiza y describe los principales puntos de amarre en territorio español y su importancia estratégica
+    - **Análisis comparativo**: Compara las rutas del Atlántico Norte, Mediterráneo y otras regiones en términos de densidad de cables y capacidad
+    - **Impacto económico**: Investiga cómo estos cables afectan a la economía digital española y europea
+    - **Conclusiones**: Reflexiona sobre la importancia estratégica de esta infraestructura para las comunicaciones globales
+
+    **Formato de entrega**: Documento PDF con capturas de pantalla de la herramienta interactiva, mapas anotados y análisis detallado de cada punto requerido.
+
+---
+
+<!-- ## 📝 Revisar:
+
+- **🛥️ Carril de baja velocidad (VLF/LF)**: Para comunicaciones submarinas y navegación
+- **🚗 Carril medio (MF/HF)**: Para radio AM y comunicaciones de larga distancia  
+- **🏎️ Carril rápido (VHF/UHF)**: Para radio FM, TV y comunicaciones locales
+- **🚁 Carril ultrarrápido (SHF/EHF)**: Para Wi-Fi, satélites y radar  -->
+
+
+<!-- | Pin | T568A | T568B | Par T568A | Par T568B |
+|-----|-------|-------|-----------|-----------|
+| 1 | Blanco/Verde | Blanco/Naranja | Par 3 | Par 2 |
+| 2 | Verde | Naranja | Par 3 | Par 2 |
+| 3 | Blanco/Naranja | Blanco/Verde | Par 2 | Par 3 |
+| 4 | Azul | Azul | Par 1 | Par 1 |
+| 5 | Blanco/Azul | Blanco/Azul | Par 1 | Par 1 |
+| 6 | Naranja | Verde | Par 2 | Par 3 |
+| 7 | Blanco/Marrón | Blanco/Marrón | Par 4 | Par 4 |
+| 8 | Marrón | Marrón | Par 4 | Par 4 | -->
+
+<!-- | Tipo de cable | Núcleo | Dieléctrico | Aplicaciones |
+|---------------|--------|-------------|--------------|
+| **RG-58/U** | Cobre sólido (diámetro: 0,9 mm) | Polietileno | Redes Ethernet 10BASE2 (obsoleto) |
+| **RG-58A/U** | Hilos trenzados (19 hilos de 0,18 mm) | Polietileno | Redes Ethernet 10BASE2 (obsoleto) |
+| **RG-59/U** | Cobre sólido (diámetro: 0,60 mm) | Polietileno de baja densidad | Televisión por cable |
+| **RG-6/U** | Cobre rojo sólido (diámetro: 0,75 mm) | Polietileno de baja densidad | Televisión por cable, Internet por cable |
+| **RG-8** | Cobre rojo sólido (diámetro: 2,18 mm) | Polietileno de baja densidad | Redes Ethernet 10BASE5 (obsoleto) | -->
+
+<!-- **Futuro de la infraestructura submarina:**
+
+La demanda creciente de conectividad impulsa **innovaciones tecnológicas** como:
+- **Cables de mayor capacidad**: Tecnologías de multiplexación avanzada
+- **Rutas polares**: Conexiones a través del Ártico para reducir latencia
+- **Cables inteligentes**: Sensores integrados para monitoreo en tiempo real
+- **Reparación autónoma**: Sistemas robóticos para mantenimiento submarino
+
+Esta infraestructura submarina no solo conecta continentes, sino que **moldea la geografía digital del siglo XXI**, determinando qué regiones tienen acceso privilegiado a la conectividad global y influyendo en el desarrollo económico y tecnológico de naciones enteras. -->
+
+<!-- **Comparación general:**
+
+La estructura de un cable de fibra óptica puede representarse mediante esquemas que muestran la disposición de estos componentes según el tipo de diseño empleado. -->
+
+<!-- | Conector | Sistema | Nº fibras | Aplicaciones típicas |
+|----------|---------|----------|---------------------|
+| **ST** | Anclaje en giro | 1 | Redes de área local |
+| **FC** | Rosca | 1 | Redes de datos y telecomunicaciones |
+| **SC** | Presión | 1 | Circuito de TV, comprobación de equipos |
+| **LC** | Anclaje con pestaña | 1 | Redes Gigabit Ethernet, multimedia |
+| **MU** | Presión | 1 | Fines médicos y militares |
+| **MT-RJ** | Anclaje con pestaña | 2 | Redes Gigabit Ethernet, redes ATM |
+| **MPO** | Presión (grupos de 4 a 24) | 4-24 | Redes con alto número de conexiones | -->
+
+<!-- !!! info "REGULACIÓN EN ESPAÑA"
+    En España esta regulación la ejerce el Ministerio de Industria, Energía y Turismo, a través de la Secretaría de Estado de Telecomunicaciones, de acuerdo a los tratados de las organizaciones internacionales. -->
+
+<!-- ###### 📻 Radioondas
 
 Las radioondas operan entre las bandas ELF (Extremely Low Frequency) y UHF (Ultra High Frequency), cubriendo un amplio rango del espectro electromagnético. Estas ondas se caracterizan por su capacidad de propagación omnidireccional y su resistencia a las condiciones meteorológicas adversas, lo que las convierte en ideales para comunicaciones de larga distancia.
 
@@ -815,252 +1449,8 @@ Los **rayos X** y **rayos gamma** son formas de radiación electromagnética de 
 - **Energía ionizante**: pueden modificar la estructura atómica de los materiales que atraviesan.
 
 !!! warning "Nota"
-    Dada su peligrosidad y capacidad ionizante, no se emplean habitualmente para comunicaciones de datos convencionales, excepto en contextos científicos muy especializados (como comunicación desde sondas espaciales en ciertas circunstancias).
+    Dada su peligrosidad y capacidad ionizante, no se emplean habitualmente para comunicaciones de datos convencionales, excepto en contextos científicos muy especializados (como comunicación desde sondas espaciales en ciertas circunstancias). -->
 
-**Regulación en España:**
-
-La atribución de bandas de frecuencias se recoge en el **Cuadro Nacional de Atribución de Frecuencias (CNAF)**, documento oficial disponible en la [página web del Ministerio de Industria, Energía y Turismo](https://avance.digital.gob.es/espectro/Paginas/cnaf.aspx). Es importante verificar la compatibilidad de dispositivos entre países, ya que las asignaciones pueden variar según la normativa local.
-
-> Las aplicaciones prácticas de las distintas bandas del espectro electromagnético abarcan desde las telecomunicaciones (radio, televisión, telefonía móvil, Wi-Fi o satélites) hasta el control de dispositivos electrónicos y la transmisión de datos mediante tecnologías como los infrarrojos, microondas o la luz visible. A continuación se presentan ejemplos representativos de cada una de estas aplicaciones.
-
-<div class="grid cards" markdown>
-
--   :material-radio:{ .lg .middle } **Radioondas**
-
-    ---
-
-    | Banda | Aplicación |
-    |-------|------------|
-    | VLF | Comunicaciones en navegación y submarinos |
-    | LF | Radio AM de onda larga |
-    | MF | Radio AM de onda media |
-    | HF | Radio AM de onda corta |
-    | VHF | Radio FM |
-    | UHF | TDT (Televisión Digital Terrestre) |
-
--   :material-satellite-variant:{ .lg .middle } **Microondas**
-
-    ---
-
-    | Banda | Aplicación |
-    |-------|------------|
-    | SHF | Bluetooth y ZigBee (redes WPAN) |
-    | | Comunicaciones con radares |
-    | | Redes WLAN y WiMAX |
-    | | TV por satélite |
-    | | Transmisión telefónica |
-
--   :material-remote:{ .lg .middle } **Infrarrojos**
-
-    ---
-
-    | Banda | Aplicación |
-    |-------|------------|
-    | IR | Mandos a distancia |
-    | | Sistemas de control domótico |
-    | | Comunicación entre dispositivos |
-
--   :material-wifi:{ .lg .middle } **Banda ISM**
-
-    ---
-
-    | Banda | Aplicación |
-    |-------|------------|
-    | 2,4 GHz | Wi-Fi, Bluetooth |
-    | 5 GHz | Wi-Fi de alta velocidad |
-    | 868 MHz | Dispositivos IoT (Europa) |
-    | 915 MHz | Aplicaciones industriales (América) |
-
--   :material-lightbulb:{ .lg .middle } **Luz Visible**
-
-    ---
-
-    | Banda | Aplicación |
-    |-------|------------|
-    | 400-700 nm | Comunicaciones ópticas |
-    | | Fibra óptica |
-    | | Láser de comunicación |
-    | | Sistemas Li-Fi |
-    | | Comunicación submarina |
-
--   :material-atom:{ .lg .middle } **Rayos X/Gamma**
-
-    ---
-
-    | Banda | Aplicación |
-    |-------|------------|
-    | 10⁻¹⁰ - 10⁻¹² m | Comunicaciones espaciales |
-    | | Telescopios espaciales |
-    | | Comunicación interplanetaria |
-    | | Investigación astronómica |
-    | | Sistemas de navegación espacial |
-
-</div>
-
-#### 🌐 Estándares inalámbricos
-
-La gran mayoría de los estándares inalámbricos están desarrollados por el grupo de trabajo **IEEE 802** del Instituto de Ingenieros Eléctricos y Electrónicos. Estos estándares definen las especificaciones técnicas para diferentes tipos de redes inalámbricas, garantizando la interoperabilidad entre dispositivos de diferentes fabricantes.
-
-Los estándares IEEE 802 se organizan según el tipo de red y su alcance:
-
-- **802.11**: Redes de área local inalámbricas (WLAN)
-- **802.15**: Redes de área personal inalámbricas (WPAN)
-- **802.16**: Redes de área metropolitana inalámbricas (WMAN)
-- **802.20**: Redes de área amplia inalámbricas (WWAN)
-
-##### 📱 Estándar para redes WPAN (IEEE 802.15)
-
-El estándar **IEEE 802.15** define las especificaciones para redes de área personal inalámbricas (WPAN), diseñadas para comunicaciones de corta distancia entre dispositivos personales. Se divide en varios grupos especializados:
-
-**Grupos principales:**
-
-<div class="grid cards" markdown>
-
--   **🔵 IEEE 802.15.1**
-
-    ---
-
-    **Bluetooth**
-    
-    Tecnología más extendida para comunicaciones de corta distancia entre dispositivos personales.
-
--   **⚡ IEEE 802.15.3**
-
-    ---
-
-    **Ultra Wideband (UWB)**
-    
-    Tecnología de alta velocidad para transmisión de datos de gran ancho de banda.
-
--   **🕸️ IEEE 802.15.4**
-
-    ---
-
-    **ZigBee**
-    
-    Protocolo para redes de sensores de baja potencia y dispositivos IoT.
-
-</div>
-
-###### 🔵 Bluetooth (IEEE 802.15.1)
-
-**Bluetooth** es la tecnología WPAN más utilizada, diseñada para reemplazar cables en comunicaciones de corta distancia. **Destacamos esta tecnología** porque ha logrado una integración universal en dispositivos móviles, ordenadores y accesorios, permitiendo la transmisión inalámbrica de voz, datos y audio de manera eficiente, sencilla y con bajo consumo energético. Además, utiliza una arquitectura de red específica llamada **piconet**.
-
-**Arquitectura de red:**
-
-- **Piconet**: Red de hasta 8 dispositivos (1 maestro + 7 esclavos)
-- **Maestro**: Coordina la comunicación y gestiona los tiempos
-- **Esclavos**: Dispositivos que responden a las solicitudes del maestro
-- **Scatternet**: Red formada por múltiples piconets interconectadas
-
-**Características técnicas:**
-
-- **Frecuencia**: 2,4 GHz (banda ISM)
-- **Ancho de banda**: 79 canales de 1 MHz cada uno
-- **Modulación**: FHSS (Frequency Hopping Spread Spectrum)
-- **Potencia**: Variable según la clase del dispositivo
-
-**Clases de potencia Bluetooth:**
-
-| Clase | Potencia máxima | Rango típico | Aplicaciones |
-|-------|-----------------|--------------|--------------|
-| **Clase 1** | 100 mW (20 dBm) | ~100 m | Dispositivos industriales, puntos de acceso |
-| **Clase 2** | 2,5 mW (4 dBm) | ~10 m | Teléfonos móviles, auriculares |
-| **Clase 3** | 1 mW (0 dBm) | ~1 m | Dispositivos de muy corta distancia |
-
-**Versiones principales:**
-
-<div class="grid cards" markdown>
-
--   **📱 Bluetooth 1.x**
-
-    ---
-
-    **Versión Básica**
-    
-    | Característica | Especificación |
-    |----------------|----------------|
-    | **Velocidad** | 1 Mbps |
-    | **Año** | 1999-2001 |
-    | **Aplicación** | Datos básicos |
-    | **Limitación** | Velocidad baja |
-
--   **⚡ Bluetooth 2.0 + EDR**
-
-    ---
-
-    **Enhanced Data Rate**
-    
-    | Característica | Especificación |
-    |----------------|----------------|
-    | **Velocidad** | 3 Mbps |
-    | **Año** | 2004 |
-    | **Mejora** | Triple velocidad |
-    | **Uso** | Audio, datos |
-
--   **🚀 Bluetooth 3.0 + HS**
-
-    ---
-
-    **High Speed**
-    
-    | Característica | Especificación |
-    |----------------|----------------|
-    | **Velocidad** | 24 Mbps |
-    | **Año** | 2009 |
-    | **Tecnología** | Wi-Fi asistido |
-    | **Aplicación** | Transferencias grandes |
-
--   **🔋 Bluetooth 4.0**
-
-    ---
-
-    **Low Energy (BLE)**
-    
-    | Característica | Especificación |
-    |----------------|----------------|
-    | **Enfoque** | Baja energía |
-    | **Año** | 2010 |
-    | **Aplicación** | IoT, wearables |
-    | **Ventaja** | Batería extendida |
-
--   **🔥 Bluetooth 5.0**
-
-    ---
-
-    **Mayor Alcance y Velocidad**
-    
-    | Característica | Especificación |
-    |----------------|----------------|
-    | **Alcance** | 4x mayor |
-    | **Velocidad** | 2x mayor |
-    | **Año** | 2016 |
-    | **Aplicación** | IoT avanzado |
-
--   **📊 Evolución**
-
-    ---
-
-    **Progresión Tecnológica**
-    
-    | Aspecto | Progresión |
-    |---------|------------|
-    | **Velocidad** | 1 → 3 → 24 Mbps |
-    | **Energía** | Alta → Baja |
-    | **Alcance** | Corto → Extendido |
-    | **Uso** | Datos → IoT |
-
-</div>
-
-##### 📶 Estándar para redes WLAN (IEEE 802.11)
-
-El estándar **IEEE 802.11** es la base fundamental para las redes de área local inalámbricas (Wi-Fi), representando la referencia principal en conectividad inalámbrica tanto en hogares como en empresas de todo el mundo. 
-
-Su importancia radica en que ha permitido la universalización del acceso inalámbrico a Internet y redes, transformando la forma en que nos comunicamos y trabajamos. 
-
-Gracias a sus continuas actualizaciones desde 1997, ha impulsado avances tecnológicos significativos en velocidad, capacidad y eficiencia, consolidándose como pilar imprescindible de la sociedad conectada actual.
-
-**Evolución de los estándares Wi-Fi:**
 
 <!-- | Estándar | Año | Frecuencia | Velocidad teórica | Características principales |
 |----------|-----|------------|-------------------|----------------------------|
@@ -1074,88 +1464,6 @@ Gracias a sus continuas actualizaciones desde 1997, ha impulsado avances tecnol�
 | **802.11be** | 2024 | 2,4/5/6 GHz | 46 Gbps | Wi-Fi 7, canales 320 MHz | -->
 
 <!-- **Estándares principales detallados:** -->
-
-<div class="grid cards" markdown>
-
--   **📱 IEEE 802.11a**
-
-    ---
-
-    **Wi-Fi 2 (1999)**
-    
-    | Característica | Especificación |
-    |----------------|----------------|
-    | **Bandas** | Solo 5 GHz |
-    | **Velocidad** | Hasta 54 Mbps |
-    | **Tecnología** | OFDM, 12 canales |
-    | **Ventaja** | Menos interferencias |
-
--   **📶 IEEE 802.11g**
-
-    ---
-
-    **Wi-Fi 3 (2003)**
-    
-    | Característica | Especificación |
-    |----------------|----------------|
-    | **Bandas** | Solo 2,4 GHz |
-    | **Velocidad** | Hasta 54 Mbps |
-    | **Tecnología** | OFDM |
-    | **Compatibilidad** | Con 802.11b |
-
--   **📡 IEEE 802.11n**
-
-    ---
-
-    **Wi-Fi 4 (2009)**
-    
-    | Característica | Especificación |
-    |----------------|----------------|
-    | **Bandas** | 2,4 GHz y 5 GHz |
-    | **Velocidad** | Hasta 600 Mbps |
-    | **Tecnología** | MIMO, canales 40 MHz |
-    | **Compatibilidad** | Retrocompatible |
-
--   **🚀 IEEE 802.11ac**
-
-    ---
-
-    **Wi-Fi 5 (2013)**
-    
-    | Característica | Especificación |
-    |----------------|----------------|
-    | **Bandas** | Solo 5 GHz |
-    | **Velocidad** | Hasta 6,77 Gbps |
-    | **Tecnología** | MU-MIMO, 160 MHz |
-    | **Modulación** | 256-QAM |
-
--   **⚡ IEEE 802.11ax**
-
-    ---
-
-    **Wi-Fi 6 (2019)**
-    
-    | Característica | Especificación |
-    |----------------|----------------|
-    | **Bandas** | 2,4/5/6 GHz |
-    | **Velocidad** | Hasta 9,6 Gbps |
-    | **Tecnología** | OFDMA, TWT |
-    | **Optimización** | IoT, interferencias |
-
--   **🔥 IEEE 802.11be**
-
-    ---
-
-    **Wi-Fi 7 (2024)**
-    
-    | Característica | Especificación |
-    |----------------|----------------|
-    | **Bandas** | 2,4/5/6 GHz |
-    | **Velocidad** | Hasta 46 Gbps |
-    | **Tecnología** | Multi-Link, 320 MHz |
-    | **Modulación** | 4096-QAM |
-
-</div>
 
 <!-- ##### 🔄 Tecnología MIMO (Multiple Input, Multiple Output)
 
@@ -1219,251 +1527,6 @@ La tecnología **MIMO** (Multiple Input, Multiple Output) es una técnica de com
 - **Espacio**: Requiere más espacio físico para antenas
 - **Procesamiento**: Mayor complejidad computacional
 - **Compatibilidad**: Dispositivos deben soportar la misma configuración -->
-
-##### 🌐 Estándar para redes WMAN (IEEE 802.16)
-
-El estándar **IEEE 802.16** define las especificaciones para redes de área metropolitana inalámbricas (WMAN), conocidas comercialmente como **WiMAX** (Worldwide Interoperability for Microwave Access). Esta tecnología fue diseñada para proporcionar conectividad de banda ancha inalámbrica de larga distancia.
-
-**Características técnicas principales:**
-
-**Frecuencias de operación:**
-
-- **Bandas licenciadas**: 2,3 - 2,7 GHz, 3,3 - 3,8 GHz
-- **Bandas no licenciadas**: 5,8 GHz (limitado)
-- **Flexibilidad**: Adaptable a diferentes bandas según región
-
-**Capacidades de cobertura:**
-
-- **Alcance típico**: 10-50 km (dependiendo de condiciones)
-- **Cobertura urbana**: 1-5 km con alta densidad
-- **Cobertura rural**: Hasta 50 km en condiciones óptimas
-- **Movilidad**: Soporte para dispositivos en movimiento
-
-**Rendimiento:**
-
-- **Velocidad máxima**: Hasta 75 Mbps (802.16m)
-- **Latencia**: 5-20 ms típica
-- **Eficiencia espectral**: Mejorada con MIMO y OFDMA
-
-###### **Arquitectura de red:**
-
-**Componentes principales:**
-
-- **Base Station (BS)**: Estación base que proporciona cobertura
-- **Subscriber Station (SS)**: Dispositivo del usuario final
-- **Backhaul**: Conexión de la estación base a la red troncal
-- **Gateway**: Punto de acceso a Internet y servicios
-
-**Tipos de despliegue:**
-
-**WiMAX Fijo (802.16d):**
-- Instalación permanente en edificios
-- Antenas direccionales de alta ganancia
-- Mayor alcance y estabilidad
-- Ideal para acceso residencial y empresarial
-
-**WiMAX Móvil (802.16e):**
-- Dispositivos portátiles y móviles
-- Handover entre estaciones base
-- Menor alcance pero mayor movilidad
-- Competencia directa con tecnologías celulares
-
-**Ventajas de WiMAX:**
-
-- **Cobertura amplia**: Ideal para zonas rurales y remotas
-- **Despliegue rápido**: Menor infraestructura que fibra
-- **Flexibilidad**: Adaptable a diferentes necesidades
-- **Calidad de servicio**: Soporte para aplicaciones críticas
-- **Escalabilidad**: Fácil expansión de cobertura
-
-**Limitaciones y desafíos:**
-
-- **Competencia**: Presión de LTE y 5G
-- **Costos**: Inversión inicial significativa
-- **Interferencias**: Sensible a obstáculos físicos
-- **Adopción**: Menor penetración que tecnologías celulares
-- **Espectro**: Dependencia de asignaciones regulatorias
-
-**Aplicaciones actuales:**
-
-- **Acceso rural**: Conectividad en zonas sin fibra
-- **Backhaul**: Conexión de estaciones base celulares
-- **Emergencias**: Comunicaciones de emergencia y seguridad
-- **IoT**: Conectividad para dispositivos industriales
-- **Backup**: Red de respaldo para empresas críticas
-
-**Evolución de los estándares WiMAX:**
-
-<div class="grid cards" markdown>
-
--   **📡 IEEE 802.16**
-
-    ---
-
-    **Estándar Original (2001)**
-    
-    | Característica | Especificación |
-    |----------------|----------------|
-    | **Visión** | Línea de visión requerida |
-    | **Aplicación** | Backhaul fijo |
-    | **Tecnología** | Base para WiMAX |
-    | **Limitación** | Solo entornos despejados |
-
--   **🏠 IEEE 802.16a**
-
-    ---
-
-    **Sin Línea de Visión (2003)**
-    
-    | Característica | Especificación |
-    |----------------|----------------|
-    | **Visión** | Sin línea de visión (NLOS) |
-    | **Aplicación** | Acceso residencial |
-    | **Ventaja** | Mayor flexibilidad |
-    | **Uso** | Entornos urbanos |
-
--   **🔧 IEEE 802.16d**
-
-    ---
-
-    **WiMAX Fijo (2004)**
-    
-    | Característica | Especificación |
-    |----------------|----------------|
-    | **Tipo** | Fijo, estabilización |
-    | **Aplicación** | WiMAX fijo |
-    | **Estabilidad** | Alta confiabilidad |
-    | **Instalación** | Permanente |
-
--   **📱 IEEE 802.16e**
-
-    ---
-
-    **WiMAX Móvil (2005)**
-    
-    | Característica | Especificación |
-    |----------------|----------------|
-    | **Movilidad** | Limitada |
-    | **Aplicación** | WiMAX móvil |
-    | **Handover** | Entre estaciones |
-    | **Competencia** | Tecnologías celulares |
-
--   **🚀 IEEE 802.16m**
-
-    ---
-
-    **4G WiMAX (2011)**
-    
-    | Característica | Especificación |
-    |----------------|----------------|
-    | **Generación** | 4G |
-    | **Velocidad** | Alta velocidad |
-    | **Aplicación** | Competencia LTE |
-    | **Tecnología** | Avanzada |
-
--   **📊 Comparativa**
-
-    ---
-
-    **Resumen Evolutivo**
-    
-    | Aspecto | Progresión |
-    |---------|------------|
-    | **Visión** | LOS → NLOS |
-    | **Movilidad** | Fijo → Móvil |
-    | **Velocidad** | Básica → 4G |
-    | **Aplicación** | Backhaul → Consumo |
-
-</div>
-
-##### 📱 Estándar para redes WWAN
-
-Las redes **WWAN** (Wide Area Wireless Network) constituyen la infraestructura fundamental de las telecomunicaciones móviles modernas, basadas en tecnologías celulares que han evolucionado significativamente desde sus inicios. Estas redes abarcan desde las primeras implementaciones analógicas (**1G**) hasta las tecnologías digitales avanzadas actuales (**4G LTE**) y las emergentes redes de quinta generación (**5G**).
-
-La **tecnología 5G** representa un salto cuántico en las comunicaciones móviles, prometiendo velocidades hasta **100 veces superiores** a 4G LTE, latencias inferiores a 1 milisegundo, y capacidad para conectar millones de dispositivos por kilómetro cuadrado. Esta evolución no solo mejora la experiencia del usuario, sino que habilita nuevas aplicaciones como vehículos autónomos, cirugía remota, y ciudades inteligentes.
-
-<div class="grid cards" markdown>
-
--   **📞 1G**
-
-    ---
-
-    **Primera Generación (1980s)**
-    
-    | Característica | Especificación |
-    |----------------|----------------|
-    | **Velocidad** | 2,4 Kb/s |
-    | **Tipo** | Analógico |
-    | **Aplicación** | Solo voz |
-    | **Limitación** | Sin datos |
-
--   **📱 2G**
-
-    ---
-
-    **Segunda Generación (1990s)**
-    
-    | Característica | Especificación |
-    |----------------|----------------|
-    | **Velocidad** | 64 Kb/s |
-    | **Tipo** | Digital |
-    | **Estándares** | GSM, CDMA |
-    | **Novedad** | SMS |
-
--   **🌐 3G**
-
-    ---
-
-    **Tercera Generación (2003)**
-    
-    | Característica | Especificación |
-    |----------------|----------------|
-    | **Velocidad** | 2 Mb/s |
-    | **Aplicación** | Voz + datos |
-    | **Novedad** | Internet móvil |
-    | **Uso** | Navegación web |
-
--   **🚀 4G**
-
-    ---
-
-    **Cuarta Generación (2009)**
-    
-    | Característica | Especificación |
-    |----------------|----------------|
-    | **Velocidad** | 100 Mb/s |
-    | **Tecnología** | LTE |
-    | **Protocolo** | IP |
-    | **Aplicación** | Banda ancha móvil |
-
--   **⚡ 5G**
-
-    ---
-
-    **Quinta Generación (2020s)**
-    
-    | Característica | Especificación |
-    |----------------|----------------|
-    | **Velocidad** | 1+ Gb/s |
-    | **Latencia** | <1 ms |
-    | **IoT** | Millones dispositivos |
-    | **Aplicación** | Vehículos autónomos |
-
--   **📊 Comparativa**
-
-    ---
-
-    **Evolución Tecnológica**
-    
-    | Aspecto | Progresión |
-    |---------|------------|
-    | **Velocidad** | Kb/s → Gb/s |
-    | **Tipo** | Analógico → Digital |
-    | **Uso** | Voz → IoT |
-    | **Aplicación** | Básico → Avanzado |
-
-</div>
-
 <!-- > El siguiente esquema resume claramente el avance tecnológico de las diferentes generaciones de redes móviles, desde los sistemas analógicos iniciales hasta las actuales capacidades del 5G. Gracias a esta evolución, las comunicaciones móviles han pasado de ofrecer únicamente servicios de voz a permitir conexiones de alta velocidad, baja latencia y soporte masivo para dispositivos IoT, impulsando el desarrollo de nuevas aplicaciones y transformando la sociedad digital.
 
 
@@ -1805,74 +1868,5 @@ Hay modelos de punto de acceso diseñados para ser colocados a la intemperie. Se
 </figure> -->
 
 
-## 🛠️ Actividades
-
-!!! tip "<span style='font-size: 1.4em;'><strong>Formato de entrega</strong></span>"
-    <span style="font-size: 1.3em;">Para la entrega de las actividades, genera un documento con la práctica descrita a continuación. Deberás crear un archivo PDF con el siguiente formato de nombre: <strong>ACXXX.pdf o PRXXX.pdf</strong>, donde las X representan el número de la actividad. Una vez finalizada la práctica, sube el archivo a Aules (antes de la fecha de vencimiento) para su calificación.</span>
-
-<a name="AC301"></a>
-
-* :simple-readdotcv: **AC301**. (RA2 // CE2a, CE2b // 1-3p). Investiga y documenta las diferentes categorías de cable de par trenzado. Elabora una tabla comparativa con sus características, velocidades máximas y aplicaciones típicas.
-
-<a name="AC302"></a>
-
-* :simple-readdotcv: **AC302**. (RA2 // CE2a, CE2b // 1-3p). Investiga y documenta las características del cable coaxial utilizado en redes locales. Elabora un informe que incluya:
-    - Estructura y composición del cable coaxial
-    - Tipos principales de cable coaxial (RG-59, RG-58, RG-6, etc.) y sus aplicaciones
-    - Ventajas y desventajas frente a otros medios de transmisión
-    - Ejemplos de uso en redes de datos actuales y obsoletas
-
-<a name="RG303"></a>
-
-* 🎯 Reto Grupal **RG303**: Crimpado de Cables de Par Trenzado (RA3 // CE3a, CE3b, CE3c, CE3d). Aplica las técnicas de crimpado de conectores RJ-45 en cables de par trenzado, siguiendo los estándares **T568A** y **T568B**, y demuestra la calidad del trabajo mediante pruebas de conectividad y presentación de resultados ante el resto de grupos.
-
-📋 **[Ver detalles completos del reto →](reto_crimpado_cables.md)**
-
 <!-- !!! tip "<span style='font-size: 1.4em;'><strong>CONCLUSIÓN</strong></span>"
     <span style="font-size: 1.3em;">La infraestructura de red es fundamental para el funcionamiento de cualquier sistema de comunicaciones. Conocer los diferentes medios de transmisión, estándares de cableado y técnicas de montaje nos permite diseñar e implementar redes locales eficientes y adaptadas a las necesidades específicas de cada entorno.</span> -->
-
-<a name="AC304"></a>
-
-* :simple-readdotcv: **AC304**. (RA2 // CE2a, CE2b // 1-3p). Realiza una investigación sobre la **fibra óptica** como medio de transmisión guiado. Elabora un resumen que incluya:
-* 
-    - Principio de funcionamiento de la fibra óptica
-    - Estructura y tipos principales de fibra óptica (monomodo y multimodo)
-    - Aplicaciones típicas en redes locales y de área amplia
-    - Ventajas y desventajas frente a otros medios (cobre, inalámbricos)
-    - Medidas de seguridad y precauciones en su manipulación
-
-<a name="AC305"></a>
-
-* :simple-readdotcv: **AC305**. (RA2 // CE2a, CE2b // 1-3p). Investiga y documenta los **medios de transmisión no guiados** utilizados en redes de comunicación. Elabora un informe que incluya:
-* 
-    - Definición y ejemplos de medios no guiados (radiofrecuencia, microondas, infrarrojos, satélite, etc.)
-    - Cuadro comparativo con sus características (alcance, bandas de frecuencia, velocidad, aplicaciones)
-    - Ventajas y limitaciones de los principales tipos
-    - Ejemplos reales de uso en redes tanto en interiores como exteriores
-
-<a name="AC306"></a>
-
-* :simple-readdotcv: **AC306**. (RA2 // CE2a, CE2b // 1-3p). Investiga y elabora una infografía o esquema visual que resuma los **medios de transmisión no guiados** utilizados en redes de comunicación, centrándote en los siguientes aspectos:
-
-    - Clasificación de los medios no guiados (radiofrecuencia, microondas, infrarrojos, luz visible, etc.)
-    - Ejemplos representativos de cada tipo y sus aplicaciones (Wi-Fi, Bluetooth, LTE/5G, satélite, ZigBee, WiMAX, infrarrojos, etc.)
-    - Principales **estándares técnicos** asociados a cada medio (por ejemplo: IEEE 802.11 para Wi-Fi, IEEE 802.15 para Bluetooth/ZigBee, IEEE 802.16 para WiMAX, ITU y 3GPP para tecnologías móviles, etc.)
-    - Ámbitos de aplicación: redes personales, locales, metropolitanas, de área amplia, etc.
-    - Puedes complementar con imágenes, iconos y descripciones breves.
-
-<a name="AC307"></a>
-
-* :simple-readdotcv: **AC307**. (RA2 // CE2a, CE2b // 1-3p). Explora la infraestructura mundial de cables submarinos utilizando la herramienta interactiva [Submarine Cable Map](https://www.submarinecablemap.com) y elabora un informe detallado que incluya:
-
-    - **Análisis geográfico**: Identifica y documenta las principales rutas de cables submarinos que conectan España con otros continentes
-    - **Características técnicas**: Selecciona 3 cables submarinos específicos y documenta sus características técnicas (longitud, capacidad, año de instalación, empresas propietarias)
-    - **Puntos de amarre**: Localiza y describe los principales puntos de amarre en territorio español y su importancia estratégica
-    - **Análisis comparativo**: Compara las rutas del Atlántico Norte, Mediterráneo y otras regiones en términos de densidad de cables y capacidad
-    - **Impacto económico**: Investiga cómo estos cables afectan a la economía digital española y europea
-    - **Conclusiones**: Reflexiona sobre la importancia estratégica de esta infraestructura para las comunicaciones globales
-
-    **Formato de entrega**: Documento PDF con capturas de pantalla de la herramienta interactiva, mapas anotados y análisis detallado de cada punto requerido.
-
-
-
-
