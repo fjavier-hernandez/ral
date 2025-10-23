@@ -1,0 +1,984 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Guía inical para uso del simulador Packet tracer.">
+      
+      
+      
+        <link rel="canonical" href="https://fjavier-hernandez.github.io/ral/packetracer.html">
+      
+      
+      
+      
+      <link rel="icon" href="imagenes/ral.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+    
+    
+      
+        <title>Introducción Packet tracer - Redes de Área Local</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="stylesheets/extra.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-0CPJP88MBF"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-0CPJP88MBF",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-0CPJP88MBF",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>if("undefined"!=typeof __md_analytics){var consent=__md_get("__consent");consent&&consent.analytics&&__md_analytics()}</script>
+  
+
+    
+    
+      
+        <meta  property="og:type"  content="website" >
+      
+        <meta  property="og:title"  content="Introducción Packet tracer - Redes de Área Local" >
+      
+        <meta  property="og:description"  content="Guía inical para uso del simulador Packet tracer." >
+      
+        <meta  property="og:image"  content="https://fjavier-hernandez.github.io/ral/assets/images/social/packetracer.png" >
+      
+        <meta  property="og:image:type"  content="image/png" >
+      
+        <meta  property="og:image:width"  content="1200" >
+      
+        <meta  property="og:image:height"  content="630" >
+      
+        <meta  property="og:url"  content="https://fjavier-hernandez.github.io/ral/packetracer.html" >
+      
+        <meta  name="twitter:card"  content="summary_large_image" >
+      
+        <meta  name="twitter:title"  content="Introducción Packet tracer - Redes de Área Local" >
+      
+        <meta  name="twitter:description"  content="Guía inical para uso del simulador Packet tracer." >
+      
+        <meta  name="twitter:image"  content="https://fjavier-hernandez.github.io/ral/assets/images/social/packetracer.png" >
+      
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="javi" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#cisco-packet-tracer" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="index.html" title="Redes de Área Local" class="md-header__button md-logo" aria-label="Redes de Área Local" data-md-component="logo">
+      
+  <img src="imagenes/ral.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Redes de Área Local
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Introducción Packet tracer
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="javi" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Cambiar a modo noche"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo noche" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Cambiar a modo día"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo día" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="index.html" title="Redes de Área Local" class="md-nav__button md-logo" aria-label="Redes de Área Local" data-md-component="logo">
+      
+  <img src="imagenes/ral.svg" alt="logo">
+
+    </a>
+    Redes de Área Local
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Inicio
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="01ir.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    1. Introducción a las redes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="02arquitecturas.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2. Arquitecturas de redes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="03fisica.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    3. Capa física
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#que-es-packet-tracer" class="md-nav__link">
+    <span class="md-ellipsis">
+      ¿Qué es Packet Tracer?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="¿Qué es Packet Tracer?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#caracteristicas-principales" class="md-nav__link">
+    <span class="md-ellipsis">
+      Características principales
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usos-comunes-en-fp" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usos comunes en FP
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instalacion-de-packet-tracer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instalación de Packet Tracer:
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Instalación de Packet Tracer:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#interfaz-de-usuario" class="md-nav__link">
+    <span class="md-ellipsis">
+      Interfaz de Usuario
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#video-navegacion-por-la-interfaz-de-packet-tracer" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎬 Video: Navegación por la interfaz de Packet Tracer
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementacion-de-dispositivos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementación de dispositivos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Implementación de dispositivos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#video-implementacion-de-dispositivos-en-packet-tracer" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎬 Video: Implementación de dispositivos en Packet Tracer
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuracion-de-gui-y-cli" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuración de GUI y CLI
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuración de GUI y CLI">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pestana-fisica" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧩 Pestaña Física
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pestana-configuracion" class="md-nav__link">
+    <span class="md-ellipsis">
+      🖱️ Pestaña Configuración
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pestana-cli" class="md-nav__link">
+    <span class="md-ellipsis">
+      💻 Pestaña CLI
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pestana-escritorio" class="md-nav__link">
+    <span class="md-ellipsis">
+      🖥️ Pestaña Escritorio
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pestana-servicios" class="md-nav__link">
+    <span class="md-ellipsis">
+      🛠️ Pestaña Servicios
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#actividad-supervisada-ptta" class="md-nav__link">
+    <span class="md-ellipsis">
+      Actividad Supervisada PTTA
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usando-actividades-ptta-modelo-logico-y-fisico" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usando actividades PTTA - Modelo Lógico y Físico
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Usando actividades PTTA - Modelo Lógico y Físico">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#video-como-usar-actividades-pka-en-packet-tracer" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎬 Video: Cómo usar actividades .pka en Packet Tracer
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#video-funciones-avanzadas-de-packet-tracer" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎬 Video: Funciones avanzadas de Packet Tracer
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#video-navegacion-por-la-interfaz-de-packet-tracer_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎬 Video: Navegación por la interfaz de Packet Tracer
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#video-implementacion-de-dispositivos-en-packet-tracer_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎬 Video: Implementación de dispositivos en Packet Tracer
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cargar-actividades" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧑‍🏫 Cargar Actividades
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#video-como-usar-actividades-pka-en-packet-tracer_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎬 Video: Cómo usar actividades .pka en Packet Tracer
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="cisco-packet-tracer">Cisco Packet Tracer<a class="headerlink" href="#cisco-packet-tracer" title="Permanent link">&para;</a></h1>
+<h2 id="que-es-packet-tracer">¿Qué es Packet Tracer?<a class="headerlink" href="#que-es-packet-tracer" title="Permanent link">&para;</a></h2>
+<p><strong>Packet Tracer</strong> es una herramienta de simulación desarrollada por <strong>Cisco Systems</strong> que permite diseñar, configurar y simular redes informáticas sin necesidad de hardware físico. Es ampliamente utilizada en entornos educativos, especialmente en los cursos de <strong>Cisco Networking Academy</strong>, para enseñar conceptos de redes y practicar la configuración de dispositivos como routers, switches, PCs, servidores, etc.</p>
+<h3 id="caracteristicas-principales">Características principales<a class="headerlink" href="#caracteristicas-principales" title="Permanent link">&para;</a></h3>
+<ul>
+<li>🖥️ <strong>Simulación de redes</strong>: Permite crear topologías de red complejas con dispositivos virtuales.</li>
+<li>🎨 <strong>Interfaz gráfica intuitiva</strong>: Facilita el diseño visual de redes.</li>
+<li>💻 <strong>Práctica de comandos CLI</strong>: Se pueden usar comandos reales de Cisco IOS en los dispositivos simulados.</li>
+<li>🔍 <strong>Modo de simulación</strong>: Permite observar el paso a paso del tráfico de red (paquetes) para entender cómo se comporta la red.</li>
+<li>🧑‍🏫 <strong>Ideal para estudiantes</strong>: No requiere conocimientos avanzados para empezar, pero permite profundizar en configuraciones avanzadas.</li>
+<li>🧭 <strong>Multiplataforma</strong>: Disponible para Windows, macOS y Linux.</li>
+</ul>
+<h3 id="usos-comunes-en-fp">Usos comunes en FP<a class="headerlink" href="#usos-comunes-en-fp" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Configuración de redes <strong>LAN y WAN</strong>.</li>
+<li>Prácticas de <strong>direccionamiento IP</strong>, <strong>VLANs</strong>, <strong>routing estático y dinámico</strong>.</li>
+<li>Simulación de servicios como <strong>DHCP</strong>, <strong>DNS</strong>, <strong>HTTP</strong>, <strong>FTP</strong>, etc.</li>
+<li>Diagnóstico y resolución de problemas de red.</li>
+</ul>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/pCo4554JpG8?start=3" 
+          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          allowfullscreen 
+          title="YouTube video player"></iframe>
+</div>
+
+<hr />
+<blockquote>
+<p>📌 <em>Packet Tracer es una herramienta esencial para el aprendizaje práctico en el ámbito de las redes, especialmente útil en el módulo de Redes de Área Local del ciclo de grado medio en Sistemas Microinformáticos y Redes.</em></p>
+</blockquote>
+<h2 id="instalacion-de-packet-tracer"><strong>Instalación de Packet Tracer:</strong><a class="headerlink" href="#instalacion-de-packet-tracer" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Descarga el Packet Tracer desde la <a href="https://www.netacad.com/resources/lab-downloads?courseLang=es-XL">Página Oficial de Cisco Netcad</a>.</li>
+<li>Instala siguiendo las instrucciones del instalador.</li>
+<li>Una vez instalado ejecútalo y selecciona la primera opción (Networking Academy)</li>
+<li>No es obligatorio pero accederás a un sinfín de cursos certificados de Cisco.</li>
+</ul>
+<h3 id="interfaz-de-usuario">Interfaz de Usuario<a class="headerlink" href="#interfaz-de-usuario" title="Permanent link">&para;</a></h3>
+<p>Packet Tracer es una herramienta que permite simular redes reales. Proporcione tres menús principales que puede utilizar para lo siguiente:</p>
+<ul>
+<li>Puede agregar dispositivos y conectarlos a través de cables o de forma inalámbrica.</li>
+<li>Puede seleccionar, eliminar, inspeccionar, etiquetar y agrupar componentes dentro de la red.</li>
+<li>Administre su red</li>
+</ul>
+<p>El menú de administración de red le permite hacer lo siguiente:</p>
+<ul>
+<li>Abrir una red existente/de muestra</li>
+<li>Guarda tu red actual</li>
+<li>Modifica tu perfil de usuario o tus preferencias</li>
+</ul>
+<h3 id="video-navegacion-por-la-interfaz-de-packet-tracer">🎬 Video: Navegación por la interfaz de Packet Tracer<a class="headerlink" href="#video-navegacion-por-la-interfaz-de-packet-tracer" title="Permanent link">&para;</a></h3>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/XBnJUFnyvak"
+          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          title="YouTube video player"></iframe>
+</div>
+
+<h2 id="implementacion-de-dispositivos">Implementación de dispositivos<a class="headerlink" href="#implementacion-de-dispositivos" title="Permanent link">&para;</a></h2>
+<h3 id="video-implementacion-de-dispositivos-en-packet-tracer">🎬 Video: Implementación de dispositivos en Packet Tracer<a class="headerlink" href="#video-implementacion-de-dispositivos-en-packet-tracer" title="Permanent link">&para;</a></h3>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/KgLeIjlk2so?list=PLjd5U-zhuKDYieZE3qS9gyaaNZpszANbx"
+          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          allowfullscreen 
+          title="YouTube video player"></iframe>
+</div>
+
+<h3 id="configuracion-de-gui-y-cli">Configuración de GUI y CLI<a class="headerlink" href="#configuracion-de-gui-y-cli" title="Permanent link">&para;</a></h3>
+<p>Packet Tracer proporciona varias pestañas para configurar los dispositivos. Las pestañas disponibles dependen del tipo de dispositivo que se esté configurando:</p>
+<ul>
+<li><strong>Física</strong></li>
+<li><strong>Configuración</strong></li>
+<li><strong>CLI</strong></li>
+<li><strong>Escritorio</strong></li>
+<li><strong>Servicios</strong></li>
+</ul>
+<blockquote>
+<p><strong>Nota:</strong> Es posible que veas otras pestañas en diferentes dispositivos. Estas pestañas adicionales están fuera del alcance de este curso.</p>
+</blockquote>
+<hr />
+<h4 id="pestana-fisica">🧩 Pestaña Física<a class="headerlink" href="#pestana-fisica" title="Permanent link">&para;</a></h4>
+<p>Permite interactuar con el dispositivo: encenderlo, apagarlo o instalar módulos como tarjetas de red inalámbricas (NIC).</p>
+<hr />
+<h4 id="pestana-configuracion">🖱️ Pestaña Configuración<a class="headerlink" href="#pestana-configuracion" title="Permanent link">&para;</a></h4>
+<p>Ofrece dos formas de configurar dispositivos intermedios (como routers y switches):</p>
+<ul>
+<li><strong>GUI exclusiva de Packet Tracer</strong>: Ideal para quienes no dominan la CLI.</li>
+<li><strong>CLI simulada</strong>: Se muestran los comandos equivalentes en la ventana <strong>Comandos IOS equivalentes</strong>.</li>
+</ul>
+<p>Esto facilita el aprendizaje del sistema operativo IOS de Cisco.</p>
+<blockquote>
+<p>Por ejemplo, si se configura el nombre del dispositivo como <code>MyRouter</code>, se muestra el comando CLI equivalente en la ventana correspondiente.</p>
+</blockquote>
+<p>También permite <strong>guardar, cargar, borrar y exportar</strong> archivos de configuración.</p>
+<hr />
+<h4 id="pestana-cli">💻 Pestaña CLI<a class="headerlink" href="#pestana-cli" title="Permanent link">&para;</a></h4>
+<p>Proporciona acceso directo a la línea de comandos de dispositivos Cisco. Requiere conocimientos previos de IOS.</p>
+<blockquote>
+<p><strong>Nota:</strong> Los comandos introducidos desde la pestaña Configuración también se reflejan aquí.</p>
+</blockquote>
+<hr />
+<h4 id="pestana-escritorio">🖥️ Pestaña Escritorio<a class="headerlink" href="#pestana-escritorio" title="Permanent link">&para;</a></h4>
+<p>Disponible en dispositivos finales como PCs y portátiles. Permite configurar:</p>
+<ul>
+<li>IP</li>
+<li>Conexión inalámbrica</li>
+<li>Navegador web</li>
+<li>Símbolo del sistema</li>
+<li>Otras aplicaciones</li>
+</ul>
+<hr />
+<h4 id="pestana-servicios">🛠️ Pestaña Servicios<a class="headerlink" href="#pestana-servicios" title="Permanent link">&para;</a></h4>
+<p>Exclusiva de servidores. Permite configurar servicios como:</p>
+<ul>
+<li>HTTP</li>
+<li>DHCP</li>
+<li>DNS</li>
+<li>Otros servicios de red</li>
+</ul>
+<hr />
+<h3 id="actividad-supervisada-ptta">Actividad Supervisada PTTA<a class="headerlink" href="#actividad-supervisada-ptta" title="Permanent link">&para;</a></h3>
+<h3 id="usando-actividades-ptta-modelo-logico-y-fisico">Usando actividades PTTA - Modelo Lógico y Físico<a class="headerlink" href="#usando-actividades-ptta-modelo-logico-y-fisico" title="Permanent link">&para;</a></h3>
+<p>El siguiente paso es la actividad con tutoría de Packet Tracer. ¡Aquí hay algunos videos tutoriales que quizás quiera revisar antes de lanzarse!</p>
+<h4 id="video-como-usar-actividades-pka-en-packet-tracer">🎬 Video: Cómo usar actividades .pka en Packet Tracer<a class="headerlink" href="#video-como-usar-actividades-pka-en-packet-tracer" title="Permanent link">&para;</a></h4>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/G0pkHyo3rwg?list=PLjd5U-zhuKDYieZE3qS9gyaaNZpszANbx"
+          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          allowfullscreen 
+          title="YouTube video player"></iframe>
+</div>
+
+<!-- 
+[Ver video sobre actividades .pka](https://www.youtube.com/watch?v=ENL6v5lHn9g) <!-- Sustituye este enlace por el real si tienes otro -->
+
+<!-- ### Packet Tracer: cree una red simple
+
+
+En esta actividad de Packet Tracer, completará los siguientes objetivos:
+
+*   Parte 1: Crear una red simple
+*   Parte 2: Configurar los dispositivos finales y verificar la conectividad -->
+
+<h4 id="video-funciones-avanzadas-de-packet-tracer">🎬 Video: Funciones avanzadas de Packet Tracer<a class="headerlink" href="#video-funciones-avanzadas-de-packet-tracer" title="Permanent link">&para;</a></h4>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/TZtYOfj6SE0?list=PLjd5U-zhuKDYieZE3qS9gyaaNZpszANbx"
+          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          title="YouTube video player"></iframe>
+</div>
+
+<h4 id="video-navegacion-por-la-interfaz-de-packet-tracer_1">🎬 Video: Navegación por la interfaz de Packet Tracer<a class="headerlink" href="#video-navegacion-por-la-interfaz-de-packet-tracer_1" title="Permanent link">&para;</a></h4>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/6v_tiQpKoL0"
+          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          title="YouTube video player"></iframe>
+</div>
+
+<hr />
+<h4 id="video-implementacion-de-dispositivos-en-packet-tracer_1">🎬 Video: Implementación de dispositivos en Packet Tracer<a class="headerlink" href="#video-implementacion-de-dispositivos-en-packet-tracer_1" title="Permanent link">&para;</a></h4>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/elCwLFaBdbI"
+          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          title="YouTube video player"></iframe>
+</div>
+
+<hr />
+<p>Packet Tracer proporciona varias pestañas para configurar dispositivos:</p>
+<ul>
+<li><strong>Física</strong>: encendido/apagado, instalación de módulos (NIC, etc.).</li>
+<li><strong>Configuración (GUI)</strong>: configuración básica con equivalencia CLI.</li>
+<li><strong>CLI</strong>: acceso completo a la línea de comandos Cisco IOS.</li>
+<li><strong>Escritorio</strong>: configuración IP, navegador, símbolo del sistema.</li>
+<li><strong>Servicios</strong>: configuración de servicios como HTTP, DHCP, DNS.</li>
+</ul>
+<blockquote>
+<p><strong>Nota</strong>: Las pestañas varían según el dispositivo. Algunas pestañas son exclusivas de Packet Tracer y no simulan funcionalidad real.</p>
+</blockquote>
+<hr />
+<h4 id="cargar-actividades">🧑‍🏫 Cargar Actividades<a class="headerlink" href="#cargar-actividades" title="Permanent link">&para;</a></h4>
+<h3 id="video-como-usar-actividades-pka-en-packet-tracer_1">🎬 Video: Cómo usar actividades .pka en Packet Tracer<a class="headerlink" href="#video-como-usar-actividades-pka-en-packet-tracer_1" title="Permanent link">&para;</a></h3>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/6S_F-7nZZ8c"
+          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          title="YouTube video player"></iframe>
+</div>
+
+<hr />
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      2025-2026 Francisco Javier Hernández Illán - <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es">Licencia CC BY-NC-SA</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="mailto:<fj.hernandez@edu.gva.es>" target="_blank" rel="noopener" title="" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4l208 156a48 48 0 0 0 57.6 0l208-156c12.1-9.1 19.2-23.3 19.2-38.4 0-26.5-21.5-48-48-48zM0 196v188c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V196L313.6 344.8c-34.1 25.6-81.1 25.6-115.2 0z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.linkedin.com/in/fjavier-hernandez-illan" target="_blank" rel="noopener" title="www.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77m282.1 320h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+      <div class="md-consent" data-md-component="consent" id="__consent" hidden>
+        <div class="md-consent__overlay"></div>
+        <aside class="md-consent__inner">
+          <form class="md-consent__form md-grid md-typeset" name="consent">
+            
+
+
+  
+
+
+<h4>Consentimiento de cookie</h4>
+<p>Esta página de apuntes utiliza cookies para reconocer las visitas, medir la efectividad de la documentación y averiguar si encuentras aquello que buscas o cómo has llegado a estos apuntes. Con tu consentimiento, me ayudas a mejorar estos materiales.</p>
+<input class="md-toggle" type="checkbox" id="__settings" >
+<div class="md-consent__settings">
+  <ul class="task-list">
+    
+    
+      
+        
+  
+  
+    
+    
+  
+  <li class="task-list-item">
+    <label class="task-list-control">
+      <input type="checkbox" name="analytics" checked>
+      <span class="task-list-indicator"></span>
+      Google Analytics
+    </label>
+  </li>
+
+      
+    
+    
+      
+    
+    
+  </ul>
+</div>
+<div class="md-consent__controls">
+  
+    
+      <button class="md-button md-button--primary">Aceptar</button>
+    
+    
+    
+  
+    
+    
+    
+      <label class="md-button" for="__settings">Gestionar cookies</label>
+    
+  
+</div>
+          </form>
+        </aside>
+      </div>
+      <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout((function(){document.querySelector("[data-md-component=consent]").hidden=!1}),250);var form=document.forms.consent;for(var action of["submit","reset"])form.addEventListener(action,(function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map((function(e){return[e,!0]})))),location.hash="",location.reload()}))</script>
+    
+    
+      
+      <script id="__config" type="application/json">{"base": ".", "features": ["header.autohide", "navigation.top", "navigation.tracking", "navigation.footer", "navigation.indexes", "content.code.annotate", "announce.dismiss", "toc.follow", "content.code.copy"], "search": "assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+        <script src="js/print-site.js"></script>
+      
+    
+  </body>
+</html>

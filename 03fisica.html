@@ -1,0 +1,3511 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Medios de transmisión, cableado en edificios para redes locales y Elementos de una Red.">
+      
+      
+      
+        <link rel="canonical" href="https://fjavier-hernandez.github.io/ral/03fisica.html">
+      
+      
+        <link rel="prev" href="02arquitecturas.html">
+      
+      
+      
+      <link rel="icon" href="imagenes/ral.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+    
+    
+      
+        <title>Capa Física - Infraestructura y Elementos de Red - Redes de Área Local</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="stylesheets/extra.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-0CPJP88MBF"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-0CPJP88MBF",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-0CPJP88MBF",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>if("undefined"!=typeof __md_analytics){var consent=__md_get("__consent");consent&&consent.analytics&&__md_analytics()}</script>
+  
+
+    
+    
+      
+        <meta  property="og:type"  content="website" >
+      
+        <meta  property="og:title"  content="Capa Física - Infraestructura y Elementos de Red - Redes de Área Local" >
+      
+        <meta  property="og:description"  content="Medios de transmisión, cableado en edificios para redes locales y Elementos de una Red." >
+      
+        <meta  property="og:image"  content="https://fjavier-hernandez.github.io/ral/assets/images/social/03fisica.png" >
+      
+        <meta  property="og:image:type"  content="image/png" >
+      
+        <meta  property="og:image:width"  content="1200" >
+      
+        <meta  property="og:image:height"  content="630" >
+      
+        <meta  property="og:url"  content="https://fjavier-hernandez.github.io/ral/03fisica.html" >
+      
+        <meta  name="twitter:card"  content="summary_large_image" >
+      
+        <meta  name="twitter:title"  content="Capa Física - Infraestructura y Elementos de Red - Redes de Área Local" >
+      
+        <meta  name="twitter:description"  content="Medios de transmisión, cableado en edificios para redes locales y Elementos de una Red." >
+      
+        <meta  name="twitter:image"  content="https://fjavier-hernandez.github.io/ral/assets/images/social/03fisica.png" >
+      
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="javi" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#capa-fisica" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="index.html" title="Redes de Área Local" class="md-header__button md-logo" aria-label="Redes de Área Local" data-md-component="logo">
+      
+  <img src="imagenes/ral.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Redes de Área Local
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Capa Física - Infraestructura y Elementos de Red
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="javi" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Cambiar a modo noche"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo noche" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Cambiar a modo día"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo día" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="index.html" title="Redes de Área Local" class="md-nav__button md-logo" aria-label="Redes de Área Local" data-md-component="logo">
+      
+  <img src="imagenes/ral.svg" alt="logo">
+
+    </a>
+    Redes de Área Local
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Inicio
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="01ir.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    1. Introducción a las redes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="02arquitecturas.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2. Arquitecturas de redes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    3. Capa física
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="03fisica.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    3. Capa física
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#infraestructura-de-red" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔧 INFRAESTRUCTURA DE RED
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#propuesta-didactica" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Propuesta didáctica
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📚 Propuesta didáctica">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#criterios-de-evaluacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 Criterios de evaluación
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎯 Criterios de evaluación">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#criterios-de-evaluacion-del-ra2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Criterios de evaluación del RA2
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#criterios-de-evaluacion-del-ra3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Criterios de evaluación del RA3
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#criterios-de-evaluacion-del-ra4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Criterios de evaluación del RA4
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contenidos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contenidos
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#programacion-de-aula-15h" class="md-nav__link">
+    <span class="md-ellipsis">
+      Programación de Aula (15h)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#medios-de-transmision" class="md-nav__link">
+    <span class="md-ellipsis">
+      📡 Medios de transmisión
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📡 Medios de transmisión">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#medios-guiados" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔌 Medios guiados
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔌 Medios guiados">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cable-de-par-trenzado" class="md-nav__link">
+    <span class="md-ellipsis">
+      📶 Cable de par trenzado
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cable-coaxial" class="md-nav__link">
+    <span class="md-ellipsis">
+      📡 Cable coaxial
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fibra-optica" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔬 Fibra óptica
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#medios-no-guiados" class="md-nav__link">
+    <span class="md-ellipsis">
+      📡 Medios no guiados
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#actividades" class="md-nav__link">
+    <span class="md-ellipsis">
+      🛠️ Actividades
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#infraestructura-de-red" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔧 INFRAESTRUCTURA DE RED
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#propuesta-didactica" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Propuesta didáctica
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📚 Propuesta didáctica">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#criterios-de-evaluacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 Criterios de evaluación
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎯 Criterios de evaluación">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#criterios-de-evaluacion-del-ra2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Criterios de evaluación del RA2
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#criterios-de-evaluacion-del-ra3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Criterios de evaluación del RA3
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#criterios-de-evaluacion-del-ra4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Criterios de evaluación del RA4
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contenidos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contenidos
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#programacion-de-aula-15h" class="md-nav__link">
+    <span class="md-ellipsis">
+      Programación de Aula (15h)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#medios-de-transmision" class="md-nav__link">
+    <span class="md-ellipsis">
+      📡 Medios de transmisión
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📡 Medios de transmisión">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#medios-guiados" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔌 Medios guiados
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔌 Medios guiados">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cable-de-par-trenzado" class="md-nav__link">
+    <span class="md-ellipsis">
+      📶 Cable de par trenzado
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cable-coaxial" class="md-nav__link">
+    <span class="md-ellipsis">
+      📡 Cable coaxial
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fibra-optica" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔬 Fibra óptica
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#medios-no-guiados" class="md-nav__link">
+    <span class="md-ellipsis">
+      📡 Medios no guiados
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#actividades" class="md-nav__link">
+    <span class="md-ellipsis">
+      🛠️ Actividades
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="capa-fisica"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16 7V3h-2v4h-4V3H8v4C7 7 6 8 6 9v5.5L9.5 18v3h5v-3l3.5-3.5V9c0-1-1-2-2-2"/></svg></span> CAPA FÍSICA<a class="headerlink" href="#capa-fisica" title="Permanent link">&para;</a></h1>
+<p>En esta unidad estudiaremos la <strong>capa física</strong> de las redes de datos, que constituye la base fundamental sobre la que se construye toda la comunicación de red. Nos enfocaremos en los diferentes medios de transmisión (cables de cobre, fibra óptica y tecnologías inalámbricas), sus características técnicas, estándares de cableado, conectores y técnicas de montaje.</p>
+<p>La capa física es responsable de la transmisión de bits a través del medio físico, convirtiendo los datos digitales en señales eléctricas, ópticas o electromagnéticas. Dominar estos conceptos es esencial para diseñar, instalar y mantener redes locales eficientes y confiables.</p>
+<div class="admonition info">
+<p class="admonition-title"><span style='font-size: 1.3em;'><strong>Objetivos de la unidad</strong></span></p>
+<p><span style="font-size: 1.2em;">
+• Identificar y clasificar los diferentes medios de transmisión<br>
+• Comprender los estándares de cableado y terminaciones<br>
+• Aplicar técnicas de montaje de conectores y equipos<br>
+• Diseñar sistemas de cableado estructurado<br>
+• Evaluar la idoneidad de cada medio según el entorno
+</span></p>
+</div>
+<h2 id="infraestructura-de-red">🔧 INFRAESTRUCTURA DE RED<a class="headerlink" href="#infraestructura-de-red" title="Permanent link">&para;</a></h2>
+<p>La <strong>infraestructura de red</strong> comprende todos los elementos físicos y lógicos necesarios para establecer la conectividad entre dispositivos en una red local. Esta infraestructura incluye los medios de transmisión, los equipos de interconexión, las estructuras de cableado y los estándares que garantizan la interoperabilidad y el rendimiento óptimo del sistema.</p>
+<p>En esta unidad analizaremos los componentes fundamentales de la infraestructura:</p>
+<div class="admonition abstract">
+<p class="admonition-title"><span style='font-size: 1.3em;'><strong>Componentes de la infraestructura</strong></span></p>
+<p><span style="font-size: 1.2em;">
+<strong>🌐 Medios de transmisión</strong>: Canales físicos que transportan la información<br>
+<strong>🔌 Conectores y terminaciones</strong>: Interfaces entre medios y equipos<br>
+<strong>🏗️ Cableado estructurado</strong>: Organización jerárquica del cableado en edificios<br>
+<strong>📡 Tecnologías inalámbricas</strong>: Comunicación sin medios físicos<br>
+<strong>⚙️ Equipos de red</strong>: Dispositivos que gestionan el tráfico de datos
+</span></p>
+</div>
+<p>La correcta planificación e implementación de la infraestructura es crucial para garantizar la escalabilidad, mantenibilidad y rendimiento de la red, cumpliendo con estándares internacionales como ISO/IEC 11801 y TIA/EIA-568.</p>
+<h2 id="propuesta-didactica">📚 Propuesta didáctica<a class="headerlink" href="#propuesta-didactica" title="Permanent link">&para;</a></h2>
+<p>En esta unidad trabajamos los <strong>RA2, RA3 y RA4 de RAL</strong>:</p>
+<blockquote>
+<p><strong>RA2.</strong> <em>Despliega el cableado de una red local interpretando especificaciones y aplicando técnicas de montaje.</em></p>
+<p><strong>RA3.</strong> <em>Interconecta equipos en redes locales cableadas describiendo estándares de cableado y aplicando técnicas de montaje de conectores.</em></p>
+<p><strong>RA4.</strong> <em>Instala equipos en red, describiendo sus prestaciones y aplicando técnicas de montaje.</em></p>
+</blockquote>
+<h3 id="criterios-de-evaluacion">🎯 Criterios de evaluación<a class="headerlink" href="#criterios-de-evaluacion" title="Permanent link">&para;</a></h3>
+<h4 id="criterios-de-evaluacion-del-ra2">Criterios de evaluación del RA2<a class="headerlink" href="#criterios-de-evaluacion-del-ra2" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p><strong>CE2a</strong>: <em>Interpreta las especificaciones del cableado de una red local analizando los requisitos técnicos y aplicando estándares de cableado estructurado.</em></p>
+<p><strong>CE2b</strong>: <em>Identifica los componentes del sistema de cableado reconociendo medios de transmisión, conectores y equipos de distribución.</em></p>
+<p><strong>CE2c</strong>: <em>Aplica técnicas de montaje del cableado siguiendo procedimientos de instalación y cumpliendo normativas de seguridad.</em></p>
+<p><strong>CE2d</strong>: <em>Verifica el funcionamiento del cableado instalado utilizando herramientas de medición y pruebas de conectividad.</em></p>
+</blockquote>
+<h4 id="criterios-de-evaluacion-del-ra3">Criterios de evaluación del RA3<a class="headerlink" href="#criterios-de-evaluacion-del-ra3" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p><strong>CE3a</strong>: <em>Describe los estándares de cableado para redes locales identificando las normas TIA/EIA-568 y categorías de cable.</em></p>
+<p><strong>CE3b</strong>: <em>Identifica los tipos de conectores y su uso analizando conectores RJ, de fibra óptica y coaxiales.</em></p>
+<p><strong>CE3c</strong>: <em>Aplica técnicas de montaje de conectores realizando terminaciones T568A/T568B y crimpado de conectores.</em></p>
+<p><strong>CE3d</strong>: <em>Verifica la conectividad de los equipos interconectados realizando pruebas de continuidad y funcionamiento.</em></p>
+</blockquote>
+<h4 id="criterios-de-evaluacion-del-ra4">Criterios de evaluación del RA4<a class="headerlink" href="#criterios-de-evaluacion-del-ra4" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p><strong>CE4a</strong>: <em>Describe las prestaciones de los equipos de red analizando características técnicas de switches, routers y puntos de acceso.</em></p>
+<p><strong>CE4b</strong>: <em>Identifica los componentes de los equipos de red reconociendo interfaces, fuentes de alimentación y sistemas de ventilación.</em></p>
+<p><strong>CE4c</strong>: <em>Aplica técnicas de montaje de equipos de red instalando en racks y cumpliendo estándares de cableado.</em></p>
+<p><strong>CE4d</strong>: <em>Verifica el funcionamiento de los equipos instalados realizando pruebas de conectividad y configuración básica.</em></p>
+</blockquote>
+<h3 id="contenidos">Contenidos<a class="headerlink" href="#contenidos" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Medios de transmisión: guiados y no guiados.</li>
+<li>Cable de par trenzado: categorías, conectores y terminaciones.</li>
+<li>Cable coaxial: tipos y conectores.</li>
+<li>Fibra óptica: tipos, características y conectores.</li>
+<li>Medios inalámbricos: espectro electromagnético y estándares.</li>
+<li>Cableado estructurado en edificios.</li>
+</ul>
+<div class="admonition question">
+<p class="admonition-title">Cuestionario inicial</p>
+<ol>
+<li>¿Qué categorías de cable de par trenzado conoces y para qué se utilizan?</li>
+<li>¿Cuándo es recomendable usar fibra óptica en lugar de cable de cobre?</li>
+<li>¿Qué diferencias hay entre los medios guiados y no guiados?</li>
+<li>¿Qué es el espectro electromagnético y por qué es importante en comunicaciones?</li>
+<li>¿Cuáles son los principales estándares inalámbricos IEEE 802.11?</li>
+<li>¿Qué elementos componen un sistema de cableado estructurado?</li>
+<li>¿Cómo se organiza el cableado horizontal y vertical en un edificio?</li>
+<li>¿Qué tipos de conectores se utilizan para cable de par trenzado?</li>
+<li>¿Cómo se realiza la terminación de cables según los estándares T568A y T568B?</li>
+</ol>
+</div>
+<h2 id="programacion-de-aula-15h">Programación de Aula (15h)<a class="headerlink" href="#programacion-de-aula-15h" title="Permanent link">&para;</a></h2>
+<p>Esta unidad se imparte en la primera evaluación, con una duración estimada de 15 sesiones lectivas:</p>
+<table>
+<thead>
+<tr>
+<th>Sesión</th>
+<th>Contenidos</th>
+<th>Actividades</th>
+<th>Criterios trabajados</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1-2</td>
+<td>Medios guiados: par trenzado</td>
+<td>Cuestionario inicial, AC301</td>
+<td>CE2a, CE2b, CE3a, CE3b</td>
+</tr>
+<tr>
+<td>3-5</td>
+<td>Medios guiados: coaxial y fibra óptica</td>
+<td>Actividad AC302, práctica PR303</td>
+<td>CE2a, CE2b, CE3a, CE3b</td>
+</tr>
+<tr>
+<td>6-8</td>
+<td>Medios no guiados y estándares inalámbricos</td>
+<td>Actividad AC304</td>
+<td>CE4a, CE4b</td>
+</tr>
+<tr>
+<td>9-10</td>
+<td>Cableado estructurado en edificios</td>
+<td>Actividad AC305</td>
+<td>CE2a, CE2b, CE2c, CE2d</td>
+</tr>
+<tr>
+<td>11-12</td>
+<td>Práctica: Armado de latiguillo y montaje de roseta</td>
+<td>PR306, PR307</td>
+<td>CE3a, CE3b, CE3c, CE3d</td>
+</tr>
+<tr>
+<td>13-15</td>
+<td>Repaso y evaluación</td>
+<td>Evaluación práctica</td>
+<td>Todos los criterios</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="medios-de-transmision">📡 Medios de transmisión<a class="headerlink" href="#medios-de-transmision" title="Permanent link">&para;</a></h2>
+<p>La información se transmite en las redes mediante señales, que pueden ser de naturaleza eléctrica, óptica o radiofrecuencia, a través de un medio de transmisión.</p>
+<p>Este medio es el enlace que existe entre las dos entidades que se comunican y, entre otros factores, el éxito en la comunicación dependerá de su naturaleza y limitaciones. Por ello, es importante conocer las características de los principales medios de transmisión.</p>
+<h3 id="medios-guiados">🔌 Medios guiados<a class="headerlink" href="#medios-guiados" title="Permanent link">&para;</a></h3>
+<p>Los medios guiados son los cables que interconectan los equipos. A través de ellos se emite información en forma de señales eléctricas u ópticas. Los principales medios guiados en redes de datos son los que veremos a continuación.</p>
+<h4 id="cable-de-par-trenzado">📶 Cable de par trenzado<a class="headerlink" href="#cable-de-par-trenzado" title="Permanent link">&para;</a></h4>
+<p>Este cable tiene una cubierta de PVC y en su interior contiene ocho cables más pequeños, de diferente color. Para aumentar la potencia del cable y reducir las interferencias, los cables se presentan trenzados por pares (de ahí su nombre), con un total de cuatro pares.</p>
+<p>La combinación de colores de los cables interiores no es trivial, sino que debe ser la siguiente:</p>
+<ul>
+<li><strong>Par 1</strong>: Azul – Blanco/Azul</li>
+<li><strong>Par 2</strong>: Naranja – Blanco/Naranja  </li>
+<li><strong>Par 3</strong>: Verde – Blanco/Verde</li>
+<li><strong>Par 4</strong>: Marrón – Blanco/Marrón</li>
+</ul>
+<p>Este tipo de cable se encuentra normalizado según el estándar <strong>TIA/EIA-568-B</strong>, que define, entre otros aspectos, las diferentes categorías de este cable en función a sus prestaciones. Las categorías más representativas en redes de datos son las siguientes:</p>
+<table>
+<thead>
+<tr>
+<th>Categoría</th>
+<th>Ancho de banda</th>
+<th>Aplicaciones</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Cat. 3</strong></td>
+<td>16 MHz</td>
+<td>Redes Ethernet de bajas prestaciones (obsoleto)</td>
+</tr>
+<tr>
+<td><strong>Cat. 4</strong></td>
+<td>20 MHz</td>
+<td>Redes Token Ring de hasta 16 Mbps (obsoleto)</td>
+</tr>
+<tr>
+<td><strong>Cat. 5</strong></td>
+<td>100 MHz</td>
+<td>Redes Ethernet de hasta 100 Mbps (obsoleto)</td>
+</tr>
+<tr>
+<td><strong>Cat. 5e</strong></td>
+<td>100 MHz</td>
+<td>Redes Ethernet de hasta 1000 Mbps (1 Gbps)</td>
+</tr>
+<tr>
+<td><strong>Cat. 6</strong></td>
+<td>250 MHz</td>
+<td>Redes Ethernet de hasta 1 Gbps a 100m, 10 Gbps a 37m</td>
+</tr>
+<tr>
+<td><strong>Cat. 6a</strong></td>
+<td>500 MHz</td>
+<td>Redes Ethernet de hasta 10 Gbps a 100m</td>
+</tr>
+<tr>
+<td><strong>Cat. 7</strong></td>
+<td>600 MHz</td>
+<td>Redes Ethernet de hasta 10 Gbps (no estándar TIA/EIA)</td>
+</tr>
+<tr>
+<td><strong>Cat. 7a</strong></td>
+<td>1000 MHz</td>
+<td>Redes Ethernet de hasta 10 Gbps (no estándar TIA/EIA)</td>
+</tr>
+<tr>
+<td><strong>Cat. 8</strong></td>
+<td>2000 MHz</td>
+<td>Redes Ethernet de hasta 25/40 Gbps a 30m (2016)</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition important">
+<p class="admonition-title">Estado actual del cableado (2025)</p>
+<p>En la actualidad, para instalaciones de redes de datos, se utiliza principalmente:</p>
+<ul>
+<li><strong>Categoría 5e</strong>: Para instalaciones básicas de hasta 1 Gbps</li>
+<li><strong>Categoría 6</strong>: Para instalaciones estándar de hasta 1 Gbps con posibilidad de 10 Gbps</li>
+<li><strong>Categoría 6a</strong>: Para instalaciones de alto rendimiento con 10 Gbps garantizado</li>
+<li><strong>Categoría 8</strong>: Para centros de datos y aplicaciones de muy alto rendimiento (25/40 Gbps)</li>
+</ul>
+<p>Las categorías 3, 4 y 5 están prácticamente obsoletas en nuevas instalaciones.</p>
+</div>
+<h5 id="tipos-de-cable-segun-el-blindaje">🔧 Tipos de cable según el blindaje<a class="headerlink" href="#tipos-de-cable-segun-el-blindaje" title="Permanent link">&para;</a></h5>
+<h6 id="cable-utp-unshielded-twisted-pair">🔌 Cable UTP (Unshielded Twisted Pair)<a class="headerlink" href="#cable-utp-unshielded-twisted-pair" title="Permanent link">&para;</a></h6>
+<p>El <strong>cable UTP</strong> es el tipo más común de cable de par trenzado utilizado en redes locales. Su nombre significa "cable de par trenzado sin apantallar" y presenta las siguientes características:</p>
+<p>✅ <strong>Ventajas:</strong></p>
+<ul>
+<li><strong>Bajo coste</strong>: Es la opción más económica</li>
+<li><strong>Fácil instalación</strong>: Flexible y manejable</li>
+<li><strong>Prestaciones adecuadas</strong>: Suficiente para la mayoría de aplicaciones</li>
+<li><strong>Compatibilidad</strong>: Ampliamente soportado</li>
+</ul>
+<p>⚠️ <strong>Limitaciones:</strong></p>
+<ul>
+<li><strong>Interferencias electromagnéticas</strong>: Vulnerable a ruido eléctrico</li>
+<li><strong>Distancias limitadas</strong>: Restricciones en entornos con mucha actividad electromagnética</li>
+<li><strong>Sin protección</strong>: No tiene blindaje contra interferencias externas</li>
+</ul>
+<p>🏗️ <strong>Estructura:</strong>
+Como ya mencionamos, el cable UTP está compuesto por:</p>
+<ul>
+<li><strong>Cuatro pares de hilos</strong> trenzados entre sí</li>
+<li><strong>Recubrimiento exterior</strong> de PVC para protección</li>
+<li><strong>Sin blindaje metálico</strong> (de ahí el nombre "unshielded")</li>
+</ul>
+<p>A partir del cable UTP estándar, y en función de qué parte de este se blinde frente a las interferencias, tenemos las siguientes variaciones:</p>
+<table>
+<thead>
+<tr>
+<th>Tipo de cable</th>
+<th>En el par</th>
+<th>En el cable</th>
+<th>Uso principal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>U/UTP</strong></td>
+<td>Sin blindaje</td>
+<td>Sin blindaje</td>
+<td>Redes domésticas y oficinas pequeñas</td>
+</tr>
+<tr>
+<td><strong>U/FTP</strong></td>
+<td>Pantalla de aluminio</td>
+<td>Sin blindaje</td>
+<td>Entornos con interferencias moderadas</td>
+</tr>
+<tr>
+<td><strong>F/UTP</strong></td>
+<td>Sin blindaje</td>
+<td>Pantalla de aluminio</td>
+<td>Oficinas y edificios comerciales</td>
+</tr>
+<tr>
+<td><strong>F/FTP</strong></td>
+<td>Pantalla de aluminio</td>
+<td>Pantalla de aluminio</td>
+<td>Entornos industriales con alta interferencia</td>
+</tr>
+<tr>
+<td><strong>S/UTP</strong></td>
+<td>Sin blindaje</td>
+<td>Malla de aluminio</td>
+<td>Aplicaciones críticas y centros de datos</td>
+</tr>
+<tr>
+<td><strong>S/FTP</strong></td>
+<td>Pantalla de aluminio</td>
+<td>Malla de aluminio</td>
+<td>Entornos electromagnéticamente hostiles</td>
+</tr>
+<tr>
+<td><strong>SF/UTP</strong></td>
+<td>Pantalla de aluminio</td>
+<td>Malla + pantalla de aluminio</td>
+<td>Aplicaciones militares e industriales</td>
+</tr>
+</tbody>
+</table>
+<figure>
+  <img src="./imagenes/t568a_estandar.png" alt="Tipos de blindaje en cable de par trenzado">
+  <figcaption>Tipos de blindaje en cable de par trenzado según estándares</figcaption>
+</figure>
+
+<p>🔌 <strong>Conectores para el cable de par trenzado</strong></p>
+<p>El cable de par trenzado utiliza conectores tipo <strong>RJ</strong> (Registered Jack), diseñados específicamente para la conexión de equipos en redes de datos y telefonía.</p>
+<p>📋 <strong>Tipos de conectores RJ:</strong></p>
+<p>Los conectores RJ se clasifican según dos parámetros:</p>
+<ul>
+<li><strong>Posiciones</strong>: Número total de ranuras disponibles</li>
+<li><strong>Contactos</strong>: Número de conectores metálicos que se utilizan</li>
+</ul>
+<p>Los conectores más utilizados en redes de datos son:</p>
+<p><strong>Conector RJ-9:</strong></p>
+<ul>
+<li>Es el más pequeño de los conectores RJ</li>
+<li>Se utiliza para conectar los auriculares del teléfono</li>
+<li>Es un conector 4P4C</li>
+</ul>
+<figure>
+  <img src="imagenes/RJ9.png" alt="Conector RJ-9">
+  <figcaption>Conector RJ-9 para auriculares de teléfono (4P4C)</figcaption>
+</figure>
+
+<p><strong>Conector RJ-11:</strong></p>
+<ul>
+<li>Es un conector dedicado mayoritariamente a la telefonía analógica</li>
+<li>Tiene seis posiciones sobre las que se asientan dos contactos (6P2C)</li>
+<li>Su uso principal es conectar el terminal a la red</li>
+<li>La variante del RJ-11 que emplea un par de contactos más (6P4C) se llama RJ-14</li>
+</ul>
+<figure>
+  <img src="imagenes/RJ11.png" alt="Conector RJ-11">
+  <figcaption>Conector RJ-11 para telefonía analógica (6P2C)</figcaption>
+</figure>
+
+<p><strong>Conector RJ-45:</strong></p>
+<ul>
+<li>Es el conector empleado para cable de par trenzado en redes Ethernet</li>
+<li>Es del tipo 8P8C, lo que significa que utiliza todas sus posiciones para recibir los cuatro pares del cable</li>
+<li>Este conector también soporta el uso de menos pares, dando lugar a las variantes 8P6C, 8P4C y 8P2C, casi todas dedicadas a telefonía o líneas RDSI</li>
+<li>El conector RJ-45 puede ser o no apantallado. Si lo es, por encima de la carcasa plástica tiene un armazón que lo protege de interferencias</li>
+<li>Este tipo de conectores suelen utilizarse con cableado que tenga algún tipo de blindaje</li>
+</ul>
+<figure style="align: center;">
+    <img src="imagenes/RJ45.png" alt="Conector RJ-45">
+    <figcaption style="text-align: center;">Conector RJ-45 para Ethernet</figcaption>
+</figure>
+
+<figure>
+  <img src="imagenes/tipos_blindaje_cable.png" alt="Tipos de blindaje en cables de red">
+  <figcaption>Tipos de blindaje en cables de red (UTP, FTP, STP, S/FTP, etc.)</figcaption>
+</figure>
+
+<p>📋 Terminaciones del cable</p>
+<p>La posición de los cables en el conector, llamada de forma técnica <strong>terminación</strong>, está regulada en la norma <strong>TIA/EIA-568-B</strong>. Esta norma define dos terminaciones:</p>
+<figure>
+  <img src="imagenes/T568.png" alt="Esquema de las terminaciones T568A y T568B">
+  <figcaption>Esquema de las terminaciones de los pares en un conector RJ-45 (T568A y T568B)</figcaption>
+</figure>
+
+<div class="admonition important">
+<p class="admonition-title"><span style='font-size: 1.3em;'><strong>NOTA IMPORTANTE</strong></span></p>
+<p><span style="font-size: 1.2em;">
+Según la norma, la terminación a emplear para la mayor parte del tendido de cableado de la red debería ser <strong>T568A</strong>. Sin embargo, debido a que típicamente se ha usado la terminación <strong>T568B</strong> (definida en normas anteriores), muchas instalaciones de redes siguen empleando dicha terminación en lugar de la T568A.
+</span></p>
+</div>
+<p>Con estas terminaciones pueden crearse dos tipos de cable:</p>
+<ul>
+<li><strong>Cable directo</strong>: utiliza la misma terminación en los dos extremos. Este cable es el que se usa para la mayoría de las conexiones en la red.</li>
+</ul>
+<figure>
+  <img src="imagenes/cable_directo.png" alt="Ejemplo de cable directo">
+  <figcaption>Ejemplo de cable directo: ambas terminaciones iguales, normalmente T568A-T568A o T568B-T568B</figcaption>
+</figure>
+
+<ul>
+<li><strong>Cable cruzado</strong>: utiliza diferente terminación en los dos extremos. Este cable se utiliza para conectar directamente dos equipos.</li>
+</ul>
+<figure>
+  <img src="imagenes/cable_cruzado.png" alt="Ejemplo de cable cruzado">
+  <figcaption>Ejemplo de cable cruzado: terminaciones diferentes en cada extremo, normalmente T568A-T568B</figcaption>
+</figure>
+
+<div class="admonition tip">
+<p class="admonition-title"><span style='font-size: 1.4em;'><strong>CONSEJO</strong></span></p>
+<p><span style="font-size: 1.3em;">
+Para recordar las diferencias entre T568A y T568B: en T568B, los pares 2 y 3 están intercambiados respecto a T568A.
+</span></p>
+</div>
+<hr />
+<h4 id="cable-coaxial">📡 Cable coaxial<a class="headerlink" href="#cable-coaxial" title="Permanent link">&para;</a></h4>
+<p>El <strong>cable coaxial</strong> está compuesto por dos conductores concéntricos que comparten el mismo eje. Su estructura consta de:</p>
+<ul>
+<li><strong>Conductor central</strong>: Hilo de cobre sólido o hilos trenzados de cobre</li>
+<li><strong>Dieléctrico</strong>: Capa aislante de material dieléctrico (generalmente polietileno)</li>
+<li><strong>Pantalla conductora</strong>: Malla de hilos de cobre o aluminio que actúa como conductor exterior</li>
+<li><strong>Cubierta exterior</strong>: Material aislante protector (habitualmente PVC)</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title"><span style='font-size: 1.3em;'><strong>Características del cable coaxial</strong></span></p>
+<p><span style="font-size: 1.2em;">
+Este tipo de cable es más resistente que el cable de par trenzado a las interferencias electromagnéticas y presenta menor atenuación de señal, lo que lo convierte en una opción eficiente para grandes distancias. Sin embargo, en redes locales modernas su uso se ha reducido significativamente debido a la obsolescencia de las topologías de bus.
+</span></p>
+</div>
+<h5 id="ventajas-y-desventajas">📊 Ventajas y desventajas<a class="headerlink" href="#ventajas-y-desventajas" title="Permanent link">&para;</a></h5>
+<p><strong>✅ Ventajas:</strong></p>
+<ul>
+<li>Mayor resistencia a interferencias electromagnéticas</li>
+<li>Menor atenuación de señal (pérdida mínima)</li>
+<li>Eficiente para transmisiones a grandes distancias</li>
+<li>Mayor ancho de banda disponible</li>
+</ul>
+<p><strong>❌ Desventajas:</strong></p>
+<ul>
+<li>Mayor coste económico que el cable de par trenzado</li>
+<li>Instalación más compleja y costosa</li>
+<li>Aplicaciones limitadas en redes modernas</li>
+<li>Mayor grosor y menor flexibilidad</li>
+</ul>
+<h5 id="tipos-de-cable-coaxial">📊 Tipos de cable coaxial<a class="headerlink" href="#tipos-de-cable-coaxial" title="Permanent link">&para;</a></h5>
+<p>De toda la familia de cables coaxiales, los más extendidos en el ámbito de las telecomunicaciones son:</p>
+<figure>
+  <img src="imagenes/conectores_Coaxial.png" alt="Tipos de cable coaxial">
+  <figcaption>Tipos de cable coaxial según composición</figcaption>
+</figure>
+
+<h5 id="conectores-para-el-cable-coaxial">🔌 Conectores para el cable coaxial<a class="headerlink" href="#conectores-para-el-cable-coaxial" title="Permanent link">&para;</a></h5>
+<p>La gama de conectores para cable coaxial es muy amplia, ya que este tipo de cable se utiliza mucho en la industria.</p>
+<ul>
+<li>Estos conectores se llaman <strong>RF</strong> y tienen diferentes formas: rectos, en ángulo, en T, etc.</li>
+<li>Los conectores RF pueden ser macho o hembra. Los conectores macho tienen un capuchón en su extremo que se utiliza para enganchar con el conector hembra.</li>
+</ul>
+<p>Principalmente hay tres maneras de engancharlos:</p>
+<ul>
+<li><strong>Anclaje</strong>: es la más común. El capuchón conector del macho se engancha en las ranuras del conector hembra.</li>
+<li><strong>Rosca</strong>: el conector hembra tiene un paso de roscas sobre el que se enrosca el capuchón del conector macho.</li>
+<li><strong>Presión</strong>: el capuchón del conector macho se acopla sobre el conector hembra. Típico en la conexión de la antena de TV.</li>
+</ul>
+<p>Además de los conectores, en las redes con topología de bus se utiliza un elemento en los extremos del bus llamado <strong>terminador</strong>. Este conector no es más que un tapón con una resistencia en su interior para amortiguar las señales cuando llegan al final del bus, e impedir rebotes que pudieran causar interferencias.</p>
+<p>Los principales tipos de conector para cable coaxial son:</p>
+<ul>
+<li><strong>BNC</strong>: Conectores macho y hembra disponibles - Redes Ethernet 10BASE2 (obsoleto)</li>
+<li><strong>N</strong>: Conectores macho y hembra disponibles - Aplicaciones de alta frecuencia</li>
+<li><strong>TNC</strong>: Conectores macho y hembra disponibles - Versión roscada del BNC</li>
+<li><strong>SMA</strong>: Conectores macho y hembra disponibles - Aplicaciones de microondas</li>
+</ul>
+<p>En la siguiente imagen se muestran los diferentes tipos de conectores coaxiales mencionados:</p>
+<figure>
+  <img src="imagenes/Conec_Coaxial.png" alt="Conectores coaxiales">
+  <figcaption>Tipos de conectores coaxiales: BNC, N, TNC, SMA</figcaption>
+</figure>
+
+<hr />
+<h4 id="fibra-optica">🔬 Fibra óptica<a class="headerlink" href="#fibra-optica" title="Permanent link">&para;</a></h4>
+<p>La <strong>fibra óptica</strong> es un medio de transmisión basado en un hilo extremadamente fino (aproximadamente del grosor de un cabello humano) fabricado en vidrio o plástico de alta pureza. Su estructura consta de:</p>
+<ul>
+<li><strong>Núcleo central</strong>: donde se propaga la luz</li>
+<li><strong>Revestimiento primario</strong>: sustancia protectora (generalmente acrilato) que recubre directamente la fibra</li>
+<li><strong>Revestimiento secundario</strong>: capa exterior que proporciona rigidez y protección contra curvaturas excesivas (típicamente nailon o poliéster)</li>
+</ul>
+<p><strong>Principio de funcionamiento:</strong></p>
+<p>La fibra óptica transmite información utilizando luz que se propaga a través del núcleo mediante el fenómeno de reflexión total interna. La luz se inyecta en un extremo del cable y rebota en las paredes del núcleo hasta llegar al extremo opuesto, manteniéndose confinada gracias a la diferencia de índices de refracción entre el núcleo y el revestimiento.</p>
+<p><strong>Características destacadas:</strong></p>
+<p>Este medio presenta pérdidas de señal extremadamente bajas en largas distancias y ofrece una capacidad de transmisión muy elevada, lo que lo convierte en la opción ideal para cubrir grandes distancias. Un ejemplo notable son las redes transoceánicas que conectan continentes mediante extensas redes de cables submarinos de fibra óptica.</p>
+<h6 id="cable-submarino-de-fibra-optica">🌊 Cable submarino de fibra óptica<a class="headerlink" href="#cable-submarino-de-fibra-optica" title="Permanent link">&para;</a></h6>
+<p>Destacando la importancia de este medio como infraestructura fundamental para las comunicaciones internacionales. Estas redes interconectan continentes y permiten la transmisión de grandes volúmenes de datos a alta velocidad y con mínima atenuación, haciendo posible la conectividad mundial moderna.</p>
+<p>A continuación, se presenta una <strong>visualización estática</strong> de la red global de cables submarinos de fibra óptica, seguida de un <strong>enlace interactivo</strong> que permite explorar en tiempo real la infraestructura mundial de comunicaciones submarinas:</p>
+<figure>
+  <img src="imagenes/RedMundialFibra.png" alt="Red global de cables submarinos">
+  <figcaption>Red mundial de cables submarinos de fibra óptica para comunicaciones intercontinentales</figcaption>
+</figure>
+
+<div class="admonition success">
+<p class="admonition-title"><span style='font-size: 1.4em;'><strong>🗺️ MAPA INTERACTIVO</strong></span></p>
+<p><div style="text-align: center; padding: 20px;">
+    <a href="https://www.submarinecablemap.com" target="_blank" style="text-decoration: none;">
+        <div style="background: linear-gradient(135deg, #0077b6, #0056b3); border-radius: 12px; padding: 30px; box-shadow: 0 8px 20px rgba(0,119,182,0.3); transition: transform 0.3s ease;">
+            <h3 style="color: white; margin: 0 0 15px 0; font-size: 1.5em;">
+                🌐 Submarine Cable Map
+            </h3>
+            <p style="color: #e8f4fd; margin: 0 0 20px 0; font-size: 1.2em;">
+                Explora la infraestructura mundial de cables submarinos
+            </p>
+            <div style="background: white; border-radius: 8px; padding: 15px; display: inline-block;">
+                <span style="color: #0077b6; font-weight: bold; font-size: 1.1em;">
+                    🔗 Abrir Mapa Interactivo
+                </span>
+            </div>
+        </div>
+    </a>
+</div></p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title"><span style='font-size: 1.2em;'><strong>💡 Instrucciones de uso:</strong></span></p>
+<p><span style="font-size: 1.1em;"></p>
+<ul>
+<li><strong>Haz clic</strong> en el botón superior para abrir el mapa en una nueva pestaña</li>
+<li><strong>Explora</strong> las rutas de cables submarinos haciendo zoom y desplazándote por el mapa</li>
+<li><strong>Selecciona</strong> cualquier cable para ver información detallada (longitud, capacidad, empresas propietarias)</li>
+<li><strong>Identifica</strong> los puntos de amarre y las rutas que conectan España con otros continentes
+</span></li>
+</ul>
+</div>
+<p>Estos cables submarinos de fibra óptica constituyen la <strong><span style="background: linear-gradient(120deg, #0077b6, #0056b3); color: white; padding: 2px 6px; border-radius: 4px; font-weight: bold;">columna vertebral de las comunicaciones globales modernas</span></strong>, formando una red intercontinental que conecta todos los continentes habitados del planeta. </p>
+<div class="admonition success">
+<p class="admonition-title"><span style='font-size: 1.2em;'><strong>📊 DATO CLAVE:</strong></span></p>
+<p><span style="font-size: 1.3em; font-weight: bold; color: #0077b6;">
+Recorriendo miles de kilómetros por las profundidades oceánicas, estos cables transportan <strong>más del 99% del tráfico de datos internacional</strong>
+</span></p>
+</div>
+<p><strong>Aplicaciones críticas que dependen de esta infraestructura:</strong></p>
+<ul>
+<li>📞 <strong>Comunicaciones telefónicas</strong>: Llamadas internacionales y servicios de voz</li>
+<li>🌐 <strong>Internet global</strong>: Navegación web, streaming y servicios en la nube  </li>
+<li>💰 <strong>Transacciones financieras</strong>: Operaciones bancarias y mercados internacionales</li>
+<li>🏛️ <strong>Comunicaciones gubernamentales</strong>: Diplomacia y seguridad nacional</li>
+<li>📺 <strong>Medios de comunicación</strong>: Distribución de contenido audiovisual global</li>
+</ul>
+<p><strong>Características técnicas destacadas:</strong></p>
+<ul>
+<li><strong>Longitud total</strong>: Más de 1.3 millones de kilómetros de cables submarinos en funcionamiento</li>
+<li><strong>Profundidad</strong>: Instalados a profundidades de hasta 8.000 metros bajo el nivel del mar</li>
+<li><strong>Capacidad</strong>: Cada cable puede transportar terabits de datos por segundo</li>
+<li><strong>Durabilidad</strong>: Diseñados para operar durante 25 años en condiciones extremas</li>
+</ul>
+<p><strong>Impacto económico cuantificable:</strong></p>
+<ul>
+<li><strong>Valor de mercado</strong>: La industria de cables submarinos mueve más de 15.000 millones de dólares anuales</li>
+<li><strong>Dependencia crítica</strong>: Más del 99% del tráfico de datos internacional transita por estos cables</li>
+<li><strong>Interrupción costosa</strong>: Una sola ruptura puede causar pérdidas de millones de dólares por hora</li>
+<li><strong>Inversión continua</strong>: Se instalan nuevos cables cada año con inversiones multimillonarias</li>
+</ul>
+<p><strong>Ventajas técnicas sobre alternativas:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Aspecto</th>
+<th>Cables Submarinos</th>
+<th>Satélites</th>
+<th>Diferencias</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Latencia</strong></td>
+<td>50-100 ms</td>
+<td>250-600 ms</td>
+<td>5-12x menor</td>
+</tr>
+<tr>
+<td><strong>Capacidad</strong></td>
+<td>Terabits/s</td>
+<td>Gigabits/s</td>
+<td>1000x mayor</td>
+</tr>
+<tr>
+<td><strong>Costo por bit</strong></td>
+<td>Muy bajo</td>
+<td>Alto</td>
+<td>10-100x menor</td>
+</tr>
+<tr>
+<td><strong>Durabilidad</strong></td>
+<td>25 años</td>
+<td>10-15 años</td>
+<td>Mayor vida útil</td>
+</tr>
+<tr>
+<td><strong>Mantenimiento</strong></td>
+<td>Reparación puntual</td>
+<td>Reemplazo completo</td>
+<td>Más eficiente</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Consideraciones de seguridad y geopolítica:</strong></p>
+<p>La <strong>protección física</strong> de estos cables es una prioridad estratégica, ya que representan <strong>puntos únicos de fallo</strong> en las comunicaciones globales. Los gobiernos y empresas implementan:</p>
+<ul>
+<li><strong>Monitoreo constante</strong>: Sistemas de vigilancia submarina para detectar interferencias</li>
+<li><strong>Rutas redundantes</strong>: Múltiples cables para evitar dependencia de una sola ruta</li>
+<li><strong>Zonas de exclusión</strong>: Áreas protegidas alrededor de puntos críticos</li>
+<li><strong>Respuesta rápida</strong>: Equipos especializados para reparaciones urgentes</li>
+</ul>
+<h5 id="ventajas-y-desventajas_1">📊 Ventajas y desventajas<a class="headerlink" href="#ventajas-y-desventajas_1" title="Permanent link">&para;</a></h5>
+<p><strong>✅ Ventajas:</strong></p>
+<ul>
+<li>Pérdidas muy bajas a largas distancias</li>
+<li>Alta capacidad de transmisión</li>
+<li>Inmune a interferencias electromagnéticas</li>
+<li>Seguridad en la transmisión (difícil de interceptar)</li>
+</ul>
+<p><strong>❌ Desventajas:</strong></p>
+<ul>
+<li>Coste elevado</li>
+<li>Instalación compleja</li>
+<li>Fragilidad del cable</li>
+<li>Necesidad de equipos especializados</li>
+</ul>
+<h5 id="tipos-de-fibra-optica">🔬 Tipos de fibra óptica<a class="headerlink" href="#tipos-de-fibra-optica" title="Permanent link">&para;</a></h5>
+<p>Las trayectorias que se emiten sobre la fibra dan lugar a los dos tipos principales de fibra:</p>
+<div style="float: right; margin-left: 15px; margin-bottom: 10px; width: 450px;">
+  <figure>
+    <img src="imagenes/snell.png" alt="Multimodo vs Monomodo" style="width: 100%;">
+    <figcaption style="font-size: 0.9em; text-align: center;">Comparación entre fibra multimodo y monomodo: dispersión modal</figcaption>
+  </figure>
+</div>
+
+<p><strong>Multimodo (MM):</strong></p>
+<ul>
+<li>Se emiten varios haces de luz con diferentes trayectorias</li>
+<li>El emisor que se utiliza para este tipo de fibra es el diodo LED</li>
+<li>El diámetro del núcleo oscila entre 50 y 63 μm</li>
+<li>Más económico pero con limitaciones de distancia</li>
+</ul>
+<p><strong>Monomodo (SM):</strong></p>
+<ul>
+<li>Se emite un haz de luz en una trayectoria única</li>
+<li>Para conseguir este tipo de emisión se utiliza luz láser</li>
+<li>Se reduce el diámetro del núcleo hasta unos 9 μm</li>
+<li>Mayor coste pero mejor rendimiento a largas distancias</li>
+</ul>
+<p>🏗️ <strong>Estructura de los cables de fibra óptica</strong></p>
+<p>Los cables de fibra óptica se clasifican según su diseño estructural en dos tipos principales:</p>
+<div style="float: right; margin-left: 15px; margin-bottom: 10px; width: 450px;">
+  <figure>
+    <img src="imagenes/estructurafibra.png" alt="Estructura de un cable de fibra óptica" style="width: 100%;">
+    <figcaption style="font-size: 0.9em; text-align: center;">Estructura de un cable de fibra óptica</figcaption>
+  </figure>
+</div>
+
+<h6 id="cable-de-estructura-holgada-loose-tube">📦 <strong>Cable de estructura holgada (Loose-tube)</strong><a class="headerlink" href="#cable-de-estructura-holgada-loose-tube" title="Permanent link">&para;</a></h6>
+<p><strong>Aplicación:</strong> Interiores y exteriores de edificios</p>
+<p><strong>Características:</strong></p>
+<ul>
+<li>Compuesto por varios tubos de 2-3 mm de diámetro</li>
+<li>Cada tubo contiene múltiples fibras en su interior</li>
+<li>El interior del tubo puede estar relleno de gel hidrófugo para protección</li>
+<li>El núcleo del cable incorpora un elemento de refuerzo (varilla de acero, hilos de aramida, etc.)</li>
+<li>Mayor flexibilidad y resistencia a la tensión</li>
+<li>Ideal para instalaciones subterráneas y aéreas</li>
+</ul>
+<h6 id="cable-de-estructura-ajustada-tight-buffered">🎯 <strong>Cable de estructura ajustada (Tight-buffered)</strong><a class="headerlink" href="#cable-de-estructura-ajustada-tight-buffered" title="Permanent link">&para;</a></h6>
+<p><strong>Aplicación:</strong> Principalmente para interiores de edificios</p>
+<p><strong>Características:</strong></p>
+<ul>
+<li>Compuesto por una o varias fibras individuales</li>
+<li>Cada fibra posee su propio recubrimiento protector</li>
+<li>Integración en un cuerpo dieléctrico central</li>
+<li>Recubrimiento exterior de fibras de aramida</li>
+<li>Protección plástica final</li>
+<li>Mayor facilidad de instalación en espacios reducidos</li>
+<li>Menor resistencia a la tensión que la estructura holgada</li>
+</ul>
+<h6 id="clasificacion-segun-estandares">📊 Clasificación según estándares<a class="headerlink" href="#clasificacion-segun-estandares" title="Permanent link">&para;</a></h6>
+<p>La fibra óptica se encuentra estandarizada en la norma <strong>TIA/EIA-568-C</strong>, que define los siguientes tipos:</p>
+<table>
+<thead>
+<tr>
+<th>Tipo de fibra</th>
+<th>Descripción</th>
+<th>Diámetro del núcleo</th>
+<th>Diámetro del revestimiento</th>
+<th>Máxima distancia</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>OM1</strong></td>
+<td>MM</td>
+<td>62,5 μm</td>
+<td>125 μm</td>
+<td>33 m (1 Gbps), 275 m (100 Mbps)</td>
+</tr>
+<tr>
+<td><strong>OM2</strong></td>
+<td>MM</td>
+<td>50 μm</td>
+<td>125 μm</td>
+<td>82 m (1 Gbps), 550 m (100 Mbps)</td>
+</tr>
+<tr>
+<td><strong>OM3</strong></td>
+<td>MM optimizada para láser</td>
+<td>50 μm</td>
+<td>125 μm</td>
+<td>300 m (10 Gbps), 1000 m (1 Gbps)</td>
+</tr>
+<tr>
+<td><strong>OM4</strong></td>
+<td>MM optimizada para láser</td>
+<td>50 μm</td>
+<td>125 μm</td>
+<td>400 m (10 Gbps), 1000 m (1 Gbps)</td>
+</tr>
+<tr>
+<td><strong>OS1</strong></td>
+<td>SM</td>
+<td>9 μm</td>
+<td>125 μm</td>
+<td>10 km+ (1 Gbps), 40 km+ (100 Mbps)</td>
+</tr>
+</tbody>
+</table>
+<h6 id="distancias-y-velocidades">📏 Distancias y velocidades<a class="headerlink" href="#distancias-y-velocidades" title="Permanent link">&para;</a></h6>
+<p>En función de la distancia a cubrir y la velocidad de transmisión deseada, se utiliza un tipo de fibra u otro:</p>
+<table>
+<thead>
+<tr>
+<th>Velocidad</th>
+<th>300 m</th>
+<th>500 m</th>
+<th>1000 m</th>
+<th>2000 m</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>100 Mbps</strong></td>
+<td>OM1</td>
+<td>OM1</td>
+<td>OM1</td>
+<td>OS1</td>
+</tr>
+<tr>
+<td><strong>1 Gbps</strong></td>
+<td>OM1</td>
+<td>OM2</td>
+<td>OM3/OM4</td>
+<td>OS1</td>
+</tr>
+<tr>
+<td><strong>10 Gbps</strong></td>
+<td>OM3</td>
+<td>OM4</td>
+<td>OS1</td>
+<td>OS1</td>
+</tr>
+</tbody>
+</table>
+<h6 id="conectores-para-la-fibra-optica">🔌 Conectores para la fibra óptica<a class="headerlink" href="#conectores-para-la-fibra-optica" title="Permanent link">&para;</a></h6>
+<p>Los conectores de fibra óptica también son variados. Sirven para los dos tipos de fibra (SM y MM) y pueden conectarse mediante mecanismos de anclaje, enroscado, presión o el sistema del conector RJ, con pestaña para engancharse al conector hembra.</p>
+<p>Los principales tipos de conector para fibra óptica que podemos encontrar en redes son:</p>
+<figure>
+  <img src="imagenes/conectores_Foptica.png" alt="Conectores de fibra óptica">
+  <figcaption>Diferentes tipos de conectores de fibra óptica utilizados en redes</figcaption>
+</figure>
+
+<hr />
+<h3 id="medios-no-guiados">📡 Medios no guiados<a class="headerlink" href="#medios-no-guiados" title="Permanent link">&para;</a></h3>
+<p>Los medios no guiados transportan ondas electromagnéticas sin el empleo de un conductor físico. Estas ondas se propagan a través del aire, el vacío o el agua, utilizando diferentes frecuencias del espectro electromagnético.</p>
+<p>Antes de adentrarnos en las distintas bandas de frecuencia y sus usos en comunicaciones inalámbricas, es importante comprender cómo las ondas electromagnéticas abarcan un amplio espectro que va desde las frecuencias más bajas utilizadas en comunicaciones especiales hasta frecuencias extremadamente elevadas para aplicaciones avanzadas. </p>
+<p>La siguiente imagen ilustra el espectro electromagnético, mostrando cómo cada intervalo de frecuencia se destina a diferentes tecnologías y servicios de comunicación, desde la radio y la televisión hasta la telefonía móvil y los sistemas de radar. Visualizar este espectro nos permite entender la variedad y el alcance de los medios no guiados en las telecomunicaciones modernas.</p>
+<figure>
+  <img src="imagenes/espectroradio.png" alt="Espectro electromagnético" style="width: 100%; max-width: 800px; height: auto;">
+  <figcaption>Espectro electromagnético y bandas de frecuencia para comunicaciones inalámbricas</figcaption>
+</figure>
+
+<h5 id="bandas-de-frecuencia">📡 Bandas de frecuencia<a class="headerlink" href="#bandas-de-frecuencia" title="Permanent link">&para;</a></h5>
+<p>Las <strong>bandas de frecuencia</strong> son como "carriles" en una autopista. Cada tecnología inalámbrica (Wi-Fi, móvil, radio) tiene su propio "carril" para evitar interferencias.</p>
+<p><strong>¿Por qué es importante?</strong></p>
+<p>Imagina que todas las tecnologías usaran la misma frecuencia:</p>
+<ul>
+<li>❌ La radio interferiría con el Wi-Fi</li>
+<li>❌ Los móviles bloquearían la televisión</li>
+<li>❌ Sería un caos total</li>
+</ul>
+<p><strong>Solución:</strong></p>
+<ul>
+<li>✅ Cada tecnología tiene su frecuencia asignada</li>
+<li>✅ El gobierno controla qué frecuencia usa cada servicio</li>
+<li>✅ Así todo funciona sin problemas</li>
+</ul>
+<p><strong>Ejemplos de frecuencias:</strong></p>
+<ul>
+<li><strong>Radio AM</strong>: 530-1600 kHz (frecuencias bajas)</li>
+<li><strong>Radio FM</strong>: 88-108 MHz (frecuencias medias)</li>
+<li><strong>Wi-Fi</strong>: 2.4 GHz y 5 GHz (frecuencias altas)</li>
+<li><strong>Móvil 4G/5G</strong>: 700 MHz - 3.5 GHz</li>
+</ul>
+<h6 id="regulacion-en-espana">📑 <strong>Regulación en España:</strong><a class="headerlink" href="#regulacion-en-espana" title="Permanent link">&para;</a></h6>
+<p>La atribución de bandas de frecuencias se recoge en el <strong>Cuadro Nacional de Atribución de Frecuencias (CNAF)</strong>, documento oficial disponible en la <a href="https://avance.digital.gob.es/espectro/Paginas/cnaf.aspx">página web del Ministerio de Industria, Energía y Turismo</a>. Es importante verificar la compatibilidad de dispositivos entre países, ya que las asignaciones pueden variar según la normativa local.</p>
+<p>A continuación se resumen las <strong>principales bandas de frecuencia</strong> utilizadas en las comunicaciones inalámbricas:</p>
+<div class="grid cards">
+<ul>
+<li>
+<p><span class="twemoji lg middle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 6a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8c0-.85.53-1.58 1.28-1.87L15.71 1l.76 1.83L8.83 6zm0 2H4v4h12v-2h2v2h2zM7 14a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3"/></svg></span> <strong>Radioondas</strong></p>
+<hr />
+<table>
+<thead>
+<tr>
+<th>Banda</th>
+<th>Aplicación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>VLF</td>
+<td>Comunicaciones en navegación y submarinos</td>
+</tr>
+<tr>
+<td>LF</td>
+<td>Radio AM de onda larga</td>
+</tr>
+<tr>
+<td>MF</td>
+<td>Radio AM de onda media</td>
+</tr>
+<tr>
+<td>HF</td>
+<td>Radio AM de onda corta</td>
+</tr>
+<tr>
+<td>VHF</td>
+<td>Radio FM</td>
+</tr>
+<tr>
+<td>UHF</td>
+<td>TDT (Televisión Digital Terrestre)</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><span class="twemoji lg middle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m11.62 1 5.66 5.67-2.12 2.12-2.12-2.12-1.42 1.42 2.33 2.32-1.16 1.17.45.46a2.5 2.5 0 0 1 2.83.5l-3.53 3.53a2.5 2.5 0 0 1-.5-2.83l-.46-.45-1.17 1.16-2.32-2.33-1.42 1.42 2.12 2.12-2.12 2.12L1 11.62 3.14 9.5l2.12 2.12 1.41-1.41-2.83-2.83c-.78-.78-.78-2.05 0-2.83l.71-.71c.78-.78 2.05-.78 2.83 0l2.83 2.83 1.41-1.41L9.5 3.14zM18 14a4 4 0 0 1-4 4v-2a2 2 0 0 0 2-2zm4 0a8 8 0 0 1-8 8v-2a6 6 0 0 0 6-6z"/></svg></span> <strong>Microondas</strong></p>
+<hr />
+<table>
+<thead>
+<tr>
+<th>Banda</th>
+<th>Aplicación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SHF</td>
+<td>Bluetooth y ZigBee (redes WPAN)</td>
+</tr>
+<tr>
+<td></td>
+<td>Comunicaciones con radares</td>
+</tr>
+<tr>
+<td></td>
+<td>Redes WLAN y WiMAX</td>
+</tr>
+<tr>
+<td></td>
+<td>TV por satélite</td>
+</tr>
+<tr>
+<td></td>
+<td>Transmisión telefónica</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><span class="twemoji lg middle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 0C8.96 0 6.21 1.23 4.22 3.22l1.41 1.41A8.95 8.95 0 0 1 12 2c2.5 0 4.74 1 6.36 2.64l1.41-1.41C17.79 1.23 15.04 0 12 0M7.05 6.05l1.41 1.41a5.02 5.02 0 0 1 7.08 0l1.41-1.41A6.98 6.98 0 0 0 12 4c-1.93 0-3.68.78-4.95 2.05M12 15a2 2 0 0 1-2-2 2 2 0 0 1 2-2 2 2 0 0 1 2 2 2 2 0 0 1-2 2m3-6H9a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V10a1 1 0 0 0-1-1"/></svg></span> <strong>Infrarrojos</strong></p>
+<hr />
+<table>
+<thead>
+<tr>
+<th>Banda</th>
+<th>Aplicación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IR</td>
+<td>Mandos a distancia</td>
+</tr>
+<tr>
+<td></td>
+<td>Sistemas de control domótico</td>
+</tr>
+<tr>
+<td></td>
+<td>Comunicación entre dispositivos</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><span class="twemoji lg middle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12 21 3.6-4.8c-1-.75-2.25-1.2-3.6-1.2s-2.6.45-3.6 1.2zm0-18C7.95 3 4.21 4.34 1.2 6.6L3 9c2.5-1.88 5.62-3 9-3s6.5 1.12 9 3l1.8-2.4C19.79 4.34 16.05 3 12 3m0 6c-2.7 0-5.19.89-7.2 2.4l1.8 2.4C8.1 12.67 9.97 12 12 12s3.9.67 5.4 1.8l1.8-2.4C17.19 9.89 14.7 9 12 9"/></svg></span> <strong>Banda ISM</strong></p>
+<hr />
+<table>
+<thead>
+<tr>
+<th>Banda</th>
+<th>Aplicación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2,4 GHz</td>
+<td>Wi-Fi, Bluetooth</td>
+</tr>
+<tr>
+<td>5 GHz</td>
+<td>Wi-Fi de alta velocidad</td>
+</tr>
+<tr>
+<td>868 MHz</td>
+<td>Dispositivos IoT (Europa)</td>
+</tr>
+<tr>
+<td>915 MHz</td>
+<td>Aplicaciones industriales (América)</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><span class="twemoji lg middle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9z"/></svg></span> <strong>Luz Visible</strong></p>
+<hr />
+<table>
+<thead>
+<tr>
+<th>Banda</th>
+<th>Aplicación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>400-700 nm</td>
+<td>Comunicaciones ópticas</td>
+</tr>
+<tr>
+<td></td>
+<td>Fibra óptica</td>
+</tr>
+<tr>
+<td></td>
+<td>Láser de comunicación</td>
+</tr>
+<tr>
+<td></td>
+<td>Sistemas Li-Fi</td>
+</tr>
+<tr>
+<td></td>
+<td>Comunicación submarina</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><span class="twemoji lg middle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 11a1 1 0 0 1 1 1 1 1 0 0 1-1 1 1 1 0 0 1-1-1 1 1 0 0 1 1-1M4.22 4.22C5.65 2.79 8.75 3.43 12 5.56c3.25-2.13 6.35-2.77 7.78-1.34s.79 4.53-1.34 7.78c2.13 3.25 2.77 6.35 1.34 7.78s-4.53.79-7.78-1.34c-3.25 2.13-6.35 2.77-7.78 1.34S3.43 15.25 5.56 12C3.43 8.75 2.79 5.65 4.22 4.22m11.32 4.24c.61.62 1.17 1.25 1.69 1.88 1.38-2.13 1.88-3.96 1.13-4.7-.74-.75-2.57-.25-4.7 1.13.63.52 1.26 1.08 1.88 1.69m-7.08 7.08c-.61-.62-1.17-1.25-1.69-1.88-1.38 2.13-1.88 3.96-1.13 4.7.74.75 2.57.25 4.7-1.13-.63-.52-1.26-1.08-1.88-1.69m-2.82-9.9c-.75.74-.25 2.57 1.13 4.7.52-.63 1.08-1.26 1.69-1.88.62-.61 1.25-1.17 1.88-1.69-2.13-1.38-3.96-1.88-4.7-1.13m4.24 8.48c.7.7 1.42 1.34 2.12 1.91.7-.57 1.42-1.21 2.12-1.91s1.34-1.42 1.91-2.12c-.57-.7-1.21-1.42-1.91-2.12S12.7 8.54 12 7.97c-.7.57-1.42 1.21-2.12 1.91S8.54 11.3 7.97 12c.57.7 1.21 1.42 1.91 2.12m8.48 4.24c.75-.74.25-2.57-1.13-4.7-.52.63-1.08 1.26-1.69 1.88-.62.61-1.25 1.17-1.88 1.69 2.13 1.38 3.96 1.88 4.7 1.13"/></svg></span> <strong>Rayos X/Gamma</strong></p>
+<hr />
+<table>
+<thead>
+<tr>
+<th>Banda</th>
+<th>Aplicación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>10⁻¹⁰ - 10⁻¹² m</td>
+<td>Comunicaciones espaciales</td>
+</tr>
+<tr>
+<td></td>
+<td>Telescopios espaciales</td>
+</tr>
+<tr>
+<td></td>
+<td>Comunicación interplanetaria</td>
+</tr>
+<tr>
+<td></td>
+<td>Investigación astronómica</td>
+</tr>
+<tr>
+<td></td>
+<td>Sistemas de navegación espacial</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</div>
+<h6 id="ejemplos-practicos"><strong>📋 Ejemplos prácticos:</strong><a class="headerlink" href="#ejemplos-practicos" title="Permanent link">&para;</a></h6>
+<table>
+<thead>
+<tr>
+<th>Servicio</th>
+<th>Banda asignada</th>
+<th>¿Por qué esta banda?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Radio FM</strong></td>
+<td>VHF (88-108 MHz)</td>
+<td>Propagación local estable</td>
+</tr>
+<tr>
+<td><strong>Televisión</strong></td>
+<td>UHF (470-862 MHz)</td>
+<td>Buena calidad de imagen</td>
+</tr>
+<tr>
+<td><strong>Wi-Fi</strong></td>
+<td>2.4 GHz / 5 GHz</td>
+<td>Balance entre alcance y velocidad</td>
+</tr>
+<tr>
+<td><strong>Móvil 4G/5G</strong></td>
+<td>700 MHz - 3.5 GHz</td>
+<td>Optimizado para datos</td>
+</tr>
+</tbody>
+</table>
+<h5 id="estandares-inalambricos">🌐 Estándares inalámbricos<a class="headerlink" href="#estandares-inalambricos" title="Permanent link">&para;</a></h5>
+<p>La gran mayoría de los estándares inalámbricos están desarrollados por el grupo de trabajo <strong>IEEE 802</strong> del Instituto de Ingenieros Eléctricos y Electrónicos. Estos estándares definen las especificaciones técnicas para diferentes tipos de redes inalámbricas, garantizando la interoperabilidad entre dispositivos de diferentes fabricantes.</p>
+<p>Los estándares IEEE 802 se organizan según el tipo de red y su alcance:</p>
+<ul>
+<li><strong>802.11</strong>: Redes de área local inalámbricas (WLAN)</li>
+<li><strong>802.15</strong>: Redes de área personal inalámbricas (WPAN)</li>
+<li><strong>802.16</strong>: Redes de área metropolitana inalámbricas (WMAN)</li>
+<li><strong>802.20</strong>: Redes de área amplia inalámbricas (WWAN)</li>
+</ul>
+<h6 id="estandar-para-redes-wpan-ieee-80215">📱 Estándar para redes WPAN (IEEE 802.15)<a class="headerlink" href="#estandar-para-redes-wpan-ieee-80215" title="Permanent link">&para;</a></h6>
+<p>El estándar <strong>IEEE 802.15</strong> define las especificaciones para redes de área personal inalámbricas (WPAN), diseñadas para comunicaciones de corta distancia entre dispositivos personales. Se divide en varios grupos especializados:</p>
+<p><strong>Grupos principales:</strong></p>
+<div class="grid cards">
+<ul>
+<li>
+<p><strong>🔵 IEEE 802.15.1</strong></p>
+<hr />
+<p><strong>Bluetooth</strong></p>
+<p>Tecnología más extendida para comunicaciones de corta distancia entre dispositivos personales.</p>
+</li>
+<li>
+<p><strong>📱 IEEE 802.15.3</strong></p>
+<hr />
+<p><strong>NFC (Near Field Communication)</strong></p>
+<p>Tecnología para pagos móviles y transferencia de datos a muy corta distancia.</p>
+</li>
+<li>
+<p><strong>🕸️ IEEE 802.15.4</strong></p>
+<hr />
+<p><strong>ZigBee</strong></p>
+<p>Protocolo para redes de sensores de baja potencia y dispositivos IoT.</p>
+</li>
+</ul>
+</div>
+<blockquote>
+<p>Los estándares WPAN (como Bluetooth, NFC o ZigBee) permiten la comunicación inalámbrica eficiente entre dispositivos personales próximos, adaptándose a distintas necesidades del entorno digital cotidiano. A continuación, se describen.</p>
+</blockquote>
+<p>🔵 <strong>Bluetooth (IEEE 802.15.1)</strong></p>
+<p><strong>Bluetooth</strong> es la tecnología que usamos para conectar dispositivos sin cables. Es muy común en nuestros móviles, auriculares, ratones, teclados, etc.</p>
+<p><strong>¿Para qué sirve Bluetooth?</strong></p>
+<ul>
+<li><strong>Auriculares</strong>: Conectar cascos inalámbricos al móvil</li>
+<li><strong>Ratón y teclado</strong>: Conectar periféricos al ordenador</li>
+<li><strong>Altavoces</strong>: Conectar altavoces portátiles</li>
+<li><strong>Transferir archivos</strong>: Enviar fotos entre móviles</li>
+</ul>
+<p><strong>Características principales:</strong></p>
+<ul>
+<li><strong>Distancia</strong>: Funciona hasta 10 metros aproximadamente</li>
+<li><strong>Velocidad</strong>: Rápido para audio y archivos pequeños</li>
+<li><strong>Consumo</strong>: Bajo consumo de batería</li>
+<li><strong>Fácil</strong>: Se conecta automáticamente</li>
+</ul>
+<p><strong>Tipos de Bluetooth:</strong></p>
+<ul>
+<li><strong>Bluetooth básico</strong>: Para auriculares y dispositivos simples</li>
+<li><strong>Bluetooth de baja energía</strong>: Para smartwatches y dispositivos que duran mucho con batería</li>
+</ul>
+<p><strong>Versiones principales:</strong></p>
+<div class="grid cards">
+<ul>
+<li>
+<p><strong>📱 Bluetooth 1.x</strong></p>
+<hr />
+<p><strong>Versión Básica</strong></p>
+<table>
+<thead>
+<tr>
+<th>Característica</th>
+<th>Especificación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Velocidad</strong></td>
+<td>1 Mbps</td>
+</tr>
+<tr>
+<td><strong>Año</strong></td>
+<td>1999-2001</td>
+</tr>
+<tr>
+<td><strong>Aplicación</strong></td>
+<td>Datos básicos</td>
+</tr>
+<tr>
+<td><strong>Limitación</strong></td>
+<td>Velocidad baja</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>⚡ Bluetooth 2.0 + EDR</strong></p>
+<hr />
+<p><strong>Enhanced Data Rate</strong></p>
+<table>
+<thead>
+<tr>
+<th>Característica</th>
+<th>Especificación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Velocidad</strong></td>
+<td>3 Mbps</td>
+</tr>
+<tr>
+<td><strong>Año</strong></td>
+<td>2004</td>
+</tr>
+<tr>
+<td><strong>Mejora</strong></td>
+<td>Triple velocidad</td>
+</tr>
+<tr>
+<td><strong>Uso</strong></td>
+<td>Audio, datos</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>🚀 Bluetooth 3.0 + HS</strong></p>
+<hr />
+<p><strong>High Speed</strong></p>
+<table>
+<thead>
+<tr>
+<th>Característica</th>
+<th>Especificación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Velocidad</strong></td>
+<td>24 Mbps</td>
+</tr>
+<tr>
+<td><strong>Año</strong></td>
+<td>2009</td>
+</tr>
+<tr>
+<td><strong>Tecnología</strong></td>
+<td>Wi-Fi asistido</td>
+</tr>
+<tr>
+<td><strong>Aplicación</strong></td>
+<td>Transferencias grandes</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>🔋 Bluetooth 4.0</strong></p>
+<hr />
+<p><strong>Low Energy (BLE)</strong></p>
+<table>
+<thead>
+<tr>
+<th>Característica</th>
+<th>Especificación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Enfoque</strong></td>
+<td>Baja energía</td>
+</tr>
+<tr>
+<td><strong>Año</strong></td>
+<td>2010</td>
+</tr>
+<tr>
+<td><strong>Aplicación</strong></td>
+<td>IoT, wearables</td>
+</tr>
+<tr>
+<td><strong>Ventaja</strong></td>
+<td>Batería extendida</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>🔥 Bluetooth 5.0</strong></p>
+<hr />
+<p><strong>Mayor Alcance y Velocidad</strong></p>
+<table>
+<thead>
+<tr>
+<th>Característica</th>
+<th>Especificación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Alcance</strong></td>
+<td>4x mayor</td>
+</tr>
+<tr>
+<td><strong>Velocidad</strong></td>
+<td>2x mayor</td>
+</tr>
+<tr>
+<td><strong>Año</strong></td>
+<td>2016</td>
+</tr>
+<tr>
+<td><strong>Aplicación</strong></td>
+<td>IoT avanzado</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>📊 Evolución</strong></p>
+<hr />
+<p><strong>Progresión Tecnológica</strong></p>
+<table>
+<thead>
+<tr>
+<th>Aspecto</th>
+<th>Progresión</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Velocidad</strong></td>
+<td>1 → 3 → 24 Mbps</td>
+</tr>
+<tr>
+<td><strong>Energía</strong></td>
+<td>Alta → Baja</td>
+</tr>
+<tr>
+<td><strong>Alcance</strong></td>
+<td>Corto → Extendido</td>
+</tr>
+<tr>
+<td><strong>Uso</strong></td>
+<td>Datos → IoT</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</div>
+<p>📱 <strong>NFC (IEEE 802.15.3)</strong></p>
+<p><strong>NFC</strong> significa "Near Field Communication" (Comunicación de Campo Cercano). Es la tecnología que usamos para pagar con el móvil o pasar información entre dispositivos.</p>
+<p><strong>¿Para qué sirve NFC?</strong></p>
+<ul>
+<li><strong>Pagos móviles</strong>: Pagar con el móvil acercándolo al terminal</li>
+<li><strong>Tarjetas de visita</strong>: Pasar contactos entre móviles</li>
+<li><strong>Acceso</strong>: Abrir puertas o acceder a lugares</li>
+<li><strong>Etiquetas inteligentes</strong>: Leer información de etiquetas NFC</li>
+</ul>
+<p><strong>Características principales:</strong></p>
+<ul>
+<li><strong>Distancia</strong>: Muy corta (1-4 centímetros)</li>
+<li><strong>Velocidad</strong>: Rápida para datos pequeños</li>
+<li><strong>Seguridad</strong>: Muy segura para pagos</li>
+<li><strong>Fácil</strong>: Solo acercar el dispositivo</li>
+</ul>
+<p><strong>Ejemplos de uso:</strong></p>
+<ul>
+<li>✅ Pagar en el supermercado con el móvil</li>
+<li>✅ Pasar una foto entre móviles tocándolos</li>
+<li>✅ Leer información de un cartel con NFC</li>
+<li>✅ Abrir la puerta del trabajo con el móvil</li>
+</ul>
+<h6 id="wi-fi-ieee-80211">📶 Wi-Fi (IEEE 802.11)<a class="headerlink" href="#wi-fi-ieee-80211" title="Permanent link">&para;</a></h6>
+<p><strong>Wi-Fi</strong> es la tecnología que usamos para conectarnos a Internet sin cables en casa, trabajo, cafeterías, etc. Es la forma más común de conectarse a Internet de forma inalámbrica.</p>
+<p><strong>¿Qué significa Wi-Fi?</strong></p>
+<ul>
+<li><strong>Wi-Fi</strong> = "Wireless Fidelity" (Fidelidad Inalámbrica)</li>
+<li>Permite conectar dispositivos a Internet sin cables</li>
+<li>Funciona mediante ondas de radio (como la radio FM)</li>
+</ul>
+<p><strong>¿Por qué es importante?</strong></p>
+<ul>
+<li><strong>Universal</strong>: Casi todos los dispositivos tienen Wi-Fi</li>
+<li><strong>Fácil</strong>: Se conecta automáticamente cuando está cerca</li>
+<li><strong>Rápido</strong>: Permite navegar por Internet a alta velocidad</li>
+<li><strong>Práctico</strong>: No necesitas cables para conectarte</li>
+</ul>
+<p><strong>Evolución de los estándares Wi-Fi:</strong></p>
+<div class="grid cards">
+<ul>
+<li>
+<p><strong>📱 IEEE 802.11a</strong></p>
+<hr />
+<p><strong>Wi-Fi 2 (1999)</strong></p>
+<table>
+<thead>
+<tr>
+<th>Característica</th>
+<th>Especificación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Bandas</strong></td>
+<td>Solo 5 GHz</td>
+</tr>
+<tr>
+<td><strong>Velocidad</strong></td>
+<td>Hasta 54 Mbps</td>
+</tr>
+<tr>
+<td><strong>Tecnología</strong></td>
+<td>OFDM, 12 canales</td>
+</tr>
+<tr>
+<td><strong>Ventaja</strong></td>
+<td>Menos interferencias</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>📶 IEEE 802.11g</strong></p>
+<hr />
+<p><strong>Wi-Fi 3 (2003)</strong></p>
+<table>
+<thead>
+<tr>
+<th>Característica</th>
+<th>Especificación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Bandas</strong></td>
+<td>Solo 2,4 GHz</td>
+</tr>
+<tr>
+<td><strong>Velocidad</strong></td>
+<td>Hasta 54 Mbps</td>
+</tr>
+<tr>
+<td><strong>Tecnología</strong></td>
+<td>OFDM</td>
+</tr>
+<tr>
+<td><strong>Compatibilidad</strong></td>
+<td>Con 802.11b</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>📡 IEEE 802.11n</strong></p>
+<hr />
+<p><strong>Wi-Fi 4 (2009)</strong></p>
+<table>
+<thead>
+<tr>
+<th>Característica</th>
+<th>Especificación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Bandas</strong></td>
+<td>2,4 GHz y 5 GHz</td>
+</tr>
+<tr>
+<td><strong>Velocidad</strong></td>
+<td>Hasta 600 Mbps</td>
+</tr>
+<tr>
+<td><strong>Tecnología</strong></td>
+<td>MIMO, canales 40 MHz</td>
+</tr>
+<tr>
+<td><strong>Compatibilidad</strong></td>
+<td>Retrocompatible</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>🚀 IEEE 802.11ac</strong></p>
+<hr />
+<p><strong>Wi-Fi 5 (2013)</strong></p>
+<table>
+<thead>
+<tr>
+<th>Característica</th>
+<th>Especificación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Bandas</strong></td>
+<td>Solo 5 GHz</td>
+</tr>
+<tr>
+<td><strong>Velocidad</strong></td>
+<td>Hasta 6,77 Gbps</td>
+</tr>
+<tr>
+<td><strong>Tecnología</strong></td>
+<td>MU-MIMO, 160 MHz</td>
+</tr>
+<tr>
+<td><strong>Modulación</strong></td>
+<td>256-QAM</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>⚡ IEEE 802.11ax</strong></p>
+<hr />
+<p><strong>Wi-Fi 6 (2019)</strong></p>
+<table>
+<thead>
+<tr>
+<th>Característica</th>
+<th>Especificación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Bandas</strong></td>
+<td>2,4/5/6 GHz</td>
+</tr>
+<tr>
+<td><strong>Velocidad</strong></td>
+<td>Hasta 9,6 Gbps</td>
+</tr>
+<tr>
+<td><strong>Tecnología</strong></td>
+<td>OFDMA, TWT</td>
+</tr>
+<tr>
+<td><strong>Optimización</strong></td>
+<td>IoT, interferencias</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>🔥 IEEE 802.11be</strong></p>
+<hr />
+<p><strong>Wi-Fi 7 (2024)</strong></p>
+<table>
+<thead>
+<tr>
+<th>Característica</th>
+<th>Especificación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Bandas</strong></td>
+<td>2,4/5/6 GHz</td>
+</tr>
+<tr>
+<td><strong>Velocidad</strong></td>
+<td>Hasta 46 Gbps</td>
+</tr>
+<tr>
+<td><strong>Tecnología</strong></td>
+<td>Multi-Link, 320 MHz</td>
+</tr>
+<tr>
+<td><strong>Modulación</strong></td>
+<td>4096-QAM</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</div>
+<h6 id="wimax-ieee-80216">🌐 WiMAX (IEEE 802.16)<a class="headerlink" href="#wimax-ieee-80216" title="Permanent link">&para;</a></h6>
+<p><strong>WiMAX</strong> es una tecnología inalámbrica que permite conexión a Internet de alta velocidad en áreas amplias (ciudades o regiones). Su nombre completo es "Worldwide Interoperability for Microwave Access".</p>
+<p><strong>¿Para qué sirve WiMAX?</strong></p>
+<ul>
+<li><strong>Internet rural</strong>: Llevar conexión a zonas donde no llega la fibra óptica</li>
+<li><strong>Conexión empresarial</strong>: Para empresas que necesitan conexión estable</li>
+<li><strong>Emergencias</strong>: Comunicaciones en situaciones de crisis</li>
+</ul>
+<p><strong>Características principales:</strong></p>
+<ul>
+<li><strong>Alcance</strong>: Puede cubrir hasta 50 km de distancia</li>
+<li><strong>Velocidad</strong>: Hasta 75 Mbps (similar a fibra óptica)</li>
+<li><strong>Instalación</strong>: Más rápida que tender cables de fibra</li>
+</ul>
+<p><strong>Tipos de WiMAX:</strong></p>
+<p><strong>WiMAX Fijo:</strong></p>
+<ul>
+<li>Se instala en edificios (como una antena de TV)</li>
+<li>Conexión permanente y estable</li>
+<li>Ideal para casas y empresas</li>
+</ul>
+<p><strong>WiMAX Móvil:</strong></p>
+<ul>
+<li>Funciona con dispositivos portátiles</li>
+<li>Permite moverse mientras se mantiene la conexión</li>
+<li>Similar a la conexión móvil 4G</li>
+</ul>
+<p><strong>Ventajas:</strong></p>
+<ul>
+<li>✅ Llega a zonas rurales donde no hay fibra</li>
+<li>✅ Instalación más rápida que cables</li>
+<li>✅ Buena velocidad de conexión</li>
+</ul>
+<p><strong>Desventajas:</strong></p>
+<ul>
+<li>❌ Menos extendido que otras tecnologías</li>
+<li>❌ Puede verse afectado por el clima</li>
+<li>❌ Requiere antenas especiales</li>
+</ul>
+<p><strong>Evolución de los estándares WiMAX:</strong></p>
+<div class="grid cards">
+<ul>
+<li>
+<p><strong>📡 IEEE 802.16</strong></p>
+<hr />
+<p><strong>Estándar Original (2001)</strong></p>
+<table>
+<thead>
+<tr>
+<th>Característica</th>
+<th>Especificación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Visión</strong></td>
+<td>Línea de visión requerida</td>
+</tr>
+<tr>
+<td><strong>Aplicación</strong></td>
+<td>Backhaul fijo</td>
+</tr>
+<tr>
+<td><strong>Tecnología</strong></td>
+<td>Base para WiMAX</td>
+</tr>
+<tr>
+<td><strong>Limitación</strong></td>
+<td>Solo entornos despejados</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>🏠 IEEE 802.16a</strong></p>
+<hr />
+<p><strong>Sin Línea de Visión (2003)</strong></p>
+<table>
+<thead>
+<tr>
+<th>Característica</th>
+<th>Especificación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Visión</strong></td>
+<td>Sin línea de visión (NLOS)</td>
+</tr>
+<tr>
+<td><strong>Aplicación</strong></td>
+<td>Acceso residencial</td>
+</tr>
+<tr>
+<td><strong>Ventaja</strong></td>
+<td>Mayor flexibilidad</td>
+</tr>
+<tr>
+<td><strong>Uso</strong></td>
+<td>Entornos urbanos</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>🔧 IEEE 802.16d</strong></p>
+<hr />
+<p><strong>WiMAX Fijo (2004)</strong></p>
+<table>
+<thead>
+<tr>
+<th>Característica</th>
+<th>Especificación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tipo</strong></td>
+<td>Fijo, estabilización</td>
+</tr>
+<tr>
+<td><strong>Aplicación</strong></td>
+<td>WiMAX fijo</td>
+</tr>
+<tr>
+<td><strong>Estabilidad</strong></td>
+<td>Alta confiabilidad</td>
+</tr>
+<tr>
+<td><strong>Instalación</strong></td>
+<td>Permanente</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>📱 IEEE 802.16e</strong></p>
+<hr />
+<p><strong>WiMAX Móvil (2005)</strong></p>
+<table>
+<thead>
+<tr>
+<th>Característica</th>
+<th>Especificación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Movilidad</strong></td>
+<td>Limitada</td>
+</tr>
+<tr>
+<td><strong>Aplicación</strong></td>
+<td>WiMAX móvil</td>
+</tr>
+<tr>
+<td><strong>Handover</strong></td>
+<td>Entre estaciones</td>
+</tr>
+<tr>
+<td><strong>Competencia</strong></td>
+<td>Tecnologías celulares</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>🚀 IEEE 802.16m</strong></p>
+<hr />
+<p><strong>4G WiMAX (2011)</strong></p>
+<table>
+<thead>
+<tr>
+<th>Característica</th>
+<th>Especificación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Generación</strong></td>
+<td>4G</td>
+</tr>
+<tr>
+<td><strong>Velocidad</strong></td>
+<td>Alta velocidad</td>
+</tr>
+<tr>
+<td><strong>Aplicación</strong></td>
+<td>Competencia LTE</td>
+</tr>
+<tr>
+<td><strong>Tecnología</strong></td>
+<td>Avanzada</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>📊 Comparativa</strong></p>
+<hr />
+<p><strong>Resumen Evolutivo</strong></p>
+<table>
+<thead>
+<tr>
+<th>Aspecto</th>
+<th>Progresión</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Visión</strong></td>
+<td>LOS → NLOS</td>
+</tr>
+<tr>
+<td><strong>Movilidad</strong></td>
+<td>Fijo → Móvil</td>
+</tr>
+<tr>
+<td><strong>Velocidad</strong></td>
+<td>Básica → 4G</td>
+</tr>
+<tr>
+<td><strong>Aplicación</strong></td>
+<td>Backhaul → Consumo</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</div>
+<h5 id="redes-moviles-wwan">📱 Redes móviles (WWAN)<a class="headerlink" href="#redes-moviles-wwan" title="Permanent link">&para;</a></h5>
+<p>Las <strong>redes móviles</strong> son las que usamos en nuestros teléfonos para conectarnos a Internet y hacer llamadas. Han evolucionado mucho desde los primeros teléfonos hasta los actuales.</p>
+<p><strong>¿Qué significa cada generación?</strong></p>
+<ul>
+<li><strong>1G</strong>: Los primeros teléfonos móviles (solo voz, muy básicos)</li>
+<li><strong>2G</strong>: Teléfonos digitales (voz + SMS)</li>
+<li><strong>3G</strong>: Primeros smartphones con Internet básico</li>
+<li><strong>4G</strong>: Internet rápido en móviles (como tenemos ahora)</li>
+<li><strong>5G</strong>: Internet súper rápido (el futuro)</li>
+</ul>
+<p><strong>¿Por qué es importante el 5G?</strong></p>
+<p>El <strong>5G</strong> promete ser mucho más rápido que el 4G actual, permitiendo:
+- Descargar películas en segundos
+- Jugar online sin retrasos
+- Conectar muchos más dispositivos a la vez</p>
+<div class="grid cards">
+<ul>
+<li>
+<p><strong>📞 1G</strong></p>
+<hr />
+<p><strong>Primera Generación (1980s)</strong></p>
+<table>
+<thead>
+<tr>
+<th>Característica</th>
+<th>Especificación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Velocidad</strong></td>
+<td>2,4 Kb/s</td>
+</tr>
+<tr>
+<td><strong>Tipo</strong></td>
+<td>Analógico</td>
+</tr>
+<tr>
+<td><strong>Aplicación</strong></td>
+<td>Solo voz</td>
+</tr>
+<tr>
+<td><strong>Limitación</strong></td>
+<td>Sin datos</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>📱 2G</strong></p>
+<hr />
+<p><strong>Segunda Generación (1990s)</strong></p>
+<table>
+<thead>
+<tr>
+<th>Característica</th>
+<th>Especificación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Velocidad</strong></td>
+<td>64 Kb/s</td>
+</tr>
+<tr>
+<td><strong>Tipo</strong></td>
+<td>Digital</td>
+</tr>
+<tr>
+<td><strong>Estándares</strong></td>
+<td>GSM, CDMA</td>
+</tr>
+<tr>
+<td><strong>Novedad</strong></td>
+<td>SMS</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>🌐 3G</strong></p>
+<hr />
+<p><strong>Tercera Generación (2003)</strong></p>
+<table>
+<thead>
+<tr>
+<th>Característica</th>
+<th>Especificación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Velocidad</strong></td>
+<td>2 Mb/s</td>
+</tr>
+<tr>
+<td><strong>Aplicación</strong></td>
+<td>Voz + datos</td>
+</tr>
+<tr>
+<td><strong>Novedad</strong></td>
+<td>Internet móvil</td>
+</tr>
+<tr>
+<td><strong>Uso</strong></td>
+<td>Navegación web</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>🚀 4G</strong></p>
+<hr />
+<p><strong>Cuarta Generación (2009)</strong></p>
+<table>
+<thead>
+<tr>
+<th>Característica</th>
+<th>Especificación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Velocidad</strong></td>
+<td>100 Mb/s</td>
+</tr>
+<tr>
+<td><strong>Tecnología</strong></td>
+<td>LTE</td>
+</tr>
+<tr>
+<td><strong>Protocolo</strong></td>
+<td>IP</td>
+</tr>
+<tr>
+<td><strong>Aplicación</strong></td>
+<td>Banda ancha móvil</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>⚡ 5G</strong></p>
+<hr />
+<p><strong>Quinta Generación (2020s)</strong></p>
+<table>
+<thead>
+<tr>
+<th>Característica</th>
+<th>Especificación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Velocidad</strong></td>
+<td>1+ Gb/s</td>
+</tr>
+<tr>
+<td><strong>Latencia</strong></td>
+<td>&lt;1 ms</td>
+</tr>
+<tr>
+<td><strong>IoT</strong></td>
+<td>Millones dispositivos</td>
+</tr>
+<tr>
+<td><strong>Aplicación</strong></td>
+<td>Vehículos autónomos</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>📊 Comparativa</strong></p>
+<hr />
+<p><strong>Evolución Tecnológica</strong></p>
+<table>
+<thead>
+<tr>
+<th>Aspecto</th>
+<th>Progresión</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Velocidad</strong></td>
+<td>Kb/s → Gb/s</td>
+</tr>
+<tr>
+<td><strong>Tipo</strong></td>
+<td>Analógico → Digital</td>
+</tr>
+<tr>
+<td><strong>Uso</strong></td>
+<td>Voz → IoT</td>
+</tr>
+<tr>
+<td><strong>Aplicación</strong></td>
+<td>Básico → Avanzado</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</div>
+<h2 id="actividades">🛠️ Actividades<a class="headerlink" href="#actividades" title="Permanent link">&para;</a></h2>
+<div class="admonition tip">
+<p class="admonition-title">Formato de entrega</p>
+<p>Para la entrega de las actividades, genera un documento con la práctica descrita a continuación. Deberás crear un archivo PDF con el siguiente formato de nombre: <strong>ACXXX.pdf o PRXXX.pdf</strong>, donde las X representan el número de la actividad. Una vez finalizada la práctica, sube el archivo a Aules (antes de la fecha de vencimiento) para su calificación.</span></p>
+</div>
+<p><a name="AC301"></a></p>
+<ul>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.832 3.367 8.668.108a3.15 3.15 0 0 0-3.856 2.226L.943 16.777a3.15 3.15 0 0 0 2.226 3.856l12.163 3.259a3.15 3.15 0 0 0 3.855-2.226l3.87-14.443a3.15 3.15 0 0 0-2.226-3.856M6.332 2.741a1.574 1.574 0 0 1 1.928-1.113l12.163 3.26a1.574 1.574 0 0 1 1.113 1.927l-3.87 14.444a1.574 1.574 0 0 1-1.928 1.113l-12.163-3.26a1.574 1.574 0 0 1-1.113-1.927zm2.634 2.336a.787.787 0 1 0-.407 1.52l9.122 2.444a.787.787 0 1 0 .407-1.52zM6.985 9.434a.787.787 0 0 1 .963-.557l9.123 2.445a.787.787 0 0 1-.408 1.52l-9.122-2.444a.787.787 0 0 1-.556-.964m-.055 3.244a.787.787 0 0 0-.407 1.52l5.32 1.427a.787.787 0 0 0 .408-1.52z"/></svg></span> <strong>AC301</strong>. (RA2 // CE2a, CE2b // 1-3p). Investiga y documenta las diferentes categorías de cable de par trenzado. Elabora una tabla comparativa con sus características, velocidades máximas y aplicaciones típicas.</li>
+</ul>
+<p><a name="AC302"></a></p>
+<ul>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.832 3.367 8.668.108a3.15 3.15 0 0 0-3.856 2.226L.943 16.777a3.15 3.15 0 0 0 2.226 3.856l12.163 3.259a3.15 3.15 0 0 0 3.855-2.226l3.87-14.443a3.15 3.15 0 0 0-2.226-3.856M6.332 2.741a1.574 1.574 0 0 1 1.928-1.113l12.163 3.26a1.574 1.574 0 0 1 1.113 1.927l-3.87 14.444a1.574 1.574 0 0 1-1.928 1.113l-12.163-3.26a1.574 1.574 0 0 1-1.113-1.927zm2.634 2.336a.787.787 0 1 0-.407 1.52l9.122 2.444a.787.787 0 1 0 .407-1.52zM6.985 9.434a.787.787 0 0 1 .963-.557l9.123 2.445a.787.787 0 0 1-.408 1.52l-9.122-2.444a.787.787 0 0 1-.556-.964m-.055 3.244a.787.787 0 0 0-.407 1.52l5.32 1.427a.787.787 0 0 0 .408-1.52z"/></svg></span> <strong>AC302</strong>. (RA2 // CE2a, CE2b // 1-3p). Investiga y documenta las características del cable coaxial utilizado en redes locales. Elabora un informe que incluya:<ul>
+<li>Estructura y composición del cable coaxial</li>
+<li>Tipos principales de cable coaxial (RG-59, RG-58, RG-6, etc.) y sus aplicaciones</li>
+<li>Ventajas y desventajas frente a otros medios de transmisión</li>
+<li>Ejemplos de uso en redes de datos actuales y obsoletas</li>
+</ul>
+</li>
+</ul>
+<p><a name="RG303"></a></p>
+<ul>
+<li>🎯 Reto Grupal <strong>RG303</strong>: Crimpado de Cables de Par Trenzado (RA3 // CE3a, CE3b, CE3c, CE3d). Aplica las técnicas de crimpado de conectores RJ-45 en cables de par trenzado, siguiendo los estándares <strong>T568A</strong> y <strong>T568B</strong>, y demuestra la calidad del trabajo mediante pruebas de conectividad y presentación de resultados ante el resto de grupos.</li>
+</ul>
+<p>📋 <strong><a href="reto_crimpado_cables.html">Ver detalles completos del reto →</a></strong></p>
+<p><a name="AC304"></a></p>
+<ul>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.832 3.367 8.668.108a3.15 3.15 0 0 0-3.856 2.226L.943 16.777a3.15 3.15 0 0 0 2.226 3.856l12.163 3.259a3.15 3.15 0 0 0 3.855-2.226l3.87-14.443a3.15 3.15 0 0 0-2.226-3.856M6.332 2.741a1.574 1.574 0 0 1 1.928-1.113l12.163 3.26a1.574 1.574 0 0 1 1.113 1.927l-3.87 14.444a1.574 1.574 0 0 1-1.928 1.113l-12.163-3.26a1.574 1.574 0 0 1-1.113-1.927zm2.634 2.336a.787.787 0 1 0-.407 1.52l9.122 2.444a.787.787 0 1 0 .407-1.52zM6.985 9.434a.787.787 0 0 1 .963-.557l9.123 2.445a.787.787 0 0 1-.408 1.52l-9.122-2.444a.787.787 0 0 1-.556-.964m-.055 3.244a.787.787 0 0 0-.407 1.52l5.32 1.427a.787.787 0 0 0 .408-1.52z"/></svg></span> <strong>AC304</strong>. (RA2 // CE2a, CE2b // 1-3p). Realiza una investigación sobre la <strong>fibra óptica</strong> como medio de transmisión guiado. Elabora un resumen que incluya:</li>
+<li>
+<ul>
+<li>Principio de funcionamiento de la fibra óptica</li>
+<li>Estructura y tipos principales de fibra óptica (monomodo y multimodo)</li>
+<li>Aplicaciones típicas en redes locales y de área amplia</li>
+<li>Ventajas y desventajas frente a otros medios (cobre, inalámbricos)</li>
+<li>Medidas de seguridad y precauciones en su manipulación</li>
+</ul>
+</li>
+</ul>
+<p><a name="AC305"></a></p>
+<ul>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.832 3.367 8.668.108a3.15 3.15 0 0 0-3.856 2.226L.943 16.777a3.15 3.15 0 0 0 2.226 3.856l12.163 3.259a3.15 3.15 0 0 0 3.855-2.226l3.87-14.443a3.15 3.15 0 0 0-2.226-3.856M6.332 2.741a1.574 1.574 0 0 1 1.928-1.113l12.163 3.26a1.574 1.574 0 0 1 1.113 1.927l-3.87 14.444a1.574 1.574 0 0 1-1.928 1.113l-12.163-3.26a1.574 1.574 0 0 1-1.113-1.927zm2.634 2.336a.787.787 0 1 0-.407 1.52l9.122 2.444a.787.787 0 1 0 .407-1.52zM6.985 9.434a.787.787 0 0 1 .963-.557l9.123 2.445a.787.787 0 0 1-.408 1.52l-9.122-2.444a.787.787 0 0 1-.556-.964m-.055 3.244a.787.787 0 0 0-.407 1.52l5.32 1.427a.787.787 0 0 0 .408-1.52z"/></svg></span> <strong>AC305</strong>. (RA2 // CE2a, CE2b // 1-3p). Investiga y documenta los <strong>medios de transmisión no guiados</strong> utilizados en redes de comunicación. Elabora un informe que incluya:</li>
+<li>
+<ul>
+<li>Definición y ejemplos de medios no guiados (radiofrecuencia, microondas, infrarrojos, satélite, etc.)</li>
+<li>Cuadro comparativo con sus características (alcance, bandas de frecuencia, velocidad, aplicaciones)</li>
+<li>Ventajas y limitaciones de los principales tipos</li>
+<li>Ejemplos reales de uso en redes tanto en interiores como exteriores</li>
+</ul>
+</li>
+</ul>
+<p><a name="AC306"></a></p>
+<ul>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.832 3.367 8.668.108a3.15 3.15 0 0 0-3.856 2.226L.943 16.777a3.15 3.15 0 0 0 2.226 3.856l12.163 3.259a3.15 3.15 0 0 0 3.855-2.226l3.87-14.443a3.15 3.15 0 0 0-2.226-3.856M6.332 2.741a1.574 1.574 0 0 1 1.928-1.113l12.163 3.26a1.574 1.574 0 0 1 1.113 1.927l-3.87 14.444a1.574 1.574 0 0 1-1.928 1.113l-12.163-3.26a1.574 1.574 0 0 1-1.113-1.927zm2.634 2.336a.787.787 0 1 0-.407 1.52l9.122 2.444a.787.787 0 1 0 .407-1.52zM6.985 9.434a.787.787 0 0 1 .963-.557l9.123 2.445a.787.787 0 0 1-.408 1.52l-9.122-2.444a.787.787 0 0 1-.556-.964m-.055 3.244a.787.787 0 0 0-.407 1.52l5.32 1.427a.787.787 0 0 0 .408-1.52z"/></svg></span> <strong>AC306</strong>. (RA2 // CE2a, CE2b // 1-3p). Investiga y elabora una infografía o esquema visual que resuma los <strong>medios de transmisión no guiados</strong> utilizados en redes de comunicación, centrándote en los siguientes aspectos:</p>
+<ul>
+<li>Clasificación de los medios no guiados (radiofrecuencia, microondas, infrarrojos, luz visible, etc.)</li>
+<li>Ejemplos representativos de cada tipo y sus aplicaciones (Wi-Fi, Bluetooth, LTE/5G, satélite, ZigBee, WiMAX, infrarrojos, etc.)</li>
+<li>Principales <strong>estándares técnicos</strong> asociados a cada medio (por ejemplo: IEEE 802.11 para Wi-Fi, IEEE 802.15 para Bluetooth/ZigBee, IEEE 802.16 para WiMAX, ITU y 3GPP para tecnologías móviles, etc.)</li>
+<li>Ámbitos de aplicación: redes personales, locales, metropolitanas, de área amplia, etc.</li>
+<li>Puedes complementar con imágenes, iconos y descripciones breves.</li>
+</ul>
+</li>
+</ul>
+<p><a name="AC307"></a></p>
+<ul>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.832 3.367 8.668.108a3.15 3.15 0 0 0-3.856 2.226L.943 16.777a3.15 3.15 0 0 0 2.226 3.856l12.163 3.259a3.15 3.15 0 0 0 3.855-2.226l3.87-14.443a3.15 3.15 0 0 0-2.226-3.856M6.332 2.741a1.574 1.574 0 0 1 1.928-1.113l12.163 3.26a1.574 1.574 0 0 1 1.113 1.927l-3.87 14.444a1.574 1.574 0 0 1-1.928 1.113l-12.163-3.26a1.574 1.574 0 0 1-1.113-1.927zm2.634 2.336a.787.787 0 1 0-.407 1.52l9.122 2.444a.787.787 0 1 0 .407-1.52zM6.985 9.434a.787.787 0 0 1 .963-.557l9.123 2.445a.787.787 0 0 1-.408 1.52l-9.122-2.444a.787.787 0 0 1-.556-.964m-.055 3.244a.787.787 0 0 0-.407 1.52l5.32 1.427a.787.787 0 0 0 .408-1.52z"/></svg></span> <strong>AC307</strong>. (RA2 // CE2a, CE2b // 1-3p). Explora la infraestructura mundial de cables submarinos utilizando la herramienta interactiva <a href="https://www.submarinecablemap.com">Submarine Cable Map</a> y elabora un informe detallado que incluya:</p>
+<ul>
+<li><strong>Análisis geográfico</strong>: Identifica y documenta las principales rutas de cables submarinos que conectan España con otros continentes</li>
+<li><strong>Características técnicas</strong>: Selecciona 3 cables submarinos específicos y documenta sus características técnicas (longitud, capacidad, año de instalación, empresas propietarias)</li>
+<li><strong>Puntos de amarre</strong>: Localiza y describe los principales puntos de amarre en territorio español y su importancia estratégica</li>
+<li><strong>Análisis comparativo</strong>: Compara las rutas del Atlántico Norte, Mediterráneo y otras regiones en términos de densidad de cables y capacidad</li>
+<li><strong>Impacto económico</strong>: Investiga cómo estos cables afectan a la economía digital española y europea</li>
+<li><strong>Conclusiones</strong>: Reflexiona sobre la importancia estratégica de esta infraestructura para las comunicaciones globales</li>
+</ul>
+<p><strong>Formato de entrega</strong>: Documento PDF con capturas de pantalla de la herramienta interactiva, mapas anotados y análisis detallado de cada punto requerido.</p>
+</li>
+</ul>
+<hr />
+<!-- ## 📝 Revisar:
+
+- **🛥️ Carril de baja velocidad (VLF/LF)**: Para comunicaciones submarinas y navegación
+- **🚗 Carril medio (MF/HF)**: Para radio AM y comunicaciones de larga distancia  
+- **🏎️ Carril rápido (VHF/UHF)**: Para radio FM, TV y comunicaciones locales
+- **🚁 Carril ultrarrápido (SHF/EHF)**: Para Wi-Fi, satélites y radar  -->
+
+<!-- | Pin | T568A | T568B | Par T568A | Par T568B |
+|-----|-------|-------|-----------|-----------|
+| 1 | Blanco/Verde | Blanco/Naranja | Par 3 | Par 2 |
+| 2 | Verde | Naranja | Par 3 | Par 2 |
+| 3 | Blanco/Naranja | Blanco/Verde | Par 2 | Par 3 |
+| 4 | Azul | Azul | Par 1 | Par 1 |
+| 5 | Blanco/Azul | Blanco/Azul | Par 1 | Par 1 |
+| 6 | Naranja | Verde | Par 2 | Par 3 |
+| 7 | Blanco/Marrón | Blanco/Marrón | Par 4 | Par 4 |
+| 8 | Marrón | Marrón | Par 4 | Par 4 | -->
+
+<!-- | Tipo de cable | Núcleo | Dieléctrico | Aplicaciones |
+|---------------|--------|-------------|--------------|
+| **RG-58/U** | Cobre sólido (diámetro: 0,9 mm) | Polietileno | Redes Ethernet 10BASE2 (obsoleto) |
+| **RG-58A/U** | Hilos trenzados (19 hilos de 0,18 mm) | Polietileno | Redes Ethernet 10BASE2 (obsoleto) |
+| **RG-59/U** | Cobre sólido (diámetro: 0,60 mm) | Polietileno de baja densidad | Televisión por cable |
+| **RG-6/U** | Cobre rojo sólido (diámetro: 0,75 mm) | Polietileno de baja densidad | Televisión por cable, Internet por cable |
+| **RG-8** | Cobre rojo sólido (diámetro: 2,18 mm) | Polietileno de baja densidad | Redes Ethernet 10BASE5 (obsoleto) | -->
+
+<!-- **Futuro de la infraestructura submarina:**
+
+La demanda creciente de conectividad impulsa **innovaciones tecnológicas** como:
+- **Cables de mayor capacidad**: Tecnologías de multiplexación avanzada
+- **Rutas polares**: Conexiones a través del Ártico para reducir latencia
+- **Cables inteligentes**: Sensores integrados para monitoreo en tiempo real
+- **Reparación autónoma**: Sistemas robóticos para mantenimiento submarino
+
+Esta infraestructura submarina no solo conecta continentes, sino que **moldea la geografía digital del siglo XXI**, determinando qué regiones tienen acceso privilegiado a la conectividad global y influyendo en el desarrollo económico y tecnológico de naciones enteras. -->
+
+<!-- **Comparación general:**
+
+La estructura de un cable de fibra óptica puede representarse mediante esquemas que muestran la disposición de estos componentes según el tipo de diseño empleado. -->
+
+<!-- | Conector | Sistema | Nº fibras | Aplicaciones típicas |
+|----------|---------|----------|---------------------|
+| **ST** | Anclaje en giro | 1 | Redes de área local |
+| **FC** | Rosca | 1 | Redes de datos y telecomunicaciones |
+| **SC** | Presión | 1 | Circuito de TV, comprobación de equipos |
+| **LC** | Anclaje con pestaña | 1 | Redes Gigabit Ethernet, multimedia |
+| **MU** | Presión | 1 | Fines médicos y militares |
+| **MT-RJ** | Anclaje con pestaña | 2 | Redes Gigabit Ethernet, redes ATM |
+| **MPO** | Presión (grupos de 4 a 24) | 4-24 | Redes con alto número de conexiones | -->
+
+<!-- !!! info "REGULACIÓN EN ESPAÑA"
+    En España esta regulación la ejerce el Ministerio de Industria, Energía y Turismo, a través de la Secretaría de Estado de Telecomunicaciones, de acuerdo a los tratados de las organizaciones internacionales. -->
+
+<!-- ###### 📻 Radioondas
+
+Las radioondas operan entre las bandas ELF (Extremely Low Frequency) y UHF (Ultra High Frequency), cubriendo un amplio rango del espectro electromagnético. Estas ondas se caracterizan por su capacidad de propagación omnidireccional y su resistencia a las condiciones meteorológicas adversas, lo que las convierte en ideales para comunicaciones de larga distancia.
+
+**Características principales:**
+
+- **Propagación**: Se transmiten en todas las direcciones desde la antena emisora
+- **Resistencia**: Apenas son sensibles a las inclemencias meteorológicas
+- **Alcance**: Pueden cubrir grandes distancias, especialmente las de baja frecuencia
+- **Penetración**: Las frecuencias más bajas pueden atravesar obstáculos naturales
+
+Los ejemplos más representativos de este tipo de ondas son la radio en AM (que utiliza en las bandas bajas) o la radio en FM y la televisión (que utilizan en las bandas altas).
+
+###### 🛰️ Microondas
+
+Las microondas operan entre las bandas UHF (Ultra High Frequency) y EHF (Extremely High Frequency), cubriendo frecuencias desde 300 MHz hasta 300 GHz. Estas ondas electromagnéticas se caracterizan por su naturaleza direccional y su capacidad para transportar grandes cantidades de información.
+
+**Características técnicas:**
+
+- **Direccionalidad**: Requieren alineación precisa entre emisor y receptor
+- **Antenas**: Utilizan antenas parabólicas para concentrar y dirigir la señal
+- **Ancho de banda**: Permiten transmisiones de alta velocidad de datos
+- **Propagación**: Sufren atenuación por obstáculos físicos
+
+**Tipos de comunicación por microondas:**
+
+**1. Microondas terrestres:**
+
+- Comunicación directa punto a punto
+- Antenas enfrentadas para distancias relativamente cortas
+- Aplicaciones: enlaces entre edificios, comunicaciones corporativas
+
+**2. Microondas por satélite:**
+
+- Comunicación mediante satélites artificiales
+- El satélite actúa como repetidor: recibe, amplifica y retransmite
+- Permite cobertura global y comunicaciones intercontinentales
+- Aplicaciones: televisión por satélite, telefonía internacional, internet satelital
+
+###### 🔴 Infrarrojos
+
+Los infrarrojos constituyen una forma de radiación electromagnética no visible al ojo humano, operando en frecuencias entre 300 GHz y 384 THz (longitudes de onda de 1 mm a 780 nm). Esta tecnología se caracteriza por su naturaleza direccional y su limitado alcance, lo que la hace ideal para comunicaciones de corta distancia.
+
+**Características principales:**
+
+- **Frecuencia**: 300 GHz - 384 THz
+- **Longitud de onda**: 1 mm - 780 nm
+- **Direccionalidad**: Requiere línea de visión directa entre dispositivos
+- **Alcance**: Limitado a unos pocos metros
+- **Seguridad**: No atraviesa paredes, proporcionando aislamiento natural
+
+**Tipos de comunicación por infrarrojos:**
+
+**1. Comunicación por haz directo:**
+
+- Requiere línea de visión completamente despejada
+- Sin obstáculos entre emisor y receptor
+- Máxima eficiencia y velocidad de transmisión
+- Ejemplo: mandos a distancia de televisión
+
+**2. Comunicación por haz difuso:**
+
+- Utiliza rebotes en superficies para superar obstáculos menores
+- Mayor potencia de emisión para compensar pérdidas por reflexión
+- Menor eficiencia pero mayor flexibilidad de posicionamiento
+- Aplicaciones: sistemas de control domótico
+
+###### 🌐 Banda ISM (Industrial, Scientific and Medical)
+
+La banda ISM constituye una porción del espectro electromagnético reservada para aplicaciones industriales, científicas y médicas de uso libre, sin necesidad de licencia gubernamental. Estas bandas están diseñadas para permitir el desarrollo de tecnologías de comunicación sin restricciones regulatorias.
+
+**Características principales:**
+
+- **Uso libre**: No requiere licencia para su utilización
+- **Segmentación**: Dividida en canales que varían según la normativa nacional
+- **Interferencias**: Posibles interferencias entre dispositivos debido al uso compartido
+- **Potencia limitada**: Restricciones de potencia para evitar interferencias excesivas
+
+**Bandas ISM principales:**
+
+- **2,4 GHz**: La más utilizada globalmente (Wi-Fi, Bluetooth, ZigBee)
+- **5 GHz**: Bandas adicionales para Wi-Fi de alta velocidad
+- **868 MHz**: Utilizada en Europa para dispositivos de baja potencia
+- **915 MHz**: Utilizada en América para aplicaciones industriales
+
+###### 🌈 Luz visible
+
+La **luz visible** abarca el rango del espectro electromagnético perceptible por el ojo humano, con longitudes de onda entre aproximadamente 380 y 750 nm (frecuencias de ~400 a 790 THz). Aunque rara vez se utiliza para comunicaciones convencionales, existen aplicaciones específicas de la luz visible en transmisión de datos, conocidas como **comunicaciones por luz visible (VLC, por sus siglas en inglés)**.
+
+**Características principales:**
+
+- **Longitud de onda**: 380–750 nm
+- **Transporte de información**: Mediante modulación de la intensidad luminosa, imperceptible al ojo humano
+- **Direccionalidad**: La luz visible requiere línea de visión entre transmisor y receptor, similar a los infrarrojos
+- **Seguridad**: Limitada a zonas iluminadas y sin obstáculos opacos
+
+###### ☢️ Rayos X y Rayos Gamma
+
+Los **rayos X** y **rayos gamma** son formas de radiación electromagnética de muy alta frecuencia y energía (longitudes de onda extremadamente cortas, menores a 10 nm para rayos X y menores a 0,01 nm para rayos gamma).
+
+**Características principales:**
+
+- **Rayos X**: Longitud de onda 0,01–10 nm (~30 PHz–30 EHz); se producen por la desaceleración de electrones en los tubos de rayos X.
+- **Rayos gamma**: Longitud de onda <0,01 nm (>30 EHz); emitidos por desintegración nuclear o procesos astrofísicos.
+- **Altamente penetrantes** en la materia, con gran capacidad para atravesar materiales densos.
+- **Energía ionizante**: pueden modificar la estructura atómica de los materiales que atraviesan.
+
+!!! warning "Nota"
+    Dada su peligrosidad y capacidad ionizante, no se emplean habitualmente para comunicaciones de datos convencionales, excepto en contextos científicos muy especializados (como comunicación desde sondas espaciales en ciertas circunstancias). -->
+
+<!-- | Estándar | Año | Frecuencia | Velocidad teórica | Características principales |
+|----------|-----|------------|-------------------|----------------------------|
+| **802.11** | 1997 | 2,4 GHz | 2 Mbps | Estándar original |
+| **802.11a** | 1999 | 5 GHz | 54 Mbps | Primer estándar de alta velocidad |
+| **802.11b** | 1999 | 2,4 GHz | 11 Mbps | Más extendido inicialmente |
+| **802.11g** | 2003 | 2,4 GHz | 54 Mbps | Compatible con 802.11b |
+| **802.11n** | 2009 | 2,4/5 GHz | 600 Mbps | MIMO, doble banda |
+| **802.11ac** | 2013 | 5 GHz | 6,77 Gbps | MU-MIMO, canales amplios |
+| **802.11ax** | 2019 | 2,4/5/6 GHz | 9,6 Gbps | Wi-Fi 6, OFDMA |
+| **802.11be** | 2024 | 2,4/5/6 GHz | 46 Gbps | Wi-Fi 7, canales 320 MHz | -->
+
+<!-- **Estándares principales detallados:** -->
+
+<!-- ##### 🔄 Tecnología MIMO (Multiple Input, Multiple Output)
+
+La tecnología **MIMO** (Multiple Input, Multiple Output) es una técnica de comunicación inalámbrica que utiliza múltiples antenas tanto en el transmisor como en el receptor para mejorar significativamente el rendimiento de la comunicación.
+
+**Principios fundamentales:**
+
+**1. Diversidad espacial:**
+
+- Utiliza múltiples antenas para crear diferentes caminos de señal
+- Reduce los efectos de desvanecimiento y interferencias
+- Mejora la confiabilidad de la comunicación
+
+**2. Multiplexación espacial:**
+
+- Transmite múltiples flujos de datos simultáneamente
+- Aumenta la capacidad total del canal
+- Permite velocidades de transmisión más altas
+
+**3. Formación de haz (Beamforming):**
+
+- Dirige la señal hacia el receptor específico
+- Reduce interferencias hacia otros dispositivos
+- Mejora la eficiencia energética
+
+**Configuraciones MIMO comunes:**
+
+| Configuración | Antenas TX | Antenas RX | Vías de comunicación | Aplicación típica |
+|---------------|------------|------------|---------------------|-------------------|
+| **1×1** | 1 | 1 | 1 | Dispositivos básicos |
+| **2×2** | 2 | 2 | 4 | Smartphones, tablets |
+| **3×3** | 3 | 3 | 9 | Laptops, routers domésticos |
+| **4×4** | 4 | 4 | 16 | Routers empresariales |
+| **8×8** | 8 | 8 | 64 | Puntos de acceso profesionales |
+
+**Ventajas de MIMO:**
+
+- **Mayor velocidad**: Transmisión paralela de datos
+- **Mejor alcance**: Compensación de pérdidas de señal
+- **Reducción de errores**: Diversidad espacial
+- **Eficiencia espectral**: Mejor uso del espectro disponible
+- **Robustez**: Resistencia a interferencias y obstáculos
+
+**Tipos de MIMO:**
+
+**MIMO SU (Single User):**
+
+- Un usuario utiliza todas las antenas
+- Máximo rendimiento para un dispositivo
+- Ideal para aplicaciones de alta velocidad
+
+**MIMO MU (Multi User):**
+
+- Múltiples usuarios comparten las antenas
+- Eficiencia mejorada en entornos densos
+- Introducido en IEEE 802.11ac
+
+**Limitaciones y consideraciones:**
+
+- **Complejidad**: Mayor costo y consumo energético
+- **Espacio**: Requiere más espacio físico para antenas
+- **Procesamiento**: Mayor complejidad computacional
+- **Compatibilidad**: Dispositivos deben soportar la misma configuración -->
+<!-- > El siguiente esquema resume claramente el avance tecnológico de las diferentes generaciones de redes móviles, desde los sistemas analógicos iniciales hasta las actuales capacidades del 5G. Gracias a esta evolución, las comunicaciones móviles han pasado de ofrecer únicamente servicios de voz a permitir conexiones de alta velocidad, baja latencia y soporte masivo para dispositivos IoT, impulsando el desarrollo de nuevas aplicaciones y transformando la sociedad digital.
+
+
+<figure>
+  <img src="imagenes/evolucion_redes_moviles.png" alt="Evolución de redes móviles" style="max-width: 1000px; width: 100%;">
+  <figcaption>Evolución de las generaciones de redes móviles de 1G a 5G</figcaption>
+</figure> -->
+
+<!-- 
+## ⚙️ Electrónica de red
+
+Se entiende por **electrónica de red** cualquier dispositivo de la red que cumple una función específica, y que habitualmente puede configurarse para que esta función varíe.
+
+Es común que la electrónica de red se concentre en los armarios de distribución, pero no siempre es así. En unos casos por motivos de infraestructura y en otros por propia operatividad de los dispositivos, los elementos de electrónica de red pueden encontrarse en cualquier punto de la red.
+
+A continuación detallamos algunos de los principales elementos de electrónica de red.
+
+### 📡 Repetidor
+
+El **repetidor** es uno de los elementos de electrónica de red más simples. Su función es captar una señal y enviarla, sin darle ningún tratamiento más allá de la amplificación. Por este motivo, el repetidor trabaja en la **capa 1** del modelo OSI.
+
+En una red utilizaremos repetidores cuando, por el motivo que sea, haya zonas de la red donde la señal no llegue con suficiente potencia. De esta manera se puede ampliar muy fácilmente el radio de acción de una red.
+
+Es extraño encontrar repetidores rackeables. De hecho, cuando se colocan en el armario de distribución es en combinación con otros elementos de electrónica de red.
+
+#### 📶 Aplicación en redes inalámbricas
+
+La aplicación más conocida de los repetidores es amplificar la cobertura en redes inalámbricas. En este caso, el repetidor se ubica en un punto estratégico de la red que garantice que los equipos a los que se pretende dar cobertura reciban adecuadamente la señal.
+
+Hay que evitar que en la red haya zonas de sombra y puntos muertos, donde la señal no llegue o llegue con deficiencia. El repetidor suele colocarse pues en zonas céntricas y bien comunicadas con los equipos a los que se va a dar servicio, así como con el dispositivo emisor de la señal a replicar.
+
+El repetidor inalámbrico dispone de al menos una antena y una conexión de entrada RJ-45. Se puede utilizar de dos formas:
+
+- **Con vínculo inalámbrico**: en cuyo caso la red que se quiere ampliar debe disponer de un elemento emisor al que se enlace el repetidor para amplificar la señal.
+- **Con extensión cableada**: siendo el repetidor un dispositivo que está en el extremo de la red que se quiere ampliar.
+
+<figure>
+  <img src="./imagenes/repetidor_wifi_poe.png" alt="Repetidor WiFi">
+  <figcaption>Repetidor WiFi con alimentación PoE</figcaption>
+</figure>
+
+<figure>
+  <img src="./imagenes/repetidor_modos.png" alt="Modos de repetidor">
+  <figcaption>Modos de uso del repetidor: inalámbrico y cableado</figcaption>
+</figure>
+
+### 🔗 Concentrador (Hub)
+
+El **concentrador** (o hub) es un dispositivo empleado para vincular tramos de red, favoreciendo la ampliación de redes.
+
+Existe tanto en formato rackeable (ocupa 1 U) como independiente, aunque en ambos casos está en desuso.
+
+El modelo más típico para redes es, como sucedía con los paneles de parcheo, de conexiones RJ-45. Sin embargo, hay hubs de muchos tipos de conexiones: coaxial, USB, HDMI, etc.
+
+<figure>
+  <img src="./imagenes/concentrador_hub.png" alt="Concentrador Hub">
+  <figcaption>Concentrador o hub para interconexión de equipos</figcaption>
+</figure>
+
+El hub Ethernet tiene entre 4 y 48 tomas RJ-45. Los modelos rackeables tienen al menos 16 tomas RJ-45, con una toma especial en uno de los extremos, marcada como **Up-Link**.
+
+En algunos modelos de concentrador, la toma Up-Link se comparte con una toma convencional; en este caso, se dispone también de un botón en el dispositivo que permite conmutar el estado de la toma entre los modos convencional y Up-Link.
+
+<figure>
+  <img src="./imagenes/hub_uplink.png" alt="Hub con Up-Link">
+  <figcaption>Detalle de la toma Up-Link mediante botón conmutador</figcaption>
+</figure>
+
+La finalidad de la toma Up-Link es vincular dos hubs para poder extender la red. A esta operación se la denomina poner los hub en cascada y puede hacerse de dos maneras:
+
+- **Con cable directo**: utilizando la toma Up-Link
+- **Con cable cruzado**: utilizando tomas convencionales
+
+<figure>
+  <img src="./imagenes/hub_cascada_directo.png" alt="Cascada con cable directo">
+  <figcaption>Conexión en cascada de hubs con cable directo</figcaption>
+</figure>
+
+<figure>
+  <img src="./imagenes/hub_cascada_cruzado.png" alt="Cascada con cable cruzado">
+  <figcaption>Conexión en cascada de hubs con cable cruzado</figcaption>
+</figure>
+
+Un hub, que trabaja en la **capa 1** del modelo OSI, funciona de forma parecida al repetidor: toda la información que llega a él proveniente de un equipo se replica a todas las tomas con cable, llegando así a todos los equipos conectados, de forma directa o indirecta, a la red.
+
+El hecho de que no funcione en redes por encima de Fast-Ethernet (100 Mbps), unido al alto tráfico que produce en la red, con los consiguientes problemas de seguridad, hicieron que se reemplazase por el conmutador o switch, que estudiaremos a continuación.
+
+### 🔄 Conmutador (Switch)
+
+El **conmutador** (o switch) es un dispositivo cuya función es interconectar varios segmentos de red.
+
+Al contrario que el hub, el switch opera en la **capa 2** del modelo OSI, y tiene la capacidad de interpretar la dirección de destino de los paquetes de información que llegan a él, y remitirlos al segmento que les corresponda.
+
+<figure>
+  <img src="./imagenes/switch_funcionamiento.png" alt="Funcionamiento del switch">
+  <figcaption>Funcionamiento de un switch mostrando la conmutación de paquetes</figcaption>
+</figure>
+
+El switch integra un mecanismo de autoaprendizaje que le permite construir tablas con las direcciones MAC de los equipos presentes en cada segmento de red.
+
+Cuando se envía un paquete de un segmento a otro, el switch lo detecta y lo deriva al segmento correspondiente. Cuando el equipo de destino está en el mismo segmento, el dispositivo lo detecta e impide que pase a otros segmentos. De esta manera se reduce considerablemente el tráfico en la red.
+
+Este dispositivo se aplica típicamente a redes con topología de estrella y de árbol.
+
+#### 🔌 Características del switch
+
+Podemos encontrar conmutadores de cable coaxial o incluso de fibra óptica, pero los más comunes son los de cable de par trenzado, con grupos de 4 tomas RJ-45.
+
+<figure>
+  <img src="./imagenes/switch_8_puertos.png" alt="Switch de 8 puertos">
+  <figcaption>Switch de 8 puertos RJ-45 para pequeñas redes</figcaption>
+</figure>
+
+<figure>
+  <img src="./imagenes/switch_48_puertos.png" alt="Switch de 48 puertos">
+  <figcaption>Switch rackeable de 48 puertos RJ-45 para redes empresariales</figcaption>
+</figure>
+
+El switch puede ser independiente o rackeable. Los switches rackeables, como sucedía con los concentradores, tienen más puertos y, frecuentemente, también más prestaciones. El switch rackeable ocupa de 2 U a 8 U, según el número de tomas y las prestaciones que tenga. Los más habituales tienen 24, 32 o 48 tomas.
+
+<figure>
+  <img src="./imagenes/switch_rackeable_24.png" alt="Switch rackeable 24 puertos">
+  <figcaption>Switch rackeable de 24 puertos con conexiones mixtas</figcaption>
+</figure>
+
+<figure>
+  <img src="./imagenes/switch_rackeable_48.png" alt="Switch rackeable 48 puertos">
+  <figcaption>Switch rackeable de 48 puertos para centros de datos</figcaption>
+</figure>
+
+<figure>
+  <img src="./imagenes/switch_detalle_puertos.png" alt="Detalle puertos switch">
+  <figcaption>Detalle de cuatro puertos Gigabit-Ethernet: dos RJ-45 y dos de fibra óptica</figcaption>
+</figure>
+
+Otra característica interesante del switch es que puede trabajar a varias velocidades. Las más comunes son 10/100 (Ethernet/Fast-Ethernet), pero algunos ofrecen tomas especiales para Gigabit-Ethernet.
+
+Algunos modelos de switch disponen de una o dos tomas de fibra óptica. Estos dispositivos pueden enlazar segmentos de red construidos en cable de par trenzado con segmentos de fibra óptica, o también vincular tramos de red utilizando fibra óptica como medio de conexión, lo cual puede ser muy útil en algunas instalaciones.
+
+#### 🔗 Interconexión de switches
+
+Dos o más switches pueden vincularse para formar un grupo de concentradores utilizando una de las siguientes opciones:
+
+##### 🔗 Conexionado tradicional
+
+Utilizando latiguillos de cable de par trenzado o fibra, según las características del switch. Esta técnica puede aplicarse a cualquier modelo de switch, siempre que tenga tomas suficientes para ello.
+
+En este caso, la vinculación entre switches puede seguir la topología de estrella (se utiliza un switch como principal, donde se conectan los demás) o de árbol. Sin embargo, lo más habitual es una topología híbrida, donde algunos switches pueden llegar a formar anillos.
+
+<figure>
+  <img src="./imagenes/switches_estrella.png" alt="Switches en estrella">
+  <figcaption>Switches conectados en topología de estrella</figcaption>
+</figure>
+
+<figure>
+  <img src="./imagenes/switches_cadena.png" alt="Switches en cadena">
+  <figcaption>Switches conectados en cadena</figcaption>
+</figure>
+
+##### ⚡ Conexionado de alta velocidad (Stack)
+
+Utilizando los módulos de alta velocidad que algunos modelos tienen en su parte trasera. En este caso, el grupo de switches se denomina **stack** (pila). Para interconectar estos switches se utiliza un cable específico, y puede hacerse de dos formas: en cadena o en anillo (una cadena donde el último switch se vincula con el primero).
+
+<figure>
+  <img src="./imagenes/stack_anillo.png" alt="Stack en anillo">
+  <figcaption>Switches conectados en stack con topología de anillo</figcaption>
+</figure>
+
+<figure>
+  <img src="./imagenes/stack_cadena.png" alt="Stack en cadena">
+  <figcaption>Switches conectados en stack con topología de cadena</figcaption>
+</figure>
+
+<figure>
+  <img src="./imagenes/cable_alta_velocidad.png" alt="Cable alta velocidad">
+  <figcaption>Cable para conexionado de alta velocidad entre switches</figcaption>
+</figure>
+
+#### 🎛️ Switch gestionable
+
+El switch tiene la capacidad de ofrecer prestaciones que no corresponden a la capa 2 del modelo OSI. En este caso hablamos de lo que se conoce como **switch gestionable** (managed switch).
+
+Un switch gestionable incorpora características como la gestión de la red, seguridad, fiabilidad, control del rendimiento, etc. Cuando un switch gestionable tiene, por ejemplo, prestaciones propias de capa 3, se dice que es un **switch de capa 3** (o de nivel 3). Esto se podría aplicar a otras capas de la misma manera.
+
+<figure>
+  <img src="./imagenes/switch_gestionable.png" alt="Switch gestionable">
+  <figcaption>Switch gestionable con funciones avanzadas de capa 3</figcaption>
+</figure>
+
+### 🌉 Puente de red (Bridge)
+
+El **puente de red** (o bridge) es un dispositivo empleado para interconectar varios segmentos de red.
+
+En esencia, un bridge es como un switch. La diferencia esencial es que el bridge tiene muchos menos puertos, no se puede gestionar ni configurar y no existe en formato rackeable.
+
+Dado que el switch ofrece mejores prestaciones, y es más adecuado para redes medias y grandes, el bridge se reserva para casos muy concretos. Como veremos más adelante, la función del bridge se integra en electrónica de red inalámbrica.
+
+Un bridge puede ser de dos tipos:
+
+- **Transparente**: hace que equipos de diferentes segmentos de la red actúen como si perteneciesen a una única red local, sin necesidad de configuración previa.
+- **Encaminado en el origen**: el equipo que envía la información tiene capacidad para distinguir si el destinatario está dentro o fuera del segmento de red.
+
+Si el bridge interconecta directamente segmentos de redes LAN se dice que es un **puente local**. Otra opción es que el bridge vincule dos redes LAN a través de una conexión WAN (por ejemplo, una línea dedicada). En este caso se dice que es un **puente remoto**.
+
+### 🌐 Enrutador (Router)
+
+El **enrutador** (o router) es un elemento de electrónica de red cuya función es interconectar diferentes redes, ya sean LAN o WAN. Trabaja, por tanto, en el **nivel 3** del modelo OSI.
+
+Recordemos que tanto el hub, como el switch y el bridge son dispositivos que conectan equipos que forman parte de la misma red. Gracias al router podemos extender las redes, interconectándolas entre sí.
+
+#### 🏠 Router SoHo
+
+El router independiente también es conocido como **router SoHo** (Small Office Home Office, pequeña oficina y oficina en casa). Se trata de un router con características orientadas a la pequeña empresa y también a algunos entornos domésticos. Además del enrutamiento integra otros servicios como pueden ser el DHCP, filtrado de conexiones por MAC, etc.
+
+<figure>
+  <img src="./imagenes/router_soho.png" alt="Router SoHo">
+  <figcaption>Router SoHo para pequeñas oficinas y hogares</figcaption>
+</figure>
+
+El ejemplo más característico de router independiente es la conexión a Internet. En realidad se trata de una conexión de la red local (de la casa, edificio, tienda, centro, etc.) con la red Internet a través del proveedor de servicios de Internet (ISP, Internet Services Provider).
+
+Citando el router integra la función de módem para conexión ADSL, se dice que es un **router ADSL** (o también módem-router).
+
+Cuando el router no integra módem, se denomina **router neutro**.
+
+#### 🏢 Router rackeable
+
+El router rackeable ofrece conexiones de diferente tipo y velocidades, desde conexiones COM (puerto Serie) hasta conexiones de fibra óptica, pasando por conexiones de par trenzado a 10/100/1000 y otras conexiones específicas como pueden ser ATM, puertos de voz, etc.
+
+<figure>
+  <img src="./imagenes/router_rackeable.png" alt="Router rackeable">
+  <figcaption>Router rackeable con múltiples tipos de conexión</figcaption>
+</figure>
+
+<figure>
+  <img src="./imagenes/router_detalle_puertos.png" alt="Detalle puertos router">
+  <figcaption>Router rackeable con puertos RJ-45, coaxial y fibra óptica</figcaption>
+</figure>
+
+De hecho, algunos modelos ofrecen slots de conexión en la parte delantera para instalar tarjetas con las conexiones que se necesiten, según las circunstancias particulares de la red (dónde se conecta, el medio de conexión que emplea, si se necesita transmitir voz o datos, etc.).
+
+<figure>
+  <img src="./imagenes/router_slots.png" alt="Slots router">
+  <figcaption>Detalle de slots de un router empresarial</figcaption>
+</figure>
+
+<figure>
+  <img src="./imagenes/tarjeta_expansion_wic.png" alt="Tarjeta expansión WIC">
+  <figcaption>Tarjeta de expansión WIC para un router</figcaption>
+</figure>
+
+<figure>
+  <img src="./imagenes/cables_conexion_router.png" alt="Cables conexión router">
+  <figcaption>Uno de los múltiples tipos de cable para la conexión de routers rackeables</figcaption>
+</figure>
+
+El router integra su propio sistema operativo, llamado **IOS**, y también su propia memoria (RAM y flash). Todos estos elementos (IOS, y memorias) pueden modificarse según las necesidades.
+
+El IOS del router integra funciones de capas inferiores a la 3, de modo que es capaz de operar como un switch o un bridge, pero también de ofrecer características propias de la capa 3 o incluso superiores, en el caso de routers con servicios integrados de alto nivel.
+
+Una característica interesante del router rackeable es la posibilidad de incorporar una toma de corriente redundante, que entraría en funcionamiento en caso de que el suministro principal fallase.
+
+#### 🔗 Conexión de routers
+
+La conexión de routers entre sí puede ser:
+
+- **Routers SoHo**: como solo suelen disponer de conexiones RJ-45, la conexión es a través de estas tomas. Para vincularlos se utiliza un latiguillo de cable cruzado.
+- **Routers rackeables**: la interconexión de este tipo de routers se suele hacer a través de cable de serie.
+
+### 🚪 Pasarela (Gateway)
+
+La **pasarela** (o gateway), también llamada puerta de enlace, es un dispositivo de red empleado para la conexión de redes, con independencia de la arquitectura y protocolos que empleen.
+
+Son equipos que se ubican en los extremos de la red, duplicando la pila de protocolos de cada una de las redes para hacer la traducción entre ambos. Este proceso es el motivo por el que la transmisión de información se ralentiza al usar estos dispositivos.
+
+<figure>
+  <img src="./imagenes/gateway_independiente.png" alt="Gateway independiente">
+  <figcaption>Gateway independiente para conexión de redes heterogéneas</figcaption>
+</figure>
+
+La función original del gateway es propia del **nivel 4** del modelo OSI. Sin embargo, este dispositivo puede realizar otras funciones especiales, propias de capas superiores (5, 6 y 7), como pueden ser estas:
+
+#### 🔥 Cortafuegos (Firewall)
+
+Es un elemento de seguridad cuya misión es controlar el tráfico de datos entrante y saliente de la red. El nivel de seguridad se consigue aplicando una serie de criterios, llamados reglas, que establecen qué se puede y qué no se puede admitir. El cortafuegos opera en las 7 capas del modelo OSI.
+
+#### 🔒 Proxy
+
+Es un elemento de seguridad que actúa como intermediario en la comunicación de dos equipos. Su funcionamiento es muy parecido al cortafuegos, en el sentido de que se le asignan una serie de reglas que determinan qué tráfico se permite y qué tráfico debe bloquearse. El proxy trabaja en la **capa 7** del modelo OSI.
+
+#### 🔐 VPN (Virtual Private Network)
+
+Se trata de una funcionalidad que permite conectarse de forma segura a una LAN privada desde una red pública (típicamente Internet). La apariencia es que el equipo está conectado directamente a la red privada; de ahí su nombre. Un ejemplo típico es el teletrabajo: podemos conectarnos desde nuestro equipo de casa a la red corporativa de la empresa, teniendo acceso a prácticamente los mismos recursos que desde nuestro equipo corporativo.
+
+<figure>
+  <img src="./imagenes/gateway_rackeable.png" alt="Gateway rackeable">
+  <figcaption>Gateway rackeable con módulos de extensión instalados</figcaption>
+</figure>
+
+Asimismo, el gateway puede realizar funciones de capas inferiores, comportándose como un router (capa 3) o incluso como un switch (capa 2).
+
+El gateway puede ser independiente o rackeable. Los modelos más simples ofrecen dos tomas RJ-45, una para la LAN y otra para la WAN, aparte de las conexiones para configuración, que pueden ser de distinto tipo: RJ-45, serie, USB, etc. Otros modelos, por ejemplo, ofrecen muchas más tomas (como si se tratara de un switch) o permiten la integración de módulos para ampliar sus prestaciones (como sucede con los routers).
+
+### 📶 Punto de acceso
+
+El **punto de acceso** (access point, o AP) es un elemento inalámbrico de la red que se usa para extender la red cableada, ofreciendo conexión a la misma a través de medio inalámbrico.
+
+El punto de acceso, como sucedía con el repetidor, se ubica en un lugar estratégico de la red, para dar cobertura a los equipos inalámbricos o a las zonas de trabajo establecidas. Estos dispositivos integran la tecnología **PoE**, por lo que la ubicación en lugares que no tienen suministro eléctrico no supone un problema.
+
+<figure>
+  <img src="./imagenes/punto_acceso_modos.png" alt="Modos de punto de acceso">
+  <figcaption>Diferentes modos de funcionamiento de puntos de acceso</figcaption>
+</figure>
+
+Como ya vimos, la aplicación de los puntos de acceso para extender el radio de acción de la red es muy habitual en las infraestructuras que siguen una topología distribuida. En el caso de que se quiera cubrir una zona más amplia, se pueden colocar varios puntos de acceso, pudiendo solaparse las celdas de estos.
+
+<figure>
+  <img src="./imagenes/punto_acceso_repetidor.png" alt="Punto de acceso como repetidor">
+  <figcaption>Punto de acceso funcionando como repetidor</figcaption>
+</figure>
+
+Además, el punto de acceso puede actuar como repetidor o bridge. Para ello, es necesario que integre la tecnología **WDS** (Wireless Distribution System, sistema de distribución inalámbrico), que permite la interconexión de este tipo de dispositivos entre sí.
+
+Hay modelos de punto de acceso diseñados para ser colocados a la intemperie. Se trata de dispositivos con una carcasa capaz de soportar inclemencias meteorológicas, y que disponen de una o más antenas con mayor potencia. Este tipo de puntos de acceso son habituales en campus o redes multiedificio, donde es necesario extender la red sin instalar cableado adicional.
+
+<figure>
+  <img src="./imagenes/punto_acceso_interior.png" alt="Punto de acceso interior">
+  <figcaption>Punto de acceso para instalaciones interiores</figcaption>
+</figure>
+
+<figure>
+  <img src="./imagenes/punto_acceso_exterior.png" alt="Punto de acceso exterior">
+  <figcaption>Punto de acceso para exteriores con carcasa resistente</figcaption>
+</figure>
+
+<figure>
+  <img src="./imagenes/punto_acceso_exterior_detalle.png" alt="Detalle punto de acceso exterior">
+  <figcaption>Punto de acceso para exteriores. A la derecha, detalle de la vista superior e inferior</figcaption>
+</figure> -->
+
+<!-- !!! tip "<span style='font-size: 1.4em;'><strong>CONCLUSIÓN</strong></span>"
+    <span style="font-size: 1.3em;">La infraestructura de red es fundamental para el funcionamiento de cualquier sistema de comunicaciones. Conocer los diferentes medios de transmisión, estándares de cableado y técnicas de montaje nos permite diseñar e implementar redes locales eficientes y adaptadas a las necesidades específicas de cada entorno.</span> -->
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Pie" >
+        
+          
+          <a href="02arquitecturas.html" class="md-footer__link md-footer__link--prev" aria-label="Anterior: 2. Arquitecturas de redes">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              <div class="md-ellipsis">
+                2. Arquitecturas de redes
+              </div>
+            </div>
+          </a>
+        
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      2025-2026 Francisco Javier Hernández Illán - <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es">Licencia CC BY-NC-SA</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="mailto:<fj.hernandez@edu.gva.es>" target="_blank" rel="noopener" title="" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4l208 156a48 48 0 0 0 57.6 0l208-156c12.1-9.1 19.2-23.3 19.2-38.4 0-26.5-21.5-48-48-48zM0 196v188c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V196L313.6 344.8c-34.1 25.6-81.1 25.6-115.2 0z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.linkedin.com/in/fjavier-hernandez-illan" target="_blank" rel="noopener" title="www.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77m282.1 320h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+      <div class="md-consent" data-md-component="consent" id="__consent" hidden>
+        <div class="md-consent__overlay"></div>
+        <aside class="md-consent__inner">
+          <form class="md-consent__form md-grid md-typeset" name="consent">
+            
+
+
+  
+
+
+<h4>Consentimiento de cookie</h4>
+<p>Esta página de apuntes utiliza cookies para reconocer las visitas, medir la efectividad de la documentación y averiguar si encuentras aquello que buscas o cómo has llegado a estos apuntes. Con tu consentimiento, me ayudas a mejorar estos materiales.</p>
+<input class="md-toggle" type="checkbox" id="__settings" >
+<div class="md-consent__settings">
+  <ul class="task-list">
+    
+    
+      
+        
+  
+  
+    
+    
+  
+  <li class="task-list-item">
+    <label class="task-list-control">
+      <input type="checkbox" name="analytics" checked>
+      <span class="task-list-indicator"></span>
+      Google Analytics
+    </label>
+  </li>
+
+      
+    
+    
+      
+    
+    
+  </ul>
+</div>
+<div class="md-consent__controls">
+  
+    
+      <button class="md-button md-button--primary">Aceptar</button>
+    
+    
+    
+  
+    
+    
+    
+      <label class="md-button" for="__settings">Gestionar cookies</label>
+    
+  
+</div>
+          </form>
+        </aside>
+      </div>
+      <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout((function(){document.querySelector("[data-md-component=consent]").hidden=!1}),250);var form=document.forms.consent;for(var action of["submit","reset"])form.addEventListener(action,(function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map((function(e){return[e,!0]})))),location.hash="",location.reload()}))</script>
+    
+    
+      
+      <script id="__config" type="application/json">{"base": ".", "features": ["header.autohide", "navigation.top", "navigation.tracking", "navigation.footer", "navigation.indexes", "content.code.annotate", "announce.dismiss", "toc.follow", "content.code.copy"], "search": "assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+        <script src="js/print-site.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,1508 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Adaptadores de red, armarios de distribución, paneles de parcheo, elementos de conexión y electrónica de red.">
+      
+      
+      
+        <link rel="canonical" href="https://fjavier-hernandez.github.io/ral/04estructurado.html">
+      
+      
+      
+      
+      <link rel="icon" href="imagenes/ral.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+    
+    
+      
+        <title>Elementos de una Red de Datos y Telecomunicaciones - Redes de Área Local</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="stylesheets/extra.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-0CPJP88MBF"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-0CPJP88MBF",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-0CPJP88MBF",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>if("undefined"!=typeof __md_analytics){var consent=__md_get("__consent");consent&&consent.analytics&&__md_analytics()}</script>
+  
+
+    
+    
+      
+        <meta  property="og:type"  content="website" >
+      
+        <meta  property="og:title"  content="Elementos de una Red de Datos y Telecomunicaciones - Redes de Área Local" >
+      
+        <meta  property="og:description"  content="Adaptadores de red, armarios de distribución, paneles de parcheo, elementos de conexión y electrónica de red." >
+      
+        <meta  property="og:image"  content="https://fjavier-hernandez.github.io/ral/assets/images/social/04estructurado.png" >
+      
+        <meta  property="og:image:type"  content="image/png" >
+      
+        <meta  property="og:image:width"  content="1200" >
+      
+        <meta  property="og:image:height"  content="630" >
+      
+        <meta  property="og:url"  content="https://fjavier-hernandez.github.io/ral/04estructurado.html" >
+      
+        <meta  name="twitter:card"  content="summary_large_image" >
+      
+        <meta  name="twitter:title"  content="Elementos de una Red de Datos y Telecomunicaciones - Redes de Área Local" >
+      
+        <meta  name="twitter:description"  content="Adaptadores de red, armarios de distribución, paneles de parcheo, elementos de conexión y electrónica de red." >
+      
+        <meta  name="twitter:image"  content="https://fjavier-hernandez.github.io/ral/assets/images/social/04estructurado.png" >
+      
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="javi" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#elementos-de-una-red-de-datos-y-telecomunicaciones" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="index.html" title="Redes de Área Local" class="md-header__button md-logo" aria-label="Redes de Área Local" data-md-component="logo">
+      
+  <img src="imagenes/ral.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Redes de Área Local
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Elementos de una Red de Datos y Telecomunicaciones
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="javi" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Cambiar a modo noche"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo noche" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Cambiar a modo día"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo día" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="index.html" title="Redes de Área Local" class="md-nav__button md-logo" aria-label="Redes de Área Local" data-md-component="logo">
+      
+  <img src="imagenes/ral.svg" alt="logo">
+
+    </a>
+    Redes de Área Local
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Inicio
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="01ir.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    1. Introducción a las redes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="02arquitecturas.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2. Arquitecturas de redes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="03fisica.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    3. Capa física
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#elementos-fundamentales-de-red" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔧 ELEMENTOS FUNDAMENTALES DE RED
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#propuesta-didactica" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Propuesta didáctica
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📚 Propuesta didáctica">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#criterios-de-evaluacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 Criterios de evaluación
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎯 Criterios de evaluación">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#criterios-de-evaluacion-del-ra2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Criterios de evaluación del RA2
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#criterios-de-evaluacion-del-ra3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Criterios de evaluación del RA3
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#criterios-de-evaluacion-del-ra4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Criterios de evaluación del RA4
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contenidos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contenidos
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#programacion-de-aula-15h" class="md-nav__link">
+    <span class="md-ellipsis">
+      Programación de Aula (15h)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adaptadores-de-red" class="md-nav__link">
+    <span class="md-ellipsis">
+      🖥️ Adaptadores de red
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🖥️ Adaptadores de red">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#caracteristicas-del-adaptador-de-red" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔌 Características del adaptador de red
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#caracteristicas-tecnicas-del-nic" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ Características técnicas del NIC
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="⚙️ Características técnicas del NIC">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#modo-de-transmision" class="md-nav__link">
+    <span class="md-ellipsis">
+      📡 Modo de transmisión
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#protocolo-de-enlace-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      🌐 Protocolo de enlace de datos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#velocidad-de-transmision" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚡ Velocidad de transmisión
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#capacidad-wake-on-lan" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔋 Capacidad Wake On LAN
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tipos-de-conexiones-del-adaptador" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔗 Tipos de conexiones del adaptador
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#luces-testigo" class="md-nav__link">
+    <span class="md-ellipsis">
+      💡 Luces testigo
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#armario-de-distribucion" class="md-nav__link">
+    <span class="md-ellipsis">
+      🏢 Armario de distribución
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🏢 Armario de distribución">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#estructura-del-armario" class="md-nav__link">
+    <span class="md-ellipsis">
+      🏗️ Estructura del armario
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#estandar-de-19-pulgadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      📏 Estándar de 19 pulgadas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clasificacion-por-tamano" class="md-nav__link">
+    <span class="md-ellipsis">
+      📊 Clasificación por tamaño
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📊 Clasificación por tamaño">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#racks-menores-de-12-u" class="md-nav__link">
+    <span class="md-ellipsis">
+      Racks menores de 12 U
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#racks-entre-12-u-y-25-u" class="md-nav__link">
+    <span class="md-ellipsis">
+      Racks entre 12 U y 25 U
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#racks-de-mas-de-24-u" class="md-nav__link">
+    <span class="md-ellipsis">
+      Racks de más de 24 U
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#panel-de-parcheo" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔌 Panel de parcheo
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔌 Panel de parcheo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#caracteristicas-del-panel" class="md-nav__link">
+    <span class="md-ellipsis">
+      📋 Características del panel
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sistema-de-codificacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      🏷️ Sistema de codificación
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tipos-de-conexiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔧 Tipos de conexiones
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#elementos-de-conexion-y-guiado" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔗 Elementos de conexión y guiado
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔗 Elementos de conexión y guiado">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#toma-de-usuario-to" class="md-nav__link">
+    <span class="md-ellipsis">
+      📍 Toma de usuario (TO)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tipos-de-tomas-de-usuario" class="md-nav__link">
+    <span class="md-ellipsis">
+      🏠 Tipos de tomas de usuario
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🏠 Tipos de tomas de usuario">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#de-superficie" class="md-nav__link">
+    <span class="md-ellipsis">
+      🖼️ De superficie
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#empotrables" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔲 Empotrables
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#de-suelo" class="md-nav__link">
+    <span class="md-ellipsis">
+      🏢 De suelo
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#latiguillos" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔌 Latiguillos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#soportes-de-guiado" class="md-nav__link">
+    <span class="md-ellipsis">
+      🛤️ Soportes de guiado
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🛤️ Soportes de guiado">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#canalizaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      📦 Canalizaciones
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bandejas-de-guiado" class="md-nav__link">
+    <span class="md-ellipsis">
+      🏗️ Bandejas de guiado
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#guias-de-cables" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔗 Guías de cables
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pasahilos" class="md-nav__link">
+    <span class="md-ellipsis">
+      📋 Pasahilos
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tecnologia-poe-power-over-ethernet" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚡ Tecnología PoE (Power Over Ethernet)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dominios-de-colision-y-de-difusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      🌐 Dominios de colisión y de difusión
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🌐 Dominios de colisión y de difusión">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dominio-de-colision" class="md-nav__link">
+    <span class="md-ellipsis">
+      💥 Dominio de colisión
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dominio-de-difusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      📡 Dominio de difusión
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#actividades" class="md-nav__link">
+    <span class="md-ellipsis">
+      🛠️ Actividades
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="elementos-de-una-red-de-datos-y-telecomunicaciones"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 3a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-4v2h1a1 1 0 0 1 1 1h7v2h-7a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1H2v-2h7a1 1 0 0 1 1-1h1v-2H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z"/></svg></span> ELEMENTOS DE UNA RED DE DATOS Y TELECOMUNICACIONES<a class="headerlink" href="#elementos-de-una-red-de-datos-y-telecomunicaciones" title="Permanent link">&para;</a></h1>
+<p>En esta unidad estudiaremos los <strong>elementos fundamentales</strong> que componen una red de datos y telecomunicaciones, desde los adaptadores de red hasta los equipos de electrónica más avanzados. Nos enfocaremos en la funcionalidad, características técnicas y aplicaciones de cada componente, así como en su integración dentro del sistema de cableado estructurado.</p>
+<p>Los elementos de red son los componentes físicos y lógicos que permiten establecer la conectividad, gestionar el tráfico de datos y proporcionar los servicios necesarios para el funcionamiento eficiente de la red. Dominar estos conceptos es esencial para diseñar, implementar y mantener redes locales robustas y escalables.</p>
+<div class="admonition info">
+<p class="admonition-title"><span style='font-size: 1.3em;'><strong>Objetivos de la unidad</strong></span></p>
+<p><span style="font-size: 1.2em;">
+• Identificar y clasificar los diferentes elementos de red<br>
+• Comprender las funciones y características de cada componente<br>
+• Aplicar técnicas de instalación y configuración<br>
+• Diseñar sistemas de distribución eficientes<br>
+• Evaluar la idoneidad de cada elemento según el entorno
+</span></p>
+</div>
+<h2 id="elementos-fundamentales-de-red">🔧 ELEMENTOS FUNDAMENTALES DE RED<a class="headerlink" href="#elementos-fundamentales-de-red" title="Permanent link">&para;</a></h2>
+<p>La <strong>infraestructura de red</strong> comprende todos los elementos físicos y lógicos necesarios para establecer la conectividad entre dispositivos en una red local. Esta infraestructura incluye los adaptadores de red, equipos de distribución, elementos de conexión y la electrónica que gestiona el tráfico de datos.</p>
+<p>En esta unidad analizaremos los componentes fundamentales:</p>
+<div class="admonition abstract">
+<p class="admonition-title"><span style='font-size: 1.3em;'><strong>Componentes principales</strong></span></p>
+<p><span style="font-size: 1.2em;">
+<strong>🖥️ Adaptadores de red</strong>: Interfaces de conexión entre equipos y red<br>
+<strong>🏢 Armarios de distribución</strong>: Centros de cableado y equipamiento<br>
+<strong>🔌 Paneles de parcheo</strong>: Organización y conexión del cableado<br>
+<strong>📡 Electrónica de red</strong>: Dispositivos de gestión y conmutación<br>
+<strong>🌐 Elementos inalámbricos</strong>: Puntos de acceso y repetidores
+</span></p>
+</div>
+<p>La correcta selección e implementación de estos elementos es crucial para garantizar la escalabilidad, mantenibilidad y rendimiento de la red, cumpliendo con estándares internacionales y mejores prácticas de la industria.</p>
+<h2 id="propuesta-didactica">📚 Propuesta didáctica<a class="headerlink" href="#propuesta-didactica" title="Permanent link">&para;</a></h2>
+<p>En esta unidad trabajamos los <strong>RA2, RA3 y RA4 de RAL</strong>:</p>
+<blockquote>
+<p><strong>RA2.</strong> <em>Despliega el cableado de una red local interpretando especificaciones y aplicando técnicas de montaje.</em></p>
+<p><strong>RA3.</strong> <em>Interconecta equipos en redes locales cableadas describiendo estándares de cableado y aplicando técnicas de montaje de conectores.</em></p>
+<p><strong>RA4.</strong> <em>Instala equipos en red, describiendo sus prestaciones y aplicando técnicas de montaje.</em></p>
+</blockquote>
+<h3 id="criterios-de-evaluacion">🎯 Criterios de evaluación<a class="headerlink" href="#criterios-de-evaluacion" title="Permanent link">&para;</a></h3>
+<h4 id="criterios-de-evaluacion-del-ra2">Criterios de evaluación del RA2<a class="headerlink" href="#criterios-de-evaluacion-del-ra2" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p><strong>CE2a</strong>: <em>Interpreta las especificaciones del cableado de una red local analizando los requisitos técnicos y aplicando estándares de cableado estructurado.</em></p>
+<p><strong>CE2b</strong>: <em>Identifica los componentes del sistema de cableado reconociendo medios de transmisión, conectores y equipos de distribución.</em></p>
+<p><strong>CE2c</strong>: <em>Aplica técnicas de montaje del cableado siguiendo procedimientos de instalación y cumpliendo normativas de seguridad.</em></p>
+<p><strong>CE2d</strong>: <em>Verifica el funcionamiento del cableado instalado utilizando herramientas de medición y pruebas de conectividad.</em></p>
+</blockquote>
+<h4 id="criterios-de-evaluacion-del-ra3">Criterios de evaluación del RA3<a class="headerlink" href="#criterios-de-evaluacion-del-ra3" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p><strong>CE3a</strong>: <em>Describe los estándares de cableado para redes locales identificando las normas TIA/EIA-568 y categorías de cable.</em></p>
+<p><strong>CE3b</strong>: <em>Identifica los tipos de conectores y su uso analizando conectores RJ, de fibra óptica y coaxiales.</em></p>
+<p><strong>CE3c</strong>: <em>Aplica técnicas de montaje de conectores realizando terminaciones T568A/T568B y crimpado de conectores.</em></p>
+<p><strong>CE3d</strong>: <em>Verifica la conectividad de los equipos interconectados realizando pruebas de continuidad y funcionamiento.</em></p>
+</blockquote>
+<h4 id="criterios-de-evaluacion-del-ra4">Criterios de evaluación del RA4<a class="headerlink" href="#criterios-de-evaluacion-del-ra4" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p><strong>CE4a</strong>: <em>Describe las prestaciones de los equipos de red analizando características técnicas de switches, routers y puntos de acceso.</em></p>
+<p><strong>CE4b</strong>: <em>Identifica los componentes de los equipos de red reconociendo interfaces, fuentes de alimentación y sistemas de ventilación.</em></p>
+<p><strong>CE4c</strong>: <em>Aplica técnicas de montaje de equipos de red instalando en racks y cumpliendo estándares de cableado.</em></p>
+<p><strong>CE4d</strong>: <em>Verifica el funcionamiento de los equipos instalados realizando pruebas de conectividad y configuración básica.</em></p>
+</blockquote>
+<h3 id="contenidos">Contenidos<a class="headerlink" href="#contenidos" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Adaptadores de red: tipos, características y funcionalidades.</li>
+<li>Armarios de distribución: estructura, componentes y organización.</li>
+<li>Paneles de parcheo: tipos, conexiones y codificación.</li>
+<li>Elementos de conexión: tomas de usuario, latiguillos y soportes.</li>
+<li>Electrónica de red: repetidores, hubs, switches, routers y gateways.</li>
+<li>Puntos de acceso inalámbricos y repetidores.</li>
+<li>Dominios de colisión y difusión.</li>
+</ul>
+<div class="admonition question">
+<p class="admonition-title">Cuestionario inicial</p>
+<ol>
+<li>¿Qué es un adaptador de red y cuáles son sus características principales?</li>
+<li>¿Qué elementos se encuentran en el interior de un armario de distribución?</li>
+<li>¿Para qué sirve un panel de parcheo y cómo se organiza?</li>
+<li>¿Cuáles son las diferencias entre un hub y un switch?</li>
+<li>¿Qué funciones realiza un router en una red?</li>
+<li>¿Cómo funciona un punto de acceso inalámbrico?</li>
+<li>¿Qué son los dominios de colisión y difusión?</li>
+<li>¿Cuáles son los tipos de tomas de usuario disponibles?</li>
+<li>¿Qué es la tecnología PoE y para qué se utiliza?</li>
+</ol>
+</div>
+<h2 id="programacion-de-aula-15h">Programación de Aula (15h)<a class="headerlink" href="#programacion-de-aula-15h" title="Permanent link">&para;</a></h2>
+<p>Esta unidad se imparte en la primera evaluación, con una duración estimada de 15 sesiones lectivas:</p>
+<table>
+<thead>
+<tr>
+<th>Sesión</th>
+<th>Contenidos</th>
+<th>Actividades</th>
+<th>Criterios trabajados</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1-2</td>
+<td>Adaptadores de red y NICs</td>
+<td>Cuestionario inicial, AC401</td>
+<td>CE4a, CE4b</td>
+</tr>
+<tr>
+<td>3-5</td>
+<td>Armarios y paneles de distribución</td>
+<td>Actividad AC402, práctica PR403</td>
+<td>CE2a, CE2b, CE4c</td>
+</tr>
+<tr>
+<td>6-8</td>
+<td>Electrónica de red básica</td>
+<td>Actividad AC404</td>
+<td>CE4a, CE4b, CE4c</td>
+</tr>
+<tr>
+<td>9-10</td>
+<td>Routers y gateways</td>
+<td>Actividad AC405</td>
+<td>CE4a, CE4b, CE4d</td>
+</tr>
+<tr>
+<td>11-12</td>
+<td>Práctica: Instalación de equipos</td>
+<td>PR406, PR407</td>
+<td>CE4c, CE4d</td>
+</tr>
+<tr>
+<td>13-15</td>
+<td>Repaso y evaluación</td>
+<td>Evaluación práctica</td>
+<td>Todos los criterios</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="adaptadores-de-red">🖥️ Adaptadores de red<a class="headerlink" href="#adaptadores-de-red" title="Permanent link">&para;</a></h2>
+<p>El <strong>adaptador de red</strong> (o tarjeta de red) es el elemento que debe tener un equipo para estar conectado a una red. La forma habitual de presentación de este elemento es, precisamente, una tarjeta que se acopla al equipo a través de un slot PCI.</p>
+<p>Sin embargo, los adaptadores de red pueden ir conectados al equipo a través de otro tipo de puertos: USB, PCMCIA, etc.</p>
+<h3 id="caracteristicas-del-adaptador-de-red">🔌 Características del adaptador de red<a class="headerlink" href="#caracteristicas-del-adaptador-de-red" title="Permanent link">&para;</a></h3>
+<p>El modelo típico de adaptador de red suele identificarse por las siglas <strong>NIC</strong> (Network Interface Card, tarjeta de interfaz de red).</p>
+<p>Los NIC permiten que los equipos puedan conectarse en diferentes topologías. Los puertos más comunes son para cable de par trenzado (por conexión RJ-45) y para cable coaxial, pero también es posible disponer de tarjetas de red con puerto para fibra óptica, concretamente con conexiones SC, ST o MT-RJ.</p>
+<p>Cada NIC tiene su propia identificación, llamada <strong>dirección física</strong> o <strong>dirección MAC</strong>. Es un código de 48 bits que se fija en el momento de la fabricación (similar al número de bastidor de un coche).</p>
+<p>Los equipos pueden identificarse en la red por su IP o también por su MAC, lo cual ofrece más seguridad.</p>
+<h3 id="caracteristicas-tecnicas-del-nic">⚙️ Características técnicas del NIC<a class="headerlink" href="#caracteristicas-tecnicas-del-nic" title="Permanent link">&para;</a></h3>
+<p>Además del tipo de puertos de que disponga, el NIC se caracteriza por:</p>
+<h4 id="modo-de-transmision">📡 Modo de transmisión<a class="headerlink" href="#modo-de-transmision" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Half-duplex</strong>: el canal de comunicación no se puede utilizar de forma simultánea para emitir y recibir información.</li>
+<li><strong>Full-duplex</strong>: el canal de comunicación permite la emisión y transmisión de forma simultánea.</li>
+</ul>
+<h4 id="protocolo-de-enlace-de-datos">🌐 Protocolo de enlace de datos<a class="headerlink" href="#protocolo-de-enlace-de-datos" title="Permanent link">&para;</a></h4>
+<p>La gran mayoría de las tarjetas de red utilizan el protocolo <strong>Ethernet</strong> para las comunicaciones, en sus diversas variantes: Ethernet, Fast Ethernet, Gigabit Ethernet y, próximamente, 10-Gigabit Ethernet.</p>
+<h4 id="velocidad-de-transmision">⚡ Velocidad de transmisión<a class="headerlink" href="#velocidad-de-transmision" title="Permanent link">&para;</a></h4>
+<p>Depende del medio utilizado para la transmisión, el modo y el protocolo empleado. Casi todas las tarjetas de red actuales admiten varias velocidades (10 Mbps, 100 Mbps, 1000 Mbps), que suelen indicarse con su denominación.</p>
+<p>Así, una tarjeta 10/100 puede funcionar a dos velocidades y una tarjeta 10/100/1000 (la más típica) a tres.</p>
+<h4 id="capacidad-wake-on-lan">🔋 Capacidad Wake On LAN<a class="headerlink" href="#capacidad-wake-on-lan" title="Permanent link">&para;</a></h4>
+<p>Consiste en la capacidad de la tarjeta de red de encender un equipo de forma remota. Este tipo de tarjetas disponen de unas conexiones que se adaptan a la placa base para que, a través de la tarjeta, puedan transmitirse los impulsos de encendido o de suspensión del equipo.</p>
+<p>Esta propiedad es muy apreciada en entornos de red donde se necesita poder acceder a determinados equipos en momentos muy concretos sin que tengan que estar encendidos de forma permanente.</p>
+<figure>
+  <img src="./imagenes/adaptador_inalambrico_elementos.png" alt="Elementos de un adaptador de red inalámbrico">
+  <figcaption>Elementos de un adaptador de red inalámbrico</figcaption>
+</figure>
+
+<h3 id="tipos-de-conexiones-del-adaptador">🔗 Tipos de conexiones del adaptador<a class="headerlink" href="#tipos-de-conexiones-del-adaptador" title="Permanent link">&para;</a></h3>
+<p>El número y tipo de conexiones del adaptador es variable. Lo habitual es encontrar una única conexión pero hay variantes en las que se dispone de varias conexiones, como se ve en las imágenes siguientes:</p>
+<figure>
+  <img src="./imagenes/adaptador_inalambrico.png" alt="Adaptador de red inalámbrico">
+  <figcaption>Adaptador de red inalámbrico con conexión a placa base, luces testigo y conexión RJ-45</figcaption>
+</figure>
+
+<figure>
+  <img src="./imagenes/adaptador_doble_rj45.png" alt="Adaptador con dos salidas RJ-45">
+  <figcaption>Adaptador de red con dos salidas RJ-45</figcaption>
+</figure>
+
+<figure>
+  <img src="./imagenes/adaptador_rj45_coaxial.png" alt="Adaptador RJ-45 y coaxial">
+  <figcaption>Adaptador de red con una salida RJ-45 y otra salida coaxial</figcaption>
+</figure>
+
+<figure>
+  <img src="./imagenes/adaptador_fibra_optica.png" alt="Adaptador de fibra óptica">
+  <figcaption>Adaptador de red con dos salidas de fibra óptica</figcaption>
+</figure>
+
+<figure>
+  <img src="./imagenes/adaptador_tres_antenas.png" alt="Adaptador inalámbrico con tres antenas">
+  <figcaption>Adaptador de red inalámbrico con tres antenas</figcaption>
+</figure>
+
+<h3 id="luces-testigo">💡 Luces testigo<a class="headerlink" href="#luces-testigo" title="Permanent link">&para;</a></h3>
+<p>Las luces de testigo varían de un modelo a otro. Cuando hay una, si está fija significa que hay conexión con otro equipo, y si parpadea indica actividad de comunicación.</p>
+<p>Cuando hay varias, se destinan a diversos fines: indicar la velocidad de transmisión, el modo de transmisión, etc.</p>
+<hr />
+<h2 id="armario-de-distribucion">🏢 Armario de distribución<a class="headerlink" href="#armario-de-distribucion" title="Permanent link">&para;</a></h2>
+<p>Como ya hemos comentado, el cableado de una red se centraliza en puntos de distribución a diferente nivel. Estos puntos están constituidos por uno o más armarios de distribución, también llamados <strong>racks</strong>.</p>
+<p>El rack recibe todo el cableado de la zona. En el interior del armario, se ubican:</p>
+<ul>
+<li><strong>Los paneles de parcheo</strong>, donde se conecta el cableado que entra y sale del armario.</li>
+<li><strong>La electrónica de red</strong>, que se utiliza para aplicar una configuración lógica a los equipos que a ella se conectan.</li>
+<li><strong>Elementos de suministro eléctrico</strong>, que se encargan de proporcionar electricidad a la electrónica de red y al sistema de ventilación del armario.</li>
+<li><strong>Accesorios varios</strong>, como pueden ser elementos para ordenar los cables, bandejas para colocar equipamiento portátil, etc.</li>
+</ul>
+<h3 id="estructura-del-armario">🏗️ Estructura del armario<a class="headerlink" href="#estructura-del-armario" title="Permanent link">&para;</a></h3>
+<p>El armario de distribución, por lo general, tiene esta apariencia:</p>
+<figure>
+  <img src="./imagenes/armario_distribucion_frontal.png" alt="Vista frontal de armario de distribución">
+  <figcaption>Vista frontal de un armario de distribución</figcaption>
+</figure>
+
+<figure>
+  <img src="./imagenes/armario_distribucion_despiece.png" alt="Despiece de armario de distribución">
+  <figcaption>Despiece de un armario de distribución mostrando sus componentes</figcaption>
+</figure>
+
+<p>La parte delantera es una puerta, habitualmente de cristal o un material transparente, que permita visualizar el contenido del armario sin necesidad de abrirlo.</p>
+<p>Tanto las paredes como la puerta y el techo son desmontables, lo que significa que pueden colocarse o no, según las circunstancias. Así, por ejemplo, si quieren colocarse dos armarios juntos, puede obviarse la pared común a ambos para comunicarlos.</p>
+<p>Por otro lado, el suelo y el techo pueden tener una abertura para pasar por ella el cableado.</p>
+<h3 id="estandar-de-19-pulgadas">📏 Estándar de 19 pulgadas<a class="headerlink" href="#estandar-de-19-pulgadas" title="Permanent link">&para;</a></h3>
+<p>El interior del armario tiene cuatro bastidores que forman un armazón de exactamente <strong>19 pulgadas</strong> de anchura. Esta medida es estándar y universal, de forma que todos los accesorios y la electrónica diseñados para armarios tienen esta anchura. Este tipo de productos se dice que son <strong>rackeables</strong>.</p>
+<p>Los bastidores tienen agujeros practicados cada <strong>5 cm</strong>. Esta distancia se denomina <strong>unidad U</strong>, de manera que la altura de un armario se mide en unidades U: un armario de 40 U, por ejemplo, tendría 41 agujeros en cada bastidor con una longitud útil de 40 x 5 cm.</p>
+<p>Los elementos que son rackeables también se miden en unidades U. Por ejemplo, un switch de 2 U o un panel de parcheo de 4 U.</p>
+<p>El armazón de bastidores tiene un cable de conexión a tierra para eliminar la carga electrostática que pudiera generarse.</p>
+<h3 id="clasificacion-por-tamano">📊 Clasificación por tamaño<a class="headerlink" href="#clasificacion-por-tamano" title="Permanent link">&para;</a></h3>
+<h4 id="racks-menores-de-12-u">Racks menores de 12 U<a class="headerlink" href="#racks-menores-de-12-u" title="Permanent link">&para;</a></h4>
+<p>Se utilizan en instalaciones de pequeñas redes o como distribuidores en habitáculos donde hay pocos equipos.</p>
+<p>Por sus dimensiones, suelen fijarse a la pared, aunque en la mayoría pueden instalarse unas ruedas para colocarlos en el suelo y poder desplazarlos.</p>
+<h4 id="racks-entre-12-u-y-25-u">Racks entre 12 U y 25 U<a class="headerlink" href="#racks-entre-12-u-y-25-u" title="Permanent link">&para;</a></h4>
+<p>Se usan para redes de tamaño medio. Ideales para distribuidores principales o de planta.</p>
+<p>Pueden fijarse a la pared, o colocarse en el suelo con unas ruedas por si fuera necesario desplazarlos.</p>
+<h4 id="racks-de-mas-de-24-u">Racks de más de 24 U<a class="headerlink" href="#racks-de-mas-de-24-u" title="Permanent link">&para;</a></h4>
+<p>Se emplean en redes de tamaño medio o grande como distribuidores de planta o principales.</p>
+<p>Suelen incorporar sistema de ventilación, alimentación, filtros de aire, etc. Por sus dimensiones, son armarios de suelo.</p>
+<figure>
+  <img src="./imagenes/tipos_racks.png" alt="Tipos de racks según tamaño">
+  <figcaption>Diferentes tipos de racks según su tamaño y aplicación</figcaption>
+</figure>
+
+<figure>
+  <img src="./imagenes/rack_pequeno.png" alt="Rack pequeño">
+  <figcaption>Rack pequeño para instalaciones domésticas o pequeñas oficinas</figcaption>
+</figure>
+
+<figure>
+  <img src="./imagenes/rack_mediano.png" alt="Rack mediano">
+  <figcaption>Rack mediano para redes de tamaño medio</figcaption>
+</figure>
+
+<figure>
+  <img src="./imagenes/rack_grande.png" alt="Rack grande">
+  <figcaption>Rack grande para centros de datos y redes empresariales</figcaption>
+</figure>
+
+<hr />
+<h2 id="panel-de-parcheo">🔌 Panel de parcheo<a class="headerlink" href="#panel-de-parcheo" title="Permanent link">&para;</a></h2>
+<p>El <strong>panel de parcheo</strong> (patch panel) es uno de los elementos que se colocan en el rack donde se conectan los cables de par trenzado, que entran y salen del mismo.</p>
+<p>La finalidad del panel de parcheo es organizar las líneas de entrada y de salida que confluyen en el armario.</p>
+<h3 id="caracteristicas-del-panel">📋 Características del panel<a class="headerlink" href="#caracteristicas-del-panel" title="Permanent link">&para;</a></h3>
+<p>El panel de parcheo típicamente ocupa <strong>1 U</strong> y dispone de <strong>24 tomas</strong> que pueden venir incorporadas en el mismo o en módulos, que pueden ser individuales o estar divididos en grupos de 4.</p>
+<figure>
+  <img src="./imagenes/panel_parcheo_24.png" alt="Panel de parcheo de 24 tomas">
+  <figcaption>Panel de parcheo de 24 tomas RJ-45</figcaption>
+</figure>
+
+<p>También hay paneles de parcheo compuestos, que tienen dos o más filas de tomas, pudiendo tener 48, 72 o 96 tomas.</p>
+<figure>
+  <img src="./imagenes/panel_parcheo_96.png" alt="Panel de parcheo de 96 tomas">
+  <figcaption>Panel de parcheo de 96 tomas para grandes instalaciones</figcaption>
+</figure>
+
+<figure>
+  <img src="./imagenes/panel_parcheo_48.png" alt="Panel de parcheo de 48 tomas">
+  <figcaption>Panel de parcheo de 48 tomas</figcaption>
+</figure>
+
+<h3 id="sistema-de-codificacion">🏷️ Sistema de codificación<a class="headerlink" href="#sistema-de-codificacion" title="Permanent link">&para;</a></h3>
+<p>Como ya veremos más adelante, las tomas del panel de parcheo se identifican mediante una codificación (números, letras, colores, etc.), que se corresponderá con la toma que hay al otro lado del cable que está conectado a él. De esta manera, por ejemplo, visualizando los paneles de parcheo se pueden identificar claramente todas las tomas de red de una zona, una planta o incluso un edificio completo.</p>
+<figure>
+  <img src="./imagenes/codificacion_panel_1.png" alt="Codificación panel 1">
+  <figcaption>Sistema de codificación en panel de parcheo</figcaption>
+</figure>
+
+<figure>
+  <img src="./imagenes/codificacion_panel_2.png" alt="Codificación panel 2">
+  <figcaption>Detalle de numeración en panel de parcheo</figcaption>
+</figure>
+
+<figure>
+  <img src="./imagenes/codificacion_panel_3.png" alt="Codificación panel 3">
+  <figcaption>Código de colores en tomas de panel</figcaption>
+</figure>
+
+<h3 id="tipos-de-conexiones">🔧 Tipos de conexiones<a class="headerlink" href="#tipos-de-conexiones" title="Permanent link">&para;</a></h3>
+<p>Las conexiones más simples de un panel de parcheo son rosetas, con un adaptador especial para el panel.</p>
+<p>Cuando las conexiones vienen en formato modular, que es lo más habitual, en lugar de rosetas se utilizan unas regletas modulares con un sistema de código de colores similar al de las rosetas.</p>
+<p>Los paneles de parcheo también pueden ser de fibra óptica. Van montados en cajones rackeables, en cuyo interior los cables multifibra distribuyen los diferentes hilos a las correspondientes tomas del panel.</p>
+<figure>
+  <img src="./imagenes/panel_fibra_optica.png" alt="Panel de parcheo de fibra óptica">
+  <figcaption>Panel de parcheo de fibra óptica con distribución interna</figcaption>
+</figure>
+
+<p>Detalle de la parte trasera del panel de parcheo, donde se aprecia la numeración y código de colores de cada conexión.</p>
+<hr />
+<h2 id="elementos-de-conexion-y-guiado">🔗 Elementos de conexión y guiado<a class="headerlink" href="#elementos-de-conexion-y-guiado" title="Permanent link">&para;</a></h2>
+<p>Ya hemos comentado que los puestos de usuario de una red son el punto desde el que parte la conexión hacia el armario de distribución. Estos puestos de usuario disponen de un punto de conexión llamado <strong>toma de usuario</strong>, <strong>toma de telecomunicaciones</strong> o, de forma común, <strong>roseta</strong> (por contener una conexión de este tipo en su interior).</p>
+<h3 id="toma-de-usuario-to">📍 Toma de usuario (TO)<a class="headerlink" href="#toma-de-usuario-to" title="Permanent link">&para;</a></h3>
+<p>Las tomas de usuario, abreviadas con las siglas <strong>TO</strong>, pueden ofrecer al usuario una o más conexiones a la red. Las más simples constan de una única conexión (de datos) pero cada vez es más habitual que cada usuario tenga al menos dos tomas: una para voz y otra para datos.</p>
+<p>Una toma de usuario consta de una o más conexiones RJ-45 hembra en su interior, junto con una carátula donde se soportan.</p>
+<figure>
+  <img src="./imagenes/toma_usuario_instalacion.png" alt="Instalación de toma de usuario">
+  <figcaption>Detalle de la instalación de una conexión hembra RJ-45 en una toma de usuario</figcaption>
+</figure>
+
+<h3 id="tipos-de-tomas-de-usuario">🏠 Tipos de tomas de usuario<a class="headerlink" href="#tipos-de-tomas-de-usuario" title="Permanent link">&para;</a></h3>
+<p>Las tomas de usuario pueden ser de tres tipos:</p>
+<h4 id="de-superficie">🖼️ De superficie<a class="headerlink" href="#de-superficie" title="Permanent link">&para;</a></h4>
+<ul>
+<li>La caja se fija a la pared mediante tirafondos.</li>
+<li>El cableado llega mediante canaleta y se recibe a través de cualquiera de las paredes laterales, que tienen orificios pretroquelados.</li>
+<li>Se utiliza en redes con canalización externa.</li>
+</ul>
+<h4 id="empotrables">🔲 Empotrables<a class="headerlink" href="#empotrables" title="Permanent link">&para;</a></h4>
+<ul>
+<li>La caja va encastrada en un agujero que se hace en la pared.</li>
+<li>El cableado llega mediante canaladura interna de la pared y se recibe a través de cualquiera de las paredes laterales, que tienen orificios pretroquelados.</li>
+</ul>
+<h4 id="de-suelo">🏢 De suelo<a class="headerlink" href="#de-suelo" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Similar a la caja empotrable, pero ubicada en suelo técnico.</li>
+<li>El cableado llega a través de bandejas subterráneas o canaladuras.</li>
+<li>Muy utilizado en lugares donde se necesita ubicar tomas de red pero no hay paredes cerca.</li>
+</ul>
+<figure>
+  <img src="./imagenes/tipos_tomas_usuario.png" alt="Tipos de tomas de usuario">
+  <figcaption>Diferentes tipos de tomas de usuario según su instalación</figcaption>
+</figure>
+
+<figure>
+  <img src="./imagenes/toma_superficie.png" alt="Toma de superficie">
+  <figcaption>Toma de usuario de superficie con fijación a pared</figcaption>
+</figure>
+
+<figure>
+  <img src="./imagenes/toma_empotrable.png" alt="Toma empotrable">
+  <figcaption>Toma de usuario empotrable en pared</figcaption>
+</figure>
+
+<figure>
+  <img src="./imagenes/toma_suelo.png" alt="Toma de suelo">
+  <figcaption>Toma de usuario para suelo técnico</figcaption>
+</figure>
+
+<figure>
+  <img src="./imagenes/toma_doble.png" alt="Toma doble">
+  <figcaption>Toma de usuario doble para voz y datos</figcaption>
+</figure>
+
+<h3 id="latiguillos">🔌 Latiguillos<a class="headerlink" href="#latiguillos" title="Permanent link">&para;</a></h3>
+<p>Para conectar las líneas que unen las TO con los armarios se utilizan unos cables llamados <strong>latiguillos</strong>.</p>
+<p>Salvo que se especifique lo contrario, entenderemos que el latiguillo es de cable de par trenzado, con conectores RJ-45 en ambos extremos. Sin embargo, también hay latiguillos de otro tipo de cable, como coaxial o fibra óptica.</p>
+<p>Se utilizan latiguillos en dos situaciones:</p>
+<ul>
+<li>Para conectar el equipo a la toma de usuario.</li>
+<li>Para derivar la conexión desde un panel de parcheo a otro lugar que, o bien es otro panel de parcheo, o electrónica de red.</li>
+</ul>
+<figure>
+  <img src="./imagenes/latiguillo_utp.png" alt="Latiguillo UTP">
+  <figcaption>Latiguillo de cable UTP con conectores RJ-45</figcaption>
+</figure>
+
+<p>Los latiguillos pueden fabricarse manualmente o comprarse ya hechos, de medidas concretas. Los de fabricación casera se utilizan cuando se necesitan cables de longitudes que no se ajustan a las de los comercializados. Las medidas más habituales de estos son 0,5 m, 1 m y 2 m.</p>
+<p>A partir del cable de par trenzado de categoría 6, por norma, no se permite la fabricación casera de latiguillos, sean de la longitud que sean.</p>
+<h3 id="soportes-de-guiado">🛤️ Soportes de guiado<a class="headerlink" href="#soportes-de-guiado" title="Permanent link">&para;</a></h3>
+<p>Todo el cableado de la red, tanto los latiguillos como los cables que van de TO a armario, las líneas que conectan los armarios de un edificio, o incluso de varios, se conduce a través de soportes de guiado.</p>
+<p>Estos soportes pueden ser muy diversos, en función del tipo de medio por el que deban atravesar los cables, las vulnerabilidades a las que se sometan, etc. De forma general, los soportes de guiado son:</p>
+<h4 id="canalizaciones">📦 Canalizaciones<a class="headerlink" href="#canalizaciones" title="Permanent link">&para;</a></h4>
+<p>Que pueden ser internas o externas, mediante tubo, canaleta u otro material. Se emplean para dirigir grupos pequeños de cable por paredes y suelos.</p>
+<h4 id="bandejas-de-guiado">🏗️ Bandejas de guiado<a class="headerlink" href="#bandejas-de-guiado" title="Permanent link">&para;</a></h4>
+<p>Se colocan en techos o suelos técnicos. Actúan como carreteras sobre las que van grupos de cables provenientes de diferentes canalizaciones. Se emplean como troncales en plantas de edificios y para guiar el cableado vertical del edificio.</p>
+<h4 id="guias-de-cables">🔗 Guías de cables<a class="headerlink" href="#guias-de-cables" title="Permanent link">&para;</a></h4>
+<p>Se ubican en los bastidores del armario de distribución, e incluso en la parte trasera de algunos modelos de paneles de parcheo. Ayudan a organizar los mazos de cables que entran y salen del armario.</p>
+<h4 id="pasahilos">📋 Pasahilos<a class="headerlink" href="#pasahilos" title="Permanent link">&para;</a></h4>
+<p>Es un elemento rackeable (ocupa 1U) que se utiliza de forma conjunta con el resto de elementos del armario para organizar los grupos de cables de los paneles de parcheo y de la electrónica de red.</p>
+<figure>
+  <img src="./imagenes/canalizaciones.png" alt="Canalizaciones de cableado">
+  <figcaption>Canalizaciones internas y externas para cableado de red</figcaption>
+</figure>
+
+<figure>
+  <img src="./imagenes/bandejas_guiado.png" alt="Bandejas de guiado">
+  <figcaption>Bandejas de guiado para cableado horizontal y vertical</figcaption>
+</figure>
+
+<h3 id="tecnologia-poe-power-over-ethernet">⚡ Tecnología PoE (Power Over Ethernet)<a class="headerlink" href="#tecnologia-poe-power-over-ethernet" title="Permanent link">&para;</a></h3>
+<p>Es una tecnología que permite la alimentación eléctrica de dispositivos de red a través del cable de par trenzado, sin importar su categoría.</p>
+<p>Las características de PoE están fijadas en el estándar <strong>802.3af</strong> que determina, entre otras cosas, que el voltaje a suministrar es de <strong>48 V</strong>. Sin embargo, muchos dispositivos utilizan esta tecnología sin regirse por este estándar porque necesitan un voltaje diferente.</p>
+<p>PoE es una tecnología empleada, sobre todo, por dispositivos inalámbricos.</p>
+<figure>
+  <img src="./imagenes/repetidor_wifi.png" alt="Repetidor WiFi con PoE">
+  <figcaption>Repetidor WiFi con alimentación PoE</figcaption>
+</figure>
+
+<figure>
+  <img src="./imagenes/poe_icono.png" alt="Icono PoE">
+  <figcaption>Icono representativo de la tecnología PoE</figcaption>
+</figure>
+
+<p>Modos de uso del repetidor: con vínculo inalámbrico (arriba) y con extensión cableada (abajo).</p>
+<h2 id="dominios-de-colision-y-de-difusion">🌐 Dominios de colisión y de difusión<a class="headerlink" href="#dominios-de-colision-y-de-difusion" title="Permanent link">&para;</a></h2>
+<p>El flujo de comunicaciones entre los equipos se hará a través de la infraestructura de la red. Una actividad elevada en las transmisiones aumentaría el riesgo de colisiones de los paquetes que circulan por la red.</p>
+<p>Para que la pérdida de la información sea mínima, hay que plantear la red de forma que las transmisiones sean eficientes: esto se consigue obligando a que circule la menor cantidad de tráfico posible. Aquí entran en juego dos conceptos muy importantes:</p>
+<h3 id="dominio-de-colision">💥 Dominio de colisión<a class="headerlink" href="#dominio-de-colision" title="Permanent link">&para;</a></h3>
+<p>Es un segmento de la red que comparte las comunicaciones con todos los equipos conectados a ella. Cuando un equipo transmite, lo hace para todos los dispositivos del segmento de red, con independencia de con cuál de ellos quiera comunicarse.</p>
+<ul>
+<li>
+<p><strong>Toda la electrónica de red que opera por debajo de la capa 2</strong> del modelo OSI extiende dominios de colisión. Es decir, todos los equipos unidos a un hub o a un repetidor forman un dominio de colisión.</p>
+</li>
+<li>
+<p><strong>Los dispositivos de capa 2 y superiores limitan los dominios de colisión</strong>: en este sentido, cada toma de un switch supone un dominio de colisión diferente, lo que da lugar a tantos dominios de colisión como tomas tenga conectadas.</p>
+</li>
+</ul>
+<h3 id="dominio-de-difusion">📡 Dominio de difusión<a class="headerlink" href="#dominio-de-difusion" title="Permanent link">&para;</a></h3>
+<p>Es una parte de la red en la que un equipo puede transmitir a otro sin necesidad de un dispositivo de enrutamiento, ya que pertenecen a la misma red lógica.</p>
+<ul>
+<li>
+<p><strong>Los elementos de electrónica de red por debajo de la capa 3</strong> extienden los dominios de difusión. Es decir, todos los equipos y dispositivos unidos a un hub, un repetidor, un switch o un bridge forman un dominio de difusión.</p>
+</li>
+<li>
+<p><strong>Los dispositivos de capa 3 y superiores</strong> (típicamente el router o los switches de capa 3) se utilizan para dividir dominios de difusión.</p>
+</li>
+</ul>
+<p>La red se vuelve más eficiente cuanto más pequeños sean los dominios de colisión y de difusión.</p>
+<figure>
+  <img src="./imagenes/dominios_colision_difusion.png" alt="Dominios de colisión y difusión">
+  <figcaption>Ejemplo de identificación de dominios de difusión y dominios de colisión en una infraestructura de red</figcaption>
+</figure>
+
+<hr />
+<h2 id="actividades">🛠️ Actividades<a class="headerlink" href="#actividades" title="Permanent link">&para;</a></h2>
+<div class="admonition tip">
+<p class="admonition-title"><span style='font-size: 1.4em;'><strong>Formato de entrega</strong></span></p>
+<p><span style="font-size: 1.3em;">Para la entrega de las actividades, genera un documento con la práctica descrita a continuación. Deberás crear un archivo PDF con el siguiente formato de nombre: <strong>ACXXX.pdf o PRXXX.pdf</strong>, donde las X representan el número de la actividad. Una vez finalizada la práctica, sube el archivo a Aules (antes de la fecha de vencimiento) para su calificación.</span></p>
+</div>
+<p><a name="AC401"></a></p>
+<ul>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.832 3.367 8.668.108a3.15 3.15 0 0 0-3.856 2.226L.943 16.777a3.15 3.15 0 0 0 2.226 3.856l12.163 3.259a3.15 3.15 0 0 0 3.855-2.226l3.87-14.443a3.15 3.15 0 0 0-2.226-3.856M6.332 2.741a1.574 1.574 0 0 1 1.928-1.113l12.163 3.26a1.574 1.574 0 0 1 1.113 1.927l-3.87 14.444a1.574 1.574 0 0 1-1.928 1.113l-12.163-3.26a1.574 1.574 0 0 1-1.113-1.927zm2.634 2.336a.787.787 0 1 0-.407 1.52l9.122 2.444a.787.787 0 1 0 .407-1.52zM6.985 9.434a.787.787 0 0 1 .963-.557l9.123 2.445a.787.787 0 0 1-.408 1.52l-9.122-2.444a.787.787 0 0 1-.556-.964m-.055 3.244a.787.787 0 0 0-.407 1.52l5.32 1.427a.787.787 0 0 0 .408-1.52z"/></svg></span> <strong>AC401</strong>. (RA4 // CE4a, CE4b // 1-3p). Investiga y documenta las características de los adaptadores de red. Elabora una tabla comparativa con diferentes tipos de NIC, sus velocidades, modos de transmisión y aplicaciones típicas.</li>
+</ul>
+<p><a name="AC402"></a></p>
+<ul>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.832 3.367 8.668.108a3.15 3.15 0 0 0-3.856 2.226L.943 16.777a3.15 3.15 0 0 0 2.226 3.856l12.163 3.259a3.15 3.15 0 0 0 3.855-2.226l3.87-14.443a3.15 3.15 0 0 0-2.226-3.856M6.332 2.741a1.574 1.574 0 0 1 1.928-1.113l12.163 3.26a1.574 1.574 0 0 1 1.113 1.927l-3.87 14.444a1.574 1.574 0 0 1-1.928 1.113l-12.163-3.26a1.574 1.574 0 0 1-1.113-1.927zm2.634 2.336a.787.787 0 1 0-.407 1.52l9.122 2.444a.787.787 0 1 0 .407-1.52zM6.985 9.434a.787.787 0 0 1 .963-.557l9.123 2.445a.787.787 0 0 1-.408 1.52l-9.122-2.444a.787.787 0 0 1-.556-.964m-.055 3.244a.787.787 0 0 0-.407 1.52l5.32 1.427a.787.787 0 0 0 .408-1.52z"/></svg></span> <strong>AC402</strong>. (RA2 // CE2a, CE2b // 1-3p). Investiga y documenta los componentes de un armario de distribución. Elabora un informe que incluya:<ul>
+<li>Estructura y dimensiones del armario</li>
+<li>Componentes internos y su función</li>
+<li>Sistema de unidades U y estándar 19 pulgadas</li>
+<li>Tipos de racks según tamaño y aplicación</li>
+</ul>
+</li>
+</ul>
+<p><a name="AC403"></a></p>
+<ul>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.832 3.367 8.668.108a3.15 3.15 0 0 0-3.856 2.226L.943 16.777a3.15 3.15 0 0 0 2.226 3.856l12.163 3.259a3.15 3.15 0 0 0 3.855-2.226l3.87-14.443a3.15 3.15 0 0 0-2.226-3.856M6.332 2.741a1.574 1.574 0 0 1 1.928-1.113l12.163 3.26a1.574 1.574 0 0 1 1.113 1.927l-3.87 14.444a1.574 1.574 0 0 1-1.928 1.113l-12.163-3.26a1.574 1.574 0 0 1-1.113-1.927zm2.634 2.336a.787.787 0 1 0-.407 1.52l9.122 2.444a.787.787 0 1 0 .407-1.52zM6.985 9.434a.787.787 0 0 1 .963-.557l9.123 2.445a.787.787 0 0 1-.408 1.52l-9.122-2.444a.787.787 0 0 1-.556-.964m-.055 3.244a.787.787 0 0 0-.407 1.52l5.32 1.427a.787.787 0 0 0 .408-1.52z"/></svg></span> <strong>AC403</strong>. (RA4 // CE4a, CE4b // 1-3p). Compara las características de diferentes elementos de electrónica de red. Elabora una tabla que incluya:<ul>
+<li>Repetidores, hubs, switches, routers y gateways</li>
+<li>Capa del modelo OSI en la que operan</li>
+<li>Funciones principales y aplicaciones</li>
+<li>Ventajas y desventajas de cada uno</li>
+</ul>
+</li>
+</ul>
+<p><a name="AC404"></a></p>
+<ul>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.832 3.367 8.668.108a3.15 3.15 0 0 0-3.856 2.226L.943 16.777a3.15 3.15 0 0 0 2.226 3.856l12.163 3.259a3.15 3.15 0 0 0 3.855-2.226l3.87-14.443a3.15 3.15 0 0 0-2.226-3.856M6.332 2.741a1.574 1.574 0 0 1 1.928-1.113l12.163 3.26a1.574 1.574 0 0 1 1.113 1.927l-3.87 14.444a1.574 1.574 0 0 1-1.928 1.113l-12.163-3.26a1.574 1.574 0 0 1-1.113-1.927zm2.634 2.336a.787.787 0 1 0-.407 1.52l9.122 2.444a.787.787 0 1 0 .407-1.52zM6.985 9.434a.787.787 0 0 1 .963-.557l9.123 2.445a.787.787 0 0 1-.408 1.52l-9.122-2.444a.787.787 0 0 1-.556-.964m-.055 3.244a.787.787 0 0 0-.407 1.52l5.32 1.427a.787.787 0 0 0 .408-1.52z"/></svg></span> <strong>AC404</strong>. (RA4 // CE4a, CE4b // 1-3p). Investiga la tecnología PoE y sus aplicaciones. Documenta:<ul>
+<li>Estándares PoE y sus características técnicas</li>
+<li>Dispositivos que utilizan PoE</li>
+<li>Ventajas y limitaciones de la tecnología</li>
+<li>Casos de uso prácticos en redes</li>
+</ul>
+</li>
+</ul>
+<p><a name="AC405"></a></p>
+<ul>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.832 3.367 8.668.108a3.15 3.15 0 0 0-3.856 2.226L.943 16.777a3.15 3.15 0 0 0 2.226 3.856l12.163 3.259a3.15 3.15 0 0 0 3.855-2.226l3.87-14.443a3.15 3.15 0 0 0-2.226-3.856M6.332 2.741a1.574 1.574 0 0 1 1.928-1.113l12.163 3.26a1.574 1.574 0 0 1 1.113 1.927l-3.87 14.444a1.574 1.574 0 0 1-1.928 1.113l-12.163-3.26a1.574 1.574 0 0 1-1.113-1.927zm2.634 2.336a.787.787 0 1 0-.407 1.52l9.122 2.444a.787.787 0 1 0 .407-1.52zM6.985 9.434a.787.787 0 0 1 .963-.557l9.123 2.445a.787.787 0 0 1-.408 1.52l-9.122-2.444a.787.787 0 0 1-.556-.964m-.055 3.244a.787.787 0 0 0-.407 1.52l5.32 1.427a.787.787 0 0 0 .408-1.52z"/></svg></span> <strong>AC405</strong>. (RA4 // CE4a, CE4b // 1-3p). Analiza los dominios de colisión y difusión en redes. Elabora un informe que incluya:<ul>
+<li>Definición y características de cada dominio</li>
+<li>Dispositivos que extienden o limitan cada dominio</li>
+<li>Impacto en el rendimiento de la red</li>
+<li>Estrategias para optimizar el tráfico de red</li>
+</ul>
+</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title"><span style='font-size: 1.4em;'><strong>CONCLUSIÓN</strong></span></p>
+<p><span style="font-size: 1.3em;">Los elementos de red son fundamentales para el funcionamiento eficiente de cualquier sistema de comunicaciones. Conocer las características, funciones y aplicaciones de cada componente nos permite diseñar e implementar redes locales robustas, escalables y adaptadas a las necesidades específicas de cada entorno. La correcta selección e instalación de estos elementos garantiza el rendimiento óptimo y la facilidad de mantenimiento del sistema.</span></p>
+</div>
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      2025-2026 Francisco Javier Hernández Illán - <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es">Licencia CC BY-NC-SA</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="mailto:<fj.hernandez@edu.gva.es>" target="_blank" rel="noopener" title="" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4l208 156a48 48 0 0 0 57.6 0l208-156c12.1-9.1 19.2-23.3 19.2-38.4 0-26.5-21.5-48-48-48zM0 196v188c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V196L313.6 344.8c-34.1 25.6-81.1 25.6-115.2 0z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.linkedin.com/in/fjavier-hernandez-illan" target="_blank" rel="noopener" title="www.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77m282.1 320h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+      <div class="md-consent" data-md-component="consent" id="__consent" hidden>
+        <div class="md-consent__overlay"></div>
+        <aside class="md-consent__inner">
+          <form class="md-consent__form md-grid md-typeset" name="consent">
+            
+
+
+  
+
+
+<h4>Consentimiento de cookie</h4>
+<p>Esta página de apuntes utiliza cookies para reconocer las visitas, medir la efectividad de la documentación y averiguar si encuentras aquello que buscas o cómo has llegado a estos apuntes. Con tu consentimiento, me ayudas a mejorar estos materiales.</p>
+<input class="md-toggle" type="checkbox" id="__settings" >
+<div class="md-consent__settings">
+  <ul class="task-list">
+    
+    
+      
+        
+  
+  
+    
+    
+  
+  <li class="task-list-item">
+    <label class="task-list-control">
+      <input type="checkbox" name="analytics" checked>
+      <span class="task-list-indicator"></span>
+      Google Analytics
+    </label>
+  </li>
+
+      
+    
+    
+      
+    
+    
+  </ul>
+</div>
+<div class="md-consent__controls">
+  
+    
+      <button class="md-button md-button--primary">Aceptar</button>
+    
+    
+    
+  
+    
+    
+    
+      <label class="md-button" for="__settings">Gestionar cookies</label>
+    
+  
+</div>
+          </form>
+        </aside>
+      </div>
+      <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout((function(){document.querySelector("[data-md-component=consent]").hidden=!1}),250);var form=document.forms.consent;for(var action of["submit","reset"])form.addEventListener(action,(function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map((function(e){return[e,!0]})))),location.hash="",location.reload()}))</script>
+    
+    
+      
+      <script id="__config" type="application/json">{"base": ".", "features": ["header.autohide", "navigation.top", "navigation.tracking", "navigation.footer", "navigation.indexes", "content.code.annotate", "announce.dismiss", "toc.follow", "content.code.copy"], "search": "assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+        <script src="js/print-site.js"></script>
+      
+    
+  </body>
+</html>

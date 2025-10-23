@@ -1,0 +1,881 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Tutorial traducido al español para aprender a usar Excalidraw.">
+      
+      
+      
+        <link rel="canonical" href="https://fjavier-hernandez.github.io/ral/guia_excalidraw.html">
+      
+      
+      
+      
+      <link rel="icon" href="imagenes/ral.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+    
+    
+      
+        <title>Guía básica de Excalidraw - Redes de Área Local</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="stylesheets/extra.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-0CPJP88MBF"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-0CPJP88MBF",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-0CPJP88MBF",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>if("undefined"!=typeof __md_analytics){var consent=__md_get("__consent");consent&&consent.analytics&&__md_analytics()}</script>
+  
+
+    
+    
+      
+        <meta  property="og:type"  content="website" >
+      
+        <meta  property="og:title"  content="Guía básica de Excalidraw - Redes de Área Local" >
+      
+        <meta  property="og:description"  content="Tutorial traducido al español para aprender a usar Excalidraw." >
+      
+        <meta  property="og:image"  content="https://fjavier-hernandez.github.io/ral/assets/images/social/guia_excalidraw.png" >
+      
+        <meta  property="og:image:type"  content="image/png" >
+      
+        <meta  property="og:image:width"  content="1200" >
+      
+        <meta  property="og:image:height"  content="630" >
+      
+        <meta  property="og:url"  content="https://fjavier-hernandez.github.io/ral/guia_excalidraw.html" >
+      
+        <meta  name="twitter:card"  content="summary_large_image" >
+      
+        <meta  name="twitter:title"  content="Guía básica de Excalidraw - Redes de Área Local" >
+      
+        <meta  name="twitter:description"  content="Tutorial traducido al español para aprender a usar Excalidraw." >
+      
+        <meta  name="twitter:image"  content="https://fjavier-hernandez.github.io/ral/assets/images/social/guia_excalidraw.png" >
+      
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="javi" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#guia-excalidraw" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="index.html" title="Redes de Área Local" class="md-header__button md-logo" aria-label="Redes de Área Local" data-md-component="logo">
+      
+  <img src="imagenes/ral.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Redes de Área Local
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Guía básica de Excalidraw
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="javi" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Cambiar a modo noche"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo noche" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Cambiar a modo día"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo día" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="index.html" title="Redes de Área Local" class="md-nav__button md-logo" aria-label="Redes de Área Local" data-md-component="logo">
+      
+  <img src="imagenes/ral.svg" alt="logo">
+
+    </a>
+    Redes de Área Local
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Inicio
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="01ir.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    1. Introducción a las redes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="02arquitecturas.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2. Arquitecturas de redes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="03fisica.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    3. Capa física
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#primeros-pasos-con-excalidraw" class="md-nav__link">
+    <span class="md-ellipsis">
+      Primeros pasos con Excalidraw
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Primeros pasos con Excalidraw">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#interfaz-de-usuario" class="md-nav__link">
+    <span class="md-ellipsis">
+      Interfaz de usuario
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#crear-formas-basicas-en-excalidraw" class="md-nav__link">
+    <span class="md-ellipsis">
+      Crear formas básicas en Excalidraw
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Crear formas básicas en Excalidraw">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#redimensionar-objetos-en-excalidraw" class="md-nav__link">
+    <span class="md-ellipsis">
+      Redimensionar objetos en Excalidraw
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rotar-objetos-en-excalidraw" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rotar objetos en Excalidraw
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#atajos-de-teclado-para-trabajar-mas-rapido" class="md-nav__link">
+    <span class="md-ellipsis">
+      Atajos de teclado para trabajar más rápido
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#herramienta-de-texto" class="md-nav__link">
+    <span class="md-ellipsis">
+      Herramienta de texto
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#herramientas-avanzadas-en-excalidraw" class="md-nav__link">
+    <span class="md-ellipsis">
+      Herramientas avanzadas en Excalidraw
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Herramientas avanzadas en Excalidraw">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#crear-formas-irregulares-con-la-herramienta-linea" class="md-nav__link">
+    <span class="md-ellipsis">
+      Crear formas irregulares con la herramienta Línea
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#herramienta-flecha" class="md-nav__link">
+    <span class="md-ellipsis">
+      Herramienta Flecha
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#herramienta-a-mano-alzada" class="md-nav__link">
+    <span class="md-ellipsis">
+      Herramienta a mano alzada
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#agrupar-y-desagrupar-objetos-en-excalidraw" class="md-nav__link">
+    <span class="md-ellipsis">
+      Agrupar y desagrupar objetos en Excalidraw
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anadir-imagenes-externas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Añadir imágenes externas
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#guardar-compartir-y-exportar-en-excalidraw" class="md-nav__link">
+    <span class="md-ellipsis">
+      Guardar, compartir y exportar en Excalidraw
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Guardar, compartir y exportar en Excalidraw">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#guardar" class="md-nav__link">
+    <span class="md-ellipsis">
+      Guardar
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exportar" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exportar
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#compartir" class="md-nav__link">
+    <span class="md-ellipsis">
+      Compartir
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#colaboracion-en-vivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Colaboración en vivo
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resumen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resumen
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="guia-excalidraw">Guía Excalidraw<a class="headerlink" href="#guia-excalidraw" title="Permanent link">&para;</a></h1>
+<p><a href="https://excalidraw.com/">Excalidraw</a> es una herramienta gratuita de pizarra online que te permite dibujar y hacer bocetos fácilmente. Lo que la diferencia es que sus diagramas parecen casi hechos a mano. A diferencia de muchas otras herramientas que dicen soportar elementos dibujados a mano, los dibujos de Excalidraw son los que más se acercan a ese estilo natural y manuscrito.</p>
+<p>Esta es una de las razones por las que, en poco tiempo, se ha vuelto bastante popular. Además, está llena de funciones útiles manteniendo la simplicidad, y lo mejor es que tiene una curva de aprendizaje muy suave.</p>
+<p>Empezar con Excalidraw es sencillo, pero si nunca has usado una pizarra digital o una herramienta de diseño gráfico, una guía rápida puede ayudarte mucho. Si planeas usar Excalidraw a menudo, es buena idea dedicar solo 10 minutos a aprenderlo.</p>
+<h2 id="primeros-pasos-con-excalidraw">Primeros pasos con Excalidraw<a class="headerlink" href="#primeros-pasos-con-excalidraw" title="Permanent link">&para;</a></h2>
+<p>Para acceder a Excalidraw no necesitas descargar nada. Es una aplicación web a la que puedes acceder desde <a href="https://excalidraw.com/">Excalidraw.com</a> y no requiere registro.</p>
+<h3 id="interfaz-de-usuario">Interfaz de usuario<a class="headerlink" href="#interfaz-de-usuario" title="Permanent link">&para;</a></h3>
+<p>Excalidraw mantiene la simplicidad en su interfaz. Principalmente hay dos partes: la barra de herramientas en la parte superior, donde encuentras todas las herramientas para dibujar y escribir, y el lienzo, tu espacio para crear.</p>
+<p>También hay una barra de menú contextual a la izquierda que aparece cuando seleccionas algo, ofreciendo opciones específicas. Cuando no hay nada seleccionado, desaparece.</p>
+<p><img alt="Interfaz de Excalidraw: Arriba está la barra de herramientas con todas las herramientas, a la izquierda el menú contextual con opciones específicas del objeto seleccionado y en el centro el lienzo infinito. (Ultimate Excalidraw tutorial)" src="https://sp-ao.shortpixel.ai/client/to_auto,q_lossy,ret_img,w_1024,h_588/https://csswolf.com/wp-content/uploads/2023/11/image-6-1024x588.png" title="The Ultimate Excalidraw Tutorial for Beginners 2" /></p>
+<p>La interfaz de Excalidraw: arriba la barra de herramientas, a la izquierda el menú contextual y en el centro el lienzo infinito.</p>
+<p>El lienzo en Excalidraw es un espacio de juego infinito. Dibuja donde quieras y muévelo libremente. Además, puedes hacer zoom hasta un 3000%!</p>
+<p>Aquí está la magia: tus dibujos se mantienen nítidos, no borrosos, incluso al hacer mucho zoom. ¿Por qué? Porque Excalidraw trabaja con SVG, que significa Gráficos Vectoriales Escalables. En resumen, SVG mantiene todo claro y definido, sin importar cuánto amplíes o reduzcas.</p>
+<h3 id="crear-formas-basicas-en-excalidraw">Crear formas básicas en Excalidraw<a class="headerlink" href="#crear-formas-basicas-en-excalidraw" title="Permanent link">&para;</a></h3>
+<p>¡Ahora vamos a lo divertido: dibujar en Excalidraw!</p>
+<p>Para dibujar formas básicas como rectángulos, elipses o rombos, solo elige la herramienta correspondiente en la barra superior. Haz clic en cualquier parte del lienzo y arrastra el ratón. Cuando estés conforme con el tamaño, suelta el botón.</p>
+<p><img alt="El tutorial definitivo de Excalidraw para principiantes" src="https://sp-ao.shortpixel.ai/client/to_auto,q_lossy,ret_img,w_800,h_257/https://csswolf.com/wp-content/uploads/2023/11/Basic-shapes-in-Excalidraw.webp" title="The Ultimate Excalidraw Tutorial for Beginners 3" /></p>
+<p>Crear formas básicas en Excalidraw es muy fácil con las herramientas de formas.</p>
+<p>Si quieres un cuadrado, círculo o rombo (alto = ancho), mantén pulsada la tecla Shift mientras arrastras. Mantener <code>shift</code> al dibujar o redimensionar mantiene la proporción.</p>
+<p>Después de crear un objeto, selecciónalo (si no está ya seleccionado). Verás que aparece un menú a la izquierda del lienzo. Puedes modificar los objetos de Excalidraw con las opciones de esta barra.</p>
+<p>Un repaso rápido de estas propiedades:</p>
+<p>– <strong>Color de trazo:</strong> Elige el color del borde entre 15 opciones, incluyendo blanco y transparente. También puedes usar tu propio color con valores Hex.</p>
+<p>– <strong>Color de fondo:</strong> Elige un color de relleno entre 15 opciones o personalízalo.</p>
+<p>– <strong>Estilo de relleno:</strong> Elige entre Hachure, cruzado o sólido.</p>
+<p>– <strong>Grosor de trazo:</strong> Fino, negrita o extra-negrita.</p>
+<p>– <strong>Estilo de trazo:</strong> Sólido, discontinuo o punteado.</p>
+<p>– <strong>Irregularidad:</strong> Ajusta el estilo de trazo – Arquitecto (limpio y preciso), Artista (a mano cuidadosamente) o Dibujante (a mano alzada).</p>
+<p>– <strong>Bordes:</strong> Cuadrados o redondeados.</p>
+<p>– <strong>Opacidad:</strong> Haz tu objeto tan transparente como quieras.</p>
+<p>Aquí tienes algunas variaciones que creé usando las opciones del menú de la izquierda:</p>
+<p><img alt="El menú contextual de Excalidraw te ayuda a personalizar tus objetos de forma intuitiva. (Guía completa de Excalidraw)" src="https://sp-ao.shortpixel.ai/client/to_auto,q_lossy,ret_img,w_358,h_276/https://csswolf.com/wp-content/uploads/2023/11/Different-objects-created-in-Excalidraw-with-basic-shapes.png" title="The Ultimate Excalidraw Tutorial for Beginners 4" /></p>
+<p>El menú contextual de Excalidraw te ayuda a personalizar tus objetos de forma intuitiva.</p>
+<h4 id="redimensionar-objetos-en-excalidraw">Redimensionar objetos en Excalidraw<a class="headerlink" href="#redimensionar-objetos-en-excalidraw" title="Permanent link">&para;</a></h4>
+<p>Para redimensionar un objeto, selecciónalo con la herramienta de selección (<code>1</code>), luego arrastra una de las esquinas del rectángulo delimitador. Si quieres mantener la proporción, mantén pulsada la tecla <code>shift</code> mientras arrastras.</p>
+<p>Si quieres que el objeto se redimensione simétricamente desde el centro, mantén pulsada la tecla <code>Option</code> en Mac o <code>Alt</code> en Windows.</p>
+<h4 id="rotar-objetos-en-excalidraw">Rotar objetos en Excalidraw<a class="headerlink" href="#rotar-objetos-en-excalidraw" title="Permanent link">&para;</a></h4>
+<p>También puedes rotar objetos. Selecciónalos con la herramienta de selección, toma el manejador de rotación (un círculo sobre el rectángulo delimitador) y gíralo.</p>
+<p><img alt="El tutorial definitivo de Excalidraw para principiantes" src="https://sp-ao.shortpixel.ai/client/to_auto,q_lossy,ret_img,w_1024,h_922/https://csswolf.com/wp-content/uploads/2023/11/image-9-1024x922.png" title="The Ultimate Excalidraw Tutorial for Beginners 5" /></p>
+<p>Puedes bloquear la rotación en múltiplos de 15 grados manteniendo pulsada la tecla <code>shift</code>.</p>
+<h4 id="atajos-de-teclado-para-trabajar-mas-rapido">Atajos de teclado para trabajar más rápido<a class="headerlink" href="#atajos-de-teclado-para-trabajar-mas-rapido" title="Permanent link">&para;</a></h4>
+<p>Quizá hayas notado algunos números bajo los iconos de la barra superior —</p>
+<p><img alt="Excalidraw soporta la mayoría de atajos de teclado que esperarías en un programa vectorial." src="https://sp-ao.shortpixel.ai/client/to_auto,q_lossy,ret_img,w_1024,h_119/https://csswolf.com/wp-content/uploads/2023/11/image-8-1024x119.png" title="The Ultimate Excalidraw Tutorial for Beginners 6" /></p>
+<p>Barra superior de Excalidraw: los números en rojo son atajos de teclado para cada herramienta.</p>
+<p>Estos números son los atajos de teclado para cada herramienta. En vez de hacer clic, puedes pulsar la tecla correspondiente. Por ejemplo, <code>2</code> activa el rectángulo, <code>3</code> el rombo y <code>4</code> la elipse.</p>
+<p>Los atajos de Excalidraw son bastante intuitivos. Aunque no aparecen en la barra, también puedes pulsar <code>R</code> para rectángulo, <code>D</code> para rombo, <code>E</code> para elipse, <code>A</code> para flecha, <code>L</code> para línea, etc.</p>
+<p>Puedes ver la lista de atajos pulsando <code>Shift + /</code> mientras trabajas en Excalidraw.</p>
+<p>También puedes consultar esta <a href="https://csswolf.com/excalidraw-keyboard-shortcuts-pdf/">lista de atajos de teclado en este artículo</a> para referencia rápida. Si quieres un PDF descargable o una lista imprimible, puedes descargarlo <a href="https://csswolf.com/wp-content/uploads/2023/10/Keyboard-shortcuts-for-Excalidraw-Printable-pdf-with-White-background.pdf">aquí</a>.</p>
+<p><strong>Herramienta de selección en Excalidraw</strong></p>
+<p>La herramienta de selección (flecha oscura) se usa para seleccionar uno o varios objetos en el lienzo. Siempre que quieras modificar un objeto, primero debes seleccionarlo.</p>
+<p><strong>Mover el lienzo</strong></p>
+<p>La herramienta mano (✋) te permite mover el lienzo. Tras seleccionarla, haz clic y arrastra. También puedes mantener <code>espacio + clic</code> y arrastrar.</p>
+<p>También puedes hacer clic con la rueda del ratón y arrastrar para mover el lienzo.</p>
+<p>Si usas un trackpad, puedes mover el lienzo con dos dedos.</p>
+<p><strong>Deshacer y rehacer</strong></p>
+<p>Si cometes un error, puedes deshacer con <code>Cmd + Z</code> en Mac o <code>Ctrl + Z</code> en Windows. Para rehacer, <code>Cmd + Shift + Z</code> en Mac o <code>Ctrl + Shift + Z</code> en Windows.</p>
+<h3 id="herramienta-de-texto">Herramienta de texto<a class="headerlink" href="#herramienta-de-texto" title="Permanent link">&para;</a></h3>
+<p>Puedes añadir texto usando la herramienta de texto (<code>8</code>).</p>
+<p>Añadir texto es tan común que Excalidraw tiene un atajo natural: doble clic. Haz doble clic en el lienzo y se activa la herramienta de texto.</p>
+<p>Después de escribir, puedes modificar el texto como quieras. Si quieres darle fondo, haz clic derecho y selecciona <em>Wrap text in a container</em>.</p>
+<p>Excalidraw tiene 3 estilos de fuente: Manuscrita, Sans-serif y Código (monoespaciada).</p>
+<p><img alt="El tutorial definitivo de Excalidraw para principiantes" src="https://sp-ao.shortpixel.ai/client/to_auto,q_lossy,ret_img,w_1024,h_117/https://csswolf.com/wp-content/uploads/2023/11/image-12-1024x117.png" title="The Ultimate Excalidraw Tutorial for Beginners 7" /></p>
+<p>Si quieres usar una fuente personalizada, lee <a href="https://csswolf.com/how-to-change-the-default-fonts-in-excalidraw/">este artículo.</a></p>
+<h2 id="herramientas-avanzadas-en-excalidraw">Herramientas avanzadas en Excalidraw<a class="headerlink" href="#herramientas-avanzadas-en-excalidraw" title="Permanent link">&para;</a></h2>
+<p>Las herramientas anteriores son suficientes para crear formas y cuadros de texto, pero no para diagramas complejos y flujogramas.</p>
+<p>Veamos algunas herramientas más avanzadas de Excalidraw.</p>
+<h3 id="crear-formas-irregulares-con-la-herramienta-linea">Crear formas irregulares con la herramienta Línea<a class="headerlink" href="#crear-formas-irregulares-con-la-herramienta-linea" title="Permanent link">&para;</a></h3>
+<p>Quizá notes que no hay herramienta para triángulos, pentágonos, estrellas, hexágonos, etc.</p>
+<p>Puedes dibujar estas formas con la herramienta línea, que crea líneas rectas. Elige la herramienta línea o pulsa <code>6</code>, y ve colocando puntos en el lienzo. Se forma una figura cerrada al hacer clic en el primer punto, permitiendo añadir color y estilo de relleno.</p>
+<p>Si quieres una figura abierta, pulsa Esc (o doble clic) al terminar.</p>
+<p><strong>Ajustar las esquinas</strong></p>
+<p>Para ajustar las esquinas, usa la herramienta de bordes en el menú izquierdo. Hay dos opciones: esquina aguda y esquina redondeada.</p>
+<p>Para cambiar entre ellas, selecciona el objeto y elige el estilo en el menú contextual.</p>
+<p><img alt="El tutorial definitivo de Excalidraw para principiantes" src="https://sp-ao.shortpixel.ai/client/to_auto,q_lossy,ret_img,w_1024,h_474/https://csswolf.com/wp-content/uploads/2023/11/Two-Corner-styles-in-Excalidraw-1024x474.png" title="The Ultimate Excalidraw Tutorial for Beginners 8" /></p>
+<p>Dos estilos de esquina en Excalidraw. La misma figura con esquinas redondeadas y agudas.</p>
+<h3 id="herramienta-flecha">Herramienta Flecha<a class="headerlink" href="#herramienta-flecha" title="Permanent link">&para;</a></h3>
+<p>También hay una herramienta de flecha para crear flechas rectas, similar a la línea. Para crear una flecha, coloca tantos puntos como quieras y luego haz doble clic o pulsa <code>Esc</code> al terminar.</p>
+<p>Después de dibujar la flecha, puedes personalizar color, grosor y puntas en ambos extremos.</p>
+<p>La herramienta flecha es más que una línea con punta. Tiene funciones únicas:</p>
+<p>— <strong>Flechas con nombre</strong></p>
+<p>Puedes hacer doble clic en el cuerpo de la flecha y ponerle un nombre. Es útil para mostrar pasos intermedios en procesos y diagramas de flujo.</p>
+<p>— <strong>Vinculación de flechas</strong></p>
+<p>Puedes vincular flechas a otros objetos para que, al mover el objeto, la flecha siga conectada. Para ello, arrastra la punta de la flecha cerca del objeto. Cuando veas un contorno tenue, suelta y quedarán vinculados.</p>
+<p>Puedes ver ambas funciones en esta demo:</p>
+<p><img alt="Puedes nombrar flechas y vincularlas a otros objetos para que sigan conectadas al moverlos. (¡Genial para diagramas y lluvias de ideas!)" src="https://sp-ao.shortpixel.ai/client/to_auto,q_lossy,ret_img,w_800,h_489/https://csswolf.com/wp-content/uploads/2023/11/Naming-arrows-and-binding-them-to-objects-in-Excalidraw.webp" title="The Ultimate Excalidraw Tutorial for Beginners 9" /></p>
+<p>Puedes nombrar flechas y vincularlas a otros objetos para que sigan conectadas al moverlos. (¡Genial para diagramas y lluvias de ideas!)</p>
+<h3 id="herramienta-a-mano-alzada">Herramienta a mano alzada<a class="headerlink" href="#herramienta-a-mano-alzada" title="Permanent link">&para;</a></h3>
+<p>Si las herramientas de formas no te sirven, puedes usar la herramienta de dibujo libre seleccionando el lápiz (✏️) o pulsando <code>7</code>.</p>
+<p>Esta herramienta simula una pluma real. Si la mueves despacio, el trazo es más grueso; si la mueves rápido, es más fino.</p>
+<p><img alt="El tutorial definitivo de Excalidraw para principiantes" src="https://sp-ao.shortpixel.ai/client/to_auto,q_lossy,ret_img,w_1024,h_389/https://csswolf.com/wp-content/uploads/2023/11/Free-hand-drawing-tool-Hello-1024x389.png" title="The Ultimate Excalidraw Tutorial for Beginners 10" /></p>
+<p>Demo de la herramienta a mano alzada: movimiento lento = trazo grueso.</p>
+<h3 id="agrupar-y-desagrupar-objetos-en-excalidraw">Agrupar y desagrupar objetos en Excalidraw<a class="headerlink" href="#agrupar-y-desagrupar-objetos-en-excalidraw" title="Permanent link">&para;</a></h3>
+<p>Puedes agrupar objetos para combinarlos en una sola unidad. Por ejemplo, agrupar varias formas para moverlas y redimensionarlas juntas.</p>
+<p>Para agrupar, selecciona los objetos manteniendo Shift, haz clic derecho y elige “Agrupar selección”. O pulsa <code>Cmd + G</code> en Mac o <code>Ctrl + G</code> en Windows.</p>
+<p>Esto agrupa todos los elementos seleccionados en un solo objeto.</p>
+<p>Para desagrupar, selecciona el grupo, haz clic derecho y elige “Desagrupar selección”. O pulsa <code>Cmd + Shift + G</code> en Mac o <code>Ctrl + Shift + G</code> en Windows. Así podrás editar cada objeto por separado.</p>
+<p>Desagrupar es útil si necesitas modificar un objeto individualmente. Agrupar y desagrupar es una forma práctica de trabajar con varios elementos juntos o por separado.</p>
+<h3 id="anadir-imagenes-externas">Añadir imágenes externas<a class="headerlink" href="#anadir-imagenes-externas" title="Permanent link">&para;</a></h3>
+<p>Excalidraw permite insertar imágenes externas en el lienzo. Haz clic en el icono de imagen en la barra superior o pulsa 9. Selecciona la imagen en tu ordenador y pulsa Enter.</p>
+<p>Luego puedes moverla y redimensionarla arrastrando las esquinas.</p>
+<p>Insertar imágenes externas abre muchas posibilidades: puedes hacer collages, anotar imágenes con las herramientas de Excalidraw, unir varias imágenes, ponerles fondo blanco o transparente, etc.</p>
+<h2 id="guardar-compartir-y-exportar-en-excalidraw">Guardar, compartir y exportar en Excalidraw<a class="headerlink" href="#guardar-compartir-y-exportar-en-excalidraw" title="Permanent link">&para;</a></h2>
+<p>Una vez que tienes tus dibujos, es hora de guardarlos o exportarlos.</p>
+<h3 id="guardar">Guardar<a class="headerlink" href="#guardar" title="Permanent link">&para;</a></h3>
+<p>Excalidraw guarda automáticamente tus dibujos en tu dispositivo. Cuando cierras la pestaña, tu trabajo queda guardado en el almacenamiento del navegador. La próxima vez que abras Excalidraw en el mismo dispositivo y navegador, tus dibujos estarán ahí.</p>
+<p>Si quieres trabajar en el mismo dibujo en otro ordenador, puedes guardar el lienzo en un archivo con extensión <code>.excalidraw</code>. Este archivo guarda toda la escena.</p>
+<p>Para guardar tu lienzo:</p>
+<ol>
+<li>Haz clic en el menú hamburguesa a la izquierda del lienzo.</li>
+<li>Elige “guardar imagen”.</li>
+<li>Haz clic en “Guardar en disco”.</li>
+</ol>
+<p>¡Listo! Ahora puedes continuar tu trabajo más tarde arrastrando este archivo a la pestaña de Excalidraw o transfiriéndolo a otro ordenador.</p>
+<h3 id="exportar">Exportar<a class="headerlink" href="#exportar" title="Permanent link">&para;</a></h3>
+<p>Si necesitas copiar tus dibujos como PNG o SVG para usarlos en otro programa, sigue estos pasos:</p>
+<ol>
+<li>Selecciona los objetos que quieras exportar.</li>
+<li>Haz clic derecho sobre ellos.</li>
+<li>Elige “Copiar al portapapeles como PNG” o “como SVG”.</li>
+</ol>
+<p>Si eliges PNG, recuerda que es un formato de mapa de bits, así que puede verse pixelado al ampliar. Pero puedes copiar imágenes PNG en resolución <code>3x</code> para mayor calidad.</p>
+<p>Para ello:</p>
+<ol>
+<li>Haz clic en el menú hamburguesa.</li>
+<li>Ve a “Exportar imagen”.</li>
+<li>Pon la escala en <code>3x</code>.</li>
+</ol>
+<p>Ahora tienes tus dibujos en alta resolución, listos para pegar en otro programa.</p>
+<h3 id="compartir">Compartir<a class="headerlink" href="#compartir" title="Permanent link">&para;</a></h3>
+<p>También puedes compartir tu lienzo como enlace de solo lectura: Menú hamburguesa -&gt; Guardar en -&gt; Exportar a enlace. Este enlace es permanente, ideal para compartir con profesorado o clientes.</p>
+<h3 id="colaboracion-en-vivo">Colaboración en vivo<a class="headerlink" href="#colaboracion-en-vivo" title="Permanent link">&para;</a></h3>
+<p>Puedes invitar a otras personas a colaborar en tiempo real compartiendo un enlace común al lienzo.</p>
+<p>Haz clic en el icono de dos personas (👥) en la barra superior derecha. Aparecerá un cuadro para poner tu nombre y obtener un enlace compartible.</p>
+<p>Ponle un nombre y comparte el enlace.</p>
+<h2 id="resumen">Resumen<a class="headerlink" href="#resumen" title="Permanent link">&para;</a></h2>
+<p>Ahora ya sabes cómo crear diagramas personalizados con las herramientas de Excalidraw, agrupar y manipular objetos, y colaborar en tiempo real. También hemos visto cómo guardar, exportar y compartir tus dibujos para usarlos en documentos, presentaciones y online.</p>
+<p>Con estos fundamentos, puedes empezar a usar Excalidraw para plasmar tus ideas visualmente. Su accesibilidad y funciones la hacen ideal para brainstorming, planificación, colaboración y comunicación.</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      2025-2026 Francisco Javier Hernández Illán - <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es">Licencia CC BY-NC-SA</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="mailto:<fj.hernandez@edu.gva.es>" target="_blank" rel="noopener" title="" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4l208 156a48 48 0 0 0 57.6 0l208-156c12.1-9.1 19.2-23.3 19.2-38.4 0-26.5-21.5-48-48-48zM0 196v188c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V196L313.6 344.8c-34.1 25.6-81.1 25.6-115.2 0z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.linkedin.com/in/fjavier-hernandez-illan" target="_blank" rel="noopener" title="www.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77m282.1 320h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+      <div class="md-consent" data-md-component="consent" id="__consent" hidden>
+        <div class="md-consent__overlay"></div>
+        <aside class="md-consent__inner">
+          <form class="md-consent__form md-grid md-typeset" name="consent">
+            
+
+
+  
+
+
+<h4>Consentimiento de cookie</h4>
+<p>Esta página de apuntes utiliza cookies para reconocer las visitas, medir la efectividad de la documentación y averiguar si encuentras aquello que buscas o cómo has llegado a estos apuntes. Con tu consentimiento, me ayudas a mejorar estos materiales.</p>
+<input class="md-toggle" type="checkbox" id="__settings" >
+<div class="md-consent__settings">
+  <ul class="task-list">
+    
+    
+      
+        
+  
+  
+    
+    
+  
+  <li class="task-list-item">
+    <label class="task-list-control">
+      <input type="checkbox" name="analytics" checked>
+      <span class="task-list-indicator"></span>
+      Google Analytics
+    </label>
+  </li>
+
+      
+    
+    
+      
+    
+    
+  </ul>
+</div>
+<div class="md-consent__controls">
+  
+    
+      <button class="md-button md-button--primary">Aceptar</button>
+    
+    
+    
+  
+    
+    
+    
+      <label class="md-button" for="__settings">Gestionar cookies</label>
+    
+  
+</div>
+          </form>
+        </aside>
+      </div>
+      <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout((function(){document.querySelector("[data-md-component=consent]").hidden=!1}),250);var form=document.forms.consent;for(var action of["submit","reset"])form.addEventListener(action,(function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map((function(e){return[e,!0]})))),location.hash="",location.reload()}))</script>
+    
+    
+      
+      <script id="__config" type="application/json">{"base": ".", "features": ["header.autohide", "navigation.top", "navigation.tracking", "navigation.footer", "navigation.indexes", "content.code.annotate", "announce.dismiss", "toc.follow", "content.code.copy"], "search": "assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+        <script src="js/print-site.js"></script>
+      
+    
+  </body>
+</html>

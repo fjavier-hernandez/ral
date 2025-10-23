@@ -1,0 +1,1287 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Práctica para examinar el tráfico web HTTP y mostrar elementos de la suite de protocolos TCP/IP usando Packet Tracer.">
+      
+      
+      
+        <link rel="canonical" href="https://fjavier-hernandez.github.io/ral/practica_investigacion_modelos.html">
+      
+      
+      
+      
+      <link rel="icon" href="imagenes/ral.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+    
+    
+      
+        <title>Práctica - Investigación de los modelos TCP/IP y OSI en Packet Tracer - Redes de Área Local</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="stylesheets/extra.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-0CPJP88MBF"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-0CPJP88MBF",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-0CPJP88MBF",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>if("undefined"!=typeof __md_analytics){var consent=__md_get("__consent");consent&&consent.analytics&&__md_analytics()}</script>
+  
+
+    
+    
+      
+        <meta  property="og:type"  content="website" >
+      
+        <meta  property="og:title"  content="Práctica - Investigación de los modelos TCP/IP y OSI en Packet Tracer - Redes de Área Local" >
+      
+        <meta  property="og:description"  content="Práctica para examinar el tráfico web HTTP y mostrar elementos de la suite de protocolos TCP/IP usando Packet Tracer." >
+      
+        <meta  property="og:image"  content="https://fjavier-hernandez.github.io/ral/assets/images/social/practica_investigacion_modelos.png" >
+      
+        <meta  property="og:image:type"  content="image/png" >
+      
+        <meta  property="og:image:width"  content="1200" >
+      
+        <meta  property="og:image:height"  content="630" >
+      
+        <meta  property="og:url"  content="https://fjavier-hernandez.github.io/ral/practica_investigacion_modelos.html" >
+      
+        <meta  name="twitter:card"  content="summary_large_image" >
+      
+        <meta  name="twitter:title"  content="Práctica - Investigación de los modelos TCP/IP y OSI en Packet Tracer - Redes de Área Local" >
+      
+        <meta  name="twitter:description"  content="Práctica para examinar el tráfico web HTTP y mostrar elementos de la suite de protocolos TCP/IP usando Packet Tracer." >
+      
+        <meta  name="twitter:image"  content="https://fjavier-hernandez.github.io/ral/assets/images/social/practica_investigacion_modelos.png" >
+      
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="javi" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#practica-investigacion-de-los-modelos-tcpip-y-osi-en-packet-tracer" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="index.html" title="Redes de Área Local" class="md-header__button md-logo" aria-label="Redes de Área Local" data-md-component="logo">
+      
+  <img src="imagenes/ral.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Redes de Área Local
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Práctica - Investigación de los modelos TCP/IP y OSI en Packet Tracer
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="javi" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Cambiar a modo noche"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo noche" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Cambiar a modo día"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo día" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="index.html" title="Redes de Área Local" class="md-nav__button md-logo" aria-label="Redes de Área Local" data-md-component="logo">
+      
+  <img src="imagenes/ral.svg" alt="logo">
+
+    </a>
+    Redes de Área Local
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Inicio
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="01ir.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    1. Introducción a las redes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="02arquitecturas.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2. Arquitecturas de redes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="03fisica.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    3. Capa física
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#propuesta-didactica" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Propuesta didáctica
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📚 Propuesta didáctica">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#criterios-de-evaluacion-trabajados" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 Criterios de evaluación trabajados
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#objetivos-de-la-practica" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 Objetivos de la práctica
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#descripcion-de-la-practica" class="md-nav__link">
+    <span class="md-ellipsis">
+      📋 Descripción de la práctica
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📋 Descripción de la práctica">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aspectos-basicos" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔧 Aspectos básicos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#escenario-de-trabajo" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 Escenario de trabajo
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instrucciones-detalladas" class="md-nav__link">
+    <span class="md-ellipsis">
+      🛠️ Instrucciones detalladas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🛠️ Instrucciones detalladas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parte-1-examinar-el-trafico-web-http" class="md-nav__link">
+    <span class="md-ellipsis">
+      📊 Parte 1: Examinar el tráfico web HTTP
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📊 Parte 1: Examinar el tráfico web HTTP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#paso-1-cambiar-del-modo-de-tiempo-real-al-modo-de-simulacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Paso 1: Cambiar del modo de tiempo real al modo de simulación
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-2-generar-trafico-web-http" class="md-nav__link">
+    <span class="md-ellipsis">
+      Paso 2: Generar tráfico web (HTTP)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#preguntas-de-analisis-parte-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      📝 Preguntas de análisis - Parte 1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#preguntas-de-analisis-detalles-de-pdu" class="md-nav__link">
+    <span class="md-ellipsis">
+      📝 Preguntas de análisis - Detalles de PDU
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pregunta-de-comparacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      📝 Pregunta de comparación
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pregunta-final-de-la-parte-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      📝 Pregunta final de la Parte 1
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parte-2-mostrar-elementos-de-la-suite-de-protocolos-tcpip" class="md-nav__link">
+    <span class="md-ellipsis">
+      🌐 Parte 2: Mostrar elementos de la suite de protocolos TCP/IP
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🌐 Parte 2: Mostrar elementos de la suite de protocolos TCP/IP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#paso-1-ver-eventos-adicionales" class="md-nav__link">
+    <span class="md-ellipsis">
+      Paso 1: Ver eventos adicionales
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pregunta-de-analisis" class="md-nav__link">
+    <span class="md-ellipsis">
+      📝 Pregunta de análisis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#preguntas-sobre-dns" class="md-nav__link">
+    <span class="md-ellipsis">
+      📝 Preguntas sobre DNS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#preguntas-sobre-respuesta-dns" class="md-nav__link">
+    <span class="md-ellipsis">
+      📝 Preguntas sobre respuesta DNS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#preguntas-sobre-tcp" class="md-nav__link">
+    <span class="md-ellipsis">
+      📝 Preguntas sobre TCP
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pregunta-sobre-cierre-tcp" class="md-nav__link">
+    <span class="md-ellipsis">
+      📝 Pregunta sobre cierre TCP
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#preguntas-de-desafio" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 Preguntas de desafío
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎯 Preguntas de desafío">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#analisis-de-puertos-de-servidor" class="md-nav__link">
+    <span class="md-ellipsis">
+      🌐 Análisis de puertos de servidor
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#criterios-de-evaluacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      📊 Criterios de evaluación
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📊 Criterios de evaluación">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#evaluacion-tecnica-70" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 Evaluación técnica (70%)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evaluacion-del-trabajo-30" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎨 Evaluación del trabajo (30%)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#herramientas-requeridas" class="md-nav__link">
+    <span class="md-ellipsis">
+      🛠️ Herramientas requeridas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🛠️ Herramientas requeridas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#software" class="md-nav__link">
+    <span class="md-ellipsis">
+      💻 Software
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#documentacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      📝 Documentación
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#entregables" class="md-nav__link">
+    <span class="md-ellipsis">
+      📋 Entregables
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📋 Entregables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#informe-de-respuestas" class="md-nav__link">
+    <span class="md-ellipsis">
+      📄 Informe de respuestas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evidencias-graficas" class="md-nav__link">
+    <span class="md-ellipsis">
+      🖼️ Evidencias gráficas
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cronograma-de-trabajo" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⏰ Cronograma de trabajo
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conceptos-clave-a-demostrar" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Conceptos clave a demostrar
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📚 Conceptos clave a demostrar">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#proceso-de-encapsulamiento" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔄 Proceso de encapsulamiento
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#protocolos-analizados" class="md-nav__link">
+    <span class="md-ellipsis">
+      🌐 Protocolos analizados
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#checklist-de-entrega" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Checklist de entrega
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#competencias-desarrolladas" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎓 Competencias desarrolladas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎓 Competencias desarrolladas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#competencias-tecnicas" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔧 Competencias técnicas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#competencias-transversales" class="md-nav__link">
+    <span class="md-ellipsis">
+      🤝 Competencias transversales
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="practica-investigacion-de-los-modelos-tcpip-y-osi-en-packet-tracer">🔬 PRÁCTICA: INVESTIGACIÓN DE LOS MODELOS TCP/IP Y OSI EN PACKET TRACER<a class="headerlink" href="#practica-investigacion-de-los-modelos-tcpip-y-osi-en-packet-tracer" title="Permanent link">&para;</a></h1>
+<p>Esta práctica tiene como objetivo proporcionar una base para comprender la suite de protocolos TCP/IP y su relación con el modelo OSI. Utilizando el modo de simulación de Packet Tracer, los estudiantes podrán ver el contenido de los datos que se envían a través de la red en cada capa.</p>
+<h2 id="propuesta-didactica">📚 Propuesta didáctica<a class="headerlink" href="#propuesta-didactica" title="Permanent link">&para;</a></h2>
+<p>En esta práctica trabajamos el <strong>RA1 de RAL</strong>:</p>
+<blockquote>
+<p><strong>RA1.</strong> <em>Reconoce la estructura de redes locales cableadas analizando las características de entornos de aplicación y describiendo la funcionalidad de sus componentes.</em></p>
+</blockquote>
+<h3 id="criterios-de-evaluacion-trabajados">🎯 Criterios de evaluación trabajados<a class="headerlink" href="#criterios-de-evaluacion-trabajados" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>CE1a</strong>: Se han descrito los principios de funcionamiento de las redes locales.</li>
+<li><strong>CE1c</strong>: Se han descrito los elementos de la red local y su función.</li>
+</ul>
+<h3 id="objetivos-de-la-practica">🎯 Objetivos de la práctica<a class="headerlink" href="#objetivos-de-la-practica" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Examinar el tráfico web HTTP utilizando el modo de simulación de Packet Tracer.</li>
+<li>Mostrar y analizar elementos de la suite de protocolos TCP/IP.</li>
+<li>Comprender el proceso de encapsulamiento de datos en las diferentes capas.</li>
+<li>Identificar las PDU (Unidades de Datos de Protocolo) en cada capa.</li>
+<li>Relacionar los modelos OSI y TCP/IP con el funcionamiento real de la red.</li>
+</ul>
+<hr />
+<h2 id="descripcion-de-la-practica">📋 Descripción de la práctica<a class="headerlink" href="#descripcion-de-la-practica" title="Permanent link">&para;</a></h2>
+<h3 id="aspectos-basicos">🔧 Aspectos básicos<a class="headerlink" href="#aspectos-basicos" title="Permanent link">&para;</a></h3>
+<p>Esta actividad de simulación tiene como objetivo proporcionar una base para comprender la suite de protocolos TCP/IP y la relación con el modelo OSI. El modo de simulación permite ver el contenido de los datos que se envían a través de la red en cada capa.</p>
+<p>A medida que los datos se desplazan por la red, se dividen en partes más pequeñas y se identifican de modo que las piezas se puedan volver a unir cuando lleguen al destino. A cada pieza se le asigna un nombre específico (<strong>unidad de datos del protocolo [PDU]</strong>) y se la asocia a una capa específica de los modelos TCP/IP y OSI.</p>
+<p>El modo de simulación de Packet Tracer permite ver cada una de las capas y la PDU asociada. Los siguientes pasos guían al usuario a través del proceso de solicitud de una página web desde un servidor web mediante la aplicación de navegador web disponible en una PC cliente.</p>
+<h3 id="escenario-de-trabajo">🎯 Escenario de trabajo<a class="headerlink" href="#escenario-de-trabajo" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Cliente web</strong>: PC con navegador web</li>
+<li><strong>Servidor web</strong>: Servidor HTTP con página web</li>
+<li><strong>Red local</strong>: Conexión directa entre cliente y servidor</li>
+<li><strong>Protocolos</strong>: HTTP, TCP, IP, Ethernet, DNS, ARP</li>
+</ul>
+<hr />
+<h2 id="instrucciones-detalladas">🛠️ Instrucciones detalladas<a class="headerlink" href="#instrucciones-detalladas" title="Permanent link">&para;</a></h2>
+<h3 id="parte-1-examinar-el-trafico-web-http">📊 Parte 1: Examinar el tráfico web HTTP<a class="headerlink" href="#parte-1-examinar-el-trafico-web-http" title="Permanent link">&para;</a></h3>
+<h4 id="paso-1-cambiar-del-modo-de-tiempo-real-al-modo-de-simulacion">Paso 1: Cambiar del modo de tiempo real al modo de simulación<a class="headerlink" href="#paso-1-cambiar-del-modo-de-tiempo-real-al-modo-de-simulacion" title="Permanent link">&para;</a></h4>
+<ol>
+<li>
+<p><strong>Cambio de modo</strong>:
+   - En la esquina inferior derecha de la interfaz de Packet Tracer, hacer clic en el ícono del modo de <strong>Simulación</strong>.
+   - Seleccionar <strong>HTTP</strong> en Filtros de lista de eventos.</p>
+</li>
+<li>
+<p><strong>Configuración de filtros</strong>:
+   - Hacer clic en el botón <strong>Editar filtros</strong> en la parte inferior del panel de simulación.
+   - Alternar la casilla de verificación <strong>Mostrar todo/ninguno</strong> hasta que se desactiven todas las casillas.
+   - Seleccionar únicamente <strong>HTTP</strong>.
+   - Cerrar la ventana Editar filtros.</p>
+</li>
+</ol>
+<h4 id="paso-2-generar-trafico-web-http">Paso 2: Generar tráfico web (HTTP)<a class="headerlink" href="#paso-2-generar-trafico-web-http" title="Permanent link">&para;</a></h4>
+<ol>
+<li>
+<p><strong>Acceder al cliente web</strong>:
+   - Hacer clic en <strong>Cliente web</strong> en el panel del extremo izquierdo.
+   - Hacer clic en la ficha <strong>Escritorio</strong> y luego en el ícono <strong>Navegador web</strong>.</p>
+</li>
+<li>
+<p><strong>Realizar solicitud HTTP</strong>:
+   - En el campo de dirección URL, introducir: <code>http://www.osi.local</code>
+   - Hacer clic en <strong>Ir</strong>.</p>
+</li>
+<li>
+<p><strong>Capturar eventos</strong>:
+   - Hacer clic en <strong>Capturar/Avanzar</strong> cuatro veces.
+   - Observar que aparecen cuatro eventos en la Lista de eventos.</p>
+</li>
+<li>
+<p><strong>Examinar la primera PDU</strong>:
+   - Hacer clic en el primer cuadro coloreado debajo de la columna <strong>Lista de eventos &gt; Información</strong>.
+   - Asegurarse de que esté seleccionada la ficha <strong>Modelo OSI</strong>.
+   - Hacer clic en <strong>Capa 7</strong> en la columna Capas de salida.</p>
+</li>
+</ol>
+<h4 id="preguntas-de-analisis-parte-1">📝 Preguntas de análisis - Parte 1<a class="headerlink" href="#preguntas-de-analisis-parte-1" title="Permanent link">&para;</a></h4>
+<p><strong>Pregunta 1</strong>: ¿Qué información se indica en los pasos numerados directamente debajo de los cuadros Capas de entrada y Capas de salida?</p>
+<p><strong>Pregunta 2</strong>: ¿Cuál es el valor del puerto Dst para la capa 4 en la columna Capas de salida?</p>
+<p><strong>Pregunta 3</strong>: ¿Cuál es el destino? ¿Valor IP para la Capa 3 en la columna Capas de salida?</p>
+<p><strong>Pregunta 4</strong>: ¿Qué información se muestra en la Capa 2 en la columna Capas de salida?</p>
+<ol start="5">
+<li><strong>Examinar detalles de PDU</strong>:
+   - Hacer clic en la ficha de <strong>Detalles de la PDU saliente</strong>.
+   - Comparar la información entre las diferentes secciones.</li>
+</ol>
+<h4 id="preguntas-de-analisis-detalles-de-pdu">📝 Preguntas de análisis - Detalles de PDU<a class="headerlink" href="#preguntas-de-analisis-detalles-de-pdu" title="Permanent link">&para;</a></h4>
+<p><strong>Pregunta 5</strong>: ¿Cuál es la información común que se indica en la sección IP de Detalles de PDU comparada con la información que se indica en la ficha Modelo OSI? ¿Con qué capa se relaciona?</p>
+<p><strong>Pregunta 6</strong>: ¿Cuál es la información frecuente que se indica en la sección IP de Detalles de PDU comparada con la información que se indica en la ficha Modelo OSI?</p>
+<p><strong>Pregunta 7</strong>: ¿Cuál es el host que se indica en la sección HTTP de Detalles de PDU? ¿Con qué capa se relacionaría esta información en la ficha Modelo OSI?</p>
+<ol start="6">
+<li><strong>Examinar eventos adicionales</strong>:
+   - Hacer clic en el primer cuadro coloreado debajo de la columna <strong>Lista de eventos &gt; Tipo</strong>.
+   - Avanzar al siguiente cuadro <strong>Tipo</strong> de HTTP y hacer clic en el cuadro coloreado.
+   - Comparar las columnas <strong>Capas de entrada</strong> y <strong>Capas de salida</strong>.</li>
+</ol>
+<h4 id="pregunta-de-comparacion">📝 Pregunta de comparación<a class="headerlink" href="#pregunta-de-comparacion" title="Permanent link">&para;</a></h4>
+<p><strong>Pregunta 8</strong>: Compare la información que se muestra en la columna Capas de entrada con la de la columna Capas de salida: ¿cuáles son las diferencias principales?</p>
+<ol start="7">
+<li><strong>Finalizar análisis de HTTP</strong>:
+   - Hacer clic en la ficha <strong>Inbound PDU Details</strong> (Detalles de PDU entrante).
+   - Hacer clic en el último cuadro coloreado de la columna Información.</li>
+</ol>
+<h4 id="pregunta-final-de-la-parte-1">📝 Pregunta final de la Parte 1<a class="headerlink" href="#pregunta-final-de-la-parte-1" title="Permanent link">&para;</a></h4>
+<p><strong>Pregunta 9</strong>: ¿Cuántas fichas se muestran con este evento y por qué? Explique.</p>
+<hr />
+<h3 id="parte-2-mostrar-elementos-de-la-suite-de-protocolos-tcpip">🌐 Parte 2: Mostrar elementos de la suite de protocolos TCP/IP<a class="headerlink" href="#parte-2-mostrar-elementos-de-la-suite-de-protocolos-tcpip" title="Permanent link">&para;</a></h3>
+<h4 id="paso-1-ver-eventos-adicionales">Paso 1: Ver eventos adicionales<a class="headerlink" href="#paso-1-ver-eventos-adicionales" title="Permanent link">&para;</a></h4>
+<ol>
+<li><strong>Configurar filtros para todos los protocolos</strong>:
+   - Cerrar todas las ventanas de información de PDU abiertas.
+   - En la sección <strong>Filtros de lista de eventos &gt; Eventos visibles</strong>, hacer clic en <strong>Mostrar todo</strong>.</li>
+</ol>
+<h4 id="pregunta-de-analisis">📝 Pregunta de análisis<a class="headerlink" href="#pregunta-de-analisis" title="Permanent link">&para;</a></h4>
+<p><strong>Pregunta 10</strong>: ¿Qué tipos de eventos adicionales se muestran?</p>
+<ol start="2">
+<li><strong>Examinar protocolo DNS</strong>:
+   - Hacer clic en el primer evento de <strong>DNS</strong> en la columna <strong>Información</strong>.
+   - Examinar las fichas <strong>Modelo OSI</strong> y <strong>Detalles de PDU</strong>.
+   - Hacer clic en la ficha de <strong>Detalles de la PDU saliente</strong>.</li>
+</ol>
+<h4 id="preguntas-sobre-dns">📝 Preguntas sobre DNS<a class="headerlink" href="#preguntas-sobre-dns" title="Permanent link">&para;</a></h4>
+<p><strong>Pregunta 11</strong>: ¿Qué información se indica en <strong>NOMBRE</strong>: en la sección <strong>CONSULTA DNS</strong>?</p>
+<ol start="3">
+<li><strong>Examinar respuesta DNS</strong>:
+   - Hacer clic en el último cuadro coloreado <strong>Información</strong> de DNS en la lista de eventos.</li>
+</ol>
+<h4 id="preguntas-sobre-respuesta-dns">📝 Preguntas sobre respuesta DNS<a class="headerlink" href="#preguntas-sobre-respuesta-dns" title="Permanent link">&para;</a></h4>
+<p><strong>Pregunta 12</strong>: ¿En qué dispositivo se capturó la PDU?</p>
+<p><strong>Pregunta 13</strong>: ¿Cuál es el valor que se indica junto a <strong>DIRECCIÓN</strong>: en la sección <strong>RESPUESTA DE DNS</strong> de Detalles de la PDU entrante?</p>
+<ol start="4">
+<li><strong>Examinar protocolo TCP</strong>:
+   - Buscar el primer evento de <strong>HTTP</strong> en la lista.
+   - Hacer clic en el cuadro coloreado del evento de <strong>TCP</strong> que le sigue inmediatamente.
+   - Resaltar <strong>capa 4</strong> en la ficha <strong>Modelo OSI</strong>.</li>
+</ol>
+<h4 id="preguntas-sobre-tcp">📝 Preguntas sobre TCP<a class="headerlink" href="#preguntas-sobre-tcp" title="Permanent link">&para;</a></h4>
+<p><strong>Pregunta 14</strong>: En la lista numerada que está directamente debajo de Capas de entrada y Capas de salida, ¿cuál es la información que se muestra en los elementos 4 y 5?</p>
+<ol start="5">
+<li><strong>Examinar cierre de conexión TCP</strong>:
+   - Hacer clic en el último evento de TCP.
+   - Resaltar capa 4 en la ficha <strong>Modelo OSI</strong>.
+   - Examinar los pasos que se indican directamente a continuación de <strong>Capas de entrada</strong> y <strong>Capas de salida</strong>.</li>
+</ol>
+<h4 id="pregunta-sobre-cierre-tcp">📝 Pregunta sobre cierre TCP<a class="headerlink" href="#pregunta-sobre-cierre-tcp" title="Permanent link">&para;</a></h4>
+<p><strong>Pregunta 15</strong>: ¿Cuál es el propósito de este evento, según la información proporcionada en el último elemento de la lista (debe ser el elemento 4)?</p>
+<hr />
+<h2 id="preguntas-de-desafio">🎯 Preguntas de desafío<a class="headerlink" href="#preguntas-de-desafio" title="Permanent link">&para;</a></h2>
+<h3 id="analisis-de-puertos-de-servidor">🌐 Análisis de puertos de servidor<a class="headerlink" href="#analisis-de-puertos-de-servidor" title="Permanent link">&para;</a></h3>
+<p>Basándose en la información analizada durante la captura de Packet Tracer:</p>
+<p><strong>Pregunta 16</strong>: ¿Qué número de puerto escucha el servidor web para detectar la solicitud web?</p>
+<p><strong>Pregunta 17</strong>: ¿Qué puerto escucha el servidor web para detectar una solicitud de DNS?</p>
+<hr />
+<h2 id="criterios-de-evaluacion">📊 Criterios de evaluación<a class="headerlink" href="#criterios-de-evaluacion" title="Permanent link">&para;</a></h2>
+<h3 id="evaluacion-tecnica-70">🎯 Evaluación técnica (70%)<a class="headerlink" href="#evaluacion-tecnica-70" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Criterio</th>
+<th>Puntuación</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Comprensión de encapsulamiento</strong></td>
+<td>25%</td>
+<td>Correcta identificación de PDU en cada capa</td>
+</tr>
+<tr>
+<td><strong>Análisis de protocolos</strong></td>
+<td>25%</td>
+<td>Identificación y explicación de protocolos TCP/IP</td>
+</tr>
+<tr>
+<td><strong>Relación OSI-TCP/IP</strong></td>
+<td>20%</td>
+<td>Comprensión de la correspondencia entre modelos</td>
+</tr>
+</tbody>
+</table>
+<h3 id="evaluacion-del-trabajo-30">🎨 Evaluación del trabajo (30%)<a class="headerlink" href="#evaluacion-del-trabajo-30" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Criterio</th>
+<th>Puntuación</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Respuestas a preguntas</strong></td>
+<td>15%</td>
+<td>Respuestas correctas y justificadas</td>
+</tr>
+<tr>
+<td><strong>Presentación</strong></td>
+<td>15%</td>
+<td>Documento bien estructurado y claro</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="herramientas-requeridas">🛠️ Herramientas requeridas<a class="headerlink" href="#herramientas-requeridas" title="Permanent link">&para;</a></h2>
+<h3 id="software">💻 Software<a class="headerlink" href="#software" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Cisco Packet Tracer</strong> (versión actualizada)</li>
+<li><strong>Archivo de práctica</strong>: Descargar el archivo .pkt correspondiente</li>
+</ul>
+<h3 id="documentacion">📝 Documentación<a class="headerlink" href="#documentacion" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Word/Google Docs</strong>: Para el informe de respuestas</li>
+<li><strong>Capturas de pantalla</strong>: Para evidenciar los resultados</li>
+</ul>
+<hr />
+<h2 id="entregables">📋 Entregables<a class="headerlink" href="#entregables" title="Permanent link">&para;</a></h2>
+<h3 id="informe-de-respuestas">📄 Informe de respuestas<a class="headerlink" href="#informe-de-respuestas" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Formato</strong>: PDF</li>
+<li><strong>Contenido</strong>:</li>
+<li>Respuestas a todas las preguntas planteadas</li>
+<li>Capturas de pantalla de los eventos más importantes</li>
+<li>Explicaciones detalladas del proceso de encapsulamiento</li>
+<li>Análisis de la correspondencia entre modelos OSI y TCP/IP</li>
+</ul>
+<h3 id="evidencias-graficas">🖼️ Evidencias gráficas<a class="headerlink" href="#evidencias-graficas" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Capturas de pantalla</strong> de:</li>
+<li>Configuración de filtros</li>
+<li>PDU en diferentes capas</li>
+<li>Detalles de protocolos (HTTP, DNS, TCP)</li>
+<li>Ventanas de información de PDU</li>
+</ul>
+<hr />
+<h2 id="cronograma-de-trabajo">⏰ Cronograma de trabajo<a class="headerlink" href="#cronograma-de-trabajo" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Sesión</th>
+<th>Actividad</th>
+<th>Duración</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1</strong></td>
+<td>Configuración inicial y Parte 1 (HTTP)</td>
+<td>2 horas</td>
+</tr>
+<tr>
+<td><strong>2</strong></td>
+<td>Parte 2 (Protocolos TCP/IP) y análisis</td>
+<td>2 horas</td>
+</tr>
+<tr>
+<td><strong>3</strong></td>
+<td>Respuestas y documentación</td>
+<td>1 hora</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="conceptos-clave-a-demostrar">📚 Conceptos clave a demostrar<a class="headerlink" href="#conceptos-clave-a-demostrar" title="Permanent link">&para;</a></h2>
+<h3 id="proceso-de-encapsulamiento">🔄 Proceso de encapsulamiento<a class="headerlink" href="#proceso-de-encapsulamiento" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Capa 7 (Aplicación)</strong>: Datos HTTP</li>
+<li><strong>Capa 4 (Transporte)</strong>: Segmentos TCP</li>
+<li><strong>Capa 3 (Red)</strong>: Datagramas IP</li>
+<li><strong>Capa 2 (Enlace)</strong>: Tramas Ethernet</li>
+<li><strong>Capa 1 (Física)</strong>: Bits</li>
+</ul>
+<h3 id="protocolos-analizados">🌐 Protocolos analizados<a class="headerlink" href="#protocolos-analizados" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>HTTP</strong>: Protocolo de aplicación web</li>
+<li><strong>DNS</strong>: Resolución de nombres</li>
+<li><strong>TCP</strong>: Control de transporte</li>
+<li><strong>IP</strong>: Encaminamiento de red</li>
+<li><strong>Ethernet</strong>: Acceso al medio</li>
+<li><strong>ARP</strong>: Resolución de direcciones</li>
+</ul>
+<hr />
+<h2 id="checklist-de-entrega">✅ Checklist de entrega<a class="headerlink" href="#checklist-de-entrega" title="Permanent link">&para;</a></h2>
+<p>Antes de entregar, verifica que incluyas:</p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Respuestas a todas las 17 preguntas planteadas</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Capturas de pantalla de eventos clave</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Explicación del proceso de encapsulamiento</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Análisis de correspondencia entre modelos</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Documento en formato PDF con nombre correcto</li>
+</ul>
+<hr />
+<h2 id="competencias-desarrolladas">🎓 Competencias desarrolladas<a class="headerlink" href="#competencias-desarrolladas" title="Permanent link">&para;</a></h2>
+<h3 id="competencias-tecnicas">🔧 Competencias técnicas<a class="headerlink" href="#competencias-tecnicas" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Comprensión del modelo OSI y TCP/IP</li>
+<li>Análisis de protocolos de red</li>
+<li>Interpretación de PDU en diferentes capas</li>
+<li>Uso de herramientas de simulación</li>
+</ul>
+<h3 id="competencias-transversales">🤝 Competencias transversales<a class="headerlink" href="#competencias-transversales" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Análisis crítico</li>
+<li>Documentación técnica</li>
+<li>Resolución de problemas</li>
+<li>Trabajo metodológico</li>
+</ul>
+<hr />
+<div class="admonition tip">
+<p class="admonition-title"><span style=\"font-size: 1.4em;\"><strong>CONSEJO FINAL</strong></span></p>
+<p><span style=\"font-size: 1.3em;\">Esta práctica es fundamental para comprender cómo funcionan realmente las redes. Presta especial atención al proceso de encapsulamiento y desencapsulamiento, ya que es la base de toda comunicación en red.</span></p>
+</div>
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      2025-2026 Francisco Javier Hernández Illán - <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es">Licencia CC BY-NC-SA</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="mailto:<fj.hernandez@edu.gva.es>" target="_blank" rel="noopener" title="" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4l208 156a48 48 0 0 0 57.6 0l208-156c12.1-9.1 19.2-23.3 19.2-38.4 0-26.5-21.5-48-48-48zM0 196v188c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V196L313.6 344.8c-34.1 25.6-81.1 25.6-115.2 0z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.linkedin.com/in/fjavier-hernandez-illan" target="_blank" rel="noopener" title="www.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77m282.1 320h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+      <div class="md-consent" data-md-component="consent" id="__consent" hidden>
+        <div class="md-consent__overlay"></div>
+        <aside class="md-consent__inner">
+          <form class="md-consent__form md-grid md-typeset" name="consent">
+            
+
+
+  
+
+
+<h4>Consentimiento de cookie</h4>
+<p>Esta página de apuntes utiliza cookies para reconocer las visitas, medir la efectividad de la documentación y averiguar si encuentras aquello que buscas o cómo has llegado a estos apuntes. Con tu consentimiento, me ayudas a mejorar estos materiales.</p>
+<input class="md-toggle" type="checkbox" id="__settings" >
+<div class="md-consent__settings">
+  <ul class="task-list">
+    
+    
+      
+        
+  
+  
+    
+    
+  
+  <li class="task-list-item">
+    <label class="task-list-control">
+      <input type="checkbox" name="analytics" checked>
+      <span class="task-list-indicator"></span>
+      Google Analytics
+    </label>
+  </li>
+
+      
+    
+    
+      
+    
+    
+  </ul>
+</div>
+<div class="md-consent__controls">
+  
+    
+      <button class="md-button md-button--primary">Aceptar</button>
+    
+    
+    
+  
+    
+    
+    
+      <label class="md-button" for="__settings">Gestionar cookies</label>
+    
+  
+</div>
+          </form>
+        </aside>
+      </div>
+      <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout((function(){document.querySelector("[data-md-component=consent]").hidden=!1}),250);var form=document.forms.consent;for(var action of["submit","reset"])form.addEventListener(action,(function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map((function(e){return[e,!0]})))),location.hash="",location.reload()}))</script>
+    
+    
+      
+      <script id="__config" type="application/json">{"base": ".", "features": ["header.autohide", "navigation.top", "navigation.tracking", "navigation.footer", "navigation.indexes", "content.code.annotate", "announce.dismiss", "toc.follow", "content.code.copy"], "search": "assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+        <script src="js/print-site.js"></script>
+      
+    
+  </body>
+</html>

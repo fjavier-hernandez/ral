@@ -1,0 +1,2103 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Tipología, componentes y transmisión de datos.">
+      
+      
+      
+        <link rel="canonical" href="https://fjavier-hernandez.github.io/ral/01ir.html">
+      
+      
+        <link rel="prev" href="index.html">
+      
+      
+        <link rel="next" href="02arquitecturas.html">
+      
+      
+      <link rel="icon" href="imagenes/ral.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+    
+    
+      
+        <title>Introducción - Introducción a las Redes - Redes de Área Local</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="stylesheets/extra.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-0CPJP88MBF"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-0CPJP88MBF",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-0CPJP88MBF",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>if("undefined"!=typeof __md_analytics){var consent=__md_get("__consent");consent&&consent.analytics&&__md_analytics()}</script>
+  
+
+    
+    
+      
+        <meta  property="og:type"  content="website" >
+      
+        <meta  property="og:title"  content="Introducción - Introducción a las Redes - Redes de Área Local" >
+      
+        <meta  property="og:description"  content="Tipología, componentes y transmisión de datos." >
+      
+        <meta  property="og:image"  content="https://fjavier-hernandez.github.io/ral/assets/images/social/01ir.png" >
+      
+        <meta  property="og:image:type"  content="image/png" >
+      
+        <meta  property="og:image:width"  content="1200" >
+      
+        <meta  property="og:image:height"  content="630" >
+      
+        <meta  property="og:url"  content="https://fjavier-hernandez.github.io/ral/01ir.html" >
+      
+        <meta  name="twitter:card"  content="summary_large_image" >
+      
+        <meta  name="twitter:title"  content="Introducción - Introducción a las Redes - Redes de Área Local" >
+      
+        <meta  name="twitter:description"  content="Tipología, componentes y transmisión de datos." >
+      
+        <meta  name="twitter:image"  content="https://fjavier-hernandez.github.io/ral/assets/images/social/01ir.png" >
+      
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="javi" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#introduccion-a-las-redes" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="index.html" title="Redes de Área Local" class="md-header__button md-logo" aria-label="Redes de Área Local" data-md-component="logo">
+      
+  <img src="imagenes/ral.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Redes de Área Local
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Introducción - Introducción a las Redes
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="javi" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Cambiar a modo noche"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo noche" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Cambiar a modo día"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo día" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="index.html" title="Redes de Área Local" class="md-nav__button md-logo" aria-label="Redes de Área Local" data-md-component="logo">
+      
+  <img src="imagenes/ral.svg" alt="logo">
+
+    </a>
+    Redes de Área Local
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Inicio
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    1. Introducción a las redes
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="01ir.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    1. Introducción a las redes
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#propuesta-didactica" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Propuesta didáctica
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📚 Propuesta didáctica">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#criterios-de-evaluacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Criterios de evaluación
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Criterios de evaluación">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#criterios-de-evaluacion-del-ra1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Criterios de evaluación del RA1
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contenidos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contenidos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#programacion-de-aula-12h" class="md-nav__link">
+    <span class="md-ellipsis">
+      Programación de Aula (12h)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sistemas-en-red" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔗 Sistemas en red
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#componentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ Componentes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="⚙️ Componentes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#componentes-hardware" class="md-nav__link">
+    <span class="md-ellipsis">
+      Componentes Hardware
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Componentes Hardware">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nodos-en-una-red" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nodos en una red
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adaptadores-de-red" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adaptadores de red
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#medios-de-transmision" class="md-nav__link">
+    <span class="md-ellipsis">
+      Medios de transmisión
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#componentes-software" class="md-nav__link">
+    <span class="md-ellipsis">
+      Componentes Software
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clasificacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      🗂️ Clasificación
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🗂️ Clasificación">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tipos-segun-su-extension" class="md-nav__link">
+    <span class="md-ellipsis">
+      📏 Tipos según su extensión
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tipos-segun-su-ambito" class="md-nav__link">
+    <span class="md-ellipsis">
+      🌍 Tipos según su ámbito
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🌍 Tipos según su ámbito">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#clasificacion-de-redes-segun-su-titularidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      Clasificación de redes según su titularidad
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#topologias" class="md-nav__link">
+    <span class="md-ellipsis">
+      📊 Topologías
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📊 Topologías">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#topologias-cableadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Topologías cableadas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#topologias-inalambricas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Topologías inalámbricas
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#transmision-y-perturbaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      📡 Transmisión y perturbaciones
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📡 Transmisión y perturbaciones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tipos-de-transmision" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔄 Tipos de transmisión
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔄 Tipos de transmisión">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#segun-la-naturaleza-de-la-senal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Según la naturaleza de la señal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#segun-el-numero-de-senales-simultaneas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Según el número de señales simultáneas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#segun-la-direccion-de-transmision" class="md-nav__link">
+    <span class="md-ellipsis">
+      Según la dirección de transmisión
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tecnicas-de-transmision" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔧 Técnicas de transmisión
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔧 Técnicas de transmisión">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#transmision-digital" class="md-nav__link">
+    <span class="md-ellipsis">
+      Transmisión digital
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transmision-analogica" class="md-nav__link">
+    <span class="md-ellipsis">
+      Transmisión analógica
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#perturbaciones-en-la-transmision" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚠️ Perturbaciones en la transmisión
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="⚠️ Perturbaciones en la transmisión">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#atenuacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Atenuación
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#distorsion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Distorsión
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ruido" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ruido
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resumen-visual" class="md-nav__link">
+    <span class="md-ellipsis">
+      📋 Resumen visual
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#actividades" class="md-nav__link">
+    <span class="md-ellipsis">
+      🛠️ Actividades
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="02arquitecturas.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2. Arquitecturas de redes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="03fisica.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    3. Capa física
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#propuesta-didactica" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Propuesta didáctica
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📚 Propuesta didáctica">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#criterios-de-evaluacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Criterios de evaluación
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Criterios de evaluación">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#criterios-de-evaluacion-del-ra1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Criterios de evaluación del RA1
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contenidos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contenidos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#programacion-de-aula-12h" class="md-nav__link">
+    <span class="md-ellipsis">
+      Programación de Aula (12h)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sistemas-en-red" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔗 Sistemas en red
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#componentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙️ Componentes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="⚙️ Componentes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#componentes-hardware" class="md-nav__link">
+    <span class="md-ellipsis">
+      Componentes Hardware
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Componentes Hardware">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nodos-en-una-red" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nodos en una red
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adaptadores-de-red" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adaptadores de red
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#medios-de-transmision" class="md-nav__link">
+    <span class="md-ellipsis">
+      Medios de transmisión
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#componentes-software" class="md-nav__link">
+    <span class="md-ellipsis">
+      Componentes Software
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clasificacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      🗂️ Clasificación
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🗂️ Clasificación">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tipos-segun-su-extension" class="md-nav__link">
+    <span class="md-ellipsis">
+      📏 Tipos según su extensión
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tipos-segun-su-ambito" class="md-nav__link">
+    <span class="md-ellipsis">
+      🌍 Tipos según su ámbito
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🌍 Tipos según su ámbito">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#clasificacion-de-redes-segun-su-titularidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      Clasificación de redes según su titularidad
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#topologias" class="md-nav__link">
+    <span class="md-ellipsis">
+      📊 Topologías
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📊 Topologías">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#topologias-cableadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Topologías cableadas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#topologias-inalambricas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Topologías inalámbricas
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#transmision-y-perturbaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      📡 Transmisión y perturbaciones
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📡 Transmisión y perturbaciones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tipos-de-transmision" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔄 Tipos de transmisión
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔄 Tipos de transmisión">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#segun-la-naturaleza-de-la-senal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Según la naturaleza de la señal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#segun-el-numero-de-senales-simultaneas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Según el número de señales simultáneas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#segun-la-direccion-de-transmision" class="md-nav__link">
+    <span class="md-ellipsis">
+      Según la dirección de transmisión
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tecnicas-de-transmision" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔧 Técnicas de transmisión
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔧 Técnicas de transmisión">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#transmision-digital" class="md-nav__link">
+    <span class="md-ellipsis">
+      Transmisión digital
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transmision-analogica" class="md-nav__link">
+    <span class="md-ellipsis">
+      Transmisión analógica
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#perturbaciones-en-la-transmision" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚠️ Perturbaciones en la transmisión
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="⚠️ Perturbaciones en la transmisión">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#atenuacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Atenuación
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#distorsion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Distorsión
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ruido" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ruido
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resumen-visual" class="md-nav__link">
+    <span class="md-ellipsis">
+      📋 Resumen visual
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#actividades" class="md-nav__link">
+    <span class="md-ellipsis">
+      🛠️ Actividades
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="introduccion-a-las-redes">🌐 Introducción a las Redes<a class="headerlink" href="#introduccion-a-las-redes" title="Permanent link">&para;</a></h1>
+<h2 id="propuesta-didactica">📚 Propuesta didáctica<a class="headerlink" href="#propuesta-didactica" title="Permanent link">&para;</a></h2>
+<p>En esta unidad vamos a comenzar a trabajar el <strong>RA1 de RAL</strong>:</p>
+<blockquote>
+<p><strong>RA1.</strong> <em>Reconoce la estructura de redes locales cableadas analizando las características de entornos de aplicación y describiendo la funcionalidad de sus componentes.</em></p>
+</blockquote>
+<h3 id="criterios-de-evaluacion">Criterios de evaluación<a class="headerlink" href="#criterios-de-evaluacion" title="Permanent link">&para;</a></h3>
+<h4 id="criterios-de-evaluacion-del-ra1">Criterios de evaluación del RA1<a class="headerlink" href="#criterios-de-evaluacion-del-ra1" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>CE1a</strong>: Se han descrito los principios de funcionamiento de las redes locales.</li>
+<li><strong>CE1b</strong>: Se han identificado los distintos tipos de redes.</li>
+<li><strong>CE1c</strong>: Se han descrito los elementos de la red local y su función.</li>
+<li><strong>CE1d</strong>: Se han identificado y clasificado los medios de transmisión.</li>
+<li><strong>CE1e</strong>: Se ha reconocido el mapa físico de la red local.</li>
+<li><strong>CE1f</strong>: Se han reconocido las distintas topologías de red.</li>
+<li><strong>CE1g</strong>: Se han identificado estructuras alternativas.</li>
+</ul>
+<h3 id="contenidos">Contenidos<a class="headerlink" href="#contenidos" title="Permanent link">&para;</a></h3>
+<p>Redes de Comunicaciones:</p>
+<ul>
+<li>Sistemas en red: tipos, componentes y topologías.</li>
+<li>Transmisión de datos: medios, tipos, técnicas y perturbaciones.</li>
+</ul>
+<p>Interpretación de conceptos clave:</p>
+<ul>
+<li>Tipos de redes: PAN, LAN, MAN, WAN.</li>
+<li>Componentes hardware y software: nodos, adaptadores, medios.</li>
+<li>Topologías cableadas e inalámbricas.</li>
+<li>Medios guiados e inalámbricos.</li>
+<li>Tipos de transmisión: naturaleza, señales simultáneas, dirección.</li>
+<li>Técnicas de transmisión: digital, analógica.</li>
+<li>Perturbaciones: atenuación, distorsión, ruido.</li>
+</ul>
+<div class="admonition question">
+<p class="admonition-title">Cuestionario inicial</p>
+<ol>
+<li>¿Qué tipos de redes conoces según su extensión?</li>
+<li>¿Qué diferencia hay entre una red pública y una privada?</li>
+<li>¿Qué función tiene un switch en una red local?</li>
+<li>¿Qué ventajas ofrece la fibra óptica frente al par trenzado?</li>
+<li>¿Qué es una topología en estrella? ¿Dónde se suele usar?</li>
+<li>¿Qué papel juega el sistema operativo de red (NOS)?</li>
+<li>¿Qué relación existe entre los nodos finales e intermedios?</li>
+<li>¿Qué diferencia hay entre transmisión serie y paralela?</li>
+<li>¿Qué tipos de transmisión existen según la dirección?</li>
+<li>¿Qué ventajas tiene la transmisión digital frente a la analógica?</li>
+<li>¿Qué tipos de ruido afectan a la transmisión de datos?</li>
+</ol>
+</div>
+<h3 id="programacion-de-aula-12h">Programación de Aula (12h)<a class="headerlink" href="#programacion-de-aula-12h" title="Permanent link">&para;</a></h3>
+<p>Esta unidad se imparte en la primera evaluación, con una duración estimada de 12 sesiones lectivas, durante la última quincena de septiembre:</p>
+<table>
+<thead>
+<tr>
+<th>Sesión</th>
+<th>Contenidos</th>
+<th>Actividades</th>
+<th>Criterios trabajados</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Introducción redes: tipos, componentes y topologías</td>
+<td>Cuestionario inicial (1-7)</td>
+<td>CE6a, CE6b, CE6c y CE6d</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Práctica Mapa físico Empresa ficticia</td>
+<td>PR101</td>
+<td>CE7a, CE7c, y CE7e</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Introducción a la transmisión de datos: analógica y digital</td>
+<td>AC102</td>
+<td>CE7a, CE7c, y CE7e</td>
+</tr>
+</tbody>
+</table>
+<!-- | 4  | [Medios de transmisión: guiados e inalámbricos | [AC104](#ACc |
+| 5  | [Topologías cableadas estrella, árbol, anillo, malla | [AC105| CE6d |
+| 6  | [Topologías inalámbricas](#topologias-inalam  | Tipos de transmisión: naturaleza, señales, dirección | [AC107] CE6e |
+| 8  | [Técnicas de transmisión digital]NRZ, Manchester | [AC108] CE6e |
+| 9  | [Técnicas de transmisión analógica AM, FM, PM | [AC109](#ACe |
+| 10 | Perturbaciones: atenuación, distorsión, ruido | AC110 | CE6e |
+| 11 | [Interpretación de esquemas](#interpret6a, CE6b, CE6c |
+| 12 | Reto - Diseño de red local | PY112 | CE6a, CE6b, CE6c, CE6d | -->
+
+<hr />
+<h2 id="sistemas-en-red">🔗 Sistemas en red<a class="headerlink" href="#sistemas-en-red" title="Permanent link">&para;</a></h2>
+<p>Según indica <a href="https://conalepdalia.wordpress.com/wp-content/uploads/2013/08/redes-de-computadoras-tanenbaum-4ta-edicion-espanol.pdf">Tanenbaum, en su libro Redes de Computadoras</a>, <strong>un sistema de red</strong> hace referencia al conjunto de equipos electrónicos y medios de transmisión que realizan el proceso de comunicación entre terminales informáticos, que normalmente están situados en puntos remotos.</p>
+<figure style="align: center;">
+    <img src="imagenes/01SistemaRed.png" width="800" title="Elementos de un sistema de red">
+    <figcaption style="text-align: center;">Elementos de un sistema de red</figcaption>
+</figure>
+
+<p>La unión de estos sistemas forma las denominadas <strong>Redes de Comunicaciones</strong>, cuya clasificación se explica siguiendo diferentes factores, entre los cuales destacan: alcance geográfico y ámbito de propiedad (público y privado).</p>
+<hr />
+<h2 id="componentes">⚙️ Componentes<a class="headerlink" href="#componentes" title="Permanent link">&para;</a></h2>
+<p>Un sistema en red se compone de elementos hardware y software.</p>
+<h3 id="componentes-hardware">Componentes Hardware<a class="headerlink" href="#componentes-hardware" title="Permanent link">&para;</a></h3>
+<h4 id="nodos-en-una-red">Nodos en una red<a class="headerlink" href="#nodos-en-una-red" title="Permanent link">&para;</a></h4>
+<p>Los nodos son dispositivos encargados de enviar y recibir la información en el proceso de comunicación de sistemas en red, y se dividen en:</p>
+<h5 id="nodos-finales">Nodos finales<a class="headerlink" href="#nodos-finales" title="Permanent link">&para;</a></h5>
+<p>Son cualquier dispositivo de red que comienza o termina una comunicación; también se denominan <em>Data Terminal Equipment</em> (DTE).  </p>
+<blockquote>
+<p>Los más habituales son:</p>
+</blockquote>
+<ul>
+<li>Estaciones de trabajo (<em>workstations</em>).</li>
+<li>Servidores.</li>
+</ul>
+<div style="width: 100%; aspect-ratio: 16/9; margin: 1em 0;">
+  <iframe 
+    src="https://www.youtube.com/embed/zDAYZU4A3w0" 
+    title="Video explicativo sobre Servidores de Google" 
+    frameborder="0" 
+    allowfullscreen 
+    style="width: 100%; height: 100%; display: block;">
+  </iframe>
+  <figcaption style="text-align: center; font-style: italic; margin-top: 0.5em;">
+    Video explicativo sobre Servidores de Google
+  </figcaption>
+</div>
+
+<h5 id="nodos-intermedios">Nodos intermedios<a class="headerlink" href="#nodos-intermedios" title="Permanent link">&para;</a></h5>
+<p>También conocidos como <em>Data Circuit-Terminating Equipment</em> (DCE), son aquellos dispositivos que participan en la comunicación entre nodos finales.<br />
+Destacan los siguientes DCEs:</p>
+<ul>
+<li><strong>Repetidores:</strong> Se encargan de amplificar y rectificar la señal. Son dispositivos de capa 1 (física) del modelo OSI (<em>Open System Interconnection</em>).</li>
+<li><strong>Switches:</strong> Conectan equipos en la misma red local. Se caracterizan por su mecanismo de autoaprendizaje que relaciona la dirección MAC de un dispositivo con el puerto/interfaz del switch donde está conectado. Son dispositivos de capa 2 (enlace) del modelo OSI.</li>
+<li><strong>Routers:</strong> Su principal objetivo es comunicar redes distintas. También destacan características como asignación de IPs dinámicamente (DHCP), balanceo de carga y traducción de IPs (NAT). Operan en la capa 3 (red).</li>
+<li><strong>Firewalls:</strong> Además de enrutar, tienen funciones en las capas superiores del modelo OSI, como el control de sesiones para analizar paquetes y detectar amenazas de intrusión en los sistemas de red.</li>
+</ul>
+<figure style="align: center;">
+    <img src="imagenes/03NodosIntermed.png" width="400" title="Principales nodos intermedios">
+    <figcaption style="text-align: center;">Principales nodos intermedios</figcaption>
+</figure>
+
+<h3 id="adaptadores-de-red">Adaptadores de red<a class="headerlink" href="#adaptadores-de-red" title="Permanent link">&para;</a></h3>
+<p>El <strong>adaptador de red (NIC)</strong> permite la conexión del equipo a la red. Se clasifica por:</p>
+<ul>
+<li><strong>Tipo de interfaz:</strong> cableadas (par trenzado, coaxial, fibra óptica) o inalámbricas.</li>
+<li><strong>Modo de transmisión:</strong> Half-duplex (un sentido), Full-duplex (ambos sentidos simultáneamente).</li>
+<li><strong>Velocidad de transmisión:</strong> medida en Mbps o Gbps.</li>
+</ul>
+<figure style="align: center;">
+    <img src="imagenes/04nic.jpg" width="600" title="NIC (Network Interface Card)">
+    <figcaption style="text-align: center;">NIC (Network Interface Card)</figcaption>
+</figure>
+
+<h3 id="medios-de-transmision">Medios de transmisión<a class="headerlink" href="#medios-de-transmision" title="Permanent link">&para;</a></h3>
+<p>El <strong>medio de transmisión</strong> es el soporte físico que facilita el transporte de la información; influye directamente en el rendimiento y prestaciones de la red.</p>
+<blockquote>
+<p>A continuación, se describen los tipos y sus principales características:</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th><strong>TIPOS</strong></th>
+<th><strong>CLASIFICACIÓN INTERNA</strong></th>
+<th><strong>CARACTERÍSTICAS PRINCIPALES Y USOS</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>GUIADOS CABLEADOS</strong></td>
+<td>Par trenzado</td>
+<td>Consiste en grupos de hilos de cobre aislados y entrelazados entre sí, para anular las interferencias externas e internas. Se destaca su uso en cableado estructurado en edificios. Tipos: UTP (interiores) y FTP (exteriores).</td>
+</tr>
+<tr>
+<td></td>
+<td>Coaxial</td>
+<td>Consta de tres capas: núcleo de cobre (vivo), aislante plástico y malla conductora. Usado en TV, CCTV y despliegues de tele-cable locales.</td>
+</tr>
+<tr>
+<td></td>
+<td>Fibra óptica</td>
+<td>Núcleo de vidrio o silicio que transmite luz. Revestido y protegido externamente. Muy extendido en hogares gracias a la tecnología GPON (Gigabit-capable Passive Optical Network).</td>
+</tr>
+<tr>
+<td><strong>INALÁMBRICOS</strong></td>
+<td>Antenas</td>
+<td>Transmiten señales electromagnéticas entre emisor y receptor. Características clave: potencia y frecuencia. Tipos: radioenlaces (4G), puntos de acceso WiFi para redes locales sin cables.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="componentes-software">Componentes Software<a class="headerlink" href="#componentes-software" title="Permanent link">&para;</a></h3>
+<p>Todos los dispositivos activos de la red deben ejecutar operaciones informáticas avanzadas para cumplir con los protocolos de red, por lo que deben tener un software de red. Es decir, es el conjunto de programas y ficheros de configuración que permiten la comunicación entre elementos de una red. </p>
+<blockquote>
+<p>Los podemos dividir en dos:</p>
+</blockquote>
+<ul>
+<li><strong>NOS (Network Operating System):</strong> software que gestiona la comunicación y la pila de protocolos.</li>
+<li><strong>Drivers:</strong> software específico para gestionar adaptadores de red.</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">¿Qué es un protocolo?</p>
+<p>Son un conjunto de reglas que se establecen entre el transmisor y receptor de un proceso de comunicación que permite asegurar la transmisión de datos entre los dos extremos. <strong><em>*Ejemplo</em></strong>*: protocolo IP (dicta las reglas para las direcciones IP).</p>
+</div>
+<hr />
+<h2 id="clasificacion">🗂️ Clasificación<a class="headerlink" href="#clasificacion" title="Permanent link">&para;</a></h2>
+<h3 id="tipos-segun-su-extension">📏 Tipos según su extensión<a class="headerlink" href="#tipos-segun-su-extension" title="Permanent link">&para;</a></h3>
+<p>Las redes se clasifican según su extensión en los siguientes tipos:</p>
+<ul>
+<li>
+<p><strong>PAN (Personal Area Network):</strong> Comprenden el entorno del usuario y los dispositivos con los que interactúa. Se trata de redes inalámbricas cuyo radio de acción es de unos pocos metros. <strong><em>*Ejemplo</em>*s:</strong> Bluetooth o NFC (pago en datáfono mediante móvil).</p>
+</li>
+<li>
+<p><strong>LAN (Local Area Network, redes de área local):</strong> Son redes pequeñas que proporcionan servicios a usuarios dentro de una estructura común, que suele ser una empresa, una casa o un campus. Es el tipo de red más conocido. <strong><em>*Ejemplo</em>*:</strong> la red utilizada frecuentemente en nuestras casas mediante WIFI.<br />
+  Cuando la LAN emplea medios inalámbricos se denomina <strong>WLAN</strong>.</p>
+</li>
+<li>
+<p><strong>MAN (Metropolitan Area Network):</strong> Son varias redes LAN interconectadas en distancias cortas (unos pocos kilómetros). <strong><em>*Ejemplo</em>*:</strong> Las sucursales de una empresa en la misma ciudad o en ciudades próximas.</p>
+</li>
+<li>
+<p><strong>WAN (Wide Area Network, redes de área extensa):</strong> Son varias redes LAN interconectadas a distancias largas (hasta miles de kilómetros). <strong><em>*Ejemplo</em>*s:</strong> Sucursales de una empresa en varias ciudades. Internet es un <strong>Ejemplo</strong> de red WAN.</p>
+</li>
+</ul>
+<figure style="align: center;">
+    <img src="imagenes/07tiposDeRedesArea.jpg" width="600" title="Tipos de redes según su extensión">
+    <figcaption style="text-align: center;">Tipos de redes según su extensión</figcaption>
+</figure>
+
+<h3 id="tipos-segun-su-ambito">🌍 Tipos según su ámbito<a class="headerlink" href="#tipos-segun-su-ambito" title="Permanent link">&para;</a></h3>
+<h4 id="clasificacion-de-redes-segun-su-titularidad">Clasificación de redes según su titularidad<a class="headerlink" href="#clasificacion-de-redes-segun-su-titularidad" title="Permanent link">&para;</a></h4>
+<p>La titularidad de la red puede servir para clasificar las redes como <strong>públicas</strong> y <strong>privadas</strong>. A continuación, se detallan ambos tipos:</p>
+<ul>
+<li>
+<p><strong>Públicas:</strong> Brindan servicios de telecomunicaciones a cualquier usuario que pague una cuota, normalmente contratada a una empresa <em>Internet Service Provider</em> (ISP).<br />
+  Podríamos incluir a Internet en este tipo de redes.</p>
+</li>
+<li>
+<p><strong>Privadas:</strong> Son las redes que pertenecen a una propiedad, empresa o particular, y normalmente están adecuadas a sus necesidades.<br />
+  Dentro de este tipo de redes cabe destacar la tecnología <strong>VPN (Virtual Private Network)</strong>, la cual permite una extensión segura de la red de área local (LAN) sobre una red pública o no controlada como Internet, mediante el cifrado de la información con el protocolo <strong>IPsec</strong>.</p>
+</li>
+</ul>
+<blockquote>
+<p>En la siguiente figura se muestra un esquema explicativo de esta tecnología.</p>
+</blockquote>
+<figure style="align: center;">
+    <img src="imagenes/02VPN.png" width="800" title="Elementos principales de una VPN">
+    <figcaption style="text-align: center;">Elementos principales de una VPN</figcaption>
+</figure>
+
+<ul>
+<li>Para completar la clasificación de las redes se recomienda la lectura del profesor Marcos Ruiz: <a href="https://marcosruiz.github.io/posts/clasificacion-de-redes/">Clasificación de las redes</a></li>
+</ul>
+<hr />
+<h2 id="topologias">📊 Topologías<a class="headerlink" href="#topologias" title="Permanent link">&para;</a></h2>
+<p>La <strong>topología de red</strong> es la distribución espacial de los elementos conectados.</p>
+<h3 id="topologias-cableadas">Topologías cableadas<a class="headerlink" href="#topologias-cableadas" title="Permanent link">&para;</a></h3>
+<p>Inicialmente, las topologías cableadas realizadas eran en forma de bus, actualmente en desuso, por presentar altas interferencias entre nodos. </p>
+<blockquote>
+<p>Los principales tipos son:</p>
+</blockquote>
+<figure style="align: center;">
+    <img src="imagenes/05TopCab.png" width="1000" title="Principales topologías cableadas">
+    <figcaption style="text-align: center;">Principales topologías cableadas</figcaption>
+</figure>
+
+<h3 id="topologias-inalambricas">Topologías inalámbricas<a class="headerlink" href="#topologias-inalambricas" title="Permanent link">&para;</a></h3>
+<p>Son las topologías que están unidas mediante medios de transmisión inalámbricos. Entre estas tecnologías destacan los despliegues realizados de puntos de acceso WIFI. </p>
+<blockquote>
+<p>En la siguiente tabla se observa su clasificación:</p>
+</blockquote>
+<figure style="align: center;">
+    <img src="imagenes/06TopIn.png" width="1000" title="Principales topologías inalámbricas">
+    <figcaption style="text-align: center;">Principales topologías inalámbricas</figcaption>
+</figure>
+
+<ul>
+<li>Además, se recomienda la lectura de la parte final de <a href="https://marcosruiz.github.io/posts/clasificacion-de-redes/">Clasificación de las redes</a></li>
+</ul>
+<hr />
+<h2 id="transmision-y-perturbaciones">📡 Transmisión y perturbaciones<a class="headerlink" href="#transmision-y-perturbaciones" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Transmisión</strong>: es el proceso de enviar datos de un punto a otro a través de un medio (cable, fibra, ondas de radio, etc.).  </li>
+<li><strong>Perturbación</strong>: son los problemas o interferencias que pueden afectar a la señal durante su viaje y hacer que llegue distorsionada o con errores.</li>
+</ul>
+<p>En este bloque vamos a profundizar en <strong>cómo se transmiten los datos en una red</strong>, qué tipos de transmisión existen, qué técnicas se utilizan y qué problemas pueden aparecer durante la comunicación.</p>
+<hr />
+<h3 id="tipos-de-transmision">🔄 Tipos de transmisión<a class="headerlink" href="#tipos-de-transmision" title="Permanent link">&para;</a></h3>
+<p>Los <strong>tipos de transmisión</strong> se clasifican en función de distintos criterios: la naturaleza de la señal, el número de señales transmitidas y la dirección de la comunicación.</p>
+<h4 id="segun-la-naturaleza-de-la-senal">Según la naturaleza de la señal<a class="headerlink" href="#segun-la-naturaleza-de-la-senal" title="Permanent link">&para;</a></h4>
+<ol>
+<li><strong>Transmisión analógica</strong><br />
+  - Señal continua en el tiempo.<br />
+  - Se caracteriza por su <strong>amplitud</strong>, <strong>frecuencia</strong> y <strong>fase</strong>.<br />
+  - <strong>Ejemplo</strong>: voz en una línea telefónica.<br />
+  - Inconveniente: más sensible al ruido.</li>
+</ol>
+<blockquote>
+<p><em>Onda continua.</em></p>
+</blockquote>
+<p><img alt="**Ejemplo** de señal analógica" src="img/analogica.png" />  </p>
+<ol start="2">
+<li><strong>Transmisión digital</strong><br />
+  - Señal discreta (0 y 1).<br />
+  - Más robusta frente a interferencias.<br />
+  - <strong>Ejemplo</strong>: datos en Ethernet o WiFi.<br />
+  - Inconveniente: necesita convertir la señal analógica a digital.</li>
+</ol>
+<blockquote>
+<p><em>Onda cuadrada binaria.</em></p>
+</blockquote>
+<p><img alt="**Ejemplo** de señal digital" src="img/digital.png" />  </p>
+<h4 id="segun-el-numero-de-senales-simultaneas">Según el número de señales simultáneas<a class="headerlink" href="#segun-el-numero-de-senales-simultaneas" title="Permanent link">&para;</a></h4>
+<ol>
+<li><strong>Serie</strong><br />
+  - Los bits viajan <strong>uno detrás de otro</strong> por una única línea.<br />
+  - Adecuado para <strong>largas distancias</strong> y simplifica el cableado.<br />
+  - <strong>Ejemplo</strong>: comunicaciones por puerto serial, USB, enlaces Ethernet (a nivel lógico).</li>
+</ol>
+<blockquote>
+<p><em>Transmisión en serie: los bits viajan uno tras otro.</em></p>
+</blockquote>
+<p><img alt="Transmisión en serie" src="img/serie.png" />        </p>
+<ol start="2">
+<li><strong>Paralelo</strong><br />
+  - Varios bits se transmiten <strong>al mismo tiempo</strong> por diferentes conductores.<br />
+  - Adecuado para <strong>cortas distancias</strong> debido a problemas de sincronización y diafonía.<br />
+  - <strong>Ejemplo</strong>: antiguos buses de impresora, conexiones internas de PC.</li>
+</ol>
+<blockquote>
+<p><em>Transmisión en paralelo: varios bits viajan al mismo tiempo.</em>  </p>
+</blockquote>
+<p><img alt="Transmisión en paralelo" src="img/paralelo.png" />  </p>
+<h4 id="segun-la-direccion-de-transmision">Según la dirección de transmisión<a class="headerlink" href="#segun-la-direccion-de-transmision" title="Permanent link">&para;</a></h4>
+<ol>
+<li>
+<p><strong>Símplex</strong><br />
+  - Comunicación en <strong>un solo sentido</strong>: emisor → receptor.<br />
+  - <strong>Ejemplo</strong>: emisión de TV por antena.</p>
+</li>
+<li>
+<p><strong>Half-Dúplex</strong><br />
+  - Ambos extremos pueden transmitir, <strong>pero no simultáneamente</strong>.<br />
+  - <strong>Ejemplo</strong>: walkie-talkies; redes que usan un solo canal compartido.</p>
+</li>
+<li>
+<p><strong>Full-Dúplex</strong><br />
+  - Transmisión <strong>simultánea</strong> en ambos sentidos.<br />
+  - <strong>Ejemplo</strong>: llamadas por teléfono, enlaces Ethernet modernos.</p>
+</li>
+</ol>
+<blockquote>
+<p><em>Modos de transmisión: símplex, half-dúplex y full-dúplex.</em></p>
+</blockquote>
+<p><img alt="Modos de transmisión" src="img/duplex.png" />  </p>
+<hr />
+<h3 id="tecnicas-de-transmision">🔧 Técnicas de transmisión<a class="headerlink" href="#tecnicas-de-transmision" title="Permanent link">&para;</a></h3>
+<p>Las técnicas de transmisión permiten adaptar los datos al medio físico. Podemos distinguir dos grandes grupos: <strong>digital</strong> y <strong>analógica</strong>.</p>
+<h4 id="transmision-digital">Transmisión digital<a class="headerlink" href="#transmision-digital" title="Permanent link">&para;</a></h4>
+<p>Se basa en <strong>codificación de línea</strong> (cómo se representan los 0 y 1 en la forma de la señal).</p>
+<ol>
+<li><strong>NRZ (No Return to Zero)</strong><br />
+  - Representa 1 por un nivel alto y 0 por un nivel bajo, sin retorno al cero entre bits.<br />
+  - Problema: largas secuencias de 0 o de 1 dificultan la sincronización.</li>
+</ol>
+<blockquote>
+<p><em>Codificación NRZ.</em></p>
+</blockquote>
+<p><img alt="Codificación NRZ" src="img/nrz.png" />  </p>
+<ol start="2">
+<li><strong>Manchester</strong><br />
+  - Cada bit tiene una transición en la mitad del periodo: garantiza sincronización.<br />
+  - Consume más ancho de banda, pero facilita la detección de bordes.</li>
+</ol>
+<blockquote>
+<p><em>Codificación Manchester.</em></p>
+</blockquote>
+<p><img alt="Codificación Manchester" src="img/manchester.png" />  </p>
+<h3 id="transmision-analogica">Transmisión analógica<a class="headerlink" href="#transmision-analogica" title="Permanent link">&para;</a></h3>
+<p>Se usa una <strong>onda portadora</strong> (sinusoidal) y se modifica alguna de sus propiedades para transmitir la información.</p>
+<ol>
+<li><strong>AM / ASK (Amplitud)</strong> — la amplitud de la portadora varía según la señal. </li>
+</ol>
+<blockquote>
+<p><em>Modulación en amplitud.</em></p>
+</blockquote>
+<p><img alt="Modulación AM" src="img/am.png" />  </p>
+<ol start="2">
+<li><strong>FM / FSK (Frecuencia)</strong> — la frecuencia de la portadora cambia para representar datos.  </li>
+</ol>
+<blockquote>
+<p><em>Modulación en frecuencia.</em></p>
+</blockquote>
+<p><img alt="Modulación FM" src="img/fm.png" />  </p>
+<ol start="3">
+<li><strong>PM / PSK (Fase)</strong> — se modula la fase de la portadora (muy usada en sistemas digitales sobre portadora analógica).</li>
+</ol>
+<blockquote>
+<p><em>Modulación en fase.</em></p>
+</blockquote>
+<p><img alt="Modulación PM" src="img/pm.png" />  </p>
+<hr />
+<h2 id="perturbaciones-en-la-transmision">⚠️ Perturbaciones en la transmisión<a class="headerlink" href="#perturbaciones-en-la-transmision" title="Permanent link">&para;</a></h2>
+<p>El medio de transmisión <strong>no es perfecto</strong>. La señal puede degradarse y llegar al receptor con errores. Los principales problemas son:</p>
+<h4 id="atenuacion">Atenuación<a class="headerlink" href="#atenuacion" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Pérdida de energía de la señal conforme avanza por el medio.  </li>
+<li>Causas: resistencia eléctrica, dispersión en fibras, pérdidas por conectorización mal hecha.  </li>
+<li>Soluciones: <strong>repetidores</strong>, <strong>amplificadores</strong>, uso de medios con menor pérdida (fibra óptica).</li>
+</ul>
+<h4 id="distorsion">Distorsión<a class="headerlink" href="#distorsion" title="Permanent link">&para;</a></h4>
+<ul>
+<li>La señal se deforma porque diferentes componentes de frecuencia viajan a distintas velocidades (dispersión).  </li>
+<li>Impacto: borrado de los pulsos o superposición entre símbolos (ISI — inter-symbol interference).  </li>
+<li>Soluciones: <strong>ecualización</strong>, uso de codificaciones y filtros adecuados.</li>
+</ul>
+<h4 id="ruido">Ruido<a class="headerlink" href="#ruido" title="Permanent link">&para;</a></h4>
+<p>Interferencia aleatoria que se suma a la señal original y puede provocar errores. Tipos frecuentes:</p>
+<ol>
+<li><strong>Ruido térmico</strong>: debido a la agitación térmica de los electrones dentro del conductor. Se distribuye uniformemente por todo el espectro de frecuencias, se le conoce como ruido blanco y no puede eliminarse.  </li>
+<li><strong>Intermodulación</strong>: señales no deseadas con la misma frecuencia que la original compartiendo el mismo medio, provocan una suma o diferencia en esa frecuencia contaminando la señal original.</li>
+<li><strong>Diafonía</strong>: los conductores o líneas de transmisión próximos producen una acoplamiento entre los mismos debido al campo electromagnético que generan. </li>
+<li><strong>Ruido impulsivo</strong>: ruido no continuo que consiste en pulsos irregulares poca duración (varios segundos), causado por perturbaciones electromagnéticas externas. como picos breves de tensión producidos por motores, relés o descargas atmosféricas.  </li>
+</ol>
+<blockquote>
+<p><strong>Soluciones</strong>: apantallamiento, pares trenzados, filtrado, corrección de errores (FEC), aislamiento y buenas prácticas de instalación.</p>
+</blockquote>
+<div class="admonition example">
+<p class="admonition-title"><strong>Ejemplo práctico:</strong></p>
+<p>cables de red sin buena separación pueden sufrir diafonía si se colocan paralelos a cables eléctricos; la solución pasa por canalizaciones, separación y/o usar cable apantallado (FTP/STP).</p>
+</div>
+<!-- ![**Ejemplo** práctico: ruido](img/duplex.png)  
+*Un **Ejemplo** es cuando acercamos el móvil a altavoces y se oyen ruidos.* -->
+
+<hr />
+<h2 id="resumen-visual">📋 Resumen visual<a class="headerlink" href="#resumen-visual" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Criterio</th>
+<th>Tipos</th>
+<th><strong>Ejemplo</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Naturaleza</td>
+<td>Analógica / Digital</td>
+<td>Radio FM / Ethernet</td>
+</tr>
+<tr>
+<td>Nº señales</td>
+<td>Serie / Paralelo</td>
+<td>USB / Bus impresora</td>
+</tr>
+<tr>
+<td>Dirección</td>
+<td>Símplex / Half / Full</td>
+<td>TV / Walkie / Móvil</td>
+</tr>
+<tr>
+<td>Digital</td>
+<td>NRZ, Manchester, Dif. Man.</td>
+<td>Ethernet</td>
+</tr>
+<tr>
+<td>Analógica</td>
+<td>AM, FM, PM</td>
+<td>Radio, Módems, WiFi</td>
+</tr>
+<tr>
+<td>Perturbación</td>
+<td>Atenuación, Distorsión, Ruido</td>
+<td>Pérdidas / Interferencias</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="actividades">🛠️ Actividades<a class="headerlink" href="#actividades" title="Permanent link">&para;</a></h2>
+<div class="admonition tip">
+<p class="admonition-title">Formato de entrega</p>
+<p>Para la entrega de las actividades, Genera un documento con la práctica descrita a continuación. Deberás crear un archivo PDF con el siguiente formato de nombre: PRXXX.pdf o ACXXX.pdf, donde las X representan el número de la actividad. Una vez finalizada la práctica, sube el archivo a Aules (antes de la fecha de vencimiento) para su calificación.</p>
+</div>
+<p><a name="PR101"></a></p>
+<ul>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5.563 1.396a.95.95 0 0 0-.534.184c-.404.307-.501.9-.425 1.654.075.755.335 1.704.751 2.8.357.937.835 1.984 1.407 3.095-1.17.146-2.24.338-3.158.57-1.08.274-1.958.6-2.583.973C.397 11.045 0 11.484 0 12s.397.955 1.021 1.328c.55.33 1.308.618 2.217.87a1 1 0 0 0-.006.097c0 .485.365.887.82.887.368 0 .678-.26.784-.616q.89.171 1.898.297a31 31 0 0 0-1.408 3.067c-.421 1.093-.686 2.04-.765 2.795-.08.754.016 1.347.42 1.656.201.154.46.208.734.181s.572-.125.896-.287c.649-.323 1.407-.894 2.244-1.67.962-.89 2.026-2.058 3.118-3.421 1.086 1.37 2.146 2.543 3.103 3.439.834.78 1.588 1.355 2.235 1.682.323.163.62.265.894.293s.534-.025.736-.178c.405-.307.502-.9.426-1.654-.054-.54-.206-1.18-.437-1.9a.91.91 0 0 0 .343-.72.92.92 0 0 0-.238-.625.8.8 0 0 0-.701-.251c-.312-.75-.69-1.557-1.125-2.4a27 27 0 0 0 3.187-.575c1.08-.273 1.958-.597 2.583-.97.624-.374 1.021-.813 1.021-1.329s-.397-.957-1.021-1.33c-.625-.373-1.503-.696-2.583-.969a27 27 0 0 0-3.156-.568 31 31 0 0 0 1.406-3.063c.422-1.093.687-2.04.766-2.795.08-.754-.017-1.347-.42-1.656a.95.95 0 0 0-.531-.185 1.3 1.3 0 0 0-.203.004c-.274.026-.57.127-.895.289-.51.254-1.092.665-1.722 1.205a.8.8 0 0 0-.418-.123c-.456 0-.82.4-.82.886q0 .178.06.334a35 35 0 0 0-2.465 2.791c-1.086-1.37-2.146-2.543-3.103-3.439-.834-.78-1.588-1.355-2.235-1.682-.323-.163-.62-.265-.894-.293a1.3 1.3 0 0 0-.204-.006zm.021.385a1 1 0 0 1 .143.004c.205.02.462.105.757.254.592.298 1.33.855 2.147 1.62.955.893 2.022 2.077 3.119 3.466-.428.544-.859 1.12-1.29 1.72a42 42 0 0 0-3.29.235 31 31 0 0 1-1.453-3.184c-.409-1.075-.658-2.002-.729-2.7-.07-.7.05-1.136.276-1.307a.55.55 0 0 1 .32-.108m12.854.033a.55.55 0 0 1 .32.108c.225.172.343.61.27 1.308s-.33 1.624-.743 2.698a31 31 0 0 1-1.455 3.15 42 42 0 0 0-3.312-.234 49 49 0 0 0-1.274-1.717 35 35 0 0 1 2.436-2.772.78.78 0 0 0 .543.223c.456 0 .82-.401.82-.887a.94.94 0 0 0-.133-.484c.61-.519 1.163-.909 1.625-1.139.297-.147.555-.23.76-.25a1 1 0 0 1 .142-.004zm-6.442 5.622c.344.443.69.913 1.035 1.394q-.51-.012-1.031-.014-.532.001-1.05.014c.35-.481.699-.95 1.046-1.394M12 9.203q.668.001 1.314.02.398.563.793 1.154c.366.55.71 1.093 1.041 1.633a54 54 0 0 1-1.046 1.623q-.395.584-.791 1.138-.646.02-1.311.022-.684-.001-1.348-.022a53 53 0 0 1-.789-1.148 52 52 0 0 1-1.04-1.633 53 53 0 0 1 1.84-2.765q.658-.02 1.337-.022m-1.824.04q-.315.444-.625.905c-.334.496-.647.988-.953 1.477a47 47 0 0 1-1.239-2.178 41 41 0 0 1 2.817-.205zm3.625 0a41 41 0 0 1 2.838.202 47 47 0 0 1-1.264 2.198 53 53 0 0 0-1.574-2.4m3.248.251c1.213.146 2.317.34 3.252.576 1.057.268 1.907.587 2.478.928s.834.689.834.998-.263.655-.834.996c-.57.342-1.421.662-2.478.93-.943.239-2.056.433-3.281.58a47 47 0 0 0-1.416-2.492 47 47 0 0 0 1.445-2.516M6.95 9.496c.424.805.899 1.64 1.418 2.494a47 47 0 0 0-1.443 2.508 30 30 0 0 1-2.059-.318.9.9 0 0 0-.23-.508.8.8 0 0 0-.584-.262.8.8 0 0 0-.696.418c-.894-.247-1.63-.53-2.136-.832C.65 12.655.387 12.31.387 12s.263-.654.834-.996c.57-.342 1.421-.662 2.478-.93.935-.237 2.039-.431 3.252-.578zm4.34.8c-.576 0-1.041.5-1.041 1.112 0 .484.29.897.695 1.049v.063c0 .612.466 1.109 1.041 1.109.576 0 1.041-.497 1.041-1.11q0-.025-.002-.05c.424-.141.73-.565.73-1.063 0-.294-.107-.575-.302-.783a1.01 1.01 0 0 0-.738-.326 1 1 0 0 0-.711.3 1 1 0 0 0-.713-.3zm-2.695 2.061a51 51 0 0 0 1.572 2.397c-.99-.04-1.941-.108-2.832-.205q.573-1.067 1.26-2.192m6.779.02c.448.743.862 1.472 1.236 2.176a42 42 0 0 1-2.814.199q.313-.443.625-.902c.333-.495.647-.986.953-1.473m-8.23 2.537c1.033.117 2.141.198 3.304.236.427.6.854 1.179 1.278 1.723-1.103 1.382-2.176 2.561-3.135 3.45-.821.76-1.562 1.31-2.155 1.605-.296.147-.554.23-.76.25s-.35-.018-.462-.104c-.225-.172-.343-.61-.27-1.308s.329-1.624.742-2.698c.366-.948.861-2.018 1.458-3.154m9.656.004c.459.884.854 1.727 1.178 2.504a.91.91 0 0 0-.348.724c0 .486.364.887.82.887a1 1 0 0 0 .123-.01c.218.686.36 1.293.408 1.782.07.698-.05 1.135-.275 1.306-.113.086-.258.124-.463.104s-.462-.105-.758-.254c-.59-.298-1.329-.855-2.146-1.62-.955-.893-2.023-2.077-3.12-3.466.43-.545.862-1.123 1.294-1.725a42 42 0 0 0 3.287-.232m-3.776.246a49 49 0 0 1-1.05 1.4 49 49 0 0 1-1.04-1.398 47 47 0 0 0 2.09-.002"/></svg></span> <strong>PR101</strong>. (RA.7 // CE7a, CE7c, y CE7e // 1-10p). Como futuros técnicos en <em>Sistemas Microinformáticos y Redes</em>, el alumnado debe aprender a planificar y documentar redes locales. En esta actividad, debéis diseñar el esquema físico y lógico de una empresa ficticia usando <strong>Excalidraw</strong>, trabajando en equipo para elegir la topología, los dispositivos y los medios adecuados. El objetivo es simular un caso real, fomentando la colaboración y la justificación técnica de cada decisión. Realizar en grupos un documento de presentación y exponerlo en clase. A continuación, se detallan las premisas de la práctica:</li>
+</ul>
+<blockquote>
+<p>🏢<strong>Escenario</strong></p>
+</blockquote>
+<ul>
+<li>Empresa ficticia <strong>TechSolutions</strong> con:<ul>
+<li>3 departamentos: Administración, Ventas y Soporte.</li>
+<li>Cada uno con 5 PCs y 1 impresora.</li>
+<li>1 servidor central.</li>
+<li>Conexión a Internet mediante router.</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>🧑‍🤝‍🧑<strong>Tareas del grupo</strong></p>
+</blockquote>
+<ol>
+<li>Elegir una topología adecuada (estrella, árbol, híbrida).</li>
+<li>Diseñar el esquema de red en <a href="https://excalidraw.com/">Excalidraw</a>:<ul>
+<li>Añadir iconos de PCs, switches, router, servidor, impresoras.</li>
+<li>Conectar con flechas y etiquetar enlaces (UTP, fibra, Wi-Fi).</li>
+</ul>
+</li>
+<li>Justificar en el diagrama:<ul>
+<li>¿Por qué esa topología? Ventajas y desventajas.</li>
+<li>¿Por qué esos medios? Ventajas y desventajas.</li>
+<li>¿Por qué esos componentes? Ventajas y desventajas.</li>
+</ul>
+</li>
+<li>Exposición breve (5 min).</li>
+</ol>
+<blockquote>
+<p>🧰 <strong>Herramientas</strong></p>
+</blockquote>
+<ul>
+<li><a href="https://excalidraw.com/">Excalidraw</a></li>
+<li>Aules</li>
+</ul>
+<blockquote>
+<p><strong>📋Criterios de evaluación</strong></p>
+</blockquote>
+<p>Cada grupo evaluará el trabajo de otro equipo. Puntúa cada criterio según la escala indicada. <strong>Total: 30 puntos</strong>.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Criterio</strong></th>
+<th><strong>Descripción</strong></th>
+<th><strong>Puntos</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Claridad del diagrama</strong></td>
+<td>El esquema es legible, bien organizado y fácil de interpretar.</td>
+<td>0-6</td>
+</tr>
+<tr>
+<td><strong>Identificación de dispositivos</strong></td>
+<td>Incluye todos los elementos necesarios (PCs, switches, router, etc.)</td>
+<td>0-6</td>
+</tr>
+<tr>
+<td><strong>Representación de conexiones</strong></td>
+<td>Las conexiones están correctamente etiquetadas (UTP, fibra, Wi-Fi).</td>
+<td>0-4</td>
+</tr>
+<tr>
+<td><strong>Topología adecuada</strong></td>
+<td>La topología elegida es coherente con el escenario planteado.</td>
+<td>0-4</td>
+</tr>
+<tr>
+<td><strong>Justificación técnica</strong></td>
+<td>Explica por qué se eligieron la topología y los medios.</td>
+<td>0-6</td>
+</tr>
+<tr>
+<td><strong>Creatividad y presentación</strong></td>
+<td>Uso de iconos, colores y organización visual atractiva.</td>
+<td>0-4</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Total:</strong> /30 puntos</p>
+<blockquote>
+<p><strong>🧮Rúbrica de coevaluación</strong></p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th><strong>Criterio</strong></th>
+<th><strong>Descripción</strong></th>
+<th><strong>Rango de puntos</strong></th>
+<th><strong>Nivel bajo</strong> (0-2)</th>
+<th><strong>Nivel medio</strong> (3-4)</th>
+<th><strong>Nivel alto</strong> (5-6 / 3-4)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Claridad del diagrama</strong></td>
+<td>El esquema es legible, bien organizado y fácil de interpretar.</td>
+<td>0–6</td>
+<td>Confuso o ilegible. <br> Mala organización.</td>
+<td>Aceptable pero mejorable. <br> Se entiende con esfuerzo.</td>
+<td>Muy claro, bien estructurado y fácil de seguir.</td>
+</tr>
+<tr>
+<td><strong>Identificación de dispositivos</strong></td>
+<td>Incluye todos los elementos necesarios (PCs, switches, router, etc.)</td>
+<td>0–6</td>
+<td>Faltan varios dispositivos clave.</td>
+<td>La mayoría están presentes, pero hay omisiones.</td>
+<td>Todos los dispositivos necesarios están correctamente representados.</td>
+</tr>
+<tr>
+<td><strong>Representación de conexiones</strong></td>
+<td>Las conexiones están correctamente etiquetadas (UTP, fibra, Wi-Fi).</td>
+<td>0–4</td>
+<td>Conexiones ausentes o mal representadas.</td>
+<td>Algunas conexiones correctas, pero con errores o sin etiquetas.</td>
+<td>Todas las conexiones están correctamente representadas y etiquetadas.</td>
+</tr>
+<tr>
+<td><strong>Topología adecuada</strong></td>
+<td>La topología elegida es coherente con el escenario planteado.</td>
+<td>0–4</td>
+<td>No definida o incoherente.</td>
+<td>Tiene errores o no se ajusta bien al escenario.</td>
+<td>Coherente y adecuada al planteamiento.</td>
+</tr>
+<tr>
+<td><strong>Justificación técnica</strong></td>
+<td>Explica por qué se eligieron la topología y los medios.</td>
+<td>0–6</td>
+<td>Sin justificación o incorrecta.</td>
+<td>Justificación aceptable pero incompleta.</td>
+<td>Justificación clara, coherente y bien argumentada.</td>
+</tr>
+<tr>
+<td><strong>Creatividad y presentación</strong></td>
+<td>Uso de iconos, colores y organización visual atractiva.</td>
+<td>0–4</td>
+<td>Presentación pobre o sin elementos visuales.</td>
+<td>Básica, con poco esfuerzo visual.</td>
+<td>Cuidada, con elementos visuales que mejoran la comprensión.</td>
+</tr>
+</tbody>
+</table>
+<p>Puedes apoyarte en esta guía: <a href="guia_excalidraw.html">GUÍA EXCALIDRAW</a></p>
+<p><a name="AC102"></a></p>
+<ul>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.832 3.367 8.668.108a3.15 3.15 0 0 0-3.856 2.226L.943 16.777a3.15 3.15 0 0 0 2.226 3.856l12.163 3.259a3.15 3.15 0 0 0 3.855-2.226l3.87-14.443a3.15 3.15 0 0 0-2.226-3.856M6.332 2.741a1.574 1.574 0 0 1 1.928-1.113l12.163 3.26a1.574 1.574 0 0 1 1.113 1.927l-3.87 14.444a1.574 1.574 0 0 1-1.928 1.113l-12.163-3.26a1.574 1.574 0 0 1-1.113-1.927zm2.634 2.336a.787.787 0 1 0-.407 1.52l9.122 2.444a.787.787 0 1 0 .407-1.52zM6.985 9.434a.787.787 0 0 1 .963-.557l9.123 2.445a.787.787 0 0 1-.408 1.52l-9.122-2.444a.787.787 0 0 1-.556-.964m-.055 3.244a.787.787 0 0 0-.407 1.52l5.32 1.427a.787.787 0 0 0 .408-1.52z"/></svg></span> <strong>AC102</strong>. (RA.1 // CE1a, CE1c y CE1d // 1-3p). Identifica y documenta ejemplos reales de transmisión de datos y perturbaciones en redes locales, aplicando los conceptos vistos en clase.</li>
+</ul>
+<blockquote>
+<p><strong>📝 Instrucciones</strong></p>
+</blockquote>
+<ol>
+<li><strong>Busca ejemplos reales</strong> de los siguientes conceptos:</li>
+</ol>
+<ul>
+<li>Tipos de transmisión: analógica, digital, serie, paralelo, simplex, half-dúplex, full-dúplex.</li>
+<li>Técnicas de transmisión: NRZ, Manchester, AM, FM, PM.</li>
+<li>Perturbaciones: atenuación, distorsión, ruido térmico, intermodulación, diafonía, ruido impulsivo.</li>
+</ul>
+<ol start="2">
+<li><strong>Para cada ejemplo</strong>, indica:</li>
+</ol>
+<ul>
+<li><strong>Dónde se encuentra</strong> (entorno doméstico, empresa, centro educativo, etc.).</li>
+<li><strong>Qué tipo de transmisión o perturbación representa.</strong></li>
+<li><strong>Cómo afecta al funcionamiento de la red.</strong></li>
+<li><strong>Qué solución se aplica o podría aplicarse.</strong></li>
+</ul>
+<ol start="3">
+<li><strong>Presenta tus resultados</strong> en un documento con los siguientes elementos:</li>
+</ol>
+<ul>
+<li>Tabla resumen con los ejemplos encontrados.</li>
+<li>Imágenes o esquemas si es posible.</li>
+</ul>
+<hr />
+<p><a name="PR103"></a>  </p>
+<ul>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16.331 18.171V17.06l-.022.01c-.25.121-.522.19-.801.203a1.2 1.2 0 0 1-.806-.237 1.04 1.04 0 0 1-.352-.498 1.2 1.2 0 0 1-.023-.667c.052-.225.178-.426.357-.569.16-.134.355-.218.562-.242a1.85 1.85 0 0 1 1.061.198l.024.013v-1.117l-.051-.014a2.9 2.9 0 0 0-1.011-.132 2.3 2.3 0 0 0-.903.206c-.287.132-.54.327-.739.571a2.22 2.22 0 0 0-.04 2.705c.295.378.709.645 1.175.756.491.12 1.006.102 1.487-.052zm-10.995 0V17.06l-.022.01c-.25.121-.522.19-.801.203a1.18 1.18 0 0 1-.806-.237 1.03 1.03 0 0 1-.351-.498 1.2 1.2 0 0 1-.024-.667c.052-.225.177-.426.357-.569.16-.134.355-.218.562-.242a1.85 1.85 0 0 1 1.061.198l.024.013v-1.117l-.051-.014a2.9 2.9 0 0 0-1.011-.132 2.3 2.3 0 0 0-.903.206 2.1 2.1 0 0 0-.74.571 2.224 2.224 0 0 0-.041 2.705 2.1 2.1 0 0 0 1.176.756c.491.12 1.005.102 1.487-.052zm3.924-.922-.004.957.07.012q.33.061.664.085.293.028.587.012.282-.021.551-.104c.21-.06.405-.163.571-.305a1.16 1.16 0 0 0 .333-.478 1.3 1.3 0 0 0-.007-.96 1.1 1.1 0 0 0-.298-.414 1.3 1.3 0 0 0-.438-.255l-.722-.268a.4.4 0 0 1-.197-.188.25.25 0 0 1 .008-.219.4.4 0 0 1 .154-.142.8.8 0 0 1 .257-.074q.23-.034.46.005.27.03.533.096l.038.008v-.883l-.069-.015a5 5 0 0 0-.543-.097 2.8 2.8 0 0 0-.714-.003c-.3.027-.585.143-.821.33-.16.126-.281.293-.351.484-.104.29-.105.608 0 .899q.082.219.252.381.146.14.327.236.236.126.497.195.086.026.17.054l.085.031.024.01c.084.03.162.078.226.14q.068.064.101.151a.3.3 0 0 1 .001.161.34.34 0 0 1-.166.198.9.9 0 0 1-.275.086 2 2 0 0 1-.427.021 5 5 0 0 1-.557-.074 9 9 0 0 1-.287-.067zm-2.475.995h1.05v-4.167h-1.05zm12.162-2.936a1.095 1.095 0 0 1 1.541.158 1.094 1.094 0 0 1-.157 1.541l-.017.014a1.096 1.096 0 0 1-1.367-1.713m-1.525.854a2.193 2.193 0 0 0 2.666 2.107 2.139 2.139 0 0 0 .701-3.937 2.207 2.207 0 0 0-3.367 1.83m5.539-5.434a.52.52 0 0 0 1.039 0V9.573a.52.52 0 0 0-1.039 0zm-2.844 0a.522.522 0 0 0 1.041 0V8.139a.521.521 0 0 0-1.04 0v2.589m-2.887 1.043a.521.521 0 0 0 1.039 0V6.17a.52.52 0 0 0-1.039 0zm-2.838-1.043a.521.521 0 0 0 1.04 0V8.139a.52.52 0 0 0-1.039 0zm-2.9 0a.522.522 0 0 0 1.039 0V9.573a.52.52 0 0 0-1.039 0zm-2.87 0a.52.52 0 0 0 1.039 0V8.139a.52.52 0 0 0-1.039 0zm-2.887 1.043a.52.52 0 0 0 1.039 0V6.17a.52.52 0 0 0-1.039 0zm-2.861-1.043a.522.522 0 0 0 1.04 0V8.139a.52.52 0 0 0-1.039 0zm-2.877 0a.521.521 0 0 0 1.039 0V9.573a.52.52 0 0 0-1.039 0z"/></svg></span> <strong>PR103</strong>. (RA.7 // CE7a, CE7c, y CE7e // 1-10p).<br />
+Como futuros técnicos en <em>Sistemas Microinformáticos y Redes</em>, el alumnado debe aprender a <strong>planificar y simular redes locales</strong>.<br />
+En esta actividad individual, deberás diseñar y configurar el esquema físico y lógico de una empresa ficticia usando <strong>Cisco Packet Tracer</strong>, aplicando los conceptos de componentes, topologías y medios de transmisión.  </li>
+</ul>
+<blockquote>
+<p>🏢 <strong>Escenario</strong> </p>
+</blockquote>
+<ul>
+<li>Empresa ficticia <strong>NetSolutions</strong> con:  </li>
+<li>3 departamentos: Administración, Ventas y Soporte.  </li>
+<li>Cada uno con <strong>5 PCs y 1 impresora</strong>.  </li>
+<li>1 servidor central conectado a toda la red.  </li>
+<li>Conexión a Internet mediante un router.  </li>
+</ul>
+<blockquote>
+<p>🛠️ <strong>Tareas</strong></p>
+</blockquote>
+<ol>
+<li>Elegir una <strong>topología adecuada</strong> (estrella, árbol, híbrida) y justificarla.  </li>
+<li>Diseñar la <strong>red en Packet Tracer</strong>:<br />
+   - Añadir PCs, switches, router, servidor e impresoras.  .<br />
+   - Conectar con cables adecuados (UTP, fibra, etc.) y configurar la conectividad.  </li>
+<li>Justificar en el documento:<br />
+   - La elección de la topología.<br />
+   - Los medios de transmisión utilizados.<br />
+   - Los dispositivos seleccionados.  </li>
+</ol>
+<blockquote>
+<p>🧰 <strong>Herramientas</strong></p>
+</blockquote>
+<ul>
+<li><a href="packetracer.html">Cisco Packet Tracer</a></li>
+<li>Aules  </li>
+</ul>
+<hr />
+<p><a name="PR104"></a>  </p>
+<ul>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16.331 18.171V17.06l-.022.01c-.25.121-.522.19-.801.203a1.2 1.2 0 0 1-.806-.237 1.04 1.04 0 0 1-.352-.498 1.2 1.2 0 0 1-.023-.667c.052-.225.178-.426.357-.569.16-.134.355-.218.562-.242a1.85 1.85 0 0 1 1.061.198l.024.013v-1.117l-.051-.014a2.9 2.9 0 0 0-1.011-.132 2.3 2.3 0 0 0-.903.206c-.287.132-.54.327-.739.571a2.22 2.22 0 0 0-.04 2.705c.295.378.709.645 1.175.756.491.12 1.006.102 1.487-.052zm-10.995 0V17.06l-.022.01c-.25.121-.522.19-.801.203a1.18 1.18 0 0 1-.806-.237 1.03 1.03 0 0 1-.351-.498 1.2 1.2 0 0 1-.024-.667c.052-.225.177-.426.357-.569.16-.134.355-.218.562-.242a1.85 1.85 0 0 1 1.061.198l.024.013v-1.117l-.051-.014a2.9 2.9 0 0 0-1.011-.132 2.3 2.3 0 0 0-.903.206 2.1 2.1 0 0 0-.74.571 2.224 2.224 0 0 0-.041 2.705 2.1 2.1 0 0 0 1.176.756c.491.12 1.005.102 1.487-.052zm3.924-.922-.004.957.07.012q.33.061.664.085.293.028.587.012.282-.021.551-.104c.21-.06.405-.163.571-.305a1.16 1.16 0 0 0 .333-.478 1.3 1.3 0 0 0-.007-.96 1.1 1.1 0 0 0-.298-.414 1.3 1.3 0 0 0-.438-.255l-.722-.268a.4.4 0 0 1-.197-.188.25.25 0 0 1 .008-.219.4.4 0 0 1 .154-.142.8.8 0 0 1 .257-.074q.23-.034.46.005.27.03.533.096l.038.008v-.883l-.069-.015a5 5 0 0 0-.543-.097 2.8 2.8 0 0 0-.714-.003c-.3.027-.585.143-.821.33-.16.126-.281.293-.351.484-.104.29-.105.608 0 .899q.082.219.252.381.146.14.327.236.236.126.497.195.086.026.17.054l.085.031.024.01c.084.03.162.078.226.14q.068.064.101.151a.3.3 0 0 1 .001.161.34.34 0 0 1-.166.198.9.9 0 0 1-.275.086 2 2 0 0 1-.427.021 5 5 0 0 1-.557-.074 9 9 0 0 1-.287-.067zm-2.475.995h1.05v-4.167h-1.05zm12.162-2.936a1.095 1.095 0 0 1 1.541.158 1.094 1.094 0 0 1-.157 1.541l-.017.014a1.096 1.096 0 0 1-1.367-1.713m-1.525.854a2.193 2.193 0 0 0 2.666 2.107 2.139 2.139 0 0 0 .701-3.937 2.207 2.207 0 0 0-3.367 1.83m5.539-5.434a.52.52 0 0 0 1.039 0V9.573a.52.52 0 0 0-1.039 0zm-2.844 0a.522.522 0 0 0 1.041 0V8.139a.521.521 0 0 0-1.04 0v2.589m-2.887 1.043a.521.521 0 0 0 1.039 0V6.17a.52.52 0 0 0-1.039 0zm-2.838-1.043a.521.521 0 0 0 1.04 0V8.139a.52.52 0 0 0-1.039 0zm-2.9 0a.522.522 0 0 0 1.039 0V9.573a.52.52 0 0 0-1.039 0zm-2.87 0a.52.52 0 0 0 1.039 0V8.139a.52.52 0 0 0-1.039 0zm-2.887 1.043a.52.52 0 0 0 1.039 0V6.17a.52.52 0 0 0-1.039 0zm-2.861-1.043a.522.522 0 0 0 1.04 0V8.139a.52.52 0 0 0-1.039 0zm-2.877 0a.521.521 0 0 0 1.039 0V9.573a.52.52 0 0 0-1.039 0z"/></svg></span> <strong>PR104</strong>. RA.1 // CE1a, CE1d, CE1f // 1–10p**</li>
+</ul>
+<p>En esta práctica individual, el alumnado debe <strong>simular una red local</strong> en Cisco Packet Tracer que incluya distintos <strong>medios de transmisión</strong> (UTP, fibra, Wi-Fi) y <strong>analizar cómo afectan las perturbaciones</strong> (atenuación, ruido, interferencias) al rendimiento de la red. Se busca aplicar los conceptos teóricos de transmisión de datos en un entorno práctico.</p>
+<hr />
+<blockquote>
+<p>🏢 <strong>Escenario</strong>
+Empresa ficticia <strong>DataLink S.L.</strong> con:</p>
+</blockquote>
+<ul>
+<li>2 plantas: Planta Baja (Administración) y Planta Alta (Desarrollo).</li>
+<li>Cada planta con <strong>4 PCs y 1 impresora</strong>.</li>
+<li>1 servidor central en la sala de servidores (Planta Baja).</li>
+<li>Conexión a Internet mediante router.</li>
+<li>Conexión entre plantas mediante <strong>fibra óptica</strong>.</li>
+<li>Conexión Wi-Fi para dispositivos móviles en ambas plantas.</li>
+</ul>
+<blockquote>
+<p>🛠️ <strong>Tareas</strong></p>
+</blockquote>
+<ol>
+<li><strong>Diseñar la red en Packet Tracer</strong>:
+   - Añadir PCs, impresoras, switches, router, servidor y puntos de acceso Wi-Fi.
+   - Conectar con <strong>medios adecuados</strong>: UTP para PCs, fibra entre switches, Wi-Fi para móviles.</li>
+<li><strong>Simular tráfico de red</strong> entre dispositivos usando herramientas de diagnóstico (ping, simulación de paquetes).</li>
+<li><strong>Introducir perturbaciones</strong>:
+   - Simular pérdida de conectividad por interferencias Wi-Fi.
+   - Simular degradación por uso de cable UTP largo sin repetidor.</li>
+<li><strong>Documentar</strong>:
+   - Justificación de los medios de transmisión elegidos.
+   - Identificación de las perturbaciones simuladas.
+   - Propuesta de soluciones técnicas (uso de repetidores, cambio de canal Wi-Fi, etc.).</li>
+</ol>
+<hr />
+<blockquote>
+<p>🧰 <strong>Herramientas</strong></p>
+</blockquote>
+<ul>
+<li><a href="packetracer.html">Cisco Packet Tracer</a></li>
+</ul>
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Pie" >
+        
+          
+          <a href="index.html" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Inicio">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              <div class="md-ellipsis">
+                Inicio
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="02arquitecturas.html" class="md-footer__link md-footer__link--next" aria-label="Siguiente: 2. Arquitecturas de redes">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Siguiente
+              </span>
+              <div class="md-ellipsis">
+                2. Arquitecturas de redes
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      2025-2026 Francisco Javier Hernández Illán - <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es">Licencia CC BY-NC-SA</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="mailto:<fj.hernandez@edu.gva.es>" target="_blank" rel="noopener" title="" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4l208 156a48 48 0 0 0 57.6 0l208-156c12.1-9.1 19.2-23.3 19.2-38.4 0-26.5-21.5-48-48-48zM0 196v188c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V196L313.6 344.8c-34.1 25.6-81.1 25.6-115.2 0z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.linkedin.com/in/fjavier-hernandez-illan" target="_blank" rel="noopener" title="www.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77m282.1 320h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+      <div class="md-consent" data-md-component="consent" id="__consent" hidden>
+        <div class="md-consent__overlay"></div>
+        <aside class="md-consent__inner">
+          <form class="md-consent__form md-grid md-typeset" name="consent">
+            
+
+
+  
+
+
+<h4>Consentimiento de cookie</h4>
+<p>Esta página de apuntes utiliza cookies para reconocer las visitas, medir la efectividad de la documentación y averiguar si encuentras aquello que buscas o cómo has llegado a estos apuntes. Con tu consentimiento, me ayudas a mejorar estos materiales.</p>
+<input class="md-toggle" type="checkbox" id="__settings" >
+<div class="md-consent__settings">
+  <ul class="task-list">
+    
+    
+      
+        
+  
+  
+    
+    
+  
+  <li class="task-list-item">
+    <label class="task-list-control">
+      <input type="checkbox" name="analytics" checked>
+      <span class="task-list-indicator"></span>
+      Google Analytics
+    </label>
+  </li>
+
+      
+    
+    
+      
+    
+    
+  </ul>
+</div>
+<div class="md-consent__controls">
+  
+    
+      <button class="md-button md-button--primary">Aceptar</button>
+    
+    
+    
+  
+    
+    
+    
+      <label class="md-button" for="__settings">Gestionar cookies</label>
+    
+  
+</div>
+          </form>
+        </aside>
+      </div>
+      <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout((function(){document.querySelector("[data-md-component=consent]").hidden=!1}),250);var form=document.forms.consent;for(var action of["submit","reset"])form.addEventListener(action,(function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map((function(e){return[e,!0]})))),location.hash="",location.reload()}))</script>
+    
+    
+      
+      <script id="__config" type="application/json">{"base": ".", "features": ["header.autohide", "navigation.top", "navigation.tracking", "navigation.footer", "navigation.indexes", "content.code.annotate", "announce.dismiss", "toc.follow", "content.code.copy"], "search": "assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+        <script src="js/print-site.js"></script>
+      
+    
+  </body>
+</html>
