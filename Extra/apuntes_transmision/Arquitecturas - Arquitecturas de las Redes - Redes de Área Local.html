@@ -1,0 +1,1754 @@
+<!DOCTYPE html>
+<html lang="es" class="js-focus-visible js" data-js-focus-visible=""><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Normlización de las redes, arquitecturas de las comunicaciones y Esquemas LAN.">
+      
+      
+      
+        <link rel="canonical" href="http://127.0.0.1:8000/ral/02arquitecturas.html">
+      
+      
+        <link rel="prev" href="http://127.0.0.1:8000/ral/01ir.html">
+      
+      
+      
+      <link rel="icon" href="Arquitecturas%20-%20Arquitecturas%20de%20las%20Redes%20-%20Redes%20de%20A%CC%81rea%20Local_files/ral.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.48">
+    
+    
+      
+        <title>Arquitecturas - Arquitecturas de las Redes - Redes de Área Local</title>
+      
+    
+    
+      <link rel="stylesheet" href="Arquitecturas%20-%20Arquitecturas%20de%20las%20Redes%20-%20Redes%20de%20A%CC%81rea%20Local_files/main.6f8fc17f.min.css">
+      
+        
+        <link rel="stylesheet" href="Arquitecturas%20-%20Arquitecturas%20de%20las%20Redes%20-%20Redes%20de%20A%CC%81rea%20Local_files/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+        <link rel="stylesheet" href="Arquitecturas%20-%20Arquitecturas%20de%20las%20Redes%20-%20Redes%20de%20A%CC%81rea%20Local_files/css.css">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="Arquitecturas%20-%20Arquitecturas%20de%20las%20Redes%20-%20Redes%20de%20A%CC%81rea%20Local_files/extra.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-0CPJP88MBF"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-0CPJP88MBF",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-0CPJP88MBF",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script><script async="" src="Arquitecturas%20-%20Arquitecturas%20de%20las%20Redes%20-%20Redes%20de%20A%CC%81rea%20Local_files/js"></script>
+  
+    <script>if("undefined"!=typeof __md_analytics){var consent=__md_get("__consent");consent&&consent.analytics&&__md_analytics()}</script>
+  
+
+    
+    
+      
+        <meta property="og:type" content="website">
+      
+        <meta property="og:title" content="Arquitecturas - Arquitecturas de las Redes - Redes de Área Local">
+      
+        <meta property="og:description" content="Normlización de las redes, arquitecturas de las comunicaciones y Esquemas LAN.">
+      
+        <meta property="og:image" content="http://127.0.0.1:8000/ral/assets/images/social/02arquitecturas.png">
+      
+        <meta property="og:image:type" content="image/png">
+      
+        <meta property="og:image:width" content="1200">
+      
+        <meta property="og:image:height" content="630">
+      
+        <meta property="og:url" content="http://127.0.0.1:8000/ral/02arquitecturas.html">
+      
+        <meta name="twitter:card" content="summary_large_image">
+      
+        <meta name="twitter:title" content="Arquitecturas - Arquitecturas de las Redes - Redes de Área Local">
+      
+        <meta name="twitter:description" content="Normlización de las redes, arquitecturas de las comunicaciones y Esquemas LAN.">
+      
+        <meta name="twitter:image" content="http://127.0.0.1:8000/ral/assets/images/social/02arquitecturas.png">
+      
+    
+    
+  <meta name="theme-color" content="#0077b6"><meta name="color-scheme" content="normal"></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="javi" data-md-color-primary="indigo" data-md-color-accent="indigo" data-md-color-media="">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#arquitecturas-de-redes" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header" data-md-component="header" hidden="">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="http://127.0.0.1:8000/ral/index.html" title="Redes de Área Local" class="md-header__button md-logo" aria-label="Redes de Área Local" data-md-component="logo">
+      
+  <img src="Arquitecturas%20-%20Arquitecturas%20de%20las%20Redes%20-%20Redes%20de%20A%CC%81rea%20Local_files/ral.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title md-header__title--active" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Redes de Área Local
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Arquitecturas - Arquitecturas de las Redes
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="javi" data-md-color-primary="indigo" data-md-color-accent="indigo" aria-label="Cambiar a modo noche" type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo noche" for="__palette_1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"></path></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo" aria-label="Cambiar a modo día" type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo día" for="__palette_0" hidden="">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"></path></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="none" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required="">
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0">
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">Teclee para comenzar búsqueda</div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" style="top: 48px;">
+                <div class="md-sidebar__scrollwrap" style="height: 632px;">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="http://127.0.0.1:8000/ral/index.html" title="Redes de Área Local" class="md-nav__button md-logo" aria-label="Redes de Área Local" data-md-component="logo">
+      
+  <img src="Arquitecturas%20-%20Arquitecturas%20de%20las%20Redes%20-%20Redes%20de%20A%CC%81rea%20Local_files/ral.svg" alt="logo">
+
+    </a>
+    Redes de Área Local
+  </label>
+  
+  <ul class="md-nav__list">
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="http://127.0.0.1:8000/ral/index.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Inicio
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="http://127.0.0.1:8000/ral/01ir.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1. Introducción a las redes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    2. Arquitecturas de redes
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="http://127.0.0.1:8000/ral/02arquitecturas.html" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    2. Arquitecturas de redes
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc">
+      
+        <li class="md-nav__item">
+  <a href="#propuesta-didactica" class="md-nav__link md-nav__link--passed">
+    <span class="md-ellipsis">
+      📚 Propuesta didáctica
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📚 Propuesta didáctica">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#criterios-de-evaluacion" class="md-nav__link md-nav__link--passed">
+    <span class="md-ellipsis">
+      🎯 Criterios de evaluación
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎯 Criterios de evaluación">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#criterios-de-evaluacion-del-ra1" class="md-nav__link md-nav__link--passed">
+    <span class="md-ellipsis">
+      Criterios de evaluación del RA1
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contenidos" class="md-nav__link md-nav__link--passed">
+    <span class="md-ellipsis">
+      Contenidos
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#programacion-de-aula-12h" class="md-nav__link md-nav__link--passed">
+    <span class="md-ellipsis">
+      Programación de Aula (12h)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#normalizacion" class="md-nav__link md-nav__link--passed">
+    <span class="md-ellipsis">
+      📏 Normalización
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📏 Normalización">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#modelos-arquitecturas-y-protocolos" class="md-nav__link md-nav__link--passed">
+    <span class="md-ellipsis">
+      Modelos, arquitecturas y protocolos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#estandares-y-organismos-de-normalizacion" class="md-nav__link md-nav__link--passed">
+    <span class="md-ellipsis">
+      Estándares y organismos de normalización
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Estándares y organismos de normalización">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ventajas-de-estandarizar" class="md-nav__link md-nav__link--passed">
+    <span class="md-ellipsis">
+      🌟 Ventajas de estandarizar
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clasificacion-de-los-estandares" class="md-nav__link md-nav__link--passed">
+    <span class="md-ellipsis">
+      🗂️ Clasificación de los estándares
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#segun-su-origen" class="md-nav__link md-nav__link--passed">
+    <span class="md-ellipsis">
+      📏 Según su origen
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#segun-su-propiedad" class="md-nav__link md-nav__link--passed">
+    <span class="md-ellipsis">
+      🔑 Según su propiedad
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quien-define-los-estandares-abiertos" class="md-nav__link md-nav__link--passed">
+    <span class="md-ellipsis">
+      🏛️ Quién define los estándares abiertos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🏛️ Quién define los estándares abiertos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#consorcios-de-fabricantes" class="md-nav__link md-nav__link--passed">
+    <span class="md-ellipsis">
+      🤝 Consorcios de fabricantes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#organismos-oficiales" class="md-nav__link md-nav__link--passed">
+    <span class="md-ellipsis">
+      📜 Organismos oficiales
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📜 Organismos oficiales">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#organismos-reguladores-en-el-ambito-internacional" class="md-nav__link md-nav__link--passed">
+    <span class="md-ellipsis">
+      🌍 Organismos reguladores en el ámbito internacional
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#organismos-reguladores-en-estados-unidos" class="md-nav__link md-nav__link--passed">
+    <span class="md-ellipsis">
+      🇺🇸 Organismos reguladores en Estados Unidos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#organismos-reguladores-en-europa" class="md-nav__link md-nav__link--passed">
+    <span class="md-ellipsis">
+      🇪🇺 Organismos reguladores en Europa
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#organismos-reguladores-en-espana" class="md-nav__link md-nav__link--passed">
+    <span class="md-ellipsis">
+      🇪🇸 Organismos reguladores en España
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arquitecturas-de-comunicaciones" class="md-nav__link md-nav__link--passed">
+    <span class="md-ellipsis">
+      Arquitecturas de comunicaciones
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Arquitecturas de comunicaciones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#problemas-comunes-en-el-diseno-de-redes" class="md-nav__link md-nav__link--passed">
+    <span class="md-ellipsis">
+      Problemas comunes en el diseño de redes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#niveles-de-las-arquitecturas" class="md-nav__link md-nav__link--passed">
+    <span class="md-ellipsis">
+      Niveles de las Arquitecturas.
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Niveles de las Arquitecturas.">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#principios-del-modelo-por-capas" class="md-nav__link md-nav__link--passed">
+    <span class="md-ellipsis">
+      📐 Principios del modelo por capas
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#elementos-clave-del-modelo" class="md-nav__link md-nav__link--passed">
+    <span class="md-ellipsis">
+      🧱 Elementos clave del modelo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#proceso-de-comunicacion-entre-equipos" class="md-nav__link md-nav__link--passed">
+    <span class="md-ellipsis">
+      🔄 Proceso de comunicación entre equipos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔄 Proceso de comunicación entre equipos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#en-el-emisor" class="md-nav__link md-nav__link--passed">
+    <span class="md-ellipsis">
+      📤 En el emisor:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#en-el-receptor" class="md-nav__link md-nav__link--passed md-nav__link--active">
+    <span class="md-ellipsis">
+      📥 En el receptor:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modelo-de-referencia-osi-y-arquitectura-tcpip" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧱 Modelo de referencia OSI y arquitectura TCP/IP
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#niveles-osi" class="md-nav__link">
+    <span class="md-ellipsis">
+      📶 Niveles OSI
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arquitectura-tcpip" class="md-nav__link">
+    <span class="md-ellipsis">
+      🏗️ Arquitectura TCP/IP
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unidades-de-datos-de-protocolo-pdu" class="md-nav__link">
+    <span class="md-ellipsis">
+      📦 Unidades de Datos de Protocolo (PDU)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#actividades" class="md-nav__link">
+    <span class="md-ellipsis">
+      🛠️ Actividades
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" style="top: 48px;">
+                <div class="md-sidebar__scrollwrap" style="height: 632px;">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc">
+      
+        <li class="md-nav__item">
+  <a href="#propuesta-didactica" class="md-nav__link md-nav__link--passed">
+    <span class="md-ellipsis">
+      📚 Propuesta didáctica
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📚 Propuesta didáctica">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#criterios-de-evaluacion" class="md-nav__link md-nav__link--passed">
+    <span class="md-ellipsis">
+      🎯 Criterios de evaluación
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎯 Criterios de evaluación">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#criterios-de-evaluacion-del-ra1" class="md-nav__link md-nav__link--passed">
+    <span class="md-ellipsis">
+      Criterios de evaluación del RA1
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contenidos" class="md-nav__link md-nav__link--passed">
+    <span class="md-ellipsis">
+      Contenidos
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#programacion-de-aula-12h" class="md-nav__link md-nav__link--passed">
+    <span class="md-ellipsis">
+      Programación de Aula (12h)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#normalizacion" class="md-nav__link md-nav__link--passed">
+    <span class="md-ellipsis">
+      📏 Normalización
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📏 Normalización">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#modelos-arquitecturas-y-protocolos" class="md-nav__link md-nav__link--passed">
+    <span class="md-ellipsis">
+      Modelos, arquitecturas y protocolos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#estandares-y-organismos-de-normalizacion" class="md-nav__link md-nav__link--passed">
+    <span class="md-ellipsis">
+      Estándares y organismos de normalización
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Estándares y organismos de normalización">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ventajas-de-estandarizar" class="md-nav__link md-nav__link--passed">
+    <span class="md-ellipsis">
+      🌟 Ventajas de estandarizar
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clasificacion-de-los-estandares" class="md-nav__link md-nav__link--passed">
+    <span class="md-ellipsis">
+      🗂️ Clasificación de los estándares
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#segun-su-origen" class="md-nav__link md-nav__link--passed">
+    <span class="md-ellipsis">
+      📏 Según su origen
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#segun-su-propiedad" class="md-nav__link md-nav__link--passed">
+    <span class="md-ellipsis">
+      🔑 Según su propiedad
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quien-define-los-estandares-abiertos" class="md-nav__link md-nav__link--passed">
+    <span class="md-ellipsis">
+      🏛️ Quién define los estándares abiertos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🏛️ Quién define los estándares abiertos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#consorcios-de-fabricantes" class="md-nav__link md-nav__link--passed">
+    <span class="md-ellipsis">
+      🤝 Consorcios de fabricantes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#organismos-oficiales" class="md-nav__link md-nav__link--passed">
+    <span class="md-ellipsis">
+      📜 Organismos oficiales
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📜 Organismos oficiales">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#organismos-reguladores-en-el-ambito-internacional" class="md-nav__link md-nav__link--passed">
+    <span class="md-ellipsis">
+      🌍 Organismos reguladores en el ámbito internacional
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#organismos-reguladores-en-estados-unidos" class="md-nav__link md-nav__link--passed">
+    <span class="md-ellipsis">
+      🇺🇸 Organismos reguladores en Estados Unidos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#organismos-reguladores-en-europa" class="md-nav__link md-nav__link--passed">
+    <span class="md-ellipsis">
+      🇪🇺 Organismos reguladores en Europa
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#organismos-reguladores-en-espana" class="md-nav__link md-nav__link--passed">
+    <span class="md-ellipsis">
+      🇪🇸 Organismos reguladores en España
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arquitecturas-de-comunicaciones" class="md-nav__link md-nav__link--passed">
+    <span class="md-ellipsis">
+      Arquitecturas de comunicaciones
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Arquitecturas de comunicaciones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#problemas-comunes-en-el-diseno-de-redes" class="md-nav__link md-nav__link--passed">
+    <span class="md-ellipsis">
+      Problemas comunes en el diseño de redes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#niveles-de-las-arquitecturas" class="md-nav__link md-nav__link--passed">
+    <span class="md-ellipsis">
+      Niveles de las Arquitecturas.
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Niveles de las Arquitecturas.">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#principios-del-modelo-por-capas" class="md-nav__link md-nav__link--passed">
+    <span class="md-ellipsis">
+      📐 Principios del modelo por capas
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#elementos-clave-del-modelo" class="md-nav__link md-nav__link--passed">
+    <span class="md-ellipsis">
+      🧱 Elementos clave del modelo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#proceso-de-comunicacion-entre-equipos" class="md-nav__link md-nav__link--passed">
+    <span class="md-ellipsis">
+      🔄 Proceso de comunicación entre equipos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔄 Proceso de comunicación entre equipos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#en-el-emisor" class="md-nav__link md-nav__link--passed">
+    <span class="md-ellipsis">
+      📤 En el emisor:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#en-el-receptor" class="md-nav__link md-nav__link--passed md-nav__link--active">
+    <span class="md-ellipsis">
+      📥 En el receptor:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modelo-de-referencia-osi-y-arquitectura-tcpip" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧱 Modelo de referencia OSI y arquitectura TCP/IP
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#niveles-osi" class="md-nav__link">
+    <span class="md-ellipsis">
+      📶 Niveles OSI
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arquitectura-tcpip" class="md-nav__link">
+    <span class="md-ellipsis">
+      🏗️ Arquitectura TCP/IP
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unidades-de-datos-de-protocolo-pdu" class="md-nav__link">
+    <span class="md-ellipsis">
+      📦 Unidades de Datos de Protocolo (PDU)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#actividades" class="md-nav__link">
+    <span class="md-ellipsis">
+      🛠️ Actividades
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="arquitecturas-de-redes">🌐 ARQUITECTURAS DE REDES<a class="headerlink" href="#arquitecturas-de-redes" title="Permanent link">¶</a></h1>
+<p>A finales del siglo XX, Internet revolucionó la forma de trabajar y 
+comunicarnos en nuestro día a día. La base de Internet es la 
+comunicación de ordenadores mediante la conexión de sistemas en red, y 
+en concreto este tema estudia lo modelos y arquitecturas que garantizan 
+la compatibilidad de conexión entre dichos sistemas, permitiendo de este
+ modo el funcionamiento de Internet. </p>
+<h2 id="propuesta-didactica">📚 Propuesta didáctica<a class="headerlink" href="#propuesta-didactica" title="Permanent link">¶</a></h2>
+<p>En esta unidad trabajamos el <strong>RA1 de RAL</strong>:</p>
+<blockquote>
+<p><strong>RA1.</strong> <em>Reconoce la estructura de redes locales 
+cableadas analizando las características de entornos de aplicación y 
+describiendo la funcionalidad de sus componentes.</em></p>
+</blockquote>
+<h3 id="criterios-de-evaluacion">🎯 Criterios de evaluación<a class="headerlink" href="#criterios-de-evaluacion" title="Permanent link">¶</a></h3>
+<h4 id="criterios-de-evaluacion-del-ra1">Criterios de evaluación del RA1<a class="headerlink" href="#criterios-de-evaluacion-del-ra1" title="Permanent link">¶</a></h4>
+<ul>
+<li><strong>CE1a</strong>: Se han descrito los principios de funcionamiento de las redes locales.</li>
+<li><strong>CE1b</strong>: Se han identificado los distintos tipos de redes.</li>
+<li><strong>CE1c</strong>: Se han descrito los elementos de la red local y su función.</li>
+<li><strong>CE1d</strong>: Se han identificado y clasificado los medios de transmisión.</li>
+<li><strong>CE1e</strong>: Se ha reconocido el mapa físico de la red local.</li>
+<li><strong>CE1f</strong>: Se han reconocido las distintas topologías de red.</li>
+<li><strong>CE1g</strong>: Se han identificado estructuras alternativas.</li>
+</ul>
+<h3 id="contenidos">Contenidos<a class="headerlink" href="#contenidos" title="Permanent link">¶</a></h3>
+<ul>
+<li>Normalización en redes: estándares, organismos y tipos.</li>
+<li>Arquitecturas de comunicación: capas, protocolos, modelos OSI y TCP/IP.</li>
+<li>Componentes de red: dispositivos terminales e intermedios.</li>
+<li>Uso del medio: conmutación y difusión.</li>
+<li>Esquemas LAN: red simple, zonas, DMZ.</li>
+</ul>
+<div class="admonition question">
+<p class="admonition-title">Cuestionario inicial</p>
+<ol>
+<li>¿Qué es un modelo de red y para qué sirve?</li>
+<li>¿Qué diferencias existen entre arquitectura y protocolo en redes?</li>
+<li>¿Por qué es importante la normalización en las redes?</li>
+<li>¿Qué organismos internacionales conoces relacionados con la estandarización de redes?</li>
+<li>¿Qué ventajas aporta el uso de estándares abiertos frente a los propietarios?</li>
+<li>¿Cuáles son las principales diferencias entre el modelo OSI y el modelo TCP/IP?</li>
+<li>¿Qué función cumple cada capa en el modelo OSI?</li>
+<li>¿Qué es una DMZ y para qué se utiliza en una red local?</li>
+<li>¿Qué diferencias hay entre conmutación y difusión en el uso del medio?</li>
+</ol>
+</div>
+<h2 id="programacion-de-aula-12h">Programación de Aula (12h)<a class="headerlink" href="#programacion-de-aula-12h" title="Permanent link">¶</a></h2>
+<p>Esta unidad se imparte en la primera evaluación, con una duración 
+estimada de 12 sesiones lectivas, durante la primera quincena de 
+octubre:</p>
+<div class="md-typeset__scrollwrap"><div class="md-typeset__table"><table>
+<thead>
+<tr>
+<th>Sesión</th>
+<th>Contenidos</th>
+<th>Actividades</th>
+<th>Criterios trabajados</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Normalización y estándares, Organismos internacionales</td>
+<td>Cuestionario inicial, AC201</td>
+<td>CE1a, CE1b y CE1c</td>
+</tr>
+</tbody>
+</table></div></div>
+<hr>
+<h2 id="normalizacion">📏 Normalización<a class="headerlink" href="#normalizacion" title="Permanent link">¶</a></h2>
+<p>Las Redes de comunicaciones han pasado por diferentes fases, El comienzo fue en <strong>1971</strong> cuando se creó la primera red de ordenadores, conocida como <strong>ARPANET</strong>. En la década de los setenta aparecieron varias redes creadas por diferentes fabricantes. </p>
+<ul>
+<li><strong>Problema</strong>: no eran compatibles entre si. </li>
+<li><strong>Solución:</strong> Estandarizar las redes.</li>
+</ul>
+<figure style="align: center;">
+    <img src="Arquitecturas%20-%20Arquitecturas%20de%20las%20Redes%20-%20Redes%20de%20A%CC%81rea%20Local_files/08Estandar.png" width="800" title="Estandarización">
+    <figcaption style="text-align: center;">Esquema explicativo dela necesidad de estandarización</figcaption>
+</figure>
+
+<h3 id="modelos-arquitecturas-y-protocolos">Modelos, arquitecturas y protocolos<a class="headerlink" href="#modelos-arquitecturas-y-protocolos" title="Permanent link">¶</a></h3>
+<p>Antes de adentrarnos en la estandarización de las redes, es fundamental comprender los conceptos de <strong>modelos</strong>, <strong>arquitecturas</strong> y <strong>protocolos</strong>, ya que constituyen la base sobre la que se construyen los estándares de comunicación.</p>
+<ul>
+<li><strong>Los Modelos</strong> determinan la manera en la que se tiene que establecer y producir dicha comunicación. Destacan el <strong>modelo OSI</strong> (estándar de derecho, propuestos por organismos internacionales) y el <strong>TCP/IP</strong> (estándar de facto, propuesto por las grandes compañías).</li>
+<li><strong>La Arquitectura de una red</strong> se define como el 
+conjunto de niveles y protocolos utilizados para implementar las tareas 
+de comunicación entre equipos informáticos. Esta organización debe ser 
+lo suficientemente clara como para que los fabricantes de software y 
+hardware puedan diseñar sus productos compatibles entre sí.</li>
+<li><strong>Los protocolos</strong> pueden definirse como el conjunto de
+ reglas que gobiernan el intercambio de datos entre dos entidades. La 
+comunicación entre diferentes sistemas resulta demasiado compleja para 
+ser gobernada por un único protocolo, por lo que se diseñaron un 
+conjunto de protocolos llamados <strong>pilas de protocolos</strong>; el ejemplo más destacado es la pila de protocolos del modelo <strong>TCP/IP</strong>, donde destacan protocolos como <strong>DNS, DHCP, TCP, IP, Ethernet</strong>.</li>
+</ul>
+<hr>
+<h3 id="estandares-y-organismos-de-normalizacion">Estándares y organismos de normalización<a class="headerlink" href="#estandares-y-organismos-de-normalizacion" title="Permanent link">¶</a></h3>
+<p>Un <strong>estándar</strong> es una regla técnica que se utiliza para que los dispositivos y sistemas informáticos puedan funcionar correctamente entre sí. <strong>Por ejemplo</strong>,
+ gracias a los estándares, un ordenador puede conectarse a una red, 
+enviar correos o navegar por Internet sin importar la marca o el modelo,
+ el tipo de conector a emplear, las tensiones e intensidades empleadas, 
+el formato de los datos a enviar, etc.</p>
+<p>Para definir estos estándares existen los <strong>organismos de normalización</strong>,
+ que son instituciones encargadas de crear y publicar estas reglas. 
+Gracias a estos organismos, los fabricantes y desarrolladores pueden 
+seguir las mismas normas, lo que facilita que los sistemas funcionen 
+bien juntos y se puedan usar en cualquier parte del mundo.</p>
+<!-- <span style="font-size: 1.5em;"><strong>Estándar</strong></span> -->
+
+<!-- !!! abstract "<span style="font-size: 1.4em;"><strong>Estándar</strong></span>"
+    <span style="font-size: 1.3em;">Un <strong>estándar</strong> es un conjunto de normas, acuerdos y recomendaciones técnicas que regulan la transmisión de los sistemas de comunicación.</span> -->
+
+<!-- !!! example "<span style="font-size: 1.4em;"><strong>Ejemplo</strong></span>"
+    <span style="font-size: 1.3em;"><strong>Por ejemplo</strong> el tipo de conector a emplear, las tensiones e intensidades empleadas, el formato de los datos a enviar, etc.</span> -->
+
+<hr>
+<h4 id="ventajas-de-estandarizar">🌟 Ventajas de estandarizar<a class="headerlink" href="#ventajas-de-estandarizar" title="Permanent link">¶</a></h4>
+<p>En resumen, El empleo de estos estándares presenta las siguientes ventajas:</p>
+<ul>
+<li>✅ Los productos de diferentes fabricantes que cumplen los estándares son <strong>totalmente compatibles y pueden comunicarse sin necesidad de adaptadores</strong>.</li>
+<li>📈 El <strong>mercado se amplía</strong>, favoreciendo precios más competitivos y mayor flexibilidad.</li>
+<li>🔄 <strong>Compatibilidad con productos futuros</strong> empleando la misma tecnología.</li>
+<li>💰 <strong>Reducción de costes</strong> de los productos.</li>
+<li>🤝 Se evita que las empresas tengan arquitecturas cerradas, fomentando la <strong>interoperabilidad</strong>.</li>
+</ul>
+<hr>
+<h4 id="clasificacion-de-los-estandares">🗂️ Clasificación de los estándares<a class="headerlink" href="#clasificacion-de-los-estandares" title="Permanent link">¶</a></h4>
+<p>La clasificación de los estándares puede hacerse desde <strong>dos enfoques diferentes</strong>:</p>
+<h3 id="segun-su-origen">📏 Según su origen<a class="headerlink" href="#segun-su-origen" title="Permanent link">¶</a></h3>
+<div class="md-typeset__scrollwrap"><div class="md-typeset__table"><table>
+<thead>
+<tr>
+<th>Tipo de estándar</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>📌 De facto</strong></td>
+<td>Surgen por la <strong>aceptación del mercado</strong>. No son oficiales, pero se usan ampliamente. Normalmente los definen grupos de empresas u organizaciones.</td>
+</tr>
+<tr>
+<td><strong>🏛️ De iure</strong></td>
+<td>Son estándares <strong>oficiales</strong>, definidos por <strong>organismos de normalización reconocidos</strong> como ISO, IEEE, etc.</td>
+</tr>
+</tbody>
+</table></div></div>
+<hr>
+<h3 id="segun-su-propiedad">🔑 Según su propiedad<a class="headerlink" href="#segun-su-propiedad" title="Permanent link">¶</a></h3>
+<div class="md-typeset__scrollwrap"><div class="md-typeset__table"><table>
+<thead>
+<tr>
+<th>Tipo de estándar</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>🔒 Cerrados (propietarios)</strong></td>
+<td>Son propiedad de una <strong>empresa o corporación</strong>. Su acceso está <strong>restringido</strong>. Se usan para <strong>fidelizar al cliente</strong>. Si se popularizan, pueden convertirse en <strong>de facto</strong> o incluso en <strong>de iure</strong>.</td>
+</tr>
+<tr>
+<td><strong>🔓 Abiertos</strong></td>
+<td>Son accesibles para <strong>cualquier persona u organización</strong>. Incluyen tanto los <strong>de facto</strong> como los <strong>de iure</strong>. Algunos pueden tener <strong>distribución restringida</strong> (por ejemplo, cobrar por acceder al documento), pero normalmente <strong>no exigen canon</strong> por su uso.</td>
+</tr>
+</tbody>
+</table></div></div>
+<hr>
+<h2 id="quien-define-los-estandares-abiertos">🏛️ Quién define los estándares abiertos<a class="headerlink" href="#quien-define-los-estandares-abiertos" title="Permanent link">¶</a></h2>
+<p>Existen <strong>dos tipos de organizaciones</strong>:</p>
+<h3 id="consorcios-de-fabricantes">🤝 Consorcios de fabricantes<a class="headerlink" href="#consorcios-de-fabricantes" title="Permanent link">¶</a></h3>
+<ul>
+<li>Grupos de empresas que cooperan para asegurar la <strong>interoperabilidad</strong>.  </li>
+<li>Beneficios → aumentan el mercado y los clientes potenciales.  </li>
+<li>Empresas o personas interesadas pueden unirse y participar en la definición de normas.  </li>
+<li>Ejemplos: <strong>ADSL Forum, ATM Forum, Zigbee Alliance, PLC Forum</strong>.  </li>
+</ul>
+<h3 id="organismos-oficiales">📜 Organismos oficiales<a class="headerlink" href="#organismos-oficiales" title="Permanent link">¶</a></h3>
+<ul>
+<li>Formados por consultores independientes, administraciones públicas y otros miembros.  </li>
+<li>Ejemplos: <strong>ISO, IEEE, ANSI</strong>.  </li>
+</ul>
+<hr>
+<h4 id="organismos-reguladores-en-el-ambito-internacional">🌍 Organismos reguladores en el ámbito internacional<a class="headerlink" href="#organismos-reguladores-en-el-ambito-internacional" title="Permanent link">¶</a></h4>
+<ul>
+<li>
+<p><strong>ITU (International Telecommunication Union)</strong><br>
+  La organización ITU (UIT en castellano, Unión Internacional de 
+Telecomunicaciones) es la organización más importante de las Naciones 
+Unidas en lo que concierne a las tecnologías de la información. 
+Representa un foco global para gobiernos y sector privado en el 
+desarrollo de redes y servicios. Coordina el uso del espectro 
+radioeléctrico, promueve la cooperación internacional para la asignación
+ de órbitas de satélites, mejora infraestructuras de comunicación, 
+establece estándares mundiales para la interconexión de sistemas y 
+afronta problemas como el cambio climático y la ciberseguridad.  </p>
+</li>
+<li>
+<p><strong>ISO (International Organization for Standardization)</strong><br>
+  Agencia internacional sin ánimo de lucro con sede en Ginebra (Suiza), 
+cuyo objetivo es el desarrollo de normalizaciones en un amplio abanico 
+de materias. Ha definido multitud de estándares, desde el paso de los 
+tornillos hasta arquitecturas de comunicaciones para la interconexión de
+ sistemas abiertos (OSI).<br>
+  Está formada por organismos de estandarización de diversos países 
+(ANSI, DIN, AENOR, etc.) y organizaciones observadoras. Fundada en 1946,
+ reúne a más de 100 países.</p>
+</li>
+<li>
+<p><strong>IEEE (Institute of Electrical and Electronic Engineers)</strong><br>
+  Mayor asociación profesional para el avance de la innovación y la 
+excelencia tecnológica. Fundada en 1884, desarrolla estándares para las 
+industrias eléctricas y electrónicas. Destacan los trabajos del comité 
+802, que desarrolla estándares de protocolos de comunicaciones para la 
+interfaz física de las conexiones de redes locales de datos.</p>
+</li>
+<li>
+<p><strong>IETF (Internet Engineering Task Force)</strong><br>
+  Organización internacional abierta de normalización, creada en EE.UU. 
+en 1986. Regula propuestas y estándares de Internet, conocidos como RFC 
+(Request For Comments). Está compuesta por técnicos y profesionales en 
+el área de redes y se organiza en grupos de trabajo sobre temas 
+concretos.</p>
+</li>
+</ul>
+<h4 id="organismos-reguladores-en-estados-unidos">🇺🇸 Organismos reguladores en Estados Unidos<a class="headerlink" href="#organismos-reguladores-en-estados-unidos" title="Permanent link">¶</a></h4>
+<ul>
+<li>
+<p><strong>ANSI (American National Standards Institute)</strong><br>
+  Organización sin ánimo de lucro encargada de supervisar el desarrollo de estándares aplicados en EE.UU.</p>
+</li>
+<li>
+<p><strong>TIA (Telecommunications Industry Association)</strong><br>
+  Asociación formada por representantes de las industrias más 
+importantes del sector de las telecomunicaciones. Ha desarrollado 
+numerosos estándares a nivel internacional en colaboración con ANSI y la
+ antigua EIA.</p>
+</li>
+</ul>
+<h4 id="organismos-reguladores-en-europa">🇪🇺 Organismos reguladores en Europa<a class="headerlink" href="#organismos-reguladores-en-europa" title="Permanent link">¶</a></h4>
+<ul>
+<li>
+<p><strong>ETSI (European Telecommunications Standards Institute)</strong><br>
+  Organización independiente sin ánimo de lucro que produce estándares 
+globales para tecnologías de la información y comunicación. Reconocida 
+por la Unión Europea, cuenta con 766 organizaciones miembro de 63 
+países. Ha estandarizado el sistema de telefonía móvil GSM.<br>
+  Cuerpos dependientes: <strong>3GPP</strong> (redes UMTS), <strong>TISPAN</strong> (redes fijas y convergencia con Internet). Fundada en 1988.</p>
+</li>
+<li>
+<p><strong>CEN (Comité Europeo de Normalización)</strong><br>
+  Organización no lucrativa privada cuya misión es fomentar la economía 
+europea y el bienestar de los ciudadanos proporcionando una 
+infraestructura eficiente para el desarrollo y distribución de 
+estándares coherentes. Fundada en 1961, sus 29 miembros nacionales 
+desarrollan los estándares europeos (EN).</p>
+</li>
+</ul>
+<h4 id="organismos-reguladores-en-espana">🇪🇸 Organismos reguladores en España<a class="headerlink" href="#organismos-reguladores-en-espana" title="Permanent link">¶</a></h4>
+<ul>
+<li><strong>AENOR (Asociación Española de Normalización)</strong><br>
+  Organismo nacional de normalización encargado de la publicación de las
+ normas UNE y la adopción de normas europeas. Relacionado con CEN, 
+CENELEC y ETSI.</li>
+</ul>
+<figure style="align: center;">
+    <img src="Arquitecturas%20-%20Arquitecturas%20de%20las%20Redes%20-%20Redes%20de%20A%CC%81rea%20Local_files/09Organismos.png" width="400" title="Organismos">
+    <figcaption style="text-align: center;">Logos de los principales organismos de normalización</figcaption>
+</figure>
+
+<hr>
+<h2 id="arquitecturas-de-comunicaciones"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12 16 7.36-5.73L21 9l-9-7-9 7 1.63 1.27M12 18.54l-7.38-5.73L3 14.07l9 7 9-7-1.63-1.27z"></path></svg></span> Arquitecturas de comunicaciones<a class="headerlink" href="#arquitecturas-de-comunicaciones" title="Permanent link">¶</a></h2>
+<p>Cuando se diseña una red de ordenadores, es necesario resolver muchos problemas:</p>
+<ul>
+<li>¿Hay que compartir un único medio de transmisión?  </li>
+<li>¿Cómo distinguimos unos ordenadores de otros?  </li>
+<li>¿Qué tipo de información se va a transmitir?  </li>
+<li>¿Se manejará información confidencial?  </li>
+</ul>
+<p>La arquitectura de una red viene definida por tres características fundamentales:</p>
+<ul>
+<li><strong>Topología</strong>: Organización del cableado, define la 
+configuración básica de la interconexión de estaciones y, en algunos 
+casos, el camino de una transmisión de datos sobre el cable.</li>
+<li><strong>Método de acceso a la red</strong>: En redes con medio 
+compartido, es necesario acordar cómo enviar información para evitar 
+colisiones. En redes sin medio compartido, el acceso es trivial.</li>
+<li><strong>Protocolos de comunicaciones</strong>: Reglas y 
+procedimientos utilizados para realizar la comunicación, incluyendo 
+corrección de errores, establecimiento de comunicación, etc.</li>
+</ul>
+<h3 id="problemas-comunes-en-el-diseno-de-redes">Problemas comunes en el diseño de redes<a class="headerlink" href="#problemas-comunes-en-el-diseno-de-redes" title="Permanent link">¶</a></h3>
+<ul>
+<li><strong>Encaminamiento</strong>: Elección de la mejor ruta entre origen y destino.</li>
+<li><strong>Direccionamiento</strong>: Mecanismo para que un proceso especifique con quién quiere comunicarse.</li>
+<li><strong>Acceso al medio</strong>: Control del orden de transmisión en medios compartidos para evitar colisiones.</li>
+<li><strong>Saturación del receptor</strong>: Un emisor rápido puede saturar a un receptor lento; se soluciona con mecanismos de control de flujo.</li>
+<li><strong>Mantenimiento del orden</strong>: Algunos protocolos deben reordenar mensajes que llegan desordenados.</li>
+<li><strong>Control de errores</strong>: Detección y corrección de errores en la transmisión.</li>
+<li><strong>Multiplexación</strong>: Compartición de un único medio de transmisión por varias comunicaciones independientes.</li>
+</ul>
+<hr>
+<h3 id="niveles-de-las-arquitecturas"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 1h16a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1m0 8h16a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1m0 8h16a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1M9 5h1V3H9zm0 8h1v-2H9zm0 8h1v-2H9zM5 3v2h2V3zm0 8v2h2v-2zm0 8v2h2v-2z"></path></svg></span> Niveles de las Arquitecturas.<a class="headerlink" href="#niveles-de-las-arquitecturas" title="Permanent link">¶</a></h3>
+<p>Como se comentó al inicio del tema, las redes estaban originalmente 
+ligadas al hardware de cada fabricante. Esto obligaba a desarrollar 
+programas muy extensos y complejos para gestionar la comunicación entre 
+equipos, dificultando la interoperabilidad y el mantenimiento.</p>
+<p>La solución a esta problemática fue la <strong>reducción de la complejidad</strong> mediante un modelo basado en <strong>niveles o capas</strong>,
+ organizados jerárquicamente y relacionados entre sí. Este enfoque 
+permite una implementación más sencilla, modular y escalable.</p>
+<h4 id="principios-del-modelo-por-capas">📐 Principios del modelo por capas<a class="headerlink" href="#principios-del-modelo-por-capas" title="Permanent link">¶</a></h4>
+<p>Este modelo se fundamenta en las siguientes premisas:</p>
+<ul>
+<li>🔁 <strong>Jerarquía funcional</strong>: Cada nivel se construye sobre los servicios ofrecidos por el nivel inferior, incorporando la funcionalidad propia de su capa.</li>
+<li>🤝 <strong>Protocolos entre niveles homólogos</strong> (<em>peer-to-peer protocols</em>): Permiten optimizar y gestionar cada capa de forma independiente.</li>
+<li>🔄 <strong>Independencia entre capas</strong>: Un protocolo puede ser sustituido por otro en una misma capa, siempre que se mantengan los servicios ofrecidos.</li>
+</ul>
+<h3 id="elementos-clave-del-modelo">🧱 Elementos clave del modelo<a class="headerlink" href="#elementos-clave-del-modelo" title="Permanent link">¶</a></h3>
+<p>Además de los niveles, es importante conocer los siguientes conceptos:</p>
+<ul>
+<li><strong>Entidades de datos</strong>: Conjunto de funciones bien definidas que ejecutan las tareas propias de cada nivel, es decir, sus servicios.</li>
+<li><strong>Interfaz SAP (Service Access Point)</strong>: Puntos de 
+acceso entre capas que permiten la provisión de servicios e intercambio 
+de información. Actúan como interfaz de comunicación entre niveles.</li>
+<li><strong>Cabecera</strong>: Información añadida por cada capa a los 
+datos originales, que incluye parámetros necesarios para realizar sus 
+funciones. Las cabeceras se agregan en el emisor y se eliminan en el 
+receptor.</li>
+</ul>
+<h3 id="proceso-de-comunicacion-entre-equipos">🔄 Proceso de comunicación entre equipos<a class="headerlink" href="#proceso-de-comunicacion-entre-equipos" title="Permanent link">¶</a></h3>
+<p>La comunicación entre dos dispositivos en red se realiza siguiendo el
+ principio de comunicación entre capas homólogas. Este proceso se basa 
+en un flujo de datos que desciende por las capas del modelo en el emisor
+ y asciende por las capas en el receptor.</p>
+<h4 id="en-el-emisor">📤 En el emisor:<a class="headerlink" href="#en-el-emisor" title="Permanent link">¶</a></h4>
+<ul>
+<li>La capa de aplicación (7) genera los datos que se desean transmitir.</li>
+<li>Cada capa inferior añade su propia cabecera (información de control) a los datos recibidos desde la capa superior.</li>
+<li>Este proceso se repite hasta llegar a la capa física (1), que 
+convierte los datos en señales eléctricas, ópticas o inalámbricas para 
+enviarlos por el medio de transmisión.</li>
+</ul>
+<h4 id="en-el-receptor">📥 En el receptor:<a class="headerlink" href="#en-el-receptor" title="Permanent link">¶</a></h4>
+<ul>
+<li>La capa física (1) recibe las señales y las convierte nuevamente en datos.</li>
+<li>Cada capa elimina su cabecera y procesa la información que le corresponde.</li>
+<li>Los datos ascienden capa por capa hasta llegar a la capa de 
+aplicación (7), donde se entregan al usuario final o a la aplicación 
+correspondiente.</li>
+</ul>
+<p>Este flujo garantiza que cada capa se encargue de una función 
+específica (como direccionamiento, control de errores, cifrado, etc.), y
+ que los datos lleguen correctamente al destino.</p>
+<figure style="align: center;">
+  <img src="Arquitecturas%20-%20Arquitecturas%20de%20las%20Redes%20-%20Redes%20de%20A%CC%81rea%20Local_files/10Capas.png" width="600" title="Organismos">
+  <figcaption style="text-align: center;">Esquema del proceso de comunicación en una arquitectura basada en niveles (Modelo OSI)</figcaption>
+</figure>
+
+<p>Finalmente, cabe señalar que las principales arquitecturas de red se 
+basan en este tipo de modelos, y serán descritas en los apartados 
+siguientes.</p>
+<div class="admonition tip">
+<p class="admonition-title"><span style="font-size: 1.4em;"><strong>CONCLUSIÓN</strong></span></p>
+<p><span style="font-size: 1.3em;">Los ingenieros de comunicaciones dividieron<strong> el proceso de comunicación en capas</strong>, facilitando el diseño de protocolos y estándares para redes.</span></p>
+</div>
+<hr>
+<h4 id="modelo-de-referencia-osi-y-arquitectura-tcpip">🧱 Modelo de referencia OSI y arquitectura TCP/IP<a class="headerlink" href="#modelo-de-referencia-osi-y-arquitectura-tcpip" title="Permanent link">¶</a></h4>
+<p><strong>Niveles y equivalencia</strong></p>
+<blockquote>
+<p><strong>Nota:</strong> La arquitectura TCP/IP es de 4 capas:<br>
+- Aplicación (capas 5, 6 y 7 de OSI)<br>
+- Transporte (capa 4 de OSI)<br>
+- Internet (capa 3 de OSI)<br>
+- Acceso a la red (capas 1 y 2 de OSI)</p>
+</blockquote>
+<p>A mediados de los años setenta, la ISO elaboró el modelo OSI (Open 
+Systems Interconnection), un modelo arquitectónico de referencia basado 
+en capas. Aunque su implementación resultó compleja, es fundamental para
+ comprender las arquitecturas de red.</p>
+<p>En paralelo, DARPA desarrolló la pila de protocolos TCP/IP, que por 
+su sencillez y visión práctica se convirtió en el estándar de facto en 
+redes de ordenadores.</p>
+<hr>
+<h4 id="niveles-osi">📶 Niveles OSI<a class="headerlink" href="#niveles-osi" title="Permanent link">¶</a></h4>
+<ul>
+<li><strong>Físico</strong>: Interfaz físico entre dispositivos y reglas
+ para el paso de bits. Características: mecánicas, eléctricas, 
+funcionales y de procedimiento.</li>
+<li><strong>Enlace de datos</strong>: Hace el enlace físico seguro, 
+proporciona activación, mantenimiento y desactivación del enlace. 
+Detección de errores y control.</li>
+<li><strong>Red</strong>: Proporciona transferencia de información entre sistemas finales a través de la red.</li>
+<li><strong>Transporte</strong>: Mecanismo para intercambiar datos entre
+ sistemas finales, asegurando entrega sin errores, en secuencia y sin 
+pérdidas o duplicados.</li>
+<li><strong>Sesión</strong>: Controla el diálogo entre aplicaciones en sistemas finales.</li>
+<li><strong>Presentación</strong>: Define el formato de los datos intercambiados entre aplicaciones, incluyendo compresión y cifrado.</li>
+<li><strong>Aplicación</strong>: Proporciona acceso al entorno OSI para 
+programas de aplicación (transferencia de ficheros, correo electrónico, 
+acceso remoto, etc.).</li>
+</ul>
+<hr>
+<h4 id="arquitectura-tcpip">🏗️ Arquitectura TCP/IP<a class="headerlink" href="#arquitectura-tcpip" title="Permanent link">¶</a></h4>
+<p>Algunos de los protocolos de TCP/IP:</p>
+<ul>
+<li><strong>Capa de aplicación</strong>: HTTP, FTP, SMTP, DNS, etc.</li>
+<li><strong>Capa de transporte</strong>: TCP, UDP.</li>
+<li><strong>Capa de red</strong>: IP, ICMP.</li>
+<li><strong>Capa de acceso a la red</strong>: Ethernet, Wi-Fi, etc.</li>
+</ul>
+<hr>
+<h4 id="unidades-de-datos-de-protocolo-pdu">📦 Unidades de Datos de Protocolo (PDU)<a class="headerlink" href="#unidades-de-datos-de-protocolo-pdu" title="Permanent link">¶</a></h4>
+<ul>
+<li><strong>PDU</strong>: Unidad de datos del protocolo, utilizada para la comunicación entre capas homólogas (comunicación par-a-par).</li>
+<li>En cada capa, la PDU recibe un nombre específico:<ul>
+<li>Capa de aplicación: <strong>Datos</strong></li>
+<li>Capa de transporte: <strong>Segmentos</strong></li>
+<li>Capa de red: <strong>Datagramas</strong></li>
+<li>Capa de acceso a la red: <strong>Tramas</strong></li>
+<li>Capa física: <strong>Flujo de bits</strong></li>
+</ul>
+</li>
+</ul>
+<p><strong>Encapsulación:</strong><br>
+Cada capa añade su propia cabecera a la PDU recibida de la capa 
+superior. En el destino, las cabeceras se eliminan en orden inverso. 
+--&gt;</p>
+<hr>
+<h2 id="actividades">🛠️ Actividades<a class="headerlink" href="#actividades" title="Permanent link">¶</a></h2>
+<!-- !!! abstract "<span style="font-size: 1.4em;"><strong>Estándar</strong></span>"
+    <span style="font-size: 1.3em;">Un <strong>estándar</strong> es un conjunto de normas, acuerdos y recomendaciones técnicas que regulan la transmisión de los sistemas de comunicación.</span> -->
+
+<div class="admonition tip">
+<p class="admonition-title"><span style="font-size: 1.4em;"><strong>Formato de entrega</strong></span></p>
+<p><span style="font-size: 1.3em;">Para la entrega de las actividades, 
+Genera un documento con la práctica descrita a continuación. Deberás 
+crear un archivo PDF con el siguiente formato de nombre:<strong> PRXXX.pdf o ACXXX.pdf</strong>
+ , donde las X representan el número de la actividad. Una vez finalizada
+ la práctica, sube el archivo a Aules (antes de la fecha de vencimiento)
+ para su calificación.</span></p>
+</div>
+<p><a name="AC201"></a></p>
+<ul>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.832 3.367 8.668.108a3.15 3.15 0 0 0-3.856 2.226L.943 16.777a3.15 3.15 0 0 0 2.226 3.856l12.163 3.259a3.15 3.15 0 0 0 3.855-2.226l3.87-14.443a3.15 3.15 0 0 0-2.226-3.856M6.332 2.741a1.574 1.574 0 0 1 1.928-1.113l12.163 3.26a1.574 1.574 0 0 1 1.113 1.927l-3.87 14.444a1.574 1.574 0 0 1-1.928 1.113l-12.163-3.26a1.574 1.574 0 0 1-1.113-1.927zm2.634 2.336a.787.787 0 1 0-.407 1.52l9.122 2.444a.787.787 0 1 0 .407-1.52zM6.985 9.434a.787.787 0 0 1 .963-.557l9.123 2.445a.787.787 0 0 1-.408 1.52l-9.122-2.444a.787.787 0 0 1-.556-.964m-.055 3.244a.787.787 0 0 0-.407 1.52l5.32 1.427a.787.787 0 0 0 .408-1.52z"></path></svg></span> <strong>AC201</strong>.
+ (RA.1 // CE1a, CE1c // 1-3p). Investiga y documenta los principales 
+organismos de normalización en redes (ISO, IEEE, ITU, IETF, etc.). 
+Elabora una tabla comparativa con sus funciones y estándares más 
+relevantes.</li>
+</ul>
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" style="top: 64px;" hidden="" tabindex="-1">
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Pie">
+        
+          
+          <a href="http://127.0.0.1:8000/ral/01ir.html" class="md-footer__link md-footer__link--prev" aria-label="Anterior: 1. Introducción a las redes">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              <div class="md-ellipsis">
+                1. Introducción a las redes
+              </div>
+            </div>
+          </a>
+        
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      2025-2026 Francisco Javier Hernández Illán - <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es">Licencia CC BY-NC-SA</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+    <a href="mailto:&lt;fj.hernandez@edu.gva.es&gt;" target="_blank" rel="noopener" title="" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4l217.6 163.2c11.4 8.5 27 8.5 38.4 0l217.6-163.2c12.1-9.1 19.2-23.3 19.2-38.4 0-26.5-21.5-48-48-48zM0 176v208c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V176L294.4 339.2a63.9 63.9 0 0 1-76.8 0z"></path></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.linkedin.com/in/fjavier-hernandez-illan" target="_blank" rel="noopener" title="www.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5m282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"></path></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+      <div class="md-consent" data-md-component="consent" id="__consent" hidden="">
+        <div class="md-consent__overlay"></div>
+        <aside class="md-consent__inner">
+          <form class="md-consent__form md-grid md-typeset" name="consent">
+            
+
+  
+    
+  
+
+
+
+
+  
+
+
+<h4>Consentimiento de cookie</h4>
+<p>Esta página de apuntes utiliza cookies para reconocer las visitas, 
+medir la efectividad de la documentación y averiguar si encuentras 
+aquello que buscas o cómo has llegado a estos apuntes. Con tu 
+consentimiento, me ayudas a mejorar estos materiales.</p>
+<input class="md-toggle" type="checkbox" id="__settings">
+<div class="md-consent__settings">
+  <ul class="task-list">
+    
+      
+      
+        
+        
+      
+      <li class="task-list-item">
+        <label class="task-list-control">
+          <input type="checkbox" name="analytics" checked="checked">
+          <span class="task-list-indicator"></span>
+          Google Analytics
+        </label>
+      </li>
+    
+  </ul>
+</div>
+<div class="md-consent__controls">
+  
+    
+      <button class="md-button md-button--primary">Aceptar</button>
+    
+    
+    
+  
+    
+    
+    
+      <label class="md-button" for="__settings">Gestionar cookies</label>
+    
+  
+</div>
+          </form>
+        </aside>
+      </div>
+      <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout((function(){document.querySelector("[data-md-component=consent]").hidden=!1}),250);var form=document.forms.consent;for(var action of["submit","reset"])form.addEventListener(action,(function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map((function(e){return[e,!0]})))),location.hash="",location.reload()}))</script>
+    
+    <script id="__config" type="application/json">{"base": ".", "features": ["header.autohide", "navigation.top", "navigation.tracking", "navigation.footer", "navigation.indexes", "content.code.annotate", "announce.dismiss", "toc.follow", "content.code.copy"], "search": "assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+    
+    
+      <script src="Arquitecturas%20-%20Arquitecturas%20de%20las%20Redes%20-%20Redes%20de%20A%CC%81rea%20Local_files/bundle.83f73b43.min.js"></script>
+      
+        <script src="Arquitecturas%20-%20Arquitecturas%20de%20las%20Redes%20-%20Redes%20de%20A%CC%81rea%20Local_files/print-site.js"></script>
+      
+    
+  <script>
+var livereload = function(epoch, requestId) {
+    var req, timeout;
+
+    var poll = function() {
+        req = new XMLHttpRequest();
+        req.onloadend = function() {
+            if (parseFloat(this.responseText) > epoch) {
+                location.reload();
+            } else {
+                timeout = setTimeout(poll, this.status === 200 ? 0 : 3000);
+            }
+        };
+        req.open("GET", "/livereload/" + epoch + "/" + requestId);
+        req.send();
+    }
+
+    var stop = function() {
+        if (req) {
+            req.abort();
+        }
+        if (timeout) {
+            clearTimeout(timeout);
+        }
+        req = timeout = undefined;
+    };
+
+    window.addEventListener("load", function() {
+        if (document.visibilityState === "visible") {
+            poll();
+        }
+    });
+    window.addEventListener("visibilitychange", function() {
+        if (document.visibilityState === "visible") {
+            poll();
+        } else {
+            stop();
+        }
+    });
+    window.addEventListener("beforeunload", stop);
+
+    console.log('Enabled live reload');
+}
+livereload(6439451, 6439971);
+</script>
+</body></html>

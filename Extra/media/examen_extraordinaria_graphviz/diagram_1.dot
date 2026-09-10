@@ -1,0 +1,25 @@
+digraph G {
+  rankdir=LR;
+  bgcolor="white";
+  graph [fontname=Helvetica, fontsize=11, splines=ortho, nodesep=0.55, ranksep=0.9];
+  node [shape=box, style="rounded,filled", fillcolor="#eef0ff", color="#5c6bc0", fontname=Helvetica, fontsize=10, margin="0.18,0.10"];
+  edge [color="#444444", penwidth=1.3, arrowsize=0.7];
+  subgraph cluster_SW {
+    label="Switch 12 puertos";
+    style="rounded,filled"; fillcolor="#fffbf0"; color="#c9a227"; fontname=Helvetica; fontsize=11; labeljust=l;
+    P1 [label="Puertos 1-6"];
+    P2 [label="Puertos 7-12"];
+  }
+  subgraph cluster_V1 {
+    label="VLAN Taller";
+    style="rounded,filled"; fillcolor="#fffbf0"; color="#c9a227"; fontname=Helvetica; fontsize=11; labeljust=l;
+    A [label="4 PCs + impresora + escáner"];
+  }
+  subgraph cluster_V2 {
+    label="VLAN WiFi_Clientes";
+    style="rounded,filled"; fillcolor="#fffbf0"; color="#c9a227"; fontname=Helvetica; fontsize=11; labeljust=l;
+    B [label="AP Wi-Fi"];
+  }
+  P1 -> A [lhead=cluster_V1];
+  P2 -> B [lhead=cluster_V2];
+}

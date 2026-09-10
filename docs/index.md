@@ -45,7 +45,7 @@ Los ^^Resultados de Aprendizaje^^ del módulo **Redes de área local (0225)** so
 
 ## Unidades de Trabajo
 
-A partir de los RA, hemos definido 7 unidades de trabajo (UT).
+A partir de los RA, hemos definido 12 unidades de trabajo (UT).
 
 El módulo de *Redes de área local* viene fijado con una carga lectiva de **233 h**, repartidas en **7 sesiones semanales**, a lo largo de 32 semanas. Este curso se ha planificado sobre un total de 28 semanas, dejando las últimas 10 semanas para el desarrollo, por parte del alumnado, del programa formativo dual en la empresa. Estas 28 semanas hacen un total de 196 horas lectivas.
 
@@ -61,7 +61,7 @@ A continuación, en la siguiente tabla y a modo de mapa general, se muestran las
 | [6. Capa de red]()                                  | X   |     | X   | X   |     |     |
 | [7. Enrutamiento, Subnetting y VLANs]()                                 |     |     | X   | X   |     |     |
 | [8. Capa de transporte]()                           |     |     |     | X   | X   |     |
-| [9. NAT y Protocolo IPv6]()                         |     |     |     | X   | X   |     |
+| [9. NAT y Protocolo IPv6](09nat_ipv6.md)                         |     |     |     | X   | X   |     |
 | [10. Capa de aplicación]()                          |     |     |     | X   | X   |     |
 | [11. Resolución de conflictos en una red local]()   |     |     |     |     | X   | X   |
 | [12. Protección, vigilancia y soporte de redes]()   |     |     |     |     | X   | X   |
@@ -116,3 +116,9 @@ Respecto a los recursos tecnológicos, aunque inicialmente trabajaremos con pape
 *[UT]: Unidad de trabajo  
 *[IE]: Instrumento de evaluación  
 *[CE]: Criterio de evaluación
+
+## Extraordinaria
+
+Recursos de apoyo para la convocatoria extraordinaria del módulo:
+
+* [Ficha de preparación para la extraordinaria](ficha_preparacion_extraordinaria.md)

@@ -1,0 +1,14 @@
+flowchart LR
+    subgraph SW["Switch 12 puertos"]
+        direction TB
+        P1["Puertos 1-6"]
+        P2["Puertos 7-12"]
+    end
+    subgraph V1["VLAN Taller"]
+        A[4 PCs + impresora + escáner]
+    end
+    subgraph V2["VLAN WiFi_Clientes"]
+        B[AP Wi-Fi]
+    end
+    P1 --- V1
+    P2 --- V2
