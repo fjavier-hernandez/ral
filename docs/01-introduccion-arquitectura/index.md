@@ -42,8 +42,8 @@ Trabajamos el **RA1** del módulo Redes de área local (0225):
 | 1 | Presentación del módulo + normas del taller + cuestionario inicial | Cuestionario (1–7) |
 | 2–3 | Componentes, tipos de redes, topologías | **PR101** (Excalidraw) |
 | 4 | Transmisión básica y perturbaciones (nivel SMR) | AC102 |
-| 5–7 | Normalización, OSI / TCP-IP, encapsulación | AC201, AC202 |
-| 8–9 | Esquemas LAN; repaso | PR203 (Packet Tracer) cuando el grupo esté listo |
+| 5–7 | Normalización, OSI / TCP-IP, encapsulación | AC103, AC104 |
+| 8–9 | Esquemas LAN; repaso | PR102 (Packet Tracer) cuando el grupo esté listo |
 
 ---
 
@@ -74,7 +74,7 @@ Trabajamos el **RA1** del módulo Redes de área local (0225):
 Un **sistema de red** es el conjunto de equipos electrónicos y medios de transmisión que permiten la comunicación entre terminales, a menudo situados en puntos remotos. La unión de estos sistemas forma las **redes de comunicaciones**.
 
 <figure markdown="span">
-  ![Elementos de un sistema de red](imagenes/01SistemaRed.png){ width="800" }
+  ![Elementos de un sistema de red](../img/01SistemaRed.png){ width="800" }
   <figcaption>Elementos de un sistema de red</figcaption>
 </figure>
 
@@ -96,7 +96,7 @@ Participan en la comunicación entre nodos finales:
 | **Firewall** | Filtra tráfico según políticas de seguridad | varias |
 
 <figure markdown="span">
-  ![Principales nodos intermedios](imagenes/03NodosIntermed.png){ width="400" }
+  ![Principales nodos intermedios](../img/03NodosIntermed.png){ width="400" }
   <figcaption>Principales nodos intermedios</figcaption>
 </figure>
 
@@ -109,7 +109,7 @@ Permite conectar el equipo a la red. Se caracteriza por:
 - Velocidad (Mbps / Gbps).
 
 <figure markdown="span">
-  ![NIC](imagenes/04nic.jpg){ width="600" }
+  ![NIC](../img/04nic.jpg){ width="600" }
   <figcaption>NIC (Network Interface Card)</figcaption>
 </figure>
 
@@ -142,7 +142,7 @@ El detalle de categorías de cable, conectores y normativa se desarrolla en los 
 - **WAN**: interconexión a gran distancia. Internet es un ejemplo de WAN.
 
 <figure markdown="span">
-  ![Tipos de redes según extensión](imagenes/07tiposDeRedesArea.jpg){ width="600" }
+  ![Tipos de redes según extensión](../img/07tiposDeRedesArea.jpg){ width="600" }
   <figcaption>Tipos de redes según su extensión</figcaption>
 </figure>
 
@@ -152,7 +152,7 @@ El detalle de categorías de cable, conectores y normativa se desarrolla en los 
 - **Privadas**: propiedad de una organización o particular. Una **VPN** permite extender de forma segura una LAN sobre una red no controlada (p. ej. Internet).
 
 <figure markdown="span">
-  ![VPN](imagenes/02VPN.png){ width="800" }
+  ![VPN](../img/02VPN.png){ width="800" }
   <figcaption>Elementos principales de una VPN</figcaption>
 </figure>
 
@@ -167,7 +167,7 @@ La **topología** describe la distribución espacial de los elementos conectados
 Hoy lo habitual en LAN es la **estrella** (y variantes en árbol / jerárquicas). El bus clásico está en desuso.
 
 <figure markdown="span">
-  ![Topologías cableadas](imagenes/05TopCab.png){ width="900" }
+  ![Topologías cableadas](../img/05TopCab.png){ width="900" }
   <figcaption>Principales topologías cableadas</figcaption>
 </figure>
 
@@ -176,7 +176,7 @@ Hoy lo habitual en LAN es la **estrella** (y variantes en árbol / jerárquicas)
 Despliegues basados en **puntos de acceso** Wi‑Fi (estrella inalámbrica, malla, etc.).
 
 <figure markdown="span">
-  ![Topologías inalámbricas](imagenes/06TopIn.png){ width="900" }
+  ![Topologías inalámbricas](../img/06TopIn.png){ width="900" }
   <figcaption>Principales topologías inalámbricas</figcaption>
 </figure>
 
@@ -196,19 +196,19 @@ Despliegues basados en **puntos de acceso** Wi‑Fi (estrella inalámbrica, mall
 | Dirección | Símplex / half-dúplex / full-dúplex | TV; walkie-talkie; teléfono |
 
 <figure markdown="span">
-  ![Señal analógica](img/analogica.png){ width="360" }
-  ![Señal digital](img/digital.png){ width="360" }
+  ![Señal analógica](../img/analogica.png){ width="360" }
+  ![Señal digital](../img/digital.png){ width="360" }
   <figcaption>Señal analógica (izquierda) y digital (derecha)</figcaption>
 </figure>
 
 <figure markdown="span">
-  ![Serie y paralelo](img/serie.png){ width="360" }
-  ![Paralelo](img/paralelo.png){ width="360" }
+  ![Serie y paralelo](../img/serie.png){ width="360" }
+  ![Paralelo](../img/paralelo.png){ width="360" }
   <figcaption>Transmisión en serie y en paralelo</figcaption>
 </figure>
 
 <figure markdown="span">
-  ![Modos dúplex](img/duplex.png){ width="640" }
+  ![Modos dúplex](../img/duplex.png){ width="640" }
   <figcaption>Símplex, half-dúplex y full-dúplex</figcaption>
 </figure>
 
@@ -228,7 +228,7 @@ Despliegues basados en **puntos de acceso** Wi‑Fi (estrella inalámbrica, mall
 Al principio cada fabricante tenía su red. El problema era la **incompatibilidad**. La solución: **estandarizar**.
 
 <figure markdown="span">
-  ![Estándares](imagenes/08Estandar.png){ width="700" }
+  ![Estándares](../img/08Estandar.png){ width="700" }
   <figcaption>Necesidad de normalización</figcaption>
 </figure>
 
@@ -237,7 +237,7 @@ Al principio cada fabricante tenía su red. El problema era la **incompatibilida
 Entre otros: **ISO**, **IEEE**, **ITU**, **IETF**. Unos definen modelos de referencia; otros, estándares de cableado, Wi‑Fi, protocolos de Internet, etc.
 
 <figure markdown="span">
-  ![Organismos](imagenes/09Organismos.png){ width="700" }
+  ![Organismos](../img/09Organismos.png){ width="700" }
   <figcaption>Organismos de normalización</figcaption>
 </figure>
 
@@ -268,7 +268,7 @@ Diseñar una red implica resolver encaminamiento, direccionamiento, acceso al me
 En el **emisor**, cada capa añade su cabecera (**encapsulación**). En el **receptor**, se eliminan en orden inverso.
 
 <figure markdown="span">
-  ![Proceso por capas](imagenes/10Capas.png){ width="600" }
+  ![Proceso por capas](../img/10Capas.png){ width="600" }
   <figcaption>Comunicación basada en niveles (modelo OSI)</figcaption>
 </figure>
 
@@ -301,7 +301,7 @@ En el **emisor**, cada capa añade su cabecera (**encapsulación**). En el **rec
 | Acceso a la red | 1–2 | Medio físico y tramas |
 
 <figure markdown="span">
-  ![Equivalencia OSI–TCP/IP](imagenes/11Equivalencia.png){ width="500" }
+  ![Equivalencia OSI–TCP/IP](../img/11Equivalencia.png){ width="500" }
   <figcaption>Equivalencia entre OSI y TCP/IP</figcaption>
 </figure>
 
@@ -315,7 +315,7 @@ En el **emisor**, cada capa añade su cabecera (**encapsulación**). En el **rec
 - **Conmutación**: el tráfico se dirige hacia el destino (switches modernos reducen dominios de colisión).
 
 <figure markdown="span">
-  ![Difusión](imagenes/13Difusion.png){ width="700" }
+  ![Difusión](../img/13Difusion.png){ width="700" }
   <figcaption>Idea de difusión en el medio</figcaption>
 </figure>
 
@@ -326,17 +326,17 @@ En el **emisor**, cada capa añade su cabecera (**encapsulación**). En el **rec
 - **DMZ**: zona intermedia para servicios expuestos, con filtrado hacia la red interna.
 
 <figure markdown="span">
-  ![LAN simple](imagenes/14LANSimple.png){ width="700" }
+  ![LAN simple](../img/14LANSimple.png){ width="700" }
   <figcaption>Esquema de LAN simple</figcaption>
 </figure>
 
 <figure markdown="span">
-  ![LAN con zonas](imagenes/15Lan2.png){ width="700" }
+  ![LAN con zonas](../img/15Lan2.png){ width="700" }
   <figcaption>Esquema LAN con zonas</figcaption>
 </figure>
 
 <figure markdown="span">
-  ![LAN con DMZ](imagenes/16Lan3.png){ width="700" }
+  ![LAN con DMZ](../img/16Lan3.png){ width="700" }
   <figcaption>Esquema con DMZ</figcaption>
 </figure>
 
@@ -370,17 +370,17 @@ En el **emisor**, cada capa añade su cabecera (**encapsulación**). En el **rec
 
 * :simple-readdotcv: **AC102**. (RA1 // CE1a, CE1c, CE1d // **AC 0–1**). Busca ejemplos reales de: serie/paralelo, símplex/half/full-dúplex, y al menos dos perturbaciones. Para cada uno: dónde aparece, qué efecto tiene y qué solución se aplica o propondrías.
 
-### AC201 — Organismos de normalización
+### AC103 — Organismos de normalización
 
-* :simple-readdotcv: **AC201**. (RA1 // CE1a, CE1c // **AC 0–1**). Tabla comparativa de organismos (ISO, IEEE, ITU, IETF…): función y algún estándar relevante.
+* :simple-readdotcv: **AC103**. (RA1 // CE1a, CE1c // **AC 0–1**). Tabla comparativa de organismos (ISO, IEEE, ITU, IETF…): función y algún estándar relevante.
 
-### AC202 — OSI vs TCP/IP
+### AC104 — OSI vs TCP/IP
 
-* :simple-readdotcv: **AC202**. (RA1 // CE1a, CE1f // **AC 0–1**). Esquema comparativo OSI / TCP-IP: capas, equivalencia, función y un ejemplo de protocolo por capa TCP/IP.
+* :simple-readdotcv: **AC104**. (RA1 // CE1a, CE1f // **AC 0–1**). Esquema comparativo OSI / TCP-IP: capas, equivalencia, función y un ejemplo de protocolo por capa TCP/IP.
 
-### PR203 — Modelos en Packet Tracer (cuando toque)
+### PR102 — Modelos en Packet Tracer (cuando toque)
 
-* :simple-cisco: **PR203**. (RA1 // CE1a, CE1c // **PR 0–10**). Simulación en Packet Tracer: observar encapsulación HTTP/TCP/IP/Ethernet. El guion completo se facilitará en clase / Aules (legado 25-26 disponible para el profesor en `archivo/2526/`).
+* :simple-cisco: **PR102**. (RA1 // CE1a, CE1c // **PR 0–10**). Simulación en Packet Tracer: observar encapsulación HTTP/TCP/IP/Ethernet. El guion completo se facilitará en clase / Aules (legado 25-26 disponible para el profesor en `archivo/2526/`).
 
 ---
 
@@ -388,7 +388,7 @@ En el **emisor**, cada capa añade su cabecera (**encapsulación**). En el **rec
 
 - Sitio del módulo: [fjavier-hernandez.github.io/ral](https://fjavier-hernandez.github.io/ral/)
 - Herramientas: [Excalidraw](https://excalidraw.com/), [Cisco Packet Tracer](https://www.netacad.com/es/cisco-packet-tracer)
-- Normas: [Normas del taller](normas_taller.md)
+- Normas: [Normas del taller](../00-normas/normas_taller.md)
 
 *[RA]: Resultado de aprendizaje  
 *[CE]: Criterio de evaluación  

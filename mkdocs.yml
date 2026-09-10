@@ -5,17 +5,17 @@ use_directory_urls: false
 
 # Solo se publica docs/ (nav mínima). Legado 25-26 en archivo/2526/ — fuera de docs.
 exclude_docs: |
-  guias/**
+  90-guias/**
 
 nav:
   - "Inicio": "index.md"
-  - "Normas del taller": "normas_taller.md"
-  - "1. Introducción. Arquitectura de redes": "tema01.md"
+  - "Normas del taller": "00-normas/normas_taller.md"
+  - "1. Introducción. Arquitectura de redes": "01-introduccion-arquitectura/index.md"
 
 theme:
   language: es
   name: "material"
-  favicon: "imagenes/ral.svg"
+  favicon: "img/ral.svg"
   palette:
     - scheme: javi
       toggle:
@@ -28,7 +28,7 @@ theme:
   font:
     text: Roboto
     code: Roboto Mono
-  logo: "./imagenes/ral.svg"
+  logo: "./img/ral.svg"
   features:
     - header.autohide
     - navigation.top

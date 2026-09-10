@@ -59,7 +59,7 @@ Las ^^competencias profesionales^^ asociadas al módulo:
 
 | Tema | Título | Alcance (borrador) | Estado material | RA principales |
 | ---: | --- | --- | --- | --- |
-| **1** | [Introducción. Arquitectura de redes](tema01.md) | Fusión UT1+UT2 25-26: tipos, componentes, topologías, OSI/TCP-IP | **Publicado** | RA1 |
+| **1** | [Introducción. Arquitectura de redes](01-introduccion-arquitectura/index.md) | Fusión UT1+UT2 25-26: tipos, componentes, topologías, OSI/TCP-IP | **Publicado** | RA1 |
 | **2** | Medios de transmisión y capa física | Par trenzado, fibra, Wi‑Fi básico, conectores; recorte de teoría excesiva | A crear (legado UT3) | RA2, RA3 |
 | **3** | Cableado estructurado y componentes | Racks, paneles, electrónica de red, normativa de edificio | A crear (legado UT4) | RA2, RA3, RA4 |
 | **4** | Capa de enlace | Tramas, MAC, switches, dominios; intro mínima a VLAN (1 línea) si hace falta | A adaptar (legado UT5) | RA1, RA4 |
@@ -120,7 +120,7 @@ Cada actividad indica el RA, los CE que trabaja y su escala. Codificación: pref
 ## Materiales
 
 - Este sitio MkDocs (Material).
-- [Normas del taller](normas_taller.md) — lectura obligatoria.
+- [Normas del taller](00-normas/normas_taller.md) — lectura obligatoria.
 - Aules (entregas y calificaciones).
 - Excalidraw y Cisco Packet Tracer (a partir del Tema 1).
 - Herramientas y cableado del taller (Temas 2–3 y Tema 9 / PRL).
@@ -130,8 +130,8 @@ Cada actividad indica el RA, los CE que trabaja y su escala. Codificación: pref
 | Página | Contenido |
 | --- | --- |
 | [Inicio](index.md) | Esta planificación |
-| [Normas del taller](normas_taller.md) | Resumen alumnado |
-| [Tema 1](tema01.md) | Introducción. Arquitectura de redes |
+| [Normas del taller](00-normas/normas_taller.md) | Resumen alumnado |
+| [Tema 1](01-introduccion-arquitectura/index.md) | Introducción. Arquitectura de redes |
 
 Los Temas 2–9 se irán publicando cuando estén listos. El legado 25-26 no se elimina: vive en `archivo/2526/` del repositorio (no en la nav).
 
