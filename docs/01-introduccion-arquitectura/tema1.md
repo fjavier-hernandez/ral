@@ -40,7 +40,7 @@ Trabajamos el **RA1** del módulo Redes de área local (0225):
 | Sesiones | Contenidos | Actividades |
 | --- | --- | --- |
 | 1 | Presentación del módulo + normas del taller + cuestionario inicial | Cuestionario (1–7) |
-| 2–3 | Componentes, tipos de redes, topologías | **PR101** (Excalidraw) |
+| 2–3 | Componentes, tipos de redes, topologías | **PR101** (diagrama: Excalidraw / draw.io / Dia) |
 | 4 | Transmisión básica y perturbaciones (nivel SMR) | AC102 |
 | 5–7 | Normalización, OSI / TCP-IP, encapsulación | AC103, AC104 |
 | 8–9 | Esquemas LAN; repaso | PR102 (Packet Tracer) cuando el grupo esté listo |
@@ -345,9 +345,15 @@ En el **emisor**, cada capa añade su cabecera (**encapsulación**). En el **rec
 ## Actividades
 
 !!! tip "Formato de entrega"
-    Entrega en Aules un PDF con nombre `AC1XX.pdf` o `PR1XX.pdf` (sustituye XX por el número). Respeta la fecha de vencimiento.
+    Las entregas en **Aules** son **obligatorias en Markdown** (`.md`). No se aceptan PDF.  
+    Nombre del archivo: `AC1XX.md` o `PR1XX.md` (sustituye XX por el número). Respeta la fecha de vencimiento.  
+    Escribiremos los `.md` con **Visual Studio Code**.
 
-### PR101 — Mapa físico y lógico (Excalidraw)
+    !!! note "Cómo empezar"
+        - Guía de Markdown: [tutorialmarkdown.com/guia](https://tutorialmarkdown.com/guia)
+        - Documentación de Visual Studio Code: [code.visualstudio.com/docs](https://code.visualstudio.com/docs)
+
+### PR101 — Mapa físico y lógico
 
 * :simple-neutralinojs: **PR101**. (RA1 // CE1c, CE1e, CE1f // **PR 0–10**). En grupo, diseñad el esquema de la empresa ficticia **TechSolutions**:
 
@@ -355,7 +361,9 @@ En el **emisor**, cada capa añade su cabecera (**encapsulación**). En el **rec
   - 1 servidor central.
   - Conexión a Internet mediante router.
 
-  **Tareas:** elegir topología; dibujar en [Excalidraw](https://excalidraw.com/); etiquetar medios (UTP, fibra, Wi‑Fi); justificar topología, medios y dispositivos; exposición breve (5 min).
+  **Tareas:** elegir topología; dibujar el mapa en [Excalidraw](https://excalidraw.com/), [draw.io](https://app.diagrams.net/) o [Dia](https://wiki.gnome.org/Apps/Dia) (cualquiera de las tres); etiquetar medios (UTP, fibra, Wi‑Fi); justificar topología, medios y dispositivos; exposición breve (5 min).
+
+  **Entrega:** el diagrama (export PNG/SVG o el archivo del editor, según se indique en Aules) **y** el `.md` de la práctica (`PR101.md`).
 
 | Criterio | Descripción | Puntos |
 | --- | --- | --- |
@@ -387,7 +395,9 @@ En el **emisor**, cada capa añade su cabecera (**encapsulación**). En el **rec
 ## Referencias rápidas
 
 - Sitio del módulo: [fjavier-hernandez.github.io/ral](https://fjavier-hernandez.github.io/ral/)
-- Herramientas: [Excalidraw](https://excalidraw.com/), [Cisco Packet Tracer](https://www.netacad.com/es/cisco-packet-tracer)
+- Diagramas: [Excalidraw](https://excalidraw.com/), [draw.io (diagrams.net)](https://app.diagrams.net/), [Dia](https://wiki.gnome.org/Apps/Dia)
+- Simulación: [Cisco Packet Tracer](https://www.netacad.com/es/cisco-packet-tracer)
+- Entregas: [Visual Studio Code](https://code.visualstudio.com/docs) + [Markdown](https://tutorialmarkdown.com/guia)
 - Normas: [Normas del taller](../00-normas/normas_taller.md)
 
 *[RA]: Resultado de aprendizaje  
