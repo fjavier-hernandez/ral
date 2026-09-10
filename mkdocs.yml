@@ -1,33 +1,16 @@
 site_name: Redes de Área Local
 site_description: Apuntes para el módulo profesional de Redes de Área Local del ciclo formativo de grado medio de Sistemas Microinformáticos y Redes.
-# site_author: Francisco Javier Hernández Illán
-# site_favicon: imagenes/ral.svg
 site_url: https://fjavier-hernandez.github.io/ral/
 use_directory_urls: false
 
+# Solo se publica docs/ (nav mínima). Legado 25-26 en archivo/2526/ — fuera de docs.
 exclude_docs: |
-  examen_capa_enlace_red.md
-  soluciones_ficha_repaso.md
-  examen_modelo_A.md
-  examen_modelo_B.md
+  guias/**
 
 nav:
   - "Inicio": "index.md"
-  - "1. Introducción a las redes": "01ir.md"
-  - "2. Arquitecturas de redes": "02arquitecturas.md"
-  - "3. Capa física": "03fisica.md"
-  - "4. Sistemas de Cableado estructurado": "04estructurado.md"
-  - "5. Capa de Enlace": "05enlace.md"
-  - "6. Capa de red": "06red.md"
-  - "7. Enrutamiento, Subnetting y VLANs": "07enrutamiento.md"
-  # - "7. Capa de red": "00CapaRed.md"
-  - "8. Capa de transporte": "08transporte.md"
-  - "9. NAT y Protocolo IPv6": "09nat_ipv6.md"
-  # - "10. Capa de aplicación": "10aplicacion.md"
-  # - "11. Resolución de conflictos en una red local": "11conflictos.md"
-  # - "12. Protección, vigilancia y soporte de redes": "12proteccion.md"
-
-  # - Tags: "tags.md"
+  - "Normas del taller": "normas_taller.md"
+  - "1. Introducción. Arquitectura de redes": "tema01.md"
 
 theme:
   language: es
@@ -35,14 +18,10 @@ theme:
   favicon: "imagenes/ral.svg"
   palette:
     - scheme: javi
-      #primary: light blue
-      #accent: "Teal"
       toggle:
         icon: material/toggle-switch-off-outline
         name: Cambiar a modo noche
-    - scheme: slate 
-      #primary: light blue
-      #accent: "Teal"
+    - scheme: slate
       toggle:
         icon: material/toggle-switch
         name: Cambiar a modo día
@@ -60,9 +39,7 @@ theme:
     - announce.dismiss
     - toc.follow
     - content.code.copy
-    # - header.autohide
-    # - toc.integrate
-    # - navigation.indexes
+
 extra_css:
   - stylesheets/extra.css
 
@@ -101,11 +78,6 @@ plugins:
       include_css: false
       exclude:
         - "tags.md"
-        - "relacion.md"
-        - "satisfaccion.md"
-        - "vocabulari.md"
-        - "validacion.md"
-        - "anexos/*"
 
 markdown_extensions:
   - abbr
@@ -114,7 +86,7 @@ markdown_extensions:
   - footnotes
   - md_in_html
   - meta
-  - pymdownx.details  
+  - pymdownx.details
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.highlight:
@@ -135,12 +107,9 @@ markdown_extensions:
   - pymdownx.mark
   - pymdownx.tilde
   - pymdownx.keys
-  - pymdownx.snippets:
-      auto_append:
-        - includes/ra.md
   - sane_lists
   - toc:
       permalink: true
       toc_depth: 4
 
-copyright: 2025-2026 Francisco Javier Hernández Illán - <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es">Licencia CC BY-NC-SA</a>
+copyright: 2026-2027 Francisco Javier Hernández Illán - <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es">Licencia CC BY-NC-SA</a>

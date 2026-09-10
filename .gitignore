@@ -1,9 +1,8 @@
 site/
 .cache/
 .DS_Store
-
 node_modules/
 package-lock.json
 mermaid-filter.err
-.DS_Store
 Extra/__pycache__/
+__pycache__/
