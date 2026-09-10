@@ -1,15 +1,12 @@
 ---
 title: Normas del taller
-description: Normas básicas del taller de SMR (resumen para el alumnado de RAL)
+description: Normas de uso del taller de SMR
 hide: toc
 ---
 
 # Normas del taller
 
-Normas de uso del **taller de SMR** del [IES Macià Abela](https://portal.edu.gva.es/iesmaciaabela/). Este documento es un **resumen para el alumnado**.
-
-!!! info "Documento canónico"
-    El texto completo y de referencia del centro es **Normas_Taller_SMR.md** (carpeta Taller / Inventario TIC del IES). Ante duda, prevalece el documento canónico del centro.
+Normas de uso del **taller de SMR** del [IES Macià Abela](https://portal.edu.gva.es/iesmaciaabela/).
 
 ## 1. Material y puesto asignado
 

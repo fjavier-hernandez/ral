@@ -10,7 +10,7 @@ exclude_docs: |
 nav:
   - "Inicio": "index.md"
   - "Normas del taller": "00-normas/normas_taller.md"
-  - "1. Introducción. Arquitectura de redes": "01-introduccion-arquitectura/index.md"
+  - "1. Introducción. Arquitectura de redes": "01-introduccion-arquitectura/tema1.md"
 
 theme:
   language: es

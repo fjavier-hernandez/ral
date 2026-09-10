@@ -5,10 +5,10 @@ description: Tipos, componentes y topologías de redes; normalización; modelos 
 
 # Tema 1. Introducción. Arquitectura de redes
 
-Este tema fusiona y recorta lo que en el curso 2025-26 eran la **UT1 (Introducción a las redes)** y la **UT2 (Arquitecturas de redes)**. El objetivo es salir de las primeras semanas con un mapa claro de qué es una LAN, qué dispositivos hay y **por qué** se organizan las comunicaciones en capas (OSI / TCP-IP).
+En este tema construimos un mapa claro de qué es una **LAN**, qué **dispositivos** intervienen y **por qué** las comunicaciones se organizan en capas (modelos OSI y TCP/IP).
 
 !!! tip "Primera clase"
-    Empieza por el [cuestionario inicial](#cuestionario-inicial) (preguntas 1–7). No hace falta estudiar el tema completo antes; el cuestionario sirve de diagnóstico.
+    Empieza por el [cuestionario inicial](#cuestionario-inicial) (preguntas 1–7). No hace falta estudiar el tema completo antes: el cuestionario sirve para ver qué sabes al empezar.
 
 ## Propuesta didáctica
 
@@ -65,7 +65,7 @@ Trabajamos el **RA1** del módulo Redes de área local (0225):
     11. ¿Qué es una DMZ y para qué se utiliza en una red local?
 
 !!! warning "Soluciones"
-    Las soluciones del cuestionario **no se publican** en el sitio del alumnado. Se trabajan en clase o se entregan en Aules cuando proceda.
+    Las soluciones se trabajan en clase o se publican en Aules cuando proceda.
 
 ---
 
@@ -380,7 +380,7 @@ En el **emisor**, cada capa añade su cabecera (**encapsulación**). En el **rec
 
 ### PR102 — Modelos en Packet Tracer (cuando toque)
 
-* :simple-cisco: **PR102**. (RA1 // CE1a, CE1c // **PR 0–10**). Simulación en Packet Tracer: observar encapsulación HTTP/TCP/IP/Ethernet. El guion completo se facilitará en clase / Aules (legado 25-26 disponible para el profesor en `archivo/2526/`).
+* :simple-cisco: **PR102**. (RA1 // CE1a, CE1c // **PR 0–10**). Simulación en Packet Tracer: observar encapsulación HTTP/TCP/IP/Ethernet. El guion completo se facilitará en clase / Aules.
 
 ---
 
