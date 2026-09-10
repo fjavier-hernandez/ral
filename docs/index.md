@@ -6,9 +6,9 @@ hide: toc
 
 # Redes de área local
 
-Apuntes y organización docente del módulo **0225 — Redes de área local** del CFGM de *Sistemas Microinformáticos y Redes* (SMR), conforme al [Real Decreto 1691/2007](https://www.boe.es/diario_boe/txt.php?id=BOE-A-2008-819), impartido en el [IES Macià Abela](https://portal.edu.gva.es/iesmaciaabela/) de Crevillent.
+Apuntes y organización del módulo **0225 — Redes de área local** del CFGM de *Sistemas Microinformáticos y Redes* (SMR), conforme al [Real Decreto 1691/2007](https://www.boe.es/diario_boe/txt.php?id=BOE-A-2008-819), impartido en el [IES Macià Abela](https://portal.edu.gva.es/iesmaciaabela/) de Crevillent.
 
-**Curso 2026-2027.** Sitio vivo: solo se publica lo necesario para el momento del curso. El material del curso 2025-26 está archivado en el repositorio (`archivo/2526/`), no en la navegación pública.
+**Curso 2026-2027.** En este sitio encontrarás la planificación del módulo y los temas que vayamos publicando a lo largo del curso.
 
 ## Competencias profesionales
 
@@ -32,20 +32,20 @@ Las ^^competencias profesionales^^ asociadas al módulo:
 
 | Código | Descripción | Peso (%) |
 | ------ | ----------- | -------- |
-| RA1 | Reconoce la estructura de redes locales cableadas analizando las características de entornos de aplicación y describiendo la funcionalidad de sus componentes. | 15 |
+| RA1 | Reconoce la estructura de redes locales cableadas analizando las características de entornos de aplicación y describiendo la funcionalidad de sus componentes. | 20 |
 | RA2 | Despliega el cableado de una red local interpretando especificaciones y aplicando técnicas de montaje. | 15 |
 | RA3 | Interconecta equipos en redes locales cableadas describiendo estándares de cableado y aplicando técnicas de montaje de conectores. | 20 |
-| RA4 | Instala equipos en red, describiendo sus prestaciones y aplicando técnicas de montaje. | 20 |
-| RA5 | Mantiene una red local interpretando recomendaciones de los fabricantes de hardware o software y estableciendo la relación entre disfunciones y sus causas. | 15 |
-| RA6 | Cumple las normas de prevención de riesgos laborales y de protección ambiental, identificando los riesgos asociados, las medidas y equipos para prevenirlos. | 15 |
+| RA4 | Instala equipos en red, describiendo sus prestaciones y aplicando técnicas de montaje. | 25 |
+| RA5 | Mantiene una red local interpretando recomendaciones de los fabricantes de hardware o software y estableciendo la relación entre disfunciones y sus causas. | 10 |
+| RA6 | Cumple las normas de prevención de riesgos laborales y de protección ambiental, identificando los riesgos asociados, las medidas y equipos para prevenirlos. | 10 |
 
-!!! note "Pesos"
-    Partida 15 / 15 / 20 / 20 / 15 / 15 (alineada con la PD 25-26). Se revisarán si el horario definitivo o la cobertura real de CE lo exigen.
+!!! note "Pesos provisionales"
+    Partida **20 / 15 / 20 / 25 / 10 / 10** (suma 100 %). Se confirmará durante el curso según las actividades reales.
 
-## Carga horaria (provisional 2026-27)
+## Carga horaria
 
-!!! warning "Provisional — citar PD 25-26 hasta horario / FE definitivos"
-    Según la **programación didáctica 2025-26** del módulo:
+!!! warning "Provisional"
+    Distribución de horas del módulo (sujeta a horario y formación en empresa definitivos):
 
     | Concepto | Horas |
     | --- | ---: |
@@ -53,21 +53,19 @@ Las ^^competencias profesionales^^ asociadas al módulo:
     | Formación en el **centro** | **133 h** |
     | Formación en **empresa (FE)** | **100 h** |
 
-    El calendario escolar 2026-27 y la distribución exacta de sesiones semanales / FE se actualizarán cuando estén fijados. **No** se usan aquí las cifras contradictorias del index antiguo (196 h, 28 semanas, “10 semanas dual”, etc.).
+## Temas del curso
 
-## Temas del curso (exactamente 9)
-
-| Tema | Título | Alcance (borrador) | Estado material | RA principales |
+| Tema | Título | Qué trabajamos | Estado | RA principales |
 | ---: | --- | --- | --- | --- |
-| **1** | [Introducción. Arquitectura de redes](01-introduccion-arquitectura/index.md) | Fusión UT1+UT2 25-26: tipos, componentes, topologías, OSI/TCP-IP | **Publicado** | RA1 |
-| **2** | Medios de transmisión y capa física | Par trenzado, fibra, Wi‑Fi básico, conectores; recorte de teoría excesiva | A crear (legado UT3) | RA2, RA3 |
-| **3** | Cableado estructurado y componentes | Racks, paneles, electrónica de red, normativa de edificio | A crear (legado UT4) | RA2, RA3, RA4 |
-| **4** | Capa de enlace | Tramas, MAC, switches, dominios; intro mínima a VLAN (1 línea) si hace falta | A adaptar (legado UT5) | RA1, RA4 |
-| **5** | Capa de red | IPv4, máscaras, CIDR, ARP, ICMP, DHCP | A adaptar (legado UT6) | RA1, RA4 |
-| **6** | Enrutamiento, subnetting y VLANs | **Único sitio fuerte de VLAN**; subnetting, supernetting, rutas | A adaptar (legado UT7) | RA3, RA4 |
-| **7** | Capa de transporte | Puertos, TCP/UDP, herramientas básicas | A adaptar (legado UT8) | RA4, RA5 |
-| **8** | NAT e IPv6 | NAT/PAT e IPv6 a nivel SMR | A adaptar (legado UT9) | RA4, RA5 |
-| **9** | Servicios, diagnóstico y protección | Fusión planificada de antiguas UT10+UT11+UT12: aplicación + conflictos/diagnóstico + protección/**PRL** | **A crear** (sin material 25-26) | RA5, RA6 |
+| **1** | [Introducción. Arquitectura de redes](01-introduccion-arquitectura/tema1.md) | Tipos de redes, componentes, topologías, modelos OSI y TCP/IP | **Publicado** | RA1 |
+| **2** | Medios de transmisión y capa física | Par trenzado, fibra, Wi‑Fi básico y conectores | Próximamente | RA2, RA3 |
+| **3** | Cableado estructurado y componentes | Racks, paneles, electrónica de red y normativa de edificio | Próximamente | RA2, RA3, RA4 |
+| **4** | Capa de enlace | Tramas, direcciones MAC, switches y dominios de colisión/difusión | Próximamente | RA1, RA4 |
+| **5** | Capa de red | IPv4, máscaras, CIDR, ARP, ICMP y DHCP | Próximamente | RA1, RA4 |
+| **6** | Enrutamiento, subnetting y VLANs | Subnetting, supernetting, rutas estáticas y VLANs | Próximamente | RA3, RA4 |
+| **7** | Capa de transporte | Puertos, TCP/UDP y herramientas básicas | Próximamente | RA4, RA5 |
+| **8** | NAT e IPv6 | Traducción de direcciones (NAT/PAT) e introducción a IPv6 | Próximamente | RA4, RA5 |
+| **9** | Servicios, diagnóstico y protección | Servicios de aplicación, diagnóstico de averías, protección y PRL | Próximamente | RA5, RA6 |
 
 ### Mapa tema × RA
 
@@ -82,11 +80,11 @@ Las ^^competencias profesionales^^ asociadas al módulo:
 | 7. Capa de transporte | | | | X | X | |
 | 8. NAT e IPv6 | | | | X | X | |
 | 9. Servicios, diagnóstico y protección | | | | | X | X |
-| **Peso** | 15 % | 15 % | 20 % | 20 % | 15 % | 15 % |
+| **Peso** | 20 % | 15 % | 20 % | 25 % | 10 % | 10 % |
 
 ``` mermaid
 timeline
-    title Planificación temporal — RAL 2026-27 (borrador)
+    title Planificación temporal — RAL 2026-27
     section 1ª Evaluación
         Fundamentos : T1 Introducción y arquitectura : T2 Medios y capa física : T3 Cableado y componentes
     section 2ª Evaluación
@@ -95,12 +93,12 @@ timeline
         Servicios y cierre : T7 Transporte : T8 NAT e IPv6 : T9 Diagnóstico y protección
 ```
 
-!!! tip "Núcleo evaluable (aprendizaje del curso pasado)"
-    Enlace / IP / subnetting / VLAN concentran gran parte de la evaluación útil. Se adelantan en 2.ª evaluación para no acumular al final. El Tema 9 cubre el hueco de **diagnóstico (RA5)** y **PRL (RA6)** que en 25-26 quedó sin material propio.
+!!! tip "Núcleo del curso"
+    Enlace, direccionamiento IP, subnetting y VLANs concentran una parte importante de la evaluación. Se trabajan en la 2.ª evaluación para consolidarlos con tiempo. El Tema 9 cierra el curso con **diagnóstico (RA5)** y **prevención de riesgos (RA6)**.
 
 ## Evaluación
 
-La evaluación **no es criterial por CE suelto**: se califican los **RA** mediante medias ponderadas de los instrumentos asignados a cada RA, comprobando que se cubren los CE trabajados en las actividades. **Los RA no son compensables entre sí** (alineado con la PD anterior / instrucciones del departamento).
+La evaluación se organiza por **resultados de aprendizaje (RA)**. Cada RA se califica con la media ponderada de los instrumentos que lo evalúan, comprobando que se cubren los criterios de evaluación (CE) trabajados en las actividades. **Los RA no son compensables entre sí.**
 
 ### Instrumentos de evaluación (IE)
 
@@ -119,26 +117,25 @@ Cada actividad indica el RA, los CE que trabaja y su escala. Codificación: pref
 
 ## Materiales
 
-- Este sitio MkDocs (Material).
+- Este sitio web de apuntes.
 - [Normas del taller](00-normas/normas_taller.md) — lectura obligatoria.
 - Aules (entregas y calificaciones).
 - Excalidraw y Cisco Packet Tracer (a partir del Tema 1).
-- Herramientas y cableado del taller (Temas 2–3 y Tema 9 / PRL).
+- Herramientas y cableado del taller (Temas 2–3 y Tema 9).
 
-## Publicación actual
+## Contenidos publicados
 
 | Página | Contenido |
 | --- | --- |
-| [Inicio](index.md) | Esta planificación |
-| [Normas del taller](00-normas/normas_taller.md) | Resumen alumnado |
-| [Tema 1](01-introduccion-arquitectura/index.md) | Introducción. Arquitectura de redes |
+| [Inicio](index.md) | Planificación del módulo |
+| [Normas del taller](00-normas/normas_taller.md) | Normas de uso del taller |
+| [Tema 1](01-introduccion-arquitectura/tema1.md) | Introducción. Arquitectura de redes |
 
-Los Temas 2–9 se irán publicando cuando estén listos. El legado 25-26 no se elimina: vive en `archivo/2526/` del repositorio (no en la nav).
+Los Temas 2–9 se irán publicando cuando llegue el momento de trabajarlos.
 
 *[CFGM]: Ciclo Formativo de Grado Medio  
 *[SMR]: Sistemas Microinformáticos y Redes  
 *[RA]: Resultado de aprendizaje  
 *[CE]: Criterio de evaluación  
 *[IE]: Instrumento de evaluación  
-*[FE]: Formación en empresa  
-*[PD]: Programación didáctica
+*[FE]: Formación en empresa
