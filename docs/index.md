@@ -115,12 +115,20 @@ Opcionales de refuerzo / profundización (si se usan): AR / AP, sin sustituir lo
 
 Cada actividad indica el RA, los CE que trabaja y su escala. Codificación: prefijo del IE + número de tema (ej. `AC102` = actividad de clase 02 del Tema 1; `PR101` = práctica 01 del Tema 1).
 
+Las entregas en Aules son **obligatorias en Markdown** (`.md`). No se aceptan PDF.
+
+!!! note "Cómo empezar con Markdown y VS Code"
+    - Guía de Markdown: [tutorialmarkdown.com/guia](https://tutorialmarkdown.com/guia)
+    - Documentación de Visual Studio Code: [code.visualstudio.com/docs](https://code.visualstudio.com/docs)
+
 ## Materiales
 
 - Este sitio web de apuntes.
 - [Normas del taller](00-normas/normas_taller.md) — lectura obligatoria.
-- Aules (entregas y calificaciones).
-- Excalidraw y Cisco Packet Tracer (a partir del Tema 1).
+- Aules (entregas en `.md` y calificaciones).
+- Diagramas: [Excalidraw](https://excalidraw.com/), [draw.io (diagrams.net)](https://app.diagrams.net/) o [Dia](https://wiki.gnome.org/Apps/Dia).
+- Simulación: [Cisco Packet Tracer](https://www.netacad.com/es/cisco-packet-tracer).
+- Editor de entregas: Visual Studio Code + Markdown.
 - Herramientas y cableado del taller (Temas 2–3 y Tema 9).
 
 ## Contenidos publicados
