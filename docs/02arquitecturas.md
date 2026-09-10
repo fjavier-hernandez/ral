@@ -48,6 +48,9 @@ En esta unidad trabajamos el **RA1 de RAL**:
     8. ¿Qué es una DMZ y para qué se utiliza en una red local?
     9. ¿Qué diferencias hay entre conmutación y difusión en el uso del medio?
 
+**Consulta las [soluciones razonadas a este cuestionario inicial aquí](soluciones_cuestionario_inicial2.md).**
+
+
 ## Programación de Aula (12h)
 
 Esta unidad se imparte en la primera evaluación, con una duración estimada de 12 sesiones lectivas, durante la primera quincena de octubre:

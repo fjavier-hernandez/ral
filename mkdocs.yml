@@ -5,17 +5,24 @@ site_description: Apuntes para el módulo profesional de Redes de Área Local de
 site_url: https://fjavier-hernandez.github.io/ral/
 use_directory_urls: false
 
+exclude_docs: |
+  examen_capa_enlace_red.md
+  soluciones_ficha_repaso.md
+  examen_modelo_A.md
+  examen_modelo_B.md
+
 nav:
   - "Inicio": "index.md"
   - "1. Introducción a las redes": "01ir.md"
   - "2. Arquitecturas de redes": "02arquitecturas.md"
   - "3. Capa física": "03fisica.md"
-  # - "4. Sistemas de Cableado estructurado": "04estructurado.md"
-  # - "5. Capa de Enlace": "05enlace.md"
-  # - "6. Capa de red": "06red.md"
-  # - "7. Enrutamiento, Subnetting y VLANs": "07enrutamiento.md"
-  # - "8. Capa de transporte": "08transporte.md"
-  # - "9. NAT y Protocolo IPv6": "09nat_ipv6.md"
+  - "4. Sistemas de Cableado estructurado": "04estructurado.md"
+  - "5. Capa de Enlace": "05enlace.md"
+  - "6. Capa de red": "06red.md"
+  - "7. Enrutamiento, Subnetting y VLANs": "07enrutamiento.md"
+  # - "7. Capa de red": "00CapaRed.md"
+  - "8. Capa de transporte": "08transporte.md"
+  - "9. NAT y Protocolo IPv6": "09nat_ipv6.md"
   # - "10. Capa de aplicación": "10aplicacion.md"
   # - "11. Resolución de conflictos en una red local": "11conflictos.md"
   # - "12. Protección, vigilancia y soporte de redes": "12proteccion.md"

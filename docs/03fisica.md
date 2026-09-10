@@ -97,6 +97,10 @@ En esta unidad trabajamos los **RA2, RA3 y RA4 de RAL**:
     8. ¿Qué tipos de conectores se utilizan para cable de par trenzado?
     9. ¿Cómo se realiza la terminación de cables según los estándares T568A y T568B?
 
+[Consulta aquí las soluciones del cuestionario inicial de la capa física](soluciones_cuestionario_inicial3.md)
+
+
+
 ## Programación de Aula (15h)
 
 Esta unidad se imparte en la primera evaluación, con una duración estimada de 15 sesiones lectivas:
@@ -1284,7 +1288,51 @@ El **5G** promete ser mucho más rápido que el 4G actual, permitiendo:
 
     **Formato de entrega**: Documento PDF con capturas de pantalla de la herramienta interactiva, mapas anotados y análisis detallado de cada punto requerido.
 
+<a name="PR308"></a>
+
+* :simple-cisco: **PR308**. (RA2 // CE2a, CE2b, CE2c // 1-10p).  
+Como futuros técnicos en *Sistemas Microinformáticos y Redes*, el alumnado debe aprender a **identificar y trabajar con los componentes físicos de la capa de red** mediante la simulación práctica.  
+En esta actividad individual, deberás utilizar **Cisco Packet Tracer** para explorar las características físicas de los dispositivos de interconexión de redes, seleccionar los módulos correctos para la conectividad y realizar conexiones entre dispositivos utilizando los tipos de cable adecuados.
+
+> 🏢 **Escenario**
+
+- **Router Este**: Dispositivo con interfaces LAN y WAN configuradas
+- **Switches**: Switch1, Switch2, Switch3 y Switch4 con diferentes capacidades
+- **PCs**: 9 equipos cliente para conectar a la red
+- **Access Point**: Para conectividad inalámbrica
+- **Dispositivos móviles**: Portátil y TabletPC con capacidades inalámbricas y celulares
+
+> 🛠️ **Tareas**
+
+1. **Identificar características físicas de dispositivos**:
+   - Examinar puertos de administración en routers
+   - Identificar interfaces LAN y WAN disponibles
+   - Verificar ranuras de expansión para módulos
+
+2. **Seleccionar módulos de expansión**:
+   - Determinar qué módulos proporcionan la conectividad requerida
+   - Insertar módulos en dispositivos (requiere apagar dispositivos para módulos no intercambiables en caliente)
+   - Verificar la correcta inserción mediante comandos CLI
+
+3. **Conectar dispositivos**:
+   - Utilizar diferentes tipos de cables (directo, cruzado, fibra, serial)
+   - Conectar PCs, switches, routers y access points según tabla de especificaciones
+   - Verificar conexiones mediante comandos de estado de interfaz
+
+4. **Verificar conectividad**:
+   - Comprobar estado de interfaces mediante `show ip interface brief`
+   - Configurar y verificar conectividad inalámbrica (WiFi y 3G/4G)
+   - Probar acceso web desde diferentes dispositivos
+
+> 🧰 **Herramientas**
+
+- [Cisco Packet Tracer](packetracer.md)
+- [Ver práctica completa: Conectar la Capa Física](practica_conectar_capa_fisica.md)
+- Aules
+
 ---
+
+
 
 <!-- ## 📝 Revisar:
 
@@ -1535,336 +1583,6 @@ La tecnología **MIMO** (Multiple Input, Multiple Output) es una técnica de com
 </figure> -->
 
 <!-- 
-## ⚙️ Electrónica de red
-
-Se entiende por **electrónica de red** cualquier dispositivo de la red que cumple una función específica, y que habitualmente puede configurarse para que esta función varíe.
-
-Es común que la electrónica de red se concentre en los armarios de distribución, pero no siempre es así. En unos casos por motivos de infraestructura y en otros por propia operatividad de los dispositivos, los elementos de electrónica de red pueden encontrarse en cualquier punto de la red.
-
-A continuación detallamos algunos de los principales elementos de electrónica de red.
-
-### 📡 Repetidor
-
-El **repetidor** es uno de los elementos de electrónica de red más simples. Su función es captar una señal y enviarla, sin darle ningún tratamiento más allá de la amplificación. Por este motivo, el repetidor trabaja en la **capa 1** del modelo OSI.
-
-En una red utilizaremos repetidores cuando, por el motivo que sea, haya zonas de la red donde la señal no llegue con suficiente potencia. De esta manera se puede ampliar muy fácilmente el radio de acción de una red.
-
-Es extraño encontrar repetidores rackeables. De hecho, cuando se colocan en el armario de distribución es en combinación con otros elementos de electrónica de red.
-
-#### 📶 Aplicación en redes inalámbricas
-
-La aplicación más conocida de los repetidores es amplificar la cobertura en redes inalámbricas. En este caso, el repetidor se ubica en un punto estratégico de la red que garantice que los equipos a los que se pretende dar cobertura reciban adecuadamente la señal.
-
-Hay que evitar que en la red haya zonas de sombra y puntos muertos, donde la señal no llegue o llegue con deficiencia. El repetidor suele colocarse pues en zonas céntricas y bien comunicadas con los equipos a los que se va a dar servicio, así como con el dispositivo emisor de la señal a replicar.
-
-El repetidor inalámbrico dispone de al menos una antena y una conexión de entrada RJ-45. Se puede utilizar de dos formas:
-
-- **Con vínculo inalámbrico**: en cuyo caso la red que se quiere ampliar debe disponer de un elemento emisor al que se enlace el repetidor para amplificar la señal.
-- **Con extensión cableada**: siendo el repetidor un dispositivo que está en el extremo de la red que se quiere ampliar.
-
-<figure>
-  <img src="./imagenes/repetidor_wifi_poe.png" alt="Repetidor WiFi">
-  <figcaption>Repetidor WiFi con alimentación PoE</figcaption>
-</figure>
-
-<figure>
-  <img src="./imagenes/repetidor_modos.png" alt="Modos de repetidor">
-  <figcaption>Modos de uso del repetidor: inalámbrico y cableado</figcaption>
-</figure>
-
-### 🔗 Concentrador (Hub)
-
-El **concentrador** (o hub) es un dispositivo empleado para vincular tramos de red, favoreciendo la ampliación de redes.
-
-Existe tanto en formato rackeable (ocupa 1 U) como independiente, aunque en ambos casos está en desuso.
-
-El modelo más típico para redes es, como sucedía con los paneles de parcheo, de conexiones RJ-45. Sin embargo, hay hubs de muchos tipos de conexiones: coaxial, USB, HDMI, etc.
-
-<figure>
-  <img src="./imagenes/concentrador_hub.png" alt="Concentrador Hub">
-  <figcaption>Concentrador o hub para interconexión de equipos</figcaption>
-</figure>
-
-El hub Ethernet tiene entre 4 y 48 tomas RJ-45. Los modelos rackeables tienen al menos 16 tomas RJ-45, con una toma especial en uno de los extremos, marcada como **Up-Link**.
-
-En algunos modelos de concentrador, la toma Up-Link se comparte con una toma convencional; en este caso, se dispone también de un botón en el dispositivo que permite conmutar el estado de la toma entre los modos convencional y Up-Link.
-
-<figure>
-  <img src="./imagenes/hub_uplink.png" alt="Hub con Up-Link">
-  <figcaption>Detalle de la toma Up-Link mediante botón conmutador</figcaption>
-</figure>
-
-La finalidad de la toma Up-Link es vincular dos hubs para poder extender la red. A esta operación se la denomina poner los hub en cascada y puede hacerse de dos maneras:
-
-- **Con cable directo**: utilizando la toma Up-Link
-- **Con cable cruzado**: utilizando tomas convencionales
-
-<figure>
-  <img src="./imagenes/hub_cascada_directo.png" alt="Cascada con cable directo">
-  <figcaption>Conexión en cascada de hubs con cable directo</figcaption>
-</figure>
-
-<figure>
-  <img src="./imagenes/hub_cascada_cruzado.png" alt="Cascada con cable cruzado">
-  <figcaption>Conexión en cascada de hubs con cable cruzado</figcaption>
-</figure>
-
-Un hub, que trabaja en la **capa 1** del modelo OSI, funciona de forma parecida al repetidor: toda la información que llega a él proveniente de un equipo se replica a todas las tomas con cable, llegando así a todos los equipos conectados, de forma directa o indirecta, a la red.
-
-El hecho de que no funcione en redes por encima de Fast-Ethernet (100 Mbps), unido al alto tráfico que produce en la red, con los consiguientes problemas de seguridad, hicieron que se reemplazase por el conmutador o switch, que estudiaremos a continuación.
-
-### 🔄 Conmutador (Switch)
-
-El **conmutador** (o switch) es un dispositivo cuya función es interconectar varios segmentos de red.
-
-Al contrario que el hub, el switch opera en la **capa 2** del modelo OSI, y tiene la capacidad de interpretar la dirección de destino de los paquetes de información que llegan a él, y remitirlos al segmento que les corresponda.
-
-<figure>
-  <img src="./imagenes/switch_funcionamiento.png" alt="Funcionamiento del switch">
-  <figcaption>Funcionamiento de un switch mostrando la conmutación de paquetes</figcaption>
-</figure>
-
-El switch integra un mecanismo de autoaprendizaje que le permite construir tablas con las direcciones MAC de los equipos presentes en cada segmento de red.
-
-Cuando se envía un paquete de un segmento a otro, el switch lo detecta y lo deriva al segmento correspondiente. Cuando el equipo de destino está en el mismo segmento, el dispositivo lo detecta e impide que pase a otros segmentos. De esta manera se reduce considerablemente el tráfico en la red.
-
-Este dispositivo se aplica típicamente a redes con topología de estrella y de árbol.
-
-#### 🔌 Características del switch
-
-Podemos encontrar conmutadores de cable coaxial o incluso de fibra óptica, pero los más comunes son los de cable de par trenzado, con grupos de 4 tomas RJ-45.
-
-<figure>
-  <img src="./imagenes/switch_8_puertos.png" alt="Switch de 8 puertos">
-  <figcaption>Switch de 8 puertos RJ-45 para pequeñas redes</figcaption>
-</figure>
-
-<figure>
-  <img src="./imagenes/switch_48_puertos.png" alt="Switch de 48 puertos">
-  <figcaption>Switch rackeable de 48 puertos RJ-45 para redes empresariales</figcaption>
-</figure>
-
-El switch puede ser independiente o rackeable. Los switches rackeables, como sucedía con los concentradores, tienen más puertos y, frecuentemente, también más prestaciones. El switch rackeable ocupa de 2 U a 8 U, según el número de tomas y las prestaciones que tenga. Los más habituales tienen 24, 32 o 48 tomas.
-
-<figure>
-  <img src="./imagenes/switch_rackeable_24.png" alt="Switch rackeable 24 puertos">
-  <figcaption>Switch rackeable de 24 puertos con conexiones mixtas</figcaption>
-</figure>
-
-<figure>
-  <img src="./imagenes/switch_rackeable_48.png" alt="Switch rackeable 48 puertos">
-  <figcaption>Switch rackeable de 48 puertos para centros de datos</figcaption>
-</figure>
-
-<figure>
-  <img src="./imagenes/switch_detalle_puertos.png" alt="Detalle puertos switch">
-  <figcaption>Detalle de cuatro puertos Gigabit-Ethernet: dos RJ-45 y dos de fibra óptica</figcaption>
-</figure>
-
-Otra característica interesante del switch es que puede trabajar a varias velocidades. Las más comunes son 10/100 (Ethernet/Fast-Ethernet), pero algunos ofrecen tomas especiales para Gigabit-Ethernet.
-
-Algunos modelos de switch disponen de una o dos tomas de fibra óptica. Estos dispositivos pueden enlazar segmentos de red construidos en cable de par trenzado con segmentos de fibra óptica, o también vincular tramos de red utilizando fibra óptica como medio de conexión, lo cual puede ser muy útil en algunas instalaciones.
-
-#### 🔗 Interconexión de switches
-
-Dos o más switches pueden vincularse para formar un grupo de concentradores utilizando una de las siguientes opciones:
-
-##### 🔗 Conexionado tradicional
-
-Utilizando latiguillos de cable de par trenzado o fibra, según las características del switch. Esta técnica puede aplicarse a cualquier modelo de switch, siempre que tenga tomas suficientes para ello.
-
-En este caso, la vinculación entre switches puede seguir la topología de estrella (se utiliza un switch como principal, donde se conectan los demás) o de árbol. Sin embargo, lo más habitual es una topología híbrida, donde algunos switches pueden llegar a formar anillos.
-
-<figure>
-  <img src="./imagenes/switches_estrella.png" alt="Switches en estrella">
-  <figcaption>Switches conectados en topología de estrella</figcaption>
-</figure>
-
-<figure>
-  <img src="./imagenes/switches_cadena.png" alt="Switches en cadena">
-  <figcaption>Switches conectados en cadena</figcaption>
-</figure>
-
-##### ⚡ Conexionado de alta velocidad (Stack)
-
-Utilizando los módulos de alta velocidad que algunos modelos tienen en su parte trasera. En este caso, el grupo de switches se denomina **stack** (pila). Para interconectar estos switches se utiliza un cable específico, y puede hacerse de dos formas: en cadena o en anillo (una cadena donde el último switch se vincula con el primero).
-
-<figure>
-  <img src="./imagenes/stack_anillo.png" alt="Stack en anillo">
-  <figcaption>Switches conectados en stack con topología de anillo</figcaption>
-</figure>
-
-<figure>
-  <img src="./imagenes/stack_cadena.png" alt="Stack en cadena">
-  <figcaption>Switches conectados en stack con topología de cadena</figcaption>
-</figure>
-
-<figure>
-  <img src="./imagenes/cable_alta_velocidad.png" alt="Cable alta velocidad">
-  <figcaption>Cable para conexionado de alta velocidad entre switches</figcaption>
-</figure>
-
-#### 🎛️ Switch gestionable
-
-El switch tiene la capacidad de ofrecer prestaciones que no corresponden a la capa 2 del modelo OSI. En este caso hablamos de lo que se conoce como **switch gestionable** (managed switch).
-
-Un switch gestionable incorpora características como la gestión de la red, seguridad, fiabilidad, control del rendimiento, etc. Cuando un switch gestionable tiene, por ejemplo, prestaciones propias de capa 3, se dice que es un **switch de capa 3** (o de nivel 3). Esto se podría aplicar a otras capas de la misma manera.
-
-<figure>
-  <img src="./imagenes/switch_gestionable.png" alt="Switch gestionable">
-  <figcaption>Switch gestionable con funciones avanzadas de capa 3</figcaption>
-</figure>
-
-### 🌉 Puente de red (Bridge)
-
-El **puente de red** (o bridge) es un dispositivo empleado para interconectar varios segmentos de red.
-
-En esencia, un bridge es como un switch. La diferencia esencial es que el bridge tiene muchos menos puertos, no se puede gestionar ni configurar y no existe en formato rackeable.
-
-Dado que el switch ofrece mejores prestaciones, y es más adecuado para redes medias y grandes, el bridge se reserva para casos muy concretos. Como veremos más adelante, la función del bridge se integra en electrónica de red inalámbrica.
-
-Un bridge puede ser de dos tipos:
-
-- **Transparente**: hace que equipos de diferentes segmentos de la red actúen como si perteneciesen a una única red local, sin necesidad de configuración previa.
-- **Encaminado en el origen**: el equipo que envía la información tiene capacidad para distinguir si el destinatario está dentro o fuera del segmento de red.
-
-Si el bridge interconecta directamente segmentos de redes LAN se dice que es un **puente local**. Otra opción es que el bridge vincule dos redes LAN a través de una conexión WAN (por ejemplo, una línea dedicada). En este caso se dice que es un **puente remoto**.
-
-### 🌐 Enrutador (Router)
-
-El **enrutador** (o router) es un elemento de electrónica de red cuya función es interconectar diferentes redes, ya sean LAN o WAN. Trabaja, por tanto, en el **nivel 3** del modelo OSI.
-
-Recordemos que tanto el hub, como el switch y el bridge son dispositivos que conectan equipos que forman parte de la misma red. Gracias al router podemos extender las redes, interconectándolas entre sí.
-
-#### 🏠 Router SoHo
-
-El router independiente también es conocido como **router SoHo** (Small Office Home Office, pequeña oficina y oficina en casa). Se trata de un router con características orientadas a la pequeña empresa y también a algunos entornos domésticos. Además del enrutamiento integra otros servicios como pueden ser el DHCP, filtrado de conexiones por MAC, etc.
-
-<figure>
-  <img src="./imagenes/router_soho.png" alt="Router SoHo">
-  <figcaption>Router SoHo para pequeñas oficinas y hogares</figcaption>
-</figure>
-
-El ejemplo más característico de router independiente es la conexión a Internet. En realidad se trata de una conexión de la red local (de la casa, edificio, tienda, centro, etc.) con la red Internet a través del proveedor de servicios de Internet (ISP, Internet Services Provider).
-
-Citando el router integra la función de módem para conexión ADSL, se dice que es un **router ADSL** (o también módem-router).
-
-Cuando el router no integra módem, se denomina **router neutro**.
-
-#### 🏢 Router rackeable
-
-El router rackeable ofrece conexiones de diferente tipo y velocidades, desde conexiones COM (puerto Serie) hasta conexiones de fibra óptica, pasando por conexiones de par trenzado a 10/100/1000 y otras conexiones específicas como pueden ser ATM, puertos de voz, etc.
-
-<figure>
-  <img src="./imagenes/router_rackeable.png" alt="Router rackeable">
-  <figcaption>Router rackeable con múltiples tipos de conexión</figcaption>
-</figure>
-
-<figure>
-  <img src="./imagenes/router_detalle_puertos.png" alt="Detalle puertos router">
-  <figcaption>Router rackeable con puertos RJ-45, coaxial y fibra óptica</figcaption>
-</figure>
-
-De hecho, algunos modelos ofrecen slots de conexión en la parte delantera para instalar tarjetas con las conexiones que se necesiten, según las circunstancias particulares de la red (dónde se conecta, el medio de conexión que emplea, si se necesita transmitir voz o datos, etc.).
-
-<figure>
-  <img src="./imagenes/router_slots.png" alt="Slots router">
-  <figcaption>Detalle de slots de un router empresarial</figcaption>
-</figure>
-
-<figure>
-  <img src="./imagenes/tarjeta_expansion_wic.png" alt="Tarjeta expansión WIC">
-  <figcaption>Tarjeta de expansión WIC para un router</figcaption>
-</figure>
-
-<figure>
-  <img src="./imagenes/cables_conexion_router.png" alt="Cables conexión router">
-  <figcaption>Uno de los múltiples tipos de cable para la conexión de routers rackeables</figcaption>
-</figure>
-
-El router integra su propio sistema operativo, llamado **IOS**, y también su propia memoria (RAM y flash). Todos estos elementos (IOS, y memorias) pueden modificarse según las necesidades.
-
-El IOS del router integra funciones de capas inferiores a la 3, de modo que es capaz de operar como un switch o un bridge, pero también de ofrecer características propias de la capa 3 o incluso superiores, en el caso de routers con servicios integrados de alto nivel.
-
-Una característica interesante del router rackeable es la posibilidad de incorporar una toma de corriente redundante, que entraría en funcionamiento en caso de que el suministro principal fallase.
-
-#### 🔗 Conexión de routers
-
-La conexión de routers entre sí puede ser:
-
-- **Routers SoHo**: como solo suelen disponer de conexiones RJ-45, la conexión es a través de estas tomas. Para vincularlos se utiliza un latiguillo de cable cruzado.
-- **Routers rackeables**: la interconexión de este tipo de routers se suele hacer a través de cable de serie.
-
-### 🚪 Pasarela (Gateway)
-
-La **pasarela** (o gateway), también llamada puerta de enlace, es un dispositivo de red empleado para la conexión de redes, con independencia de la arquitectura y protocolos que empleen.
-
-Son equipos que se ubican en los extremos de la red, duplicando la pila de protocolos de cada una de las redes para hacer la traducción entre ambos. Este proceso es el motivo por el que la transmisión de información se ralentiza al usar estos dispositivos.
-
-<figure>
-  <img src="./imagenes/gateway_independiente.png" alt="Gateway independiente">
-  <figcaption>Gateway independiente para conexión de redes heterogéneas</figcaption>
-</figure>
-
-La función original del gateway es propia del **nivel 4** del modelo OSI. Sin embargo, este dispositivo puede realizar otras funciones especiales, propias de capas superiores (5, 6 y 7), como pueden ser estas:
-
-#### 🔥 Cortafuegos (Firewall)
-
-Es un elemento de seguridad cuya misión es controlar el tráfico de datos entrante y saliente de la red. El nivel de seguridad se consigue aplicando una serie de criterios, llamados reglas, que establecen qué se puede y qué no se puede admitir. El cortafuegos opera en las 7 capas del modelo OSI.
-
-#### 🔒 Proxy
-
-Es un elemento de seguridad que actúa como intermediario en la comunicación de dos equipos. Su funcionamiento es muy parecido al cortafuegos, en el sentido de que se le asignan una serie de reglas que determinan qué tráfico se permite y qué tráfico debe bloquearse. El proxy trabaja en la **capa 7** del modelo OSI.
-
-#### 🔐 VPN (Virtual Private Network)
-
-Se trata de una funcionalidad que permite conectarse de forma segura a una LAN privada desde una red pública (típicamente Internet). La apariencia es que el equipo está conectado directamente a la red privada; de ahí su nombre. Un ejemplo típico es el teletrabajo: podemos conectarnos desde nuestro equipo de casa a la red corporativa de la empresa, teniendo acceso a prácticamente los mismos recursos que desde nuestro equipo corporativo.
-
-<figure>
-  <img src="./imagenes/gateway_rackeable.png" alt="Gateway rackeable">
-  <figcaption>Gateway rackeable con módulos de extensión instalados</figcaption>
-</figure>
-
-Asimismo, el gateway puede realizar funciones de capas inferiores, comportándose como un router (capa 3) o incluso como un switch (capa 2).
-
-El gateway puede ser independiente o rackeable. Los modelos más simples ofrecen dos tomas RJ-45, una para la LAN y otra para la WAN, aparte de las conexiones para configuración, que pueden ser de distinto tipo: RJ-45, serie, USB, etc. Otros modelos, por ejemplo, ofrecen muchas más tomas (como si se tratara de un switch) o permiten la integración de módulos para ampliar sus prestaciones (como sucede con los routers).
-
-### 📶 Punto de acceso
-
-El **punto de acceso** (access point, o AP) es un elemento inalámbrico de la red que se usa para extender la red cableada, ofreciendo conexión a la misma a través de medio inalámbrico.
-
-El punto de acceso, como sucedía con el repetidor, se ubica en un lugar estratégico de la red, para dar cobertura a los equipos inalámbricos o a las zonas de trabajo establecidas. Estos dispositivos integran la tecnología **PoE**, por lo que la ubicación en lugares que no tienen suministro eléctrico no supone un problema.
-
-<figure>
-  <img src="./imagenes/punto_acceso_modos.png" alt="Modos de punto de acceso">
-  <figcaption>Diferentes modos de funcionamiento de puntos de acceso</figcaption>
-</figure>
-
-Como ya vimos, la aplicación de los puntos de acceso para extender el radio de acción de la red es muy habitual en las infraestructuras que siguen una topología distribuida. En el caso de que se quiera cubrir una zona más amplia, se pueden colocar varios puntos de acceso, pudiendo solaparse las celdas de estos.
-
-<figure>
-  <img src="./imagenes/punto_acceso_repetidor.png" alt="Punto de acceso como repetidor">
-  <figcaption>Punto de acceso funcionando como repetidor</figcaption>
-</figure>
-
-Además, el punto de acceso puede actuar como repetidor o bridge. Para ello, es necesario que integre la tecnología **WDS** (Wireless Distribution System, sistema de distribución inalámbrico), que permite la interconexión de este tipo de dispositivos entre sí.
-
-Hay modelos de punto de acceso diseñados para ser colocados a la intemperie. Se trata de dispositivos con una carcasa capaz de soportar inclemencias meteorológicas, y que disponen de una o más antenas con mayor potencia. Este tipo de puntos de acceso son habituales en campus o redes multiedificio, donde es necesario extender la red sin instalar cableado adicional.
-
-<figure>
-  <img src="./imagenes/punto_acceso_interior.png" alt="Punto de acceso interior">
-  <figcaption>Punto de acceso para instalaciones interiores</figcaption>
-</figure>
-
-<figure>
-  <img src="./imagenes/punto_acceso_exterior.png" alt="Punto de acceso exterior">
-  <figcaption>Punto de acceso para exteriores con carcasa resistente</figcaption>
-</figure>
-
-<figure>
-  <img src="./imagenes/punto_acceso_exterior_detalle.png" alt="Detalle punto de acceso exterior">
-  <figcaption>Punto de acceso para exteriores. A la derecha, detalle de la vista superior e inferior</figcaption>
-</figure> -->
 
 
 <!-- !!! tip "<span style='font-size: 1.4em;'><strong>CONCLUSIÓN</strong></span>"
