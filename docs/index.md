@@ -109,31 +109,13 @@ Imagina la nota del módulo como una **tarta** repartida en seis quesitos (los R
 3. Si cumples el criterio de **NetAcad / CCNA** publicado en Aules, puedes sumar **+1 punto** sobre esa nota final. Ese +1 **no sustituye** ningún RA.
 
 ``` mermaid
-flowchart LR
-  subgraph IE["Instrumentos"]
-    AC["AC 0–1"]
-    PR["PR 0–10"]
-    PY["PY 0–30"]
-    PO["PO 0–100"]
-  end
-  subgraph RA["Nota de cada RA"]
-    N1["RA1"]
-    N2["RA2"]
-    N3["RA3"]
-    N4["RA4"]
-    N5["RA5"]
-    N6["RA6"]
-  end
-  NF["Nota final del módulo"]
-  PLUS["+1 NetAcad / CCNA"]
-  IE --> RA
-  N1 -->|"× 0,20"| NF
-  N2 -->|"× 0,12"| NF
-  N3 -->|"× 0,18"| NF
-  N4 -->|"× 0,25"| NF
-  N5 -->|"× 0,15"| NF
-  N6 -->|"× 0,10"| NF
-  PLUS -.->|"si se concede"| NF
+flowchart TB
+  A["Paso 1 — Instrumentos\nAC · PR · PY · PO"]
+  B["Paso 2 — Nota de cada RA\nmedia de las actividades de ese RA"]
+  C["Paso 3 — Nota final del módulo\nRA1×20% + RA2×12% + RA3×18%\n+ RA4×25% + RA5×15% + RA6×10%"]
+  D["+1 NetAcad / CCNA\nsi se concede en Aules"]
+  A --> B --> C
+  D -.-> C
 ```
 
 **Ejemplo (simplificado):** si en RA4 tienes prácticas y un examen, se promedian (según lo que se indique en Aules) y ese resultado cuenta un **25 %** de la nota del módulo. Suspender un RA no se compensa con otro.
