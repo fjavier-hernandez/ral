@@ -109,13 +109,10 @@ La evaluación se organiza por **resultados de aprendizaje (RA)**. Cada RA se ca
 | Proyecto | :material-calendar: **PY** | Entregable mayor con rúbrica | **0–30** |
 | Prueba objetiva | :material-pen: **PO** | Examen escrito o en ordenador | **0–100** |
 
-Opcionales de refuerzo / profundización (si se usan): AR / AP, sin sustituir los IE anteriores.
-
-**Cálculo:** para cada RA, media ponderada de los IE que lo evalúan. Las calificaciones se publican en **Aules**.
-
-Cada actividad indica el RA, los CE que trabaja y su escala. Codificación: prefijo del IE + número de tema (ej. `AC102` = actividad de clase 02 del Tema 1; `PR101` = práctica 01 del Tema 1).
-
-Las entregas en Aules son **obligatorias en Markdown** (`.md`). No se aceptan PDF.
+- Opcionales de refuerzo / profundización (si se usan): AR / AP, sin sustituir los IE anteriores.
+- **Cálculo:** para cada RA, media ponderada de los IE que lo evalúan. Las calificaciones se publican en **Aules**.
+- Cada actividad indica el RA, los CE que trabaja y su escala. Codificación: prefijo del IE + número de tema (ej. `AC102` = actividad de clase 02 del Tema 1; `PR101` = práctica 01 del Tema 1).
+- Las entregas en Aules son **obligatorias en Markdown** (`.md`). No se aceptan PDF.
 
 !!! note "Cómo empezar con Markdown y VS Code"
     - Guía de Markdown: [tutorialmarkdown.com/guia](https://tutorialmarkdown.com/guia)
