@@ -1,0 +1,1338 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="LLC/MAC, trama Ethernet 802.3, CRC, CSMA/CD, switches, dominios, STP y EtherChannel; VLAN → Tema 6.">
+      
+      
+      
+        <link rel="canonical" href="https://fjavier-hernandez.github.io/ral/04-capa-enlace/tema4.html">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../img/ral.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Tema 4 — Capa de enlace - Redes de Área Local</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-0CPJP88MBF"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-0CPJP88MBF",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-0CPJP88MBF",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>if("undefined"!=typeof __md_analytics){var consent=__md_get("__consent");consent&&consent.analytics&&__md_analytics()}</script>
+  
+
+    
+    
+  
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Tema 4 — Capa de enlace - Redes de Área Local" />
+<meta property="og:description" content="LLC/MAC, trama Ethernet 802.3, CRC, CSMA/CD, switches, dominios, STP y EtherChannel; VLAN → Tema 6." />
+<meta property="og:image" content="https://fjavier-hernandez.github.io/ral/assets/images/social/04-capa-enlace/tema4.png" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:url" content="https://fjavier-hernandez.github.io/ral/04-capa-enlace/tema4.html" />
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:title" content="Tema 4 — Capa de enlace - Redes de Área Local" />
+<meta property="twitter:description" content="LLC/MAC, trama Ethernet 802.3, CRC, CSMA/CD, switches, dominios, STP y EtherChannel; VLAN → Tema 6." />
+<meta property="twitter:image" content="https://fjavier-hernandez.github.io/ral/assets/images/social/04-capa-enlace/tema4.png" />
+</head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="javi" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#tema-4-capa-de-enlace" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../index.html" title="Redes de Área Local" class="md-header__button md-logo" aria-label="Redes de Área Local" data-md-component="logo">
+      
+  <img src="../img/ral.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Redes de Área Local
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Tema 4 — Capa de enlace
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="javi" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Cambiar a modo noche"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo noche" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Cambiar a modo día"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo día" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../index.html" title="Redes de Área Local" class="md-nav__button md-logo" aria-label="Redes de Área Local" data-md-component="logo">
+      
+  <img src="../img/ral.svg" alt="logo">
+
+    </a>
+    Redes de Área Local
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../00-normas/normas_taller.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Normas del taller
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-introduccion-arquitectura/tema1.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Introducción. Arquitectura de redes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#propuesta-didactica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Propuesta didáctica
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Propuesta didáctica">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#criterios-de-evaluacion-seleccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Criterios de evaluación (selección)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contenidos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Contenidos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#programacion-de-aula-orientativa-1416-h" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Programación de aula (orientativa, ~14–16 h)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cuestionario-inicial" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cuestionario inicial
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#la-capa-de-enlace" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        La capa de enlace
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="La capa de enlace">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#subcapas-llc-y-mac" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Subcapas LLC y MAC
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#trama-ethernet-ieee-8023" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Trama Ethernet (IEEE 802.3)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Trama Ethernet (IEEE 802.3)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#campos-vision-smr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Campos (visión SMR)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#crc-deteccion-de-errores" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CRC (detección de errores)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#segmentacion-y-agrupacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Segmentación y agrupación
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#acceso-al-medio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Acceso al medio
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Acceso al medio">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#csmacd-idea-ethernet-clasico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CSMA/CD (idea Ethernet clásico)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#csmaca-mencion-wifi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CSMA/CA (mención Wi‑Fi)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#switches-y-aprendizaje-mac" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Switches y aprendizaje MAC
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dominios-de-colision-y-de-difusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dominios de colisión y de difusión
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stp-spanning-tree-breve" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        STP (Spanning Tree) — breve
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#etherchannel-breve" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        EtherChannel — breve
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#protocolos-de-enlace-mencion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Protocolos de enlace (mención)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#actividades" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Actividades
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Actividades">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ac401-trama-ethernet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AC401 — Trama Ethernet
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ac402-segmentacion-vs-agrupacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AC402 — Segmentación vs agrupación
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ac403-dominios-de-colision-y-difusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AC403 — Dominios de colisión y difusión
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ac404-stp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AC404 — STP
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pr401-dominios-en-esquemas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PR401 — Dominios en esquemas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pr402-packet-tracer-stp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PR402 — Packet Tracer: STP
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referencias-rapidas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Referencias rápidas
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="tema-4-capa-de-enlace">Tema 4. Capa de enlace<a class="headerlink" href="#tema-4-capa-de-enlace" title="Permanent link">&para;</a></h1>
+<p>En este tema bajamos a la <strong>capa 2</strong>: cómo se forman las <strong>tramas</strong>, cómo se usa la <strong><abbr title="Media Access Control">MAC</abbr></strong>, cómo el <strong>switch</strong> decide a qué puerto enviar y qué son los <strong>dominios de colisión y difusión</strong>.</p>
+<div class="admonition tip">
+<p class="admonition-title">Primera clase</p>
+<p>Empieza por el <a href="#cuestionario-inicial">cuestionario inicial</a>. No hace falta estudiar el tema completo antes: el cuestionario sirve para ver qué sabes al empezar.</p>
+</div>
+<h2 id="propuesta-didactica">Propuesta didáctica<a class="headerlink" href="#propuesta-didactica" title="Permanent link">&para;</a></h2>
+<p>Trabajamos los <strong>RA1</strong> y <strong>RA4</strong> del módulo Redes de área local (0225):</p>
+<blockquote>
+<p><strong>RA1.</strong> <em>Reconoce la estructura de redes locales cableadas analizando las características de entornos de aplicación y describiendo la funcionalidad de sus componentes.</em></p>
+<p><strong>RA4.</strong> <em>Instala equipos en red, describiendo sus prestaciones y aplicando técnicas de montaje.</em></p>
+</blockquote>
+<h3 id="criterios-de-evaluacion-seleccion">Criterios de evaluación (selección)<a class="headerlink" href="#criterios-de-evaluacion-seleccion" title="Permanent link">&para;</a></h3>
+<p><strong>RA1</strong></p>
+<ul>
+<li><strong>CE1a</strong>: Se han descrito los principios de funcionamiento de las redes locales.</li>
+<li><strong>CE1c</strong>: Se han descrito los elementos de la red local y su función.</li>
+</ul>
+<p><strong>RA4</strong></p>
+<ul>
+<li><strong>CE4a</strong>: Se han identificado las características funcionales de las redes inalámbricas.</li>
+<li><strong>CE4g</strong>: Se han identificado los protocolos.</li>
+<li><strong>CE4h</strong>: Se han configurado los parámetros básicos.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">VLAN</p>
+<p>Las <strong>VLAN</strong> (CE4j) se desarrollan en el <strong>Tema 6</strong>. Aquí solo una mención breve: el switch puede segmentar lógicamente; el detalle (access/trunk, 802.1Q) va más adelante.</p>
+</div>
+<h3 id="contenidos">Contenidos<a class="headerlink" href="#contenidos" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Subcapas <abbr title="Logical Link Control">LLC</abbr> y <abbr title="Media Access Control">MAC</abbr>; funciones de la capa de enlace.</li>
+<li>Trama Ethernet IEEE 802.3; <abbr title="Cyclic Redundancy Check">CRC</abbr> / FCS.</li>
+<li>Acceso al medio: idea de CSMA/CD (y mención CSMA/CA en Wi‑Fi).</li>
+<li>Switch: aprendizaje <abbr title="Media Access Control">MAC</abbr>; dominios de colisión y difusión.</li>
+<li><abbr title="Spanning Tree Protocol">STP</abbr> y EtherChannel (visión breve).</li>
+<li>Protocolos 802.3 / 802.11 (mención).</li>
+</ul>
+<h3 id="programacion-de-aula-orientativa-1416-h">Programación de aula (orientativa, ~14–16 h)<a class="headerlink" href="#programacion-de-aula-orientativa-1416-h" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Sesiones</th>
+<th>Contenidos</th>
+<th>Actividades</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Presentación + cuestionario inicial</td>
+<td>Cuestionario</td>
+</tr>
+<tr>
+<td>2–3</td>
+<td><abbr title="Logical Link Control">LLC</abbr>/<abbr title="Media Access Control">MAC</abbr>; trama Ethernet; <abbr title="Cyclic Redundancy Check">CRC</abbr></td>
+<td><strong>AC401</strong></td>
+</tr>
+<tr>
+<td>4</td>
+<td>Segmentación y agrupación</td>
+<td>AC402</td>
+</tr>
+<tr>
+<td>5–7</td>
+<td>Acceso al medio; switch y <abbr title="Media Access Control">MAC</abbr> learning</td>
+<td>AC403</td>
+</tr>
+<tr>
+<td>8–9</td>
+<td>Dominios colisión / difusión</td>
+<td><strong>PR401</strong></td>
+</tr>
+<tr>
+<td>10–11</td>
+<td><abbr title="Spanning Tree Protocol">STP</abbr> (y EtherChannel breve)</td>
+<td>AC404</td>
+</tr>
+<tr>
+<td>12–14</td>
+<td>Packet Tracer: <abbr title="Spanning Tree Protocol">STP</abbr></td>
+<td><strong>PR402</strong></td>
+</tr>
+<tr>
+<td>15–16</td>
+<td>Repaso</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><a id="cuestionario-inicial"></a></p>
+<h2 id="cuestionario-inicial">Cuestionario inicial<a class="headerlink" href="#cuestionario-inicial" title="Permanent link">&para;</a></h2>
+<div class="admonition question">
+<p class="admonition-title">Antes de empezar — responde con lo que sepas</p>
+<ol>
+<li>¿Qué función cumple la capa de enlace en el modelo OSI?</li>
+<li>¿Qué son las subcapas <abbr title="Logical Link Control">LLC</abbr> y <abbr title="Media Access Control">MAC</abbr>?</li>
+<li>¿Qué campos principales tiene una trama Ethernet?</li>
+<li>¿Para qué sirve el <abbr title="Cyclic Redundancy Check">CRC</abbr>?</li>
+<li>¿Qué diferencia hay entre un hub y un switch?</li>
+<li>¿Qué es una dirección <abbr title="Media Access Control">MAC</abbr> y cómo la usa el switch?</li>
+<li>¿Qué son un dominio de colisión y un dominio de difusión?</li>
+<li>¿Para qué sirve el protocolo <abbr title="Spanning Tree Protocol">STP</abbr>?</li>
+<li>¿Qué es una VLAN? (solo idea; el detalle es Tema 6)</li>
+</ol>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Soluciones</p>
+<p>Las soluciones se trabajan en clase o se publican en Aules cuando proceda.</p>
+</div>
+<hr />
+<h2 id="la-capa-de-enlace">La capa de enlace<a class="headerlink" href="#la-capa-de-enlace" title="Permanent link">&para;</a></h2>
+<p>La <strong>capa de enlace</strong> (nivel 2 OSI) organiza los bits de la capa física en <strong>tramas</strong>, añade direccionamiento de enlace (<strong><abbr title="Media Access Control">MAC</abbr></strong>), detecta errores y gestiona el acceso al medio cuando varios equipos lo comparten.</p>
+<figure>
+  <img alt="Capa de enlace en el modelo OSI" src="../img/tema06-001.png" width="600" />
+<br />
+<figcaption>La capa de enlace de datos en el modelo OSI</figcaption>
+</figure>
+<p>Funciones habituales:</p>
+<ul>
+<li>Formación y delimitación de tramas.</li>
+<li>Direccionamiento <abbr title="Media Access Control">MAC</abbr>.</li>
+<li>Detección de errores (<abbr title="Cyclic Redundancy Check">CRC</abbr>).</li>
+<li>Control de flujo (idea básica).</li>
+<li>Control de acceso al medio (CSMA/CD, etc.).</li>
+</ul>
+<h3 id="subcapas-llc-y-mac">Subcapas <abbr title="Logical Link Control">LLC</abbr> y <abbr title="Media Access Control">MAC</abbr><a class="headerlink" href="#subcapas-llc-y-mac" title="Permanent link">&para;</a></h3>
+<p>En Ethernet (familia IEEE 802) la capa de enlace se divide en:</p>
+<table>
+<thead>
+<tr>
+<th>Subcapa</th>
+<th>Norma / idea</th>
+<th>Qué hace</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong><abbr title="Logical Link Control">LLC</abbr></strong> (<em>Logical Link Control</em>)</td>
+<td>IEEE 802.2</td>
+<td>Interfaz uniforme hacia la capa de red; independiente del medio</td>
+</tr>
+<tr>
+<td><strong><abbr title="Media Access Control">MAC</abbr></strong> (<em>Medium Access Control</em>)</td>
+<td>específica del medio</td>
+<td>Acceso al medio, direcciones <abbr title="Media Access Control">MAC</abbr>, empaquetado de tramas</td>
+</tr>
+</tbody>
+</table>
+<figure>
+  <img alt="Subcapas LLC y MAC" src="../img/tema06-002.png" width="600" />
+<br />
+<figcaption>División de la capa de enlace en LLC y MAC</figcaption>
+</figure>
+<hr />
+<h2 id="trama-ethernet-ieee-8023">Trama Ethernet (IEEE 802.3)<a class="headerlink" href="#trama-ethernet-ieee-8023" title="Permanent link">&para;</a></h2>
+<p>La <strong>trama</strong> es la PDU de la capa de enlace. En Ethernet cableada usamos el formato <strong>IEEE 802.3</strong>.</p>
+<figure>
+  <img alt="Estructura de trama Ethernet" src="../img/tema06-003.png" width="800" />
+<br />
+<figcaption>Estructura de una trama Ethernet IEEE 802.3</figcaption>
+</figure>
+<h3 id="campos-vision-smr">Campos (visión SMR)<a class="headerlink" href="#campos-vision-smr" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Tamaño (aprox.)</th>
+<th>Función</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Preámbulo + SDF</td>
+<td>8 bytes</td>
+<td>Sincronización y comienzo de trama</td>
+</tr>
+<tr>
+<td><abbr title="Media Access Control">MAC</abbr> destino / origen</td>
+<td>6 + 6 bytes</td>
+<td>Quién recibe / quién envía</td>
+</tr>
+<tr>
+<td>Longitud / Tipo</td>
+<td>2 bytes</td>
+<td>Longitud o tipo de protocolo superior (p. ej. IPv4)</td>
+</tr>
+<tr>
+<td>Datos (+ relleno)</td>
+<td>46–1500 bytes</td>
+<td>Carga útil; mínimo 64 bytes de trama</td>
+</tr>
+<tr>
+<td><strong>FCS</strong></td>
+<td>4 bytes</td>
+<td><strong><abbr title="Cyclic Redundancy Check">CRC</abbr>-32</strong> para detectar errores</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Dirección <abbr title="Media Access Control">MAC</abbr></strong> (48 bits): se escribe en hex (<code>F2:3E:C1:8A:B1:01</code>). Los primeros 3 bytes suelen ser el <strong>OUI</strong> del fabricante; los últimos identifican la tarjeta. <code>FF:FF:FF:FF:FF:FF</code> es <strong>broadcast</strong> (todos en el dominio de difusión).</p>
+<div class="admonition note">
+<p class="admonition-title">Etiqueta VLAN</p>
+<p>En un enlace troncal puede aparecer una etiqueta <strong>802.1Q</strong> (4 bytes). Lo detallamos en el <strong>Tema 6</strong>.</p>
+</div>
+<h3 id="crc-deteccion-de-errores"><abbr title="Cyclic Redundancy Check">CRC</abbr> (detección de errores)<a class="headerlink" href="#crc-deteccion-de-errores" title="Permanent link">&para;</a></h3>
+<ol>
+<li>El emisor calcula un valor <abbr title="Cyclic Redundancy Check">CRC</abbr> y lo pone en el <strong>FCS</strong>.</li>
+<li>El receptor recalcula el <abbr title="Cyclic Redundancy Check">CRC</abbr>.</li>
+<li>Si no coincide → trama errónea → <strong>se descarta</strong> (el <abbr title="Cyclic Redundancy Check">CRC</abbr> no corrige; la retransmisión la pide la capa superior si hace falta).</li>
+</ol>
+<p>Ventajas: implementación sencilla en hardware y buena detección de errores por ruido. Limitación: <strong>detecta</strong>, no corrige.</p>
+<figure>
+  <img alt="Idea de CRC" src="../img/tema06-004.png" width="500" />
+<br />
+<figcaption>Idea de comprobación por CRC</figcaption>
+</figure>
+<hr />
+<h2 id="segmentacion-y-agrupacion">Segmentación y agrupación<a class="headerlink" href="#segmentacion-y-agrupacion" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Segmentación</strong>: si los datos son demasiado grandes, se parten en tramas (límite práctico ~1500 bytes de datos en Ethernet).</li>
+<li><strong>Agrupación</strong>: varios mensajes cortos pueden ir en una sola trama para reducir overhead de cabeceras.</li>
+</ul>
+<hr />
+<h2 id="acceso-al-medio">Acceso al medio<a class="headerlink" href="#acceso-al-medio" title="Permanent link">&para;</a></h2>
+<p>Cuando el medio se <strong>comparte</strong>, hacen falta reglas para no pisarse. Familias habituales:</p>
+<table>
+<thead>
+<tr>
+<th>Familia</th>
+<th>Idea</th>
+<th>Ejemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Particionado de canal</td>
+<td>Reparto fijo (tiempo / frecuencia)</td>
+<td>TDM, FDM</td>
+</tr>
+<tr>
+<td>Toma de turnos</td>
+<td>Solo transmite quien tiene permiso / testigo</td>
+<td>Polling, Token Ring</td>
+</tr>
+<tr>
+<td>Acceso aleatorio</td>
+<td>Compiten cuando necesitan</td>
+<td>ALOHA, CSMA/CD, CSMA/CA</td>
+</tr>
+</tbody>
+</table>
+<h3 id="csmacd-idea-ethernet-clasico">CSMA/CD (idea Ethernet clásico)<a class="headerlink" href="#csmacd-idea-ethernet-clasico" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Carrier Sense</strong>: escuchar antes de transmitir.</li>
+<li><strong>Multiple Access</strong>: si está libre, transmitir.</li>
+<li><strong>Collision Detection</strong>: si hay colisión, parar, esperar un tiempo aleatorio (<strong>backoff</strong>) y reintentar.</li>
+</ol>
+<p>En redes modernas con <strong>switches full-dúplex</strong> las colisiones prácticamente desaparecen: cada puerto es un dominio de colisión propio.</p>
+<h3 id="csmaca-mencion-wifi">CSMA/CA (mención Wi‑Fi)<a class="headerlink" href="#csmaca-mencion-wifi" title="Permanent link">&para;</a></h3>
+<p>En inalámbrico (<strong>IEEE 802.11</strong>) se usa <strong>CSMA/CA</strong> (evitar colisiones), porque detectarlas en el aire es más difícil que en cable.</p>
+<div class="admonition tip">
+<p class="admonition-title">Diferencia clave</p>
+<p><strong>CSMA/CD</strong> detecta colisiones después (Ethernet cableado clásico). <strong>CSMA/CA</strong> intenta evitarlas antes (Wi‑Fi).</p>
+</div>
+<hr />
+<h2 id="switches-y-aprendizaje-mac">Switches y aprendizaje <abbr title="Media Access Control">MAC</abbr><a class="headerlink" href="#switches-y-aprendizaje-mac" title="Permanent link">&para;</a></h2>
+<p>Un <strong>switch</strong> reenvía tramas según la <strong>tabla <abbr title="Media Access Control">MAC</abbr></strong> (<abbr title="Media Access Control">MAC</abbr> ↔ puerto):</p>
+<ol>
+<li>Lee la <abbr title="Media Access Control">MAC</abbr> <strong>origen</strong> y la asocia al puerto de llegada.</li>
+<li>Si conoce la <abbr title="Media Access Control">MAC</abbr> <strong>destino</strong>, envía solo a ese puerto.</li>
+<li>Si no la conoce (o es broadcast), <strong>inunda</strong> (todos los puertos excepto el de origen).</li>
+</ol>
+<p>Ventajas frente al hub: menos colisiones, mejor rendimiento, full-dúplex y menos tráfico visible en todos los puertos. Las entradas de la tabla <abbr title="Media Access Control">MAC</abbr> suelen caducar si no se renuevan (aging).</p>
+<hr />
+<h2 id="dominios-de-colision-y-de-difusion">Dominios de colisión y de difusión<a class="headerlink" href="#dominios-de-colision-y-de-difusion" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Concepto</th>
+<th>Qué es</th>
+<th>Hub</th>
+<th>Switch</th>
+<th>Router</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Dominio de colisión</strong></td>
+<td>Equipos cuyas tramas pueden colisionar</td>
+<td>Extiende (1 por hub)</td>
+<td>1 por puerto</td>
+<td>Separa por interfaz</td>
+</tr>
+<tr>
+<td><strong>Dominio de difusión</strong></td>
+<td>Quién recibe broadcast</td>
+<td>Extiende</td>
+<td>Extiende (mismo switch)</td>
+<td><strong>Limita</strong> (cada interfaz = otro dominio)</td>
+</tr>
+</tbody>
+</table>
+<figure>
+  <img alt="Dominios de colisión" src="../img/DominiosColision.png" width="700" />
+<br />
+<figcaption>Dominios de colisión con hubs, switches y router</figcaption>
+</figure>
+<figure>
+  <img alt="Dominios de difusión" src="../img/DominiosDifusion.png" width="700" />
+<br />
+<figcaption>Dominios de difusión: el router los separa</figcaption>
+</figure>
+<figure>
+  <img alt="Ejemplo de topología" src="../img/dominio_colision_difusion.png" width="700" />
+<br />
+<figcaption>Ejemplo de topología para contar dominios</figcaption>
+</figure>
+<div class="admonition tip">
+<p class="admonition-title">Regla práctica</p>
+<p>Contar dominios: cada puerto de switch (y cada interfaz de router) ≈ un dominio de colisión; cada interfaz de router ≈ un dominio de difusión. Un switch solo no “rompe” el broadcast.</p>
+</div>
+<hr />
+<h2 id="stp-spanning-tree-breve"><abbr title="Spanning Tree Protocol">STP</abbr> (Spanning Tree) — breve<a class="headerlink" href="#stp-spanning-tree-breve" title="Permanent link">&para;</a></h2>
+<p>Si varios switches forman un <strong>bucle</strong> físico (redundancia), aparecen problemas graves:</p>
+<ul>
+<li>Bucles de tráfico e inundación de <strong>broadcast</strong>.</li>
+<li>Saturación del ancho de banda.</li>
+<li>Tablas <abbr title="Media Access Control">MAC</abbr> inestables.</li>
+</ul>
+<p><strong><abbr title="Spanning Tree Protocol">STP</abbr></strong> convierte la malla física en un <strong>árbol lógico</strong> sin bucles:</p>
+<ol>
+<li>Los switches intercambian <strong>BPDU</strong>.</li>
+<li>Se elige un <strong>switch raíz</strong> (<em>root bridge</em>).</li>
+<li>Se calculan las mejores rutas hacia la raíz.</li>
+<li>Se <strong>bloquean</strong> los puertos que cerrarían bucles.</li>
+<li>Si falla un enlace activo, se reactiva uno bloqueado.</li>
+</ol>
+<p>Variantes: <strong>RSTP</strong> (convergencia más rápida), <strong>MSTP</strong> (varios árboles / VLANs).</p>
+<hr />
+<h2 id="etherchannel-breve">EtherChannel — breve<a class="headerlink" href="#etherchannel-breve" title="Permanent link">&para;</a></h2>
+<p><strong>EtherChannel</strong> (agregación de enlaces) une varios cables físicos en un <strong>enlace lógico</strong> de más ancho de banda y con cierta redundancia. Negociación: <strong>LACP</strong> (estándar IEEE) o <strong>PAgP</strong> (Cisco); también modo manual (ON). Se usa entre switches o entre switch y servidor.</p>
+<hr />
+<h2 id="protocolos-de-enlace-mencion">Protocolos de enlace (mención)<a class="headerlink" href="#protocolos-de-enlace-mencion" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Ámbito</th>
+<th>Estándares / idea</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cableado</td>
+<td><strong>IEEE 802.3</strong> (Ethernet, Fast, Gigabit…)</td>
+</tr>
+<tr>
+<td>Inalámbrico</td>
+<td><strong>IEEE 802.11</strong> (Wi‑Fi); CSMA/CA</td>
+</tr>
+<tr>
+<td>Otros (contexto)</td>
+<td>Token Ring, FDDI (históricos)</td>
+</tr>
+</tbody>
+</table>
+<p>Dispositivos típicos de capa 2: <strong>bridges</strong>, <strong>switches</strong>, <strong>puntos de acceso</strong>.</p>
+<div class="admonition tip">
+<p class="admonition-title">VLAN (adelanto)</p>
+<p>Una <strong>VLAN</strong> crea redes lógicas dentro del mismo switch físico y reduce dominios de difusión. Diseño y configuración (access/trunk, 802.1Q) → <strong>Tema 6</strong>.</p>
+</div>
+<hr />
+<h2 id="actividades">Actividades<a class="headerlink" href="#actividades" title="Permanent link">&para;</a></h2>
+<div class="admonition tip">
+<p class="admonition-title">Formato de entrega</p>
+<p>Las entregas en <strong>Aules</strong> son <strong>obligatorias en Markdown</strong> (<code>.md</code>). No se aceptan PDF.<br />
+Nombre del archivo: <code>AC4XX.md</code> o <code>PR4XX.md</code> (sustituye XX por el número). Respeta la fecha de vencimiento.<br />
+Escribiremos los <code>.md</code> con <strong>Visual Studio Code</strong>.</p>
+<div class="admonition note">
+<p class="admonition-title">Cómo empezar</p>
+<ul>
+<li>Guía de Markdown: <a href="https://tutorialmarkdown.com/guia">tutorialmarkdown.com/guia</a></li>
+<li>Documentación de Visual Studio Code: <a href="https://code.visualstudio.com/docs">code.visualstudio.com/docs</a></li>
+</ul>
+</div>
+</div>
+<h3 id="ac401-trama-ethernet">AC401 — Trama Ethernet<a class="headerlink" href="#ac401-trama-ethernet" title="Permanent link">&para;</a></h3>
+<ul>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.832 3.367 8.668.108a3.15 3.15 0 0 0-3.856 2.226L.943 16.777a3.15 3.15 0 0 0 2.226 3.856l12.163 3.259a3.15 3.15 0 0 0 3.855-2.226l3.87-14.443a3.15 3.15 0 0 0-2.226-3.856M6.332 2.741a1.574 1.574 0 0 1 1.928-1.113l12.163 3.26a1.574 1.574 0 0 1 1.113 1.927l-3.87 14.444a1.574 1.574 0 0 1-1.928 1.113l-12.163-3.26a1.574 1.574 0 0 1-1.113-1.927zm2.634 2.336a.787.787 0 1 0-.407 1.52l9.122 2.444a.787.787 0 1 0 .407-1.52zM6.985 9.434a.787.787 0 0 1 .963-.557l9.123 2.445a.787.787 0 0 1-.408 1.52l-9.122-2.444a.787.787 0 0 1-.556-.964m-.055 3.244a.787.787 0 0 0-.407 1.52l5.32 1.427a.787.787 0 0 0 .408-1.52z"/></svg></span> <strong>AC401</strong>. (RA1 // CE1a, CE1c // <strong><abbr title="Actividad de clase">AC</abbr> 0–1</strong>). Esquema de la trama IEEE 802.3: campos, tamaño aproximado y función. Incluye un ejemplo con valores hexadecimales inventados (<abbr title="Media Access Control">MAC</abbr> origen/destino, tipo 0x0800) y explica el papel del FCS/<abbr title="Cyclic Redundancy Check">CRC</abbr>.</li>
+</ul>
+<h3 id="ac402-segmentacion-vs-agrupacion">AC402 — Segmentación vs agrupación<a class="headerlink" href="#ac402-segmentacion-vs-agrupacion" title="Permanent link">&para;</a></h3>
+<ul>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.832 3.367 8.668.108a3.15 3.15 0 0 0-3.856 2.226L.943 16.777a3.15 3.15 0 0 0 2.226 3.856l12.163 3.259a3.15 3.15 0 0 0 3.855-2.226l3.87-14.443a3.15 3.15 0 0 0-2.226-3.856M6.332 2.741a1.574 1.574 0 0 1 1.928-1.113l12.163 3.26a1.574 1.574 0 0 1 1.113 1.927l-3.87 14.444a1.574 1.574 0 0 1-1.928 1.113l-12.163-3.26a1.574 1.574 0 0 1-1.113-1.927zm2.634 2.336a.787.787 0 1 0-.407 1.52l9.122 2.444a.787.787 0 1 0 .407-1.52zM6.985 9.434a.787.787 0 0 1 .963-.557l9.123 2.445a.787.787 0 0 1-.408 1.52l-9.122-2.444a.787.787 0 0 1-.556-.964m-.055 3.244a.787.787 0 0 0-.407 1.52l5.32 1.427a.787.787 0 0 0 .408-1.52z"/></svg></span> <strong>AC402</strong>. (RA1 // CE1a // <strong><abbr title="Actividad de clase">AC</abbr> 0–1</strong>). Explica con un ejemplo cuándo conviene <strong>segmentar</strong> y cuándo <strong>agrupar</strong> en la capa de enlace. Relaciónalo con el tamaño máximo de trama Ethernet y con la eficiencia.</li>
+</ul>
+<h3 id="ac403-dominios-de-colision-y-difusion">AC403 — Dominios de colisión y difusión<a class="headerlink" href="#ac403-dominios-de-colision-y-difusion" title="Permanent link">&para;</a></h3>
+<ul>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.832 3.367 8.668.108a3.15 3.15 0 0 0-3.856 2.226L.943 16.777a3.15 3.15 0 0 0 2.226 3.856l12.163 3.259a3.15 3.15 0 0 0 3.855-2.226l3.87-14.443a3.15 3.15 0 0 0-2.226-3.856M6.332 2.741a1.574 1.574 0 0 1 1.928-1.113l12.163 3.26a1.574 1.574 0 0 1 1.113 1.927l-3.87 14.444a1.574 1.574 0 0 1-1.928 1.113l-12.163-3.26a1.574 1.574 0 0 1-1.113-1.927zm2.634 2.336a.787.787 0 1 0-.407 1.52l9.122 2.444a.787.787 0 1 0 .407-1.52zM6.985 9.434a.787.787 0 0 1 .963-.557l9.123 2.445a.787.787 0 0 1-.408 1.52l-9.122-2.444a.787.787 0 0 1-.556-.964m-.055 3.244a.787.787 0 0 0-.407 1.52l5.32 1.427a.787.787 0 0 0 .408-1.52z"/></svg></span> <strong>AC403</strong>. (RA1 // CE1a, CE1c // <strong><abbr title="Actividad de clase">AC</abbr> 0–1</strong>). Tabla hub / switch / router: efecto sobre dominios de colisión y de difusión. Dos frases de impacto en el rendimiento.</li>
+</ul>
+<h3 id="ac404-stp">AC404 — <abbr title="Spanning Tree Protocol">STP</abbr><a class="headerlink" href="#ac404-stp" title="Permanent link">&para;</a></h3>
+<ul>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.832 3.367 8.668.108a3.15 3.15 0 0 0-3.856 2.226L.943 16.777a3.15 3.15 0 0 0 2.226 3.856l12.163 3.259a3.15 3.15 0 0 0 3.855-2.226l3.87-14.443a3.15 3.15 0 0 0-2.226-3.856M6.332 2.741a1.574 1.574 0 0 1 1.928-1.113l12.163 3.26a1.574 1.574 0 0 1 1.113 1.927l-3.87 14.444a1.574 1.574 0 0 1-1.928 1.113l-12.163-3.26a1.574 1.574 0 0 1-1.113-1.927zm2.634 2.336a.787.787 0 1 0-.407 1.52l9.122 2.444a.787.787 0 1 0 .407-1.52zM6.985 9.434a.787.787 0 0 1 .963-.557l9.123 2.445a.787.787 0 0 1-.408 1.52l-9.122-2.444a.787.787 0 0 1-.556-.964m-.055 3.244a.787.787 0 0 0-.407 1.52l5.32 1.427a.787.787 0 0 0 .408-1.52z"/></svg></span> <strong>AC404</strong>. (RA1 // CE1a // RA4 // CE4g // <strong><abbr title="Actividad de clase">AC</abbr> 0–1</strong>). Problema que resuelve <abbr title="Spanning Tree Protocol">STP</abbr>; idea de switch raíz y puerto bloqueado; diferencia breve <abbr title="Spanning Tree Protocol">STP</abbr> vs RSTP.</li>
+</ul>
+<h3 id="pr401-dominios-en-esquemas">PR401 — Dominios en esquemas<a class="headerlink" href="#pr401-dominios-en-esquemas" title="Permanent link">&para;</a></h3>
+<ul>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5.563 1.396a.95.95 0 0 0-.534.184c-.404.307-.501.9-.425 1.654.075.755.335 1.704.751 2.8.357.937.835 1.984 1.407 3.095-1.17.146-2.24.338-3.158.57-1.08.274-1.958.6-2.583.973C.397 11.045 0 11.484 0 12s.397.955 1.021 1.328c.55.33 1.308.618 2.217.87a1 1 0 0 0-.006.097c0 .485.365.887.82.887.368 0 .678-.26.784-.616q.89.171 1.898.297a31 31 0 0 0-1.408 3.067c-.421 1.093-.686 2.04-.765 2.795-.08.754.016 1.347.42 1.656.201.154.46.208.734.181s.572-.125.896-.287c.649-.323 1.407-.894 2.244-1.67.962-.89 2.026-2.058 3.118-3.421 1.086 1.37 2.146 2.543 3.103 3.439.834.78 1.588 1.355 2.235 1.682.323.163.62.265.894.293s.534-.025.736-.178c.405-.307.502-.9.426-1.654-.054-.54-.206-1.18-.437-1.9a.91.91 0 0 0 .343-.72.92.92 0 0 0-.238-.625.8.8 0 0 0-.701-.251c-.312-.75-.69-1.557-1.125-2.4a27 27 0 0 0 3.187-.575c1.08-.273 1.958-.597 2.583-.97.624-.374 1.021-.813 1.021-1.329s-.397-.957-1.021-1.33c-.625-.373-1.503-.696-2.583-.969a27 27 0 0 0-3.156-.568 31 31 0 0 0 1.406-3.063c.422-1.093.687-2.04.766-2.795.08-.754-.017-1.347-.42-1.656a.95.95 0 0 0-.531-.185 1.3 1.3 0 0 0-.203.004c-.274.026-.57.127-.895.289-.51.254-1.092.665-1.722 1.205a.8.8 0 0 0-.418-.123c-.456 0-.82.4-.82.886q0 .178.06.334a35 35 0 0 0-2.465 2.791c-1.086-1.37-2.146-2.543-3.103-3.439-.834-.78-1.588-1.355-2.235-1.682-.323-.163-.62-.265-.894-.293a1.3 1.3 0 0 0-.204-.006zm.021.385a1 1 0 0 1 .143.004c.205.02.462.105.757.254.592.298 1.33.855 2.147 1.62.955.893 2.022 2.077 3.119 3.466-.428.544-.859 1.12-1.29 1.72a42 42 0 0 0-3.29.235 31 31 0 0 1-1.453-3.184c-.409-1.075-.658-2.002-.729-2.7-.07-.7.05-1.136.276-1.307a.55.55 0 0 1 .32-.108m12.854.033a.55.55 0 0 1 .32.108c.225.172.343.61.27 1.308s-.33 1.624-.743 2.698a31 31 0 0 1-1.455 3.15 42 42 0 0 0-3.312-.234 49 49 0 0 0-1.274-1.717 35 35 0 0 1 2.436-2.772.78.78 0 0 0 .543.223c.456 0 .82-.401.82-.887a.94.94 0 0 0-.133-.484c.61-.519 1.163-.909 1.625-1.139.297-.147.555-.23.76-.25a1 1 0 0 1 .142-.004zm-6.442 5.622c.344.443.69.913 1.035 1.394q-.51-.012-1.031-.014-.532.001-1.05.014c.35-.481.699-.95 1.046-1.394M12 9.203q.668.001 1.314.02.398.563.793 1.154c.366.55.71 1.093 1.041 1.633a54 54 0 0 1-1.046 1.623q-.395.584-.791 1.138-.646.02-1.311.022-.684-.001-1.348-.022a53 53 0 0 1-.789-1.148 52 52 0 0 1-1.04-1.633 53 53 0 0 1 1.84-2.765q.658-.02 1.337-.022m-1.824.04q-.315.444-.625.905c-.334.496-.647.988-.953 1.477a47 47 0 0 1-1.239-2.178 41 41 0 0 1 2.817-.205zm3.625 0a41 41 0 0 1 2.838.202 47 47 0 0 1-1.264 2.198 53 53 0 0 0-1.574-2.4m3.248.251c1.213.146 2.317.34 3.252.576 1.057.268 1.907.587 2.478.928s.834.689.834.998-.263.655-.834.996c-.57.342-1.421.662-2.478.93-.943.239-2.056.433-3.281.58a47 47 0 0 0-1.416-2.492 47 47 0 0 0 1.445-2.516M6.95 9.496c.424.805.899 1.64 1.418 2.494a47 47 0 0 0-1.443 2.508 30 30 0 0 1-2.059-.318.9.9 0 0 0-.23-.508.8.8 0 0 0-.584-.262.8.8 0 0 0-.696.418c-.894-.247-1.63-.53-2.136-.832C.65 12.655.387 12.31.387 12s.263-.654.834-.996c.57-.342 1.421-.662 2.478-.93.935-.237 2.039-.431 3.252-.578zm4.34.8c-.576 0-1.041.5-1.041 1.112 0 .484.29.897.695 1.049v.063c0 .612.466 1.109 1.041 1.109.576 0 1.041-.497 1.041-1.11q0-.025-.002-.05c.424-.141.73-.565.73-1.063 0-.294-.107-.575-.302-.783a1.01 1.01 0 0 0-.738-.326 1 1 0 0 0-.711.3 1 1 0 0 0-.713-.3zm-2.695 2.061a51 51 0 0 0 1.572 2.397c-.99-.04-1.941-.108-2.832-.205q.573-1.067 1.26-2.192m6.779.02c.448.743.862 1.472 1.236 2.176a42 42 0 0 1-2.814.199q.313-.443.625-.902c.333-.495.647-.986.953-1.473m-8.23 2.537c1.033.117 2.141.198 3.304.236.427.6.854 1.179 1.278 1.723-1.103 1.382-2.176 2.561-3.135 3.45-.821.76-1.562 1.31-2.155 1.605-.296.147-.554.23-.76.25s-.35-.018-.462-.104c-.225-.172-.343-.61-.27-1.308s.329-1.624.742-2.698c.366-.948.861-2.018 1.458-3.154m9.656.004c.459.884.854 1.727 1.178 2.504a.91.91 0 0 0-.348.724c0 .486.364.887.82.887a1 1 0 0 0 .123-.01c.218.686.36 1.293.408 1.782.07.698-.05 1.135-.275 1.306-.113.086-.258.124-.463.104s-.462-.105-.758-.254c-.59-.298-1.329-.855-2.146-1.62-.955-.893-2.023-2.077-3.12-3.466.43-.545.862-1.123 1.294-1.725a42 42 0 0 0 3.287-.232m-3.776.246a49 49 0 0 1-1.05 1.4 49 49 0 0 1-1.04-1.398 47 47 0 0 0 2.09-.002"/></svg></span> <strong>PR401</strong>. (RA1 // CE1a, CE1c // <strong><abbr title="Práctica">PR</abbr> 0–10</strong>). Identificación de dominios de colisión y difusión.</li>
+</ul>
+<p><strong>Recuerda:</strong> hub → un dominio de colisión compartido; switch → un dominio de colisión por puerto y un dominio de difusión; router → separa colisión y difusión por interfaz.</p>
+<p>Responde en el <code>.md</code> (marca la opción correcta; en las de varias respuestas, todas las válidas):</p>
+<ol>
+<li>
+<p>¿En qué caso PC3 está en el <strong>mismo dominio de colisión</strong> que PC1?<br />
+     a) Mismo switch · b) Separados por switch · c) Mismo hub · d) Interfaces distintas del mismo router  </p>
+</li>
+<li>
+<p>¿Qué situaciones ponen a PC3 en <strong>otro dominio de broadcast</strong> que PC1? (elige las correctas)<br />
+     a) Separados por hub · b) Mismo switch · c) Separados por bridge · d) Otra red lógica · e) Separados por switch · f) Separados por router  </p>
+</li>
+<li>
+<p>Sobre la figura de este tema (<code>dominio_colision_difusion.png</code>): ¿cuántos dominios de broadcast y de colisión hay? Justifica el conteo en 3–5 líneas.<br />
+     a) 3 BD / 3 CD · b) 2 BD / 3 CD · c) 1 BD / 2 CD · d) 3 BD / 8 CD · e) 8 BD / 3 CD · f) Ninguna  </p>
+</li>
+<li>
+<p>Afirmaciones ciertas (elige las correctas):<br />
+     a) Los switches disminuyen el nº de dominios de colisión · b) Los routers disminuyen el nº de dominios de colisión · c) Los routers aumentan el nº de dominios de colisión · d) Los switches aumentan el nº de dominios de colisión · e/f) Bridges disminuyen / aumentan dominios de colisión  </p>
+</li>
+<li>
+<p>¿Qué afirmación es <strong>incorrecta</strong>?<br />
+     a) Los hubs aumentan el nº de dominios de broadcast · b) Los routers aumentan el nº de dominios de colisión · c) Los routers aumentan el nº de dominios de broadcast · d) Cada interfaz del router es un dominio de broadcast y de colisión · e) Los switches aumentan el nº de dominios de colisión  </p>
+</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Criterio</th>
+<th>Descripción</th>
+<th>Puntos</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Preguntas 1–2</td>
+<td>Respuestas coherentes</td>
+<td>0–2</td>
+</tr>
+<tr>
+<td>Pregunta 3 (diagrama)</td>
+<td>Conteo justificado</td>
+<td>0–3</td>
+</tr>
+<tr>
+<td>Preguntas 4–5</td>
+<td>Teoría hub/switch/router</td>
+<td>0–3</td>
+</tr>
+<tr>
+<td>Claridad del <code>.md</code></td>
+<td>Orden y legibilidad</td>
+<td>0–2</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td></td>
+<td><strong>/10</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="pr402-packet-tracer-stp">PR402 — Packet Tracer: <abbr title="Spanning Tree Protocol">STP</abbr><a class="headerlink" href="#pr402-packet-tracer-stp" title="Permanent link">&para;</a></h3>
+<ul>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16.331 18.171V17.06l-.022.01c-.25.121-.522.19-.801.203a1.2 1.2 0 0 1-.806-.237 1.04 1.04 0 0 1-.352-.498 1.2 1.2 0 0 1-.023-.667c.052-.225.178-.426.357-.569.16-.134.355-.218.562-.242a1.85 1.85 0 0 1 1.061.198l.024.013v-1.117l-.051-.014a2.9 2.9 0 0 0-1.011-.132 2.3 2.3 0 0 0-.903.206c-.287.132-.54.327-.739.571a2.22 2.22 0 0 0-.04 2.705c.295.378.709.645 1.175.756.491.12 1.006.102 1.487-.052zm-10.995 0V17.06l-.022.01c-.25.121-.522.19-.801.203a1.18 1.18 0 0 1-.806-.237 1.03 1.03 0 0 1-.351-.498 1.2 1.2 0 0 1-.024-.667c.052-.225.177-.426.357-.569.16-.134.355-.218.562-.242a1.85 1.85 0 0 1 1.061.198l.024.013v-1.117l-.051-.014a2.9 2.9 0 0 0-1.011-.132 2.3 2.3 0 0 0-.903.206 2.1 2.1 0 0 0-.74.571 2.224 2.224 0 0 0-.041 2.705 2.1 2.1 0 0 0 1.176.756c.491.12 1.005.102 1.487-.052zm3.924-.922-.004.957.07.012q.33.061.664.085.293.028.587.012.282-.021.551-.104c.21-.06.405-.163.571-.305a1.16 1.16 0 0 0 .333-.478 1.3 1.3 0 0 0-.007-.96 1.1 1.1 0 0 0-.298-.414 1.3 1.3 0 0 0-.438-.255l-.722-.268a.4.4 0 0 1-.197-.188.25.25 0 0 1 .008-.219.4.4 0 0 1 .154-.142.8.8 0 0 1 .257-.074q.23-.034.46.005.27.03.533.096l.038.008v-.883l-.069-.015a5 5 0 0 0-.543-.097 2.8 2.8 0 0 0-.714-.003c-.3.027-.585.143-.821.33-.16.126-.281.293-.351.484-.104.29-.105.608 0 .899q.082.219.252.381.146.14.327.236.236.126.497.195.086.026.17.054l.085.031.024.01c.084.03.162.078.226.14q.068.064.101.151a.3.3 0 0 1 .001.161.34.34 0 0 1-.166.198.9.9 0 0 1-.275.086 2 2 0 0 1-.427.021 5 5 0 0 1-.557-.074 9 9 0 0 1-.287-.067zm-2.475.995h1.05v-4.167h-1.05zm12.162-2.936a1.095 1.095 0 0 1 1.541.158 1.094 1.094 0 0 1-.157 1.541l-.017.014a1.096 1.096 0 0 1-1.367-1.713m-1.525.854a2.193 2.193 0 0 0 2.666 2.107 2.139 2.139 0 0 0 .701-3.937 2.207 2.207 0 0 0-3.367 1.83m5.539-5.434a.52.52 0 0 0 1.039 0V9.573a.52.52 0 0 0-1.039 0zm-2.844 0a.522.522 0 0 0 1.041 0V8.139a.521.521 0 0 0-1.04 0v2.589m-2.887 1.043a.521.521 0 0 0 1.039 0V6.17a.52.52 0 0 0-1.039 0zm-2.838-1.043a.521.521 0 0 0 1.04 0V8.139a.52.52 0 0 0-1.039 0zm-2.9 0a.522.522 0 0 0 1.039 0V9.573a.52.52 0 0 0-1.039 0zm-2.87 0a.52.52 0 0 0 1.039 0V8.139a.52.52 0 0 0-1.039 0zm-2.887 1.043a.52.52 0 0 0 1.039 0V6.17a.52.52 0 0 0-1.039 0zm-2.861-1.043a.522.522 0 0 0 1.04 0V8.139a.52.52 0 0 0-1.039 0zm-2.877 0a.521.521 0 0 0 1.039 0V9.573a.52.52 0 0 0-1.039 0z"/></svg></span> <strong>PR402</strong>. (RA1 // CE1a, CE1c // RA4 // CE4g, CE4h // <strong><abbr title="Práctica">PR</abbr> 0–10</strong>). Simulación en Packet Tracer: 3 switches en bucle, PCs y un servidor; observar tabla <abbr title="Media Access Control">MAC</abbr>, puertos bloqueados/forwarding por <abbr title="Spanning Tree Protocol">STP</abbr> y reconvergencia al cortar un enlace. El guion completo se facilitará en clase / Aules.</li>
+</ul>
+<hr />
+<h2 id="referencias-rapidas">Referencias rápidas<a class="headerlink" href="#referencias-rapidas" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Sitio del módulo: <a href="https://fjavier-hernandez.github.io/ral/">fjavier-hernandez.github.io/ral</a></li>
+<li>Simulación: <a href="https://www.netacad.com/es/cisco-packet-tracer">Cisco Packet Tracer</a></li>
+<li>Entregas: <a href="https://code.visualstudio.com/docs">Visual Studio Code</a> + <a href="https://tutorialmarkdown.com/guia">Markdown</a></li>
+<li>Normas: <a href="../00-normas/normas_taller.html">Normas del taller</a></li>
+</ul>
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      2026-2027 Francisco Javier Hernández Illán - <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es">Licencia CC BY-NC-SA</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="mailto:<fj.hernandez@edu.gva.es>" target="_blank" rel="noopener" title="" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4l208 156a48 48 0 0 0 57.6 0l208-156c12.1-9.1 19.2-23.3 19.2-38.4 0-26.5-21.5-48-48-48zM0 196v188c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V196L313.6 344.8c-34.1 25.6-81.1 25.6-115.2 0z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.linkedin.com/in/fjavier-hernandez-illan" target="_blank" rel="noopener" title="www.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77m282.1 320h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+      <div class="md-consent" data-md-component="consent" id="__consent" hidden>
+        <div class="md-consent__overlay"></div>
+        <aside class="md-consent__inner">
+          <form class="md-consent__form md-grid md-typeset" name="consent">
+            
+
+
+  
+
+
+<h4>Consentimiento de cookie</h4>
+<p>Esta página de apuntes utiliza cookies para reconocer las visitas, medir la efectividad de la documentación y averiguar si encuentras aquello que buscas o cómo has llegado a estos apuntes. Con tu consentimiento, me ayudas a mejorar estos materiales.</p>
+<input class="md-toggle" type="checkbox" id="__settings" >
+<div class="md-consent__settings">
+  <ul class="task-list">
+    
+    
+      
+        
+  
+  
+    
+    
+  
+  <li class="task-list-item">
+    <label class="task-list-control">
+      <input type="checkbox" name="analytics" checked>
+      <span class="task-list-indicator"></span>
+      Google Analytics
+    </label>
+  </li>
+
+      
+    
+    
+      
+    
+    
+  </ul>
+</div>
+<div class="md-consent__controls">
+  
+    
+      <button class="md-button md-button--primary">Aceptar</button>
+    
+    
+    
+  
+    
+    
+    
+      <label class="md-button" for="__settings">Gestionar cookies</label>
+    
+  
+</div>
+          </form>
+        </aside>
+      </div>
+      <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout((function(){document.querySelector("[data-md-component=consent]").hidden=!1}),250);var form=document.forms.consent;for(var action of["submit","reset"])form.addEventListener(action,(function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map((function(e){return[e,!0]})))),location.hash="",location.reload()}))</script>
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["header.autohide", "navigation.top", "navigation.tracking", "navigation.footer", "navigation.indexes", "content.code.annotate", "announce.dismiss", "toc.follow", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../js/print-site.js"></script>
+      
+    
+  </body>
+</html>

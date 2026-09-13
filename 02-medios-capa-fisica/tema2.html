@@ -1,0 +1,1449 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Medios guiados y no guiados; categorías UTP; T568A/B; coaxial; fibra; Wi‑Fi básico 802.11; crimpado.">
+      
+      
+      
+        <link rel="canonical" href="https://fjavier-hernandez.github.io/ral/02-medios-capa-fisica/tema2.html">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../img/ral.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Tema 2 — Medios de transmisión y capa física - Redes de Área Local</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-0CPJP88MBF"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-0CPJP88MBF",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-0CPJP88MBF",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>if("undefined"!=typeof __md_analytics){var consent=__md_get("__consent");consent&&consent.analytics&&__md_analytics()}</script>
+  
+
+    
+    
+  
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Tema 2 — Medios de transmisión y capa física - Redes de Área Local" />
+<meta property="og:description" content="Medios guiados y no guiados; categorías UTP; T568A/B; coaxial; fibra; Wi‑Fi básico 802.11; crimpado." />
+<meta property="og:image" content="https://fjavier-hernandez.github.io/ral/assets/images/social/02-medios-capa-fisica/tema2.png" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:url" content="https://fjavier-hernandez.github.io/ral/02-medios-capa-fisica/tema2.html" />
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:title" content="Tema 2 — Medios de transmisión y capa física - Redes de Área Local" />
+<meta property="twitter:description" content="Medios guiados y no guiados; categorías UTP; T568A/B; coaxial; fibra; Wi‑Fi básico 802.11; crimpado." />
+<meta property="twitter:image" content="https://fjavier-hernandez.github.io/ral/assets/images/social/02-medios-capa-fisica/tema2.png" />
+</head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="javi" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#tema-2-medios-de-transmision-y-capa-fisica" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../index.html" title="Redes de Área Local" class="md-header__button md-logo" aria-label="Redes de Área Local" data-md-component="logo">
+      
+  <img src="../img/ral.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Redes de Área Local
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Tema 2 — Medios de transmisión y capa física
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="javi" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Cambiar a modo noche"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo noche" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Cambiar a modo día"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo día" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../index.html" title="Redes de Área Local" class="md-nav__button md-logo" aria-label="Redes de Área Local" data-md-component="logo">
+      
+  <img src="../img/ral.svg" alt="logo">
+
+    </a>
+    Redes de Área Local
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../00-normas/normas_taller.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Normas del taller
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-introduccion-arquitectura/tema1.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Introducción. Arquitectura de redes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#propuesta-didactica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Propuesta didáctica
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Propuesta didáctica">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#criterios-de-evaluacion-seleccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Criterios de evaluación (selección)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contenidos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Contenidos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#programacion-de-aula-orientativa-1416-h" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Programación de aula (orientativa, ~14–16 h)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cuestionario-inicial" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cuestionario inicial
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#medios-de-transmision" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Medios de transmisión
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Medios de transmisión">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#medios-guiados-y-no-guiados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Medios guiados y no guiados
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#par-trenzado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Par trenzado
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Par trenzado">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#categorias-vision-practica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Categorías (visión práctica)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#blindaje-nombres-habituales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Blindaje (nombres habituales)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conector-rj45" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conector RJ‑45
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#terminaciones-t568a-y-t568b" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Terminaciones T568A y T568B
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cable-directo-y-cruzado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cable directo y cruzado
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cable-coaxial" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cable coaxial
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fibra-optica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fibra óptica
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fibra óptica">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#multimodo-mm-y-monomodo-sm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Multimodo (MM) y monomodo (SM)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conectores" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conectores
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#escala-global-contexto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Escala global (contexto)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#medios-no-guiados-y-wifi-basico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Medios no guiados y Wi‑Fi básico
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Medios no guiados y Wi‑Fi básico">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ieee-80211-resumen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        IEEE 802.11 (resumen)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#crimpado-de-latiguillo-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Crimpado de latiguillo (overview)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#actividades" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Actividades
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Actividades">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ac201-categorias-utp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AC201 — Categorías UTP
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ac202-coaxial" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AC202 — Coaxial
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ac203-fibra-optica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AC203 — Fibra óptica
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ac204-medios-no-guiados-wifi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AC204 — Medios no guiados / Wi‑Fi
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pr201-crimpado-latiguillo-t568b-prueba" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PR201 — Crimpado latiguillo T568B + prueba
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pr202-packet-tracer-capa-fisica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PR202 — Packet Tracer: capa física
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referencias-rapidas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Referencias rápidas
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="tema-2-medios-de-transmision-y-capa-fisica">Tema 2. Medios de transmisión y capa física<a class="headerlink" href="#tema-2-medios-de-transmision-y-capa-fisica" title="Permanent link">&para;</a></h1>
+<p>En este tema bajamos a la <strong>capa física</strong>: qué medio usamos, qué categoría de cable, cómo se termina un RJ‑45 y cuándo conviene cobre, fibra o radio.</p>
+<div class="admonition tip">
+<p class="admonition-title">Primera clase</p>
+<p>Empieza por el <a href="#cuestionario-inicial">cuestionario inicial</a>. No hace falta estudiar el tema completo antes: el cuestionario sirve para ver qué sabes al empezar.</p>
+</div>
+<h2 id="propuesta-didactica">Propuesta didáctica<a class="headerlink" href="#propuesta-didactica" title="Permanent link">&para;</a></h2>
+<p>Trabajamos los <strong>RA2</strong> y <strong>RA3</strong> del módulo Redes de área local (0225):</p>
+<blockquote>
+<p><strong>RA2.</strong> <em>Despliega el cableado de una red local interpretando especificaciones y aplicando técnicas de montaje.</em></p>
+<p><strong>RA3.</strong> <em>Interconecta equipos en redes locales cableadas describiendo estándares de cableado y aplicando técnicas de montaje de conectores.</em></p>
+</blockquote>
+<h3 id="criterios-de-evaluacion-seleccion">Criterios de evaluación (selección)<a class="headerlink" href="#criterios-de-evaluacion-seleccion" title="Permanent link">&para;</a></h3>
+<p><strong>RA2</strong></p>
+<ul>
+<li><strong>CE2a</strong>: Se han reconocido los principios funcionales de las redes locales.</li>
+<li><strong>CE2b</strong>: Se han identificado los distintos tipos de redes.</li>
+<li><strong>CE2c</strong>: Se han diferenciado los medios de transmisión.</li>
+<li><strong>CE2d</strong>: Se han reconocido los detalles del cableado de la instalación y su despliegue (categoría del cableado, espacios por los que discurre, soporte para las canalizaciones, entre otros).</li>
+<li><strong>CE2h</strong>: Se han probado las líneas de comunicación entre las tomas de usuario y paneles de parcheo.</li>
+<li><strong>CE2j</strong>: Se ha trabajado con la calidad y seguridad requeridas.</li>
+</ul>
+<p><strong>RA3</strong></p>
+<ul>
+<li><strong>CE3c</strong>: Se han montado conectores sobre cables (cobre y fibra) de red.</li>
+<li><strong>CE3f</strong>: Se ha verificado la conectividad de la instalación.</li>
+<li><strong>CE3g</strong>: Se ha trabajado con la calidad requerida.</li>
+</ul>
+<h3 id="contenidos">Contenidos<a class="headerlink" href="#contenidos" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Medios guiados: par trenzado (categorías y blindaje), coaxial y fibra óptica.</li>
+<li>Conectores RJ‑45; terminaciones <strong>T568A</strong> / <strong>T568B</strong>; cable directo y cruzado.</li>
+<li>Medios no guiados: espectro básico y Wi‑Fi (IEEE 802.11).</li>
+<li>Overview de crimpado de latiguillo y prueba de continuidad.</li>
+</ul>
+<h3 id="programacion-de-aula-orientativa-1416-h">Programación de aula (orientativa, ~14–16 h)<a class="headerlink" href="#programacion-de-aula-orientativa-1416-h" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Sesiones</th>
+<th>Contenidos</th>
+<th>Actividades</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Presentación + cuestionario inicial</td>
+<td>Cuestionario</td>
+</tr>
+<tr>
+<td>2–3</td>
+<td>Par trenzado: categorías, blindaje, RJ‑45</td>
+<td><strong>AC201</strong></td>
+</tr>
+<tr>
+<td>4</td>
+<td>Coaxial</td>
+<td>AC202</td>
+</tr>
+<tr>
+<td>5–6</td>
+<td>Fibra óptica (tipos, conectores)</td>
+<td>AC203</td>
+</tr>
+<tr>
+<td>7–8</td>
+<td>Medios no guiados y Wi‑Fi 802.11</td>
+<td>AC204</td>
+</tr>
+<tr>
+<td>9–11</td>
+<td>Crimpado T568B + prueba en taller</td>
+<td><strong>PR201</strong></td>
+</tr>
+<tr>
+<td>12–14</td>
+<td>Packet Tracer: capa física</td>
+<td><strong>PR202</strong></td>
+</tr>
+<tr>
+<td>15–16</td>
+<td>Repaso / ampliación si hace falta</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><a id="cuestionario-inicial"></a></p>
+<h2 id="cuestionario-inicial">Cuestionario inicial<a class="headerlink" href="#cuestionario-inicial" title="Permanent link">&para;</a></h2>
+<div class="admonition question">
+<p class="admonition-title">Antes de empezar — responde con lo que sepas</p>
+<ol>
+<li>¿Qué categorías de cable de par trenzado conoces y para qué se usan?</li>
+<li>¿Cuándo conviene fibra óptica frente a cobre?</li>
+<li>¿Qué diferencia hay entre medios guiados y no guiados?</li>
+<li>¿Qué es el espectro electromagnético y por qué importa en redes?</li>
+<li>¿Qué estándares IEEE 802.11 conoces (Wi‑Fi)?</li>
+<li>¿Qué conectores se usan con par trenzado en Ethernet?</li>
+<li>¿En qué se diferencian las terminaciones T568A y T568B?</li>
+<li>¿Qué es un cable directo y un cable cruzado?</li>
+</ol>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Soluciones</p>
+<p>Las soluciones se trabajan en clase o se publican en Aules cuando proceda.</p>
+</div>
+<hr />
+<h2 id="medios-de-transmision">Medios de transmisión<a class="headerlink" href="#medios-de-transmision" title="Permanent link">&para;</a></h2>
+<p>La información viaja como señal eléctrica, óptica o radiofrecuencia. El <strong>medio</strong> es el enlace entre emisor y receptor: de su naturaleza dependen alcance, velocidad, coste y vulnerabilidades.</p>
+<h3 id="medios-guiados-y-no-guiados">Medios guiados y no guiados<a class="headerlink" href="#medios-guiados-y-no-guiados" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Tipo</th>
+<th>Idea</th>
+<th>Ejemplos en <abbr title="Local Area Network">LAN</abbr></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Guiados</strong></td>
+<td>La señal va por un conductor físico</td>
+<td><abbr title="Unshielded Twisted Pair">UTP</abbr>/FTP, coaxial, fibra</td>
+</tr>
+<tr>
+<td><strong>No guiados</strong></td>
+<td>Propagación por el aire (u otro medio sin cable)</td>
+<td>Wi‑Fi, radioenlaces</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="par-trenzado">Par trenzado<a class="headerlink" href="#par-trenzado" title="Permanent link">&para;</a></h2>
+<p>El cable de par trenzado lleva <strong>ocho hilos</strong> agrupados en <strong>cuatro pares</strong>, con cubierta exterior (habitualmente PVC). El trenzado reduce interferencias. Colores de pares (norma habitual):</p>
+<ul>
+<li>Par 1: azul / blanco‑azul  </li>
+<li>Par 2: naranja / blanco‑naranja  </li>
+<li>Par 3: verde / blanco‑verde  </li>
+<li>Par 4: marrón / blanco‑marrón  </li>
+</ul>
+<h3 id="categorias-vision-practica">Categorías (visión práctica)<a class="headerlink" href="#categorias-vision-practica" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Categoría</th>
+<th>Ancho de banda (aprox.)</th>
+<th>Uso típico</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cat. 5e</td>
+<td>100 MHz</td>
+<td>Hasta 1 Gbps (instalaciones básicas)</td>
+</tr>
+<tr>
+<td>Cat. 6</td>
+<td>250 MHz</td>
+<td>1 Gbps a 100 m; 10 Gbps a distancias cortas</td>
+</tr>
+<tr>
+<td>Cat. 6a</td>
+<td>500 MHz</td>
+<td>10 Gbps a 100 m</td>
+</tr>
+<tr>
+<td>Cat. 8</td>
+<td>2000 MHz</td>
+<td>25/40 Gbps a distancias cortas (centros de datos)</td>
+</tr>
+</tbody>
+</table>
+<p>Las Cat. 3–5 están obsoletas en instalaciones nuevas. En muchos centros educativos y oficinas se trabaja con <strong>Cat. 6</strong> o <strong>6a</strong>.</p>
+<h3 id="blindaje-nombres-habituales">Blindaje (nombres habituales)<a class="headerlink" href="#blindaje-nombres-habituales" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Tipo</th>
+<th>Idea</th>
+<th>Cuándo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>U/<abbr title="Unshielded Twisted Pair">UTP</abbr></strong></td>
+<td>Sin pantalla</td>
+<td>Oficinas / aulas con poca <abbr title="Interferencia electromagnética">EMI</abbr></td>
+</tr>
+<tr>
+<td><strong>F/<abbr title="Unshielded Twisted Pair">UTP</abbr></strong> (FTP)</td>
+<td>Pantalla global de foil</td>
+<td>Interferencias moderadas</td>
+</tr>
+<tr>
+<td><strong>S/FTP</strong></td>
+<td>Pantalla + pares apantallados</td>
+<td>Entornos hostiles</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Nomenclatura</p>
+<p>Verás <abbr title="Unshielded Twisted Pair">UTP</abbr>, FTP, STP… Lo importante es saber si hay <strong>pantalla</strong> y si hay que cuidar la <strong>puesta a tierra</strong> del blindaje.</p>
+</div>
+<h3 id="conector-rj45">Conector RJ‑45<a class="headerlink" href="#conector-rj45" title="Permanent link">&para;</a></h3>
+<p>En Ethernet sobre cobre usamos el conector <strong>RJ‑45</strong> (<strong>8P8C</strong>: ocho posiciones, ocho contactos). Puede ser no apantallado o apantallado (carcasa metálica) según el cable.</p>
+<figure>
+  <img alt="Conector RJ-45" src="../img/RJ45.png" width="500" />
+<br />
+<figcaption>Conector RJ‑45 para Ethernet</figcaption>
+</figure>
+<h3 id="terminaciones-t568a-y-t568b">Terminaciones T568A y T568B<a class="headerlink" href="#terminaciones-t568a-y-t568b" title="Permanent link">&para;</a></h3>
+<p>La norma <strong>TIA/EIA‑568</strong> define dos ordenaciones de colores en el conector:</p>
+<figure>
+  <img alt="Terminaciones T568A y T568B" src="../img/T568.png" width="700" />
+<br />
+<figcaption>Terminaciones T568A y T568B en RJ‑45</figcaption>
+</figure>
+<p>Orden de pines (vista del conector con la pestaña abajo, contactos hacia ti):</p>
+<table>
+<thead>
+<tr>
+<th>Pin</th>
+<th>T568A</th>
+<th>T568B</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Blanco/verde</td>
+<td>Blanco/naranja</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Verde</td>
+<td>Naranja</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Blanco/naranja</td>
+<td>Blanco/verde</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Azul</td>
+<td>Azul</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Blanco/azul</td>
+<td>Blanco/azul</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Naranja</td>
+<td>Verde</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Blanco/marrón</td>
+<td>Blanco/marrón</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Marrón</td>
+<td>Marrón</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Truco</p>
+<p>Entre T568A y T568B solo se intercambian los pares <strong>naranja</strong> y <strong>verde</strong>. El azul y el marrón no cambian.</p>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Qué usar en la práctica</p>
+<p>En muchas instalaciones reales se usa <strong>T568B</strong> de extremo a extremo (coherencia). Lo crítico: <strong>misma norma en ambos extremos</strong> del tramo horizontal (salvo cable cruzado a propósito).</p>
+</div>
+<h3 id="cable-directo-y-cruzado">Cable directo y cruzado<a class="headerlink" href="#cable-directo-y-cruzado" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Directo</strong>: misma terminación en ambos extremos (T568B–T568B o T568A–T568A). Es el habitual (PC ↔ switch, TO ↔ panel…).</li>
+<li><strong>Cruzado</strong>: T568A en un extremo y T568B en el otro. Históricamente unía equipos “iguales” (PC–PC, switch–switch). Hoy muchos puertos son <strong>Auto‑MDIX</strong> y aceptan directo.</li>
+</ul>
+<figure>
+  <img alt="Cable directo" src="../img/cable_directo.png" width="640" />
+<br />
+<figcaption>Cable directo: misma terminación en ambos extremos</figcaption>
+</figure>
+<figure>
+  <img alt="Cable cruzado" src="../img/cable_cruzado.png" width="640" />
+<br />
+<figcaption>Cable cruzado: terminaciones distintas (T568A + T568B)</figcaption>
+</figure>
+<hr />
+<h2 id="cable-coaxial">Cable coaxial<a class="headerlink" href="#cable-coaxial" title="Permanent link">&para;</a></h2>
+<p>El <strong>coaxial</strong> tiene conductor central, dieléctrico, malla/pantalla y cubierta. Resiste bien <abbr title="Interferencia electromagnética">EMI</abbr> y atenúa menos que el <abbr title="Unshielded Twisted Pair">UTP</abbr> en ciertos escenarios, pero en <abbr title="Local Area Network">LAN</abbr> modernas (Ethernet) está en desuso (topología de bus). Sigue vivo en TV / HFC / radiofrecuencia.</p>
+<figure>
+  <img alt="Conectores coaxiales" src="../img/Conec_Coaxial.png" width="700" />
+<br />
+<figcaption>Conectores coaxiales habituales (BNC, N, TNC, SMA…)</figcaption>
+</figure>
+<p><strong>Conectores RF</strong> (macho/hembra): anclaje, rosca o presión. En Ethernet antiguo (10BASE2) se usaba <strong>BNC</strong> y <strong>terminadores</strong> en los extremos del bus.</p>
+<p>Tipos que aún verás citados:</p>
+<table>
+<thead>
+<tr>
+<th>Tipo</th>
+<th>Uso típico</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RG‑58</td>
+<td>Ethernet antiguo 10BASE2 (obsoleto en <abbr title="Local Area Network">LAN</abbr>)</td>
+</tr>
+<tr>
+<td>RG‑59 / RG‑6</td>
+<td>TV / vídeo / HFC</td>
+</tr>
+<tr>
+<td>RG‑8</td>
+<td>Ethernet grueso histórico (10BASE5)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="fibra-optica">Fibra óptica<a class="headerlink" href="#fibra-optica" title="Permanent link">&para;</a></h2>
+<p>La <strong>fibra</strong> transporta luz por un núcleo de vidrio o plástico. Ventajas: gran ancho de banda, poca atenuación a larga distancia, inmunidad a <abbr title="Interferencia electromagnética">EMI</abbr> y más difícil de interceptar. Coste e instalación más exigentes.</p>
+<figure>
+  <img alt="Estructura de un cable de fibra" src="../img/estructurafibra.png" width="600" />
+<br />
+<figcaption>Estructura típica de un cable de fibra óptica</figcaption>
+</figure>
+<h3 id="multimodo-mm-y-monomodo-sm">Multimodo (MM) y monomodo (SM)<a class="headerlink" href="#multimodo-mm-y-monomodo-sm" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Tipo</th>
+<th>Núcleo (orden)</th>
+<th>Emisor típico</th>
+<th>Uso</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Multimodo</strong></td>
+<td>~50–62,5 μm</td>
+<td>LED / láser VCSEL</td>
+<td>Campus, edificios, cortas–medias distancias</td>
+</tr>
+<tr>
+<td><strong>Monomodo</strong></td>
+<td>~9 μm</td>
+<td>Láser</td>
+<td>Largas distancias, backbone, operadores</td>
+</tr>
+</tbody>
+</table>
+<p>Clases habituales: <strong>OM1–OM4</strong> (multimodo) y <strong>OS1/OS2</strong> (monomodo). Elegimos según velocidad y metros a cubrir.</p>
+<table>
+<thead>
+<tr>
+<th>Velocidad (orientativa)</th>
+<th>Distancia corta</th>
+<th>Distancia media</th>
+<th>Larga</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1 Gbps</td>
+<td>OM1 / OM2</td>
+<td>OM3 / OM4</td>
+<td>OS1/OS2</td>
+</tr>
+<tr>
+<td>10 Gbps</td>
+<td>OM3 / OM4</td>
+<td>OS1/OS2</td>
+<td>OS1/OS2</td>
+</tr>
+</tbody>
+</table>
+<p>Estructuras de cable: <strong>loose-tube</strong> (exteriores / tendidos largos, a menudo con gel) y <strong>tight-buffered</strong> (interiores, más fácil de conectar).</p>
+<h3 id="conectores">Conectores<a class="headerlink" href="#conectores" title="Permanent link">&para;</a></h3>
+<p>ST, SC, LC, MPO… En racks modernos es muy frecuente <strong>LC</strong>.</p>
+<figure>
+  <img alt="Conectores de fibra óptica" src="../img/conectores_Foptica.png" width="700" />
+<br />
+<figcaption>Conectores de fibra óptica habituales en redes</figcaption>
+</figure>
+<h3 id="escala-global-contexto">Escala global (contexto)<a class="headerlink" href="#escala-global-contexto" title="Permanent link">&para;</a></h3>
+<p>La fibra submarina es la columna vertebral de Internet. Explora el mapa interactivo si te interesa el contexto:</p>
+<figure>
+  <img alt="Red mundial de fibra submarina" src="../img/RedMundialFibra.png" width="800" />
+<br />
+<figcaption>Red mundial de cables submarinos de fibra óptica</figcaption>
+</figure>
+<p><a href="https://www.submarinecablemap.com">Submarine Cable Map</a></p>
+<hr />
+<h2 id="medios-no-guiados-y-wifi-basico">Medios no guiados y Wi‑Fi básico<a class="headerlink" href="#medios-no-guiados-y-wifi-basico" title="Permanent link">&para;</a></h2>
+<p>Sin cable, la señal se propaga como onda electromagnética. El <strong>espectro</strong> se reparte en bandas (radio, microondas, IR…) para que servicios distintos no se pisen.</p>
+<figure>
+  <img alt="Espectro electromagnético" src="../img/espectroradio.png" width="800" />
+<br />
+<figcaption>Espectro electromagnético y bandas de interés en comunicaciones</figcaption>
+</figure>
+<p>Ideas útiles a nivel SMR:</p>
+<ul>
+<li><strong>ISM 2,4 GHz / 5 GHz (y 6 GHz)</strong>: Wi‑Fi, Bluetooth…</li>
+<li>En España, la atribución oficial se recoge en el <strong>CNAF</strong>.</li>
+<li>Estándares IEEE: <strong>802.11</strong> (WLAN), <strong>802.15</strong> (WPAN: Bluetooth, ZigBee…), etc.</li>
+</ul>
+<h3 id="ieee-80211-resumen">IEEE 802.11 (resumen)<a class="headerlink" href="#ieee-80211-resumen" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Generación</th>
+<th>Estándar</th>
+<th>Bandas</th>
+<th>Idea</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Wi‑Fi 4</td>
+<td>802.11n</td>
+<td>2,4 / 5 GHz</td>
+<td>MIMO; hasta cientos de Mbps</td>
+</tr>
+<tr>
+<td>Wi‑Fi 5</td>
+<td>802.11ac</td>
+<td>5 GHz</td>
+<td>MU‑MIMO; Gbps</td>
+</tr>
+<tr>
+<td>Wi‑Fi 6</td>
+<td>802.11ax</td>
+<td>2,4 / 5 / 6 GHz</td>
+<td>Mejor eficiencia en densos</td>
+</tr>
+<tr>
+<td>Wi‑Fi 7</td>
+<td>802.11be</td>
+<td>2,4 / 5 / 6 GHz</td>
+<td>Mayor capacidad (entornos exigentes)</td>
+</tr>
+</tbody>
+</table>
+<p>El montaje y la configuración de AP se profundiza en el <strong>Tema 3</strong> (y seguridad Wi‑Fi / VLAN en temas posteriores).</p>
+<hr />
+<h2 id="crimpado-de-latiguillo-overview">Crimpado de latiguillo (overview)<a class="headerlink" href="#crimpado-de-latiguillo-overview" title="Permanent link">&para;</a></h2>
+<p><strong>Materiales y herramientas habituales:</strong> cable <abbr title="Unshielded Twisted Pair">UTP</abbr> de la categoría indicada, dos conectores RJ‑45, pelacables, crimpadora RJ‑45, cutter y comprobador de cable (tester).</p>
+<p>En taller fabricamos un <strong>latiguillo</strong> <abbr title="Unshielded Twisted Pair">UTP</abbr> con dos RJ‑45:</p>
+<ol>
+<li>Cortar a medida y pelar la cubierta (sin dañar los pares; deja ~2–3 cm de hilos).</li>
+<li>Deshacer el trenzado lo mínimo necesario y ordenar colores según <strong>T568B</strong> (o la norma que indique el profesorado).</li>
+<li>Cortar hilos a la misma longitud e insertarlos hasta el fondo del conector (el aislamiento de la cubierta debe entrar un poco en el conector).</li>
+<li><strong>Crimpar</strong> de un solo golpe con la herramienta adecuada; comprobar que los contactos han bajado.</li>
+<li>Repetir en el otro extremo (<strong>misma</strong> terminación → cable directo).</li>
+<li><strong>Probar</strong> con comprobador de cable / continuidad (y, si hay, tester de cableado o certificación).</li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Calidad y seguridad</p>
+<p>Gafas si el taller lo exige; no pellizcar el cable; no dejar hilos fuera del conector; etiquetar el latiguillo. Un crimpado malo falla en producción aunque “parezca” enchufado.</p>
+</div>
+<p>El detalle de paneles, TO y canalizaciones se desarrolla en el <strong>Tema 3</strong>.</p>
+<hr />
+<h2 id="actividades">Actividades<a class="headerlink" href="#actividades" title="Permanent link">&para;</a></h2>
+<div class="admonition tip">
+<p class="admonition-title">Formato de entrega</p>
+<p>Las entregas en <strong>Aules</strong> son <strong>obligatorias en Markdown</strong> (<code>.md</code>). No se aceptan PDF.<br />
+Nombre del archivo: <code>AC2XX.md</code> o <code>PR2XX.md</code> (sustituye XX por el número). Respeta la fecha de vencimiento.<br />
+Escribiremos los <code>.md</code> con <strong>Visual Studio Code</strong>.</p>
+<div class="admonition note">
+<p class="admonition-title">Cómo empezar</p>
+<ul>
+<li>Guía de Markdown: <a href="https://tutorialmarkdown.com/guia">tutorialmarkdown.com/guia</a></li>
+<li>Documentación de Visual Studio Code: <a href="https://code.visualstudio.com/docs">code.visualstudio.com/docs</a></li>
+</ul>
+</div>
+</div>
+<h3 id="ac201-categorias-utp">AC201 — Categorías <abbr title="Unshielded Twisted Pair">UTP</abbr><a class="headerlink" href="#ac201-categorias-utp" title="Permanent link">&para;</a></h3>
+<ul>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.832 3.367 8.668.108a3.15 3.15 0 0 0-3.856 2.226L.943 16.777a3.15 3.15 0 0 0 2.226 3.856l12.163 3.259a3.15 3.15 0 0 0 3.855-2.226l3.87-14.443a3.15 3.15 0 0 0-2.226-3.856M6.332 2.741a1.574 1.574 0 0 1 1.928-1.113l12.163 3.26a1.574 1.574 0 0 1 1.113 1.927l-3.87 14.444a1.574 1.574 0 0 1-1.928 1.113l-12.163-3.26a1.574 1.574 0 0 1-1.113-1.927zm2.634 2.336a.787.787 0 1 0-.407 1.52l9.122 2.444a.787.787 0 1 0 .407-1.52zM6.985 9.434a.787.787 0 0 1 .963-.557l9.123 2.445a.787.787 0 0 1-.408 1.52l-9.122-2.444a.787.787 0 0 1-.556-.964m-.055 3.244a.787.787 0 0 0-.407 1.52l5.32 1.427a.787.787 0 0 0 .408-1.52z"/></svg></span> <strong>AC201</strong>. (RA2 // CE2c, CE2d // <strong><abbr title="Actividad de clase">AC</abbr> 0–1</strong>). Elabora una tabla comparativa de categorías de par trenzado (al menos 5e, 6, 6a y 8): ancho de banda, velocidades típicas, distancia y usos. Indica cuál elegirías para un aula y por qué.</li>
+</ul>
+<h3 id="ac202-coaxial">AC202 — Coaxial<a class="headerlink" href="#ac202-coaxial" title="Permanent link">&para;</a></h3>
+<ul>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.832 3.367 8.668.108a3.15 3.15 0 0 0-3.856 2.226L.943 16.777a3.15 3.15 0 0 0 2.226 3.856l12.163 3.259a3.15 3.15 0 0 0 3.855-2.226l3.87-14.443a3.15 3.15 0 0 0-2.226-3.856M6.332 2.741a1.574 1.574 0 0 1 1.928-1.113l12.163 3.26a1.574 1.574 0 0 1 1.113 1.927l-3.87 14.444a1.574 1.574 0 0 1-1.928 1.113l-12.163-3.26a1.574 1.574 0 0 1-1.113-1.927zm2.634 2.336a.787.787 0 1 0-.407 1.52l9.122 2.444a.787.787 0 1 0 .407-1.52zM6.985 9.434a.787.787 0 0 1 .963-.557l9.123 2.445a.787.787 0 0 1-.408 1.52l-9.122-2.444a.787.787 0 0 1-.556-.964m-.055 3.244a.787.787 0 0 0-.407 1.52l5.32 1.427a.787.787 0 0 0 .408-1.52z"/></svg></span> <strong>AC202</strong>. (RA2 // CE2c // <strong><abbr title="Actividad de clase">AC</abbr> 0–1</strong>). Resume estructura del coaxial, tipos/aplicaciones (RG‑58, RG‑6…), conectores (BNC, etc.) y ventajas/desventajas frente a <abbr title="Unshielded Twisted Pair">UTP</abbr> en <abbr title="Local Area Network">LAN</abbr> actuales.</li>
+</ul>
+<h3 id="ac203-fibra-optica">AC203 — Fibra óptica<a class="headerlink" href="#ac203-fibra-optica" title="Permanent link">&para;</a></h3>
+<ul>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.832 3.367 8.668.108a3.15 3.15 0 0 0-3.856 2.226L.943 16.777a3.15 3.15 0 0 0 2.226 3.856l12.163 3.259a3.15 3.15 0 0 0 3.855-2.226l3.87-14.443a3.15 3.15 0 0 0-2.226-3.856M6.332 2.741a1.574 1.574 0 0 1 1.928-1.113l12.163 3.26a1.574 1.574 0 0 1 1.113 1.927l-3.87 14.444a1.574 1.574 0 0 1-1.928 1.113l-12.163-3.26a1.574 1.574 0 0 1-1.113-1.927zm2.634 2.336a.787.787 0 1 0-.407 1.52l9.122 2.444a.787.787 0 1 0 .407-1.52zM6.985 9.434a.787.787 0 0 1 .963-.557l9.123 2.445a.787.787 0 0 1-.408 1.52l-9.122-2.444a.787.787 0 0 1-.556-.964m-.055 3.244a.787.787 0 0 0-.407 1.52l5.32 1.427a.787.787 0 0 0 .408-1.52z"/></svg></span> <strong>AC203</strong>. (RA2 // CE2c // <strong><abbr title="Actividad de clase">AC</abbr> 0–1</strong>). Explica principio de funcionamiento, MM vs SM, clases OM/OS, conectores habituales, ventajas/desventajas y precauciones de manipulación.</li>
+</ul>
+<h3 id="ac204-medios-no-guiados-wifi">AC204 — Medios no guiados / Wi‑Fi<a class="headerlink" href="#ac204-medios-no-guiados-wifi" title="Permanent link">&para;</a></h3>
+<ul>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.832 3.367 8.668.108a3.15 3.15 0 0 0-3.856 2.226L.943 16.777a3.15 3.15 0 0 0 2.226 3.856l12.163 3.259a3.15 3.15 0 0 0 3.855-2.226l3.87-14.443a3.15 3.15 0 0 0-2.226-3.856M6.332 2.741a1.574 1.574 0 0 1 1.928-1.113l12.163 3.26a1.574 1.574 0 0 1 1.113 1.927l-3.87 14.444a1.574 1.574 0 0 1-1.928 1.113l-12.163-3.26a1.574 1.574 0 0 1-1.113-1.927zm2.634 2.336a.787.787 0 1 0-.407 1.52l9.122 2.444a.787.787 0 1 0 .407-1.52zM6.985 9.434a.787.787 0 0 1 .963-.557l9.123 2.445a.787.787 0 0 1-.408 1.52l-9.122-2.444a.787.787 0 0 1-.556-.964m-.055 3.244a.787.787 0 0 0-.407 1.52l5.32 1.427a.787.787 0 0 0 .408-1.52z"/></svg></span> <strong>AC204</strong>. (RA2 // CE2a, CE2b, CE2c // <strong><abbr title="Actividad de clase">AC</abbr> 0–1</strong>). Compara medios no guiados (radio, microondas, IR…) y resume estándares 802.11 (Wi‑Fi 4/5/6): bandas, idea de velocidad y un uso típico cada uno. Relaciónalo con tipos de red (WLAN / <abbr title="Local Area Network">LAN</abbr> mixta).</li>
+</ul>
+<h3 id="pr201-crimpado-latiguillo-t568b-prueba">PR201 — Crimpado latiguillo T568B + prueba<a class="headerlink" href="#pr201-crimpado-latiguillo-t568b-prueba" title="Permanent link">&para;</a></h3>
+<ul>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5.563 1.396a.95.95 0 0 0-.534.184c-.404.307-.501.9-.425 1.654.075.755.335 1.704.751 2.8.357.937.835 1.984 1.407 3.095-1.17.146-2.24.338-3.158.57-1.08.274-1.958.6-2.583.973C.397 11.045 0 11.484 0 12s.397.955 1.021 1.328c.55.33 1.308.618 2.217.87a1 1 0 0 0-.006.097c0 .485.365.887.82.887.368 0 .678-.26.784-.616q.89.171 1.898.297a31 31 0 0 0-1.408 3.067c-.421 1.093-.686 2.04-.765 2.795-.08.754.016 1.347.42 1.656.201.154.46.208.734.181s.572-.125.896-.287c.649-.323 1.407-.894 2.244-1.67.962-.89 2.026-2.058 3.118-3.421 1.086 1.37 2.146 2.543 3.103 3.439.834.78 1.588 1.355 2.235 1.682.323.163.62.265.894.293s.534-.025.736-.178c.405-.307.502-.9.426-1.654-.054-.54-.206-1.18-.437-1.9a.91.91 0 0 0 .343-.72.92.92 0 0 0-.238-.625.8.8 0 0 0-.701-.251c-.312-.75-.69-1.557-1.125-2.4a27 27 0 0 0 3.187-.575c1.08-.273 1.958-.597 2.583-.97.624-.374 1.021-.813 1.021-1.329s-.397-.957-1.021-1.33c-.625-.373-1.503-.696-2.583-.969a27 27 0 0 0-3.156-.568 31 31 0 0 0 1.406-3.063c.422-1.093.687-2.04.766-2.795.08-.754-.017-1.347-.42-1.656a.95.95 0 0 0-.531-.185 1.3 1.3 0 0 0-.203.004c-.274.026-.57.127-.895.289-.51.254-1.092.665-1.722 1.205a.8.8 0 0 0-.418-.123c-.456 0-.82.4-.82.886q0 .178.06.334a35 35 0 0 0-2.465 2.791c-1.086-1.37-2.146-2.543-3.103-3.439-.834-.78-1.588-1.355-2.235-1.682-.323-.163-.62-.265-.894-.293a1.3 1.3 0 0 0-.204-.006zm.021.385a1 1 0 0 1 .143.004c.205.02.462.105.757.254.592.298 1.33.855 2.147 1.62.955.893 2.022 2.077 3.119 3.466-.428.544-.859 1.12-1.29 1.72a42 42 0 0 0-3.29.235 31 31 0 0 1-1.453-3.184c-.409-1.075-.658-2.002-.729-2.7-.07-.7.05-1.136.276-1.307a.55.55 0 0 1 .32-.108m12.854.033a.55.55 0 0 1 .32.108c.225.172.343.61.27 1.308s-.33 1.624-.743 2.698a31 31 0 0 1-1.455 3.15 42 42 0 0 0-3.312-.234 49 49 0 0 0-1.274-1.717 35 35 0 0 1 2.436-2.772.78.78 0 0 0 .543.223c.456 0 .82-.401.82-.887a.94.94 0 0 0-.133-.484c.61-.519 1.163-.909 1.625-1.139.297-.147.555-.23.76-.25a1 1 0 0 1 .142-.004zm-6.442 5.622c.344.443.69.913 1.035 1.394q-.51-.012-1.031-.014-.532.001-1.05.014c.35-.481.699-.95 1.046-1.394M12 9.203q.668.001 1.314.02.398.563.793 1.154c.366.55.71 1.093 1.041 1.633a54 54 0 0 1-1.046 1.623q-.395.584-.791 1.138-.646.02-1.311.022-.684-.001-1.348-.022a53 53 0 0 1-.789-1.148 52 52 0 0 1-1.04-1.633 53 53 0 0 1 1.84-2.765q.658-.02 1.337-.022m-1.824.04q-.315.444-.625.905c-.334.496-.647.988-.953 1.477a47 47 0 0 1-1.239-2.178 41 41 0 0 1 2.817-.205zm3.625 0a41 41 0 0 1 2.838.202 47 47 0 0 1-1.264 2.198 53 53 0 0 0-1.574-2.4m3.248.251c1.213.146 2.317.34 3.252.576 1.057.268 1.907.587 2.478.928s.834.689.834.998-.263.655-.834.996c-.57.342-1.421.662-2.478.93-.943.239-2.056.433-3.281.58a47 47 0 0 0-1.416-2.492 47 47 0 0 0 1.445-2.516M6.95 9.496c.424.805.899 1.64 1.418 2.494a47 47 0 0 0-1.443 2.508 30 30 0 0 1-2.059-.318.9.9 0 0 0-.23-.508.8.8 0 0 0-.584-.262.8.8 0 0 0-.696.418c-.894-.247-1.63-.53-2.136-.832C.65 12.655.387 12.31.387 12s.263-.654.834-.996c.57-.342 1.421-.662 2.478-.93.935-.237 2.039-.431 3.252-.578zm4.34.8c-.576 0-1.041.5-1.041 1.112 0 .484.29.897.695 1.049v.063c0 .612.466 1.109 1.041 1.109.576 0 1.041-.497 1.041-1.11q0-.025-.002-.05c.424-.141.73-.565.73-1.063 0-.294-.107-.575-.302-.783a1.01 1.01 0 0 0-.738-.326 1 1 0 0 0-.711.3 1 1 0 0 0-.713-.3zm-2.695 2.061a51 51 0 0 0 1.572 2.397c-.99-.04-1.941-.108-2.832-.205q.573-1.067 1.26-2.192m6.779.02c.448.743.862 1.472 1.236 2.176a42 42 0 0 1-2.814.199q.313-.443.625-.902c.333-.495.647-.986.953-1.473m-8.23 2.537c1.033.117 2.141.198 3.304.236.427.6.854 1.179 1.278 1.723-1.103 1.382-2.176 2.561-3.135 3.45-.821.76-1.562 1.31-2.155 1.605-.296.147-.554.23-.76.25s-.35-.018-.462-.104c-.225-.172-.343-.61-.27-1.308s.329-1.624.742-2.698c.366-.948.861-2.018 1.458-3.154m9.656.004c.459.884.854 1.727 1.178 2.504a.91.91 0 0 0-.348.724c0 .486.364.887.82.887a1 1 0 0 0 .123-.01c.218.686.36 1.293.408 1.782.07.698-.05 1.135-.275 1.306-.113.086-.258.124-.463.104s-.462-.105-.758-.254c-.59-.298-1.329-.855-2.146-1.62-.955-.893-2.023-2.077-3.12-3.466.43-.545.862-1.123 1.294-1.725a42 42 0 0 0 3.287-.232m-3.776.246a49 49 0 0 1-1.05 1.4 49 49 0 0 1-1.04-1.398 47 47 0 0 0 2.09-.002"/></svg></span> <strong>PR201</strong>. (RA3 // CE3c, CE3f, CE3g // RA2 // CE2h, CE2j // RA6 // CE6b, CE6e // <strong><abbr title="Práctica">PR</abbr> 0–10</strong>). En taller, en pareja: fabricad un latiguillo <strong>directo T568B</strong>, probadlo y documentad el proceso (respetando normas de seguridad del taller).</li>
+</ul>
+<p><strong>Tareas:</strong> materiales y herramientas; pasos de crimpado con fotos o capturas; resultado del tester; incidencias y cómo las resolvisteis; normas de seguridad aplicadas.</p>
+<p><strong>Entrega:</strong> <code>PR201.md</code> (informe) + evidencias según se indique en Aules.</p>
+<table>
+<thead>
+<tr>
+<th>Criterio</th>
+<th>Descripción</th>
+<th>Puntos</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Procedimiento</td>
+<td>Pasos claros y ordenados</td>
+<td>0–2</td>
+</tr>
+<tr>
+<td>Terminación T568B</td>
+<td>Colores correctos en ambos extremos</td>
+<td>0–2</td>
+</tr>
+<tr>
+<td>Prueba</td>
+<td>Evidencia de continuidad / OK del tester</td>
+<td>0–2</td>
+</tr>
+<tr>
+<td>Calidad del montaje</td>
+<td>Acabado, sin hilos fuera, longitud coherente</td>
+<td>0–2</td>
+</tr>
+<tr>
+<td>Informe <code>.md</code></td>
+<td>Completo, legible, con evidencias</td>
+<td>0–2</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td></td>
+<td><strong>/10</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="pr202-packet-tracer-capa-fisica">PR202 — Packet Tracer: capa física<a class="headerlink" href="#pr202-packet-tracer-capa-fisica" title="Permanent link">&para;</a></h3>
+<ul>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16.331 18.171V17.06l-.022.01c-.25.121-.522.19-.801.203a1.2 1.2 0 0 1-.806-.237 1.04 1.04 0 0 1-.352-.498 1.2 1.2 0 0 1-.023-.667c.052-.225.178-.426.357-.569.16-.134.355-.218.562-.242a1.85 1.85 0 0 1 1.061.198l.024.013v-1.117l-.051-.014a2.9 2.9 0 0 0-1.011-.132 2.3 2.3 0 0 0-.903.206c-.287.132-.54.327-.739.571a2.22 2.22 0 0 0-.04 2.705c.295.378.709.645 1.175.756.491.12 1.006.102 1.487-.052zm-10.995 0V17.06l-.022.01c-.25.121-.522.19-.801.203a1.18 1.18 0 0 1-.806-.237 1.03 1.03 0 0 1-.351-.498 1.2 1.2 0 0 1-.024-.667c.052-.225.177-.426.357-.569.16-.134.355-.218.562-.242a1.85 1.85 0 0 1 1.061.198l.024.013v-1.117l-.051-.014a2.9 2.9 0 0 0-1.011-.132 2.3 2.3 0 0 0-.903.206 2.1 2.1 0 0 0-.74.571 2.224 2.224 0 0 0-.041 2.705 2.1 2.1 0 0 0 1.176.756c.491.12 1.005.102 1.487-.052zm3.924-.922-.004.957.07.012q.33.061.664.085.293.028.587.012.282-.021.551-.104c.21-.06.405-.163.571-.305a1.16 1.16 0 0 0 .333-.478 1.3 1.3 0 0 0-.007-.96 1.1 1.1 0 0 0-.298-.414 1.3 1.3 0 0 0-.438-.255l-.722-.268a.4.4 0 0 1-.197-.188.25.25 0 0 1 .008-.219.4.4 0 0 1 .154-.142.8.8 0 0 1 .257-.074q.23-.034.46.005.27.03.533.096l.038.008v-.883l-.069-.015a5 5 0 0 0-.543-.097 2.8 2.8 0 0 0-.714-.003c-.3.027-.585.143-.821.33-.16.126-.281.293-.351.484-.104.29-.105.608 0 .899q.082.219.252.381.146.14.327.236.236.126.497.195.086.026.17.054l.085.031.024.01c.084.03.162.078.226.14q.068.064.101.151a.3.3 0 0 1 .001.161.34.34 0 0 1-.166.198.9.9 0 0 1-.275.086 2 2 0 0 1-.427.021 5 5 0 0 1-.557-.074 9 9 0 0 1-.287-.067zm-2.475.995h1.05v-4.167h-1.05zm12.162-2.936a1.095 1.095 0 0 1 1.541.158 1.094 1.094 0 0 1-.157 1.541l-.017.014a1.096 1.096 0 0 1-1.367-1.713m-1.525.854a2.193 2.193 0 0 0 2.666 2.107 2.139 2.139 0 0 0 .701-3.937 2.207 2.207 0 0 0-3.367 1.83m5.539-5.434a.52.52 0 0 0 1.039 0V9.573a.52.52 0 0 0-1.039 0zm-2.844 0a.522.522 0 0 0 1.041 0V8.139a.521.521 0 0 0-1.04 0v2.589m-2.887 1.043a.521.521 0 0 0 1.039 0V6.17a.52.52 0 0 0-1.039 0zm-2.838-1.043a.521.521 0 0 0 1.04 0V8.139a.52.52 0 0 0-1.039 0zm-2.9 0a.522.522 0 0 0 1.039 0V9.573a.52.52 0 0 0-1.039 0zm-2.87 0a.52.52 0 0 0 1.039 0V8.139a.52.52 0 0 0-1.039 0zm-2.887 1.043a.52.52 0 0 0 1.039 0V6.17a.52.52 0 0 0-1.039 0zm-2.861-1.043a.522.522 0 0 0 1.04 0V8.139a.52.52 0 0 0-1.039 0zm-2.877 0a.521.521 0 0 0 1.039 0V9.573a.52.52 0 0 0-1.039 0z"/></svg></span> <strong>PR202</strong>. (RA2 // CE2c, CE2d // RA3 // CE3f // <strong><abbr title="Práctica">PR</abbr> 0–10</strong>). Simulación en Packet Tracer: identificar puertos/módulos, elegir el tipo de cable adecuado y verificar conectividad física. El guion completo se facilitará en clase / Aules.</li>
+</ul>
+<hr />
+<h2 id="referencias-rapidas">Referencias rápidas<a class="headerlink" href="#referencias-rapidas" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Sitio del módulo: <a href="https://fjavier-hernandez.github.io/ral/">fjavier-hernandez.github.io/ral</a></li>
+<li>Mapa de fibra submarina: <a href="https://www.submarinecablemap.com">submarinecablemap.com</a></li>
+<li>Simulación: <a href="https://www.netacad.com/es/cisco-packet-tracer">Cisco Packet Tracer</a></li>
+<li>Entregas: <a href="https://code.visualstudio.com/docs">Visual Studio Code</a> + <a href="https://tutorialmarkdown.com/guia">Markdown</a></li>
+<li>Normas: <a href="../00-normas/normas_taller.html">Normas del taller</a></li>
+</ul>
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      2026-2027 Francisco Javier Hernández Illán - <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es">Licencia CC BY-NC-SA</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="mailto:<fj.hernandez@edu.gva.es>" target="_blank" rel="noopener" title="" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4l208 156a48 48 0 0 0 57.6 0l208-156c12.1-9.1 19.2-23.3 19.2-38.4 0-26.5-21.5-48-48-48zM0 196v188c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V196L313.6 344.8c-34.1 25.6-81.1 25.6-115.2 0z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.linkedin.com/in/fjavier-hernandez-illan" target="_blank" rel="noopener" title="www.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77m282.1 320h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+      <div class="md-consent" data-md-component="consent" id="__consent" hidden>
+        <div class="md-consent__overlay"></div>
+        <aside class="md-consent__inner">
+          <form class="md-consent__form md-grid md-typeset" name="consent">
+            
+
+
+  
+
+
+<h4>Consentimiento de cookie</h4>
+<p>Esta página de apuntes utiliza cookies para reconocer las visitas, medir la efectividad de la documentación y averiguar si encuentras aquello que buscas o cómo has llegado a estos apuntes. Con tu consentimiento, me ayudas a mejorar estos materiales.</p>
+<input class="md-toggle" type="checkbox" id="__settings" >
+<div class="md-consent__settings">
+  <ul class="task-list">
+    
+    
+      
+        
+  
+  
+    
+    
+  
+  <li class="task-list-item">
+    <label class="task-list-control">
+      <input type="checkbox" name="analytics" checked>
+      <span class="task-list-indicator"></span>
+      Google Analytics
+    </label>
+  </li>
+
+      
+    
+    
+      
+    
+    
+  </ul>
+</div>
+<div class="md-consent__controls">
+  
+    
+      <button class="md-button md-button--primary">Aceptar</button>
+    
+    
+    
+  
+    
+    
+    
+      <label class="md-button" for="__settings">Gestionar cookies</label>
+    
+  
+</div>
+          </form>
+        </aside>
+      </div>
+      <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout((function(){document.querySelector("[data-md-component=consent]").hidden=!1}),250);var form=document.forms.consent;for(var action of["submit","reset"])form.addEventListener(action,(function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map((function(e){return[e,!0]})))),location.hash="",location.reload()}))</script>
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["header.autohide", "navigation.top", "navigation.tracking", "navigation.footer", "navigation.indexes", "content.code.annotate", "announce.dismiss", "toc.follow", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../js/print-site.js"></script>
+      
+    
+  </body>
+</html>
