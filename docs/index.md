@@ -39,32 +39,19 @@ Las ^^competencias profesionales^^ asociadas al módulo:
 | RA5 | Mantiene una red local interpretando recomendaciones de los fabricantes de hardware o software y estableciendo la relación entre disfunciones y sus causas. | **15** |
 | RA6 | Cumple las normas de prevención de riesgos laborales y de protección ambiental, identificando los riesgos asociados, las medidas y equipos para prevenirlos. | **10** |
 
-!!! note "Pesos 2026-27"
-    Partida **20 / 12 / 18 / 25 / 15 / 10** (suma 100 %). Ajustada según la carga real de evidencias del banco de actividades (más peso a diagnóstico **RA5**; **RA4** se mantiene como núcleo con NetAcad). La evaluación **no** es criterial por CE: los CE sirven para comprobar cobertura.
-
-``` mermaid
-pie showData
-    title Peso de cada RA en la nota del módulo
-    "RA1 — Estructura LAN" : 20
-    "RA2 — Despliegue cableado" : 12
-    "RA3 — Interconexión" : 18
-    "RA4 — Instalación equipos" : 25
-    "RA5 — Mantenimiento / diagnóstico" : 15
-    "RA6 — PRL y medio ambiente" : 10
-```
+!!! note "Pesos en la nota"
+    Los seis resultados de aprendizaje (RA) suman **100 %**: **20 / 12 / 18 / 25 / 15 / 10**. Cada RA aporta ese porcentaje a la nota final del módulo (ver [Evaluación](#evaluacion)).
 
 ## Carga horaria
 
-!!! warning "Provisional"
-    Distribución de horas del módulo (sujeta a horario y formación en empresa definitivos):
-
+!!! note "Horas del módulo"
     | Concepto | Horas |
     | --- | ---: |
     | **Total módulo** | **233 h** |
     | Formación en el **centro** | **133 h** |
     | Formación en **empresa (FE)** | **100 h** |
 
-    La FE **no tiene fecha fijada** todavía (Dual en blanco). Mientras tanto, el curso se temporaliza sobre las **133 h de centro**.
+    La fecha de la formación en empresa **se comunicará cuando esté fijada**. Mientras tanto, organizamos el curso sobre las **133 h en el centro**.
 
 ## Temas del curso
 
@@ -99,25 +86,27 @@ pie showData
 timeline
     title Planificación temporal — RAL 2026-27 (orientativa)
     section 1ª Evaluación — sep–nov
-        Fundamentos : T1 Introducción y arquitectura : T2 Medios y capa física : T3 Cableado WLAN NetAcad
+        Fundamentos : T1 Introducción y arquitectura : T2 Medios y capa física : T3 Cableado y WLAN
     section 2ª Evaluación — nov–ene
-        Núcleo LAN : T4 Capa de enlace : T5 Capa de red : T6 Enrutamiento VLAN NetAcad
+        Núcleo LAN : T4 Capa de enlace : T5 Capa de red : T6 Enrutamiento VLAN y NetAcad
     section 3ª Evaluación — ene–feb
         Servicios y cierre : T7 Transporte : T8 NAT e IPv6 : T9 Diagnóstico y protección
-    section Margen
-        Centro / FE : 133 sesiones de centro planificadas : FE 100 h sin fecha aún
 ```
 
 !!! tip "Núcleo del curso"
-    Enlace, direccionamiento IP, subnetting y VLANs concentran una parte importante de la evaluación (2.ª evaluación, antes del margen de FE). El Tema 9 cierra el bloque de centro con **diagnóstico (RA5)** y **prevención de riesgos (RA6)**. Ritmo: **7 sesiones/semana × 55 min**; **1 h del cómputo 133 = 1 sesión**.
+    Enlace, direccionamiento IP, subnetting y VLANs concentran una parte importante de la evaluación (sobre todo en la 2.ª evaluación). El Tema 9 cierra el curso en el centro con **diagnóstico (RA5)** y **prevención de riesgos (RA6)**. Tenemos **7 sesiones por semana** (55 minutos cada una).
 
 ## Evaluación
 
-La evaluación se organiza por **resultados de aprendizaje (RA)**. Cada RA se califica con la media ponderada de los instrumentos que lo evalúan. Se comprueba que las actividades cubren los criterios de evaluación (CE) del BOE, pero **la nota no se calcula por % de CE** (evaluación **no criterial**). **Los RA no son compensables entre sí.**
+La evaluación se organiza por **resultados de aprendizaje (RA)**. Cada actividad indica qué RA trabaja. **Los RA no se compensan entre sí:** hay que superar cada uno.
 
-### «Quesitos»: cómo se obtiene la nota
+### Cómo se calcula la nota («quesitos»)
 
-Imagina la nota del módulo como una **tarta** repartida en seis quesitos (los RA). Cada quesito tiene un tamaño fijo (el peso de la tabla anterior). Dentro de cada quesito, tu nota es la **media ponderada** de las AC, PR, PY y PO de ese RA.
+Imagina la nota del módulo como una **tarta** repartida en seis quesitos (los RA). Cada quesito tiene un tamaño fijo (el peso de la tabla de arriba: 20 %, 12 %, 18 %, 25 %, 15 % y 10 %).
+
+1. En cada RA, tu nota es la **media ponderada** de las actividades de ese RA (AC, PR, PY, PO).
+2. La **nota final** del módulo es la suma de (nota de cada RA × su peso).
+3. Si cumples el criterio de **NetAcad / CCNA** publicado en Aules, puedes sumar **+1 punto** sobre esa nota final. Ese +1 **no sustituye** ningún RA.
 
 ``` mermaid
 flowchart LR
@@ -147,7 +136,20 @@ flowchart LR
   PLUS -.->|"si se concede"| NF
 ```
 
-**Ejemplo (simplificado):** si en RA4 tienes prácticas y un examen, se promedian (según pesos internos que se indiquen en Aules) y ese resultado cuenta un **25 %** de la nota del módulo. Suspender un RA no se compensa con otro.
+**Ejemplo (simplificado):** si en RA4 tienes prácticas y un examen, se promedian (según lo que se indique en Aules) y ese resultado cuenta un **25 %** de la nota del módulo. Suspender un RA no se compensa con otro.
+
+### Peso de cada RA
+
+``` mermaid
+pie showData
+    title Peso de cada RA en la nota del módulo
+    "RA1 — Estructura LAN" : 20
+    "RA2 — Despliegue cableado" : 12
+    "RA3 — Interconexión" : 18
+    "RA4 — Instalación equipos" : 25
+    "RA5 — Mantenimiento / diagnóstico" : 15
+    "RA6 — PRL y medio ambiente" : 10
+```
 
 ### Instrumentos de evaluación (IE)
 
@@ -157,14 +159,13 @@ flowchart LR
 | Práctica | :simple-neutralinojs: **PR** | Práctica / simulación / laboratorio / NetAcad | **0–10** |
 | Proyecto | :material-calendar: **PY** | Entregable mayor con rúbrica | **0–30** |
 | Prueba objetiva | :material-pen: **PO** | Examen escrito o en ordenador | **0–100** |
-| NetAcad / CCNA | :simple-cisco: **+1** | Certificación o aprovechamiento de la *class* NetAcad | **+1 en la nota final** |
+| NetAcad / CCNA | :simple-cisco: **+1** | Aprovechamiento de la *class* NetAcad (según Aules) | **+1 en la nota final** |
 
-**Resumen de los instrumentos:**
+**Resumen:**
 
-- Opcionales de refuerzo / profundización (si se usan): AR / AP, sin sustituir los IE anteriores.
-- **Cálculo:** para cada RA, media ponderada de los IE que lo evalúan → nota del RA. Nota del módulo = suma de (nota RA × peso). Las calificaciones se publican en **Aules**.
-- Cada actividad indica el RA, los CE que trabaja y su escala. Codificación: prefijo del IE + número de tema (ej. `AC102` = actividad de clase 02 del Tema 1; `PR101` = práctica 01 del Tema 1).
-- **Cisco NetAcad:** el profesor es instructor; el alumnado trabaja en la *class* del curso. Las prácticas **PR303** (WLAN) y **PR603** (VLAN/enrutamiento + preparación) forman parte del itinerario. Si cumples el criterio publicado en Aules (p. ej. finalizar módulos / evidencia de certificación), se aplica **+1 punto sobre la nota final** del módulo. Ese +1 **no sustituye** ningún RA.
+- Las calificaciones se publican en **Aules**.
+- Cada actividad indica el **RA** que evalúa y su escala. Codificación: prefijo del IE + número de tema (ej. `AC102` = actividad 02 del Tema 1; `PR101` = práctica 01 del Tema 1).
+- **Cisco NetAcad:** trabajarás en la *class* del curso. Prácticas como **PR303** (WLAN) y **PR603** (VLAN/enrutamiento) forman parte del itinerario. Si cumples lo publicado en Aules, puedes obtener el **+1** en la nota final.
 - Las entregas en Aules son **obligatorias en Markdown** (`.md`). No se aceptan PDF.
 
 !!! note "Cómo empezar con Markdown y VS Code"
@@ -178,7 +179,7 @@ flowchart LR
 - Aules (entregas en `.md` y calificaciones).
 - Diagramas: [Excalidraw](https://excalidraw.com/), [draw.io (diagrams.net)](https://app.diagrams.net/) o [Dia](https://wiki.gnome.org/Apps/Dia).
 - Simulación: [Cisco Packet Tracer](https://www.netacad.com/es/cisco-packet-tracer).
-- Formación NetAcad / CCNA (class del curso; acceso según indique el profesor).
+- Formación NetAcad / CCNA (acceso según se indique en clase / Aules).
 - Editor de entregas: Visual Studio Code + Markdown.
 - Herramientas y cableado del taller (Temas 2–3 y Tema 9).
 
@@ -190,12 +191,11 @@ flowchart LR
 | [Normas del taller](00-normas/normas_taller.md) | Normas de uso del taller |
 | [Tema 1](01-introduccion-arquitectura/tema1.md) | Introducción. Arquitectura de redes |
 
-Los Temas 2–9 se publicarán en la **navegación** cuando toque trabajarlos en clase. Mientras tanto, en este Inicio aparecen como «Se publicará cuando toque».
+Los Temas 2–9 se irán publicando en la navegación **cuando toque** trabajarlos en clase.
 
 *[CFGM]: Ciclo Formativo de Grado Medio  
 *[SMR]: Sistemas Microinformáticos y Redes  
 *[RA]: Resultado de aprendizaje  
-*[CE]: Criterio de evaluación  
 *[IE]: Instrumento de evaluación  
 *[FE]: Formación en empresa  
 *[CCNA]: Cisco Certified Network Associate
