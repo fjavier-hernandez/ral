@@ -23,8 +23,9 @@ Trabajamos el **RA1** del módulo Redes de área local (0225):
 * **CE1c**: Se han descrito los elementos de la red local y su función.
 * **CE1d**: Se han identificado y clasificado los medios de transmisión.
 * **CE1e**: Se ha reconocido el mapa físico de la red local.
-* **CE1f**: Se han reconocido las distintas topologías de red.
-* **CE1g**: Se han identificado estructuras alternativas.
+* **CE1f**: Se han utilizado aplicaciones para representar el mapa físico de la red local.
+* **CE1g**: Se han reconocido las distintas topologías de red.
+* **CE1h**: Se han identificado estructuras alternativas.
 
 ### Contenidos
 
@@ -355,7 +356,7 @@ En el **emisor**, cada capa añade su cabecera (**encapsulación**). En el **rec
 
 ### PR101 — Mapa físico y lógico
 
-* :simple-neutralinojs: **PR101**. (RA1 // CE1c, CE1e, CE1f // **PR 0–10**). En grupo, diseñad el esquema de la empresa ficticia **TechSolutions**:
+* :simple-neutralinojs: **PR101**. (RA1 // CE1b, CE1c, CE1e, CE1f, CE1g, CE1h // **PR 0–10**). En grupo, diseñad el esquema de la empresa ficticia **TechSolutions**:
 
   - 3 departamentos (Administración, Ventas, Soporte), cada uno con 5 PCs y 1 impresora.
   - 1 servidor central.
@@ -384,7 +385,7 @@ En el **emisor**, cada capa añade su cabecera (**encapsulación**). En el **rec
 
 ### AC104 — OSI vs TCP/IP
 
-* :simple-readdotcv: **AC104**. (RA1 // CE1a, CE1f // **AC 0–1**). Esquema comparativo OSI / TCP-IP: capas, equivalencia, función y un ejemplo de protocolo por capa TCP/IP.
+* :simple-readdotcv: **AC104**. (RA1 // CE1a, CE1g // **AC 0–1**). Esquema comparativo OSI / TCP-IP: capas, equivalencia, función y un ejemplo de protocolo por capa TCP/IP.
 
 ### PR102 — Modelos en Packet Tracer (cuando toque)
 

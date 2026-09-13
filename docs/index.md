@@ -32,15 +32,26 @@ Las ^^competencias profesionales^^ asociadas al módulo:
 
 | Código | Descripción | Peso (%) |
 | ------ | ----------- | -------- |
-| RA1 | Reconoce la estructura de redes locales cableadas analizando las características de entornos de aplicación y describiendo la funcionalidad de sus componentes. | 20 |
-| RA2 | Despliega el cableado de una red local interpretando especificaciones y aplicando técnicas de montaje. | 15 |
-| RA3 | Interconecta equipos en redes locales cableadas describiendo estándares de cableado y aplicando técnicas de montaje de conectores. | 20 |
-| RA4 | Instala equipos en red, describiendo sus prestaciones y aplicando técnicas de montaje. | 25 |
-| RA5 | Mantiene una red local interpretando recomendaciones de los fabricantes de hardware o software y estableciendo la relación entre disfunciones y sus causas. | 10 |
-| RA6 | Cumple las normas de prevención de riesgos laborales y de protección ambiental, identificando los riesgos asociados, las medidas y equipos para prevenirlos. | 10 |
+| RA1 | Reconoce la estructura de redes locales cableadas analizando las características de entornos de aplicación y describiendo la funcionalidad de sus componentes. | **20** |
+| RA2 | Despliega el cableado de una red local interpretando especificaciones y aplicando técnicas de montaje. | **12** |
+| RA3 | Interconecta equipos en redes locales cableadas describiendo estándares de cableado y aplicando técnicas de montaje de conectores. | **18** |
+| RA4 | Instala equipos en red, describiendo sus prestaciones y aplicando técnicas de montaje. | **25** |
+| RA5 | Mantiene una red local interpretando recomendaciones de los fabricantes de hardware o software y estableciendo la relación entre disfunciones y sus causas. | **15** |
+| RA6 | Cumple las normas de prevención de riesgos laborales y de protección ambiental, identificando los riesgos asociados, las medidas y equipos para prevenirlos. | **10** |
 
-!!! note "Pesos provisionales"
-    Partida **20 / 15 / 20 / 25 / 10 / 10** (suma 100 %). Se confirmará durante el curso según las actividades reales.
+!!! note "Pesos 2026-27"
+    Partida **20 / 12 / 18 / 25 / 15 / 10** (suma 100 %). Ajustada según la carga real de evidencias del banco de actividades (más peso a diagnóstico **RA5**; **RA4** se mantiene como núcleo con NetAcad). La evaluación **no** es criterial por CE: los CE sirven para comprobar cobertura.
+
+``` mermaid
+pie showData
+    title Peso de cada RA en la nota del módulo
+    "RA1 — Estructura LAN" : 20
+    "RA2 — Despliegue cableado" : 12
+    "RA3 — Interconexión" : 18
+    "RA4 — Instalación equipos" : 25
+    "RA5 — Mantenimiento / diagnóstico" : 15
+    "RA6 — PRL y medio ambiente" : 10
+```
 
 ## Carga horaria
 
@@ -53,19 +64,21 @@ Las ^^competencias profesionales^^ asociadas al módulo:
     | Formación en el **centro** | **133 h** |
     | Formación en **empresa (FE)** | **100 h** |
 
+    La FE **no tiene fecha fijada** todavía (Dual en blanco). Mientras tanto, el curso se temporaliza sobre las **133 h de centro**.
+
 ## Temas del curso
 
 | Tema | Título | Qué trabajamos | Estado | RA principales |
 | ---: | --- | --- | --- | --- |
 | **1** | [Introducción. Arquitectura de redes](01-introduccion-arquitectura/tema1.md) | Tipos de redes, componentes, topologías, modelos OSI y TCP/IP | **Publicado** | RA1 |
-| **2** | Medios de transmisión y capa física | Par trenzado, fibra, Wi‑Fi básico y conectores | Próximamente | RA2, RA3 |
-| **3** | Cableado estructurado y componentes | Racks, paneles, electrónica de red y normativa de edificio | Próximamente | RA2, RA3, RA4 |
-| **4** | Capa de enlace | Tramas, direcciones MAC, switches y dominios de colisión/difusión | Próximamente | RA1, RA4 |
-| **5** | Capa de red | IPv4, máscaras, CIDR, ARP, ICMP y DHCP | Próximamente | RA1, RA4 |
-| **6** | Enrutamiento, subnetting y VLANs | Subnetting, supernetting, rutas estáticas y VLANs | Próximamente | RA3, RA4 |
-| **7** | Capa de transporte | Puertos, TCP/UDP y herramientas básicas | Próximamente | RA4, RA5 |
-| **8** | NAT e IPv6 | Traducción de direcciones (NAT/PAT) e introducción a IPv6 | Próximamente | RA4, RA5 |
-| **9** | Servicios, diagnóstico y protección | Servicios de aplicación, diagnóstico de averías, protección y PRL | Próximamente | RA5, RA6 |
+| **2** | Medios de transmisión y capa física | Par trenzado, fibra, Wi‑Fi básico y conectores | Se publicará cuando toque | RA2, RA3 |
+| **3** | Cableado estructurado y componentes | Racks, paneles, electrónica de red, WLAN/NetAcad | Se publicará cuando toque | RA2, RA3, RA4 |
+| **4** | Capa de enlace | Tramas, direcciones MAC, switches y dominios de colisión/difusión | Se publicará cuando toque | RA1, RA4 |
+| **5** | Capa de red | IPv4, máscaras, CIDR, ARP, ICMP y DHCP | Se publicará cuando toque | RA1, RA4 |
+| **6** | Enrutamiento, subnetting y VLANs | Subnetting, supernetting, rutas estáticas, VLANs y NetAcad | Se publicará cuando toque | RA3, RA4 |
+| **7** | Capa de transporte | Puertos, TCP/UDP y herramientas básicas | Se publicará cuando toque | RA4, RA5 |
+| **8** | NAT e IPv6 | Traducción de direcciones (NAT/PAT) e introducción a IPv6 | Se publicará cuando toque | RA4, RA5 |
+| **9** | Servicios, diagnóstico y protección | Servicios de aplicación, diagnóstico de averías, protección y PRL | Se publicará cuando toque | RA5, RA6 |
 
 ### Mapa tema × RA
 
@@ -80,38 +93,78 @@ Las ^^competencias profesionales^^ asociadas al módulo:
 | 7. Capa de transporte | | | | X | X | |
 | 8. NAT e IPv6 | | | | X | X | |
 | 9. Servicios, diagnóstico y protección | | | | | X | X |
-| **Peso** | 20 % | 15 % | 20 % | 25 % | 10 % | 10 % |
+| **Peso** | 20 % | 12 % | 18 % | 25 % | 15 % | 10 % |
 
 ``` mermaid
 timeline
-    title Planificación temporal — RAL 2026-27
-    section 1ª Evaluación
-        Fundamentos : T1 Introducción y arquitectura : T2 Medios y capa física : T3 Cableado y componentes
-    section 2ª Evaluación
-        Núcleo LAN : T4 Capa de enlace : T5 Capa de red : T6 Enrutamiento subnetting y VLANs
-    section 3ª Evaluación
+    title Planificación temporal — RAL 2026-27 (orientativa)
+    section 1ª Evaluación — sep–nov
+        Fundamentos : T1 Introducción y arquitectura : T2 Medios y capa física : T3 Cableado WLAN NetAcad
+    section 2ª Evaluación — nov–ene
+        Núcleo LAN : T4 Capa de enlace : T5 Capa de red : T6 Enrutamiento VLAN NetAcad
+    section 3ª Evaluación — ene–feb
         Servicios y cierre : T7 Transporte : T8 NAT e IPv6 : T9 Diagnóstico y protección
+    section Margen
+        Centro / FE : 133 sesiones de centro planificadas : FE 100 h sin fecha aún
 ```
 
 !!! tip "Núcleo del curso"
-    Enlace, direccionamiento IP, subnetting y VLANs concentran una parte importante de la evaluación. Se trabajan en la 2.ª evaluación para consolidarlos con tiempo. El Tema 9 cierra el curso con **diagnóstico (RA5)** y **prevención de riesgos (RA6)**.
+    Enlace, direccionamiento IP, subnetting y VLANs concentran una parte importante de la evaluación (2.ª evaluación, antes del margen de FE). El Tema 9 cierra el bloque de centro con **diagnóstico (RA5)** y **prevención de riesgos (RA6)**. Ritmo: **7 sesiones/semana × 55 min**; **1 h del cómputo 133 = 1 sesión**.
 
 ## Evaluación
 
-La evaluación se organiza por **resultados de aprendizaje (RA)**. Cada RA se califica con la media ponderada de los instrumentos que lo evalúan, comprobando que se cubren los criterios de evaluación (CE) trabajados en las actividades. **Los RA no son compensables entre sí.**
+La evaluación se organiza por **resultados de aprendizaje (RA)**. Cada RA se califica con la media ponderada de los instrumentos que lo evalúan. Se comprueba que las actividades cubren los criterios de evaluación (CE) del BOE, pero **la nota no se calcula por % de CE** (evaluación **no criterial**). **Los RA no son compensables entre sí.**
+
+### «Quesitos»: cómo se obtiene la nota
+
+Imagina la nota del módulo como una **tarta** repartida en seis quesitos (los RA). Cada quesito tiene un tamaño fijo (el peso de la tabla anterior). Dentro de cada quesito, tu nota es la **media ponderada** de las AC, PR, PY y PO de ese RA.
+
+``` mermaid
+flowchart LR
+  subgraph IE["Instrumentos"]
+    AC["AC 0–1"]
+    PR["PR 0–10"]
+    PY["PY 0–30"]
+    PO["PO 0–100"]
+  end
+  subgraph RA["Nota de cada RA"]
+    N1["RA1"]
+    N2["RA2"]
+    N3["RA3"]
+    N4["RA4"]
+    N5["RA5"]
+    N6["RA6"]
+  end
+  NF["Nota final del módulo"]
+  PLUS["+1 NetAcad / CCNA"]
+  IE --> RA
+  N1 -->|"× 0,20"| NF
+  N2 -->|"× 0,12"| NF
+  N3 -->|"× 0,18"| NF
+  N4 -->|"× 0,25"| NF
+  N5 -->|"× 0,15"| NF
+  N6 -->|"× 0,10"| NF
+  PLUS -.->|"si se concede"| NF
+```
+
+**Ejemplo (simplificado):** si en RA4 tienes prácticas y un examen, se promedian (según pesos internos que se indiquen en Aules) y ese resultado cuenta un **25 %** de la nota del módulo. Suspender un RA no se compensa con otro.
 
 ### Instrumentos de evaluación (IE)
 
 | Instrumento | Icono | Descripción | Escala |
 | --- | --- | --- | --- |
 | Actividad de clase | :simple-readdotcv: **AC** | Microevidencia de aula | **0–1** |
-| Práctica | :simple-neutralinojs: **PR** | Práctica / simulación / laboratorio | **0–10** |
+| Práctica | :simple-neutralinojs: **PR** | Práctica / simulación / laboratorio / NetAcad | **0–10** |
 | Proyecto | :material-calendar: **PY** | Entregable mayor con rúbrica | **0–30** |
 | Prueba objetiva | :material-pen: **PO** | Examen escrito o en ordenador | **0–100** |
+| NetAcad / CCNA | :simple-cisco: **+1** | Certificación o aprovechamiento de la *class* NetAcad | **+1 en la nota final** |
+
+**Resumen de los instrumentos:**
 
 - Opcionales de refuerzo / profundización (si se usan): AR / AP, sin sustituir los IE anteriores.
-- **Cálculo:** para cada RA, media ponderada de los IE que lo evalúan. Las calificaciones se publican en **Aules**.
+- **Cálculo:** para cada RA, media ponderada de los IE que lo evalúan → nota del RA. Nota del módulo = suma de (nota RA × peso). Las calificaciones se publican en **Aules**.
 - Cada actividad indica el RA, los CE que trabaja y su escala. Codificación: prefijo del IE + número de tema (ej. `AC102` = actividad de clase 02 del Tema 1; `PR101` = práctica 01 del Tema 1).
+- **Cisco NetAcad:** el profesor es instructor; el alumnado trabaja en la *class* del curso. Las prácticas **PR303** (WLAN) y **PR603** (VLAN/enrutamiento + preparación) forman parte del itinerario. Si cumples el criterio publicado en Aules (p. ej. finalizar módulos / evidencia de certificación), se aplica **+1 punto sobre la nota final** del módulo. Ese +1 **no sustituye** ningún RA.
 - Las entregas en Aules son **obligatorias en Markdown** (`.md`). No se aceptan PDF.
 
 !!! note "Cómo empezar con Markdown y VS Code"
@@ -125,6 +178,7 @@ La evaluación se organiza por **resultados de aprendizaje (RA)**. Cada RA se ca
 - Aules (entregas en `.md` y calificaciones).
 - Diagramas: [Excalidraw](https://excalidraw.com/), [draw.io (diagrams.net)](https://app.diagrams.net/) o [Dia](https://wiki.gnome.org/Apps/Dia).
 - Simulación: [Cisco Packet Tracer](https://www.netacad.com/es/cisco-packet-tracer).
+- Formación NetAcad / CCNA (class del curso; acceso según indique el profesor).
 - Editor de entregas: Visual Studio Code + Markdown.
 - Herramientas y cableado del taller (Temas 2–3 y Tema 9).
 
@@ -136,11 +190,12 @@ La evaluación se organiza por **resultados de aprendizaje (RA)**. Cada RA se ca
 | [Normas del taller](00-normas/normas_taller.md) | Normas de uso del taller |
 | [Tema 1](01-introduccion-arquitectura/tema1.md) | Introducción. Arquitectura de redes |
 
-Los Temas 2–9 se irán publicando cuando llegue el momento de trabajarlos.
+Los Temas 2–9 se publicarán en la **navegación** cuando toque trabajarlos en clase. Mientras tanto, en este Inicio aparecen como «Se publicará cuando toque».
 
 *[CFGM]: Ciclo Formativo de Grado Medio  
 *[SMR]: Sistemas Microinformáticos y Redes  
 *[RA]: Resultado de aprendizaje  
 *[CE]: Criterio de evaluación  
 *[IE]: Instrumento de evaluación  
-*[FE]: Formación en empresa
+*[FE]: Formación en empresa  
+*[CCNA]: Cisco Certified Network Associate
