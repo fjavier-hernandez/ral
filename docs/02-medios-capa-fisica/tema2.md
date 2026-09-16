@@ -51,7 +51,7 @@ Trabajamos los **RA2** y **RA3** del módulo Redes de área local (0225):
 | 4 | Coaxial | AC202 |
 | 5–6 | Fibra óptica (tipos, conectores) | AC203 |
 | 7–8 | Medios no guiados y Wi‑Fi 802.11 | AC204 |
-| 9–11 | Crimpado T568B + prueba en taller | **PR201** |
+| 9–11 | Crimpado T568A/B + comprobador + etiquetado | **PR201** |
 | 12–14 | Packet Tracer: capa física | **PR202** |
 | 15–16 | Repaso / ampliación si hace falta | — |
 
@@ -317,21 +317,41 @@ El detalle de paneles, TO y canalizaciones se desarrolla en el **Tema 3**.
 
 * :simple-readdotcv: **AC204**. (RA2 // CE2a, CE2b, CE2c // **AC 0–1**). Compara medios no guiados (radio, microondas, IR…) y resume estándares 802.11 (Wi‑Fi 4/5/6): bandas, idea de velocidad y un uso típico cada uno. Relaciónalo con tipos de red (WLAN / LAN mixta).
 
-### PR201 — Crimpado latiguillo T568B + prueba
+### PR201 — Crimpado UTP (T568A/B) + comprobador + etiquetado
 
-* :simple-neutralinojs: **PR201**. (RA3 // CE3c, CE3f, CE3g // RA2 // CE2h, CE2j // RA6 // CE6b, CE6e // **PR 0–10**). En taller, en pareja: fabricad un latiguillo **directo T568B**, probadlo y documentad el proceso (respetando normas de seguridad del taller).
+| Campo | Valor |
+| --- | --- |
+| **Código** | **PR201** |
+| **UP / tema** | T2 — Medios y capa física |
+| **RA principal** | **RA3** (montaje de conectores y verificación). Apoyo: **RA2** (prueba de líneas), **RA6** (PRL/EPI) |
+| **CE de cobertura** | CE3c, CE3f, CE3g · CE2h, CE2j · CE6b, CE6e |
+| **Sesiones estimadas** | **2–3** |
+| **Instrumento** | Checklist de taller + rúbrica 0–10 |
 
-  **Tareas:** materiales y herramientas; pasos de crimpado con fotos o capturas; resultado del tester; incidencias y cómo las resolvisteis; normas de seguridad aplicadas.
+* :simple-neutralinojs: **PR201**. En taller, en pareja: fabricad un latiguillo **UTP directo** con terminación **T568B** en ambos extremos (el profesor puede pedir un extremo en **T568A** para contrastar el estándar). Probad con el **comprobador**, **etiquetad** el cable y documentad el proceso.
 
-  **Entrega:** `PR201.md` (informe) + evidencias según se indique en Aules.
+  **Enunciado (pasos):**
 
-| Criterio | Descripción | Puntos |
+  1. Materiales: UTP de la categoría indicada, 2× RJ‑45, pelacables, crimpadora, cutter, comprobador, etiquetas.
+  2. Pelar ~2–2,5 cm; ordenar pares según el esquema (T568B por defecto); cortar a la misma longitud; insertar hasta el tope (la funda entra en el conector).
+  3. Crimpar de un solo golpe; repetir el otro extremo.
+  4. Probar en el comprobador (continuidad / pares / polaridad). Si falla: abrir, identificar el error y rehacer.
+  5. Etiquetar (código que indique el profesor, p. ej. `PR201-Gx-nn`).
+  6. Entregar el **cable físico** + evidencias digitales.
+
+  **Errores típicos a evitar / documentar si ocurren:** pares cruzados o invertidos; hilos fuera del conector; funda que no entra; crimpado doble o incompleto; no etiquetar; ignorar EPI (gafas si el taller lo exige).
+
+  **Evidencia:** latiguillo OK al tester + foto de ambos extremos (colores visibles) + foto/captura del comprobador + checklist firmada + `PR201.md`.
+
+  **Entrega:** `PR201.md` + evidencias según Aules.
+
+| Criterio (rúbrica) | Descripción | Puntos |
 | --- | --- | --- |
-| Procedimiento | Pasos claros y ordenados | 0–2 |
-| Terminación T568B | Colores correctos en ambos extremos | 0–2 |
+| Procedimiento | Pasos claros, ordenados y seguros | 0–2 |
+| Terminación T568A/B | Colores correctos en ambos extremos | 0–2 |
 | Prueba | Evidencia de continuidad / OK del tester | 0–2 |
-| Calidad del montaje | Acabado, sin hilos fuera, longitud coherente | 0–2 |
-| Informe `.md` | Completo, legible, con evidencias | 0–2 |
+| Calidad + etiquetado | Acabado, sin hilos fuera, etiqueta legible | 0–2 |
+| Informe `.md` | Completo, con fotos y errores/correcciones | 0–2 |
 | **Total** | | **/10** |
 
 ### PR202 — Packet Tracer: capa física
