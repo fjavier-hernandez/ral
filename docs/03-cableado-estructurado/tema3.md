@@ -56,9 +56,10 @@ Trabajamos los **RA2**, **RA3** y **RA4** del módulo Redes de área local (0225
 * Armario / rack 19″ y unidades **U**; paneles de parcheo; TO y latiguillos.
 * Canalizaciones, bandejas, guías y pasahilos.
 * Electrónica: hub, switch, router, gateway, punto de acceso.
+* Empalme por **fusión** de fibra (fusionadora, protectores, comprobación básica, PRL).
 * Visión ISO/TIA: horizontal, backbone y distancias orientativas.
 
-### Programación de aula (orientativa, ~14–16 h)
+### Programación de aula (orientativa, ~14–17 h)
 
 | Sesiones | Contenidos | Actividades |
 | --- | --- | --- |
@@ -68,9 +69,10 @@ Trabajamos los **RA2**, **RA3** y **RA4** del módulo Redes de área local (0225
 | 5–7 | Electrónica de red + AP | AC303 |
 | 8–9 | Normas ISO/TIA; distancias; etiquetado | — |
 | 10–11 | Propuesta electrónica (centro educativo) | **AC305** |
-| 12–13 | Packet Tracer: cableado estructurado | **PR301** |
-| 14–15 | WLAN / NetAcad (AP) | **PR303** |
-| 16–17 | Proyecto aulario (grupo) | **PR302** |
+| 12–13 | **Taller:** montaje panel / tomas / armario + switch | **PR301** |
+| 14 | **Taller:** fusión de fibra / fusionadoras | **PR304** |
+| 15–16 | WLAN / NetAcad (AP) | **PR303** |
+| 17 | Proyecto aulario (grupo) | **PR302** |
 
 ---
 
@@ -291,6 +293,17 @@ Familia útil: **TIA‑568** (cableado), **569** (espacios/canalizaciones), **60
 
 Con **fibra** el backbone y el campus cubren distancias mucho mayores (cientos de metros / km según tipo).
 
+## Empalme por fusión (visión de taller)
+
+En instalaciones de fibra, el **empalme por fusión** une dos fibras fundiendo el núcleo con un arco eléctrico controlado (**fusionadora**). En el taller se trabaja con:
+
+- Preparación: pelado, limpieza, corte con **cleaver**.
+- Fusión y protectores termorretráctiles.
+- Comprobación básica (continuidad / potencia según el equipo disponible).
+- **PRL:** gafas, no mirar el haz láser, manipulación cuidadosa de restos de fibra (recipiente específico).
+
+La práctica evaluable es **PR304**.
+
 ---
 
 ## Actividades
@@ -324,11 +337,88 @@ Con **fibra** el backbone y el campus cubren distancias mucho mayores (cientos d
 
 * :simple-readdotcv: **AC305**. (RA3 // CE3a, CE3d // RA4 // CE4c // **AC 0–1**). Propón la electrónica para un centro con **dos edificios**: switches de armario, router de salida, gateway/firewall y AP interiores/exteriores. Diagrama en [Excalidraw](https://excalidraw.com/), [draw.io](https://app.diagrams.net/) o [Dia](https://wiki.gnome.org/Apps/Dia) + breve justificación en el `.md`.
 
+### PR301 — Taller: panel, tomas, armario y switch
+
+| Campo | Valor |
+| --- | --- |
+| **Código** | **PR301** |
+| **UP / tema** | T3 — Cableado estructurado |
+| **RA principal** | **RA2** (despliegue) + **RA3** (interconexión). Apoyo **RA4** (instalación de equipo de conmutación) |
+| **CE de cobertura** | CE2d, CE2f, CE2g, CE2i, CE2j · CE3a, CE3d, CE3e, CE3f |
+| **Sesiones estimadas** | **2–3** |
+| **Instrumento** | Checklist de montaje + rúbrica 0–10 |
+
+* :simple-neutralinojs: **PR301**. En el **aula-taller** (no solo simulación): montad y conexionad un tramo didáctico de cableado estructurado.
+
+  **Enunciado (qué hace el alumno):**
+
+  1. Preparar el **armario / rack** didáctico (orden, U libres, guiado, seguridad).
+  2. Montar o completar **panel de parcheo** y, si el puesto lo permite, **toma de usuario (TO)** o equivalente didáctico.
+  3. Instalar el **switch** en el armario (fijación, alimentación, etiquetado del equipo).
+  4. Conexionar **panel ↔ switch** con latiguillos; etiquetar puertos según el plan del profesor.
+  5. Verificar **conectividad** básica (enlace / ping entre dos puestos del tramo).
+  6. Documentar el montaje (fotos + esquema de puertos).
+
+  **Evidencia:** fotos del rack (antes/después), etiquetado visible, checklist de montaje firmada, prueba de conectividad, `PR301.md`.
+
+  **Entrega:** `PR301.md` + evidencias en Aules. *(Opcional, si hay tiempo: escenario equivalente en Packet Tracer como refuerzo, no sustituye el taller.)*
+
+| Criterio (rúbrica) | Descripción | Puntos |
+| --- | --- | --- |
+| Rack / panel / TO | Montaje ordenado y conforme al plan | 0–3 |
+| Switch + conexionado | Equipo fijado y enlazado a paneles | 0–3 |
+| Verificación | Conectividad demostrada | 0–2 |
+| Informe `.md` | Fotos, etiquetado, incidencias | 0–2 |
+| **Total** | | **/10** |
+
+### PR304 — Taller: fusión de fibra / fusionadoras
+
+| Campo | Valor |
+| --- | --- |
+| **Código** | **PR304** |
+| **UP / tema** | T3 — Cableado estructurado |
+| **RA principal** | **RA3** (montaje de conectores/empalmes en fibra). Apoyo **RA2** (medios) y **RA6** (PRL) |
+| **CE de cobertura** | CE3c, CE3f, CE3g · CE2c, CE2j · CE6b, CE6e |
+| **Sesiones estimadas** | **1–2** |
+| **Instrumento** | Checklist de fusión + rúbrica 0–10 |
+
+* :simple-neutralinojs: **PR304**. En taller, bajo supervisión: realizad un **empalme por fusión** (o la secuencia completa de preparación + fusión + protector que permita el material del centro).
+
+  **Enunciado (pasos):**
+
+  1. EPI y normas: gafas; no mirar fuentes ópticas; recoger restos de fibra.
+  2. Preparar fibras (pelado, limpieza, corte con cleaver).
+  3. Ejecutar la fusión en la **fusionadora**; anotar la atenuación estimada si el equipo la muestra.
+  4. Colocar el **protector** termorretráctil y asentar el empalme.
+  5. Comprobación básica según el equipo disponible (continuidad / potencia / OK de la fusionadora).
+  6. Documentar errores típicos (corte malo, suciedad, protector mal colocado) y cómo se corrigieron.
+
+  **Evidencia:** foto del puesto/fusionadora, captura o lectura de resultado, checklist PRL, `PR304.md`.
+
+  **Entrega:** `PR304.md` + evidencias en Aules.
+
+| Criterio (rúbrica) | Descripción | Puntos |
+| --- | --- | --- |
+| PRL / EPI | Normas aplicadas y documentadas | 0–2 |
+| Preparación y corte | Cleaver / limpieza correctos | 0–2 |
+| Fusión + protector | Empalme válido / protector asentado | 0–3 |
+| Comprobación + informe | Evidencia de OK + `.md` | 0–3 |
+| **Total** | | **/10** |
+
 ### PR303 — WLAN / NetAcad (AP y parámetros)
 
-* :simple-cisco: **PR303**. (RA4 // CE4a, CE4b, CE4c, CE4d, CE4e, CE4f, CE4i // **PR 0–10**). Itinerario **Cisco NetAcad** + simulación Packet Tracer: instalar/configurar un **punto de acceso** (o router inalámbrico de PT), modos de funcionamiento, SSID, canal/banda, autenticación básica (**WPA2/WPA3**), comprobar conectividad de clientes Wi‑Fi y documentar parámetros. Completa el módulo NetAcad de WLAN que indique el profesor y adjunta evidencias (capturas / checklist) en `PR303.md`. El guion de PT se facilitará en clase / Aules.
+| Campo | Valor |
+| --- | --- |
+| **Código** | **PR303** |
+| **UP / tema** | T3 — Cableado estructurado |
+| **RA principal** | **RA4** (instalación/configuración de equipos inalámbricos) |
+| **CE de cobertura** | CE4a, CE4b, CE4c, CE4d, CE4e, CE4f, CE4i |
+| **Sesiones estimadas** | **2** |
+| **Instrumento** | Checklist NetAcad/PT + rúbrica 0–10 |
 
-| Criterio | Descripción | Puntos |
+* :simple-cisco: **PR303**. Itinerario **Cisco NetAcad** + simulación Packet Tracer: instalar/configurar un **punto de acceso** (o router inalámbrico de PT), modos de funcionamiento, SSID, canal/banda, autenticación básica (**WPA2/WPA3**), comprobar conectividad de clientes Wi‑Fi y documentar parámetros. Completa el módulo NetAcad de WLAN que indique el profesor y adjunta evidencias (capturas / checklist) en `PR303.md`. **No sustituye** las prácticas de taller físico (PR301/PR304).
+
+| Criterio (rúbrica) | Descripción | Puntos |
 | --- | --- | --- |
 | Características y modos | CE4a–CE4b documentados | 0–2 |
 | Instalación / PT | AP o equivalente operativo | 0–2 |
@@ -336,22 +426,27 @@ Con **fibra** el backbone y el campus cubren distancias mucho mayores (cientos d
 | Conectividad + informe | Clientes OK + `.md` / NetAcad | 0–3 |
 | **Total** | | **/10** |
 
-### PR301 — Cableado estructurado en Packet Tracer
-
-* :simple-cisco: **PR301**. (RA2 // CE2d, CE2g // RA3 // CE3a, CE3d, CE3e, CE3f // **PR 0–10**). Despliega en Packet Tracer un escenario de cableado estructurado (paneles, TO, switches, enlaces). El guion completo se facilitará en clase / Aules.
-
 ### PR302 — Proyecto aulario
 
-* :simple-neutralinojs: **PR302**. (RA2 // CE2d, CE2e, CE2f, CE2g, CE2i, CE2j // RA3 // CE3a // **PR 0–10**). En grupo, diseñad el cableado del **aulario** (dos plantas, aulas, Wi‑Fi, enlace al edificio principal vía campus):
+| Campo | Valor |
+| --- | --- |
+| **Código** | **PR302** |
+| **UP / tema** | T3 — Cableado estructurado |
+| **RA principal** | **RA2** (despliegue). Apoyo **RA3** |
+| **CE de cobertura** | CE2d, CE2e, CE2f, CE2g, CE2i, CE2j · CE3a |
+| **Sesiones estimadas** | **1–2** |
+| **Instrumento** | Rúbrica de diseño 0–10 |
+
+* :simple-neutralinojs: **PR302**. En grupo, diseñad el cableado del **aulario** (dos plantas, aulas, Wi‑Fi, enlace al edificio principal vía campus). El diseño debe ser coherente con lo aprendido en el **taller** (PR301/PR304): rack, paneles, fusión/medios y electrónica.
 
   - Plano funcional: zonas, FD/BD/CD, horizontal y backbone.
   - Diagrama en Excalidraw / draw.io / Dia.
-  - Justificación de medios, canalizaciones y electrónica básica.
+  - Justificación de medios (cobre/fibra), canalizaciones y electrónica básica.
   - Idea de etiquetado y crecimiento (reserva de puertos/cables).
 
-  **Entrega:** `PR302.md` + diagrama (PNG/SVG o archivo del editor, según Aules). Exposición breve (~5 min) si se indica en clase.
+  **Evidencia / entrega:** `PR302.md` + diagrama (PNG/SVG o archivo del editor, según Aules). Exposición breve (~5 min) si se indica en clase.
 
-| Criterio | Descripción | Puntos |
+| Criterio (rúbrica) | Descripción | Puntos |
 | --- | --- | --- |
 | Análisis del escenario | Necesidades y condicionantes claros | 0–2 |
 | Diseño del cableado | Elementos funcionales y normativa coherentes | 0–2 |

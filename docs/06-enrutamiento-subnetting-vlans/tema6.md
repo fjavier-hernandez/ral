@@ -47,9 +47,9 @@ Trabajamos los **RA3** y **RA4** del módulo Redes de área local (0225):
 | 6–7 | Supernetting | AC605, AC606 |
 | 8–10 | Rutas estáticas y default | **AC607**, **PR601** |
 | 11–13 | VLANs, access/trunk, 802.1Q | AC608, AC609 |
-| 14–16 | Packet Tracer VLANs | **PR602** |
-| 17–18 | NetAcad: enrutamiento / VLAN (prep. certificación) | **PR603** |
-| 17–18 | Repaso | — |
+| 14–15 | Packet Tracer VLANs | **PR602** |
+| 16–17 | **Taller / mixto:** VLANs en switch del taller | **PR604** |
+| 18 | NetAcad: enrutamiento / VLAN (prep. certificación) | **PR603** |
 
 ---
 
@@ -321,13 +321,55 @@ PCs de VLANs distintas **no** se ven a nivel 2. Para que Consultas hable con Rec
 
 ### PR603 — NetAcad: enrutamiento, VLAN y preparación CCNA
 
-* :simple-cisco: **PR603**. (RA4 // CE4g, CE4h, CE4j // RA3 // CE3a, CE3f // **PR 0–10**). Itinerario **Cisco NetAcad** (módulos de switching/VLAN y routing básico que indique el profesor) + práctica Packet Tracer de consolidación (VLANs + rutas estáticas o default). Entrega `PR603.md` con: checklist de módulos completados, capturas de laboratorios NetAcad/PT y breve autoevaluación de cara a la certificación.
+| Campo | Valor |
+| --- | --- |
+| **Código** | **PR603** |
+| **UP / tema** | T6 — Enrutamiento, subnetting y VLANs |
+| **RA principal** | **RA4** (configuración). Apoyo **RA3** |
+| **CE de cobertura** | CE4g, CE4h, CE4j · CE3a, CE3f |
+| **Sesiones estimadas** | **1–2** |
+| **Instrumento** | Checklist NetAcad/PT + rúbrica 0–10 |
 
-| Criterio | Descripción | Puntos |
+* :simple-cisco: **PR603**. Itinerario **Cisco NetAcad** (módulos de switching/VLAN y routing básico que indique el profesor) + práctica Packet Tracer de consolidación (VLANs + rutas estáticas o default). Entrega `PR603.md` con: checklist de módulos completados, capturas de laboratorios NetAcad/PT y breve autoevaluación de cara a la certificación. **Complementa** (no sustituye) la práctica de taller **PR604**.
+
+| Criterio (rúbrica) | Descripción | Puntos |
 | --- | --- | --- |
 | Progreso NetAcad | Módulos / labs indicados | 0–3 |
 | PT consolidación | VLAN + enrutamiento verificados | 0–4 |
 | Informe `.md` | Evidencias y autoevaluación | 0–3 |
+| **Total** | | **/10** |
+
+### PR604 — Taller: VLANs en switch físico + verificación
+
+| Campo | Valor |
+| --- | --- |
+| **Código** | **PR604** |
+| **UP / tema** | T6 — Enrutamiento, subnetting y VLANs |
+| **RA principal** | **RA4** (crear/configurar VLANs e instalar/configurar equipos). Apoyo **RA3** (plan lógico / verificación) |
+| **CE de cobertura** | CE4j, CE4h, CE4g · CE3a, CE3f |
+| **Sesiones estimadas** | **2** |
+| **Instrumento** | Checklist de configuración + rúbrica 0–10 |
+
+* :simple-neutralinojs: **PR604**. Práctica **física o mixta** en el aula-taller: configurad **VLANs** en el **switch del taller** (no solo Packet Tracer) y verificad conectividad.
+
+  **Enunciado (qué hace el alumno):**
+
+  1. Partir del plan lógico (IDs VLAN, puertos access, trunk si aplica, subredes asociadas) que indique el profesor.
+  2. Crear las VLANs en el switch gestionable del taller; asignar puertos **access**; configurar **trunk** 802.1Q si hay dos switches o enlace a router L3.
+  3. Conectar PCs (o interfaces) a puertos de VLANs distintas; asignar IP coherentes.
+  4. Verificar: mismo VLAN → ping OK; VLANs distintas → **no** hay L2 (salvo que exista inter-VLAN y esté autorizado en el guion).
+  5. Documentar comandos/capturas, tabla puerto↔VLAN y resultado de pruebas.
+
+  **Evidencia:** capturas de `show vlan` / equivalente, tabla de puertos, pruebas ping, `PR604.md`. Si el material físico no está disponible un día, el profesor autorizará evidencia mixta (config en equipo real parcial + PT), sin eliminar el objetivo de configuración real.
+
+  **Entrega:** `PR604.md` + evidencias en Aules.
+
+| Criterio (rúbrica) | Descripción | Puntos |
+| --- | --- | --- |
+| Plan lógico | VLANs / puertos / IPs coherentes | 0–2 |
+| Configuración en switch | VLANs + access (+ trunk si aplica) | 0–4 |
+| Verificación | Conectividad / aislamiento demostrados | 0–2 |
+| Informe `.md` | Capturas y tabla puerto↔VLAN | 0–2 |
 | **Total** | | **/10** |
 
 ---
@@ -338,6 +380,7 @@ PCs de VLANs distintas **no** se ven a nivel 2. Para que Consultas hable con Rec
 - Diagramas: [Excalidraw](https://excalidraw.com/), [draw.io (diagrams.net)](https://app.diagrams.net/), [Dia](https://wiki.gnome.org/Apps/Dia)
 - Simulación: [Cisco Packet Tracer](https://www.netacad.com/es/cisco-packet-tracer)
 - NetAcad (itinerario del curso): módulos que indique el profesor; ver **PR603**
+- Taller VLAN físico: ver **PR604**
 - Entregas: [Visual Studio Code](https://code.visualstudio.com/docs) + [Markdown](https://tutorialmarkdown.com/guia)
 - Normas: [Normas del taller](../00-normas/normas_taller.md)
 
