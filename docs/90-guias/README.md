@@ -1,5 +1,8 @@
 # Guías auxiliares
 
-Carpeta reservada para guías de herramientas (Excalidraw, draw.io, Dia, Packet Tracer, etc.).
+| Guía | Uso |
+| --- | --- |
+| [Packet Tracer — inicio](packet-tracer.md) | Instalación e interfaz |
+| [PR102 — Modelos OSI/TCP](pr102-modelos-osi.md) | Guion de la práctica PR102 |
 
-Todavía no hay guías publicadas en la navegación del sitio.
+Enlazadas desde el Tema 1. También podéis pegar el guion en Aules.
