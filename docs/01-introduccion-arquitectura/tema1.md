@@ -44,7 +44,7 @@ Trabajamos el **RA1** del módulo Redes de área local (0225):
 | 2–3 | Componentes, tipos de redes, topologías | **PR101** (diagrama: Excalidraw / draw.io / Dia) |
 | 4 | Transmisión básica y perturbaciones (nivel SMR) | AC102 |
 | 5–7 | Normalización, OSI / TCP-IP, encapsulación | AC103, AC104 |
-| 8–9 | Esquemas LAN; repaso | PR102 (Packet Tracer) cuando el grupo esté listo |
+| 8–9 | Esquemas LAN; encapsulación en PT | **PR102** (Packet Tracer) |
 
 ---
 
@@ -387,9 +387,23 @@ En el **emisor**, cada capa añade su cabecera (**encapsulación**). En el **rec
 
 * :simple-readdotcv: **AC104**. (RA1 // CE1a, CE1g // **AC 0–1**). Esquema comparativo OSI / TCP-IP: capas, equivalencia, función y un ejemplo de protocolo por capa TCP/IP.
 
-### PR102 — Modelos en Packet Tracer (cuando toque)
+### PR102 — Modelos en Packet Tracer { #pr102-modelos-en-packet-tracer }
 
-* :simple-cisco: **PR102**. (RA1 // CE1a, CE1c // **PR 0–10**). Simulación en Packet Tracer: observar encapsulación HTTP/TCP/IP/Ethernet. El guion completo se facilitará en clase / Aules.
+* :simple-cisco: **PR102**. (RA1 // CE1a, CE1c // **PR 0–10**). En **Packet Tracer**, observad la encapsulación de una petición web (HTTP / TCP / IP / Ethernet) y el papel de DNS (y ARP si aparece). Es la **2.ª práctica** del tema (**PR**); las **AC102–104** son actividades de clase.
+
+  **Antes:** instalad PT con la [guía inicial](../90-guias/packet-tracer.md).
+
+  **Guion:** [PR102 — Modelos OSI/TCP](../90-guias/pr102-modelos-osi.md) (también en Aules). Topología `.pkt` del profesor **o** mini-LAN del guion si NetAcad aún no está.
+
+  **Entrega:** `PR102.md` + capturas (simulación / PDU). Opcional: `.pkt`.
+
+| Criterio | Descripción | Puntos |
+| --- | --- | --- |
+| Simulación y filtros | Modo simulación; HTTP (y DNS/TCP) visibles | 0–2 |
+| Lectura OSI / TCP-IP | Tabla capa ↔ qué viste en la PDU | 0–3 |
+| Preguntas de repaso | Puerto HTTP, DNS, intercambio en la respuesta | 0–3 |
+| Claridad del `.md` | Capturas con leyenda; sin datos personales | 0–2 |
+| **Total** | | **/10** |
 
 ---
 

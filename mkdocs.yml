@@ -3,13 +3,17 @@ site_description: Apuntes para el módulo profesional de Redes de Área Local de
 site_url: https://fjavier-hernandez.github.io/ral/
 use_directory_urls: false
 
-# Solo se publica docs/ (nav mínima). Legado 25-26 en archivo/2526/ — fuera de docs.
+# Solo se publica docs/ (nav). Legado 25-26 en archivo/2526/ — fuera de docs.
+# tema01.md es borrador huérfano (no usar); el canónico es 01-…/tema1.md
 exclude_docs: |
-  90-guias/**
+  tema01.md
 
 nav:
   - "Inicio": "index.md"
   - "Normas del taller": "00-normas/normas_taller.md"
+  - Guías:
+      - "Packet Tracer (inicio)": "90-guias/packet-tracer.md"
+      - "PR102 — Modelos OSI/TCP": "90-guias/pr102-modelos-osi.md"
   - "1. Introducción. Arquitectura de redes": "01-introduccion-arquitectura/tema1.md"
 
 theme:
