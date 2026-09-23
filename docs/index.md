@@ -58,7 +58,7 @@ Las ^^competencias profesionales^^ asociadas al módulo:
 | Tema | Título | Qué trabajamos | Estado | RA principales |
 | ---: | --- | --- | --- | --- |
 | **1** | [Introducción. Arquitectura de redes](01-introduccion-arquitectura/tema1.md) | Tipos de redes, componentes, topologías, modelos OSI y TCP/IP | **Publicado** | RA1 |
-| **2** | Medios de transmisión y capa física | Par trenzado, fibra, Wi‑Fi básico y conectores | Se publicará cuando toque | RA2, RA3 |
+| **2** | [Medios de transmisión y capa física](02-medios-capa-fisica/tema2.md) | Par trenzado, fibra, Wi‑Fi básico y conectores | **Publicado** | RA2, RA3 |
 | **3** | Cableado estructurado y componentes | Racks, paneles, electrónica de red, WLAN/NetAcad | Se publicará cuando toque | RA2, RA3, RA4 |
 | **4** | Capa de enlace | Tramas, direcciones MAC, switches y dominios de colisión/difusión | Se publicará cuando toque | RA1, RA4 |
 | **5** | Capa de red | IPv4, máscaras, CIDR, ARP, ICMP y DHCP | Se publicará cuando toque | RA1, RA4 |
@@ -172,8 +172,9 @@ pie showData
 | [Inicio](index.md) | Planificación del módulo |
 | [Normas del taller](00-normas/normas_taller.md) | Normas de uso del taller |
 | [Tema 1](01-introduccion-arquitectura/tema1.md) | Introducción. Arquitectura de redes |
+| [Tema 2](02-medios-capa-fisica/tema2.md) | Medios de transmisión y capa física |
 
-Los Temas 2–9 se irán publicando en la navegación **cuando toque** trabajarlos en clase.
+Los Temas 1 y 2 ya están publicados. Los Temas 3–9 se irán publicando en la navegación **cuando toque** trabajarlos en clase.
 
 *[CFGM]: Ciclo Formativo de Grado Medio  
 *[SMR]: Sistemas Microinformáticos y Redes  
