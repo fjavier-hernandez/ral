@@ -14,6 +14,7 @@ nav:
   - Guías:
       - "Packet Tracer (inicio)": "90-guias/packet-tracer.md"
       - "PR102 — Modelos OSI/TCP": "90-guias/pr102-modelos-osi.md"
+      - "PR103 — Mi primera red": "90-guias/pr103-primera-red.md"
   - "1. Introducción. Arquitectura de redes": "01-introduccion-arquitectura/tema1.md"
   - "2. Medios de transmisión y capa física": "02-medios-capa-fisica/tema2.md"
 

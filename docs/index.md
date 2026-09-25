@@ -147,7 +147,7 @@ pie showData
 
 - Las calificaciones se publican en **Aules**.
 - Cada actividad indica el **RA** que evalúa y su escala. Codificación: prefijo del IE + número de tema (ej. `AC102` = actividad 02 del Tema 1; `PR101` = práctica 01 del Tema 1).
-- **Cisco NetAcad:** trabajarás en la *class* del curso. Prácticas como **PR303** (WLAN) y **PR603** (VLAN/enrutamiento) forman parte del itinerario. Si cumples lo publicado en Aules, puedes obtener el **+1** en la nota final.
+- **Cisco NetAcad:** prácticas como **PR303** (WLAN) y **PR603** (VLAN/enrutamiento) forman parte del itinerario. Si cumples lo publicado en Aules, puedes obtener el **+1** en la nota final. La práctica opcional **PR102** (Tema 1) también suma para el +1 si la defiendes en la auditoría.
 - Las entregas en Aules son **obligatorias en Markdown** (`.md`). No se aceptan PDF.
 
 !!! note "Cómo empezar con Markdown y VS Code"

@@ -5,7 +5,12 @@ description: Guion de práctica — encapsulación HTTP/TCP/IP/Ethernet en simul
 
 # PR102 — Modelos OSI y TCP/IP en Packet Tracer
 
-Guion de aula / Aules. Enunciado corto y rúbrica también en el [Tema 1](../01-introduccion-arquitectura/tema1.md#pr102-modelos-en-packet-tracer).
+!!! note "Práctica opcional"
+    PR102 es voluntaria. Trabaja conceptos (puertos, DNS, ARP, TCP) que veremos en profundidad en temas posteriores,
+    así que es normal que ahora te cueste. Si la entregas, suma para el **+1** de la nota final, pero solo cuenta si la
+    defiendes en una **auditoría**: una comprobación oral en la que explicas lo que has hecho, cuando el profesor lo indique.
+
+Enunciado corto y rúbrica en el [Tema 1](../01-introduccion-arquitectura/tema1.md#pr102-modelos-en-packet-tracer).
 
 ## Objetivos
 
@@ -17,18 +22,16 @@ Guion de aula / Aules. Enunciado corto y rúbrica también en el [Tema 1](../01-
 
 - [Guía inicial Packet Tracer](packet-tracer.md) (instalación e interfaz).
 - Cisco Packet Tracer instalado.
-- Topología del profesor (archivo `.pkt` / `.pka` en **Aules**) **o** la mini-topología de la sección «Si aún no hay archivo».
+- Topología `.pkt` de **Aules** **o** la mini-topología de la sección siguiente.
 
-## Si aún no hay archivo NetAcad
+## Si no tienes el archivo
 
 Monta una LAN mínima:
 
 1. 1× **PC** (cliente), 1× **Server-PT**, 1× **Switch** 2960.
 2. Cables rectos PC—switch y server—switch.
 3. En el servidor: IP `192.168.1.254/24`, servicio **HTTP** y **DNS** activos; registro A `www.osi.local` → `192.168.1.254`.
-4. En el PC: IP `192.168.1.10/24`, DNS `192.168.1.254`, puerta de enlace la que indique el guion (o ninguna si solo hay LAN).
-
-(Cuando NetAcad esté activo, sustituid esto por el lab oficial que indiquemos.)
+4. En el PC: IP `192.168.1.10/24`, DNS `192.168.1.254`, sin puerta de enlace (todo está en la misma LAN).
 
 ---
 
@@ -54,7 +57,7 @@ Monta una LAN mínima:
 
 ## Qué entregar (`PR102.md` + capturas)
 
-En el `.md` (plantilla Aules):
+En el `.md`:
 
 1. Captura modo Simulación con eventos visibles (HTTP y al menos DNS o TCP).
 2. Tabla breve: capa (OSI o TCP/IP) | qué viste en esa capa en la PDU HTTP.
@@ -64,8 +67,4 @@ En el `.md` (plantilla Aules):
    - En la respuesta del servidor, ¿qué se intercambia respecto a IP/MAC/puertos?
 4. (Opcional) Archivo `.pkt` si lo modificasteis.
 
-**Escala:** PR 0–10 según rúbrica del Tema 1 / Aules.
-
-## Nota NetAcad
-
-Esta semana se activa la plataforma del centro. Los labs `.pka` oficiales se enlazarán en Aules; PR102 con topología propia **cuenta** igual mientras tanto.
+**Valoración:** rúbrica del Tema 1. Solo suma para el +1 si la defiendes en la auditoría.
