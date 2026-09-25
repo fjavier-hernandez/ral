@@ -1,0 +1,1799 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Subnetting y supernetting; rutas estáticas y tabla de rutas; VLANs access/trunk e idea inter-VLAN.">
+      
+      
+      
+        <link rel="canonical" href="https://fjavier-hernandez.github.io/ral/06-enrutamiento-subnetting-vlans/tema6.html">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../img/ral.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Tema 6 — Enrutamiento, subnetting y VLANs - Redes de Área Local</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-0CPJP88MBF"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-0CPJP88MBF",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-0CPJP88MBF",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>if("undefined"!=typeof __md_analytics){var consent=__md_get("__consent");consent&&consent.analytics&&__md_analytics()}</script>
+  
+
+    
+    
+  
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Tema 6 — Enrutamiento, subnetting y VLANs - Redes de Área Local" />
+<meta property="og:description" content="Subnetting y supernetting; rutas estáticas y tabla de rutas; VLANs access/trunk e idea inter-VLAN." />
+<meta property="og:image" content="https://fjavier-hernandez.github.io/ral/assets/images/social/06-enrutamiento-subnetting-vlans/tema6.png" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:url" content="https://fjavier-hernandez.github.io/ral/06-enrutamiento-subnetting-vlans/tema6.html" />
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:title" content="Tema 6 — Enrutamiento, subnetting y VLANs - Redes de Área Local" />
+<meta property="twitter:description" content="Subnetting y supernetting; rutas estáticas y tabla de rutas; VLANs access/trunk e idea inter-VLAN." />
+<meta property="twitter:image" content="https://fjavier-hernandez.github.io/ral/assets/images/social/06-enrutamiento-subnetting-vlans/tema6.png" />
+</head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="javi" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#tema-6-enrutamiento-subnetting-y-vlans" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../index.html" title="Redes de Área Local" class="md-header__button md-logo" aria-label="Redes de Área Local" data-md-component="logo">
+      
+  <img src="../img/ral.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Redes de Área Local
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Tema 6 — Enrutamiento, subnetting y VLANs
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="javi" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Cambiar a modo noche"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo noche" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Cambiar a modo día"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo día" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../index.html" title="Redes de Área Local" class="md-nav__button md-logo" aria-label="Redes de Área Local" data-md-component="logo">
+      
+  <img src="../img/ral.svg" alt="logo">
+
+    </a>
+    Redes de Área Local
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../00-normas/normas_taller.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Normas del taller
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guías
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Guías
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../90-guias/packet-tracer.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Packet Tracer (inicio)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../90-guias/pr102-modelos-osi.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PR102 — Modelos OSI/TCP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../90-guias/pr103-primera-red.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PR103 — Mi primera red
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-introduccion-arquitectura/tema1.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Introducción. Arquitectura de redes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-medios-capa-fisica/tema2.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Medios de transmisión y capa física
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#propuesta-didactica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Propuesta didáctica
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Propuesta didáctica">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#criterios-de-evaluacion-seleccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Criterios de evaluación (selección)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contenidos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Contenidos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#programacion-de-aula-orientativa-1618-h" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Programación de aula (orientativa, ~16–18 h)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cuestionario-inicial" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cuestionario inicial
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#subnetting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Subnetting
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Subnetting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-8-subredes-desde-24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejemplo: 8 subredes desde /24
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pasos-sistematicos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pasos sistemáticos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#supernetting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Supernetting
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enrutamiento-ipv4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Enrutamiento IPv4
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Enrutamiento IPv4">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#estatico-vs-dinamico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estático vs dinámico
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tabla-de-rutas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tabla de rutas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ruta-por-defecto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ruta por defecto
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-de-topologia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejemplo de topología
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vlans" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VLANs
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="VLANs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#para-que" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ¿Para qué?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#access-y-trunk" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Access y trunk
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ieee-8021q" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        IEEE 802.1Q
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#idea-inter-vlan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Idea inter-VLAN
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#actividades" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Actividades
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Actividades">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ac601-subredes-1941681000" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AC601 — Subredes: 194.168.100.0
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ac602-empresa-25-redes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AC602 — Empresa: 25 redes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ac603-red-22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AC603 — Red /22
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ac604-red-23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AC604 — Red /23
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ac605-supernetting-departamentos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AC605 — Supernetting departamentos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ac606-supernetting-plantas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AC606 — Supernetting plantas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ac607-rutas-estaticas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AC607 — Rutas estáticas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ac608-diseno-vlan-clinica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AC608 — Diseño VLAN clínica
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ac609-trunk-tagged" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AC609 — Trunk / tagged
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pr601-packet-tracer-subredes-rutas-estaticas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PR601 — Packet Tracer: subredes + rutas estáticas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pr602-packet-tracer-vlans-accesstrunk" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PR602 — Packet Tracer: VLANs access/trunk
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pr603-netacad-enrutamiento-vlan-y-preparacion-ccna" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PR603 — NetAcad: enrutamiento, VLAN y preparación CCNA
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pr604-taller-vlans-en-switch-fisico-verificacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PR604 — Taller: VLANs en switch físico + verificación
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referencias-rapidas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Referencias rápidas
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="tema-6-enrutamiento-subnetting-y-vlans">Tema 6. Enrutamiento, subnetting y VLANs<a class="headerlink" href="#tema-6-enrutamiento-subnetting-y-vlans" title="Permanent link">&para;</a></h1>
+<p>En este tema <strong>diseñamos</strong> la red lógica: dividimos en <strong>subredes</strong>, resumimos rutas (<strong>supernetting</strong>), configuramos <strong>enrutamiento</strong> (sobre todo estático) y segmentamos con <strong>VLANs</strong> (access, trunk, 802.1Q).</p>
+<div class="admonition tip">
+<p class="admonition-title">Primera clase</p>
+<p>Empieza por el <a href="#cuestionario-inicial">cuestionario inicial</a>. No hace falta estudiar el tema completo antes: el cuestionario sirve para ver qué sabes al empezar.</p>
+</div>
+<h2 id="propuesta-didactica">Propuesta didáctica<a class="headerlink" href="#propuesta-didactica" title="Permanent link">&para;</a></h2>
+<p>Trabajamos los <strong>RA3</strong> y <strong>RA4</strong> del módulo Redes de área local (0225):</p>
+<blockquote>
+<p><strong>RA3.</strong> <em>Interconecta equipos en redes locales cableadas describiendo estándares de cableado y aplicando técnicas de montaje de conectores.</em></p>
+<p><strong>RA4.</strong> <em>Instala equipos en red, describiendo sus prestaciones y aplicando técnicas de montaje.</em></p>
+</blockquote>
+<h3 id="criterios-de-evaluacion-seleccion">Criterios de evaluación (selección)<a class="headerlink" href="#criterios-de-evaluacion-seleccion" title="Permanent link">&para;</a></h3>
+<p><strong>RA3</strong></p>
+<ul>
+<li><strong>CE3a</strong>: Se ha interpretado el plan de montaje lógico de la red.</li>
+<li><strong>CE3f</strong>: Se ha verificado la conectividad de la instalación.</li>
+</ul>
+<p><strong>RA4</strong></p>
+<ul>
+<li><strong>CE4g</strong>: Se han identificado los protocolos.</li>
+<li><strong>CE4h</strong>: Se han configurado los parámetros básicos.</li>
+<li><strong>CE4j</strong>: Se han creado y configurado VLANS.</li>
+</ul>
+<h3 id="contenidos">Contenidos<a class="headerlink" href="#contenidos" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Subnetting paso a paso (bits prestados, incremento, rangos).</li>
+<li>Supernetting / agregación <abbr title="Classless Inter-Domain Routing">CIDR</abbr>.</li>
+<li>Enrutamiento estático y dinámico (visión); tabla de rutas; ruta por defecto.</li>
+<li>VLANs: access / trunk, etiquetado <strong>802.1Q</strong>, idea de comunicación inter-<abbr title="Virtual Local Area Network">VLAN</abbr>.</li>
+</ul>
+<h3 id="programacion-de-aula-orientativa-1618-h">Programación de aula (orientativa, ~16–18 h)<a class="headerlink" href="#programacion-de-aula-orientativa-1618-h" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Sesiones</th>
+<th>Contenidos</th>
+<th>Actividades</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Presentación + cuestionario</td>
+<td>Cuestionario</td>
+</tr>
+<tr>
+<td>2–5</td>
+<td>Subnetting</td>
+<td><strong>AC601–AC604</strong></td>
+</tr>
+<tr>
+<td>6–7</td>
+<td>Supernetting</td>
+<td>AC605, AC606</td>
+</tr>
+<tr>
+<td>8–10</td>
+<td>Rutas estáticas y default</td>
+<td><strong>AC607</strong>, <strong>PR601</strong></td>
+</tr>
+<tr>
+<td>11–13</td>
+<td>VLANs, access/trunk, 802.1Q</td>
+<td>AC608, AC609</td>
+</tr>
+<tr>
+<td>14–15</td>
+<td>Packet Tracer VLANs</td>
+<td><strong>PR602</strong></td>
+</tr>
+<tr>
+<td>16–17</td>
+<td><strong>Taller / mixto:</strong> VLANs en switch del taller</td>
+<td><strong>PR604</strong></td>
+</tr>
+<tr>
+<td>18</td>
+<td>NetAcad: enrutamiento / <abbr title="Virtual Local Area Network">VLAN</abbr> (prep. certificación)</td>
+<td><strong>PR603</strong></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><a id="cuestionario-inicial"></a></p>
+<h2 id="cuestionario-inicial">Cuestionario inicial<a class="headerlink" href="#cuestionario-inicial" title="Permanent link">&para;</a></h2>
+<div class="admonition question">
+<p class="admonition-title">Antes de empezar — responde con lo que sepas</p>
+<ol>
+<li>¿Qué es el subnetting y para qué sirve?</li>
+<li>¿Qué es una superred?</li>
+<li>¿Qué diferencia hay entre enrutamiento estático y dinámico?</li>
+<li>¿Qué información tiene una tabla de rutas?</li>
+<li>¿Qué es una <abbr title="Virtual Local Area Network">VLAN</abbr>?</li>
+<li>¿Qué es un puerto troncal (trunk)?</li>
+<li>¿Para qué sirve el etiquetado 802.1Q?</li>
+</ol>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Soluciones</p>
+<p>Las soluciones se trabajan en clase o se publican en Aules cuando proceda.</p>
+</div>
+<hr />
+<h2 id="subnetting">Subnetting<a class="headerlink" href="#subnetting" title="Permanent link">&para;</a></h2>
+<p><strong>Subnetting</strong> = dividir una red en subredes más pequeñas <strong>tomando bits prestados</strong> de la parte de host. El prefijo <abbr title="Classless Inter-Domain Routing">CIDR</abbr> <strong>aumenta</strong> (máscara más larga).</p>
+<p>Motivos: reducir dominios de broadcast, organizar por departamentos, aplicar políticas y seguridad, planificar crecimiento.</p>
+<h3 id="ejemplo-8-subredes-desde-24">Ejemplo: 8 subredes desde <code>/24</code><a class="headerlink" href="#ejemplo-8-subredes-desde-24" title="Permanent link">&para;</a></h3>
+<p>Red base <code>192.168.0.0/24</code> → 3 bits prestados → <strong><code>/27</code></strong>.</p>
+<ul>
+<li>Subredes: (2^3 = 8)</li>
+<li>Tamaño de bloque: (2^5 = 32) → <strong>30 hosts</strong> por subred</li>
+<li>Incremento en el último octeto: <strong>32</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Subred</th>
+<th>Red</th>
+<th>Hosts válidos</th>
+<th>Broadcast</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>192.168.0.0</td>
+<td>.1 – .30</td>
+<td>.31</td>
+</tr>
+<tr>
+<td>2</td>
+<td>192.168.0.32</td>
+<td>.33 – .62</td>
+<td>.63</td>
+</tr>
+<tr>
+<td>3</td>
+<td>192.168.0.64</td>
+<td>.65 – .94</td>
+<td>.95</td>
+</tr>
+<tr>
+<td>4</td>
+<td>192.168.0.96</td>
+<td>.97 – .126</td>
+<td>.127</td>
+</tr>
+<tr>
+<td>5</td>
+<td>192.168.0.128</td>
+<td>.129 – .158</td>
+<td>.159</td>
+</tr>
+<tr>
+<td>6</td>
+<td>192.168.0.160</td>
+<td>.161 – .190</td>
+<td>.191</td>
+</tr>
+<tr>
+<td>7</td>
+<td>192.168.0.192</td>
+<td>.193 – .222</td>
+<td>.223</td>
+</tr>
+<tr>
+<td>8</td>
+<td>192.168.0.224</td>
+<td>.225 – .254</td>
+<td>.255</td>
+</tr>
+</tbody>
+</table>
+<h3 id="pasos-sistematicos">Pasos sistemáticos<a class="headerlink" href="#pasos-sistematicos" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Bits a prestar</strong> (b): menor (b) con (2^b \ge N) subredes pedidas.<br />
+<em>Ej.:</em> 30 subredes → (2^5 = 32) → <strong>5 bits</strong>.</li>
+<li><strong>Nuevo prefijo</strong> = prefijo base + (b) (p. ej. <code>/24</code> + 5 → <code>/29</code>).</li>
+<li><strong>Incremento</strong> = (2^{(\text{bits de host restantes})}) en el octeto que varía.</li>
+<li><strong>Red de la subred (k)</strong> = base + ((k-1) \times) incremento.</li>
+<li><strong>Broadcast</strong> = siguiente red − 1; hosts = red+1 … broadcast−1.</li>
+<li><strong>¿A qué subred pertenece una IP?</strong> en el octeto que varía: ((\text{valor} \div I) \times I) (división entera).<br />
+<em>Ej.:</em> <code>172.16.0.0/21</code>, incremento 8; IP <code>172.16.118.50</code> → subred <code>172.16.112.0/21</code>.</li>
+</ol>
+<p>Fórmulas: subredes = (2^{bits prestados}); hosts/subred = (2^{bits host} - 2).</p>
+<p>En <strong>cada</strong> subred no se asignan la dirección de red ni la de broadcast. Hoy suele usarse todo el rango de subredes (la restricción antigua de RFC 950 está en desuso).</p>
+<div class="admonition tip">
+<p class="admonition-title">Ventajas y coste</p>
+<p>Subnetting mejora administración y seguridad, pero <strong>consume</strong> dos IPs por subred (red + broadcast). Planifica el tamaño según hosts reales + margen.</p>
+</div>
+<hr />
+<h2 id="supernetting">Supernetting<a class="headerlink" href="#supernetting" title="Permanent link">&para;</a></h2>
+<p><strong>Supernetting</strong> = agrupar redes contiguas en una sola entrada <abbr title="Classless Inter-Domain Routing">CIDR</abbr> (prefijo <strong>menor</strong>). Sirve para <strong>agregar rutas</strong> y aligerar tablas (menos CPU/RAM y menos “flapping” anunciado).</p>
+<p>Reglas: redes <strong>consecutivas</strong> y mismos bits de mayor peso.</p>
+<p>Ejemplo paso a paso: <code>192.168.0.0/24</code> … <code>192.168.3.0/24</code></p>
+<ol>
+<li>Octeto que cambia (3.º): 0, 1, 2, 3 → en binario varían los <strong>2</strong> bits bajos.</li>
+<li>Bits comunes a la izquierda: 6 de ese octeto.</li>
+<li>Nueva máscara: (24 - 2 = 22) → <strong><code>192.168.0.0/22</code></strong>.</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Subnetting</th>
+<th>Supernetting</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Acción</td>
+<td>Dividir</td>
+<td>Agrupar</td>
+</tr>
+<tr>
+<td>Prefijo</td>
+<td>Aumenta (/24→/27)</td>
+<td>Disminuye (/24→/22)</td>
+</tr>
+<tr>
+<td>Uso típico</td>
+<td>LAN / empresa</td>
+<td>Resumen de rutas / ISP</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="enrutamiento-ipv4">Enrutamiento IPv4<a class="headerlink" href="#enrutamiento-ipv4" title="Permanent link">&para;</a></h2>
+<p>El <strong>enrutamiento</strong> elige por qué camino enviar el paquete hacia el destino.</p>
+<h3 id="estatico-vs-dinamico">Estático vs dinámico<a class="headerlink" href="#estatico-vs-dinamico" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Tipo</th>
+<th>Cómo se aprende</th>
+<th>Cuándo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Estático</strong></td>
+<td>Manual</td>
+<td>Redes pequeñas / estables</td>
+</tr>
+<tr>
+<td><strong>Dinámico</strong></td>
+<td>Protocolos (RIP, OSPF, EIGRP, BGP…)</td>
+<td>Topologías que cambian</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Protocolo</th>
+<th>Principio</th>
+<th>Ámbito</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>RIP</strong></td>
+<td>Saltos</td>
+<td><abbr title="Interior Gateway Protocol">IGP</abbr>, redes pequeñas</td>
+</tr>
+<tr>
+<td><strong>OSPF</strong></td>
+<td>Coste / estado de enlace</td>
+<td><abbr title="Interior Gateway Protocol">IGP</abbr>, medianas–grandes</td>
+</tr>
+<tr>
+<td><strong>EIGRP</strong></td>
+<td>Híbrido (Cisco)</td>
+<td><abbr title="Interior Gateway Protocol">IGP</abbr> Cisco</td>
+</tr>
+<tr>
+<td><strong>BGP</strong></td>
+<td>Entre sistemas autónomos</td>
+<td><abbr title="Exterior Gateway Protocol">EGP</abbr> / Internet</td>
+</tr>
+</tbody>
+</table>
+<p><abbr title="Interior Gateway Protocol">IGP</abbr> = dentro del AS; <abbr title="Exterior Gateway Protocol">EGP</abbr> = entre AS (<strong>BGP</strong>). En el aula priorizamos <strong>rutas estáticas</strong> y la lectura de la tabla.</p>
+<h3 id="tabla-de-rutas">Tabla de rutas<a class="headerlink" href="#tabla-de-rutas" title="Permanent link">&para;</a></h3>
+<p>Cada entrada suele incluir: red destino + máscara, <strong>siguiente salto</strong>, interfaz, métrica.</p>
+<table>
+<thead>
+<tr>
+<th>Red destino</th>
+<th>Máscara</th>
+<th>Siguiente salto</th>
+<th>Interfaz</th>
+<th>Idea</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>192.168.1.0</td>
+<td>/24</td>
+<td>— (directa)</td>
+<td>eth0</td>
+<td>Conectada al router</td>
+</tr>
+<tr>
+<td>192.168.2.0</td>
+<td>/24</td>
+<td>192.168.1.2</td>
+<td>eth0</td>
+<td>Vía otro router</td>
+</tr>
+<tr>
+<td>0.0.0.0</td>
+<td>/0</td>
+<td>192.168.1.254</td>
+<td>eth0</td>
+<td>Default</td>
+</tr>
+</tbody>
+</table>
+<p>Proceso: el router mira el destino, elige la ruta <strong>más específica</strong> (prefijo más largo) y reenvía.</p>
+<h3 id="ruta-por-defecto">Ruta por defecto<a class="headerlink" href="#ruta-por-defecto" title="Permanent link">&para;</a></h3>
+<p><code>0.0.0.0/0</code> (“cualquier destino”) hacia el gateway de salida (p. ej. el ISP).</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>ip<span class="w"> </span>route<span class="w"> </span>show
+<span class="linenos" data-linenos="2 "></span>ip<span class="w"> </span>route<span class="w"> </span>add<span class="w"> </span><span class="m">192</span>.168.2.0/24<span class="w"> </span>via<span class="w"> </span><span class="m">192</span>.168.1.1
+<span class="linenos" data-linenos="3 "></span>ip<span class="w"> </span>route<span class="w"> </span>add<span class="w"> </span>default<span class="w"> </span>via<span class="w"> </span><span class="m">192</span>.168.1.1
+</code></pre></div>
+<h3 id="ejemplo-de-topologia">Ejemplo de topología<a class="headerlink" href="#ejemplo-de-topologia" title="Permanent link">&para;</a></h3>
+<figure>
+  <img alt="Topología con IPs" src="../img/topologia-enrutamiento-ccna-ips.png" width="800" />
+<br />
+<figcaption>Topología de ejemplo con redes y enlaces /30 entre routers</figcaption>
+</figure>
+<p>En el ejemplo, Router3 tiene conexión directa a su LAN y al enlace hacia Router2; el resto de redes se alcanzan vía el siguiente salto en ese enlace, más una <strong>ruta por defecto</strong>. Los enlaces entre routers usan a menudo <strong>/30</strong> (2 hosts utilizables) para ahorrar direcciones.</p>
+<hr />
+<h2 id="vlans">VLANs<a class="headerlink" href="#vlans" title="Permanent link">&para;</a></h2>
+<p>Una <strong><abbr title="Virtual Local Area Network">VLAN</abbr></strong> (<em>Virtual LAN</em>) es una <strong>red lógica</strong> independiente dentro de la misma infraestructura física. Varias VLANs pueden coexistir en un switch.</p>
+<figure>
+  <img alt="LAN vs VLAN" src="../img/vlan-segmentacion-lan-vs-vlan.png" width="800" />
+<br />
+<figcaption>Segmentación tradicional frente a segmentación con VLANs</figcaption>
+</figure>
+<h3 id="para-que">¿Para qué?<a class="headerlink" href="#para-que" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Reducir el <strong>dominio de difusión</strong>.</li>
+<li>Mejorar la <strong>seguridad</strong> aislando tráfico (p. ej. invitados vs datos clínicos).</li>
+<li>Organizar por función o departamento sin recablear.</li>
+<li>Flexibilidad: hosts del mismo switch en VLANs distintas; hosts de distintos switches en la misma <abbr title="Virtual Local Area Network">VLAN</abbr>.</li>
+</ul>
+<p>Cada <abbr title="Virtual Local Area Network">VLAN</abbr> ≈ un <strong>dominio de difusión</strong>. La comunicación <strong>entre VLANs</strong> necesita capa 3 (router o switch L3): idea de <strong>inter-<abbr title="Virtual Local Area Network">VLAN</abbr> routing</strong>.</p>
+<h3 id="access-y-trunk">Access y trunk<a class="headerlink" href="#access-y-trunk" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Modo</th>
+<th>Tráfico</th>
+<th>Uso</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Access</strong></td>
+<td>Una <abbr title="Virtual Local Area Network">VLAN</abbr>; tramas <strong>sin</strong> etiqueta hacia el PC</td>
+<td>Equipos finales</td>
+</tr>
+<tr>
+<td><strong>Trunk</strong></td>
+<td>Varias VLANs; tramas <strong>etiquetadas</strong></td>
+<td>Switch–switch / switch–router</td>
+</tr>
+</tbody>
+</table>
+<figure>
+  <img alt="Switches y troncal" src="../img/vlan-switches-troncal.png" width="800" />
+<br />
+<figcaption>Enlace troncal entre switches transportando varias VLANs</figcaption>
+</figure>
+<p>En el backbone, las tramas se etiquetan al entrar en el troncal y se destiquetán al salir hacia el puerto de acceso del destino.</p>
+<h3 id="ieee-8021q">IEEE 802.1Q<a class="headerlink" href="#ieee-8021q" title="Permanent link">&para;</a></h3>
+<p>Estándar de etiquetado: se insertan <strong>4 bytes</strong> con el <strong><abbr title="Virtual Local Area Network">VLAN</abbr> ID</strong>; el switch recalcula el FCS. Compatible entre fabricantes.</p>
+<p><strong><abbr title="Virtual Local Area Network">VLAN</abbr> nativa</strong>: en un trunk, las tramas <strong>sin</strong> etiqueta se asocian a la <abbr title="Virtual Local Area Network">VLAN</abbr> nativa (ambos extremos deben coincidir; a menudo <abbr title="Virtual Local Area Network">VLAN</abbr> 1 por defecto).</p>
+<h3 id="idea-inter-vlan">Idea inter-<abbr title="Virtual Local Area Network">VLAN</abbr><a class="headerlink" href="#idea-inter-vlan" title="Permanent link">&para;</a></h3>
+<p>PCs de VLANs distintas <strong>no</strong> se ven a nivel 2. Para que Consultas hable con Recepción hace falta un <strong>router</strong> (o switch L3) que enrute entre las subredes asociadas a cada <abbr title="Virtual Local Area Network">VLAN</abbr>. Eso cierra el círculo con el subnetting de este tema: una <abbr title="Virtual Local Area Network">VLAN</abbr> ↔ una subred IP.</p>
+<div class="admonition tip">
+<p class="admonition-title">Plan lógico (CE3a)</p>
+<p>Antes de configurar: decide VLANs, IDs, subredes y puertos access/trunk. Ese plan es el que interpreta el técnico al montar e interconectar.</p>
+</div>
+<hr />
+<h2 id="actividades">Actividades<a class="headerlink" href="#actividades" title="Permanent link">&para;</a></h2>
+<div class="admonition tip">
+<p class="admonition-title">Formato de entrega</p>
+<p>Las entregas en <strong>Aules</strong> son <strong>obligatorias en Markdown</strong> (<code>.md</code>). No se aceptan PDF.<br />
+Nombre del archivo: <code>AC6XX.md</code> o <code>PR6XX.md</code> (sustituye XX por el número). Respeta la fecha de vencimiento.<br />
+Escribiremos los <code>.md</code> con <strong>Visual Studio Code</strong>.</p>
+<div class="admonition note">
+<p class="admonition-title">Cómo empezar</p>
+<ul>
+<li>Guía de Markdown: <a href="https://tutorialmarkdown.com/guia">tutorialmarkdown.com/guia</a></li>
+<li>Documentación de Visual Studio Code: <a href="https://code.visualstudio.com/docs">code.visualstudio.com/docs</a></li>
+</ul>
+</div>
+</div>
+<h3 id="ac601-subredes-1941681000">AC601 — Subredes: 194.168.100.0<a class="headerlink" href="#ac601-subredes-1941681000" title="Permanent link">&para;</a></h3>
+<ul>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.832 3.367 8.668.108a3.15 3.15 0 0 0-3.856 2.226L.943 16.777a3.15 3.15 0 0 0 2.226 3.856l12.163 3.259a3.15 3.15 0 0 0 3.855-2.226l3.87-14.443a3.15 3.15 0 0 0-2.226-3.856M6.332 2.741a1.574 1.574 0 0 1 1.928-1.113l12.163 3.26a1.574 1.574 0 0 1 1.113 1.927l-3.87 14.444a1.574 1.574 0 0 1-1.928 1.113l-12.163-3.26a1.574 1.574 0 0 1-1.113-1.927zm2.634 2.336a.787.787 0 1 0-.407 1.52l9.122 2.444a.787.787 0 1 0 .407-1.52zM6.985 9.434a.787.787 0 0 1 .963-.557l9.123 2.445a.787.787 0 0 1-.408 1.52l-9.122-2.444a.787.787 0 0 1-.556-.964m-.055 3.244a.787.787 0 0 0-.407 1.52l5.32 1.427a.787.787 0 0 0 .408-1.52z"/></svg></span> <strong>AC601</strong>. (RA3 // CE3a // <strong><abbr title="Actividad de clase">AC</abbr> 0–1</strong>). Red tipo C <strong>194.168.100.0</strong>:
+  1. Máscara para <strong>16</strong> subredes totales.
+  2. Nodos por subred.
+  3. Direcciones de red de las subredes.
+  4. IP del nodo con id <strong>4</strong> en cada subred.
+  5. ¿A qué subred pertenece <code>194.168.100.107</code>?</li>
+</ul>
+<h3 id="ac602-empresa-25-redes">AC602 — Empresa: 25 redes<a class="headerlink" href="#ac602-empresa-25-redes" title="Permanent link">&para;</a></h3>
+<ul>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.832 3.367 8.668.108a3.15 3.15 0 0 0-3.856 2.226L.943 16.777a3.15 3.15 0 0 0 2.226 3.856l12.163 3.259a3.15 3.15 0 0 0 3.855-2.226l3.87-14.443a3.15 3.15 0 0 0-2.226-3.856M6.332 2.741a1.574 1.574 0 0 1 1.928-1.113l12.163 3.26a1.574 1.574 0 0 1 1.113 1.927l-3.87 14.444a1.574 1.574 0 0 1-1.928 1.113l-12.163-3.26a1.574 1.574 0 0 1-1.113-1.927zm2.634 2.336a.787.787 0 1 0-.407 1.52l9.122 2.444a.787.787 0 1 0 .407-1.52zM6.985 9.434a.787.787 0 0 1 .963-.557l9.123 2.445a.787.787 0 0 1-.408 1.52l-9.122-2.444a.787.787 0 0 1-.556-.964m-.055 3.244a.787.787 0 0 0-.407 1.52l5.32 1.427a.787.787 0 0 0 .408-1.52z"/></svg></span> <strong>AC602</strong>. (RA3 // CE3a // <strong><abbr title="Actividad de clase">AC</abbr> 0–1</strong>). Proveedor da <code>192.168.9.0</code>. Necesitas <strong>≥ 25</strong> subredes: máscara por defecto, máscara subneteada, ejemplo de 1.ª–4.ª subred (primera/última IP válida) y IP del router en cada una.</li>
+</ul>
+<h3 id="ac603-red-22">AC603 — Red /22<a class="headerlink" href="#ac603-red-22" title="Permanent link">&para;</a></h3>
+<ul>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.832 3.367 8.668.108a3.15 3.15 0 0 0-3.856 2.226L.943 16.777a3.15 3.15 0 0 0 2.226 3.856l12.163 3.259a3.15 3.15 0 0 0 3.855-2.226l3.87-14.443a3.15 3.15 0 0 0-2.226-3.856M6.332 2.741a1.574 1.574 0 0 1 1.928-1.113l12.163 3.26a1.574 1.574 0 0 1 1.113 1.927l-3.87 14.444a1.574 1.574 0 0 1-1.928 1.113l-12.163-3.26a1.574 1.574 0 0 1-1.113-1.927zm2.634 2.336a.787.787 0 1 0-.407 1.52l9.122 2.444a.787.787 0 1 0 .407-1.52zM6.985 9.434a.787.787 0 0 1 .963-.557l9.123 2.445a.787.787 0 0 1-.408 1.52l-9.122-2.444a.787.787 0 0 1-.556-.964m-.055 3.244a.787.787 0 0 0-.407 1.52l5.32 1.427a.787.787 0 0 0 .408-1.52z"/></svg></span> <strong>AC603</strong>. (RA3 // CE3a // <strong><abbr title="Actividad de clase">AC</abbr> 0–1</strong>). Red <strong>192.168.0.0/22</strong>: red, broadcast y hosts sin dividir. Divídela en <strong>4</strong> subredes <code>/24</code>: red, rango de hosts y broadcast de cada una.</li>
+</ul>
+<h3 id="ac604-red-23">AC604 — Red /23<a class="headerlink" href="#ac604-red-23" title="Permanent link">&para;</a></h3>
+<ul>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.832 3.367 8.668.108a3.15 3.15 0 0 0-3.856 2.226L.943 16.777a3.15 3.15 0 0 0 2.226 3.856l12.163 3.259a3.15 3.15 0 0 0 3.855-2.226l3.87-14.443a3.15 3.15 0 0 0-2.226-3.856M6.332 2.741a1.574 1.574 0 0 1 1.928-1.113l12.163 3.26a1.574 1.574 0 0 1 1.113 1.927l-3.87 14.444a1.574 1.574 0 0 1-1.928 1.113l-12.163-3.26a1.574 1.574 0 0 1-1.113-1.927zm2.634 2.336a.787.787 0 1 0-.407 1.52l9.122 2.444a.787.787 0 1 0 .407-1.52zM6.985 9.434a.787.787 0 0 1 .963-.557l9.123 2.445a.787.787 0 0 1-.408 1.52l-9.122-2.444a.787.787 0 0 1-.556-.964m-.055 3.244a.787.787 0 0 0-.407 1.52l5.32 1.427a.787.787 0 0 0 .408-1.52z"/></svg></span> <strong>AC604</strong>. (RA3 // CE3a // <strong><abbr title="Actividad de clase">AC</abbr> 0–1</strong>). Red <strong>192.168.4.0/23</strong>: red, broadcast, hosts. Dos subredes <code>/24</code> (red + rango). ¿A qué <code>/24</code> pertenece <code>192.168.5.100</code>?</li>
+</ul>
+<h3 id="ac605-supernetting-departamentos">AC605 — Supernetting departamentos<a class="headerlink" href="#ac605-supernetting-departamentos" title="Permanent link">&para;</a></h3>
+<ul>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.832 3.367 8.668.108a3.15 3.15 0 0 0-3.856 2.226L.943 16.777a3.15 3.15 0 0 0 2.226 3.856l12.163 3.259a3.15 3.15 0 0 0 3.855-2.226l3.87-14.443a3.15 3.15 0 0 0-2.226-3.856M6.332 2.741a1.574 1.574 0 0 1 1.928-1.113l12.163 3.26a1.574 1.574 0 0 1 1.113 1.927l-3.87 14.444a1.574 1.574 0 0 1-1.928 1.113l-12.163-3.26a1.574 1.574 0 0 1-1.113-1.927zm2.634 2.336a.787.787 0 1 0-.407 1.52l9.122 2.444a.787.787 0 1 0 .407-1.52zM6.985 9.434a.787.787 0 0 1 .963-.557l9.123 2.445a.787.787 0 0 1-.408 1.52l-9.122-2.444a.787.787 0 0 1-.556-.964m-.055 3.244a.787.787 0 0 0-.407 1.52l5.32 1.427a.787.787 0 0 0 .408-1.52z"/></svg></span> <strong>AC605</strong>. (RA3 // CE3a // <strong><abbr title="Actividad de clase">AC</abbr> 0–1</strong>). Resume: Ventas <code>172.16.16.0/24</code>, RRHH <code>172.16.17.0/24</code>, Sistemas <code>172.16.18.0/24</code>, Dirección <code>172.16.19.0/24</code>. Octeto que cambia → binario → bits comunes → superred <abbr title="Classless Inter-Domain Routing">CIDR</abbr>.</li>
+</ul>
+<h3 id="ac606-supernetting-plantas">AC606 — Supernetting plantas<a class="headerlink" href="#ac606-supernetting-plantas" title="Permanent link">&para;</a></h3>
+<ul>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.832 3.367 8.668.108a3.15 3.15 0 0 0-3.856 2.226L.943 16.777a3.15 3.15 0 0 0 2.226 3.856l12.163 3.259a3.15 3.15 0 0 0 3.855-2.226l3.87-14.443a3.15 3.15 0 0 0-2.226-3.856M6.332 2.741a1.574 1.574 0 0 1 1.928-1.113l12.163 3.26a1.574 1.574 0 0 1 1.113 1.927l-3.87 14.444a1.574 1.574 0 0 1-1.928 1.113l-12.163-3.26a1.574 1.574 0 0 1-1.113-1.927zm2.634 2.336a.787.787 0 1 0-.407 1.52l9.122 2.444a.787.787 0 1 0 .407-1.52zM6.985 9.434a.787.787 0 0 1 .963-.557l9.123 2.445a.787.787 0 0 1-.408 1.52l-9.122-2.444a.787.787 0 0 1-.556-.964m-.055 3.244a.787.787 0 0 0-.407 1.52l5.32 1.427a.787.787 0 0 0 .408-1.52z"/></svg></span> <strong>AC606</strong>. (RA3 // CE3a // <strong><abbr title="Actividad de clase">AC</abbr> 0–1</strong>). Plantas: <code>192.168.4.0/24</code> … <code>192.168.7.0/24</code>. Mismo método que AC605: indica la superred resultante.</li>
+</ul>
+<h3 id="ac607-rutas-estaticas">AC607 — Rutas estáticas<a class="headerlink" href="#ac607-rutas-estaticas" title="Permanent link">&para;</a></h3>
+<ul>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.832 3.367 8.668.108a3.15 3.15 0 0 0-3.856 2.226L.943 16.777a3.15 3.15 0 0 0 2.226 3.856l12.163 3.259a3.15 3.15 0 0 0 3.855-2.226l3.87-14.443a3.15 3.15 0 0 0-2.226-3.856M6.332 2.741a1.574 1.574 0 0 1 1.928-1.113l12.163 3.26a1.574 1.574 0 0 1 1.113 1.927l-3.87 14.444a1.574 1.574 0 0 1-1.928 1.113l-12.163-3.26a1.574 1.574 0 0 1-1.113-1.927zm2.634 2.336a.787.787 0 1 0-.407 1.52l9.122 2.444a.787.787 0 1 0 .407-1.52zM6.985 9.434a.787.787 0 0 1 .963-.557l9.123 2.445a.787.787 0 0 1-.408 1.52l-9.122-2.444a.787.787 0 0 1-.556-.964m-.055 3.244a.787.787 0 0 0-.407 1.52l5.32 1.427a.787.787 0 0 0 .408-1.52z"/></svg></span> <strong>AC607</strong>. (RA3 // CE3a // RA4 // CE4g, CE4h // <strong><abbr title="Actividad de clase">AC</abbr> 0–1</strong>). Con la topología de la figura de este tema (Router1 ↔ Router2 ↔ Router3):
+  1. Tabla de rutas <strong>estáticas del Router2</strong> (destino, máscara, next-hop, interfaz).
+  2. Tabla de rutas <strong>del Router1</strong>.
+  3. Justifica conexiones directas vs siguiente salto y la ruta por defecto.</li>
+</ul>
+<h3 id="ac608-diseno-vlan-clinica">AC608 — Diseño <abbr title="Virtual Local Area Network">VLAN</abbr> clínica<a class="headerlink" href="#ac608-diseno-vlan-clinica" title="Permanent link">&para;</a></h3>
+<ul>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.832 3.367 8.668.108a3.15 3.15 0 0 0-3.856 2.226L.943 16.777a3.15 3.15 0 0 0 2.226 3.856l12.163 3.259a3.15 3.15 0 0 0 3.855-2.226l3.87-14.443a3.15 3.15 0 0 0-2.226-3.856M6.332 2.741a1.574 1.574 0 0 1 1.928-1.113l12.163 3.26a1.574 1.574 0 0 1 1.113 1.927l-3.87 14.444a1.574 1.574 0 0 1-1.928 1.113l-12.163-3.26a1.574 1.574 0 0 1-1.113-1.927zm2.634 2.336a.787.787 0 1 0-.407 1.52l9.122 2.444a.787.787 0 1 0 .407-1.52zM6.985 9.434a.787.787 0 0 1 .963-.557l9.123 2.445a.787.787 0 0 1-.408 1.52l-9.122-2.444a.787.787 0 0 1-.556-.964m-.055 3.244a.787.787 0 0 0-.407 1.52l5.32 1.427a.787.787 0 0 0 .408-1.52z"/></svg></span> <strong>AC608</strong>. (RA3 // CE3a // RA4 // CE4j // <strong><abbr title="Actividad de clase">AC</abbr> 0–1</strong>). Clínica dental, switch 24 puertos:</li>
+<li>Recepción: 2 PCs, 1 impresora, 1 teléfono IP.</li>
+<li>Consultas: 6 PCs, 2 impresoras.</li>
+<li>Invitados: 1 AP Wi‑Fi.</li>
+</ul>
+<p>Tabla: Nombre <abbr title="Virtual Local Area Network">VLAN</abbr> | ID | Subred IP | Puertos. ¿Por qué no mezclar invitados con Recepción? ¿Puede un PC de Consultas hacer ping a Recepción <strong>sin</strong> router? Esquema del switch etiquetado.</p>
+<h3 id="ac609-trunk-tagged">AC609 — Trunk / tagged<a class="headerlink" href="#ac609-trunk-tagged" title="Permanent link">&para;</a></h3>
+<ul>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.832 3.367 8.668.108a3.15 3.15 0 0 0-3.856 2.226L.943 16.777a3.15 3.15 0 0 0 2.226 3.856l12.163 3.259a3.15 3.15 0 0 0 3.855-2.226l3.87-14.443a3.15 3.15 0 0 0-2.226-3.856M6.332 2.741a1.574 1.574 0 0 1 1.928-1.113l12.163 3.26a1.574 1.574 0 0 1 1.113 1.927l-3.87 14.444a1.574 1.574 0 0 1-1.928 1.113l-12.163-3.26a1.574 1.574 0 0 1-1.113-1.927zm2.634 2.336a.787.787 0 1 0-.407 1.52l9.122 2.444a.787.787 0 1 0 .407-1.52zM6.985 9.434a.787.787 0 0 1 .963-.557l9.123 2.445a.787.787 0 0 1-.408 1.52l-9.122-2.444a.787.787 0 0 1-.556-.964m-.055 3.244a.787.787 0 0 0-.407 1.52l5.32 1.427a.787.787 0 0 0 .408-1.52z"/></svg></span> <strong>AC609</strong>. (RA4 // CE4j, CE4g // <strong><abbr title="Actividad de clase">AC</abbr> 0–1</strong>). Tres plantas, VLANs Almacén y Administración. Indica Access/Trunk en cada puerto relevante; camino etiquetado de Almacén1 → Almacén3 (estándar); qué falla si el enlace Planta1–Planta2 queda en Access solo de Almacén.</li>
+</ul>
+<h3 id="pr601-packet-tracer-subredes-rutas-estaticas">PR601 — Packet Tracer: subredes + rutas estáticas<a class="headerlink" href="#pr601-packet-tracer-subredes-rutas-estaticas" title="Permanent link">&para;</a></h3>
+<ul>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16.331 18.171V17.06l-.022.01c-.25.121-.522.19-.801.203a1.2 1.2 0 0 1-.806-.237 1.04 1.04 0 0 1-.352-.498 1.2 1.2 0 0 1-.023-.667c.052-.225.178-.426.357-.569.16-.134.355-.218.562-.242a1.85 1.85 0 0 1 1.061.198l.024.013v-1.117l-.051-.014a2.9 2.9 0 0 0-1.011-.132 2.3 2.3 0 0 0-.903.206c-.287.132-.54.327-.739.571a2.22 2.22 0 0 0-.04 2.705c.295.378.709.645 1.175.756.491.12 1.006.102 1.487-.052zm-10.995 0V17.06l-.022.01c-.25.121-.522.19-.801.203a1.18 1.18 0 0 1-.806-.237 1.03 1.03 0 0 1-.351-.498 1.2 1.2 0 0 1-.024-.667c.052-.225.177-.426.357-.569.16-.134.355-.218.562-.242a1.85 1.85 0 0 1 1.061.198l.024.013v-1.117l-.051-.014a2.9 2.9 0 0 0-1.011-.132 2.3 2.3 0 0 0-.903.206 2.1 2.1 0 0 0-.74.571 2.224 2.224 0 0 0-.041 2.705 2.1 2.1 0 0 0 1.176.756c.491.12 1.005.102 1.487-.052zm3.924-.922-.004.957.07.012q.33.061.664.085.293.028.587.012.282-.021.551-.104c.21-.06.405-.163.571-.305a1.16 1.16 0 0 0 .333-.478 1.3 1.3 0 0 0-.007-.96 1.1 1.1 0 0 0-.298-.414 1.3 1.3 0 0 0-.438-.255l-.722-.268a.4.4 0 0 1-.197-.188.25.25 0 0 1 .008-.219.4.4 0 0 1 .154-.142.8.8 0 0 1 .257-.074q.23-.034.46.005.27.03.533.096l.038.008v-.883l-.069-.015a5 5 0 0 0-.543-.097 2.8 2.8 0 0 0-.714-.003c-.3.027-.585.143-.821.33-.16.126-.281.293-.351.484-.104.29-.105.608 0 .899q.082.219.252.381.146.14.327.236.236.126.497.195.086.026.17.054l.085.031.024.01c.084.03.162.078.226.14q.068.064.101.151a.3.3 0 0 1 .001.161.34.34 0 0 1-.166.198.9.9 0 0 1-.275.086 2 2 0 0 1-.427.021 5 5 0 0 1-.557-.074 9 9 0 0 1-.287-.067zm-2.475.995h1.05v-4.167h-1.05zm12.162-2.936a1.095 1.095 0 0 1 1.541.158 1.094 1.094 0 0 1-.157 1.541l-.017.014a1.096 1.096 0 0 1-1.367-1.713m-1.525.854a2.193 2.193 0 0 0 2.666 2.107 2.139 2.139 0 0 0 .701-3.937 2.207 2.207 0 0 0-3.367 1.83m5.539-5.434a.52.52 0 0 0 1.039 0V9.573a.52.52 0 0 0-1.039 0zm-2.844 0a.522.522 0 0 0 1.041 0V8.139a.521.521 0 0 0-1.04 0v2.589m-2.887 1.043a.521.521 0 0 0 1.039 0V6.17a.52.52 0 0 0-1.039 0zm-2.838-1.043a.521.521 0 0 0 1.04 0V8.139a.52.52 0 0 0-1.039 0zm-2.9 0a.522.522 0 0 0 1.039 0V9.573a.52.52 0 0 0-1.039 0zm-2.87 0a.52.52 0 0 0 1.039 0V8.139a.52.52 0 0 0-1.039 0zm-2.887 1.043a.52.52 0 0 0 1.039 0V6.17a.52.52 0 0 0-1.039 0zm-2.861-1.043a.522.522 0 0 0 1.04 0V8.139a.52.52 0 0 0-1.039 0zm-2.877 0a.521.521 0 0 0 1.039 0V9.573a.52.52 0 0 0-1.039 0z"/></svg></span> <strong>PR601</strong>. (RA3 // CE3a, CE3f // RA4 // CE4g, CE4h // <strong><abbr title="Práctica">PR</abbr> 0–10</strong>). Simulación: varias subredes, interfaces de router y <strong>rutas estáticas</strong> (incluida default) hasta alcanzar todas las redes. El guion completo se facilitará en clase / Aules.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Criterio</th>
+<th>Descripción</th>
+<th>Puntos</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Plan de direccionamiento</td>
+<td>Subredes coherentes</td>
+<td>0–3</td>
+</tr>
+<tr>
+<td>Rutas</td>
+<td>Tabla correcta / pings</td>
+<td>0–4</td>
+</tr>
+<tr>
+<td>Informe <code>.md</code></td>
+<td>Evidencias y explicación</td>
+<td>0–3</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td></td>
+<td><strong>/10</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="pr602-packet-tracer-vlans-accesstrunk">PR602 — Packet Tracer: VLANs access/trunk<a class="headerlink" href="#pr602-packet-tracer-vlans-accesstrunk" title="Permanent link">&para;</a></h3>
+<ul>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16.331 18.171V17.06l-.022.01c-.25.121-.522.19-.801.203a1.2 1.2 0 0 1-.806-.237 1.04 1.04 0 0 1-.352-.498 1.2 1.2 0 0 1-.023-.667c.052-.225.178-.426.357-.569.16-.134.355-.218.562-.242a1.85 1.85 0 0 1 1.061.198l.024.013v-1.117l-.051-.014a2.9 2.9 0 0 0-1.011-.132 2.3 2.3 0 0 0-.903.206c-.287.132-.54.327-.739.571a2.22 2.22 0 0 0-.04 2.705c.295.378.709.645 1.175.756.491.12 1.006.102 1.487-.052zm-10.995 0V17.06l-.022.01c-.25.121-.522.19-.801.203a1.18 1.18 0 0 1-.806-.237 1.03 1.03 0 0 1-.351-.498 1.2 1.2 0 0 1-.024-.667c.052-.225.177-.426.357-.569.16-.134.355-.218.562-.242a1.85 1.85 0 0 1 1.061.198l.024.013v-1.117l-.051-.014a2.9 2.9 0 0 0-1.011-.132 2.3 2.3 0 0 0-.903.206 2.1 2.1 0 0 0-.74.571 2.224 2.224 0 0 0-.041 2.705 2.1 2.1 0 0 0 1.176.756c.491.12 1.005.102 1.487-.052zm3.924-.922-.004.957.07.012q.33.061.664.085.293.028.587.012.282-.021.551-.104c.21-.06.405-.163.571-.305a1.16 1.16 0 0 0 .333-.478 1.3 1.3 0 0 0-.007-.96 1.1 1.1 0 0 0-.298-.414 1.3 1.3 0 0 0-.438-.255l-.722-.268a.4.4 0 0 1-.197-.188.25.25 0 0 1 .008-.219.4.4 0 0 1 .154-.142.8.8 0 0 1 .257-.074q.23-.034.46.005.27.03.533.096l.038.008v-.883l-.069-.015a5 5 0 0 0-.543-.097 2.8 2.8 0 0 0-.714-.003c-.3.027-.585.143-.821.33-.16.126-.281.293-.351.484-.104.29-.105.608 0 .899q.082.219.252.381.146.14.327.236.236.126.497.195.086.026.17.054l.085.031.024.01c.084.03.162.078.226.14q.068.064.101.151a.3.3 0 0 1 .001.161.34.34 0 0 1-.166.198.9.9 0 0 1-.275.086 2 2 0 0 1-.427.021 5 5 0 0 1-.557-.074 9 9 0 0 1-.287-.067zm-2.475.995h1.05v-4.167h-1.05zm12.162-2.936a1.095 1.095 0 0 1 1.541.158 1.094 1.094 0 0 1-.157 1.541l-.017.014a1.096 1.096 0 0 1-1.367-1.713m-1.525.854a2.193 2.193 0 0 0 2.666 2.107 2.139 2.139 0 0 0 .701-3.937 2.207 2.207 0 0 0-3.367 1.83m5.539-5.434a.52.52 0 0 0 1.039 0V9.573a.52.52 0 0 0-1.039 0zm-2.844 0a.522.522 0 0 0 1.041 0V8.139a.521.521 0 0 0-1.04 0v2.589m-2.887 1.043a.521.521 0 0 0 1.039 0V6.17a.52.52 0 0 0-1.039 0zm-2.838-1.043a.521.521 0 0 0 1.04 0V8.139a.52.52 0 0 0-1.039 0zm-2.9 0a.522.522 0 0 0 1.039 0V9.573a.52.52 0 0 0-1.039 0zm-2.87 0a.52.52 0 0 0 1.039 0V8.139a.52.52 0 0 0-1.039 0zm-2.887 1.043a.52.52 0 0 0 1.039 0V6.17a.52.52 0 0 0-1.039 0zm-2.861-1.043a.522.522 0 0 0 1.04 0V8.139a.52.52 0 0 0-1.039 0zm-2.877 0a.521.521 0 0 0 1.039 0V9.573a.52.52 0 0 0-1.039 0z"/></svg></span> <strong>PR602</strong>. (RA3 // CE3a, CE3f // RA4 // CE4j, CE4g, CE4h // <strong><abbr title="Práctica">PR</abbr> 0–10</strong>). Simulación: crear VLANs, asignar puertos <strong>access</strong>, configurar <strong>trunk</strong> 802.1Q entre switches y comprobar aislamiento / conectividad según el diseño. Cubre <strong>CE4j</strong>. El guion completo se facilitará en clase / Aules.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Criterio</th>
+<th>Descripción</th>
+<th>Puntos</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>VLANs y access</td>
+<td>Asignación correcta</td>
+<td>0–3</td>
+</tr>
+<tr>
+<td>Trunk 802.1Q</td>
+<td>Enlace entre switches</td>
+<td>0–3</td>
+</tr>
+<tr>
+<td>Verificación</td>
+<td>Comportamiento esperado</td>
+<td>0–2</td>
+</tr>
+<tr>
+<td>Informe <code>.md</code></td>
+<td>Capturas y conclusión</td>
+<td>0–2</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td></td>
+<td><strong>/10</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="pr603-netacad-enrutamiento-vlan-y-preparacion-ccna">PR603 — NetAcad: enrutamiento, <abbr title="Virtual Local Area Network">VLAN</abbr> y preparación CCNA<a class="headerlink" href="#pr603-netacad-enrutamiento-vlan-y-preparacion-ccna" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Valor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Código</strong></td>
+<td><strong>PR603</strong></td>
+</tr>
+<tr>
+<td><strong>UP / tema</strong></td>
+<td>T6 — Enrutamiento, subnetting y VLANs</td>
+</tr>
+<tr>
+<td><strong><abbr title="Resultado de aprendizaje">RA</abbr> principal</strong></td>
+<td><strong>RA4</strong> (configuración). Apoyo <strong>RA3</strong></td>
+</tr>
+<tr>
+<td><strong><abbr title="Criterio de evaluación">CE</abbr> de cobertura</strong></td>
+<td>CE4g, CE4h, CE4j · CE3a, CE3f</td>
+</tr>
+<tr>
+<td><strong>Sesiones estimadas</strong></td>
+<td><strong>1–2</strong></td>
+</tr>
+<tr>
+<td><strong>Instrumento</strong></td>
+<td>Checklist NetAcad/PT + rúbrica 0–10</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16.331 18.171V17.06l-.022.01c-.25.121-.522.19-.801.203a1.2 1.2 0 0 1-.806-.237 1.04 1.04 0 0 1-.352-.498 1.2 1.2 0 0 1-.023-.667c.052-.225.178-.426.357-.569.16-.134.355-.218.562-.242a1.85 1.85 0 0 1 1.061.198l.024.013v-1.117l-.051-.014a2.9 2.9 0 0 0-1.011-.132 2.3 2.3 0 0 0-.903.206c-.287.132-.54.327-.739.571a2.22 2.22 0 0 0-.04 2.705c.295.378.709.645 1.175.756.491.12 1.006.102 1.487-.052zm-10.995 0V17.06l-.022.01c-.25.121-.522.19-.801.203a1.18 1.18 0 0 1-.806-.237 1.03 1.03 0 0 1-.351-.498 1.2 1.2 0 0 1-.024-.667c.052-.225.177-.426.357-.569.16-.134.355-.218.562-.242a1.85 1.85 0 0 1 1.061.198l.024.013v-1.117l-.051-.014a2.9 2.9 0 0 0-1.011-.132 2.3 2.3 0 0 0-.903.206 2.1 2.1 0 0 0-.74.571 2.224 2.224 0 0 0-.041 2.705 2.1 2.1 0 0 0 1.176.756c.491.12 1.005.102 1.487-.052zm3.924-.922-.004.957.07.012q.33.061.664.085.293.028.587.012.282-.021.551-.104c.21-.06.405-.163.571-.305a1.16 1.16 0 0 0 .333-.478 1.3 1.3 0 0 0-.007-.96 1.1 1.1 0 0 0-.298-.414 1.3 1.3 0 0 0-.438-.255l-.722-.268a.4.4 0 0 1-.197-.188.25.25 0 0 1 .008-.219.4.4 0 0 1 .154-.142.8.8 0 0 1 .257-.074q.23-.034.46.005.27.03.533.096l.038.008v-.883l-.069-.015a5 5 0 0 0-.543-.097 2.8 2.8 0 0 0-.714-.003c-.3.027-.585.143-.821.33-.16.126-.281.293-.351.484-.104.29-.105.608 0 .899q.082.219.252.381.146.14.327.236.236.126.497.195.086.026.17.054l.085.031.024.01c.084.03.162.078.226.14q.068.064.101.151a.3.3 0 0 1 .001.161.34.34 0 0 1-.166.198.9.9 0 0 1-.275.086 2 2 0 0 1-.427.021 5 5 0 0 1-.557-.074 9 9 0 0 1-.287-.067zm-2.475.995h1.05v-4.167h-1.05zm12.162-2.936a1.095 1.095 0 0 1 1.541.158 1.094 1.094 0 0 1-.157 1.541l-.017.014a1.096 1.096 0 0 1-1.367-1.713m-1.525.854a2.193 2.193 0 0 0 2.666 2.107 2.139 2.139 0 0 0 .701-3.937 2.207 2.207 0 0 0-3.367 1.83m5.539-5.434a.52.52 0 0 0 1.039 0V9.573a.52.52 0 0 0-1.039 0zm-2.844 0a.522.522 0 0 0 1.041 0V8.139a.521.521 0 0 0-1.04 0v2.589m-2.887 1.043a.521.521 0 0 0 1.039 0V6.17a.52.52 0 0 0-1.039 0zm-2.838-1.043a.521.521 0 0 0 1.04 0V8.139a.52.52 0 0 0-1.039 0zm-2.9 0a.522.522 0 0 0 1.039 0V9.573a.52.52 0 0 0-1.039 0zm-2.87 0a.52.52 0 0 0 1.039 0V8.139a.52.52 0 0 0-1.039 0zm-2.887 1.043a.52.52 0 0 0 1.039 0V6.17a.52.52 0 0 0-1.039 0zm-2.861-1.043a.522.522 0 0 0 1.04 0V8.139a.52.52 0 0 0-1.039 0zm-2.877 0a.521.521 0 0 0 1.039 0V9.573a.52.52 0 0 0-1.039 0z"/></svg></span> <strong>PR603</strong>. Itinerario <strong>Cisco NetAcad</strong> (módulos de switching/<abbr title="Virtual Local Area Network">VLAN</abbr> y routing básico que indique el profesor) + práctica Packet Tracer de consolidación (VLANs + rutas estáticas o default). Entrega <code>PR603.md</code> con: checklist de módulos completados, capturas de laboratorios NetAcad/PT y breve autoevaluación de cara a la certificación. <strong>Complementa</strong> (no sustituye) la práctica de taller <strong>PR604</strong>.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Criterio (rúbrica)</th>
+<th>Descripción</th>
+<th>Puntos</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Progreso NetAcad</td>
+<td>Módulos / labs indicados</td>
+<td>0–3</td>
+</tr>
+<tr>
+<td>PT consolidación</td>
+<td><abbr title="Virtual Local Area Network">VLAN</abbr> + enrutamiento verificados</td>
+<td>0–4</td>
+</tr>
+<tr>
+<td>Informe <code>.md</code></td>
+<td>Evidencias y autoevaluación</td>
+<td>0–3</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td></td>
+<td><strong>/10</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="pr604-taller-vlans-en-switch-fisico-verificacion">PR604 — Taller: VLANs en switch físico + verificación<a class="headerlink" href="#pr604-taller-vlans-en-switch-fisico-verificacion" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Valor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Código</strong></td>
+<td><strong>PR604</strong></td>
+</tr>
+<tr>
+<td><strong>UP / tema</strong></td>
+<td>T6 — Enrutamiento, subnetting y VLANs</td>
+</tr>
+<tr>
+<td><strong><abbr title="Resultado de aprendizaje">RA</abbr> principal</strong></td>
+<td><strong>RA4</strong> (crear/configurar VLANs e instalar/configurar equipos). Apoyo <strong>RA3</strong> (plan lógico / verificación)</td>
+</tr>
+<tr>
+<td><strong><abbr title="Criterio de evaluación">CE</abbr> de cobertura</strong></td>
+<td>CE4j, CE4h, CE4g · CE3a, CE3f</td>
+</tr>
+<tr>
+<td><strong>Sesiones estimadas</strong></td>
+<td><strong>2</strong></td>
+</tr>
+<tr>
+<td><strong>Instrumento</strong></td>
+<td>Checklist de configuración + rúbrica 0–10</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5.563 1.396a.95.95 0 0 0-.534.184c-.404.307-.501.9-.425 1.654.075.755.335 1.704.751 2.8.357.937.835 1.984 1.407 3.095-1.17.146-2.24.338-3.158.57-1.08.274-1.958.6-2.583.973C.397 11.045 0 11.484 0 12s.397.955 1.021 1.328c.55.33 1.308.618 2.217.87a1 1 0 0 0-.006.097c0 .485.365.887.82.887.368 0 .678-.26.784-.616q.89.171 1.898.297a31 31 0 0 0-1.408 3.067c-.421 1.093-.686 2.04-.765 2.795-.08.754.016 1.347.42 1.656.201.154.46.208.734.181s.572-.125.896-.287c.649-.323 1.407-.894 2.244-1.67.962-.89 2.026-2.058 3.118-3.421 1.086 1.37 2.146 2.543 3.103 3.439.834.78 1.588 1.355 2.235 1.682.323.163.62.265.894.293s.534-.025.736-.178c.405-.307.502-.9.426-1.654-.054-.54-.206-1.18-.437-1.9a.91.91 0 0 0 .343-.72.92.92 0 0 0-.238-.625.8.8 0 0 0-.701-.251c-.312-.75-.69-1.557-1.125-2.4a27 27 0 0 0 3.187-.575c1.08-.273 1.958-.597 2.583-.97.624-.374 1.021-.813 1.021-1.329s-.397-.957-1.021-1.33c-.625-.373-1.503-.696-2.583-.969a27 27 0 0 0-3.156-.568 31 31 0 0 0 1.406-3.063c.422-1.093.687-2.04.766-2.795.08-.754-.017-1.347-.42-1.656a.95.95 0 0 0-.531-.185 1.3 1.3 0 0 0-.203.004c-.274.026-.57.127-.895.289-.51.254-1.092.665-1.722 1.205a.8.8 0 0 0-.418-.123c-.456 0-.82.4-.82.886q0 .178.06.334a35 35 0 0 0-2.465 2.791c-1.086-1.37-2.146-2.543-3.103-3.439-.834-.78-1.588-1.355-2.235-1.682-.323-.163-.62-.265-.894-.293a1.3 1.3 0 0 0-.204-.006zm.021.385a1 1 0 0 1 .143.004c.205.02.462.105.757.254.592.298 1.33.855 2.147 1.62.955.893 2.022 2.077 3.119 3.466-.428.544-.859 1.12-1.29 1.72a42 42 0 0 0-3.29.235 31 31 0 0 1-1.453-3.184c-.409-1.075-.658-2.002-.729-2.7-.07-.7.05-1.136.276-1.307a.55.55 0 0 1 .32-.108m12.854.033a.55.55 0 0 1 .32.108c.225.172.343.61.27 1.308s-.33 1.624-.743 2.698a31 31 0 0 1-1.455 3.15 42 42 0 0 0-3.312-.234 49 49 0 0 0-1.274-1.717 35 35 0 0 1 2.436-2.772.78.78 0 0 0 .543.223c.456 0 .82-.401.82-.887a.94.94 0 0 0-.133-.484c.61-.519 1.163-.909 1.625-1.139.297-.147.555-.23.76-.25a1 1 0 0 1 .142-.004zm-6.442 5.622c.344.443.69.913 1.035 1.394q-.51-.012-1.031-.014-.532.001-1.05.014c.35-.481.699-.95 1.046-1.394M12 9.203q.668.001 1.314.02.398.563.793 1.154c.366.55.71 1.093 1.041 1.633a54 54 0 0 1-1.046 1.623q-.395.584-.791 1.138-.646.02-1.311.022-.684-.001-1.348-.022a53 53 0 0 1-.789-1.148 52 52 0 0 1-1.04-1.633 53 53 0 0 1 1.84-2.765q.658-.02 1.337-.022m-1.824.04q-.315.444-.625.905c-.334.496-.647.988-.953 1.477a47 47 0 0 1-1.239-2.178 41 41 0 0 1 2.817-.205zm3.625 0a41 41 0 0 1 2.838.202 47 47 0 0 1-1.264 2.198 53 53 0 0 0-1.574-2.4m3.248.251c1.213.146 2.317.34 3.252.576 1.057.268 1.907.587 2.478.928s.834.689.834.998-.263.655-.834.996c-.57.342-1.421.662-2.478.93-.943.239-2.056.433-3.281.58a47 47 0 0 0-1.416-2.492 47 47 0 0 0 1.445-2.516M6.95 9.496c.424.805.899 1.64 1.418 2.494a47 47 0 0 0-1.443 2.508 30 30 0 0 1-2.059-.318.9.9 0 0 0-.23-.508.8.8 0 0 0-.584-.262.8.8 0 0 0-.696.418c-.894-.247-1.63-.53-2.136-.832C.65 12.655.387 12.31.387 12s.263-.654.834-.996c.57-.342 1.421-.662 2.478-.93.935-.237 2.039-.431 3.252-.578zm4.34.8c-.576 0-1.041.5-1.041 1.112 0 .484.29.897.695 1.049v.063c0 .612.466 1.109 1.041 1.109.576 0 1.041-.497 1.041-1.11q0-.025-.002-.05c.424-.141.73-.565.73-1.063 0-.294-.107-.575-.302-.783a1.01 1.01 0 0 0-.738-.326 1 1 0 0 0-.711.3 1 1 0 0 0-.713-.3zm-2.695 2.061a51 51 0 0 0 1.572 2.397c-.99-.04-1.941-.108-2.832-.205q.573-1.067 1.26-2.192m6.779.02c.448.743.862 1.472 1.236 2.176a42 42 0 0 1-2.814.199q.313-.443.625-.902c.333-.495.647-.986.953-1.473m-8.23 2.537c1.033.117 2.141.198 3.304.236.427.6.854 1.179 1.278 1.723-1.103 1.382-2.176 2.561-3.135 3.45-.821.76-1.562 1.31-2.155 1.605-.296.147-.554.23-.76.25s-.35-.018-.462-.104c-.225-.172-.343-.61-.27-1.308s.329-1.624.742-2.698c.366-.948.861-2.018 1.458-3.154m9.656.004c.459.884.854 1.727 1.178 2.504a.91.91 0 0 0-.348.724c0 .486.364.887.82.887a1 1 0 0 0 .123-.01c.218.686.36 1.293.408 1.782.07.698-.05 1.135-.275 1.306-.113.086-.258.124-.463.104s-.462-.105-.758-.254c-.59-.298-1.329-.855-2.146-1.62-.955-.893-2.023-2.077-3.12-3.466.43-.545.862-1.123 1.294-1.725a42 42 0 0 0 3.287-.232m-3.776.246a49 49 0 0 1-1.05 1.4 49 49 0 0 1-1.04-1.398 47 47 0 0 0 2.09-.002"/></svg></span> <strong>PR604</strong>. Práctica <strong>física o mixta</strong> en el aula-taller: configurad <strong>VLANs</strong> en el <strong>switch del taller</strong> (no solo Packet Tracer) y verificad conectividad.</li>
+</ul>
+<p><strong>Enunciado (qué hace el alumno):</strong></p>
+<ol>
+<li>Partir del plan lógico (IDs <abbr title="Virtual Local Area Network">VLAN</abbr>, puertos access, trunk si aplica, subredes asociadas) que indique el profesor.</li>
+<li>Crear las VLANs en el switch gestionable del taller; asignar puertos <strong>access</strong>; configurar <strong>trunk</strong> 802.1Q si hay dos switches o enlace a router L3.</li>
+<li>Conectar PCs (o interfaces) a puertos de VLANs distintas; asignar IP coherentes.</li>
+<li>Verificar: mismo <abbr title="Virtual Local Area Network">VLAN</abbr> → ping OK; VLANs distintas → <strong>no</strong> hay L2 (salvo que exista inter-<abbr title="Virtual Local Area Network">VLAN</abbr> y esté autorizado en el guion).</li>
+<li>Documentar comandos/capturas, tabla puerto↔<abbr title="Virtual Local Area Network">VLAN</abbr> y resultado de pruebas.</li>
+</ol>
+<p><strong>Evidencia:</strong> capturas de <code>show vlan</code> / equivalente, tabla de puertos, pruebas ping, <code>PR604.md</code>. Si el material físico no está disponible un día, el profesor autorizará evidencia mixta (config en equipo real parcial + PT), sin eliminar el objetivo de configuración real.</p>
+<p><strong>Entrega:</strong> <code>PR604.md</code> + evidencias en Aules.</p>
+<table>
+<thead>
+<tr>
+<th>Criterio (rúbrica)</th>
+<th>Descripción</th>
+<th>Puntos</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Plan lógico</td>
+<td>VLANs / puertos / IPs coherentes</td>
+<td>0–2</td>
+</tr>
+<tr>
+<td>Configuración en switch</td>
+<td>VLANs + access (+ trunk si aplica)</td>
+<td>0–4</td>
+</tr>
+<tr>
+<td>Verificación</td>
+<td>Conectividad / aislamiento demostrados</td>
+<td>0–2</td>
+</tr>
+<tr>
+<td>Informe <code>.md</code></td>
+<td>Capturas y tabla puerto↔<abbr title="Virtual Local Area Network">VLAN</abbr></td>
+<td>0–2</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td></td>
+<td><strong>/10</strong></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="referencias-rapidas">Referencias rápidas<a class="headerlink" href="#referencias-rapidas" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Sitio del módulo: <a href="https://fjavier-hernandez.github.io/ral/">fjavier-hernandez.github.io/ral</a></li>
+<li>Diagramas: <a href="https://excalidraw.com/">Excalidraw</a>, <a href="https://app.diagrams.net/">draw.io (diagrams.net)</a>, <a href="https://wiki.gnome.org/Apps/Dia">Dia</a></li>
+<li>Simulación: <a href="https://www.netacad.com/es/cisco-packet-tracer">Cisco Packet Tracer</a></li>
+<li>NetAcad (itinerario del curso): módulos que indique el profesor; ver <strong>PR603</strong></li>
+<li>Taller <abbr title="Virtual Local Area Network">VLAN</abbr> físico: ver <strong>PR604</strong></li>
+<li>Entregas: <a href="https://code.visualstudio.com/docs">Visual Studio Code</a> + <a href="https://tutorialmarkdown.com/guia">Markdown</a></li>
+<li>Normas: <a href="../00-normas/normas_taller.html">Normas del taller</a></li>
+</ul>
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      2026-2027 Francisco Javier Hernández Illán - <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es">Licencia CC BY-NC-SA</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="mailto:<fj.hernandez@edu.gva.es>" target="_blank" rel="noopener" title="" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4l208 156a48 48 0 0 0 57.6 0l208-156c12.1-9.1 19.2-23.3 19.2-38.4 0-26.5-21.5-48-48-48zM0 196v188c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V196L313.6 344.8c-34.1 25.6-81.1 25.6-115.2 0z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.linkedin.com/in/fjavier-hernandez-illan" target="_blank" rel="noopener" title="www.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77m282.1 320h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+      <div class="md-consent" data-md-component="consent" id="__consent" hidden>
+        <div class="md-consent__overlay"></div>
+        <aside class="md-consent__inner">
+          <form class="md-consent__form md-grid md-typeset" name="consent">
+            
+
+
+  
+
+
+<h4>Consentimiento de cookie</h4>
+<p>Esta página de apuntes utiliza cookies para reconocer las visitas, medir la efectividad de la documentación y averiguar si encuentras aquello que buscas o cómo has llegado a estos apuntes. Con tu consentimiento, me ayudas a mejorar estos materiales.</p>
+<input class="md-toggle" type="checkbox" id="__settings" >
+<div class="md-consent__settings">
+  <ul class="task-list">
+    
+    
+      
+        
+  
+  
+    
+    
+  
+  <li class="task-list-item">
+    <label class="task-list-control">
+      <input type="checkbox" name="analytics" checked>
+      <span class="task-list-indicator"></span>
+      Google Analytics
+    </label>
+  </li>
+
+      
+    
+    
+      
+    
+    
+  </ul>
+</div>
+<div class="md-consent__controls">
+  
+    
+      <button class="md-button md-button--primary">Aceptar</button>
+    
+    
+    
+  
+    
+    
+    
+      <label class="md-button" for="__settings">Gestionar cookies</label>
+    
+  
+</div>
+          </form>
+        </aside>
+      </div>
+      <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout((function(){document.querySelector("[data-md-component=consent]").hidden=!1}),250);var form=document.forms.consent;for(var action of["submit","reset"])form.addEventListener(action,(function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map((function(e){return[e,!0]})))),location.hash="",location.reload()}))</script>
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["header.autohide", "navigation.top", "navigation.tracking", "navigation.footer", "navigation.indexes", "content.code.annotate", "announce.dismiss", "toc.follow", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../js/print-site.js"></script>
+      
+    
+  </body>
+</html>

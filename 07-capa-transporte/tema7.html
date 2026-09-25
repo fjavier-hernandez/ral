@@ -1,0 +1,1528 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="TCP/UDP, puertos y sockets, netstat y nmap; cortafuegos, proxy, balanceo y VPN; enlace breve a NAT.">
+      
+      
+      
+        <link rel="canonical" href="https://fjavier-hernandez.github.io/ral/07-capa-transporte/tema7.html">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../img/ral.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Tema 7 — Capa de transporte - Redes de Área Local</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-0CPJP88MBF"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-0CPJP88MBF",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-0CPJP88MBF",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>if("undefined"!=typeof __md_analytics){var consent=__md_get("__consent");consent&&consent.analytics&&__md_analytics()}</script>
+  
+
+    
+    
+  
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Tema 7 — Capa de transporte - Redes de Área Local" />
+<meta property="og:description" content="TCP/UDP, puertos y sockets, netstat y nmap; cortafuegos, proxy, balanceo y VPN; enlace breve a NAT." />
+<meta property="og:image" content="https://fjavier-hernandez.github.io/ral/assets/images/social/07-capa-transporte/tema7.png" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:url" content="https://fjavier-hernandez.github.io/ral/07-capa-transporte/tema7.html" />
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:title" content="Tema 7 — Capa de transporte - Redes de Área Local" />
+<meta property="twitter:description" content="TCP/UDP, puertos y sockets, netstat y nmap; cortafuegos, proxy, balanceo y VPN; enlace breve a NAT." />
+<meta property="twitter:image" content="https://fjavier-hernandez.github.io/ral/assets/images/social/07-capa-transporte/tema7.png" />
+</head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="javi" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#tema-7-capa-de-transporte" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../index.html" title="Redes de Área Local" class="md-header__button md-logo" aria-label="Redes de Área Local" data-md-component="logo">
+      
+  <img src="../img/ral.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Redes de Área Local
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Tema 7 — Capa de transporte
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="javi" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Cambiar a modo noche"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo noche" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Cambiar a modo día"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo día" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../index.html" title="Redes de Área Local" class="md-nav__button md-logo" aria-label="Redes de Área Local" data-md-component="logo">
+      
+  <img src="../img/ral.svg" alt="logo">
+
+    </a>
+    Redes de Área Local
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../00-normas/normas_taller.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Normas del taller
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guías
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Guías
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../90-guias/packet-tracer.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Packet Tracer (inicio)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../90-guias/pr102-modelos-osi.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PR102 — Modelos OSI/TCP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../90-guias/pr103-primera-red.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PR103 — Mi primera red
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-introduccion-arquitectura/tema1.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Introducción. Arquitectura de redes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-medios-capa-fisica/tema2.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Medios de transmisión y capa física
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#propuesta-didactica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Propuesta didáctica
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Propuesta didáctica">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#criterios-de-evaluacion-seleccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Criterios de evaluación (selección)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contenidos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Contenidos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#programacion-de-aula-orientativa-1416-h" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Programación de aula (orientativa, ~14–16 h)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cuestionario-inicial" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cuestionario inicial
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#la-capa-de-transporte" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        La capa de transporte
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#puertos-y-sockets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Puertos y sockets
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tipos-de-puertos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tipos de puertos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tipos de puertos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplos-well-known" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejemplos well-known
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#protocolo-udp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Protocolo UDP
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#protocolo-tcp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Protocolo TCP
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Protocolo TCP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#three-way-handshake-y-cierre" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Three-way handshake y cierre
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tcp-frente-a-udp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TCP frente a UDP
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#herramientas-netstat-y-nmap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Herramientas: netstat y nmap
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Herramientas: netstat y nmap">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#netstat-puertos-en-tu-equipo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        netstat — puertos en tu equipo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nmap-escaneo-solo-con-permiso" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        nmap — escaneo (solo con permiso)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nat-puntero-al-tema-8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        NAT (puntero al Tema 8)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cortafuegos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cortafuegos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proxy-balanceo-y-vpn-vision-breve" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Proxy, balanceo y VPN (visión breve)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Proxy, balanceo y VPN (visión breve)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#proxy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Proxy
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#balanceador-de-carga" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Balanceador de carga
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vpn" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VPN
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#actividades" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Actividades
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Actividades">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ac701-sockets-y-puertos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AC701 — Sockets y puertos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ac702-tipos-de-puertos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AC702 — Tipos de puertos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ac703-tcp-frente-a-udp-casos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AC703 — TCP frente a UDP (casos)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ac704-practica-con-netstat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AC704 — Práctica con netstat
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ac705-nmap-autorizado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AC705 — nmap autorizado
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ac706-politica-de-firewall-del-centro" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AC706 — Política de firewall del centro
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ac707-proxy-balanceo-o-vpn" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AC707 — Proxy, balanceo o VPN
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pr701-laboratorio-de-puertos-netstat-nmap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PR701 — Laboratorio de puertos (netstat + nmap)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pr702-captura-tcpudp-en-packet-tracer-cuando-toque" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PR702 — Captura TCP/UDP en Packet Tracer (cuando toque)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referencias-rapidas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Referencias rápidas
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="tema-7-capa-de-transporte">Tema 7. Capa de transporte<a class="headerlink" href="#tema-7-capa-de-transporte" title="Permanent link">&para;</a></h1>
+<p>En este tema bajamos a la capa que <strong>conecta las aplicaciones con la red</strong>: <strong>puertos</strong>, <strong>sockets</strong>, <strong><abbr title="User Datagram Protocol">UDP</abbr></strong> y <strong><abbr title="Transmission Control Protocol">TCP</abbr></strong>. También practicamos con <strong><code>netstat</code></strong> y <strong><code>nmap</code></strong>, y vemos de forma breve cortafuegos, proxy, balanceo y <abbr title="Virtual Private Network">VPN</abbr>. El <strong><abbr title="Network Address Translation">NAT</abbr> completo</strong> se desarrolla en el <a href="../08-nat-ipv6/tema8.html">Tema 8</a>.</p>
+<div class="admonition tip">
+<p class="admonition-title">Primera clase</p>
+<p>Empieza por el <a href="#cuestionario-inicial">cuestionario inicial</a>. No hace falta estudiar el tema completo antes: el cuestionario sirve para ver qué sabes al empezar.</p>
+</div>
+<h2 id="propuesta-didactica">Propuesta didáctica<a class="headerlink" href="#propuesta-didactica" title="Permanent link">&para;</a></h2>
+<p>Trabajamos los <strong>RA4</strong> y <strong>RA5</strong> del módulo Redes de área local (0225), con apoyo de <strong>RA1</strong> cuando haga falta:</p>
+<blockquote>
+<p><strong>RA4.</strong> <em>Instala equipos en red, describiendo sus prestaciones y aplicando técnicas de montaje.</em></p>
+<p><strong>RA5.</strong> <em>Mantiene una red local interpretando recomendaciones de los fabricantes de hardware o software y estableciendo la relación entre disfunciones y sus causas.</em></p>
+<p><strong>RA1.</strong> <em>Reconoce la estructura de redes locales cableadas analizando las características de entornos de aplicación y describiendo la funcionalidad de sus componentes.</em></p>
+</blockquote>
+<h3 id="criterios-de-evaluacion-seleccion">Criterios de evaluación (selección)<a class="headerlink" href="#criterios-de-evaluacion-seleccion" title="Permanent link">&para;</a></h3>
+<p><strong>RA4</strong></p>
+<ul>
+<li><strong>CE4g</strong>: Se han identificado los protocolos.</li>
+<li><strong>CE4h</strong>: Se han configurado los parámetros básicos.</li>
+</ul>
+<p><strong>RA5</strong></p>
+<ul>
+<li><strong>CE5a</strong>: Se han identificado incidencias y comportamientos anómalos.</li>
+<li><strong>CE5b</strong>: Se ha identificado si la disfunción es debida al hardware o al software.</li>
+<li><strong>CE5d</strong>: Se han verificado los protocolos de comunicaciones.</li>
+<li><strong>CE5e</strong>: Se ha localizado la causa de la disfunción.</li>
+<li><strong>CE5h</strong>: Se ha elaborado un informe de incidencias.</li>
+</ul>
+<p><strong>RA1</strong> (apoyo)</p>
+<ul>
+<li><strong>CE1a</strong>: Se han descrito los principios de funcionamiento de las redes locales.</li>
+<li><strong>CE1c</strong>: Se han descrito los elementos de la red local y su función.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">VLAN y Wi‑Fi</p>
+<p>Las <strong>VLAN</strong> (CE4j) no se desarrollan aquí. Lo inalámbrico (CE4c–e) solo aparece si hace falta como contexto de servicios; el foco es <strong>transporte</strong> y <strong>herramientas</strong>.</p>
+</div>
+<h3 id="contenidos">Contenidos<a class="headerlink" href="#contenidos" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Capa de transporte en <abbr title="Transmission Control Protocol">TCP</abbr>/IP y OSI: segmentación, multiplexación, puertos.</li>
+<li>Sockets (IP:puerto); well-known / registered / ephemeral.</li>
+<li><abbr title="User Datagram Protocol">UDP</abbr> y <abbr title="Transmission Control Protocol">TCP</abbr>: cabeceras, handshake, ventana; comparación y casos de uso.</li>
+<li><code>netstat</code> y <code>nmap</code> (solo en red autorizada).</li>
+<li>Cortafuegos (políticas); proxy, balanceo y <abbr title="Virtual Private Network">VPN</abbr> (visión breve).</li>
+<li><abbr title="Network Address Translation">NAT</abbr>: puntero al Tema 8 (sin duplicar el capítulo).</li>
+</ul>
+<h3 id="programacion-de-aula-orientativa-1416-h">Programación de aula (orientativa, ~14–16 h)<a class="headerlink" href="#programacion-de-aula-orientativa-1416-h" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Sesiones</th>
+<th>Contenidos</th>
+<th>Actividades</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Presentación + cuestionario</td>
+<td>Cuestionario</td>
+</tr>
+<tr>
+<td>2–3</td>
+<td>Transporte, sockets, tipos de puertos</td>
+<td><strong>AC701</strong>, <strong>AC702</strong></td>
+</tr>
+<tr>
+<td>4–5</td>
+<td><abbr title="User Datagram Protocol">UDP</abbr>, <abbr title="Transmission Control Protocol">TCP</abbr>, handshake, comparación</td>
+<td><strong>AC703</strong></td>
+</tr>
+<tr>
+<td>6–7</td>
+<td>Laboratorio <code>netstat</code> + <code>nmap</code> + informe</td>
+<td><strong>AC704</strong>, <strong>AC705</strong>, <strong>PR701</strong></td>
+</tr>
+<tr>
+<td>8–9</td>
+<td>Firewall, proxy / balanceo / <abbr title="Virtual Private Network">VPN</abbr></td>
+<td><strong>AC706</strong>, <strong>AC707</strong></td>
+</tr>
+<tr>
+<td>10–11</td>
+<td>Repaso; captura <abbr title="Transmission Control Protocol">TCP</abbr>/<abbr title="User Datagram Protocol">UDP</abbr> en PT (si toca)</td>
+<td><strong>PR702</strong> (cuando toque)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><a id="cuestionario-inicial"></a></p>
+<h2 id="cuestionario-inicial">Cuestionario inicial<a class="headerlink" href="#cuestionario-inicial" title="Permanent link">&para;</a></h2>
+<div class="admonition question">
+<p class="admonition-title">Antes de empezar — responde con lo que sepas</p>
+<ol>
+<li>¿Para qué sirve la capa de transporte en una red <abbr title="Transmission Control Protocol">TCP</abbr>/IP?</li>
+<li>¿Qué diferencia hay entre una <strong>dirección IP</strong> y un <strong>puerto</strong>?</li>
+<li>¿Qué es un <strong>socket</strong>? Pon un ejemplo.</li>
+<li>¿En qué se diferencian <abbr title="User Datagram Protocol">UDP</abbr> y <abbr title="Transmission Control Protocol">TCP</abbr>?</li>
+<li>¿Por qué usamos <abbr title="Transmission Control Protocol">TCP</abbr> para descargar archivos y, a menudo, <abbr title="User Datagram Protocol">UDP</abbr> para voz?</li>
+<li>¿Qué función cumple un cortafuegos en una red?</li>
+<li>¿Has oído hablar de <code>netstat</code> o <code>nmap</code>? ¿Para qué crees que sirven?</li>
+</ol>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Soluciones</p>
+<p>Las soluciones se trabajan en clase o se publican en Aules cuando proceda.</p>
+</div>
+<hr />
+<h2 id="la-capa-de-transporte">La capa de transporte<a class="headerlink" href="#la-capa-de-transporte" title="Permanent link">&para;</a></h2>
+<p>Los programas de aplicación (navegador, correo, juego…) generan datos que deben ir de un <strong>host origen</strong> a un <strong>host destino</strong>. La <strong>capa de transporte</strong> se ocupa de la comunicación <strong>lógica entre aplicaciones</strong> en distintos equipos.</p>
+<figure>
+  <img alt="Capa de transporte entre aplicaciones" src="../img/transporte-entre-aplicaciones.png" width="800" />
+<br />
+<figcaption>La capa de transporte enlaza las aplicaciones con la red</figcaption>
+</figure>
+<p>Responsabilidades habituales:</p>
+<ul>
+<li><strong>Multiplexar</strong> varias conversaciones a la vez.</li>
+<li><strong>Identificar aplicaciones</strong> con <strong>puertos</strong>.</li>
+<li><strong>Segmentar</strong> y <strong>reensamblar</strong> datos.</li>
+<li>Entregar a la capa de red (IP) segmentos (<abbr title="Transmission Control Protocol">TCP</abbr>) o datagramas (<abbr title="User Datagram Protocol">UDP</abbr>).</li>
+</ul>
+<p>Los dos protocolos clave: <strong><abbr title="User Datagram Protocol">UDP</abbr></strong> y <strong><abbr title="Transmission Control Protocol">TCP</abbr></strong>.</p>
+<hr />
+<h2 id="puertos-y-sockets">Puertos y sockets<a class="headerlink" href="#puertos-y-sockets" title="Permanent link">&para;</a></h2>
+<p>No basta con la IP: en cada equipo hay muchas aplicaciones. Un <strong>puerto</strong> es un número <strong>0–65535</strong> en la cabecera de transporte que identifica el servicio o proceso.</p>
+<p>Un <strong>socket</strong> es la pareja <strong>IP:puerto</strong>. Ejemplo: <code>192.168.1.10:80</code>. Una conexión queda identificada por dos sockets:</p>
+<blockquote>
+<p><code>IP_origen:puerto_origen  ↔  IP_destino:puerto_destino</code></p>
+</blockquote>
+<hr />
+<h2 id="tipos-de-puertos">Tipos de puertos<a class="headerlink" href="#tipos-de-puertos" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Tipo</th>
+<th style="text-align: right;">Rango</th>
+<th>Uso principal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Well-known</strong></td>
+<td style="text-align: right;">0–1023</td>
+<td>Servicios estándar (HTTP, HTTPS, SSH, DNS…)</td>
+</tr>
+<tr>
+<td><strong>Registered</strong></td>
+<td style="text-align: right;">1024–49151</td>
+<td>Aplicaciones y servicios de usuario</td>
+</tr>
+<tr>
+<td><strong>Ephemeral</strong></td>
+<td style="text-align: right;">49152–65535</td>
+<td>Puertos temporales del cliente (asignados por el SO)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ejemplos-well-known">Ejemplos well-known<a class="headerlink" href="#ejemplos-well-known" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Puerto</th>
+<th>Servicio</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>22/tcp</td>
+<td>SSH</td>
+</tr>
+<tr>
+<td>53/tcp·udp</td>
+<td>DNS</td>
+</tr>
+<tr>
+<td>67/68/udp</td>
+<td>DHCP</td>
+</tr>
+<tr>
+<td>80/tcp</td>
+<td>HTTP</td>
+</tr>
+<tr>
+<td>443/tcp</td>
+<td>HTTPS</td>
+</tr>
+<tr>
+<td>25/tcp</td>
+<td>SMTP</td>
+</tr>
+<tr>
+<td>110/tcp · 143/tcp</td>
+<td>POP3 · IMAP</td>
+</tr>
+</tbody>
+</table>
+<p>Conocerlos ayuda a leer salidas de <code>netstat</code> y reglas de cortafuegos.</p>
+<hr />
+<h2 id="protocolo-udp">Protocolo <abbr title="User Datagram Protocol">UDP</abbr><a class="headerlink" href="#protocolo-udp" title="Permanent link">&para;</a></h2>
+<p><strong><abbr title="User Datagram Protocol">UDP</abbr></strong> es <strong>no orientado a conexión</strong> y de <strong>mejor esfuerzo</strong>: los datagramas pueden perderse, duplicarse o llegar desordenados. La cabecera es pequeña (4 campos / 8 bytes).</p>
+<figure>
+  <img alt="Formato del mensaje UDP" src="../img/udp-cabecera-formato.png" width="800" />
+<br />
+<figcaption>Formato de un mensaje UDP</figcaption>
+</figure>
+<p>Campos: puerto origen, puerto destino, longitud, suma de verificación.</p>
+<p><strong>Cuándo usarlo:</strong> baja latencia y tolerancia a pérdidas (streaming en vivo, VoIP, juegos; también DNS/TFTP en muchos casos).</p>
+<hr />
+<h2 id="protocolo-tcp">Protocolo <abbr title="Transmission Control Protocol">TCP</abbr><a class="headerlink" href="#protocolo-tcp" title="Permanent link">&para;</a></h2>
+<p><strong><abbr title="Transmission Control Protocol">TCP</abbr></strong> es <strong>orientado a conexión</strong> y <strong>fiable</strong>: entrega sin errores, sin duplicados y en orden (retransmisión, ACK, secuencia).</p>
+<figure>
+  <img alt="Formato del segmento TCP" src="../img/tcp-cabecera-formato.png" width="800" />
+<br />
+<figcaption>Formato de un segmento TCP</figcaption>
+</figure>
+<p>Campos clave: puertos, número de secuencia, ACK, flags (<strong>SYN</strong>, <strong>ACK</strong>, <strong>FIN</strong>, RST/PSH/URG), <strong>ventana</strong> (control de flujo), checksum.</p>
+<h3 id="three-way-handshake-y-cierre">Three-way handshake y cierre<a class="headerlink" href="#three-way-handshake-y-cierre" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Cliente → <strong>SYN</strong>.  </li>
+<li>Servidor → <strong>SYN+ACK</strong>.  </li>
+<li>Cliente → <strong>ACK</strong>. Luego van los datos.</li>
+</ol>
+<p>Para cerrar: <strong>FIN</strong> / <strong>ACK</strong> en ambos sentidos (cuatro segmentos en el cierre ordenado típico).</p>
+<p>La <strong>ventana deslizante</strong> permite enviar varios segmentos sin esperar un ACK por cada uno.</p>
+<hr />
+<h2 id="tcp-frente-a-udp"><abbr title="Transmission Control Protocol">TCP</abbr> frente a <abbr title="User Datagram Protocol">UDP</abbr><a class="headerlink" href="#tcp-frente-a-udp" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Característica</th>
+<th><abbr title="Transmission Control Protocol">TCP</abbr></th>
+<th><abbr title="User Datagram Protocol">UDP</abbr></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Conexión</td>
+<td>Orientado a conexión</td>
+<td>Sin conexión previa</td>
+</tr>
+<tr>
+<td>Fiabilidad</td>
+<td>Confirma, reordena, retransmite</td>
+<td>Mejor esfuerzo</td>
+</tr>
+<tr>
+<td>Control de flujo</td>
+<td>Sí (ventana)</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Cabecera</td>
+<td>Más grande</td>
+<td>Muy pequeña</td>
+</tr>
+<tr>
+<td>Usos típicos</td>
+<td>Web, correo, FTP, SSH</td>
+<td>Streaming, VoIP, juegos, DNS</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="herramientas-netstat-y-nmap">Herramientas: <code>netstat</code> y <code>nmap</code><a class="headerlink" href="#herramientas-netstat-y-nmap" title="Permanent link">&para;</a></h2>
+<h3 id="netstat-puertos-en-tu-equipo"><code>netstat</code> — puertos en tu equipo<a class="headerlink" href="#netstat-puertos-en-tu-equipo" title="Permanent link">&para;</a></h3>
+<p>Opciones habituales: <code>-a</code> (todas), <code>-n</code> (números), <code>-p</code> (proceso), <code>-t</code>/<code>-u</code> (<abbr title="Transmission Control Protocol">TCP</abbr>/<abbr title="User Datagram Protocol">UDP</abbr> en Linux), <code>-l</code> (escucha).</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="c1"># Windows</span>
+<span class="linenos" data-linenos="2 "></span>netstat<span class="w"> </span>-na
+<span class="linenos" data-linenos="3 "></span>
+<span class="linenos" data-linenos="4 "></span><span class="c1"># Linux</span>
+<span class="linenos" data-linenos="5 "></span>netstat<span class="w"> </span>-punta
+</code></pre></div>
+<h3 id="nmap-escaneo-solo-con-permiso"><code>nmap</code> — escaneo (solo con permiso)<a class="headerlink" href="#nmap-escaneo-solo-con-permiso" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>nmap<span class="w"> </span><span class="m">192</span>.168.1.1
+</code></pre></div>
+<div class="admonition danger">
+<p class="admonition-title">Uso autorizado</p>
+<p>Escanea <strong>solo</strong> equipos y redes donde tengas <strong>permiso explícito</strong> (aula, lab, tu propio host). En contextos reales, el escaneo no autorizado puede ser ilegal o sancionable.</p>
+</div>
+<p>Estas herramientas ayudan a <strong>verificar protocolos</strong> (CE5d) y a distinguir si un fallo parece de <strong>servicio/software</strong> o de <strong>conectividad/hardware</strong> (CE5b).</p>
+<hr />
+<h2 id="nat-puntero-al-tema-8"><abbr title="Network Address Translation">NAT</abbr> (puntero al Tema 8)<a class="headerlink" href="#nat-puntero-al-tema-8" title="Permanent link">&para;</a></h2>
+<p><strong><abbr title="Network Address Translation">NAT</abbr></strong> permite que muchos hosts con IP <strong>privadas</strong> salgan a Internet con <strong>pocas IP públicas</strong>. Con <strong><abbr title="Port Address Translation">PAT</abbr></strong>, además se traducen <strong>puertos</strong>.</p>
+<figure>
+  <img alt="Esquema básico de NAT" src="../img/nat-diagrama-basico.png" width="700" />
+<br />
+<figcaption>Idea básica: LAN privada saliendo a Internet mediante NAT</figcaption>
+</figure>
+<div class="admonition tip">
+<p class="admonition-title">Profundidad en el Tema 8</p>
+<p>Tipos (estático, dinámico, <abbr title="Port Address Translation">PAT</abbr>), terminología local/global e IPv6 → <a href="../08-nat-ipv6/tema8.html">Tema 8 — <abbr title="Network Address Translation">NAT</abbr> e IPv6</a>. Aquí no duplicamos ese capítulo.</p>
+</div>
+<hr />
+<h2 id="cortafuegos">Cortafuegos<a class="headerlink" href="#cortafuegos" title="Permanent link">&para;</a></h2>
+<p>Un <strong>firewall</strong> filtra tráfico según una <strong>política</strong>, permitiendo lo autorizado y bloqueando el resto.</p>
+<figure>
+  <img alt="Cortafuegos con DMZ" src="../img/firewall-dmz-diagrama.png" width="800" />
+<br />
+<figcaption>Cortafuegos de red con zona desmilitarizada (DMZ)</figcaption>
+</figure>
+<ul>
+<li><strong>Personal</strong> (en el PC) vs <strong>de red</strong> (borde / perímetro).</li>
+<li><strong>Restrictiva</strong>: denegar por defecto; solo lo explícitamente permitido.</li>
+<li><strong>Permisiva</strong>: permitir por defecto; denegar lo listado.</li>
+</ul>
+<p>La restrictiva suele ser más segura. En Linux: <code>iptables</code> / <code>nftables</code>, UFW.</p>
+<hr />
+<h2 id="proxy-balanceo-y-vpn-vision-breve">Proxy, balanceo y <abbr title="Virtual Private Network">VPN</abbr> (visión breve)<a class="headerlink" href="#proxy-balanceo-y-vpn-vision-breve" title="Permanent link">&para;</a></h2>
+<h3 id="proxy">Proxy<a class="headerlink" href="#proxy" title="Permanent link">&para;</a></h3>
+<p>Intermediario que hace peticiones en nombre de los clientes. Puede <strong>cachear</strong>, ahorrar ancho de banda y <strong>filtrar</strong> contenido. Un <strong>proxy transparente</strong> intercepta (con ayuda del firewall) sin configurar el navegador.</p>
+<h3 id="balanceador-de-carga">Balanceador de carga<a class="headerlink" href="#balanceador-de-carga" title="Permanent link">&para;</a></h3>
+<p>Reparte peticiones entre varios servidores (o enlaces) para <strong>rendimiento</strong> y <strong>disponibilidad</strong>. A menudo actúa como <strong>proxy inverso</strong>.</p>
+<h3 id="vpn"><abbr title="Virtual Private Network">VPN</abbr><a class="headerlink" href="#vpn" title="Permanent link">&para;</a></h3>
+<p>Extiende de forma <strong>segura</strong> una red privada sobre Internet mediante un <strong>túnel cifrado</strong> (acceso remoto o sede–sede). Tecnologías habituales: IPsec, SSL/TLS, OpenVPN.</p>
+<hr />
+<h2 id="actividades">Actividades<a class="headerlink" href="#actividades" title="Permanent link">&para;</a></h2>
+<div class="admonition tip">
+<p class="admonition-title">Formato de entrega</p>
+<p>Las entregas en <strong>Aules</strong> son <strong>obligatorias en Markdown</strong> (<code>.md</code>). No se aceptan PDF.<br />
+Nombre del archivo: <code>AC7XX.md</code> o <code>PR7XX.md</code> (sustituye XX por el número). Respeta la fecha de vencimiento.<br />
+Escribiremos los <code>.md</code> con <strong>Visual Studio Code</strong>.</p>
+<div class="admonition note">
+<p class="admonition-title">Cómo empezar</p>
+<ul>
+<li>Guía de Markdown: <a href="https://tutorialmarkdown.com/guia">tutorialmarkdown.com/guia</a></li>
+<li>Documentación de Visual Studio Code: <a href="https://code.visualstudio.com/docs">code.visualstudio.com/docs</a></li>
+</ul>
+</div>
+</div>
+<h3 id="ac701-sockets-y-puertos">AC701 — Sockets y puertos<a class="headerlink" href="#ac701-sockets-y-puertos" title="Permanent link">&para;</a></h3>
+<ul>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.832 3.367 8.668.108a3.15 3.15 0 0 0-3.856 2.226L.943 16.777a3.15 3.15 0 0 0 2.226 3.856l12.163 3.259a3.15 3.15 0 0 0 3.855-2.226l3.87-14.443a3.15 3.15 0 0 0-2.226-3.856M6.332 2.741a1.574 1.574 0 0 1 1.928-1.113l12.163 3.26a1.574 1.574 0 0 1 1.113 1.927l-3.87 14.444a1.574 1.574 0 0 1-1.928 1.113l-12.163-3.26a1.574 1.574 0 0 1-1.113-1.927zm2.634 2.336a.787.787 0 1 0-.407 1.52l9.122 2.444a.787.787 0 1 0 .407-1.52zM6.985 9.434a.787.787 0 0 1 .963-.557l9.123 2.445a.787.787 0 0 1-.408 1.52l-9.122-2.444a.787.787 0 0 1-.556-.964m-.055 3.244a.787.787 0 0 0-.407 1.52l5.32 1.427a.787.787 0 0 0 .408-1.52z"/></svg></span> <strong>AC701</strong>. (RA1 // CE1a, CE1c // RA4 // CE4g // <strong><abbr title="Actividad de clase">AC</abbr> 0–1</strong>). Tras estudiar sockets/puertos: define <strong>socket</strong> con un ejemplo; explica cómo distinguirías dos servidores web en el mismo host; indica si cada pestaña del navegador usa necesariamente un puerto distinto y por qué.</li>
+</ul>
+<h3 id="ac702-tipos-de-puertos">AC702 — Tipos de puertos<a class="headerlink" href="#ac702-tipos-de-puertos" title="Permanent link">&para;</a></h3>
+<ul>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.832 3.367 8.668.108a3.15 3.15 0 0 0-3.856 2.226L.943 16.777a3.15 3.15 0 0 0 2.226 3.856l12.163 3.259a3.15 3.15 0 0 0 3.855-2.226l3.87-14.443a3.15 3.15 0 0 0-2.226-3.856M6.332 2.741a1.574 1.574 0 0 1 1.928-1.113l12.163 3.26a1.574 1.574 0 0 1 1.113 1.927l-3.87 14.444a1.574 1.574 0 0 1-1.928 1.113l-12.163-3.26a1.574 1.574 0 0 1-1.113-1.927zm2.634 2.336a.787.787 0 1 0-.407 1.52l9.122 2.444a.787.787 0 1 0 .407-1.52zM6.985 9.434a.787.787 0 0 1 .963-.557l9.123 2.445a.787.787 0 0 1-.408 1.52l-9.122-2.444a.787.787 0 0 1-.556-.964m-.055 3.244a.787.787 0 0 0-.407 1.52l5.32 1.427a.787.787 0 0 0 .408-1.52z"/></svg></span> <strong>AC702</strong>. (RA4 // CE4g // <strong><abbr title="Actividad de clase">AC</abbr> 0–1</strong>). Tabla: tipo, rango y ejemplos (≥5 well-known, ≥3 registered, ≥2 usos ephemeral). Explica por qué los well-known suelen exigir privilegios de administrador.</li>
+</ul>
+<h3 id="ac703-tcp-frente-a-udp-casos">AC703 — <abbr title="Transmission Control Protocol">TCP</abbr> frente a <abbr title="User Datagram Protocol">UDP</abbr> (casos)<a class="headerlink" href="#ac703-tcp-frente-a-udp-casos" title="Permanent link">&para;</a></h3>
+<ul>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.832 3.367 8.668.108a3.15 3.15 0 0 0-3.856 2.226L.943 16.777a3.15 3.15 0 0 0 2.226 3.856l12.163 3.259a3.15 3.15 0 0 0 3.855-2.226l3.87-14.443a3.15 3.15 0 0 0-2.226-3.856M6.332 2.741a1.574 1.574 0 0 1 1.928-1.113l12.163 3.26a1.574 1.574 0 0 1 1.113 1.927l-3.87 14.444a1.574 1.574 0 0 1-1.928 1.113l-12.163-3.26a1.574 1.574 0 0 1-1.113-1.927zm2.634 2.336a.787.787 0 1 0-.407 1.52l9.122 2.444a.787.787 0 1 0 .407-1.52zM6.985 9.434a.787.787 0 0 1 .963-.557l9.123 2.445a.787.787 0 0 1-.408 1.52l-9.122-2.444a.787.787 0 0 1-.556-.964m-.055 3.244a.787.787 0 0 0-.407 1.52l5.32 1.427a.787.787 0 0 0 .408-1.52z"/></svg></span> <strong>AC703</strong>. (RA4 // CE4g // <strong><abbr title="Actividad de clase">AC</abbr> 0–1</strong>). Para cada caso, elige <abbr title="Transmission Control Protocol">TCP</abbr> o <abbr title="User Datagram Protocol">UDP</abbr> y justifica: (1) descarga de ISO, (2) videollamada, (3) consulta DNS, (4) juego FPS online, (5) SSH.</li>
+</ul>
+<h3 id="ac704-practica-con-netstat">AC704 — Práctica con <code>netstat</code><a class="headerlink" href="#ac704-practica-con-netstat" title="Permanent link">&para;</a></h3>
+<ul>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.832 3.367 8.668.108a3.15 3.15 0 0 0-3.856 2.226L.943 16.777a3.15 3.15 0 0 0 2.226 3.856l12.163 3.259a3.15 3.15 0 0 0 3.855-2.226l3.87-14.443a3.15 3.15 0 0 0-2.226-3.856M6.332 2.741a1.574 1.574 0 0 1 1.928-1.113l12.163 3.26a1.574 1.574 0 0 1 1.113 1.927l-3.87 14.444a1.574 1.574 0 0 1-1.928 1.113l-12.163-3.26a1.574 1.574 0 0 1-1.113-1.927zm2.634 2.336a.787.787 0 1 0-.407 1.52l9.122 2.444a.787.787 0 1 0 .407-1.52zM6.985 9.434a.787.787 0 0 1 .963-.557l9.123 2.445a.787.787 0 0 1-.408 1.52l-9.122-2.444a.787.787 0 0 1-.556-.964m-.055 3.244a.787.787 0 0 0-.407 1.52l5.32 1.427a.787.787 0 0 0 .408-1.52z"/></svg></span> <strong>AC704</strong>. (RA5 // CE5b, CE5d // <strong><abbr title="Actividad de clase">AC</abbr> 0–1</strong>). Abre el navegador (varias webs), ejecuta <code>netstat -na</code> (Windows) o <code>netstat -punta</code> (Linux), localiza ≥3 conexiones a 80/443 y clasifica los puertos locales (well-known / registered / ephemeral).</li>
+</ul>
+<h3 id="ac705-nmap-autorizado">AC705 — <code>nmap</code> autorizado<a class="headerlink" href="#ac705-nmap-autorizado" title="Permanent link">&para;</a></h3>
+<ul>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.832 3.367 8.668.108a3.15 3.15 0 0 0-3.856 2.226L.943 16.777a3.15 3.15 0 0 0 2.226 3.856l12.163 3.259a3.15 3.15 0 0 0 3.855-2.226l3.87-14.443a3.15 3.15 0 0 0-2.226-3.856M6.332 2.741a1.574 1.574 0 0 1 1.928-1.113l12.163 3.26a1.574 1.574 0 0 1 1.113 1.927l-3.87 14.444a1.574 1.574 0 0 1-1.928 1.113l-12.163-3.26a1.574 1.574 0 0 1-1.113-1.927zm2.634 2.336a.787.787 0 1 0-.407 1.52l9.122 2.444a.787.787 0 1 0 .407-1.52zM6.985 9.434a.787.787 0 0 1 .963-.557l9.123 2.445a.787.787 0 0 1-.408 1.52l-9.122-2.444a.787.787 0 0 1-.556-.964m-.055 3.244a.787.787 0 0 0-.407 1.52l5.32 1.427a.787.787 0 0 0 .408-1.52z"/></svg></span> <strong>AC705</strong>. (RA5 // CE5a, CE5d // <strong><abbr title="Actividad de clase">AC</abbr> 0–1</strong>). En red de aula o lab <strong>con permiso</strong>: <code>nmap IP_DESTINO</code>; anota ≥5 puertos abiertos/filtrados y el servicio; explica por qué hay que pedir autorización antes de escanear.</li>
+</ul>
+<h3 id="ac706-politica-de-firewall-del-centro">AC706 — Política de firewall del centro<a class="headerlink" href="#ac706-politica-de-firewall-del-centro" title="Permanent link">&para;</a></h3>
+<ul>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.832 3.367 8.668.108a3.15 3.15 0 0 0-3.856 2.226L.943 16.777a3.15 3.15 0 0 0 2.226 3.856l12.163 3.259a3.15 3.15 0 0 0 3.855-2.226l3.87-14.443a3.15 3.15 0 0 0-2.226-3.856M6.332 2.741a1.574 1.574 0 0 1 1.928-1.113l12.163 3.26a1.574 1.574 0 0 1 1.113 1.927l-3.87 14.444a1.574 1.574 0 0 1-1.928 1.113l-12.163-3.26a1.574 1.574 0 0 1-1.113-1.927zm2.634 2.336a.787.787 0 1 0-.407 1.52l9.122 2.444a.787.787 0 1 0 .407-1.52zM6.985 9.434a.787.787 0 0 1 .963-.557l9.123 2.445a.787.787 0 0 1-.408 1.52l-9.122-2.444a.787.787 0 0 1-.556-.964m-.055 3.244a.787.787 0 0 0-.407 1.52l5.32 1.427a.787.787 0 0 0 .408-1.52z"/></svg></span> <strong>AC706</strong>. (RA4 // CE4h // RA5 // CE5a // <strong><abbr title="Actividad de clase">AC</abbr> 0–1</strong>). Propón una <strong>política restrictiva</strong> para un instituto: tráfico saliente permitido, entrante permitido (p. ej. web pública) y ≥3 denegaciones con justificación.</li>
+</ul>
+<h3 id="ac707-proxy-balanceo-o-vpn">AC707 — Proxy, balanceo o <abbr title="Virtual Private Network">VPN</abbr><a class="headerlink" href="#ac707-proxy-balanceo-o-vpn" title="Permanent link">&para;</a></h3>
+<ul>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.832 3.367 8.668.108a3.15 3.15 0 0 0-3.856 2.226L.943 16.777a3.15 3.15 0 0 0 2.226 3.856l12.163 3.259a3.15 3.15 0 0 0 3.855-2.226l3.87-14.443a3.15 3.15 0 0 0-2.226-3.856M6.332 2.741a1.574 1.574 0 0 1 1.928-1.113l12.163 3.26a1.574 1.574 0 0 1 1.113 1.927l-3.87 14.444a1.574 1.574 0 0 1-1.928 1.113l-12.163-3.26a1.574 1.574 0 0 1-1.113-1.927zm2.634 2.336a.787.787 0 1 0-.407 1.52l9.122 2.444a.787.787 0 1 0 .407-1.52zM6.985 9.434a.787.787 0 0 1 .963-.557l9.123 2.445a.787.787 0 0 1-.408 1.52l-9.122-2.444a.787.787 0 0 1-.556-.964m-.055 3.244a.787.787 0 0 0-.407 1.52l5.32 1.427a.787.787 0 0 0 .408-1.52z"/></svg></span> <strong>AC707</strong>. (RA1 // CE1c // RA4 // CE4g // <strong><abbr title="Actividad de clase">AC</abbr> 0–1</strong>). Elige <strong>dos</strong> de estos tres (o unifica en un texto breve): (a) ventaja de un proxy transparente en un centro; (b) por qué un balanceador delante de varios servidores web; (c) recorrido y ventajas de una <abbr title="Virtual Private Network">VPN</abbr> de teletrabajo.</li>
+</ul>
+<h3 id="pr701-laboratorio-de-puertos-netstat-nmap">PR701 — Laboratorio de puertos (<code>netstat</code> + <code>nmap</code>)<a class="headerlink" href="#pr701-laboratorio-de-puertos-netstat-nmap" title="Permanent link">&para;</a></h3>
+<ul>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5.563 1.396a.95.95 0 0 0-.534.184c-.404.307-.501.9-.425 1.654.075.755.335 1.704.751 2.8.357.937.835 1.984 1.407 3.095-1.17.146-2.24.338-3.158.57-1.08.274-1.958.6-2.583.973C.397 11.045 0 11.484 0 12s.397.955 1.021 1.328c.55.33 1.308.618 2.217.87a1 1 0 0 0-.006.097c0 .485.365.887.82.887.368 0 .678-.26.784-.616q.89.171 1.898.297a31 31 0 0 0-1.408 3.067c-.421 1.093-.686 2.04-.765 2.795-.08.754.016 1.347.42 1.656.201.154.46.208.734.181s.572-.125.896-.287c.649-.323 1.407-.894 2.244-1.67.962-.89 2.026-2.058 3.118-3.421 1.086 1.37 2.146 2.543 3.103 3.439.834.78 1.588 1.355 2.235 1.682.323.163.62.265.894.293s.534-.025.736-.178c.405-.307.502-.9.426-1.654-.054-.54-.206-1.18-.437-1.9a.91.91 0 0 0 .343-.72.92.92 0 0 0-.238-.625.8.8 0 0 0-.701-.251c-.312-.75-.69-1.557-1.125-2.4a27 27 0 0 0 3.187-.575c1.08-.273 1.958-.597 2.583-.97.624-.374 1.021-.813 1.021-1.329s-.397-.957-1.021-1.33c-.625-.373-1.503-.696-2.583-.969a27 27 0 0 0-3.156-.568 31 31 0 0 0 1.406-3.063c.422-1.093.687-2.04.766-2.795.08-.754-.017-1.347-.42-1.656a.95.95 0 0 0-.531-.185 1.3 1.3 0 0 0-.203.004c-.274.026-.57.127-.895.289-.51.254-1.092.665-1.722 1.205a.8.8 0 0 0-.418-.123c-.456 0-.82.4-.82.886q0 .178.06.334a35 35 0 0 0-2.465 2.791c-1.086-1.37-2.146-2.543-3.103-3.439-.834-.78-1.588-1.355-2.235-1.682-.323-.163-.62-.265-.894-.293a1.3 1.3 0 0 0-.204-.006zm.021.385a1 1 0 0 1 .143.004c.205.02.462.105.757.254.592.298 1.33.855 2.147 1.62.955.893 2.022 2.077 3.119 3.466-.428.544-.859 1.12-1.29 1.72a42 42 0 0 0-3.29.235 31 31 0 0 1-1.453-3.184c-.409-1.075-.658-2.002-.729-2.7-.07-.7.05-1.136.276-1.307a.55.55 0 0 1 .32-.108m12.854.033a.55.55 0 0 1 .32.108c.225.172.343.61.27 1.308s-.33 1.624-.743 2.698a31 31 0 0 1-1.455 3.15 42 42 0 0 0-3.312-.234 49 49 0 0 0-1.274-1.717 35 35 0 0 1 2.436-2.772.78.78 0 0 0 .543.223c.456 0 .82-.401.82-.887a.94.94 0 0 0-.133-.484c.61-.519 1.163-.909 1.625-1.139.297-.147.555-.23.76-.25a1 1 0 0 1 .142-.004zm-6.442 5.622c.344.443.69.913 1.035 1.394q-.51-.012-1.031-.014-.532.001-1.05.014c.35-.481.699-.95 1.046-1.394M12 9.203q.668.001 1.314.02.398.563.793 1.154c.366.55.71 1.093 1.041 1.633a54 54 0 0 1-1.046 1.623q-.395.584-.791 1.138-.646.02-1.311.022-.684-.001-1.348-.022a53 53 0 0 1-.789-1.148 52 52 0 0 1-1.04-1.633 53 53 0 0 1 1.84-2.765q.658-.02 1.337-.022m-1.824.04q-.315.444-.625.905c-.334.496-.647.988-.953 1.477a47 47 0 0 1-1.239-2.178 41 41 0 0 1 2.817-.205zm3.625 0a41 41 0 0 1 2.838.202 47 47 0 0 1-1.264 2.198 53 53 0 0 0-1.574-2.4m3.248.251c1.213.146 2.317.34 3.252.576 1.057.268 1.907.587 2.478.928s.834.689.834.998-.263.655-.834.996c-.57.342-1.421.662-2.478.93-.943.239-2.056.433-3.281.58a47 47 0 0 0-1.416-2.492 47 47 0 0 0 1.445-2.516M6.95 9.496c.424.805.899 1.64 1.418 2.494a47 47 0 0 0-1.443 2.508 30 30 0 0 1-2.059-.318.9.9 0 0 0-.23-.508.8.8 0 0 0-.584-.262.8.8 0 0 0-.696.418c-.894-.247-1.63-.53-2.136-.832C.65 12.655.387 12.31.387 12s.263-.654.834-.996c.57-.342 1.421-.662 2.478-.93.935-.237 2.039-.431 3.252-.578zm4.34.8c-.576 0-1.041.5-1.041 1.112 0 .484.29.897.695 1.049v.063c0 .612.466 1.109 1.041 1.109.576 0 1.041-.497 1.041-1.11q0-.025-.002-.05c.424-.141.73-.565.73-1.063 0-.294-.107-.575-.302-.783a1.01 1.01 0 0 0-.738-.326 1 1 0 0 0-.711.3 1 1 0 0 0-.713-.3zm-2.695 2.061a51 51 0 0 0 1.572 2.397c-.99-.04-1.941-.108-2.832-.205q.573-1.067 1.26-2.192m6.779.02c.448.743.862 1.472 1.236 2.176a42 42 0 0 1-2.814.199q.313-.443.625-.902c.333-.495.647-.986.953-1.473m-8.23 2.537c1.033.117 2.141.198 3.304.236.427.6.854 1.179 1.278 1.723-1.103 1.382-2.176 2.561-3.135 3.45-.821.76-1.562 1.31-2.155 1.605-.296.147-.554.23-.76.25s-.35-.018-.462-.104c-.225-.172-.343-.61-.27-1.308s.329-1.624.742-2.698c.366-.948.861-2.018 1.458-3.154m9.656.004c.459.884.854 1.727 1.178 2.504a.91.91 0 0 0-.348.724c0 .486.364.887.82.887a1 1 0 0 0 .123-.01c.218.686.36 1.293.408 1.782.07.698-.05 1.135-.275 1.306-.113.086-.258.124-.463.104s-.462-.105-.758-.254c-.59-.298-1.329-.855-2.146-1.62-.955-.893-2.023-2.077-3.12-3.466.43-.545.862-1.123 1.294-1.725a42 42 0 0 0 3.287-.232m-3.776.246a49 49 0 0 1-1.05 1.4 49 49 0 0 1-1.04-1.398 47 47 0 0 0 2.09-.002"/></svg></span> <strong>PR701</strong>. (RA5 // CE5b, CE5d, CE5e, CE5h // RA4 // CE4g // <strong><abbr title="Práctica">PR</abbr> 0–10</strong>). Laboratorio individual o en pareja:</li>
+</ul>
+<ol>
+<li>Inventario con <code>netstat</code>: conexiones establecidas y puertos en escucha; captura/texto en el informe.</li>
+<li>Escaneo <code>nmap</code> <strong>autorizado</strong> a un host de práctica; lista de puertos/servicios.</li>
+<li>Relaciona al menos un hallazgo con un posible problema (servicio caído, puerto inesperado, filtrado).</li>
+<li>Conclusión: ¿el síntoma apunta más a hardware o a software/configuración?</li>
+</ol>
+<p><strong>Entrega:</strong> <code>PR701.md</code> (obligatorio) con capturas o salidas relevantes.</p>
+<table>
+<thead>
+<tr>
+<th>Criterio</th>
+<th>Descripción</th>
+<th>Puntos</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Procedimiento <code>netstat</code></td>
+<td>Salidas claras y bien interpretadas</td>
+<td>0–2</td>
+</tr>
+<tr>
+<td>Escaneo <code>nmap</code> autorizado</td>
+<td>Método y resultados correctos</td>
+<td>0–2</td>
+</tr>
+<tr>
+<td>Clasificación de puertos</td>
+<td>Well-known / registered / ephemeral</td>
+<td>0–2</td>
+</tr>
+<tr>
+<td>Diagnóstico CE5b/CE5d</td>
+<td>Hardware vs software; protocolos</td>
+<td>0–2</td>
+</tr>
+<tr>
+<td>Informe <code>.md</code></td>
+<td>Claridad, estructura, conclusiones</td>
+<td>0–2</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td></td>
+<td><strong>/10</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="pr702-captura-tcpudp-en-packet-tracer-cuando-toque">PR702 — Captura <abbr title="Transmission Control Protocol">TCP</abbr>/<abbr title="User Datagram Protocol">UDP</abbr> en Packet Tracer (cuando toque)<a class="headerlink" href="#pr702-captura-tcpudp-en-packet-tracer-cuando-toque" title="Permanent link">&para;</a></h3>
+<ul>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16.331 18.171V17.06l-.022.01c-.25.121-.522.19-.801.203a1.2 1.2 0 0 1-.806-.237 1.04 1.04 0 0 1-.352-.498 1.2 1.2 0 0 1-.023-.667c.052-.225.178-.426.357-.569.16-.134.355-.218.562-.242a1.85 1.85 0 0 1 1.061.198l.024.013v-1.117l-.051-.014a2.9 2.9 0 0 0-1.011-.132 2.3 2.3 0 0 0-.903.206c-.287.132-.54.327-.739.571a2.22 2.22 0 0 0-.04 2.705c.295.378.709.645 1.175.756.491.12 1.006.102 1.487-.052zm-10.995 0V17.06l-.022.01c-.25.121-.522.19-.801.203a1.18 1.18 0 0 1-.806-.237 1.03 1.03 0 0 1-.351-.498 1.2 1.2 0 0 1-.024-.667c.052-.225.177-.426.357-.569.16-.134.355-.218.562-.242a1.85 1.85 0 0 1 1.061.198l.024.013v-1.117l-.051-.014a2.9 2.9 0 0 0-1.011-.132 2.3 2.3 0 0 0-.903.206 2.1 2.1 0 0 0-.74.571 2.224 2.224 0 0 0-.041 2.705 2.1 2.1 0 0 0 1.176.756c.491.12 1.005.102 1.487-.052zm3.924-.922-.004.957.07.012q.33.061.664.085.293.028.587.012.282-.021.551-.104c.21-.06.405-.163.571-.305a1.16 1.16 0 0 0 .333-.478 1.3 1.3 0 0 0-.007-.96 1.1 1.1 0 0 0-.298-.414 1.3 1.3 0 0 0-.438-.255l-.722-.268a.4.4 0 0 1-.197-.188.25.25 0 0 1 .008-.219.4.4 0 0 1 .154-.142.8.8 0 0 1 .257-.074q.23-.034.46.005.27.03.533.096l.038.008v-.883l-.069-.015a5 5 0 0 0-.543-.097 2.8 2.8 0 0 0-.714-.003c-.3.027-.585.143-.821.33-.16.126-.281.293-.351.484-.104.29-.105.608 0 .899q.082.219.252.381.146.14.327.236.236.126.497.195.086.026.17.054l.085.031.024.01c.084.03.162.078.226.14q.068.064.101.151a.3.3 0 0 1 .001.161.34.34 0 0 1-.166.198.9.9 0 0 1-.275.086 2 2 0 0 1-.427.021 5 5 0 0 1-.557-.074 9 9 0 0 1-.287-.067zm-2.475.995h1.05v-4.167h-1.05zm12.162-2.936a1.095 1.095 0 0 1 1.541.158 1.094 1.094 0 0 1-.157 1.541l-.017.014a1.096 1.096 0 0 1-1.367-1.713m-1.525.854a2.193 2.193 0 0 0 2.666 2.107 2.139 2.139 0 0 0 .701-3.937 2.207 2.207 0 0 0-3.367 1.83m5.539-5.434a.52.52 0 0 0 1.039 0V9.573a.52.52 0 0 0-1.039 0zm-2.844 0a.522.522 0 0 0 1.041 0V8.139a.521.521 0 0 0-1.04 0v2.589m-2.887 1.043a.521.521 0 0 0 1.039 0V6.17a.52.52 0 0 0-1.039 0zm-2.838-1.043a.521.521 0 0 0 1.04 0V8.139a.52.52 0 0 0-1.039 0zm-2.9 0a.522.522 0 0 0 1.039 0V9.573a.52.52 0 0 0-1.039 0zm-2.87 0a.52.52 0 0 0 1.039 0V8.139a.52.52 0 0 0-1.039 0zm-2.887 1.043a.52.52 0 0 0 1.039 0V6.17a.52.52 0 0 0-1.039 0zm-2.861-1.043a.522.522 0 0 0 1.04 0V8.139a.52.52 0 0 0-1.039 0zm-2.877 0a.521.521 0 0 0 1.039 0V9.573a.52.52 0 0 0-1.039 0z"/></svg></span> <strong>PR702</strong>. (RA4 // CE4g // RA5 // CE5d // <strong><abbr title="Práctica">PR</abbr> 0–10</strong>). Simulación en Packet Tracer: observar handshake <abbr title="Transmission Control Protocol">TCP</abbr> y tráfico <abbr title="User Datagram Protocol">UDP</abbr> (DNS u otro). El guion completo se facilitará en clase / Aules.</li>
+</ul>
+<hr />
+<h2 id="referencias-rapidas">Referencias rápidas<a class="headerlink" href="#referencias-rapidas" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Sitio del módulo: <a href="https://fjavier-hernandez.github.io/ral/">fjavier-hernandez.github.io/ral</a></li>
+<li>Continuación <abbr title="Network Address Translation">NAT</abbr>/IPv6: <a href="../08-nat-ipv6/tema8.html">Tema 8</a></li>
+<li>Simulación: <a href="https://www.netacad.com/es/cisco-packet-tracer">Cisco Packet Tracer</a></li>
+<li>Entregas: <a href="https://code.visualstudio.com/docs">Visual Studio Code</a> + <a href="https://tutorialmarkdown.com/guia">Markdown</a></li>
+<li>Normas: <a href="../00-normas/normas_taller.html">Normas del taller</a></li>
+</ul>
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      2026-2027 Francisco Javier Hernández Illán - <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es">Licencia CC BY-NC-SA</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="mailto:<fj.hernandez@edu.gva.es>" target="_blank" rel="noopener" title="" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4l208 156a48 48 0 0 0 57.6 0l208-156c12.1-9.1 19.2-23.3 19.2-38.4 0-26.5-21.5-48-48-48zM0 196v188c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V196L313.6 344.8c-34.1 25.6-81.1 25.6-115.2 0z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.linkedin.com/in/fjavier-hernandez-illan" target="_blank" rel="noopener" title="www.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77m282.1 320h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+      <div class="md-consent" data-md-component="consent" id="__consent" hidden>
+        <div class="md-consent__overlay"></div>
+        <aside class="md-consent__inner">
+          <form class="md-consent__form md-grid md-typeset" name="consent">
+            
+
+
+  
+
+
+<h4>Consentimiento de cookie</h4>
+<p>Esta página de apuntes utiliza cookies para reconocer las visitas, medir la efectividad de la documentación y averiguar si encuentras aquello que buscas o cómo has llegado a estos apuntes. Con tu consentimiento, me ayudas a mejorar estos materiales.</p>
+<input class="md-toggle" type="checkbox" id="__settings" >
+<div class="md-consent__settings">
+  <ul class="task-list">
+    
+    
+      
+        
+  
+  
+    
+    
+  
+  <li class="task-list-item">
+    <label class="task-list-control">
+      <input type="checkbox" name="analytics" checked>
+      <span class="task-list-indicator"></span>
+      Google Analytics
+    </label>
+  </li>
+
+      
+    
+    
+      
+    
+    
+  </ul>
+</div>
+<div class="md-consent__controls">
+  
+    
+      <button class="md-button md-button--primary">Aceptar</button>
+    
+    
+    
+  
+    
+    
+    
+      <label class="md-button" for="__settings">Gestionar cookies</label>
+    
+  
+</div>
+          </form>
+        </aside>
+      </div>
+      <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout((function(){document.querySelector("[data-md-component=consent]").hidden=!1}),250);var form=document.forms.consent;for(var action of["submit","reset"])form.addEventListener(action,(function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map((function(e){return[e,!0]})))),location.hash="",location.reload()}))</script>
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["header.autohide", "navigation.top", "navigation.tracking", "navigation.footer", "navigation.indexes", "content.code.annotate", "announce.dismiss", "toc.follow", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../js/print-site.js"></script>
+      
+    
+  </body>
+</html>

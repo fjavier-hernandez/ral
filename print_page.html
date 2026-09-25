@@ -1,0 +1,2823 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Apuntes para el módulo profesional de Redes de Área Local del ciclo formativo de grado medio de Sistemas Microinformáticos y Redes.">
+      
+      
+      
+        <link rel="canonical" href="https://fjavier-hernandez.github.io/ral/print_page.html">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="img/ral.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Print Site - Redes de Área Local</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("/ral/",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-0CPJP88MBF"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-0CPJP88MBF",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-0CPJP88MBF",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>if("undefined"!=typeof __md_analytics){var consent=__md_get("__consent");consent&&consent.analytics&&__md_analytics()}</script>
+  
+
+    
+    
+  
+        <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            remove_material_navigation();remove_mkdocs_theme_navigation();generate_toc();
+        })
+        </script>
+        </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="javi" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#index" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="index.html" title="Redes de Área Local" class="md-header__button md-logo" aria-label="Redes de Área Local" data-md-component="logo">
+      
+  <img src="img/ral.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Redes de Área Local
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Print Site
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="javi" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Cambiar a modo noche"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo noche" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Cambiar a modo día"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo día" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="index.html" title="Redes de Área Local" class="md-nav__button md-logo" aria-label="Redes de Área Local" data-md-component="logo">
+      
+  <img src="img/ral.svg" alt="logo">
+
+    </a>
+    Redes de Área Local
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="00-normas/normas_taller.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Normas del taller
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guías
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Guías
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="90-guias/packet-tracer.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Packet Tracer (inicio)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="90-guias/pr102-modelos-osi.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PR102 — Modelos OSI/TCP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="90-guias/pr103-primera-red.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PR103 — Mi primera red
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="01-introduccion-arquitectura/tema1.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Introducción. Arquitectura de redes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="02-medios-capa-fisica/tema2.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Medios de transmisión y capa física
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#index" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Inicio
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#00-normas-normas_taller" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Normas del taller
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Guías
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Guías">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#90-guias-packet-tracer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Packet Tracer (inicio)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#90-guias-pr102-modelos-osi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PR102 — Modelos OSI/TCP
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#90-guias-pr103-primera-red" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PR103 — Mi primera red
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#01-introduccion-arquitectura-tema1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Introducción. Arquitectura de redes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#02-medios-capa-fisica-tema2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Medios de transmisión y capa física
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<div id="print-site-page" class="print-site-enumerate-figures">
+        <section class="print-page">
+            <div id="print-page-toc" data-toc-depth="3">
+                <nav role='navigation' class='print-page-toc-nav'>
+                <h1 class='print-page-toc-title'>Tabla de contenidos</h1>
+                </nav>
+            </div>
+        </section>
+        <section class="print-page" id="index" heading-number="1"><h1 id="index-redes-de-area-local">Redes de área local<a class="headerlink" href="#index-redes-de-area-local" title="Permanent link">&para;</a></h1>
+<p>Apuntes y organización del módulo <strong>0225 — Redes de área local</strong> del <abbr title="Ciclo Formativo de Grado Medio">CFGM</abbr> de <em>Sistemas Microinformáticos y Redes</em> (<abbr title="Sistemas Microinformáticos y Redes">SMR</abbr>), conforme al <a href="https://www.boe.es/diario_boe/txt.php?id=BOE-A-2008-819">Real Decreto 1691/2007</a>, impartido en el <a href="https://portal.edu.gva.es/iesmaciaabela/">IES Macià Abela</a> de Crevillent.</p>
+<p><strong>Curso 2026-2027.</strong> En este sitio encontrarás la planificación del módulo y los temas que vayamos publicando a lo largo del curso.</p>
+<h2 id="index-competencias-profesionales">Competencias profesionales<a class="headerlink" href="#index-competencias-profesionales" title="Permanent link">&para;</a></h2>
+<p>Las <ins>competencias profesionales</ins> asociadas al módulo:</p>
+<ul>
+<li><strong>(d)</strong> Replantear el cableado y la electrónica de redes locales en pequeños entornos y su conexión con redes de área extensa canalizando a un nivel superior los supuestos que así lo requieran.</li>
+<li><strong>(e)</strong> Instalar y configurar redes locales cableadas, inalámbricas o mixtas y su conexión a redes públicas, asegurando su funcionamiento en condiciones de calidad y seguridad.</li>
+<li><strong>(f)</strong> Instalar, configurar y mantener servicios multiusuario, aplicaciones y dispositivos compartidos en un entorno de red local, atendiendo a las necesidades y requerimientos especificados.</li>
+<li><strong>(g)</strong> Realizar las pruebas funcionales en sistemas microinformáticos y redes locales, localizando y diagnosticando disfunciones, para comprobar y ajustar su funcionamiento.</li>
+<li><strong>(h)</strong> Mantener sistemas microinformáticos y redes locales, sustituyendo, actualizando y ajustando sus componentes, para asegurar el rendimiento del sistema en condiciones de calidad y seguridad.</li>
+</ul>
+<h2 id="index-objetivos-generales">Objetivos generales<a class="headerlink" href="#index-objetivos-generales" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>(d)</strong> Representar la posición de los equipos, líneas de transmisión y demás elementos de una red local, analizando la morfología, condiciones y características del despliegue, para replantear el cableado y la electrónica de la red.</li>
+<li><strong>(e)</strong> Ubicar y fijar equipos, líneas, canalizaciones y demás elementos de una red local cableada, inalámbrica o mixta, aplicando procedimientos de montaje y protocolos de calidad y seguridad, para instalar y configurar redes locales.</li>
+<li><strong>(f)</strong> Interconectar equipos informáticos, dispositivos de red local y de conexión con redes de área extensa, ejecutando los procedimientos para instalar y configurar redes locales.</li>
+<li><strong>(g)</strong> Localizar y reparar averías y disfunciones en los componentes físicos y lógicos para mantener sistemas microinformáticos y redes locales.</li>
+<li><strong>(h)</strong> Sustituir y ajustar componentes físicos y lógicos para mantener sistemas microinformáticos y redes locales.</li>
+</ul>
+<h2 id="index-resultados-de-aprendizaje">Resultados de aprendizaje<a class="headerlink" href="#index-resultados-de-aprendizaje" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Código</th>
+<th>Descripción</th>
+<th>Peso (%)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RA1</td>
+<td>Reconoce la estructura de redes locales cableadas analizando las características de entornos de aplicación y describiendo la funcionalidad de sus componentes.</td>
+<td><strong>20</strong></td>
+</tr>
+<tr>
+<td>RA2</td>
+<td>Despliega el cableado de una red local interpretando especificaciones y aplicando técnicas de montaje.</td>
+<td><strong>12</strong></td>
+</tr>
+<tr>
+<td>RA3</td>
+<td>Interconecta equipos en redes locales cableadas describiendo estándares de cableado y aplicando técnicas de montaje de conectores.</td>
+<td><strong>18</strong></td>
+</tr>
+<tr>
+<td>RA4</td>
+<td>Instala equipos en red, describiendo sus prestaciones y aplicando técnicas de montaje.</td>
+<td><strong>25</strong></td>
+</tr>
+<tr>
+<td>RA5</td>
+<td>Mantiene una red local interpretando recomendaciones de los fabricantes de hardware o software y estableciendo la relación entre disfunciones y sus causas.</td>
+<td><strong>15</strong></td>
+</tr>
+<tr>
+<td>RA6</td>
+<td>Cumple las normas de prevención de riesgos laborales y de protección ambiental, identificando los riesgos asociados, las medidas y equipos para prevenirlos.</td>
+<td><strong>10</strong></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Pesos en la nota</p>
+<p>Los seis resultados de aprendizaje (<abbr title="Resultado de aprendizaje">RA</abbr>) suman <strong>100 %</strong>: <strong>20 / 12 / 18 / 25 / 15 / 10</strong>. Cada <abbr title="Resultado de aprendizaje">RA</abbr> aporta ese porcentaje a la nota final del módulo (ver <a href="#index-evaluacion">Evaluación</a>).</p>
+</div>
+<h2 id="index-carga-horaria">Carga horaria<a class="headerlink" href="#index-carga-horaria" title="Permanent link">&para;</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Horas del módulo</p>
+<table>
+<thead>
+<tr>
+<th>Concepto</th>
+<th style="text-align: right;">Horas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Total módulo</strong></td>
+<td style="text-align: right;"><strong>233 h</strong></td>
+</tr>
+<tr>
+<td>Formación en el <strong>centro</strong></td>
+<td style="text-align: right;"><strong>133 h</strong></td>
+</tr>
+<tr>
+<td>Formación en <strong>empresa (<abbr title="Formación en empresa">FE</abbr>)</strong></td>
+<td style="text-align: right;"><strong>100 h</strong></td>
+</tr>
+</tbody>
+</table>
+<p>La fecha de la formación en empresa <strong>se comunicará cuando esté fijada</strong>. Mientras tanto, organizamos el curso sobre las <strong>133 h en el centro</strong>.</p>
+</div>
+<h2 id="index-temas-del-curso">Temas del curso<a class="headerlink" href="#index-temas-del-curso" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Tema</th>
+<th>Título</th>
+<th>Qué trabajamos</th>
+<th>Estado</th>
+<th><abbr title="Resultado de aprendizaje">RA</abbr> principales</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;"><strong>1</strong></td>
+<td><a href="#01-introduccion-arquitectura-tema1">Introducción. Arquitectura de redes</a></td>
+<td>Tipos de redes, componentes, topologías, modelos OSI y TCP/IP</td>
+<td><strong>Publicado</strong></td>
+<td>RA1</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>2</strong></td>
+<td><a href="#02-medios-capa-fisica-tema2">Medios de transmisión y capa física</a></td>
+<td>Par trenzado, fibra, Wi‑Fi básico y conectores</td>
+<td><strong>Publicado</strong></td>
+<td>RA2, RA3</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>3</strong></td>
+<td>Cableado estructurado y componentes</td>
+<td>Racks, paneles, electrónica de red, WLAN/NetAcad</td>
+<td>Se publicará cuando toque</td>
+<td>RA2, RA3, RA4</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>4</strong></td>
+<td>Capa de enlace</td>
+<td>Tramas, direcciones MAC, switches y dominios de colisión/difusión</td>
+<td>Se publicará cuando toque</td>
+<td>RA1, RA4</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>5</strong></td>
+<td>Capa de red</td>
+<td>IPv4, máscaras, CIDR, ARP, ICMP y DHCP</td>
+<td>Se publicará cuando toque</td>
+<td>RA1, RA4</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>6</strong></td>
+<td>Enrutamiento, subnetting y VLANs</td>
+<td>Subnetting, supernetting, rutas estáticas, VLANs y NetAcad</td>
+<td>Se publicará cuando toque</td>
+<td>RA3, RA4</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>7</strong></td>
+<td>Capa de transporte</td>
+<td>Puertos, TCP/UDP y herramientas básicas</td>
+<td>Se publicará cuando toque</td>
+<td>RA4, RA5</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>8</strong></td>
+<td>NAT e IPv6</td>
+<td>Traducción de direcciones (NAT/PAT) e introducción a IPv6</td>
+<td>Se publicará cuando toque</td>
+<td>RA4, RA5</td>
+</tr>
+<tr>
+<td style="text-align: right;"><strong>9</strong></td>
+<td>Servicios, diagnóstico y protección</td>
+<td>Servicios de aplicación, diagnóstico de averías, protección y PRL</td>
+<td>Se publicará cuando toque</td>
+<td>RA5, RA6</td>
+</tr>
+</tbody>
+</table>
+<h3 id="index-mapa-tema-ra">Mapa tema × <abbr title="Resultado de aprendizaje">RA</abbr><a class="headerlink" href="#index-mapa-tema-ra" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Temas</th>
+<th style="text-align: center;">RA1</th>
+<th style="text-align: center;">RA2</th>
+<th style="text-align: center;">RA3</th>
+<th style="text-align: center;">RA4</th>
+<th style="text-align: center;">RA5</th>
+<th style="text-align: center;">RA6</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1. Introducción. Arquitectura de redes</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td>2. Medios y capa física</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td>3. Cableado estructurado y componentes</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td>4. Capa de enlace</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td>5. Capa de red</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td>6. Enrutamiento, subnetting y VLANs</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td>7. Capa de transporte</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td>8. NAT e IPv6</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td>9. Servicios, diagnóstico y protección</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">X</td>
+<td style="text-align: center;">X</td>
+</tr>
+<tr>
+<td><strong>Peso</strong></td>
+<td style="text-align: center;">20 %</td>
+<td style="text-align: center;">12 %</td>
+<td style="text-align: center;">18 %</td>
+<td style="text-align: center;">25 %</td>
+<td style="text-align: center;">15 %</td>
+<td style="text-align: center;">10 %</td>
+</tr>
+</tbody>
+</table>
+<pre class="mermaid"><code>timeline
+    title Planificación temporal — RAL 2026-27 (orientativa)
+    section 1ª Evaluación — sep–nov
+        Fundamentos : T1 Introducción y arquitectura : T2 Medios y capa física : T3 Cableado y WLAN
+    section 2ª Evaluación — nov–ene
+        Núcleo LAN : T4 Capa de enlace : T5 Capa de red : T6 Enrutamiento VLAN y NetAcad
+    section 3ª Evaluación — ene–feb
+        Servicios y cierre : T7 Transporte : T8 NAT e IPv6 : T9 Diagnóstico y protección</code></pre>
+<div class="admonition tip">
+<p class="admonition-title">Núcleo del curso</p>
+<p>Enlace, direccionamiento IP, subnetting y VLANs concentran una parte importante de la evaluación (sobre todo en la 2.ª evaluación). El Tema 9 cierra el curso en el centro con <strong>diagnóstico (RA5)</strong> y <strong>prevención de riesgos (RA6)</strong>. Tenemos <strong>7 sesiones por semana</strong> (55 minutos cada una).</p>
+</div>
+<h2 id="index-evaluacion">Evaluación<a class="headerlink" href="#index-evaluacion" title="Permanent link">&para;</a></h2>
+<p>La evaluación se organiza por <strong>resultados de aprendizaje (<abbr title="Resultado de aprendizaje">RA</abbr>)</strong>. Cada actividad indica qué <abbr title="Resultado de aprendizaje">RA</abbr> trabaja. <strong>Los <abbr title="Resultado de aprendizaje">RA</abbr> no se compensan entre sí:</strong> hay que superar cada uno.</p>
+<h3 id="index-como-se-calcula-la-nota-quesitos">Cómo se calcula la nota («quesitos»)<a class="headerlink" href="#index-como-se-calcula-la-nota-quesitos" title="Permanent link">&para;</a></h3>
+<p>Imagina la nota del módulo como una <strong>tarta</strong> repartida en seis quesitos (los <abbr title="Resultado de aprendizaje">RA</abbr>). Cada quesito tiene un tamaño fijo (el peso de la tabla de arriba: 20 %, 12 %, 18 %, 25 %, 15 % y 10 %).</p>
+<ol>
+<li>En cada <abbr title="Resultado de aprendizaje">RA</abbr>, tu nota es la <strong>media ponderada</strong> de las actividades de ese <abbr title="Resultado de aprendizaje">RA</abbr> (AC, PR, PY, PO).</li>
+<li>La <strong>nota final</strong> del módulo es la suma de (nota de cada <abbr title="Resultado de aprendizaje">RA</abbr> × su peso).</li>
+<li>Si cumples el criterio de <strong>NetAcad / <abbr title="Cisco Certified Network Associate">CCNA</abbr></strong> publicado en Aules, puedes sumar <strong>+1 punto</strong> sobre esa nota final. Ese +1 <strong>no sustituye</strong> ningún <abbr title="Resultado de aprendizaje">RA</abbr>.</li>
+</ol>
+<pre class="mermaid"><code>flowchart TB
+  A["Paso 1 — Instrumentos\nAC · PR · PY · PO"]
+  B["Paso 2 — Nota de cada RA\nmedia de las actividades de ese RA"]
+  C["Paso 3 — Nota final del módulo\nRA1×20% + RA2×12% + RA3×18%\n+ RA4×25% + RA5×15% + RA6×10%"]
+  D["+1 NetAcad / CCNA\nsi se concede en Aules"]
+  A --&gt; B --&gt; C
+  D -.-&gt; C</code></pre>
+<p><strong>Ejemplo (simplificado):</strong> si en RA4 tienes prácticas y un examen, se promedian (según lo que se indique en Aules) y ese resultado cuenta un <strong>25 %</strong> de la nota del módulo. Suspender un <abbr title="Resultado de aprendizaje">RA</abbr> no se compensa con otro.</p>
+<h3 id="index-peso-de-cada-ra">Peso de cada <abbr title="Resultado de aprendizaje">RA</abbr><a class="headerlink" href="#index-peso-de-cada-ra" title="Permanent link">&para;</a></h3>
+<pre class="mermaid"><code>pie showData
+    title Peso de cada RA en la nota del módulo
+    "RA1 — Estructura LAN" : 20
+    "RA2 — Despliegue cableado" : 12
+    "RA3 — Interconexión" : 18
+    "RA4 — Instalación equipos" : 25
+    "RA5 — Mantenimiento / diagnóstico" : 15
+    "RA6 — PRL y medio ambiente" : 10</code></pre>
+<h3 id="index-instrumentos-de-evaluacion-ie">Instrumentos de evaluación (<abbr title="Instrumento de evaluación">IE</abbr>)<a class="headerlink" href="#index-instrumentos-de-evaluacion-ie" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Instrumento</th>
+<th>Icono</th>
+<th>Descripción</th>
+<th>Escala</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Actividad de clase</td>
+<td><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.832 3.367 8.668.108a3.15 3.15 0 0 0-3.856 2.226L.943 16.777a3.15 3.15 0 0 0 2.226 3.856l12.163 3.259a3.15 3.15 0 0 0 3.855-2.226l3.87-14.443a3.15 3.15 0 0 0-2.226-3.856M6.332 2.741a1.574 1.574 0 0 1 1.928-1.113l12.163 3.26a1.574 1.574 0 0 1 1.113 1.927l-3.87 14.444a1.574 1.574 0 0 1-1.928 1.113l-12.163-3.26a1.574 1.574 0 0 1-1.113-1.927zm2.634 2.336a.787.787 0 1 0-.407 1.52l9.122 2.444a.787.787 0 1 0 .407-1.52zM6.985 9.434a.787.787 0 0 1 .963-.557l9.123 2.445a.787.787 0 0 1-.408 1.52l-9.122-2.444a.787.787 0 0 1-.556-.964m-.055 3.244a.787.787 0 0 0-.407 1.52l5.32 1.427a.787.787 0 0 0 .408-1.52z"/></svg></span> <strong>AC</strong></td>
+<td>Microevidencia de aula</td>
+<td><strong>0–1</strong></td>
+</tr>
+<tr>
+<td>Práctica</td>
+<td><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5.563 1.396a.95.95 0 0 0-.534.184c-.404.307-.501.9-.425 1.654.075.755.335 1.704.751 2.8.357.937.835 1.984 1.407 3.095-1.17.146-2.24.338-3.158.57-1.08.274-1.958.6-2.583.973C.397 11.045 0 11.484 0 12s.397.955 1.021 1.328c.55.33 1.308.618 2.217.87a1 1 0 0 0-.006.097c0 .485.365.887.82.887.368 0 .678-.26.784-.616q.89.171 1.898.297a31 31 0 0 0-1.408 3.067c-.421 1.093-.686 2.04-.765 2.795-.08.754.016 1.347.42 1.656.201.154.46.208.734.181s.572-.125.896-.287c.649-.323 1.407-.894 2.244-1.67.962-.89 2.026-2.058 3.118-3.421 1.086 1.37 2.146 2.543 3.103 3.439.834.78 1.588 1.355 2.235 1.682.323.163.62.265.894.293s.534-.025.736-.178c.405-.307.502-.9.426-1.654-.054-.54-.206-1.18-.437-1.9a.91.91 0 0 0 .343-.72.92.92 0 0 0-.238-.625.8.8 0 0 0-.701-.251c-.312-.75-.69-1.557-1.125-2.4a27 27 0 0 0 3.187-.575c1.08-.273 1.958-.597 2.583-.97.624-.374 1.021-.813 1.021-1.329s-.397-.957-1.021-1.33c-.625-.373-1.503-.696-2.583-.969a27 27 0 0 0-3.156-.568 31 31 0 0 0 1.406-3.063c.422-1.093.687-2.04.766-2.795.08-.754-.017-1.347-.42-1.656a.95.95 0 0 0-.531-.185 1.3 1.3 0 0 0-.203.004c-.274.026-.57.127-.895.289-.51.254-1.092.665-1.722 1.205a.8.8 0 0 0-.418-.123c-.456 0-.82.4-.82.886q0 .178.06.334a35 35 0 0 0-2.465 2.791c-1.086-1.37-2.146-2.543-3.103-3.439-.834-.78-1.588-1.355-2.235-1.682-.323-.163-.62-.265-.894-.293a1.3 1.3 0 0 0-.204-.006zm.021.385a1 1 0 0 1 .143.004c.205.02.462.105.757.254.592.298 1.33.855 2.147 1.62.955.893 2.022 2.077 3.119 3.466-.428.544-.859 1.12-1.29 1.72a42 42 0 0 0-3.29.235 31 31 0 0 1-1.453-3.184c-.409-1.075-.658-2.002-.729-2.7-.07-.7.05-1.136.276-1.307a.55.55 0 0 1 .32-.108m12.854.033a.55.55 0 0 1 .32.108c.225.172.343.61.27 1.308s-.33 1.624-.743 2.698a31 31 0 0 1-1.455 3.15 42 42 0 0 0-3.312-.234 49 49 0 0 0-1.274-1.717 35 35 0 0 1 2.436-2.772.78.78 0 0 0 .543.223c.456 0 .82-.401.82-.887a.94.94 0 0 0-.133-.484c.61-.519 1.163-.909 1.625-1.139.297-.147.555-.23.76-.25a1 1 0 0 1 .142-.004zm-6.442 5.622c.344.443.69.913 1.035 1.394q-.51-.012-1.031-.014-.532.001-1.05.014c.35-.481.699-.95 1.046-1.394M12 9.203q.668.001 1.314.02.398.563.793 1.154c.366.55.71 1.093 1.041 1.633a54 54 0 0 1-1.046 1.623q-.395.584-.791 1.138-.646.02-1.311.022-.684-.001-1.348-.022a53 53 0 0 1-.789-1.148 52 52 0 0 1-1.04-1.633 53 53 0 0 1 1.84-2.765q.658-.02 1.337-.022m-1.824.04q-.315.444-.625.905c-.334.496-.647.988-.953 1.477a47 47 0 0 1-1.239-2.178 41 41 0 0 1 2.817-.205zm3.625 0a41 41 0 0 1 2.838.202 47 47 0 0 1-1.264 2.198 53 53 0 0 0-1.574-2.4m3.248.251c1.213.146 2.317.34 3.252.576 1.057.268 1.907.587 2.478.928s.834.689.834.998-.263.655-.834.996c-.57.342-1.421.662-2.478.93-.943.239-2.056.433-3.281.58a47 47 0 0 0-1.416-2.492 47 47 0 0 0 1.445-2.516M6.95 9.496c.424.805.899 1.64 1.418 2.494a47 47 0 0 0-1.443 2.508 30 30 0 0 1-2.059-.318.9.9 0 0 0-.23-.508.8.8 0 0 0-.584-.262.8.8 0 0 0-.696.418c-.894-.247-1.63-.53-2.136-.832C.65 12.655.387 12.31.387 12s.263-.654.834-.996c.57-.342 1.421-.662 2.478-.93.935-.237 2.039-.431 3.252-.578zm4.34.8c-.576 0-1.041.5-1.041 1.112 0 .484.29.897.695 1.049v.063c0 .612.466 1.109 1.041 1.109.576 0 1.041-.497 1.041-1.11q0-.025-.002-.05c.424-.141.73-.565.73-1.063 0-.294-.107-.575-.302-.783a1.01 1.01 0 0 0-.738-.326 1 1 0 0 0-.711.3 1 1 0 0 0-.713-.3zm-2.695 2.061a51 51 0 0 0 1.572 2.397c-.99-.04-1.941-.108-2.832-.205q.573-1.067 1.26-2.192m6.779.02c.448.743.862 1.472 1.236 2.176a42 42 0 0 1-2.814.199q.313-.443.625-.902c.333-.495.647-.986.953-1.473m-8.23 2.537c1.033.117 2.141.198 3.304.236.427.6.854 1.179 1.278 1.723-1.103 1.382-2.176 2.561-3.135 3.45-.821.76-1.562 1.31-2.155 1.605-.296.147-.554.23-.76.25s-.35-.018-.462-.104c-.225-.172-.343-.61-.27-1.308s.329-1.624.742-2.698c.366-.948.861-2.018 1.458-3.154m9.656.004c.459.884.854 1.727 1.178 2.504a.91.91 0 0 0-.348.724c0 .486.364.887.82.887a1 1 0 0 0 .123-.01c.218.686.36 1.293.408 1.782.07.698-.05 1.135-.275 1.306-.113.086-.258.124-.463.104s-.462-.105-.758-.254c-.59-.298-1.329-.855-2.146-1.62-.955-.893-2.023-2.077-3.12-3.466.43-.545.862-1.123 1.294-1.725a42 42 0 0 0 3.287-.232m-3.776.246a49 49 0 0 1-1.05 1.4 49 49 0 0 1-1.04-1.398 47 47 0 0 0 2.09-.002"/></svg></span> <strong>PR</strong></td>
+<td>Práctica / simulación / laboratorio / NetAcad</td>
+<td><strong>0–10</strong></td>
+</tr>
+<tr>
+<td>Proyecto</td>
+<td><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5z"/></svg></span> <strong>PY</strong></td>
+<td>Entregable mayor con rúbrica</td>
+<td><strong>0–30</strong></td>
+</tr>
+<tr>
+<td>Prueba objetiva</td>
+<td><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c-.34.34-.67.67-.68 1-.03.32.31.65.63.96.48.5.95.95.93 1.44s-.53 1-1.04 1.5l-4.13 4.14L15 14.66l4.25-4.24-.96-.96-1.42 1.41-3.75-3.75 3.84-3.83c.39-.39 1.04-.39 1.41 0l2.34 2.34c.39.37.39 1.02 0 1.41M3 17.25l9.56-9.57 3.75 3.75L6.75 21H3z"/></svg></span> <strong>PO</strong></td>
+<td>Examen escrito o en ordenador</td>
+<td><strong>0–100</strong></td>
+</tr>
+<tr>
+<td>NetAcad / <abbr title="Cisco Certified Network Associate">CCNA</abbr></td>
+<td><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16.331 18.171V17.06l-.022.01c-.25.121-.522.19-.801.203a1.2 1.2 0 0 1-.806-.237 1.04 1.04 0 0 1-.352-.498 1.2 1.2 0 0 1-.023-.667c.052-.225.178-.426.357-.569.16-.134.355-.218.562-.242a1.85 1.85 0 0 1 1.061.198l.024.013v-1.117l-.051-.014a2.9 2.9 0 0 0-1.011-.132 2.3 2.3 0 0 0-.903.206c-.287.132-.54.327-.739.571a2.22 2.22 0 0 0-.04 2.705c.295.378.709.645 1.175.756.491.12 1.006.102 1.487-.052zm-10.995 0V17.06l-.022.01c-.25.121-.522.19-.801.203a1.18 1.18 0 0 1-.806-.237 1.03 1.03 0 0 1-.351-.498 1.2 1.2 0 0 1-.024-.667c.052-.225.177-.426.357-.569.16-.134.355-.218.562-.242a1.85 1.85 0 0 1 1.061.198l.024.013v-1.117l-.051-.014a2.9 2.9 0 0 0-1.011-.132 2.3 2.3 0 0 0-.903.206 2.1 2.1 0 0 0-.74.571 2.224 2.224 0 0 0-.041 2.705 2.1 2.1 0 0 0 1.176.756c.491.12 1.005.102 1.487-.052zm3.924-.922-.004.957.07.012q.33.061.664.085.293.028.587.012.282-.021.551-.104c.21-.06.405-.163.571-.305a1.16 1.16 0 0 0 .333-.478 1.3 1.3 0 0 0-.007-.96 1.1 1.1 0 0 0-.298-.414 1.3 1.3 0 0 0-.438-.255l-.722-.268a.4.4 0 0 1-.197-.188.25.25 0 0 1 .008-.219.4.4 0 0 1 .154-.142.8.8 0 0 1 .257-.074q.23-.034.46.005.27.03.533.096l.038.008v-.883l-.069-.015a5 5 0 0 0-.543-.097 2.8 2.8 0 0 0-.714-.003c-.3.027-.585.143-.821.33-.16.126-.281.293-.351.484-.104.29-.105.608 0 .899q.082.219.252.381.146.14.327.236.236.126.497.195.086.026.17.054l.085.031.024.01c.084.03.162.078.226.14q.068.064.101.151a.3.3 0 0 1 .001.161.34.34 0 0 1-.166.198.9.9 0 0 1-.275.086 2 2 0 0 1-.427.021 5 5 0 0 1-.557-.074 9 9 0 0 1-.287-.067zm-2.475.995h1.05v-4.167h-1.05zm12.162-2.936a1.095 1.095 0 0 1 1.541.158 1.094 1.094 0 0 1-.157 1.541l-.017.014a1.096 1.096 0 0 1-1.367-1.713m-1.525.854a2.193 2.193 0 0 0 2.666 2.107 2.139 2.139 0 0 0 .701-3.937 2.207 2.207 0 0 0-3.367 1.83m5.539-5.434a.52.52 0 0 0 1.039 0V9.573a.52.52 0 0 0-1.039 0zm-2.844 0a.522.522 0 0 0 1.041 0V8.139a.521.521 0 0 0-1.04 0v2.589m-2.887 1.043a.521.521 0 0 0 1.039 0V6.17a.52.52 0 0 0-1.039 0zm-2.838-1.043a.521.521 0 0 0 1.04 0V8.139a.52.52 0 0 0-1.039 0zm-2.9 0a.522.522 0 0 0 1.039 0V9.573a.52.52 0 0 0-1.039 0zm-2.87 0a.52.52 0 0 0 1.039 0V8.139a.52.52 0 0 0-1.039 0zm-2.887 1.043a.52.52 0 0 0 1.039 0V6.17a.52.52 0 0 0-1.039 0zm-2.861-1.043a.522.522 0 0 0 1.04 0V8.139a.52.52 0 0 0-1.039 0zm-2.877 0a.521.521 0 0 0 1.039 0V9.573a.52.52 0 0 0-1.039 0z"/></svg></span> <strong>+1</strong></td>
+<td>Aprovechamiento de la <em>class</em> NetAcad (según Aules)</td>
+<td><strong>+1 en la nota final</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Resumen:</strong></p>
+<ul>
+<li>Las calificaciones se publican en <strong>Aules</strong>.</li>
+<li>Cada actividad indica el <strong><abbr title="Resultado de aprendizaje">RA</abbr></strong> que evalúa y su escala. Codificación: prefijo del <abbr title="Instrumento de evaluación">IE</abbr> + número de tema (ej. <code>AC102</code> = actividad 02 del Tema 1; <code>PR101</code> = práctica 01 del Tema 1).</li>
+<li><strong>Cisco NetAcad:</strong> prácticas como <strong>PR303</strong> (WLAN) y <strong>PR603</strong> (VLAN/enrutamiento) forman parte del itinerario. Si cumples lo publicado en Aules, puedes obtener el <strong>+1</strong> en la nota final. La práctica opcional <strong>PR102</strong> (Tema 1) también suma para el +1 si la defiendes en la auditoría.</li>
+<li>Las entregas en Aules son <strong>obligatorias en Markdown</strong> (<code>.md</code>). No se aceptan PDF.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Cómo empezar con Markdown y VS Code</p>
+<ul>
+<li>Guía de Markdown: <a href="https://tutorialmarkdown.com/guia">tutorialmarkdown.com/guia</a></li>
+<li>Documentación de Visual Studio Code: <a href="https://code.visualstudio.com/docs">code.visualstudio.com/docs</a></li>
+</ul>
+</div>
+<h2 id="index-materiales">Materiales<a class="headerlink" href="#index-materiales" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Este sitio web de apuntes.</li>
+<li><a href="#00-normas-normas_taller">Normas del taller</a> — lectura obligatoria.</li>
+<li>Aules (entregas en <code>.md</code> y calificaciones).</li>
+<li>Diagramas: <a href="https://excalidraw.com/">Excalidraw</a>, <a href="https://app.diagrams.net/">draw.io (diagrams.net)</a> o <a href="https://wiki.gnome.org/Apps/Dia">Dia</a>.</li>
+<li>Simulación: <a href="https://www.netacad.com/es/cisco-packet-tracer">Cisco Packet Tracer</a>.</li>
+<li>Formación NetAcad / <abbr title="Cisco Certified Network Associate">CCNA</abbr> (acceso según se indique en clase / Aules).</li>
+<li>Editor de entregas: Visual Studio Code + Markdown.</li>
+<li>Herramientas y cableado del taller (Temas 2–3 y Tema 9).</li>
+</ul>
+<h2 id="index-contenidos-publicados">Contenidos publicados<a class="headerlink" href="#index-contenidos-publicados" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Página</th>
+<th>Contenido</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#index">Inicio</a></td>
+<td>Planificación del módulo</td>
+</tr>
+<tr>
+<td><a href="#00-normas-normas_taller">Normas del taller</a></td>
+<td>Normas de uso del taller</td>
+</tr>
+<tr>
+<td><a href="#01-introduccion-arquitectura-tema1">Tema 1</a></td>
+<td>Introducción. Arquitectura de redes</td>
+</tr>
+<tr>
+<td><a href="#02-medios-capa-fisica-tema2">Tema 2</a></td>
+<td>Medios de transmisión y capa física</td>
+</tr>
+</tbody>
+</table>
+<p>Los Temas 1 y 2 ya están publicados. Los Temas 3–9 se irán publicando en la navegación <strong>cuando toque</strong> trabajarlos en clase.</p></section><section class="print-page" id="00-normas-normas_taller" heading-number="2"><h1 id="00-normas-normas_taller-normas-del-taller">Normas del taller<a class="headerlink" href="#00-normas-normas_taller-normas-del-taller" title="Permanent link">&para;</a></h1>
+<p>Normas de uso del <strong>taller de SMR</strong> del <a href="https://portal.edu.gva.es/iesmaciaabela/">IES Macià Abela</a>.</p>
+<h2 id="00-normas-normas_taller-1-material-y-puesto-asignado">1. Material y puesto asignado<a class="headerlink" href="#00-normas-normas_taller-1-material-y-puesto-asignado" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Eres <strong>responsable</strong> del material de tu puesto. Revísalo al <strong>inicio y al final</strong> de cada clase.</li>
+<li>Comunica <strong>de inmediato</strong> cualquier falta o avería al profesor.</li>
+<li>No intercambies herramientas entre puestos ni saques material del taller sin autorización.</li>
+</ul>
+<h2 id="00-normas-normas_taller-2-caja-de-herramientas">2. Caja de herramientas<a class="headerlink" href="#00-normas-normas_taller-2-caja-de-herramientas" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Revisión <strong>obligatoria</strong> al entrar y al salir: número y estado de las herramientas.</li>
+<li>Cada herramienta en su sitio; caja <strong>cerrada</strong> al terminar.</li>
+<li>No usar herramientas de otros puestos.</li>
+</ul>
+<h2 id="00-normas-normas_taller-3-uso-del-equipo">3. Uso del equipo<a class="headerlink" href="#00-normas-normas_taller-3-uso-del-equipo" title="Permanent link">&para;</a></h2>
+<ul>
+<li>No modificar BIOS, particiones, cuentas ni configuraciones de red sin <strong>autorización</strong>.</li>
+<li>No instalar ni desinstalar software sin permiso del profesor.</li>
+<li><strong>Apagar</strong> correctamente equipos, switches y routers al finalizar.</li>
+<li>Uso <strong>solo académico</strong>: prohibido jugar, redes sociales o software no autorizado.</li>
+</ul>
+<h2 id="00-normas-normas_taller-4-orden-y-limpieza">4. Orden y limpieza<a class="headerlink" href="#00-normas-normas_taller-4-orden-y-limpieza" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Puesto <strong>limpio y ordenado</strong>: sin mochilas ni objetos personales sobre la mesa.</li>
+<li>Cableado recogido y ordenado; no pisar cables ni dejarlos sueltos.</li>
+<li>Al terminar: herramientas guardadas, rack cerrado, dispositivos apagados.</li>
+</ul>
+<h2 id="00-normas-normas_taller-5-comportamiento">5. Comportamiento<a class="headerlink" href="#00-normas-normas_taller-5-comportamiento" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Puntualidad</strong> obligatoria.</li>
+<li><strong>Prohibido</strong> comer o beber en el taller.</li>
+<li><strong>Prohibido</strong> el uso del móvil salvo autorización expresa del profesor.</li>
+<li>No entra nadie ajeno al grupo autorizado.</li>
+</ul>
+<h2 id="00-normas-normas_taller-6-montaje-de-equipos-cuando-aplique">6. Montaje de equipos (cuando aplique)<a class="headerlink" href="#00-normas-normas_taller-6-montaje-de-equipos-cuando-aplique" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Usar <strong>guantes antiestáticos ESD</strong> al manipular componentes.</li>
+<li><strong>Desconectar</strong> siempre la alimentación antes de abrir la carcasa.</li>
+<li>No tocar conectores dorados ni circuitos; sujetar placas por los bordes.</li>
+<li>No forzar conectores; en caso de duda, avisar al profesor.</li>
+<li>Residuos electrónicos (RAEE) al contenedor indicado, no a la papelera.</li>
+</ul>
+<h2 id="00-normas-normas_taller-7-redes-cuando-aplique">7. Redes (cuando aplique)<a class="headerlink" href="#00-normas-normas_taller-7-redes-cuando-aplique" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Usar solo cable y conectores proporcionados o autorizados.</li>
+<li>No modificar configuración de switches/routers sin autorización.</li>
+<li>Apagar dispositivos de red de forma ordenada al finalizar.</li>
+</ul>
+<h2 id="00-normas-normas_taller-8-seguridad">8. Seguridad<a class="headerlink" href="#00-normas-normas_taller-8-seguridad" title="Permanent link">&para;</a></h2>
+<ul>
+<li>No manipular conexiones eléctricas ni regletas sin autorización.</li>
+<li>Ante anomalía (olor, calor, chispas, humo): <strong>desconectar y avisar al profesor</strong>.</li>
+<li>Cualquier <strong>accidente o incidencia</strong> se comunica de inmediato al profesor.</li>
+</ul>
+<hr />
+<p><em>El incumplimiento puede suponer medidas del Reglamento de Régimen Interno. Daños o pérdidas por uso indebido pueden requerir reposición.</em></p></section>
+                    <section class='print-page md-section' id='section-3' heading-number='3'>
+                        <h1>Guías<a class='headerlink' href='#section-3' title='Permanent link'></a>
+                        </h1>
+                    <section class="print-page" id="90-guias-packet-tracer" heading-number="3.1"><h1 id="90-guias-packet-tracer-cisco-packet-tracer-guia-inicial">Cisco Packet Tracer — guía inicial<a class="headerlink" href="#90-guias-packet-tracer-cisco-packet-tracer-guia-inicial" title="Permanent link">&para;</a></h1>
+<h2 id="90-guias-packet-tracer-0-que-es-packet-tracer-y-que-vas-a-necesitar">0. Qué es Packet Tracer y qué vas a necesitar<a class="headerlink" href="#90-guias-packet-tracer-0-que-es-packet-tracer-y-que-vas-a-necesitar" title="Permanent link">&para;</a></h2>
+<p><strong>Packet Tracer</strong> es el simulador de redes de Cisco: montas topologías, configuras equipos y observas el tráfico sin cablear un rack. Es gratuito, pero para descargarlo y para abrirlo hace falta una cuenta en <strong>Cisco Networking Academy (NetAcad)</strong>.</p>
+<p><strong>Requisitos del equipo</strong></p>
+<ul>
+<li>Windows 11, macOS 12 o posterior, o Ubuntu 22.04 / 24.04.</li>
+<li>Procesador de 64 bits (amd64), unos <strong>4 GB de RAM</strong> libres y <strong>1,4 GB</strong> de disco.</li>
+<li>No existe versión para móvil ni tableta.</li>
+</ul>
+<p><strong>Tu correo:</strong> el de la identidad digital GVA, con dominio <strong><code>@alu.edu.gva.es</code></strong>. Con ese correo creas la cuenta NetAcad y entras en Packet Tracer.</p>
+<hr />
+<h2 id="90-guias-packet-tracer-1-crear-tu-cuenta-netacad">1. Crear tu cuenta NetAcad<a class="headerlink" href="#90-guias-packet-tracer-1-crear-tu-cuenta-netacad" title="Permanent link">&para;</a></h2>
+<p>Entra en <a href="https://www.netacad.com">netacad.com</a> y crea la cuenta <strong>tú mismo</strong> con tu correo <code>@alu.edu.gva.es</code>. El alta es libre: no necesitas código ni acceso previo del centro. Usa siempre ese correo; no uses Gmail ni otro correo personal.</p>
+<figure>
+  <img alt="Portada de Cisco Networking Academy en español, con botones Inscríbase e Iniciar sesión" src="img/packet-tracer/01-netacad-portada.png" width="700" />
+<br />
+<figcaption>https://www.netacad.com/es — captura 2026-09-25. Courtesy of Cisco Systems, Inc. Unauthorized use not permitted.</figcaption>
+</figure>
+<p>Pulsa <strong>Inscríbase</strong> (o <em>Sign up</em>), confirma el correo si te lo pide y guarda usuario y contraseña en un sitio seguro.</p>
+<hr />
+<h2 id="90-guias-packet-tracer-2-matricularte-en-getting-started-with-cisco-packet-tracer">2. Matricularte en «Getting Started with Cisco Packet Tracer»<a class="headerlink" href="#90-guias-packet-tracer-2-matricularte-en-getting-started-with-cisco-packet-tracer" title="Permanent link">&para;</a></h2>
+<p>El curso gratuito <strong>Getting Started with Cisco Packet Tracer</strong> (unas 2 horas) es el camino oficial para acceder a la descarga. Ábrelo aquí:</p>
+<p><a href="https://www.netacad.com/courses/getting-started-cisco-packet-tracer">https://www.netacad.com/courses/getting-started-cisco-packet-tracer</a></p>
+<p>En español verás el título <strong>Introducción a Cisco Packet Tracer</strong>. Elige el idioma y pulsa el botón para empezar (por ejemplo <em>Get Started With Self-Paced</em>).</p>
+<figure>
+  <img alt="Página del curso Introducción a Cisco Packet Tracer con botón para empezar" src="img/packet-tracer/02-curso-getting-started.png" width="700" />
+<br />
+<figcaption>https://www.netacad.com/courses/getting-started-cisco-packet-tracer?courseLang=es-XL — captura 2026-09-25. Courtesy of Cisco Systems, Inc. Unauthorized use not permitted.</figcaption>
+</figure>
+<p>En el taller no hace falta terminar el curso entero para abrir Packet Tracer si ya está instalado; en casa sí necesitas esta matrícula (y la sesión iniciada) para poder descargar el instalador.</p>
+<hr />
+<h2 id="90-guias-packet-tracer-3-descargar-packet-tracer">3. Descargar Packet Tracer<a class="headerlink" href="#90-guias-packet-tracer-3-descargar-packet-tracer" title="Permanent link">&para;</a></h2>
+<p>Ve al Resource Hub de descargas:</p>
+<p><a href="https://www.netacad.com/resources/lab-downloads">https://www.netacad.com/resources/lab-downloads</a></p>
+<p><strong>Sin sesión iniciada</strong> aparece el aviso <em>Please login to download resources</em> (o similar en español) y no puedes descargar. Inicia sesión en NetAcad y vuelve a esta página. Elige la versión de tu sistema (Windows, Ubuntu o macOS). La versión que veas hoy puede cambiar; descarga la que ofrezca NetAcad en ese momento.</p>
+<figure>
+  <img alt="Centro de recursos de Packet Tracer con aviso de iniciar sesión y enlaces de descarga" src="img/packet-tracer/03-resource-hub-packet-tracer.png" width="700" />
+<br />
+<figcaption>https://www.netacad.com/resources/lab-downloads?courseLang=es-XL — captura 2026-09-25. Courtesy of Cisco Systems, Inc. Unauthorized use not permitted.</figcaption>
+</figure>
+<p>Los pasos 2 y 3 solo hacen falta para instalar Packet Tracer en <strong>tu ordenador de casa</strong>. En el aula ya está instalado: pasa al apartado 5.</p>
+<hr />
+<h2 id="90-guias-packet-tracer-4-instalar">4. Instalar<a class="headerlink" href="#90-guias-packet-tracer-4-instalar" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="90-guias-packet-tracer-__tabbed_1_1" name="90-guias-packet-tracer-__tabbed_1" type="radio" /><input id="90-guias-packet-tracer-__tabbed_1_2" name="90-guias-packet-tracer-__tabbed_1" type="radio" /><input id="90-guias-packet-tracer-__tabbed_1_3" name="90-guias-packet-tracer-__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="90-guias-packet-tracer-__tabbed_1_1">Ordenadores del aula</label><label for="90-guias-packet-tracer-__tabbed_1_2">Windows</label><label for="90-guias-packet-tracer-__tabbed_1_3">Linux (Ubuntu)</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>En los ordenadores del taller <strong>Packet Tracer ya está instalado</strong>. No hace falta descargar ni instalar nada: abre el programa e inicia sesión (apartado 5).</p>
+</div>
+<div class="tabbed-block">
+<ol>
+<li>Ejecuta el instalador que has descargado.</li>
+<li>Acepta la licencia y pulsa <em>Siguiente</em> hasta terminar.</li>
+<li>Deja marcada la opción de abrir Packet Tracer al acabar, si aparece.</li>
+<li>Si Windows muestra el aviso del cortafuegos, <strong>permite el acceso en redes privadas</strong>.</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<p>En la carpeta de descargas:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>./CiscoPacketTracer_XXX_Ubuntu_64bit.deb
+</code></pre></div>
+<p>Sustituye <code>XXX</code> por la versión del archivo que hayas bajado. Acepta la licencia. Ábrelo desde el menú de aplicaciones o con el comando <code>packettracer</code>.</p>
+</div>
+</div>
+</div>
+<hr />
+<h2 id="90-guias-packet-tracer-5-primer-inicio-de-sesion-dentro-de-packet-tracer">5. Primer inicio de sesión dentro de Packet Tracer<a class="headerlink" href="#90-guias-packet-tracer-5-primer-inicio-de-sesion-dentro-de-packet-tracer" title="Permanent link">&para;</a></h2>
+<p>Al abrir Packet Tracer aparece la ventana de inicio de sesión. Pulsa el botón de login (según la versión pone <strong>Login</strong> o <strong>Skills For All</strong>): se abre el navegador.</p>
+<ul>
+<li>Si ya tenías la sesión de NetAcad abierta, verás un mensaje del tipo <em>You have successfully logged in to Cisco Packet Tracer</em>: cierra esa pestaña y vuelve al programa.</li>
+<li>Si no, entra con tu cuenta GVA (<code>@alu.edu.gva.es</code>).</li>
+</ul>
+<p>Marca <strong>Keep me logged in</strong> solo en <strong>tu</strong> ordenador personal. En el del aula, no: son equipos compartidos.</p>
+<hr />
+<h2 id="90-guias-packet-tracer-6-abrir-guardar-y-entregar-un-pkt">6. Abrir, guardar y entregar un <code>.pkt</code><a class="headerlink" href="#90-guias-packet-tracer-6-abrir-guardar-y-entregar-un-pkt" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Abrir:</strong> <em>Archivo &gt; Abrir</em> (<em>File &gt; Open</em>) o doble clic en un <code>.pkt</code> descargado de Aules.</li>
+<li><strong>Guardar:</strong> <em>Archivo &gt; Guardar como</em> (<em>File &gt; Save As</em>) con el nombre que pida la práctica (por ejemplo <code>PR1XX.pkt</code>).</li>
+</ul>
+<p><strong><code>.pkt</code></strong> es una red normal que montas o modificas. <strong><code>.pka</code></strong> es una actividad con ventana de instrucciones y porcentaje de completado.</p>
+<p>Cuando la práctica lo pida, sube a Aules el <code>.pkt</code> <strong>junto</strong> al informe en Markdown (<code>.md</code>).</p>
+<hr />
+<h2 id="90-guias-packet-tracer-7-problemas-frecuentes">7. Problemas frecuentes<a class="headerlink" href="#90-guias-packet-tracer-7-problemas-frecuentes" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Síntoma</th>
+<th>Qué hacer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>No veo los botones o enlaces de descarga</td>
+<td>No has iniciado sesión en <a href="https://www.netacad.com">netacad.com</a>. Entra y recarga la página de descargas.</td>
+</tr>
+<tr>
+<td>El login de Packet Tracer se queda cargando</td>
+<td>Entra antes en NetAcad desde el navegador y vuelve a intentarlo. Prueba con Chrome o borra la caché de los sitios de Cisco.</td>
+</tr>
+<tr>
+<td>No me llega el correo de confirmación de NetAcad</td>
+<td>Mira en <strong>correo no deseado</strong> de tu cuenta GVA.</td>
+</tr>
+<tr>
+<td>Un <code>.pkt</code> no abre o avisa de la versión</td>
+<td>Se guardó con una versión más nueva; actualiza Packet Tracer desde el Resource Hub.</td>
+</tr>
+<tr>
+<td>Aviso del cortafuegos de Windows</td>
+<td>Permitir el acceso en <strong>redes privadas</strong>.</td>
+</tr>
+<tr>
+<td>Quiero instalarlo en el móvil o en la tableta</td>
+<td>No existe esa versión.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="90-guias-packet-tracer-8-video-de-apoyo">8. Vídeo de apoyo<a class="headerlink" href="#90-guias-packet-tracer-8-video-de-apoyo" title="Permanent link">&para;</a></h2>
+<p>Pablo Hidalgo enseña en 7 minutos cómo crear la cuenta, descargar Packet Tracer, instalarlo e iniciar sesión. Cuando propone entrar con Google, <strong>tú usa tu cuenta <code>@alu.edu.gva.es</code></strong>.</p>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube-nocookie.com/embed/OanaO6EF5S4"
+          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          title="Cisco Packet Tracer — cuenta, descarga e inicio (Pablo Hidalgo)"></iframe>
+</div>
+
+<hr />
+<h2 id="90-guias-packet-tracer-9-comprobacion">9. Comprobación<a class="headerlink" href="#90-guias-packet-tracer-9-comprobacion" title="Permanent link">&para;</a></h2>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Cuenta GVA (<code>@alu.edu.gva.es</code>) creada en NetAcad</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Sesión iniciada dentro de Packet Tracer</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Un <code>.pkt</code> guardado con el nombre de la práctica</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> En casa (opcional): matrícula en <em>Getting Started</em> y Packet Tracer instalado</li>
+</ul>
+<p>Cuando termines, vuelve a las <a href="#01-introduccion-arquitectura-tema1-actividades">actividades del Tema 1</a>.</p></section><section class="print-page" id="90-guias-pr102-modelos-osi" heading-number="3.2"><h1 id="90-guias-pr102-modelos-osi-pr102-modelos-osi-y-tcpip-en-packet-tracer">PR102 — Modelos OSI y TCP/IP en Packet Tracer<a class="headerlink" href="#90-guias-pr102-modelos-osi-pr102-modelos-osi-y-tcpip-en-packet-tracer" title="Permanent link">&para;</a></h1>
+<div class="admonition note">
+<p class="admonition-title">Práctica opcional</p>
+<p>PR102 es voluntaria. Trabaja conceptos (puertos, DNS, ARP, TCP) que veremos en profundidad en temas posteriores,
+así que es normal que ahora te cueste. Si la entregas, suma para el <strong>+1</strong> de la nota final, pero solo cuenta si la
+defiendes en una <strong>auditoría</strong>: una comprobación oral en la que explicas lo que has hecho, cuando el profesor lo indique.</p>
+</div>
+<p>Enunciado corto y rúbrica en el <a href="#01-introduccion-arquitectura-tema1-pr102-modelos-en-packet-tracer">Tema 1</a>.</p>
+<h2 id="90-guias-pr102-modelos-osi-objetivos">Objetivos<a class="headerlink" href="#90-guias-pr102-modelos-osi-objetivos" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Relacionar capas <strong>OSI</strong> y <strong>TCP/IP</strong> con lo que muestra Packet Tracer.</li>
+<li>Observar <strong>encapsulación</strong> en una petición web (HTTP sobre TCP/IP/Ethernet).</li>
+<li>Identificar tráfico <strong>DNS</strong>, <strong>ARP</strong> y <strong>TCP</strong> además de HTTP.</li>
+</ul>
+<h2 id="90-guias-pr102-modelos-osi-requisitos">Requisitos<a class="headerlink" href="#90-guias-pr102-modelos-osi-requisitos" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="#90-guias-packet-tracer">Guía inicial Packet Tracer</a> (instalación e interfaz).</li>
+<li>Cisco Packet Tracer instalado.</li>
+<li>Topología <code>.pkt</code> de <strong>Aules</strong> <strong>o</strong> la mini-topología de la sección siguiente.</li>
+</ul>
+<h2 id="90-guias-pr102-modelos-osi-si-no-tienes-el-archivo">Si no tienes el archivo<a class="headerlink" href="#90-guias-pr102-modelos-osi-si-no-tienes-el-archivo" title="Permanent link">&para;</a></h2>
+<p>Monta una LAN mínima:</p>
+<ol>
+<li>1× <strong>PC</strong> (cliente), 1× <strong>Server-PT</strong>, 1× <strong>Switch</strong> 2960.</li>
+<li>Cables rectos PC—switch y server—switch.</li>
+<li>En el servidor: IP <code>192.168.1.254/24</code>, servicio <strong>HTTP</strong> y <strong>DNS</strong> activos; registro A <code>www.osi.local</code> → <code>192.168.1.254</code>.</li>
+<li>En el PC: IP <code>192.168.1.10/24</code>, DNS <code>192.168.1.254</code>, sin puerta de enlace (todo está en la misma LAN).</li>
+</ol>
+<hr />
+<h2 id="90-guias-pr102-modelos-osi-parte-1-trafico-http">Parte 1 — Tráfico HTTP<a class="headerlink" href="#90-guias-pr102-modelos-osi-parte-1-trafico-http" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Abre la topología. Pasa a modo <strong>Simulación</strong>.</li>
+<li><strong>Editar filtros</strong> → desactiva todo y deja solo <strong>HTTP</strong>.</li>
+<li>En el <strong>PC</strong> → Escritorio → <strong>Navegador web</strong> → URL <code>www.osi.local</code> → Ir.</li>
+<li>Pulsa <strong>Capturar/Avanzar</strong> varias veces hasta ver eventos HTTP.</li>
+<li>Abre el primer evento HTTP → pestaña <strong>Modelo OSI</strong>:
+   - Capa 7: petición HTTP al servidor.
+   - Capa 4: puerto destino <strong>80</strong>.
+   - Capa 3: IP destino del servidor.
+   - Capa 2: MAC origen/destino.</li>
+<li>En <strong>Detalles PDU</strong>: anota IP origen/destino, puertos TCP y host HTTP.</li>
+</ol>
+<h2 id="90-guias-pr102-modelos-osi-parte-2-dns-arp-y-tcp">Parte 2 — DNS, ARP y TCP<a class="headerlink" href="#90-guias-pr102-modelos-osi-parte-2-dns-arp-y-tcp" title="Permanent link">&para;</a></h2>
+<ol>
+<li>En filtros, <strong>Mostrar todo</strong> (o activa DNS, ARP, TCP, HTTP).</li>
+<li>Localiza un evento <strong>DNS</strong> (consulta del nombre) y la <strong>respuesta</strong> (IP resuelta).</li>
+<li>Localiza <strong>ARP</strong> si aparece (resolución MAC).</li>
+<li>Localiza eventos <strong>TCP</strong> (apertura / ESTABLISHED / cierre).</li>
+</ol>
+<h2 id="90-guias-pr102-modelos-osi-que-entregar-pr102md-capturas">Qué entregar (<code>PR102.md</code> + capturas)<a class="headerlink" href="#90-guias-pr102-modelos-osi-que-entregar-pr102md-capturas" title="Permanent link">&para;</a></h2>
+<p>En el <code>.md</code>:</p>
+<ol>
+<li>Captura modo Simulación con eventos visibles (HTTP y al menos DNS o TCP).</li>
+<li>Tabla breve: capa (OSI o TCP/IP) | qué viste en esa capa en la PDU HTTP.</li>
+<li>Respuestas (una o dos frases cada una):
+   - ¿Qué puerto escucha el servidor web para HTTP?
+   - ¿Qué puerto usa DNS?
+   - En la respuesta del servidor, ¿qué se intercambia respecto a IP/MAC/puertos?</li>
+<li>(Opcional) Archivo <code>.pkt</code> si lo modificasteis.</li>
+</ol>
+<p><strong>Valoración:</strong> rúbrica del Tema 1. Solo suma para el +1 si la defiendes en la auditoría.</p></section><section class="print-page" id="90-guias-pr103-primera-red" heading-number="3.3"><h1 id="90-guias-pr103-primera-red-pr103-mi-primera-red-en-packet-tracer">PR103 — Mi primera red en Packet Tracer<a class="headerlink" href="#90-guias-pr103-primera-red-pr103-mi-primera-red-en-packet-tracer" title="Permanent link">&para;</a></h1>
+<p>Enunciado corto y rúbrica en el <a href="#01-introduccion-arquitectura-tema1-pr103-mi-primera-red-en-packet-tracer">Tema 1</a>.</p>
+<p>Vas a montar tu primera red local: un <strong>switch</strong> y <strong>cuatro ordenadores</strong>, les das dirección IP y compruebas que se comunican. No partimos de un archivo <code>.pkt</code> del profesor: lo construyes tú desde cero. Antes necesitas Packet Tracer con la sesión iniciada; si aún no lo tienes listo, sigue la <a href="#90-guias-packet-tracer">guía inicial</a>.</p>
+<h2 id="90-guias-pr103-primera-red-video-1-paso-a-paso">Vídeo 1 — Paso a paso<a class="headerlink" href="#90-guias-pr103-primera-red-video-1-paso-a-paso" title="Permanent link">&para;</a></h2>
+<p>Mira del <strong>1:23 al 10:04</strong>. Él monta dos PC; tú montarás <strong>cuatro</strong>, con el mismo método.</p>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube-nocookie.com/embed/9xWQGuoVhPM?start=83&end=604"
+          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          title="Curso Cisco Packet Tracer #1 · Conecta 2 PCs con un Switch y Haz Ping (Escuela de Informática)"></iframe>
+</div>
+
+<div class="admonition tip">
+<p class="admonition-title">Avisos sobre el vídeo</p>
+<p>En el vídeo pone la IP en <strong>Config &gt; FastEthernet0</strong>. Aquí lo haces en <strong>Desktop &gt; IP Configuration</strong>; el resultado es el mismo.</p>
+<p>Deja <strong>puerta de enlace</strong> y <strong>DNS</strong> en blanco: sin router no hacen falta.</p>
+<p>Si Packet Tracer o NetAcad te pide iniciar sesión, usa tu cuenta <strong><code>@alu.edu.gva.es</code></strong>, no Google.</p>
+</div>
+<h2 id="90-guias-pr103-primera-red-pasos">Pasos<a class="headerlink" href="#90-guias-pr103-primera-red-pasos" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Coloca un <strong>switch 2960</strong> y <strong>cuatro PC</strong> (<em>End Devices</em>).</li>
+<li>Conéctalos con cable <strong>automático</strong> o <strong>directo</strong>: PC1 a <strong>Fa0/1</strong>, PC2 a <strong>Fa0/2</strong>, PC3 a <strong>Fa0/3</strong>, PC4 a <strong>Fa0/4</strong>.</li>
+<li>Cambia los nombres a <strong>PC1</strong>, <strong>PC2</strong>, <strong>PC3</strong>, <strong>PC4</strong> y <strong>SW1</strong> (pestaña <em>Config</em> &gt; <em>Display Name</em>).</li>
+<li>Pon las IP en <strong>Desktop &gt; IP Configuration</strong>, modo <strong>Static</strong>, según esta tabla:</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Equipo</th>
+<th>Dirección IP</th>
+<th>Máscara</th>
+<th>Puerta de enlace</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PC1</td>
+<td>192.168.1.10</td>
+<td>255.255.255.0</td>
+<td>(vacía)</td>
+</tr>
+<tr>
+<td>PC2</td>
+<td>192.168.1.11</td>
+<td>255.255.255.0</td>
+<td>(vacía)</td>
+</tr>
+<tr>
+<td>PC3</td>
+<td>192.168.1.12</td>
+<td>255.255.255.0</td>
+<td>(vacía)</td>
+</tr>
+<tr>
+<td>PC4</td>
+<td>192.168.1.13</td>
+<td>255.255.255.0</td>
+<td>(vacía)</td>
+</tr>
+</tbody>
+</table>
+<ol start="5">
+<li>Espera a que los enlaces se pongan en <strong>verde</strong>. En PC1, <em>Desktop</em> &gt; <em>Command Prompt</em>: escribe <code>ipconfig</code> y después <code>ping 192.168.1.11</code>, <code>ping 192.168.1.12</code> y <code>ping 192.168.1.13</code>.</li>
+<li>Pasa a modo <strong>Simulación</strong>. Mira solo del <strong>9:50 al 14:00</strong> del vídeo siguiente (lo de antes usa otro cableado y no lo necesitas). Deja el filtro solo en <strong>ICMP</strong>, envía una <strong>PDU simple</strong> de PC1 a PC4 y avanza paso a paso hasta que vuelva la respuesta.</li>
+</ol>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube-nocookie.com/embed/XYiPkNtEo5s?start=590&end=840"
+          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          title="Cómo crear tu primera red en Cisco Packet Tracer — modo Simulación (Redes Plus)"></iframe>
+</div>
+
+<ol start="7">
+<li>Guarda el archivo como <strong><code>PR103.pkt</code></strong> (<em>Archivo &gt; Guardar como</em> / <em>File &gt; Save As</em>). Si dudas del menú, mira el apartado de <a href="#90-guias-packet-tracer-6-abrir-guardar-y-entregar-un-pkt">abrir y guardar</a> en la guía inicial.</li>
+</ol>
+<h2 id="90-guias-pr103-primera-red-entrega-en-aules">Entrega en Aules<a class="headerlink" href="#90-guias-pr103-primera-red-entrega-en-aules" title="Permanent link">&para;</a></h2>
+<p>Sube <strong><code>PR103.pkt</code></strong> y <strong><code>PR103.md</code></strong> con:</p>
+<ul>
+<li>Captura del ping de PC1 a PC4 (solo la ventana <em>Command Prompt</em>).</li>
+<li>Captura del modo Simulación con la <em>Event List</em>.</li>
+<li>Respuestas a:
+  1. ¿Qué topología forman los equipos y qué hace el switch?
+  2. ¿Qué cable has usado y por qué?
+  3. <em>(Opcional)</em> Cambia la IP de PC4 a <code>192.168.2.13</code> y vuelve a hacer ping desde PC1. ¿Qué pasa? ¿Por qué crees que ocurre?</li>
+</ul>
+<h2 id="90-guias-pr103-primera-red-antes-de-entregar">Antes de entregar<a class="headerlink" href="#90-guias-pr103-primera-red-antes-de-entregar" title="Permanent link">&para;</a></h2>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Packet Tracer con sesión iniciada</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Switch y cuatro PC cableados, enlaces en verde, nombres PC1–PC4 y SW1</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> IP según la tabla (sin puerta de enlace)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Ping de PC1 al resto</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> PDU ICMP en Simulación de PC1 a PC4 (ida y vuelta)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>PR103.pkt</code> y <code>PR103.md</code> listos para Aules</li>
+</ul></section></section><section class="print-page" id="01-introduccion-arquitectura-tema1" heading-number="4"><h1 id="01-introduccion-arquitectura-tema1-tema-1-introduccion-arquitectura-de-redes">Tema 1. Introducción. Arquitectura de redes<a class="headerlink" href="#01-introduccion-arquitectura-tema1-tema-1-introduccion-arquitectura-de-redes" title="Permanent link">&para;</a></h1>
+<p>En este tema construimos un mapa claro de qué es una <strong><abbr title="Local Area Network">LAN</abbr></strong>, qué <strong>dispositivos</strong> intervienen y <strong>por qué</strong> las comunicaciones se organizan en capas (modelos <abbr title="Open Systems Interconnection">OSI</abbr> y TCP/IP).</p>
+<div class="admonition tip">
+<p class="admonition-title">Primera clase</p>
+<p>Empieza por el <a href="#01-introduccion-arquitectura-tema1-cuestionario-inicial">cuestionario inicial</a> (preguntas 1–7). No hace falta estudiar el tema completo antes: el cuestionario sirve para ver qué sabes al empezar.</p>
+</div>
+<h2 id="01-introduccion-arquitectura-tema1-propuesta-didactica">Propuesta didáctica<a class="headerlink" href="#01-introduccion-arquitectura-tema1-propuesta-didactica" title="Permanent link">&para;</a></h2>
+<p>Trabajamos el <strong>RA1</strong> del módulo Redes de área local (0225):</p>
+<blockquote>
+<p><strong>RA1.</strong> <em>Reconoce la estructura de redes locales cableadas analizando las características de entornos de aplicación y describiendo la funcionalidad de sus componentes.</em></p>
+</blockquote>
+<h3 id="01-introduccion-arquitectura-tema1-criterios-de-evaluacion-ra1">Criterios de evaluación (RA1)<a class="headerlink" href="#01-introduccion-arquitectura-tema1-criterios-de-evaluacion-ra1" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>CE1a</strong>: Se han descrito los principios de funcionamiento de las redes locales.</li>
+<li><strong>CE1b</strong>: Se han identificado los distintos tipos de redes.</li>
+<li><strong>CE1c</strong>: Se han descrito los elementos de la red local y su función.</li>
+<li><strong>CE1d</strong>: Se han identificado y clasificado los medios de transmisión.</li>
+<li><strong>CE1e</strong>: Se ha reconocido el mapa físico de la red local.</li>
+<li><strong>CE1f</strong>: Se han utilizado aplicaciones para representar el mapa físico de la red local.</li>
+<li><strong>CE1g</strong>: Se han reconocido las distintas topologías de red.</li>
+<li><strong>CE1h</strong>: Se han identificado estructuras alternativas.</li>
+</ul>
+<h3 id="01-introduccion-arquitectura-tema1-contenidos">Contenidos<a class="headerlink" href="#01-introduccion-arquitectura-tema1-contenidos" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Sistemas en red: tipos, componentes y topologías.</li>
+<li>Clasificación por extensión (PAN, <abbr title="Local Area Network">LAN</abbr>, MAN, WAN) y por ámbito (pública / privada).</li>
+<li>Medios de transmisión (visión general) y perturbaciones habituales.</li>
+<li>Normalización: estándares y organismos.</li>
+<li>Arquitecturas por capas: modelo <abbr title="Open Systems Interconnection">OSI</abbr> y modelo TCP/IP; <abbr title="Protocol Data Unit">PDU</abbr> y encapsulación.</li>
+<li>Esquemas <abbr title="Local Area Network">LAN</abbr> básicos (red simple, zonas, idea de DMZ).</li>
+</ul>
+<h3 id="01-introduccion-arquitectura-tema1-programacion-de-aula-orientativa-1820-h">Programación de aula (orientativa, ~18–20 h)<a class="headerlink" href="#01-introduccion-arquitectura-tema1-programacion-de-aula-orientativa-1820-h" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Sesiones</th>
+<th>Contenidos</th>
+<th>Actividades</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Presentación del módulo + normas del taller + cuestionario inicial</td>
+<td>Cuestionario (1–7)</td>
+</tr>
+<tr>
+<td>2–3</td>
+<td>Componentes, tipos de redes, topologías</td>
+<td><strong>PR101</strong> (diagrama: Excalidraw / draw.io / Dia)</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Transmisión básica y perturbaciones (nivel SMR)</td>
+<td>AC102</td>
+</tr>
+<tr>
+<td>5–7</td>
+<td>Normalización, <abbr title="Open Systems Interconnection">OSI</abbr> / TCP-IP, encapsulación</td>
+<td>AC103, AC104</td>
+</tr>
+<tr>
+<td>8–9</td>
+<td>Esquemas <abbr title="Local Area Network">LAN</abbr>; primera red en PT</td>
+<td><strong>PR103</strong>; PR102 (opcional)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><a id="cuestionario-inicial"></a></p>
+<h2 id="01-introduccion-arquitectura-tema1-cuestionario-inicial">Cuestionario inicial<a class="headerlink" href="#01-introduccion-arquitectura-tema1-cuestionario-inicial" title="Permanent link">&para;</a></h2>
+<div class="admonition question">
+<p class="admonition-title">Antes de empezar — responde con lo que sepas</p>
+<ol>
+<li>¿Qué tipos de redes conoces según su extensión?</li>
+<li>¿Qué diferencia hay entre una red pública y una privada?</li>
+<li>¿Qué función tiene un switch en una red local?</li>
+<li>¿Qué ventajas ofrece la fibra óptica frente al par trenzado?</li>
+<li>¿Qué es una topología en estrella? ¿Dónde se suele usar?</li>
+<li>¿Qué relación existe entre los nodos finales e intermedios?</li>
+<li>¿Qué diferencia hay entre transmisión serie y paralela?</li>
+<li>¿Qué es un modelo de red y para qué sirve?</li>
+<li>¿Cuáles son las principales diferencias entre el modelo <abbr title="Open Systems Interconnection">OSI</abbr> y el modelo TCP/IP?</li>
+<li>¿Qué diferencias hay entre conmutación y difusión en el uso del medio?</li>
+<li>¿Qué es una DMZ y para qué se utiliza en una red local?</li>
+</ol>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Soluciones</p>
+<p>Las soluciones se trabajan en clase o se publican en Aules cuando proceda.</p>
+</div>
+<hr />
+<h2 id="01-introduccion-arquitectura-tema1-sistemas-en-red">Sistemas en red<a class="headerlink" href="#01-introduccion-arquitectura-tema1-sistemas-en-red" title="Permanent link">&para;</a></h2>
+<p>Un <strong>sistema de red</strong> es el conjunto de equipos electrónicos y medios de transmisión que permiten la comunicación entre terminales, a menudo situados en puntos remotos. La unión de estos sistemas forma las <strong>redes de comunicaciones</strong>.</p>
+<figure>
+  <img alt="Elementos de un sistema de red" src="img/01SistemaRed.png" width="800" />
+<br />
+<figcaption>Elementos de un sistema de red</figcaption>
+</figure>
+<h3 id="01-introduccion-arquitectura-tema1-componentes-hardware">Componentes hardware<a class="headerlink" href="#01-introduccion-arquitectura-tema1-componentes-hardware" title="Permanent link">&para;</a></h3>
+<h4 id="01-introduccion-arquitectura-tema1-nodos-finales-dte">Nodos finales (DTE)<a class="headerlink" href="#01-introduccion-arquitectura-tema1-nodos-finales-dte" title="Permanent link">&para;</a></h4>
+<p>Dispositivos que <strong>inician o terminan</strong> una comunicación: estaciones de trabajo, servidores, impresoras de red, etc.</p>
+<h4 id="01-introduccion-arquitectura-tema1-nodos-intermedios-dce">Nodos intermedios (DCE)<a class="headerlink" href="#01-introduccion-arquitectura-tema1-nodos-intermedios-dce" title="Permanent link">&para;</a></h4>
+<p>Participan en la comunicación entre nodos finales:</p>
+<table>
+<thead>
+<tr>
+<th>Dispositivo</th>
+<th>Idea clave</th>
+<th>Capa <abbr title="Open Systems Interconnection">OSI</abbr> habitual</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Repetidor</strong></td>
+<td>Amplifica / regenera la señal</td>
+<td>1 (física)</td>
+</tr>
+<tr>
+<td><strong>Switch</strong></td>
+<td>Conecta equipos en la misma <abbr title="Local Area Network">LAN</abbr>; aprende MAC ↔ puerto</td>
+<td>2 (enlace)</td>
+</tr>
+<tr>
+<td><strong>Router</strong></td>
+<td>Conecta <strong>redes distintas</strong>; encaminamiento</td>
+<td>3 (red)</td>
+</tr>
+<tr>
+<td><strong>Firewall</strong></td>
+<td>Filtra tráfico según políticas de seguridad</td>
+<td>varias</td>
+</tr>
+</tbody>
+</table>
+<figure>
+  <img alt="Principales nodos intermedios" src="img/03NodosIntermed.png" width="400" />
+<br />
+<figcaption>Principales nodos intermedios</figcaption>
+</figure>
+<h3 id="01-introduccion-arquitectura-tema1-adaptador-de-red-nic">Adaptador de red (NIC)<a class="headerlink" href="#01-introduccion-arquitectura-tema1-adaptador-de-red-nic" title="Permanent link">&para;</a></h3>
+<p>Permite conectar el equipo a la red. Se caracteriza por:</p>
+<ul>
+<li>Tipo de interfaz (cableada / inalámbrica).</li>
+<li>Modo de transmisión (<strong>half-dúplex</strong> / <strong>full-dúplex</strong>).</li>
+<li>Velocidad (Mbps / Gbps).</li>
+</ul>
+<figure>
+  <img alt="NIC" src="img/04nic.jpg" width="600" />
+<br />
+<figcaption>NIC (Network Interface Card)</figcaption>
+</figure>
+<h3 id="01-introduccion-arquitectura-tema1-medios-de-transmision-vision-general">Medios de transmisión (visión general)<a class="headerlink" href="#01-introduccion-arquitectura-tema1-medios-de-transmision-vision-general" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Tipo</th>
+<th>Ejemplos</th>
+<th>Uso típico en <abbr title="Local Area Network">LAN</abbr></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Guiados</td>
+<td>Par trenzado (UTP/FTP), fibra óptica, coaxial</td>
+<td>Cableado de edificio; backbone</td>
+</tr>
+<tr>
+<td>No guiados</td>
+<td>Wi‑Fi, radioenlaces</td>
+<td>Acceso inalámbrico en aulas / oficinas</td>
+</tr>
+</tbody>
+</table>
+<p>El detalle de categorías de cable, conectores y normativa se desarrolla en los <strong>Temas 2–3</strong>.</p>
+<h3 id="01-introduccion-arquitectura-tema1-componentes-software">Componentes software<a class="headerlink" href="#01-introduccion-arquitectura-tema1-componentes-software" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>NOS / pila de protocolos</strong>: software que gestiona la comunicación.</li>
+<li><strong>Drivers</strong>: controladores del adaptador de red.</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">¿Qué es un protocolo?</p>
+<p>Conjunto de reglas entre emisor y receptor que permiten transmitir datos de forma acordada. Ejemplo: el protocolo <strong>IP</strong> define el direccionamiento lógico.</p>
+</div>
+<hr />
+<h2 id="01-introduccion-arquitectura-tema1-clasificacion-de-redes">Clasificación de redes<a class="headerlink" href="#01-introduccion-arquitectura-tema1-clasificacion-de-redes" title="Permanent link">&para;</a></h2>
+<h3 id="01-introduccion-arquitectura-tema1-segun-su-extension">Según su extensión<a class="headerlink" href="#01-introduccion-arquitectura-tema1-segun-su-extension" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>PAN</strong>: entorno personal (pocos metros). Ej.: Bluetooth, NFC.</li>
+<li><strong><abbr title="Local Area Network">LAN</abbr></strong>: red local (empresa, aula, vivienda). Si es inalámbrica: <strong>WLAN</strong>.</li>
+<li><strong>MAN</strong>: varias <abbr title="Local Area Network">LAN</abbr> en ámbito metropolitano.</li>
+<li><strong>WAN</strong>: interconexión a gran distancia. Internet es un ejemplo de WAN.</li>
+</ul>
+<figure>
+  <img alt="Tipos de redes según extensión" src="img/07tiposDeRedesArea.jpg" width="600" />
+<br />
+<figcaption>Tipos de redes según su extensión</figcaption>
+</figure>
+<h3 id="01-introduccion-arquitectura-tema1-segun-su-ambito-titularidad">Según su ámbito (titularidad)<a class="headerlink" href="#01-introduccion-arquitectura-tema1-segun-su-ambito-titularidad" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Públicas</strong>: servicio a usuarios que contratan (ISP).</li>
+<li><strong>Privadas</strong>: propiedad de una organización o particular. Una <strong>VPN</strong> permite extender de forma segura una <abbr title="Local Area Network">LAN</abbr> sobre una red no controlada (p. ej. Internet).</li>
+</ul>
+<figure>
+  <img alt="VPN" src="img/02VPN.png" width="800" />
+<br />
+<figcaption>Elementos principales de una VPN</figcaption>
+</figure>
+<hr />
+<h2 id="01-introduccion-arquitectura-tema1-topologias">Topologías<a class="headerlink" href="#01-introduccion-arquitectura-tema1-topologias" title="Permanent link">&para;</a></h2>
+<p>La <strong>topología</strong> describe la distribución espacial de los elementos conectados.</p>
+<h3 id="01-introduccion-arquitectura-tema1-cableadas">Cableadas<a class="headerlink" href="#01-introduccion-arquitectura-tema1-cableadas" title="Permanent link">&para;</a></h3>
+<p>Hoy lo habitual en <abbr title="Local Area Network">LAN</abbr> es la <strong>estrella</strong> (y variantes en árbol / jerárquicas). El bus clásico está en desuso.</p>
+<figure>
+  <img alt="Topologías cableadas" src="img/05TopCab.png" width="900" />
+<br />
+<figcaption>Principales topologías cableadas</figcaption>
+</figure>
+<h3 id="01-introduccion-arquitectura-tema1-inalambricas">Inalámbricas<a class="headerlink" href="#01-introduccion-arquitectura-tema1-inalambricas" title="Permanent link">&para;</a></h3>
+<p>Despliegues basados en <strong>puntos de acceso</strong> Wi‑Fi (estrella inalámbrica, malla, etc.).</p>
+<figure>
+  <img alt="Topologías inalámbricas" src="img/06TopIn.png" width="900" />
+<br />
+<figcaption>Principales topologías inalámbricas</figcaption>
+</figure>
+<hr />
+<h2 id="01-introduccion-arquitectura-tema1-transmision-y-perturbaciones-minimos-smr">Transmisión y perturbaciones (mínimos SMR)<a class="headerlink" href="#01-introduccion-arquitectura-tema1-transmision-y-perturbaciones-minimos-smr" title="Permanent link">&para;</a></h2>
+<p><strong>Transmisión</strong>: enviar datos de un punto a otro a través de un medio.<br />
+<strong>Perturbación</strong>: interferencia o degradación que puede alterar la señal.</p>
+<h3 id="01-introduccion-arquitectura-tema1-ideas-que-debes-manejar">Ideas que debes manejar<a class="headerlink" href="#01-introduccion-arquitectura-tema1-ideas-que-debes-manejar" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Criterio</th>
+<th>Opciones</th>
+<th>Ejemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Naturaleza de la señal</td>
+<td>Analógica / digital</td>
+<td>Voz telefónica vs Ethernet</td>
+</tr>
+<tr>
+<td>Cómo viajan los bits</td>
+<td>Serie / paralelo</td>
+<td>USB (serie) vs buses antiguos</td>
+</tr>
+<tr>
+<td>Dirección</td>
+<td>Símplex / half-dúplex / full-dúplex</td>
+<td>TV; walkie-talkie; teléfono</td>
+</tr>
+</tbody>
+</table>
+<figure>
+  <img alt="Señal analógica" src="img/analogica.png" width="360" />
+  <img alt="Señal digital" src="img/digital.png" width="360" />
+<br />
+<figcaption>Señal analógica (izquierda) y digital (derecha)</figcaption>
+</figure>
+<figure>
+  <img alt="Serie y paralelo" src="img/serie.png" width="360" />
+  <img alt="Paralelo" src="img/paralelo.png" width="360" />
+<br />
+<figcaption>Transmisión en serie y en paralelo</figcaption>
+</figure>
+<figure>
+  <img alt="Modos dúplex" src="img/duplex.png" width="640" />
+<br />
+<figcaption>Símplex, half-dúplex y full-dúplex</figcaption>
+</figure>
+<h3 id="01-introduccion-arquitectura-tema1-perturbaciones-habituales">Perturbaciones habituales<a class="headerlink" href="#01-introduccion-arquitectura-tema1-perturbaciones-habituales" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Atenuación</strong>: pérdida de potencia con la distancia.</li>
+<li><strong>Ruido</strong>: señales no deseadas (térmico, impulsivo, diafonía…).</li>
+<li><strong>Distorsión</strong>: deformación de la forma de la señal.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Fuera de alcance en este tema</p>
+<p>Técnicas de codificación (NRZ, Manchester…) y modulación detallada (AM/FM/PM) <strong>no</strong> se desarrollan aquí; si hace falta, se retomarán como ampliación o en laboratorio.</p>
+</div>
+<hr />
+<h2 id="01-introduccion-arquitectura-tema1-normalizacion">Normalización<a class="headerlink" href="#01-introduccion-arquitectura-tema1-normalizacion" title="Permanent link">&para;</a></h2>
+<p>Al principio cada fabricante tenía su red. El problema era la <strong>incompatibilidad</strong>. La solución: <strong>estandarizar</strong>.</p>
+<figure>
+  <img alt="Estándares" src="img/08Estandar.png" width="700" />
+<br />
+<figcaption>Necesidad de normalización</figcaption>
+</figure>
+<h3 id="01-introduccion-arquitectura-tema1-organismos-vision-general">Organismos (visión general)<a class="headerlink" href="#01-introduccion-arquitectura-tema1-organismos-vision-general" title="Permanent link">&para;</a></h3>
+<p>Entre otros: <strong>ISO</strong>, <strong>IEEE</strong>, <strong>ITU</strong>, <strong>IETF</strong>. Unos definen modelos de referencia; otros, estándares de cableado, Wi‑Fi, protocolos de Internet, etc.</p>
+<figure>
+  <img alt="Organismos" src="img/09Organismos.png" width="700" />
+<br />
+<figcaption>Organismos de normalización</figcaption>
+</figure>
+<hr />
+<h2 id="01-introduccion-arquitectura-tema1-arquitecturas-por-capas">Arquitecturas por capas<a class="headerlink" href="#01-introduccion-arquitectura-tema1-arquitecturas-por-capas" title="Permanent link">&para;</a></h2>
+<p>Diseñar una red implica resolver encaminamiento, direccionamiento, acceso al medio, control de errores, etc. La solución práctica es dividir el problema en <strong>capas</strong>.</p>
+<h3 id="01-introduccion-arquitectura-tema1-principios">Principios<a class="headerlink" href="#01-introduccion-arquitectura-tema1-principios" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Cada capa se apoya en los servicios de la inferior.</li>
+<li>Capas homólogas se entienden mediante <strong>protocolos</strong>.</li>
+<li>Se puede cambiar un protocolo de una capa si se mantienen los servicios.</li>
+</ul>
+<h3 id="01-introduccion-arquitectura-tema1-pdu-y-encapsulacion"><abbr title="Protocol Data Unit">PDU</abbr> y encapsulación<a class="headerlink" href="#01-introduccion-arquitectura-tema1-pdu-y-encapsulacion" title="Permanent link">&para;</a></h3>
+<p><strong><abbr title="Protocol Data Unit">PDU</abbr></strong> (<em>Protocol Data Unit</em>): unidad de datos de una capa.</p>
+<table>
+<thead>
+<tr>
+<th>Capa (TCP/IP)</th>
+<th>Nombre habitual de la <abbr title="Protocol Data Unit">PDU</abbr></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Aplicación</td>
+<td>Datos</td>
+</tr>
+<tr>
+<td>Transporte</td>
+<td>Segmento (TCP) / datagrama (UDP)</td>
+</tr>
+<tr>
+<td>Internet (red)</td>
+<td>Paquete / datagrama IP</td>
+</tr>
+<tr>
+<td>Acceso a la red</td>
+<td>Trama</td>
+</tr>
+<tr>
+<td>Física</td>
+<td>Bits</td>
+</tr>
+</tbody>
+</table>
+<p>En el <strong>emisor</strong>, cada capa añade su cabecera (<strong>encapsulación</strong>). En el <strong>receptor</strong>, se eliminan en orden inverso.</p>
+<figure>
+  <img alt="Proceso por capas" src="img/10Capas.png" width="600" />
+<br />
+<figcaption>Comunicación basada en niveles (modelo OSI)</figcaption>
+</figure>
+<hr />
+<h2 id="01-introduccion-arquitectura-tema1-modelo-osi-y-modelo-tcpip">Modelo <abbr title="Open Systems Interconnection">OSI</abbr> y modelo TCP/IP<a class="headerlink" href="#01-introduccion-arquitectura-tema1-modelo-osi-y-modelo-tcpip" title="Permanent link">&para;</a></h2>
+<h3 id="01-introduccion-arquitectura-tema1-osi-7-capas"><abbr title="Open Systems Interconnection">OSI</abbr> (7 capas)<a class="headerlink" href="#01-introduccion-arquitectura-tema1-osi-7-capas" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Física</strong> — medio y señales.  </li>
+<li><strong>Enlace</strong> — tramas, MAC, acceso al medio.  </li>
+<li><strong>Red</strong> — encaminamiento (IP…).  </li>
+<li><strong>Transporte</strong> — extremo a extremo (TCP/UDP…).  </li>
+<li><strong>Sesión</strong> — gestión de la sesión.  </li>
+<li><strong>Presentación</strong> — formato, cifrado, compresión.  </li>
+<li><strong>Aplicación</strong> — servicios al usuario (HTTP, SMTP…).</li>
+</ol>
+<h3 id="01-introduccion-arquitectura-tema1-tcpip-4-capas">TCP/IP (4 capas)<a class="headerlink" href="#01-introduccion-arquitectura-tema1-tcpip-4-capas" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Acceso a la red</strong> ≈ física + enlace <abbr title="Open Systems Interconnection">OSI</abbr>.  </li>
+<li><strong>Internet</strong> ≈ red <abbr title="Open Systems Interconnection">OSI</abbr> (IP, ARP, ICMP…).  </li>
+<li><strong>Transporte</strong> (TCP, UDP).  </li>
+<li><strong>Aplicación</strong> ≈ sesión + presentación + aplicación <abbr title="Open Systems Interconnection">OSI</abbr>.</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Capa TCP/IP</th>
+<th>Capas <abbr title="Open Systems Interconnection">OSI</abbr></th>
+<th>Función</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Aplicación</td>
+<td>5–7</td>
+<td>Servicios al usuario</td>
+</tr>
+<tr>
+<td>Transporte</td>
+<td>4</td>
+<td>Comunicación extremo a extremo</td>
+</tr>
+<tr>
+<td>Internet</td>
+<td>3</td>
+<td>Encaminamiento y direccionamiento</td>
+</tr>
+<tr>
+<td>Acceso a la red</td>
+<td>1–2</td>
+<td>Medio físico y tramas</td>
+</tr>
+</tbody>
+</table>
+<figure>
+  <img alt="Equivalencia OSI–TCP/IP" src="img/11Equivalencia.png" width="500" />
+<br />
+<figcaption>Equivalencia entre OSI y TCP/IP</figcaption>
+</figure>
+<hr />
+<h2 id="01-introduccion-arquitectura-tema1-uso-del-medio-y-esquemas-lan">Uso del medio y esquemas <abbr title="Local Area Network">LAN</abbr><a class="headerlink" href="#01-introduccion-arquitectura-tema1-uso-del-medio-y-esquemas-lan" title="Permanent link">&para;</a></h2>
+<h3 id="01-introduccion-arquitectura-tema1-difusion-vs-conmutacion">Difusión vs conmutación<a class="headerlink" href="#01-introduccion-arquitectura-tema1-difusion-vs-conmutacion" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Difusión (broadcast)</strong>: el medio se comparte; todos pueden “oír” (más colisiones en medios compartidos clásicos).</li>
+<li><strong>Conmutación</strong>: el tráfico se dirige hacia el destino (switches modernos reducen dominios de colisión).</li>
+</ul>
+<figure>
+  <img alt="Difusión" src="img/13Difusion.png" width="700" />
+<br />
+<figcaption>Idea de difusión en el medio</figcaption>
+</figure>
+<h3 id="01-introduccion-arquitectura-tema1-esquemas-lan">Esquemas <abbr title="Local Area Network">LAN</abbr><a class="headerlink" href="#01-introduccion-arquitectura-tema1-esquemas-lan" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong><abbr title="Local Area Network">LAN</abbr> simple</strong>: PCs + switch (+ router hacia Internet).</li>
+<li><strong><abbr title="Local Area Network">LAN</abbr> por zonas</strong>: separar departamentos o servicios.</li>
+<li><strong>DMZ</strong>: zona intermedia para servicios expuestos, con filtrado hacia la red interna.</li>
+</ul>
+<figure>
+  <img alt="LAN simple" src="img/14LANSimple.png" width="700" />
+<br />
+<figcaption>Esquema de LAN simple</figcaption>
+</figure>
+<figure>
+  <img alt="LAN con zonas" src="img/15Lan2.png" width="700" />
+<br />
+<figcaption>Esquema LAN con zonas</figcaption>
+</figure>
+<figure>
+  <img alt="LAN con DMZ" src="img/16Lan3.png" width="700" />
+<br />
+<figcaption>Esquema con DMZ</figcaption>
+</figure>
+<hr />
+<h2 id="01-introduccion-arquitectura-tema1-actividades">Actividades<a class="headerlink" href="#01-introduccion-arquitectura-tema1-actividades" title="Permanent link">&para;</a></h2>
+<div class="admonition tip">
+<p class="admonition-title">Formato de entrega</p>
+<p>Las entregas en <strong>Aules</strong> son <strong>obligatorias en Markdown</strong> (<code>.md</code>). No se aceptan PDF.<br />
+Nombre del archivo: <code>AC1XX.md</code> o <code>PR1XX.md</code> (sustituye XX por el número). Respeta la fecha de vencimiento.<br />
+Escribiremos los <code>.md</code> con <strong>Visual Studio Code</strong>.</p>
+<div class="admonition note">
+<p class="admonition-title">Cómo empezar</p>
+<ul>
+<li>Guía de Markdown: <a href="https://tutorialmarkdown.com/guia">tutorialmarkdown.com/guia</a></li>
+<li>Documentación de Visual Studio Code: <a href="https://code.visualstudio.com/docs">code.visualstudio.com/docs</a></li>
+</ul>
+</div>
+</div>
+<h3 id="01-introduccion-arquitectura-tema1-pr101-mapa-fisico-y-logico">PR101 — Mapa físico y lógico<a class="headerlink" href="#01-introduccion-arquitectura-tema1-pr101-mapa-fisico-y-logico" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5.563 1.396a.95.95 0 0 0-.534.184c-.404.307-.501.9-.425 1.654.075.755.335 1.704.751 2.8.357.937.835 1.984 1.407 3.095-1.17.146-2.24.338-3.158.57-1.08.274-1.958.6-2.583.973C.397 11.045 0 11.484 0 12s.397.955 1.021 1.328c.55.33 1.308.618 2.217.87a1 1 0 0 0-.006.097c0 .485.365.887.82.887.368 0 .678-.26.784-.616q.89.171 1.898.297a31 31 0 0 0-1.408 3.067c-.421 1.093-.686 2.04-.765 2.795-.08.754.016 1.347.42 1.656.201.154.46.208.734.181s.572-.125.896-.287c.649-.323 1.407-.894 2.244-1.67.962-.89 2.026-2.058 3.118-3.421 1.086 1.37 2.146 2.543 3.103 3.439.834.78 1.588 1.355 2.235 1.682.323.163.62.265.894.293s.534-.025.736-.178c.405-.307.502-.9.426-1.654-.054-.54-.206-1.18-.437-1.9a.91.91 0 0 0 .343-.72.92.92 0 0 0-.238-.625.8.8 0 0 0-.701-.251c-.312-.75-.69-1.557-1.125-2.4a27 27 0 0 0 3.187-.575c1.08-.273 1.958-.597 2.583-.97.624-.374 1.021-.813 1.021-1.329s-.397-.957-1.021-1.33c-.625-.373-1.503-.696-2.583-.969a27 27 0 0 0-3.156-.568 31 31 0 0 0 1.406-3.063c.422-1.093.687-2.04.766-2.795.08-.754-.017-1.347-.42-1.656a.95.95 0 0 0-.531-.185 1.3 1.3 0 0 0-.203.004c-.274.026-.57.127-.895.289-.51.254-1.092.665-1.722 1.205a.8.8 0 0 0-.418-.123c-.456 0-.82.4-.82.886q0 .178.06.334a35 35 0 0 0-2.465 2.791c-1.086-1.37-2.146-2.543-3.103-3.439-.834-.78-1.588-1.355-2.235-1.682-.323-.163-.62-.265-.894-.293a1.3 1.3 0 0 0-.204-.006zm.021.385a1 1 0 0 1 .143.004c.205.02.462.105.757.254.592.298 1.33.855 2.147 1.62.955.893 2.022 2.077 3.119 3.466-.428.544-.859 1.12-1.29 1.72a42 42 0 0 0-3.29.235 31 31 0 0 1-1.453-3.184c-.409-1.075-.658-2.002-.729-2.7-.07-.7.05-1.136.276-1.307a.55.55 0 0 1 .32-.108m12.854.033a.55.55 0 0 1 .32.108c.225.172.343.61.27 1.308s-.33 1.624-.743 2.698a31 31 0 0 1-1.455 3.15 42 42 0 0 0-3.312-.234 49 49 0 0 0-1.274-1.717 35 35 0 0 1 2.436-2.772.78.78 0 0 0 .543.223c.456 0 .82-.401.82-.887a.94.94 0 0 0-.133-.484c.61-.519 1.163-.909 1.625-1.139.297-.147.555-.23.76-.25a1 1 0 0 1 .142-.004zm-6.442 5.622c.344.443.69.913 1.035 1.394q-.51-.012-1.031-.014-.532.001-1.05.014c.35-.481.699-.95 1.046-1.394M12 9.203q.668.001 1.314.02.398.563.793 1.154c.366.55.71 1.093 1.041 1.633a54 54 0 0 1-1.046 1.623q-.395.584-.791 1.138-.646.02-1.311.022-.684-.001-1.348-.022a53 53 0 0 1-.789-1.148 52 52 0 0 1-1.04-1.633 53 53 0 0 1 1.84-2.765q.658-.02 1.337-.022m-1.824.04q-.315.444-.625.905c-.334.496-.647.988-.953 1.477a47 47 0 0 1-1.239-2.178 41 41 0 0 1 2.817-.205zm3.625 0a41 41 0 0 1 2.838.202 47 47 0 0 1-1.264 2.198 53 53 0 0 0-1.574-2.4m3.248.251c1.213.146 2.317.34 3.252.576 1.057.268 1.907.587 2.478.928s.834.689.834.998-.263.655-.834.996c-.57.342-1.421.662-2.478.93-.943.239-2.056.433-3.281.58a47 47 0 0 0-1.416-2.492 47 47 0 0 0 1.445-2.516M6.95 9.496c.424.805.899 1.64 1.418 2.494a47 47 0 0 0-1.443 2.508 30 30 0 0 1-2.059-.318.9.9 0 0 0-.23-.508.8.8 0 0 0-.584-.262.8.8 0 0 0-.696.418c-.894-.247-1.63-.53-2.136-.832C.65 12.655.387 12.31.387 12s.263-.654.834-.996c.57-.342 1.421-.662 2.478-.93.935-.237 2.039-.431 3.252-.578zm4.34.8c-.576 0-1.041.5-1.041 1.112 0 .484.29.897.695 1.049v.063c0 .612.466 1.109 1.041 1.109.576 0 1.041-.497 1.041-1.11q0-.025-.002-.05c.424-.141.73-.565.73-1.063 0-.294-.107-.575-.302-.783a1.01 1.01 0 0 0-.738-.326 1 1 0 0 0-.711.3 1 1 0 0 0-.713-.3zm-2.695 2.061a51 51 0 0 0 1.572 2.397c-.99-.04-1.941-.108-2.832-.205q.573-1.067 1.26-2.192m6.779.02c.448.743.862 1.472 1.236 2.176a42 42 0 0 1-2.814.199q.313-.443.625-.902c.333-.495.647-.986.953-1.473m-8.23 2.537c1.033.117 2.141.198 3.304.236.427.6.854 1.179 1.278 1.723-1.103 1.382-2.176 2.561-3.135 3.45-.821.76-1.562 1.31-2.155 1.605-.296.147-.554.23-.76.25s-.35-.018-.462-.104c-.225-.172-.343-.61-.27-1.308s.329-1.624.742-2.698c.366-.948.861-2.018 1.458-3.154m9.656.004c.459.884.854 1.727 1.178 2.504a.91.91 0 0 0-.348.724c0 .486.364.887.82.887a1 1 0 0 0 .123-.01c.218.686.36 1.293.408 1.782.07.698-.05 1.135-.275 1.306-.113.086-.258.124-.463.104s-.462-.105-.758-.254c-.59-.298-1.329-.855-2.146-1.62-.955-.893-2.023-2.077-3.12-3.466.43-.545.862-1.123 1.294-1.725a42 42 0 0 0 3.287-.232m-3.776.246a49 49 0 0 1-1.05 1.4 49 49 0 0 1-1.04-1.398 47 47 0 0 0 2.09-.002"/></svg></span> <strong>PR101</strong>. (RA1 // CE1b, CE1c, CE1e, CE1f, CE1g, CE1h // <strong><abbr title="Práctica">PR</abbr> 0–10</strong>). En grupo, diseñad el esquema de la empresa ficticia <strong>TechSolutions</strong>:</p>
+</li>
+<li>
+<p>3 departamentos (Administración, Ventas, Soporte), cada uno con 5 PCs y 1 impresora.</p>
+</li>
+<li>1 servidor central.</li>
+<li>Conexión a Internet mediante router.</li>
+</ul>
+<p><strong>Tareas:</strong> elegir topología; dibujar el mapa en <a href="https://excalidraw.com/">Excalidraw</a>, <a href="https://app.diagrams.net/">draw.io</a> o <a href="https://wiki.gnome.org/Apps/Dia">Dia</a> (cualquiera de las tres); etiquetar medios (UTP, fibra, Wi‑Fi); justificar topología, medios y dispositivos; exposición breve (5 min).</p>
+<p><strong>Entrega:</strong> el diagrama (export PNG/SVG o el archivo del editor, según se indique en Aules) <strong>y</strong> el <code>.md</code> de la práctica (<code>PR101.md</code>).</p>
+<table>
+<thead>
+<tr>
+<th>Criterio</th>
+<th>Descripción</th>
+<th>Puntos</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Claridad del diagrama</td>
+<td>Legible y organizado</td>
+<td>0–2</td>
+</tr>
+<tr>
+<td>Dispositivos</td>
+<td>Todos los necesarios</td>
+<td>0–2</td>
+</tr>
+<tr>
+<td>Conexiones</td>
+<td>Etiquetadas (UTP / fibra / Wi‑Fi)</td>
+<td>0–2</td>
+</tr>
+<tr>
+<td>Topología adecuada</td>
+<td>Coherente con el escenario</td>
+<td>0–2</td>
+</tr>
+<tr>
+<td>Justificación técnica</td>
+<td>Argumentación clara</td>
+<td>0–2</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td></td>
+<td><strong>/10</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="01-introduccion-arquitectura-tema1-ac102-transmision-y-perturbaciones">AC102 — Transmisión y perturbaciones<a class="headerlink" href="#01-introduccion-arquitectura-tema1-ac102-transmision-y-perturbaciones" title="Permanent link">&para;</a></h3>
+<ul>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.832 3.367 8.668.108a3.15 3.15 0 0 0-3.856 2.226L.943 16.777a3.15 3.15 0 0 0 2.226 3.856l12.163 3.259a3.15 3.15 0 0 0 3.855-2.226l3.87-14.443a3.15 3.15 0 0 0-2.226-3.856M6.332 2.741a1.574 1.574 0 0 1 1.928-1.113l12.163 3.26a1.574 1.574 0 0 1 1.113 1.927l-3.87 14.444a1.574 1.574 0 0 1-1.928 1.113l-12.163-3.26a1.574 1.574 0 0 1-1.113-1.927zm2.634 2.336a.787.787 0 1 0-.407 1.52l9.122 2.444a.787.787 0 1 0 .407-1.52zM6.985 9.434a.787.787 0 0 1 .963-.557l9.123 2.445a.787.787 0 0 1-.408 1.52l-9.122-2.444a.787.787 0 0 1-.556-.964m-.055 3.244a.787.787 0 0 0-.407 1.52l5.32 1.427a.787.787 0 0 0 .408-1.52z"/></svg></span> <strong>AC102</strong>. (RA1 // CE1a, CE1c, CE1d // <strong><abbr title="Actividad de clase">AC</abbr> 0–1</strong>). Busca ejemplos reales de: serie/paralelo, símplex/half/full-dúplex, y al menos dos perturbaciones. Para cada uno: dónde aparece, qué efecto tiene y qué solución se aplica o propondrías.</li>
+</ul>
+<h3 id="01-introduccion-arquitectura-tema1-ac103-organismos-de-normalizacion">AC103 — Organismos de normalización<a class="headerlink" href="#01-introduccion-arquitectura-tema1-ac103-organismos-de-normalizacion" title="Permanent link">&para;</a></h3>
+<ul>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.832 3.367 8.668.108a3.15 3.15 0 0 0-3.856 2.226L.943 16.777a3.15 3.15 0 0 0 2.226 3.856l12.163 3.259a3.15 3.15 0 0 0 3.855-2.226l3.87-14.443a3.15 3.15 0 0 0-2.226-3.856M6.332 2.741a1.574 1.574 0 0 1 1.928-1.113l12.163 3.26a1.574 1.574 0 0 1 1.113 1.927l-3.87 14.444a1.574 1.574 0 0 1-1.928 1.113l-12.163-3.26a1.574 1.574 0 0 1-1.113-1.927zm2.634 2.336a.787.787 0 1 0-.407 1.52l9.122 2.444a.787.787 0 1 0 .407-1.52zM6.985 9.434a.787.787 0 0 1 .963-.557l9.123 2.445a.787.787 0 0 1-.408 1.52l-9.122-2.444a.787.787 0 0 1-.556-.964m-.055 3.244a.787.787 0 0 0-.407 1.52l5.32 1.427a.787.787 0 0 0 .408-1.52z"/></svg></span> <strong>AC103</strong>. (RA1 // CE1a, CE1c // <strong><abbr title="Actividad de clase">AC</abbr> 0–1</strong>). Tabla comparativa de organismos (ISO, IEEE, ITU, IETF…): función y algún estándar relevante.</li>
+</ul>
+<h3 id="01-introduccion-arquitectura-tema1-ac104-osi-vs-tcpip">AC104 — <abbr title="Open Systems Interconnection">OSI</abbr> vs TCP/IP<a class="headerlink" href="#01-introduccion-arquitectura-tema1-ac104-osi-vs-tcpip" title="Permanent link">&para;</a></h3>
+<ul>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.832 3.367 8.668.108a3.15 3.15 0 0 0-3.856 2.226L.943 16.777a3.15 3.15 0 0 0 2.226 3.856l12.163 3.259a3.15 3.15 0 0 0 3.855-2.226l3.87-14.443a3.15 3.15 0 0 0-2.226-3.856M6.332 2.741a1.574 1.574 0 0 1 1.928-1.113l12.163 3.26a1.574 1.574 0 0 1 1.113 1.927l-3.87 14.444a1.574 1.574 0 0 1-1.928 1.113l-12.163-3.26a1.574 1.574 0 0 1-1.113-1.927zm2.634 2.336a.787.787 0 1 0-.407 1.52l9.122 2.444a.787.787 0 1 0 .407-1.52zM6.985 9.434a.787.787 0 0 1 .963-.557l9.123 2.445a.787.787 0 0 1-.408 1.52l-9.122-2.444a.787.787 0 0 1-.556-.964m-.055 3.244a.787.787 0 0 0-.407 1.52l5.32 1.427a.787.787 0 0 0 .408-1.52z"/></svg></span> <strong>AC104</strong>. (RA1 // CE1a, CE1g // <strong><abbr title="Actividad de clase">AC</abbr> 0–1</strong>). Esquema comparativo <abbr title="Open Systems Interconnection">OSI</abbr> / TCP-IP: capas, equivalencia, función y un ejemplo de protocolo por capa TCP/IP.</li>
+</ul>
+<h3 id="01-introduccion-arquitectura-tema1-pr102-modelos-en-packet-tracer">PR102 — Modelos en Packet Tracer<a class="headerlink" href="#01-introduccion-arquitectura-tema1-pr102-modelos-en-packet-tracer" title="Permanent link">&para;</a></h3>
+<ul>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16.331 18.171V17.06l-.022.01c-.25.121-.522.19-.801.203a1.2 1.2 0 0 1-.806-.237 1.04 1.04 0 0 1-.352-.498 1.2 1.2 0 0 1-.023-.667c.052-.225.178-.426.357-.569.16-.134.355-.218.562-.242a1.85 1.85 0 0 1 1.061.198l.024.013v-1.117l-.051-.014a2.9 2.9 0 0 0-1.011-.132 2.3 2.3 0 0 0-.903.206c-.287.132-.54.327-.739.571a2.22 2.22 0 0 0-.04 2.705c.295.378.709.645 1.175.756.491.12 1.006.102 1.487-.052zm-10.995 0V17.06l-.022.01c-.25.121-.522.19-.801.203a1.18 1.18 0 0 1-.806-.237 1.03 1.03 0 0 1-.351-.498 1.2 1.2 0 0 1-.024-.667c.052-.225.177-.426.357-.569.16-.134.355-.218.562-.242a1.85 1.85 0 0 1 1.061.198l.024.013v-1.117l-.051-.014a2.9 2.9 0 0 0-1.011-.132 2.3 2.3 0 0 0-.903.206 2.1 2.1 0 0 0-.74.571 2.224 2.224 0 0 0-.041 2.705 2.1 2.1 0 0 0 1.176.756c.491.12 1.005.102 1.487-.052zm3.924-.922-.004.957.07.012q.33.061.664.085.293.028.587.012.282-.021.551-.104c.21-.06.405-.163.571-.305a1.16 1.16 0 0 0 .333-.478 1.3 1.3 0 0 0-.007-.96 1.1 1.1 0 0 0-.298-.414 1.3 1.3 0 0 0-.438-.255l-.722-.268a.4.4 0 0 1-.197-.188.25.25 0 0 1 .008-.219.4.4 0 0 1 .154-.142.8.8 0 0 1 .257-.074q.23-.034.46.005.27.03.533.096l.038.008v-.883l-.069-.015a5 5 0 0 0-.543-.097 2.8 2.8 0 0 0-.714-.003c-.3.027-.585.143-.821.33-.16.126-.281.293-.351.484-.104.29-.105.608 0 .899q.082.219.252.381.146.14.327.236.236.126.497.195.086.026.17.054l.085.031.024.01c.084.03.162.078.226.14q.068.064.101.151a.3.3 0 0 1 .001.161.34.34 0 0 1-.166.198.9.9 0 0 1-.275.086 2 2 0 0 1-.427.021 5 5 0 0 1-.557-.074 9 9 0 0 1-.287-.067zm-2.475.995h1.05v-4.167h-1.05zm12.162-2.936a1.095 1.095 0 0 1 1.541.158 1.094 1.094 0 0 1-.157 1.541l-.017.014a1.096 1.096 0 0 1-1.367-1.713m-1.525.854a2.193 2.193 0 0 0 2.666 2.107 2.139 2.139 0 0 0 .701-3.937 2.207 2.207 0 0 0-3.367 1.83m5.539-5.434a.52.52 0 0 0 1.039 0V9.573a.52.52 0 0 0-1.039 0zm-2.844 0a.522.522 0 0 0 1.041 0V8.139a.521.521 0 0 0-1.04 0v2.589m-2.887 1.043a.521.521 0 0 0 1.039 0V6.17a.52.52 0 0 0-1.039 0zm-2.838-1.043a.521.521 0 0 0 1.04 0V8.139a.52.52 0 0 0-1.039 0zm-2.9 0a.522.522 0 0 0 1.039 0V9.573a.52.52 0 0 0-1.039 0zm-2.87 0a.52.52 0 0 0 1.039 0V8.139a.52.52 0 0 0-1.039 0zm-2.887 1.043a.52.52 0 0 0 1.039 0V6.17a.52.52 0 0 0-1.039 0zm-2.861-1.043a.522.522 0 0 0 1.04 0V8.139a.52.52 0 0 0-1.039 0zm-2.877 0a.521.521 0 0 0 1.039 0V9.573a.52.52 0 0 0-1.039 0z"/></svg></span> <strong>PR102</strong>. (RA1 // CE1a, CE1c // <strong>Opcional · suma en el +1</strong>). En <strong>Packet Tracer</strong>, observad la encapsulación de una petición web (HTTP / TCP / IP / Ethernet) y el papel de DNS (y ARP si aparece). Es voluntaria y va más allá de lo que vemos en este tema: puertos, DNS, ARP y TCP se ven a fondo en temas posteriores. Suma para el <strong>+1</strong> de la nota final solo si la defiendes en una <strong>auditoría</strong> oral cuando el profesor lo indique.</li>
+</ul>
+<p><strong>Antes:</strong> instalad PT con la <a href="#90-guias-packet-tracer">guía inicial</a>.</p>
+<p><strong>Guion:</strong> <a href="#90-guias-pr102-modelos-osi">PR102 — Modelos <abbr title="Open Systems Interconnection">OSI</abbr>/TCP</a> (también en Aules). Usa la topología <code>.pkt</code> de Aules <strong>o</strong> monta la mini-<abbr title="Local Area Network">LAN</abbr> del guion.</p>
+<p><strong>Entrega:</strong> <code>PR102.md</code> + capturas (simulación / <abbr title="Protocol Data Unit">PDU</abbr>). Opcional: <code>.pkt</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Criterio</th>
+<th>Descripción</th>
+<th>Puntos</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Simulación y filtros</td>
+<td>Modo simulación; HTTP (y DNS/TCP) visibles</td>
+<td>0–2</td>
+</tr>
+<tr>
+<td>Lectura <abbr title="Open Systems Interconnection">OSI</abbr> / TCP-IP</td>
+<td>Tabla capa ↔ qué viste en la <abbr title="Protocol Data Unit">PDU</abbr></td>
+<td>0–3</td>
+</tr>
+<tr>
+<td>Preguntas de repaso</td>
+<td>Puerto HTTP, DNS, intercambio en la respuesta</td>
+<td>0–3</td>
+</tr>
+<tr>
+<td>Claridad del <code>.md</code></td>
+<td>Capturas con leyenda; sin datos personales</td>
+<td>0–2</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td></td>
+<td><strong>/10</strong></td>
+</tr>
+</tbody>
+</table>
+<p>La rúbrica valora la práctica; solo cuenta para el +1 si la defiendes en la auditoría.</p>
+<h3 id="01-introduccion-arquitectura-tema1-pr103-mi-primera-red-en-packet-tracer">PR103 — Mi primera red en Packet Tracer<a class="headerlink" href="#01-introduccion-arquitectura-tema1-pr103-mi-primera-red-en-packet-tracer" title="Permanent link">&para;</a></h3>
+<ul>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16.331 18.171V17.06l-.022.01c-.25.121-.522.19-.801.203a1.2 1.2 0 0 1-.806-.237 1.04 1.04 0 0 1-.352-.498 1.2 1.2 0 0 1-.023-.667c.052-.225.178-.426.357-.569.16-.134.355-.218.562-.242a1.85 1.85 0 0 1 1.061.198l.024.013v-1.117l-.051-.014a2.9 2.9 0 0 0-1.011-.132 2.3 2.3 0 0 0-.903.206c-.287.132-.54.327-.739.571a2.22 2.22 0 0 0-.04 2.705c.295.378.709.645 1.175.756.491.12 1.006.102 1.487-.052zm-10.995 0V17.06l-.022.01c-.25.121-.522.19-.801.203a1.18 1.18 0 0 1-.806-.237 1.03 1.03 0 0 1-.351-.498 1.2 1.2 0 0 1-.024-.667c.052-.225.177-.426.357-.569.16-.134.355-.218.562-.242a1.85 1.85 0 0 1 1.061.198l.024.013v-1.117l-.051-.014a2.9 2.9 0 0 0-1.011-.132 2.3 2.3 0 0 0-.903.206 2.1 2.1 0 0 0-.74.571 2.224 2.224 0 0 0-.041 2.705 2.1 2.1 0 0 0 1.176.756c.491.12 1.005.102 1.487-.052zm3.924-.922-.004.957.07.012q.33.061.664.085.293.028.587.012.282-.021.551-.104c.21-.06.405-.163.571-.305a1.16 1.16 0 0 0 .333-.478 1.3 1.3 0 0 0-.007-.96 1.1 1.1 0 0 0-.298-.414 1.3 1.3 0 0 0-.438-.255l-.722-.268a.4.4 0 0 1-.197-.188.25.25 0 0 1 .008-.219.4.4 0 0 1 .154-.142.8.8 0 0 1 .257-.074q.23-.034.46.005.27.03.533.096l.038.008v-.883l-.069-.015a5 5 0 0 0-.543-.097 2.8 2.8 0 0 0-.714-.003c-.3.027-.585.143-.821.33-.16.126-.281.293-.351.484-.104.29-.105.608 0 .899q.082.219.252.381.146.14.327.236.236.126.497.195.086.026.17.054l.085.031.024.01c.084.03.162.078.226.14q.068.064.101.151a.3.3 0 0 1 .001.161.34.34 0 0 1-.166.198.9.9 0 0 1-.275.086 2 2 0 0 1-.427.021 5 5 0 0 1-.557-.074 9 9 0 0 1-.287-.067zm-2.475.995h1.05v-4.167h-1.05zm12.162-2.936a1.095 1.095 0 0 1 1.541.158 1.094 1.094 0 0 1-.157 1.541l-.017.014a1.096 1.096 0 0 1-1.367-1.713m-1.525.854a2.193 2.193 0 0 0 2.666 2.107 2.139 2.139 0 0 0 .701-3.937 2.207 2.207 0 0 0-3.367 1.83m5.539-5.434a.52.52 0 0 0 1.039 0V9.573a.52.52 0 0 0-1.039 0zm-2.844 0a.522.522 0 0 0 1.041 0V8.139a.521.521 0 0 0-1.04 0v2.589m-2.887 1.043a.521.521 0 0 0 1.039 0V6.17a.52.52 0 0 0-1.039 0zm-2.838-1.043a.521.521 0 0 0 1.04 0V8.139a.52.52 0 0 0-1.039 0zm-2.9 0a.522.522 0 0 0 1.039 0V9.573a.52.52 0 0 0-1.039 0zm-2.87 0a.52.52 0 0 0 1.039 0V8.139a.52.52 0 0 0-1.039 0zm-2.887 1.043a.52.52 0 0 0 1.039 0V6.17a.52.52 0 0 0-1.039 0zm-2.861-1.043a.522.522 0 0 0 1.04 0V8.139a.52.52 0 0 0-1.039 0zm-2.877 0a.521.521 0 0 0 1.039 0V9.573a.52.52 0 0 0-1.039 0z"/></svg></span> <strong>PR103</strong>. Mi primera red en Packet Tracer (RA1 // CE1c, CE1d, CE1f, CE1g // <strong><abbr title="Práctica">PR</abbr> 0–10</strong>). Montas desde cero una <abbr title="Local Area Network">LAN</abbr> con un switch y cuatro PC, les das IP y compruebas la conectividad con ping y con el modo Simulación.</li>
+</ul>
+<p><strong>Antes:</strong> <a href="#90-guias-packet-tracer">guía inicial de Packet Tracer</a> (sesión iniciada).</p>
+<p><strong>Guion:</strong> <a href="#90-guias-pr103-primera-red">PR103 — Mi primera red</a> (también en Aules). No hay <code>.pkt</code> de partida: lo construyes tú siguiendo el vídeo.</p>
+<p><strong>Entrega:</strong> <code>PR103.pkt</code> + <code>PR103.md</code> (capturas y respuestas).</p>
+<table>
+<thead>
+<tr>
+<th>Criterio</th>
+<th>Descripción</th>
+<th>Puntos</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Topología y cableado</td>
+<td>switch y 4 PC, cable correcto, enlaces en verde, nombres PC1–PC4 y SW1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Direccionamiento</td>
+<td>IP y máscara según la tabla, en Desktop &gt; IP Configuration, sin puerta de enlace</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Conectividad</td>
+<td>ping correcto de PC1 al resto, con captura</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Simulación</td>
+<td><abbr title="Protocol Data Unit">PDU</abbr> ICMP de PC1 a PC4 que llega y vuelve, con captura de la Event List</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Entrega</td>
+<td>.pkt que abre bien y .md claro, respuestas correctas, sin datos personales</td>
+<td>2</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td></td>
+<td><strong>/10</strong></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="01-introduccion-arquitectura-tema1-referencias-rapidas">Referencias rápidas<a class="headerlink" href="#01-introduccion-arquitectura-tema1-referencias-rapidas" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Sitio del módulo: <a href="https://fjavier-hernandez.github.io/ral/">fjavier-hernandez.github.io/ral</a></li>
+<li>Diagramas: <a href="https://excalidraw.com/">Excalidraw</a>, <a href="https://app.diagrams.net/">draw.io (diagrams.net)</a>, <a href="https://wiki.gnome.org/Apps/Dia">Dia</a></li>
+<li>Simulación: <a href="https://www.netacad.com/es/cisco-packet-tracer">Cisco Packet Tracer</a></li>
+<li>Entregas: <a href="https://code.visualstudio.com/docs">Visual Studio Code</a> + <a href="https://tutorialmarkdown.com/guia">Markdown</a></li>
+<li>Normas: <a href="#00-normas-normas_taller">Normas del taller</a></li>
+</ul></section><section class="print-page" id="02-medios-capa-fisica-tema2" heading-number="5"><h1 id="02-medios-capa-fisica-tema2-tema-2-medios-de-transmision-y-capa-fisica">Tema 2. Medios de transmisión y capa física<a class="headerlink" href="#02-medios-capa-fisica-tema2-tema-2-medios-de-transmision-y-capa-fisica" title="Permanent link">&para;</a></h1>
+<p>En este tema bajamos a la <strong>capa física</strong>: qué medio usamos, qué categoría de cable, cómo se termina un RJ‑45 y cuándo conviene cobre, fibra o radio.</p>
+<div class="admonition tip">
+<p class="admonition-title">Primera clase</p>
+<p>Empieza por el <a href="#02-medios-capa-fisica-tema2-cuestionario-inicial">cuestionario inicial</a>. No hace falta estudiar el tema completo antes: el cuestionario sirve para ver qué sabes al empezar.</p>
+</div>
+<h2 id="02-medios-capa-fisica-tema2-propuesta-didactica">Propuesta didáctica<a class="headerlink" href="#02-medios-capa-fisica-tema2-propuesta-didactica" title="Permanent link">&para;</a></h2>
+<p>Trabajamos los <strong>RA2</strong> y <strong>RA3</strong> del módulo Redes de área local (0225):</p>
+<blockquote>
+<p><strong>RA2.</strong> <em>Despliega el cableado de una red local interpretando especificaciones y aplicando técnicas de montaje.</em></p>
+<p><strong>RA3.</strong> <em>Interconecta equipos en redes locales cableadas describiendo estándares de cableado y aplicando técnicas de montaje de conectores.</em></p>
+</blockquote>
+<h3 id="02-medios-capa-fisica-tema2-criterios-de-evaluacion-seleccion">Criterios de evaluación (selección)<a class="headerlink" href="#02-medios-capa-fisica-tema2-criterios-de-evaluacion-seleccion" title="Permanent link">&para;</a></h3>
+<p><strong>RA2</strong></p>
+<ul>
+<li><strong>CE2a</strong>: Se han reconocido los principios funcionales de las redes locales.</li>
+<li><strong>CE2b</strong>: Se han identificado los distintos tipos de redes.</li>
+<li><strong>CE2c</strong>: Se han diferenciado los medios de transmisión.</li>
+<li><strong>CE2d</strong>: Se han reconocido los detalles del cableado de la instalación y su despliegue (categoría del cableado, espacios por los que discurre, soporte para las canalizaciones, entre otros).</li>
+<li><strong>CE2h</strong>: Se han probado las líneas de comunicación entre las tomas de usuario y paneles de parcheo.</li>
+<li><strong>CE2j</strong>: Se ha trabajado con la calidad y seguridad requeridas.</li>
+</ul>
+<p><strong>RA3</strong></p>
+<ul>
+<li><strong>CE3c</strong>: Se han montado conectores sobre cables (cobre y fibra) de red.</li>
+<li><strong>CE3f</strong>: Se ha verificado la conectividad de la instalación.</li>
+<li><strong>CE3g</strong>: Se ha trabajado con la calidad requerida.</li>
+</ul>
+<h3 id="02-medios-capa-fisica-tema2-contenidos">Contenidos<a class="headerlink" href="#02-medios-capa-fisica-tema2-contenidos" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Medios guiados: par trenzado (categorías y blindaje), coaxial y fibra óptica.</li>
+<li>Conectores RJ‑45; terminaciones <strong>T568A</strong> / <strong>T568B</strong>; cable directo y cruzado.</li>
+<li>Medios no guiados: espectro básico y Wi‑Fi (IEEE 802.11).</li>
+<li>Overview de crimpado de latiguillo y prueba de continuidad.</li>
+</ul>
+<h3 id="02-medios-capa-fisica-tema2-programacion-de-aula-orientativa-1416-h">Programación de aula (orientativa, ~14–16 h)<a class="headerlink" href="#02-medios-capa-fisica-tema2-programacion-de-aula-orientativa-1416-h" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Sesiones</th>
+<th>Contenidos</th>
+<th>Actividades</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Presentación + cuestionario inicial</td>
+<td>Cuestionario</td>
+</tr>
+<tr>
+<td>2–3</td>
+<td>Par trenzado: categorías, blindaje, RJ‑45</td>
+<td><strong>AC201</strong></td>
+</tr>
+<tr>
+<td>4</td>
+<td>Coaxial</td>
+<td>AC202</td>
+</tr>
+<tr>
+<td>5–6</td>
+<td>Fibra óptica (tipos, conectores)</td>
+<td>AC203</td>
+</tr>
+<tr>
+<td>7–8</td>
+<td>Medios no guiados y Wi‑Fi 802.11</td>
+<td>AC204</td>
+</tr>
+<tr>
+<td>9–11</td>
+<td>Crimpado T568A/B + comprobador + etiquetado</td>
+<td><strong>PR201</strong></td>
+</tr>
+<tr>
+<td>12–14</td>
+<td>Packet Tracer: capa física</td>
+<td><strong>PR202</strong></td>
+</tr>
+<tr>
+<td>15–16</td>
+<td>Repaso / ampliación si hace falta</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><a id="cuestionario-inicial"></a></p>
+<h2 id="02-medios-capa-fisica-tema2-cuestionario-inicial">Cuestionario inicial<a class="headerlink" href="#02-medios-capa-fisica-tema2-cuestionario-inicial" title="Permanent link">&para;</a></h2>
+<div class="admonition question">
+<p class="admonition-title">Antes de empezar — responde con lo que sepas</p>
+<ol>
+<li>¿Qué categorías de cable de par trenzado conoces y para qué se usan?</li>
+<li>¿Cuándo conviene fibra óptica frente a cobre?</li>
+<li>¿Qué diferencia hay entre medios guiados y no guiados?</li>
+<li>¿Qué es el espectro electromagnético y por qué importa en redes?</li>
+<li>¿Qué estándares IEEE 802.11 conoces (Wi‑Fi)?</li>
+<li>¿Qué conectores se usan con par trenzado en Ethernet?</li>
+<li>¿En qué se diferencian las terminaciones T568A y T568B?</li>
+<li>¿Qué es un cable directo y un cable cruzado?</li>
+</ol>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Soluciones</p>
+<p>Las soluciones se trabajan en clase o se publican en Aules cuando proceda.</p>
+</div>
+<hr />
+<h2 id="02-medios-capa-fisica-tema2-medios-de-transmision">Medios de transmisión<a class="headerlink" href="#02-medios-capa-fisica-tema2-medios-de-transmision" title="Permanent link">&para;</a></h2>
+<p>La información viaja como señal eléctrica, óptica o radiofrecuencia. El <strong>medio</strong> es el enlace entre emisor y receptor: de su naturaleza dependen alcance, velocidad, coste y vulnerabilidades.</p>
+<h3 id="02-medios-capa-fisica-tema2-medios-guiados-y-no-guiados">Medios guiados y no guiados<a class="headerlink" href="#02-medios-capa-fisica-tema2-medios-guiados-y-no-guiados" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Tipo</th>
+<th>Idea</th>
+<th>Ejemplos en <abbr title="Local Area Network">LAN</abbr></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Guiados</strong></td>
+<td>La señal va por un conductor físico</td>
+<td><abbr title="Unshielded Twisted Pair">UTP</abbr>/FTP, coaxial, fibra</td>
+</tr>
+<tr>
+<td><strong>No guiados</strong></td>
+<td>Propagación por el aire (u otro medio sin cable)</td>
+<td>Wi‑Fi, radioenlaces</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="02-medios-capa-fisica-tema2-par-trenzado">Par trenzado<a class="headerlink" href="#02-medios-capa-fisica-tema2-par-trenzado" title="Permanent link">&para;</a></h2>
+<p>El cable de par trenzado lleva <strong>ocho hilos</strong> agrupados en <strong>cuatro pares</strong>, con cubierta exterior (habitualmente PVC). El trenzado reduce interferencias. Colores de pares (norma habitual):</p>
+<ul>
+<li>Par 1: azul / blanco‑azul  </li>
+<li>Par 2: naranja / blanco‑naranja  </li>
+<li>Par 3: verde / blanco‑verde  </li>
+<li>Par 4: marrón / blanco‑marrón  </li>
+</ul>
+<h3 id="02-medios-capa-fisica-tema2-categorias-vision-practica">Categorías (visión práctica)<a class="headerlink" href="#02-medios-capa-fisica-tema2-categorias-vision-practica" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Categoría</th>
+<th>Ancho de banda (aprox.)</th>
+<th>Uso típico</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cat. 5e</td>
+<td>100 MHz</td>
+<td>Hasta 1 Gbps (instalaciones básicas)</td>
+</tr>
+<tr>
+<td>Cat. 6</td>
+<td>250 MHz</td>
+<td>1 Gbps a 100 m; 10 Gbps a distancias cortas</td>
+</tr>
+<tr>
+<td>Cat. 6a</td>
+<td>500 MHz</td>
+<td>10 Gbps a 100 m</td>
+</tr>
+<tr>
+<td>Cat. 8</td>
+<td>2000 MHz</td>
+<td>25/40 Gbps a distancias cortas (centros de datos)</td>
+</tr>
+</tbody>
+</table>
+<p>Las Cat. 3–5 están obsoletas en instalaciones nuevas. En muchos centros educativos y oficinas se trabaja con <strong>Cat. 6</strong> o <strong>6a</strong>.</p>
+<h3 id="02-medios-capa-fisica-tema2-blindaje-nombres-habituales">Blindaje (nombres habituales)<a class="headerlink" href="#02-medios-capa-fisica-tema2-blindaje-nombres-habituales" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Tipo</th>
+<th>Idea</th>
+<th>Cuándo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>U/<abbr title="Unshielded Twisted Pair">UTP</abbr></strong></td>
+<td>Sin pantalla</td>
+<td>Oficinas / aulas con poca <abbr title="Interferencia electromagnética">EMI</abbr></td>
+</tr>
+<tr>
+<td><strong>F/<abbr title="Unshielded Twisted Pair">UTP</abbr></strong> (FTP)</td>
+<td>Pantalla global de foil</td>
+<td>Interferencias moderadas</td>
+</tr>
+<tr>
+<td><strong>S/FTP</strong></td>
+<td>Pantalla + pares apantallados</td>
+<td>Entornos hostiles</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Nomenclatura</p>
+<p>Verás <abbr title="Unshielded Twisted Pair">UTP</abbr>, FTP, STP… Lo importante es saber si hay <strong>pantalla</strong> y si hay que cuidar la <strong>puesta a tierra</strong> del blindaje.</p>
+</div>
+<h3 id="02-medios-capa-fisica-tema2-conector-rj45">Conector RJ‑45<a class="headerlink" href="#02-medios-capa-fisica-tema2-conector-rj45" title="Permanent link">&para;</a></h3>
+<p>En Ethernet sobre cobre usamos el conector <strong>RJ‑45</strong> (<strong>8P8C</strong>: ocho posiciones, ocho contactos). Puede ser no apantallado o apantallado (carcasa metálica) según el cable.</p>
+<figure>
+  <img alt="Conector RJ-45" src="img/RJ45.png" width="500" />
+<br />
+<figcaption>Conector RJ‑45 para Ethernet</figcaption>
+</figure>
+<h3 id="02-medios-capa-fisica-tema2-terminaciones-t568a-y-t568b">Terminaciones T568A y T568B<a class="headerlink" href="#02-medios-capa-fisica-tema2-terminaciones-t568a-y-t568b" title="Permanent link">&para;</a></h3>
+<p>La norma <strong>TIA/EIA‑568</strong> define dos ordenaciones de colores en el conector:</p>
+<figure>
+  <img alt="Terminaciones T568A y T568B" src="img/T568.png" width="700" />
+<br />
+<figcaption>Terminaciones T568A y T568B en RJ‑45</figcaption>
+</figure>
+<p>Orden de pines (vista del conector con la pestaña abajo, contactos hacia ti):</p>
+<table>
+<thead>
+<tr>
+<th>Pin</th>
+<th>T568A</th>
+<th>T568B</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Blanco/verde</td>
+<td>Blanco/naranja</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Verde</td>
+<td>Naranja</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Blanco/naranja</td>
+<td>Blanco/verde</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Azul</td>
+<td>Azul</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Blanco/azul</td>
+<td>Blanco/azul</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Naranja</td>
+<td>Verde</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Blanco/marrón</td>
+<td>Blanco/marrón</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Marrón</td>
+<td>Marrón</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Truco</p>
+<p>Entre T568A y T568B solo se intercambian los pares <strong>naranja</strong> y <strong>verde</strong>. El azul y el marrón no cambian.</p>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Qué usar en la práctica</p>
+<p>En muchas instalaciones reales se usa <strong>T568B</strong> de extremo a extremo (coherencia). Lo crítico: <strong>misma norma en ambos extremos</strong> del tramo horizontal (salvo cable cruzado a propósito).</p>
+</div>
+<h3 id="02-medios-capa-fisica-tema2-cable-directo-y-cruzado">Cable directo y cruzado<a class="headerlink" href="#02-medios-capa-fisica-tema2-cable-directo-y-cruzado" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Directo</strong>: misma terminación en ambos extremos (T568B–T568B o T568A–T568A). Es el habitual (PC ↔ switch, TO ↔ panel…).</li>
+<li><strong>Cruzado</strong>: T568A en un extremo y T568B en el otro. Históricamente unía equipos “iguales” (PC–PC, switch–switch). Hoy muchos puertos son <strong>Auto‑MDIX</strong> y aceptan directo.</li>
+</ul>
+<figure>
+  <img alt="Cable directo" src="img/cable_directo.png" width="640" />
+<br />
+<figcaption>Cable directo: misma terminación en ambos extremos</figcaption>
+</figure>
+<figure>
+  <img alt="Cable cruzado" src="img/cable_cruzado.png" width="640" />
+<br />
+<figcaption>Cable cruzado: terminaciones distintas (T568A + T568B)</figcaption>
+</figure>
+<hr />
+<h2 id="02-medios-capa-fisica-tema2-cable-coaxial">Cable coaxial<a class="headerlink" href="#02-medios-capa-fisica-tema2-cable-coaxial" title="Permanent link">&para;</a></h2>
+<p>El <strong>coaxial</strong> tiene conductor central, dieléctrico, malla/pantalla y cubierta. Resiste bien <abbr title="Interferencia electromagnética">EMI</abbr> y atenúa menos que el <abbr title="Unshielded Twisted Pair">UTP</abbr> en ciertos escenarios, pero en <abbr title="Local Area Network">LAN</abbr> modernas (Ethernet) está en desuso (topología de bus). Sigue vivo en TV / HFC / radiofrecuencia.</p>
+<figure>
+  <img alt="Conectores coaxiales" src="img/Conec_Coaxial.png" width="700" />
+<br />
+<figcaption>Conectores coaxiales habituales (BNC, N, TNC, SMA…)</figcaption>
+</figure>
+<p><strong>Conectores RF</strong> (macho/hembra): anclaje, rosca o presión. En Ethernet antiguo (10BASE2) se usaba <strong>BNC</strong> y <strong>terminadores</strong> en los extremos del bus.</p>
+<p>Tipos que aún verás citados:</p>
+<table>
+<thead>
+<tr>
+<th>Tipo</th>
+<th>Uso típico</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RG‑58</td>
+<td>Ethernet antiguo 10BASE2 (obsoleto en <abbr title="Local Area Network">LAN</abbr>)</td>
+</tr>
+<tr>
+<td>RG‑59 / RG‑6</td>
+<td>TV / vídeo / HFC</td>
+</tr>
+<tr>
+<td>RG‑8</td>
+<td>Ethernet grueso histórico (10BASE5)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="02-medios-capa-fisica-tema2-fibra-optica">Fibra óptica<a class="headerlink" href="#02-medios-capa-fisica-tema2-fibra-optica" title="Permanent link">&para;</a></h2>
+<p>La <strong>fibra</strong> transporta luz por un núcleo de vidrio o plástico. Ventajas: gran ancho de banda, poca atenuación a larga distancia, inmunidad a <abbr title="Interferencia electromagnética">EMI</abbr> y más difícil de interceptar. Coste e instalación más exigentes.</p>
+<figure>
+  <img alt="Estructura de un cable de fibra" src="img/estructurafibra.png" width="600" />
+<br />
+<figcaption>Estructura típica de un cable de fibra óptica</figcaption>
+</figure>
+<h3 id="02-medios-capa-fisica-tema2-multimodo-mm-y-monomodo-sm">Multimodo (MM) y monomodo (SM)<a class="headerlink" href="#02-medios-capa-fisica-tema2-multimodo-mm-y-monomodo-sm" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Tipo</th>
+<th>Núcleo (orden)</th>
+<th>Emisor típico</th>
+<th>Uso</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Multimodo</strong></td>
+<td>~50–62,5 μm</td>
+<td>LED / láser VCSEL</td>
+<td>Campus, edificios, cortas–medias distancias</td>
+</tr>
+<tr>
+<td><strong>Monomodo</strong></td>
+<td>~9 μm</td>
+<td>Láser</td>
+<td>Largas distancias, backbone, operadores</td>
+</tr>
+</tbody>
+</table>
+<p>Clases habituales: <strong>OM1–OM4</strong> (multimodo) y <strong>OS1/OS2</strong> (monomodo). Elegimos según velocidad y metros a cubrir.</p>
+<table>
+<thead>
+<tr>
+<th>Velocidad (orientativa)</th>
+<th>Distancia corta</th>
+<th>Distancia media</th>
+<th>Larga</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1 Gbps</td>
+<td>OM1 / OM2</td>
+<td>OM3 / OM4</td>
+<td>OS1/OS2</td>
+</tr>
+<tr>
+<td>10 Gbps</td>
+<td>OM3 / OM4</td>
+<td>OS1/OS2</td>
+<td>OS1/OS2</td>
+</tr>
+</tbody>
+</table>
+<p>Estructuras de cable: <strong>loose-tube</strong> (exteriores / tendidos largos, a menudo con gel) y <strong>tight-buffered</strong> (interiores, más fácil de conectar).</p>
+<h3 id="02-medios-capa-fisica-tema2-conectores">Conectores<a class="headerlink" href="#02-medios-capa-fisica-tema2-conectores" title="Permanent link">&para;</a></h3>
+<p>ST, SC, LC, MPO… En racks modernos es muy frecuente <strong>LC</strong>.</p>
+<figure>
+  <img alt="Conectores de fibra óptica" src="img/conectores_Foptica.png" width="700" />
+<br />
+<figcaption>Conectores de fibra óptica habituales en redes</figcaption>
+</figure>
+<h3 id="02-medios-capa-fisica-tema2-escala-global-contexto">Escala global (contexto)<a class="headerlink" href="#02-medios-capa-fisica-tema2-escala-global-contexto" title="Permanent link">&para;</a></h3>
+<p>La fibra submarina es la columna vertebral de Internet. Explora el mapa interactivo si te interesa el contexto:</p>
+<figure>
+  <img alt="Red mundial de fibra submarina" src="img/RedMundialFibra.png" width="800" />
+<br />
+<figcaption>Red mundial de cables submarinos de fibra óptica</figcaption>
+</figure>
+<p><a href="https://www.submarinecablemap.com">Submarine Cable Map</a></p>
+<hr />
+<h2 id="02-medios-capa-fisica-tema2-medios-no-guiados-y-wifi-basico">Medios no guiados y Wi‑Fi básico<a class="headerlink" href="#02-medios-capa-fisica-tema2-medios-no-guiados-y-wifi-basico" title="Permanent link">&para;</a></h2>
+<p>Sin cable, la señal se propaga como onda electromagnética. El <strong>espectro</strong> se reparte en bandas (radio, microondas, IR…) para que servicios distintos no se pisen.</p>
+<figure>
+  <img alt="Espectro electromagnético" src="img/espectroradio.png" width="800" />
+<br />
+<figcaption>Espectro electromagnético y bandas de interés en comunicaciones</figcaption>
+</figure>
+<p>Ideas útiles a nivel SMR:</p>
+<ul>
+<li><strong>ISM 2,4 GHz / 5 GHz (y 6 GHz)</strong>: Wi‑Fi, Bluetooth…</li>
+<li>En España, la atribución oficial se recoge en el <strong>CNAF</strong>.</li>
+<li>Estándares IEEE: <strong>802.11</strong> (WLAN), <strong>802.15</strong> (WPAN: Bluetooth, ZigBee…), etc.</li>
+</ul>
+<h3 id="02-medios-capa-fisica-tema2-ieee-80211-resumen">IEEE 802.11 (resumen)<a class="headerlink" href="#02-medios-capa-fisica-tema2-ieee-80211-resumen" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Generación</th>
+<th>Estándar</th>
+<th>Bandas</th>
+<th>Idea</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Wi‑Fi 4</td>
+<td>802.11n</td>
+<td>2,4 / 5 GHz</td>
+<td>MIMO; hasta cientos de Mbps</td>
+</tr>
+<tr>
+<td>Wi‑Fi 5</td>
+<td>802.11ac</td>
+<td>5 GHz</td>
+<td>MU‑MIMO; Gbps</td>
+</tr>
+<tr>
+<td>Wi‑Fi 6</td>
+<td>802.11ax</td>
+<td>2,4 / 5 / 6 GHz</td>
+<td>Mejor eficiencia en densos</td>
+</tr>
+<tr>
+<td>Wi‑Fi 7</td>
+<td>802.11be</td>
+<td>2,4 / 5 / 6 GHz</td>
+<td>Mayor capacidad (entornos exigentes)</td>
+</tr>
+</tbody>
+</table>
+<p>El montaje y la configuración de AP se profundiza en el <strong>Tema 3</strong> (y seguridad Wi‑Fi / VLAN en temas posteriores).</p>
+<hr />
+<h2 id="02-medios-capa-fisica-tema2-crimpado-de-latiguillo-overview">Crimpado de latiguillo (overview)<a class="headerlink" href="#02-medios-capa-fisica-tema2-crimpado-de-latiguillo-overview" title="Permanent link">&para;</a></h2>
+<p><strong>Materiales y herramientas habituales:</strong> cable <abbr title="Unshielded Twisted Pair">UTP</abbr> de la categoría indicada, dos conectores RJ‑45, pelacables, crimpadora RJ‑45, cutter y comprobador de cable (tester).</p>
+<p>En taller fabricamos un <strong>latiguillo</strong> <abbr title="Unshielded Twisted Pair">UTP</abbr> con dos RJ‑45:</p>
+<ol>
+<li>Cortar a medida y pelar la cubierta (sin dañar los pares; deja ~2–3 cm de hilos).</li>
+<li>Deshacer el trenzado lo mínimo necesario y ordenar colores según <strong>T568B</strong> (o la norma que indique el profesorado).</li>
+<li>Cortar hilos a la misma longitud e insertarlos hasta el fondo del conector (el aislamiento de la cubierta debe entrar un poco en el conector).</li>
+<li><strong>Crimpar</strong> de un solo golpe con la herramienta adecuada; comprobar que los contactos han bajado.</li>
+<li>Repetir en el otro extremo (<strong>misma</strong> terminación → cable directo).</li>
+<li><strong>Probar</strong> con comprobador de cable / continuidad (y, si hay, tester de cableado o certificación).</li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Calidad y seguridad</p>
+<p>Gafas si el taller lo exige; no pellizcar el cable; no dejar hilos fuera del conector; etiquetar el latiguillo. Un crimpado malo falla en producción aunque “parezca” enchufado.</p>
+</div>
+<p>El detalle de paneles, TO y canalizaciones se desarrolla en el <strong>Tema 3</strong>.</p>
+<hr />
+<h2 id="02-medios-capa-fisica-tema2-actividades">Actividades<a class="headerlink" href="#02-medios-capa-fisica-tema2-actividades" title="Permanent link">&para;</a></h2>
+<div class="admonition tip">
+<p class="admonition-title">Formato de entrega</p>
+<p>Las entregas en <strong>Aules</strong> son <strong>obligatorias en Markdown</strong> (<code>.md</code>). No se aceptan PDF.<br />
+Nombre del archivo: <code>AC2XX.md</code> o <code>PR2XX.md</code> (sustituye XX por el número). Respeta la fecha de vencimiento.<br />
+Escribiremos los <code>.md</code> con <strong>Visual Studio Code</strong>.</p>
+<div class="admonition note">
+<p class="admonition-title">Cómo empezar</p>
+<ul>
+<li>Guía de Markdown: <a href="https://tutorialmarkdown.com/guia">tutorialmarkdown.com/guia</a></li>
+<li>Documentación de Visual Studio Code: <a href="https://code.visualstudio.com/docs">code.visualstudio.com/docs</a></li>
+</ul>
+</div>
+</div>
+<h3 id="02-medios-capa-fisica-tema2-ac201-categorias-utp">AC201 — Categorías <abbr title="Unshielded Twisted Pair">UTP</abbr><a class="headerlink" href="#02-medios-capa-fisica-tema2-ac201-categorias-utp" title="Permanent link">&para;</a></h3>
+<ul>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.832 3.367 8.668.108a3.15 3.15 0 0 0-3.856 2.226L.943 16.777a3.15 3.15 0 0 0 2.226 3.856l12.163 3.259a3.15 3.15 0 0 0 3.855-2.226l3.87-14.443a3.15 3.15 0 0 0-2.226-3.856M6.332 2.741a1.574 1.574 0 0 1 1.928-1.113l12.163 3.26a1.574 1.574 0 0 1 1.113 1.927l-3.87 14.444a1.574 1.574 0 0 1-1.928 1.113l-12.163-3.26a1.574 1.574 0 0 1-1.113-1.927zm2.634 2.336a.787.787 0 1 0-.407 1.52l9.122 2.444a.787.787 0 1 0 .407-1.52zM6.985 9.434a.787.787 0 0 1 .963-.557l9.123 2.445a.787.787 0 0 1-.408 1.52l-9.122-2.444a.787.787 0 0 1-.556-.964m-.055 3.244a.787.787 0 0 0-.407 1.52l5.32 1.427a.787.787 0 0 0 .408-1.52z"/></svg></span> <strong>AC201</strong>. (RA2 // CE2c, CE2d // <strong><abbr title="Actividad de clase">AC</abbr> 0–1</strong>). Elabora una tabla comparativa de categorías de par trenzado (al menos 5e, 6, 6a y 8): ancho de banda, velocidades típicas, distancia y usos. Indica cuál elegirías para un aula y por qué.</li>
+</ul>
+<h3 id="02-medios-capa-fisica-tema2-ac202-coaxial">AC202 — Coaxial<a class="headerlink" href="#02-medios-capa-fisica-tema2-ac202-coaxial" title="Permanent link">&para;</a></h3>
+<ul>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.832 3.367 8.668.108a3.15 3.15 0 0 0-3.856 2.226L.943 16.777a3.15 3.15 0 0 0 2.226 3.856l12.163 3.259a3.15 3.15 0 0 0 3.855-2.226l3.87-14.443a3.15 3.15 0 0 0-2.226-3.856M6.332 2.741a1.574 1.574 0 0 1 1.928-1.113l12.163 3.26a1.574 1.574 0 0 1 1.113 1.927l-3.87 14.444a1.574 1.574 0 0 1-1.928 1.113l-12.163-3.26a1.574 1.574 0 0 1-1.113-1.927zm2.634 2.336a.787.787 0 1 0-.407 1.52l9.122 2.444a.787.787 0 1 0 .407-1.52zM6.985 9.434a.787.787 0 0 1 .963-.557l9.123 2.445a.787.787 0 0 1-.408 1.52l-9.122-2.444a.787.787 0 0 1-.556-.964m-.055 3.244a.787.787 0 0 0-.407 1.52l5.32 1.427a.787.787 0 0 0 .408-1.52z"/></svg></span> <strong>AC202</strong>. (RA2 // CE2c // <strong><abbr title="Actividad de clase">AC</abbr> 0–1</strong>). Resume estructura del coaxial, tipos/aplicaciones (RG‑58, RG‑6…), conectores (BNC, etc.) y ventajas/desventajas frente a <abbr title="Unshielded Twisted Pair">UTP</abbr> en <abbr title="Local Area Network">LAN</abbr> actuales.</li>
+</ul>
+<h3 id="02-medios-capa-fisica-tema2-ac203-fibra-optica">AC203 — Fibra óptica<a class="headerlink" href="#02-medios-capa-fisica-tema2-ac203-fibra-optica" title="Permanent link">&para;</a></h3>
+<ul>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.832 3.367 8.668.108a3.15 3.15 0 0 0-3.856 2.226L.943 16.777a3.15 3.15 0 0 0 2.226 3.856l12.163 3.259a3.15 3.15 0 0 0 3.855-2.226l3.87-14.443a3.15 3.15 0 0 0-2.226-3.856M6.332 2.741a1.574 1.574 0 0 1 1.928-1.113l12.163 3.26a1.574 1.574 0 0 1 1.113 1.927l-3.87 14.444a1.574 1.574 0 0 1-1.928 1.113l-12.163-3.26a1.574 1.574 0 0 1-1.113-1.927zm2.634 2.336a.787.787 0 1 0-.407 1.52l9.122 2.444a.787.787 0 1 0 .407-1.52zM6.985 9.434a.787.787 0 0 1 .963-.557l9.123 2.445a.787.787 0 0 1-.408 1.52l-9.122-2.444a.787.787 0 0 1-.556-.964m-.055 3.244a.787.787 0 0 0-.407 1.52l5.32 1.427a.787.787 0 0 0 .408-1.52z"/></svg></span> <strong>AC203</strong>. (RA2 // CE2c // <strong><abbr title="Actividad de clase">AC</abbr> 0–1</strong>). Explica principio de funcionamiento, MM vs SM, clases OM/OS, conectores habituales, ventajas/desventajas y precauciones de manipulación.</li>
+</ul>
+<h3 id="02-medios-capa-fisica-tema2-ac204-medios-no-guiados-wifi">AC204 — Medios no guiados / Wi‑Fi<a class="headerlink" href="#02-medios-capa-fisica-tema2-ac204-medios-no-guiados-wifi" title="Permanent link">&para;</a></h3>
+<ul>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.832 3.367 8.668.108a3.15 3.15 0 0 0-3.856 2.226L.943 16.777a3.15 3.15 0 0 0 2.226 3.856l12.163 3.259a3.15 3.15 0 0 0 3.855-2.226l3.87-14.443a3.15 3.15 0 0 0-2.226-3.856M6.332 2.741a1.574 1.574 0 0 1 1.928-1.113l12.163 3.26a1.574 1.574 0 0 1 1.113 1.927l-3.87 14.444a1.574 1.574 0 0 1-1.928 1.113l-12.163-3.26a1.574 1.574 0 0 1-1.113-1.927zm2.634 2.336a.787.787 0 1 0-.407 1.52l9.122 2.444a.787.787 0 1 0 .407-1.52zM6.985 9.434a.787.787 0 0 1 .963-.557l9.123 2.445a.787.787 0 0 1-.408 1.52l-9.122-2.444a.787.787 0 0 1-.556-.964m-.055 3.244a.787.787 0 0 0-.407 1.52l5.32 1.427a.787.787 0 0 0 .408-1.52z"/></svg></span> <strong>AC204</strong>. (RA2 // CE2a, CE2b, CE2c // <strong><abbr title="Actividad de clase">AC</abbr> 0–1</strong>). Compara medios no guiados (radio, microondas, IR…) y resume estándares 802.11 (Wi‑Fi 4/5/6): bandas, idea de velocidad y un uso típico cada uno. Relaciónalo con tipos de red (WLAN / <abbr title="Local Area Network">LAN</abbr> mixta).</li>
+</ul>
+<h3 id="02-medios-capa-fisica-tema2-pr201-crimpado-utp-t568ab-comprobador-etiquetado">PR201 — Crimpado <abbr title="Unshielded Twisted Pair">UTP</abbr> (T568A/B) + comprobador + etiquetado<a class="headerlink" href="#02-medios-capa-fisica-tema2-pr201-crimpado-utp-t568ab-comprobador-etiquetado" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Valor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Código</strong></td>
+<td><strong>PR201</strong></td>
+</tr>
+<tr>
+<td><strong>UP / tema</strong></td>
+<td>T2 — Medios y capa física</td>
+</tr>
+<tr>
+<td><strong><abbr title="Resultado de aprendizaje">RA</abbr> principal</strong></td>
+<td><strong>RA3</strong> (montaje de conectores y verificación). Apoyo: <strong>RA2</strong> (prueba de líneas), <strong>RA6</strong> (PRL/EPI)</td>
+</tr>
+<tr>
+<td><strong><abbr title="Criterio de evaluación">CE</abbr> de cobertura</strong></td>
+<td>CE3c, CE3f, CE3g · CE2h, CE2j · CE6b, CE6e</td>
+</tr>
+<tr>
+<td><strong>Sesiones estimadas</strong></td>
+<td><strong>2–3</strong></td>
+</tr>
+<tr>
+<td><strong>Instrumento</strong></td>
+<td>Checklist de taller + rúbrica 0–10</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5.563 1.396a.95.95 0 0 0-.534.184c-.404.307-.501.9-.425 1.654.075.755.335 1.704.751 2.8.357.937.835 1.984 1.407 3.095-1.17.146-2.24.338-3.158.57-1.08.274-1.958.6-2.583.973C.397 11.045 0 11.484 0 12s.397.955 1.021 1.328c.55.33 1.308.618 2.217.87a1 1 0 0 0-.006.097c0 .485.365.887.82.887.368 0 .678-.26.784-.616q.89.171 1.898.297a31 31 0 0 0-1.408 3.067c-.421 1.093-.686 2.04-.765 2.795-.08.754.016 1.347.42 1.656.201.154.46.208.734.181s.572-.125.896-.287c.649-.323 1.407-.894 2.244-1.67.962-.89 2.026-2.058 3.118-3.421 1.086 1.37 2.146 2.543 3.103 3.439.834.78 1.588 1.355 2.235 1.682.323.163.62.265.894.293s.534-.025.736-.178c.405-.307.502-.9.426-1.654-.054-.54-.206-1.18-.437-1.9a.91.91 0 0 0 .343-.72.92.92 0 0 0-.238-.625.8.8 0 0 0-.701-.251c-.312-.75-.69-1.557-1.125-2.4a27 27 0 0 0 3.187-.575c1.08-.273 1.958-.597 2.583-.97.624-.374 1.021-.813 1.021-1.329s-.397-.957-1.021-1.33c-.625-.373-1.503-.696-2.583-.969a27 27 0 0 0-3.156-.568 31 31 0 0 0 1.406-3.063c.422-1.093.687-2.04.766-2.795.08-.754-.017-1.347-.42-1.656a.95.95 0 0 0-.531-.185 1.3 1.3 0 0 0-.203.004c-.274.026-.57.127-.895.289-.51.254-1.092.665-1.722 1.205a.8.8 0 0 0-.418-.123c-.456 0-.82.4-.82.886q0 .178.06.334a35 35 0 0 0-2.465 2.791c-1.086-1.37-2.146-2.543-3.103-3.439-.834-.78-1.588-1.355-2.235-1.682-.323-.163-.62-.265-.894-.293a1.3 1.3 0 0 0-.204-.006zm.021.385a1 1 0 0 1 .143.004c.205.02.462.105.757.254.592.298 1.33.855 2.147 1.62.955.893 2.022 2.077 3.119 3.466-.428.544-.859 1.12-1.29 1.72a42 42 0 0 0-3.29.235 31 31 0 0 1-1.453-3.184c-.409-1.075-.658-2.002-.729-2.7-.07-.7.05-1.136.276-1.307a.55.55 0 0 1 .32-.108m12.854.033a.55.55 0 0 1 .32.108c.225.172.343.61.27 1.308s-.33 1.624-.743 2.698a31 31 0 0 1-1.455 3.15 42 42 0 0 0-3.312-.234 49 49 0 0 0-1.274-1.717 35 35 0 0 1 2.436-2.772.78.78 0 0 0 .543.223c.456 0 .82-.401.82-.887a.94.94 0 0 0-.133-.484c.61-.519 1.163-.909 1.625-1.139.297-.147.555-.23.76-.25a1 1 0 0 1 .142-.004zm-6.442 5.622c.344.443.69.913 1.035 1.394q-.51-.012-1.031-.014-.532.001-1.05.014c.35-.481.699-.95 1.046-1.394M12 9.203q.668.001 1.314.02.398.563.793 1.154c.366.55.71 1.093 1.041 1.633a54 54 0 0 1-1.046 1.623q-.395.584-.791 1.138-.646.02-1.311.022-.684-.001-1.348-.022a53 53 0 0 1-.789-1.148 52 52 0 0 1-1.04-1.633 53 53 0 0 1 1.84-2.765q.658-.02 1.337-.022m-1.824.04q-.315.444-.625.905c-.334.496-.647.988-.953 1.477a47 47 0 0 1-1.239-2.178 41 41 0 0 1 2.817-.205zm3.625 0a41 41 0 0 1 2.838.202 47 47 0 0 1-1.264 2.198 53 53 0 0 0-1.574-2.4m3.248.251c1.213.146 2.317.34 3.252.576 1.057.268 1.907.587 2.478.928s.834.689.834.998-.263.655-.834.996c-.57.342-1.421.662-2.478.93-.943.239-2.056.433-3.281.58a47 47 0 0 0-1.416-2.492 47 47 0 0 0 1.445-2.516M6.95 9.496c.424.805.899 1.64 1.418 2.494a47 47 0 0 0-1.443 2.508 30 30 0 0 1-2.059-.318.9.9 0 0 0-.23-.508.8.8 0 0 0-.584-.262.8.8 0 0 0-.696.418c-.894-.247-1.63-.53-2.136-.832C.65 12.655.387 12.31.387 12s.263-.654.834-.996c.57-.342 1.421-.662 2.478-.93.935-.237 2.039-.431 3.252-.578zm4.34.8c-.576 0-1.041.5-1.041 1.112 0 .484.29.897.695 1.049v.063c0 .612.466 1.109 1.041 1.109.576 0 1.041-.497 1.041-1.11q0-.025-.002-.05c.424-.141.73-.565.73-1.063 0-.294-.107-.575-.302-.783a1.01 1.01 0 0 0-.738-.326 1 1 0 0 0-.711.3 1 1 0 0 0-.713-.3zm-2.695 2.061a51 51 0 0 0 1.572 2.397c-.99-.04-1.941-.108-2.832-.205q.573-1.067 1.26-2.192m6.779.02c.448.743.862 1.472 1.236 2.176a42 42 0 0 1-2.814.199q.313-.443.625-.902c.333-.495.647-.986.953-1.473m-8.23 2.537c1.033.117 2.141.198 3.304.236.427.6.854 1.179 1.278 1.723-1.103 1.382-2.176 2.561-3.135 3.45-.821.76-1.562 1.31-2.155 1.605-.296.147-.554.23-.76.25s-.35-.018-.462-.104c-.225-.172-.343-.61-.27-1.308s.329-1.624.742-2.698c.366-.948.861-2.018 1.458-3.154m9.656.004c.459.884.854 1.727 1.178 2.504a.91.91 0 0 0-.348.724c0 .486.364.887.82.887a1 1 0 0 0 .123-.01c.218.686.36 1.293.408 1.782.07.698-.05 1.135-.275 1.306-.113.086-.258.124-.463.104s-.462-.105-.758-.254c-.59-.298-1.329-.855-2.146-1.62-.955-.893-2.023-2.077-3.12-3.466.43-.545.862-1.123 1.294-1.725a42 42 0 0 0 3.287-.232m-3.776.246a49 49 0 0 1-1.05 1.4 49 49 0 0 1-1.04-1.398 47 47 0 0 0 2.09-.002"/></svg></span> <strong>PR201</strong>. En taller, en pareja: fabricad un latiguillo <strong><abbr title="Unshielded Twisted Pair">UTP</abbr> directo</strong> con terminación <strong>T568B</strong> en ambos extremos (el profesor puede pedir un extremo en <strong>T568A</strong> para contrastar el estándar). Probad con el <strong>comprobador</strong>, <strong>etiquetad</strong> el cable y documentad el proceso.</li>
+</ul>
+<p><strong>Enunciado (pasos):</strong></p>
+<ol>
+<li>Materiales: <abbr title="Unshielded Twisted Pair">UTP</abbr> de la categoría indicada, 2× RJ‑45, pelacables, crimpadora, cutter, comprobador, etiquetas.</li>
+<li>Pelar ~2–2,5 cm; ordenar pares según el esquema (T568B por defecto); cortar a la misma longitud; insertar hasta el tope (la funda entra en el conector).</li>
+<li>Crimpar de un solo golpe; repetir el otro extremo.</li>
+<li>Probar en el comprobador (continuidad / pares / polaridad). Si falla: abrir, identificar el error y rehacer.</li>
+<li>Etiquetar (código que indique el profesor, p. ej. <code>PR201-Gx-nn</code>).</li>
+<li>Entregar el <strong>cable físico</strong> + evidencias digitales.</li>
+</ol>
+<p><strong>Errores típicos a evitar / documentar si ocurren:</strong> pares cruzados o invertidos; hilos fuera del conector; funda que no entra; crimpado doble o incompleto; no etiquetar; ignorar EPI (gafas si el taller lo exige).</p>
+<p><strong>Evidencia:</strong> latiguillo OK al tester + foto de ambos extremos (colores visibles) + foto/captura del comprobador + checklist firmada + <code>PR201.md</code>.</p>
+<p><strong>Entrega:</strong> <code>PR201.md</code> + evidencias según Aules.</p>
+<table>
+<thead>
+<tr>
+<th>Criterio (rúbrica)</th>
+<th>Descripción</th>
+<th>Puntos</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Procedimiento</td>
+<td>Pasos claros, ordenados y seguros</td>
+<td>0–2</td>
+</tr>
+<tr>
+<td>Terminación T568A/B</td>
+<td>Colores correctos en ambos extremos</td>
+<td>0–2</td>
+</tr>
+<tr>
+<td>Prueba</td>
+<td>Evidencia de continuidad / OK del tester</td>
+<td>0–2</td>
+</tr>
+<tr>
+<td>Calidad + etiquetado</td>
+<td>Acabado, sin hilos fuera, etiqueta legible</td>
+<td>0–2</td>
+</tr>
+<tr>
+<td>Informe <code>.md</code></td>
+<td>Completo, con fotos y errores/correcciones</td>
+<td>0–2</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td></td>
+<td><strong>/10</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="02-medios-capa-fisica-tema2-pr202-packet-tracer-capa-fisica">PR202 — Packet Tracer: capa física<a class="headerlink" href="#02-medios-capa-fisica-tema2-pr202-packet-tracer-capa-fisica" title="Permanent link">&para;</a></h3>
+<ul>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16.331 18.171V17.06l-.022.01c-.25.121-.522.19-.801.203a1.2 1.2 0 0 1-.806-.237 1.04 1.04 0 0 1-.352-.498 1.2 1.2 0 0 1-.023-.667c.052-.225.178-.426.357-.569.16-.134.355-.218.562-.242a1.85 1.85 0 0 1 1.061.198l.024.013v-1.117l-.051-.014a2.9 2.9 0 0 0-1.011-.132 2.3 2.3 0 0 0-.903.206c-.287.132-.54.327-.739.571a2.22 2.22 0 0 0-.04 2.705c.295.378.709.645 1.175.756.491.12 1.006.102 1.487-.052zm-10.995 0V17.06l-.022.01c-.25.121-.522.19-.801.203a1.18 1.18 0 0 1-.806-.237 1.03 1.03 0 0 1-.351-.498 1.2 1.2 0 0 1-.024-.667c.052-.225.177-.426.357-.569.16-.134.355-.218.562-.242a1.85 1.85 0 0 1 1.061.198l.024.013v-1.117l-.051-.014a2.9 2.9 0 0 0-1.011-.132 2.3 2.3 0 0 0-.903.206 2.1 2.1 0 0 0-.74.571 2.224 2.224 0 0 0-.041 2.705 2.1 2.1 0 0 0 1.176.756c.491.12 1.005.102 1.487-.052zm3.924-.922-.004.957.07.012q.33.061.664.085.293.028.587.012.282-.021.551-.104c.21-.06.405-.163.571-.305a1.16 1.16 0 0 0 .333-.478 1.3 1.3 0 0 0-.007-.96 1.1 1.1 0 0 0-.298-.414 1.3 1.3 0 0 0-.438-.255l-.722-.268a.4.4 0 0 1-.197-.188.25.25 0 0 1 .008-.219.4.4 0 0 1 .154-.142.8.8 0 0 1 .257-.074q.23-.034.46.005.27.03.533.096l.038.008v-.883l-.069-.015a5 5 0 0 0-.543-.097 2.8 2.8 0 0 0-.714-.003c-.3.027-.585.143-.821.33-.16.126-.281.293-.351.484-.104.29-.105.608 0 .899q.082.219.252.381.146.14.327.236.236.126.497.195.086.026.17.054l.085.031.024.01c.084.03.162.078.226.14q.068.064.101.151a.3.3 0 0 1 .001.161.34.34 0 0 1-.166.198.9.9 0 0 1-.275.086 2 2 0 0 1-.427.021 5 5 0 0 1-.557-.074 9 9 0 0 1-.287-.067zm-2.475.995h1.05v-4.167h-1.05zm12.162-2.936a1.095 1.095 0 0 1 1.541.158 1.094 1.094 0 0 1-.157 1.541l-.017.014a1.096 1.096 0 0 1-1.367-1.713m-1.525.854a2.193 2.193 0 0 0 2.666 2.107 2.139 2.139 0 0 0 .701-3.937 2.207 2.207 0 0 0-3.367 1.83m5.539-5.434a.52.52 0 0 0 1.039 0V9.573a.52.52 0 0 0-1.039 0zm-2.844 0a.522.522 0 0 0 1.041 0V8.139a.521.521 0 0 0-1.04 0v2.589m-2.887 1.043a.521.521 0 0 0 1.039 0V6.17a.52.52 0 0 0-1.039 0zm-2.838-1.043a.521.521 0 0 0 1.04 0V8.139a.52.52 0 0 0-1.039 0zm-2.9 0a.522.522 0 0 0 1.039 0V9.573a.52.52 0 0 0-1.039 0zm-2.87 0a.52.52 0 0 0 1.039 0V8.139a.52.52 0 0 0-1.039 0zm-2.887 1.043a.52.52 0 0 0 1.039 0V6.17a.52.52 0 0 0-1.039 0zm-2.861-1.043a.522.522 0 0 0 1.04 0V8.139a.52.52 0 0 0-1.039 0zm-2.877 0a.521.521 0 0 0 1.039 0V9.573a.52.52 0 0 0-1.039 0z"/></svg></span> <strong>PR202</strong>. (RA2 // CE2c, CE2d // RA3 // CE3f // <strong><abbr title="Práctica">PR</abbr> 0–10</strong>). Simulación en Packet Tracer: identificar puertos/módulos, elegir el tipo de cable adecuado y verificar conectividad física. El guion completo se facilitará en clase / Aules.</li>
+</ul>
+<hr />
+<h2 id="02-medios-capa-fisica-tema2-referencias-rapidas">Referencias rápidas<a class="headerlink" href="#02-medios-capa-fisica-tema2-referencias-rapidas" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Sitio del módulo: <a href="https://fjavier-hernandez.github.io/ral/">fjavier-hernandez.github.io/ral</a></li>
+<li>Mapa de fibra submarina: <a href="https://www.submarinecablemap.com">submarinecablemap.com</a></li>
+<li>Simulación: <a href="https://www.netacad.com/es/cisco-packet-tracer">Cisco Packet Tracer</a></li>
+<li>Entregas: <a href="https://code.visualstudio.com/docs">Visual Studio Code</a> + <a href="https://tutorialmarkdown.com/guia">Markdown</a></li>
+<li>Normas: <a href="#00-normas-normas_taller">Normas del taller</a></li>
+</ul></section></div><style>.print-site-enumerate-headings #index > h1:before { content: '1 ' }
+
+                .print-site-enumerate-headings #index h2:before { content: '1.' counter(counter-index-2) ' ' }
+                .print-site-enumerate-headings #index h2 {  counter-reset: counter-index-3 ;  counter-increment: counter-index-2 }
+            
+                .print-site-enumerate-headings #index h3:before { content: '1.' counter(counter-index-2) '.' counter(counter-index-3) ' ' }
+                .print-site-enumerate-headings #index h3 {  counter-increment: counter-index-3 }
+            
+.print-site-enumerate-headings #00-normas-normas_taller > h1:before { content: '2 ' }
+
+                .print-site-enumerate-headings #00-normas-normas_taller h2:before { content: '2.' counter(counter-00-normas-normas_taller-2) ' ' }
+                .print-site-enumerate-headings #00-normas-normas_taller h2 {  counter-reset: counter-00-normas-normas_taller-3 ;  counter-increment: counter-00-normas-normas_taller-2 }
+            
+                .print-site-enumerate-headings #00-normas-normas_taller h3:before { content: '2.' counter(counter-00-normas-normas_taller-2) '.' counter(counter-00-normas-normas_taller-3) ' ' }
+                .print-site-enumerate-headings #00-normas-normas_taller h3 {  counter-increment: counter-00-normas-normas_taller-3 }
+            
+.print-site-enumerate-headings #section-3 > h1:before { content: '3 ' }
+.print-site-enumerate-headings #90-guias-packet-tracer > h1:before { content: '3.1 ' }
+
+                .print-site-enumerate-headings #90-guias-packet-tracer h2:before { content: '3.1.' counter(counter-90-guias-packet-tracer-2) ' ' }
+                .print-site-enumerate-headings #90-guias-packet-tracer h2 {  counter-increment: counter-90-guias-packet-tracer-2 }
+            
+.print-site-enumerate-headings #90-guias-pr102-modelos-osi > h1:before { content: '3.2 ' }
+
+                .print-site-enumerate-headings #90-guias-pr102-modelos-osi h2:before { content: '3.2.' counter(counter-90-guias-pr102-modelos-osi-2) ' ' }
+                .print-site-enumerate-headings #90-guias-pr102-modelos-osi h2 {  counter-increment: counter-90-guias-pr102-modelos-osi-2 }
+            
+.print-site-enumerate-headings #90-guias-pr103-primera-red > h1:before { content: '3.3 ' }
+
+                .print-site-enumerate-headings #90-guias-pr103-primera-red h2:before { content: '3.3.' counter(counter-90-guias-pr103-primera-red-2) ' ' }
+                .print-site-enumerate-headings #90-guias-pr103-primera-red h2 {  counter-increment: counter-90-guias-pr103-primera-red-2 }
+            
+.print-site-enumerate-headings #01-introduccion-arquitectura-tema1 > h1:before { content: '4 ' }
+
+                .print-site-enumerate-headings #01-introduccion-arquitectura-tema1 h2:before { content: '4.' counter(counter-01-introduccion-arquitectura-tema1-2) ' ' }
+                .print-site-enumerate-headings #01-introduccion-arquitectura-tema1 h2 {  counter-reset: counter-01-introduccion-arquitectura-tema1-3 ;  counter-increment: counter-01-introduccion-arquitectura-tema1-2 }
+            
+                .print-site-enumerate-headings #01-introduccion-arquitectura-tema1 h3:before { content: '4.' counter(counter-01-introduccion-arquitectura-tema1-2) '.' counter(counter-01-introduccion-arquitectura-tema1-3) ' ' }
+                .print-site-enumerate-headings #01-introduccion-arquitectura-tema1 h3 {  counter-increment: counter-01-introduccion-arquitectura-tema1-3 }
+            
+.print-site-enumerate-headings #02-medios-capa-fisica-tema2 > h1:before { content: '5 ' }
+
+                .print-site-enumerate-headings #02-medios-capa-fisica-tema2 h2:before { content: '5.' counter(counter-02-medios-capa-fisica-tema2-2) ' ' }
+                .print-site-enumerate-headings #02-medios-capa-fisica-tema2 h2 {  counter-reset: counter-02-medios-capa-fisica-tema2-3 ;  counter-increment: counter-02-medios-capa-fisica-tema2-2 }
+            
+                .print-site-enumerate-headings #02-medios-capa-fisica-tema2 h3:before { content: '5.' counter(counter-02-medios-capa-fisica-tema2-2) '.' counter(counter-02-medios-capa-fisica-tema2-3) ' ' }
+                .print-site-enumerate-headings #02-medios-capa-fisica-tema2 h3 {  counter-increment: counter-02-medios-capa-fisica-tema2-3 }
+            </style>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      2026-2027 Francisco Javier Hernández Illán - <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es">Licencia CC BY-NC-SA</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="mailto:<fj.hernandez@edu.gva.es>" target="_blank" rel="noopener" title="" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4l208 156a48 48 0 0 0 57.6 0l208-156c12.1-9.1 19.2-23.3 19.2-38.4 0-26.5-21.5-48-48-48zM0 196v188c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V196L313.6 344.8c-34.1 25.6-81.1 25.6-115.2 0z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.linkedin.com/in/fjavier-hernandez-illan" target="_blank" rel="noopener" title="www.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77m282.1 320h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+      <div class="md-consent" data-md-component="consent" id="__consent" hidden>
+        <div class="md-consent__overlay"></div>
+        <aside class="md-consent__inner">
+          <form class="md-consent__form md-grid md-typeset" name="consent">
+            
+
+
+  
+
+
+<h4>Consentimiento de cookie</h4>
+<p>Esta página de apuntes utiliza cookies para reconocer las visitas, medir la efectividad de la documentación y averiguar si encuentras aquello que buscas o cómo has llegado a estos apuntes. Con tu consentimiento, me ayudas a mejorar estos materiales.</p>
+<input class="md-toggle" type="checkbox" id="__settings" >
+<div class="md-consent__settings">
+  <ul class="task-list">
+    
+    
+      
+        
+  
+  
+    
+    
+  
+  <li class="task-list-item">
+    <label class="task-list-control">
+      <input type="checkbox" name="analytics" checked>
+      <span class="task-list-indicator"></span>
+      Google Analytics
+    </label>
+  </li>
+
+      
+    
+    
+      
+    
+    
+  </ul>
+</div>
+<div class="md-consent__controls">
+  
+    
+      <button class="md-button md-button--primary">Aceptar</button>
+    
+    
+    
+  
+    
+    
+    
+      <label class="md-button" for="__settings">Gestionar cookies</label>
+    
+  
+</div>
+          </form>
+        </aside>
+      </div>
+      <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout((function(){document.querySelector("[data-md-component=consent]").hidden=!1}),250);var form=document.forms.consent;for(var action of["submit","reset"])form.addEventListener(action,(function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map((function(e){return[e,!0]})))),location.hash="",location.reload()}))</script>
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "/ral/", "features": ["header.autohide", "navigation.top", "navigation.tracking", "navigation.footer", "navigation.indexes", "content.code.annotate", "announce.dismiss", "toc.follow", "content.code.copy"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="js/print-site.js"></script>
+      
+    
+  </body>
+</html>
