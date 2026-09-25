@@ -44,7 +44,7 @@ Trabajamos el **RA1** del módulo Redes de área local (0225):
 | 2–3 | Componentes, tipos de redes, topologías | **PR101** (diagrama: Excalidraw / draw.io / Dia) |
 | 4 | Transmisión básica y perturbaciones (nivel SMR) | AC102 |
 | 5–7 | Normalización, OSI / TCP-IP, encapsulación | AC103, AC104 |
-| 8–9 | Esquemas LAN; encapsulación en PT | **PR102** (Packet Tracer) |
+| 8–9 | Esquemas LAN; primera red en PT | **PR103**; PR102 (opcional) |
 
 ---
 
@@ -389,11 +389,11 @@ En el **emisor**, cada capa añade su cabecera (**encapsulación**). En el **rec
 
 ### PR102 — Modelos en Packet Tracer { #pr102-modelos-en-packet-tracer }
 
-* :simple-cisco: **PR102**. (RA1 // CE1a, CE1c // **PR 0–10**). En **Packet Tracer**, observad la encapsulación de una petición web (HTTP / TCP / IP / Ethernet) y el papel de DNS (y ARP si aparece). Es la **2.ª práctica** del tema (**PR**); las **AC102–104** son actividades de clase.
+* :simple-cisco: **PR102**. (RA1 // CE1a, CE1c // **Opcional · suma en el +1**). En **Packet Tracer**, observad la encapsulación de una petición web (HTTP / TCP / IP / Ethernet) y el papel de DNS (y ARP si aparece). Es voluntaria y va más allá de lo que vemos en este tema: puertos, DNS, ARP y TCP se ven a fondo en temas posteriores. Suma para el **+1** de la nota final solo si la defiendes en una **auditoría** oral cuando el profesor lo indique.
 
   **Antes:** instalad PT con la [guía inicial](../90-guias/packet-tracer.md).
 
-  **Guion:** [PR102 — Modelos OSI/TCP](../90-guias/pr102-modelos-osi.md) (también en Aules). Topología `.pkt` del profesor **o** mini-LAN del guion si NetAcad aún no está.
+  **Guion:** [PR102 — Modelos OSI/TCP](../90-guias/pr102-modelos-osi.md) (también en Aules). Usa la topología `.pkt` de Aules **o** monta la mini-LAN del guion.
 
   **Entrega:** `PR102.md` + capturas (simulación / PDU). Opcional: `.pkt`.
 
@@ -403,6 +403,27 @@ En el **emisor**, cada capa añade su cabecera (**encapsulación**). En el **rec
 | Lectura OSI / TCP-IP | Tabla capa ↔ qué viste en la PDU | 0–3 |
 | Preguntas de repaso | Puerto HTTP, DNS, intercambio en la respuesta | 0–3 |
 | Claridad del `.md` | Capturas con leyenda; sin datos personales | 0–2 |
+| **Total** | | **/10** |
+
+La rúbrica valora la práctica; solo cuenta para el +1 si la defiendes en la auditoría.
+
+### PR103 — Mi primera red en Packet Tracer { #pr103-mi-primera-red-en-packet-tracer }
+
+* :simple-cisco: **PR103**. Mi primera red en Packet Tracer (RA1 // CE1c, CE1d, CE1f, CE1g // **PR 0–10**). Montas desde cero una LAN con un switch y cuatro PC, les das IP y compruebas la conectividad con ping y con el modo Simulación.
+
+  **Antes:** [guía inicial de Packet Tracer](../90-guias/packet-tracer.md) (sesión iniciada).
+
+  **Guion:** [PR103 — Mi primera red](../90-guias/pr103-primera-red.md) (también en Aules). No hay `.pkt` de partida: lo construyes tú siguiendo el vídeo.
+
+  **Entrega:** `PR103.pkt` + `PR103.md` (capturas y respuestas).
+
+| Criterio | Descripción | Puntos |
+| --- | --- | --- |
+| Topología y cableado | switch y 4 PC, cable correcto, enlaces en verde, nombres PC1–PC4 y SW1 | 2 |
+| Direccionamiento | IP y máscara según la tabla, en Desktop > IP Configuration, sin puerta de enlace | 2 |
+| Conectividad | ping correcto de PC1 al resto, con captura | 2 |
+| Simulación | PDU ICMP de PC1 a PC4 que llega y vuelve, con captura de la Event List | 2 |
+| Entrega | .pkt que abre bien y .md claro, respuestas correctas, sin datos personales | 2 |
 | **Total** | | **/10** |
 
 ---
