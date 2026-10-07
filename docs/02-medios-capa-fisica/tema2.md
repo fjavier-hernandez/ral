@@ -354,9 +354,24 @@ El detalle de paneles, TO y canalizaciones se desarrolla en el **Tema 3**.
 | Informe `.md` | Completo, con fotos y errores/correcciones | 0–2 |
 | **Total** | | **/10** |
 
-### PR202 — Packet Tracer: capa física
+### PR202 — Packet Tracer: capa física { #pr202-packet-tracer-capa-fisica }
 
-* :simple-cisco: **PR202**. (RA2 // CE2c, CE2d // RA3 // CE3f // **PR 0–10**). Simulación en Packet Tracer: identificar puertos/módulos, elegir el tipo de cable adecuado y verificar conectividad física. El guion completo se facilitará en clase / Aules.
+* :simple-cisco: **PR202**. (RA2 // CE2c, CE2d // RA3 // CE3f // **PR 0–10**). En Packet Tracer identificas puertos y módulos, insertas los que faltan, cableas la topología según la tabla y compruebas la conectividad física.
+
+  **Antes:** [guía inicial de Packet Tracer](../90-guias/packet-tracer.md) (sesión iniciada) y el fichero `PR202.pka` de Aules.
+
+  **Guion:** [PR202 — Conectar la capa física](../90-guias/pr202-capa-fisica.md) (también en Aules).
+
+  **Entrega:** `PR202.pka` + `PR202.md` (capturas y respuestas).
+
+| Criterio | Descripción | Puntos |
+| --- | --- | --- |
+| Identificación de puertos y módulos | Respuestas correctas sobre administración, LAN/WAN, ranuras y comandos `show` | 2 |
+| Módulos insertados correctamente | Módulos adecuados en Este y Switch2, insertados con el equipo apagado | 2 |
+| Cableado según la tabla | Todos los enlaces con el tipo de cable e interfaces indicados | 2 |
+| Verificación | Comandos, navegador a `www.cisco.pka`, Check Results al 100 % | 2 |
+| Entrega | `.pka` que abre bien y `.md` claro, respuestas correctas, sin datos personales | 2 |
+| **Total** | | **/10** |
 
 ---
 
@@ -374,4 +389,11 @@ El detalle de paneles, TO y canalizaciones se desarrolla en el **Tema 3**.
 *[PR]: Práctica  
 *[UTP]: Unshielded Twisted Pair  
 *[EMI]: Interferencia electromagnética  
-*[LAN]: Local Area Network
+*[LAN]: Local Area Network  
+*[WAN]: Wide Area Network  
+*[CLI]: Command Line Interface (interfaz de línea de comandos)  
+*[CCNA]: Cisco Certified Network Associate  
+*[CCST]: Cisco Certified Support Technician  
+*[SFP]: Small Form-factor Pluggable (transceptor enchufable)  
+*[Auto-MDIX]: Automatic Medium-Dependent Interface Crossover  
+*[DCE]: Data Circuit-terminating Equipment
