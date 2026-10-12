@@ -10,7 +10,7 @@
 
 Tras editar el canónico en `[PDs]/, **sincronizar** la copia de `Planificación/` del repo `ral` (md + figuras) para versionar. Commit/push solo con OK explícito de Javi (no implica desplegar Pages).
 
-Figuras Word (C4): `figuras/calculo_nota.png`, `figuras/pesos_RA.png`, `figuras/horario-RAL-2026-27.jpeg`.
+Figuras Word (C4): `figuras/calculo_nota.png`, `figuras/pesos_RA.png`.
 
 ## Otros materiales (solo en CURSOS)
 
@@ -28,7 +28,6 @@ o el espejo `…/Library/CloudStorage/OneDrive-Conselleriad'Educació/[CURSOS]/`
 
 Archivos relevantes en `26_27/[RAL]/Planificacion/`:
 
-- `horario-RAL-2026-27.jpeg`
 - `Programacion_aula_RAL_2026_27.md`
 - `matriz_CE_RAL_2026_27.md`
 
