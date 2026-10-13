@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 420" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+  <rect width="900" height="420" fill="#f7f9fb"/>
+  <text x="450" y="36" text-anchor="middle" font-size="18" font-weight="700" fill="#1a2332">Encapsulación: de datos a bits (emisor)</text>
+  <text x="450" y="58" text-anchor="middle" font-size="12" fill="#5a6570">Cada capa añade su cabecera (y a veces cola). En el receptor se quitan en orden inverso.</text>
+
+  <rect x="80" y="80" width="740" height="44" rx="6" fill="#e8f1fb" stroke="#3b6ea5" stroke-width="1.5"/>
+  <text x="100" y="107" font-size="14" font-weight="600" fill="#1a2332">Aplicación</text>
+  <rect x="280" y="90" width="480" height="24" rx="4" fill="#fff" stroke="#3b6ea5"/>
+  <text x="520" y="107" text-anchor="middle" font-size="13" fill="#1a2332">Datos (HTTP, DNS…)</text>
+
+  <rect x="80" y="140" width="740" height="44" rx="6" fill="#eaf6ef" stroke="#2f7d4a" stroke-width="1.5"/>
+  <text x="100" y="167" font-size="14" font-weight="600" fill="#1a2332">Transporte</text>
+  <rect x="280" y="150" width="100" height="24" rx="4" fill="#c8e6d0" stroke="#2f7d4a"/>
+  <text x="330" y="167" text-anchor="middle" font-size="12" fill="#1a2332">Cab. TCP</text>
+  <rect x="390" y="150" width="370" height="24" rx="4" fill="#fff" stroke="#2f7d4a"/>
+  <text x="575" y="167" text-anchor="middle" font-size="13" fill="#1a2332">Segmento / datagrama UDP</text>
+
+  <rect x="80" y="200" width="740" height="44" rx="6" fill="#fef6e8" stroke="#b7791f" stroke-width="1.5"/>
+  <text x="100" y="227" font-size="14" font-weight="600" fill="#1a2332">Red (IP)</text>
+  <rect x="280" y="210" width="90" height="24" rx="4" fill="#f5d9a8" stroke="#b7791f"/>
+  <text x="325" y="227" text-anchor="middle" font-size="12" fill="#1a2332">Cab. IP</text>
+  <rect x="380" y="210" width="380" height="24" rx="4" fill="#fff" stroke="#b7791f"/>
+  <text x="570" y="227" text-anchor="middle" font-size="13" fill="#1a2332">Paquete / datagrama IP</text>
+
+  <rect x="80" y="260" width="740" height="44" rx="6" fill="#f3eef8" stroke="#6b4ea1" stroke-width="1.5"/>
+  <text x="100" y="287" font-size="14" font-weight="600" fill="#1a2332">Enlace</text>
+  <rect x="280" y="270" width="90" height="24" rx="4" fill="#d9c8ef" stroke="#6b4ea1"/>
+  <text x="325" y="287" text-anchor="middle" font-size="12" fill="#1a2332">Cab. Eth</text>
+  <rect x="380" y="270" width="300" height="24" rx="4" fill="#fff" stroke="#6b4ea1"/>
+  <text x="530" y="287" text-anchor="middle" font-size="13" fill="#1a2332">Trama</text>
+  <rect x="690" y="270" width="70" height="24" rx="4" fill="#d9c8ef" stroke="#6b4ea1"/>
+  <text x="725" y="287" text-anchor="middle" font-size="12" fill="#1a2332">FCS</text>
+
+  <rect x="80" y="320" width="740" height="44" rx="6" fill="#eef0f2" stroke="#4a5560" stroke-width="1.5"/>
+  <text x="100" y="347" font-size="14" font-weight="600" fill="#1a2332">Física</text>
+  <text x="450" y="347" text-anchor="middle" font-size="14" fill="#1a2332" letter-spacing="2">0 1 0 1 1 0 … bits en el medio</text>
+
+  <text x="450" y="400" text-anchor="middle" font-size="12" fill="#5a6570">PDU = Protocol Data Unit (unidad de datos de protocolo) de cada capa</text>
+</svg>

@@ -176,6 +176,11 @@ pie showData
 
 Los Temas 1 y 2 ya están publicados. Los Temas 3–9 se irán publicando en la navegación **cuando toque** trabajarlos en clase.
 
+
+## Referencias
+
+- [Tutoriales de Pablo Hidalgo](https://www.youtube.com/@PabloHidalgoTutoriales) — vídeos de CCNA en español usados en los Temas 1 y 2.
+
 *[CFGM]: Ciclo Formativo de Grado Medio  
 *[SMR]: Sistemas Microinformáticos y Redes  
 *[RA]: Resultado de aprendizaje  

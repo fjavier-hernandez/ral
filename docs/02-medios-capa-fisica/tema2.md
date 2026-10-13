@@ -5,10 +5,13 @@ description: Medios guiados y no guiados; categorías UTP; T568A/B; coaxial; fib
 
 # Tema 2. Medios de transmisión y capa física
 
-En este tema bajamos a la **capa física**: qué medio usamos, qué categoría de cable, cómo se termina un RJ‑45 y cuándo conviene cobre, fibra o radio.
+En este tema bajamos a la **capa física**: qué medio usamos, qué categoría de cable, cómo se termina un RJ‑45 y cuándo conviene cobre, fibra o radio. Es el tema que más se nota en el taller cuando crimpas un latiguillo o eliges el cable en Packet Tracer.
 
 !!! tip "Primera clase"
-    Empieza por el [cuestionario inicial](#cuestionario-inicial). No hace falta estudiar el tema completo antes: el cuestionario sirve para ver qué sabes al empezar.
+    Empieza por el [cuestionario inicial](#cuestionario-inicial). No hace falta haber leído el tema entero: sirve para ver qué traes antes de estudiar.
+
+!!! tip "Cómo leerlo"
+    Lee el párrafo de cada apartado **antes** de la tabla. Practica de memoria el orden T568B: en el examen y en el crimpado no hay atajos. Los términos marcados enlazan al [glosario](#glosario).
 
 ## Propuesta didáctica
 
@@ -40,7 +43,7 @@ Trabajamos los **RA2** y **RA3** del módulo Redes de área local (0225):
 * Medios guiados: par trenzado (categorías y blindaje), coaxial y fibra óptica.
 * Conectores RJ‑45; terminaciones **T568A** / **T568B**; cable directo y cruzado.
 * Medios no guiados: espectro básico y Wi‑Fi (IEEE 802.11).
-* Overview de crimpado de latiguillo y prueba de continuidad.
+* Crimpado de latiguillo y prueba de continuidad.
 
 ### Programación de aula (orientativa, ~14–16 h)
 
@@ -57,9 +60,7 @@ Trabajamos los **RA2** y **RA3** del módulo Redes de área local (0225):
 
 ---
 
-<a id="cuestionario-inicial"></a>
-
-## Cuestionario inicial
+## Cuestionario inicial {: #cuestionario-inicial }
 
 !!! question "Antes de empezar — responde con lo que sepas"
     1. ¿Qué categorías de cable de par trenzado conoces y para qué se usan?
@@ -71,16 +72,17 @@ Trabajamos los **RA2** y **RA3** del módulo Redes de área local (0225):
     7. ¿En qué se diferencian las terminaciones T568A y T568B?
     8. ¿Qué es un cable directo y un cable cruzado?
 
-!!! warning "Soluciones"
-    Las soluciones se trabajan en clase o se publican en Aules cuando proceda.
+Entrega tus respuestas en **Aules** como tarea del cuestionario inicial **antes** de mirar el [Autocheck](#autocheck-del-tema) del final del tema. Las soluciones no están aquí a propósito: primero entregas, después contrastas.
 
 ---
 
 ## Medios de transmisión
 
-La información viaja como señal eléctrica, óptica o radiofrecuencia. El **medio** es el enlace entre emisor y receptor: de su naturaleza dependen alcance, velocidad, coste y vulnerabilidades.
+La información viaja como señal eléctrica, óptica o de radiofrecuencia. El **medio** es el enlace entre emisor y receptor: de su naturaleza dependen el alcance, la velocidad, el coste y las vulnerabilidades (interferencias, atenuación, seguridad física).
 
 ### Medios guiados y no guiados
+
+En un medio **guiado** la señal está confinada en un conductor: par trenzado, coaxial o fibra. En un medio **no guiado** se propaga por el espacio (radio, microondas, infrarrojos). En el aula usarás casi siempre UTP hacia el puesto y Wi‑Fi para portátiles; la fibra aparece en el backbone o entre edificios.
 
 | Tipo | Idea | Ejemplos en LAN |
 | --- | --- | --- |
@@ -91,14 +93,13 @@ La información viaja como señal eléctrica, óptica o radiofrecuencia. El **me
 
 ## Par trenzado
 
-El cable de par trenzado lleva **ocho hilos** agrupados en **cuatro pares**, con cubierta exterior (habitualmente PVC). El trenzado reduce interferencias. Colores de pares (norma habitual):
+El cable de **[par trenzado](#par-trenzado)** lleva **ocho hilos** agrupados en **cuatro pares**, con cubierta exterior (habitualmente PVC). El trenzado reduce la diafonía: cada par se enrolla para que las interferencias entre hilos se cancelen en parte. Según la norma habitual, el **par 1** es azul y blanco‑azul, el **par 2** naranja y blanco‑naranja, el **par 3** verde y blanco‑verde, y el **par 4** marrón y blanco‑marrón.  
 
-- Par 1: azul / blanco‑azul  
-- Par 2: naranja / blanco‑naranja  
-- Par 3: verde / blanco‑verde  
-- Par 4: marrón / blanco‑marrón  
+### Categorías
 
-### Categorías (visión práctica)
+La **categoría** del cable indica el rendimiento que el fabricante garantiza (ancho de banda y, con ello, velocidades Ethernet típicas a cierta distancia). No es un «adorno del plástico»: si pones Cat. 5e donde el pliego pide Cat. 6a, el enlace de 10 Gbps no estará asegurado a 100 m.
+
+En obra nueva educativa u oficina lo habitual es **Cat. 6** o **Cat. 6a**. Cat. 3 y Cat. 5 están obsoletas. Cat. 8 se reserva a tramos cortos de centros de datos (25/40 Gbps).
 
 | Categoría | Ancho de banda (aprox.) | Uso típico |
 | --- | --- | --- |
@@ -107,38 +108,43 @@ El cable de par trenzado lleva **ocho hilos** agrupados en **cuatro pares**, con
 | Cat. 6a | 500 MHz | 10 Gbps a 100 m |
 | Cat. 8 | 2000 MHz | 25/40 Gbps a distancias cortas (centros de datos) |
 
-Las Cat. 3–5 están obsoletas en instalaciones nuevas. En muchos centros educativos y oficinas se trabaja con **Cat. 6** o **6a**.
+!!! warning "Errores frecuentes"
+    Confundir **categoría** con **blindaje**. Cat. 6 describe el rendimiento; U/UTP o F/UTP describe si hay pantalla. Puedes tener Cat. 6 U/UTP o Cat. 6 F/UTP: son cosas distintas.
 
-### Blindaje (nombres habituales)
+### Blindaje (apantallamiento)
+
+El **blindaje** añade una o varias pantallas metálicas (foil o malla) para reducir la [EMI](#emi) (*Electromagnetic Interference*, interferencia electromagnética) en entornos ruidosos (talleres con maquinaria, proximidad a motores, etc.). En aulas normales suele bastar el cable **sin** pantalla.
+
+La nomenclatura ISO usa letras del tipo **U/UTP**, **F/UTP**, **S/FTP**:
 
 | Tipo | Idea | Cuándo |
 | --- | --- | --- |
-| **U/UTP** | Sin pantalla | Oficinas / aulas con poca EMI |
-| **F/UTP** (FTP) | Pantalla global de foil | Interferencias moderadas |
-| **S/FTP** | Pantalla + pares apantallados | Entornos hostiles |
+| **U/UTP** | Sin pantalla (el «UTP» clásico) | Oficinas / aulas con poca EMI |
+| **F/UTP** (a menudo llamado FTP) | Pantalla global de foil alrededor de los cuatro pares | Interferencias moderadas |
+| **S/FTP** | Pantalla global + pares apantallados | Entornos con EMI alta |
 
-!!! note "Nomenclatura"
-    Verás UTP, FTP, STP… Lo importante es saber si hay **pantalla** y si hay que cuidar la **puesta a tierra** del blindaje.
+Si hay pantalla, hay que cuidar la **puesta a tierra** del blindaje según la instalación. Un cable apantallado mal conectado a tierra puede empeorar el problema en lugar de mejorarlo.
+
+!!! note "Nomenclatura en el día a día"
+    En albaranes y conversaciones de taller oirás UTP, FTP, STP… Quédate con la idea práctica: ¿hay pantalla o no? ¿Hay que aterrizar el conector metálico?
 
 ### Conector RJ‑45
 
-En Ethernet sobre cobre usamos el conector **RJ‑45** (**8P8C**: ocho posiciones, ocho contactos). Puede ser no apantallado o apantallado (carcasa metálica) según el cable.
+En Ethernet sobre cobre usamos el conector **[RJ‑45](#rj-45)** (**8P8C**: ocho posiciones, ocho contactos). Puede ser no apantallado o con carcasa metálica si el cable lleva pantalla. La pestaña evita que se suelte; al crimpar, los contactos perforan el aislante de cada hilo.
 
 <figure markdown="span">
-  ![Conector RJ-45](../img/RJ45.png){ width="500" }
-  <figcaption>Conector RJ‑45 para Ethernet</figcaption>
+  ![Conector RJ-45 visto de frente y de perfil](../img/RJ45.png){ width="500" }
+  <figcaption>Conector RJ‑45 (8P8C) usado en Ethernet sobre par trenzado.</figcaption>
 </figure>
 
 ### Terminaciones T568A y T568B
 
-La norma **TIA/EIA‑568** define dos ordenaciones de colores en el conector:
+La norma **TIA/EIA‑568** define dos ordenaciones de colores en el conector: **T568A** y **T568B**. No son «dos cables distintos» de fábrica: son dos formas de colocar los mismos ocho hilos. Entre A y B solo se intercambian los pares **naranja** y **verde**; azul y marrón no cambian.
 
 <figure markdown="span">
-  ![Terminaciones T568A y T568B](../img/T568.png){ width="700" }
-  <figcaption>Terminaciones T568A y T568B en RJ‑45</figcaption>
+  ![Orden de colores T568A y T568B en los ocho pines](../img/T568.png){ width="700" }
+  <figcaption>Terminaciones T568A y T568B en el RJ‑45 (pestaña abajo, contactos hacia ti).</figcaption>
 </figure>
-
-Orden de pines (vista del conector con la pestaña abajo, contactos hacia ti):
 
 | Pin | T568A | T568B |
 | --- | --- | --- |
@@ -155,37 +161,44 @@ Orden de pines (vista del conector con la pestaña abajo, contactos hacia ti):
     Entre T568A y T568B solo se intercambian los pares **naranja** y **verde**. El azul y el marrón no cambian.
 
 !!! important "Qué usar en la práctica"
-    En muchas instalaciones reales se usa **T568B** de extremo a extremo (coherencia). Lo crítico: **misma norma en ambos extremos** del tramo horizontal (salvo cable cruzado a propósito).
+    En muchas instalaciones reales se usa **T568B** de extremo a extremo. Lo crítico: **misma norma en ambos extremos** del tramo horizontal (salvo que quieras un cable cruzado a propósito).
 
 ### Cable directo y cruzado
 
-- **Directo**: misma terminación en ambos extremos (T568B–T568B o T568A–T568A). Es el habitual (PC ↔ switch, TO ↔ panel…).
-- **Cruzado**: T568A en un extremo y T568B en el otro. Históricamente unía equipos “iguales” (PC–PC, switch–switch). Hoy muchos puertos son **Auto‑MDIX** y aceptan directo.
+Un **cable directo** lleva la misma terminación en ambos extremos (T568B–T568B o T568A–T568A). Es el que usas casi siempre: PC ↔ switch, toma de usuario ↔ panel de parcheo, router ↔ switch.
+
+Un **cable cruzado** combina T568A en un extremo y T568B en el otro. Históricamente unía equipos «iguales» (PC–PC, switch–switch) porque cruzaba los pares de transmisión y recepción. Hoy la mayoría de puertos Gigabit implementan **[Auto‑MDIX](#auto-mdix)** (*Automatic Medium-Dependent Interface Crossover*): el puerto detecta el cruce y acepta un cable directo. Aun así, en Packet Tracer y en exámenes te pueden pedir el cable que marca la tabla o la norma antigua.
 
 <figure markdown="span">
-  ![Cable directo](../img/cable_directo.png){ width="640" }
-  <figcaption>Cable directo: misma terminación en ambos extremos</figcaption>
+  ![Esquema de pares en cable directo y en cable cruzado](../img/diagramas/cable-directo-cruzado.svg){ width="800" }
+  <figcaption>Cable directo (misma norma) frente a cruzado (T568B + T568A); se muestran los pares de TX/RX.</figcaption>
 </figure>
 
 <figure markdown="span">
-  ![Cable cruzado](../img/cable_cruzado.png){ width="640" }
-  <figcaption>Cable cruzado: terminaciones distintas (T568A + T568B)</figcaption>
+  ![Latiguillo con la misma terminación en ambos extremos](../img/cable_directo.png){ width="640" }
+  <figcaption>Cable directo: misma terminación en ambos extremos.</figcaption>
 </figure>
+
+<figure markdown="span">
+  ![Latiguillo con T568A en un extremo y T568B en el otro](../img/cable_cruzado.png){ width="640" }
+  <figcaption>Cable cruzado: terminaciones distintas (T568A + T568B).</figcaption>
+</figure>
+
+!!! warning "Errores frecuentes"
+    Pensar que «cruzado = más rápido» es falso. El tipo de cable no sube la velocidad: solo adapta TX/RX cuando hace falta. Otro error: mezclar A y B en un latiguillo «directo» sin querer; el tester marcará pares cruzados.
 
 ---
 
 ## Cable coaxial
 
-El **coaxial** tiene conductor central, dieléctrico, malla/pantalla y cubierta. Resiste bien EMI y atenúa menos que el UTP en ciertos escenarios, pero en LAN modernas (Ethernet) está en desuso (topología de bus). Sigue vivo en TV / HFC / radiofrecuencia.
+El **[coaxial](#coaxial)** tiene conductor central, dieléctrico, malla o pantalla y cubierta. Resiste bien la EMI y en ciertos escenarios atenúa menos que el UTP, pero en LAN Ethernet modernas está en desuso (topologías de bus 10BASE2/10BASE5). Sigue vivo en TV, HFC y radiofrecuencia.
 
 <figure markdown="span">
-  ![Conectores coaxiales](../img/Conec_Coaxial.png){ width="700" }
-  <figcaption>Conectores coaxiales habituales (BNC, N, TNC, SMA…)</figcaption>
+  ![Familia de conectores coaxiales BNC, N, TNC, SMA](../img/Conec_Coaxial.png){ width="700" }
+  <figcaption>Conectores coaxiales habituales (BNC, N, TNC, SMA…).</figcaption>
 </figure>
 
-**Conectores RF** (macho/hembra): anclaje, rosca o presión. En Ethernet antiguo (10BASE2) se usaba **BNC** y **terminadores** en los extremos del bus.
-
-Tipos que aún verás citados:
+En Ethernet antiguo (10BASE2) se usaba **BNC** y **terminadores** en los extremos del bus. Tipos que aún verás citados:
 
 | Tipo | Uso típico |
 | --- | --- |
@@ -197,45 +210,56 @@ Tipos que aún verás citados:
 
 ## Fibra óptica
 
-La **fibra** transporta luz por un núcleo de vidrio o plástico. Ventajas: gran ancho de banda, poca atenuación a larga distancia, inmunidad a EMI y más difícil de interceptar. Coste e instalación más exigentes.
+La **[fibra óptica](#fibra)** transporta luz por un núcleo de vidrio o plástico. Ventajas: gran ancho de banda, poca atenuación a larga distancia, inmunidad a la EMI y más dificultad para interceptar el medio sin dejar rastro. A cambio, el coste y la instalación (conectores, empalmes, limpieza) son más exigentes que el UTP del puesto.
 
 <figure markdown="span">
-  ![Estructura de un cable de fibra](../img/estructurafibra.png){ width="600" }
-  <figcaption>Estructura típica de un cable de fibra óptica</figcaption>
+  ![Corte de cable de fibra con núcleo, revestimiento y cubierta](../img/estructurafibra.png){ width="600" }
+  <figcaption>Estructura típica de un cable de fibra óptica (núcleo, cladding, recubrimientos).</figcaption>
 </figure>
 
 ### Multimodo (MM) y monomodo (SM)
+
+La diferencia clave es el **diámetro del núcleo** y, con él, cuántos modos (caminos) de luz viajan por dentro.
+
+En fibra **[multimodo](#multimodo)** (MM) el núcleo es relativamente ancho (~50–62,5 μm). Varios modos de luz se propagan a la vez; el emisor suele ser LED o láser VCSEL. Sirve para campus, edificios y distancias cortas o medias (decenas o pocos cientos de metros según velocidad y clase OM).
+
+En fibra **[monomodo](#monomodo)** (SM) el núcleo es muy fino (~9 μm). Idealmente viaja un solo modo; el emisor es láser. Permite **largas distancias** (kilómetros): backbone de operadores, enlaces entre sedes, cables submarinos.
 
 | Tipo | Núcleo (orden) | Emisor típico | Uso |
 | --- | --- | --- | --- |
 | **Multimodo** | ~50–62,5 μm | LED / láser VCSEL | Campus, edificios, cortas–medias distancias |
 | **Monomodo** | ~9 μm | Láser | Largas distancias, backbone, operadores |
 
-Clases habituales: **OM1–OM4** (multimodo) y **OS1/OS2** (monomodo). Elegimos según velocidad y metros a cubrir.
+Clases habituales: **OM1–OM4** (multimodo) y **OS1/OS2** (monomodo). Se eligen según la velocidad y los metros a cubrir. A **10 Gbps**, de forma orientativa, **OM3** alcanza unos **300 m** y **OM4** unos **400 m**; para distancias mayores se pasa a monomodo (**OS2**).
 
-| Velocidad (orientativa) | Distancia corta | Distancia media | Larga |
-| --- | --- | --- | --- |
-| 1 Gbps | OM1 / OM2 | OM3 / OM4 | OS1/OS2 |
-| 10 Gbps | OM3 / OM4 | OS1/OS2 | OS1/OS2 |
+| Clase | Tipo | Uso orientativo |
+| --- | --- | --- |
+| OM1 / OM2 | Multimodo (legado) | 1 Gbps en distancias cortas; evitar en obra nueva |
+| OM3 | Multimodo | 10 Gbps hasta ~300 m |
+| OM4 | Multimodo | 10 Gbps hasta ~400 m |
+| OS1 / OS2 | Monomodo | Largas distancias y backbone |
 
 Estructuras de cable: **loose-tube** (exteriores / tendidos largos, a menudo con gel) y **tight-buffered** (interiores, más fácil de conectar).
 
+!!! warning "Errores frecuentes"
+    Mezclar MM y SM en el mismo enlace no funciona: el núcleo, el emisor y el receptor no son intercambiables. Tampoco mires al láser de fibra: riesgo ocular. En taller, protectores de polvo en los conectores y limpieza antes de enchufar.
+
 ### Conectores
 
-ST, SC, LC, MPO… En racks modernos es muy frecuente **LC**.
+Los conectores más citados son ST, SC, LC y MPO. En racks modernos es muy frecuente el **LC** (compacto, dos fibras en poco espacio).
 
 <figure markdown="span">
-  ![Conectores de fibra óptica](../img/conectores_Foptica.png){ width="700" }
-  <figcaption>Conectores de fibra óptica habituales en redes</figcaption>
+  ![Conectores ST, SC, LC y otros de fibra](../img/conectores_Foptica.png){ width="700" }
+  <figcaption>Conectores de fibra óptica habituales en redes de datos.</figcaption>
 </figure>
 
 ### Escala global (contexto)
 
-La fibra submarina es la columna vertebral de Internet. Explora el mapa interactivo si te interesa el contexto:
+La fibra submarina es la columna vertebral de Internet. Si quieres ver el mapa mundial de cables:
 
 <figure markdown="span">
-  ![Red mundial de fibra submarina](../img/RedMundialFibra.png){ width="800" }
-  <figcaption>Red mundial de cables submarinos de fibra óptica</figcaption>
+  ![Mapa mundial de cables submarinos de fibra](../img/RedMundialFibra.png){ width="800" }
+  <figcaption>Red mundial de cables submarinos de fibra óptica.</figcaption>
 </figure>
 
 [Submarine Cable Map](https://www.submarinecablemap.com)
@@ -244,39 +268,45 @@ La fibra submarina es la columna vertebral de Internet. Explora el mapa interact
 
 ## Medios no guiados y Wi‑Fi básico
 
-Sin cable, la señal se propaga como onda electromagnética. El **espectro** se reparte en bandas (radio, microondas, IR…) para que servicios distintos no se pisen.
+Sin cable, la señal se propaga como onda electromagnética. El **espectro** se reparte en bandas (radio, microondas, infrarrojos…) para que servicios distintos no se interfieran. En España, la atribución oficial se recoge en el **CNAF**.
 
 <figure markdown="span">
-  ![Espectro electromagnético](../img/espectroradio.png){ width="800" }
-  <figcaption>Espectro electromagnético y bandas de interés en comunicaciones</figcaption>
+  ![Espectro electromagnético con bandas de radio y microondas](../img/espectroradio.png){ width="800" }
+  <figcaption>Espectro electromagnético y bandas de interés en comunicaciones.</figcaption>
 </figure>
 
-Ideas útiles a nivel SMR:
+Para Wi‑Fi te interesan sobre todo las bandas **ISM** de **2,4 GHz** y **5 GHz**. La banda de **6 GHz** llega con **Wi‑Fi 6E** (y sigue en Wi‑Fi 7), no con el Wi‑Fi 6 «a secas». A 2,4 GHz hay más alcance relativo y más interferencias (microondas, Bluetooth, redes vecinas). A 5 GHz (y 6 GHz) suele haber más canal libre y más capacidad, con menos penetración en paredes. Los estándares IEEE **802.11** definen la WLAN; **802.15** cubre WPAN (Bluetooth, ZigBee…).
 
-- **ISM 2,4 GHz / 5 GHz (y 6 GHz)**: Wi‑Fi, Bluetooth…
-- En España, la atribución oficial se recoge en el **CNAF**.
-- Estándares IEEE: **802.11** (WLAN), **802.15** (WPAN: Bluetooth, ZigBee…), etc.
+### IEEE 802.11
 
-### IEEE 802.11 (resumen)
+Cada generación de Wi‑Fi mejora velocidad, eficiencia o el uso del espectro. No hace falta memorizar todos los Mbps de marketing: sí conviene situar el nombre comercial, el estándar y las bandas.
 
 | Generación | Estándar | Bandas | Idea |
 | --- | --- | --- | --- |
 | Wi‑Fi 4 | 802.11n | 2,4 / 5 GHz | MIMO; hasta cientos de Mbps |
-| Wi‑Fi 5 | 802.11ac | 5 GHz | MU‑MIMO; Gbps |
-| Wi‑Fi 6 | 802.11ax | 2,4 / 5 / 6 GHz | Mejor eficiencia en densos |
-| Wi‑Fi 7 | 802.11be | 2,4 / 5 / 6 GHz | Mayor capacidad (entornos exigentes) |
+| Wi‑Fi 5 | 802.11ac | 5 GHz | MU‑MIMO; orden de Gbps |
+| Wi‑Fi 6 | 802.11ax | 2,4 / 5 GHz | Mejor eficiencia en entornos densos |
+| Wi‑Fi 6E | 802.11ax (ext.) | 2,4 / 5 / **6 GHz** | Misma generación 6 con banda de 6 GHz |
+| Wi‑Fi 7 | 802.11be | 2,4 / 5 / 6 GHz | Mayor capacidad en entornos exigentes |
 
-El montaje y la configuración de AP se profundiza en el **Tema 3** (y seguridad Wi‑Fi / VLAN en temas posteriores).
+El montaje y la configuración de puntos de acceso se profundiza en el **Tema 3** (seguridad Wi‑Fi y VLAN, en temas posteriores).
+
+
+!!! note "Para la certificación CCNA"
+    En ITN aún salen los estándares antiguos: **802.11a** (5 GHz, hasta 54 Mbps), **802.11b** (2,4 GHz, hasta 11 Mbps) y **802.11g** (2,4 GHz, hasta 54 Mbps). Hoy están en desuso frente a Wi‑Fi 4/5/6/6E/7, pero el examen puede pedir banda y velocidad aproximada. Wi‑Fi usa **CSMA/CA** (prevención de colisiones), no CSMA/CD.
+
+!!! warning "Errores frecuentes"
+    Decir «Wi‑Fi es capa 3» mezcla modelos: Wi‑Fi (802.11) trabaja en capas físicas y de enlace; las direcciones IP siguen siendo de capa 3. Otro clásico: pensar que 5 GHz «siempre es mejor» sin mirar cobertura: a veces el portátil del fondo del aula necesita 2,4 GHz.
 
 ---
 
-## Crimpado de latiguillo (overview)
+## Crimpado de latiguillo
 
 **Materiales y herramientas habituales:** cable UTP de la categoría indicada, dos conectores RJ‑45, pelacables, crimpadora RJ‑45, cutter y comprobador de cable (tester).
 
-En taller fabricamos un **latiguillo** UTP con dos RJ‑45:
+En taller fabricamos un **latiguillo** UTP con dos RJ‑45. El objetivo no es solo que «encaje»: tiene que pasar el comprobador y quedar etiquetado.
 
-1. Cortar a medida y pelar la cubierta (sin dañar los pares; deja ~2–3 cm de hilos).
+1. Cortar a medida y pelar la cubierta (sin dañar los pares; deja unos 2–3 cm de hilos).
 2. Deshacer el trenzado lo mínimo necesario y ordenar colores según **T568B** (o la norma que indique el profesorado).
 3. Cortar hilos a la misma longitud e insertarlos hasta el fondo del conector (el aislamiento de la cubierta debe entrar un poco en el conector).
 4. **Crimpar** de un solo golpe con la herramienta adecuada; comprobar que los contactos han bajado.
@@ -284,13 +314,17 @@ En taller fabricamos un **latiguillo** UTP con dos RJ‑45:
 6. **Probar** con comprobador de cable / continuidad (y, si hay, tester de cableado o certificación).
 
 !!! tip "Calidad y seguridad"
-    Gafas si el taller lo exige; no pellizcar el cable; no dejar hilos fuera del conector; etiquetar el latiguillo. Un crimpado malo falla en producción aunque “parezca” enchufado.
+    Gafas si el taller lo exige; no pellizcar el cable; no dejar hilos fuera del conector; etiquetar el latiguillo. Un crimpado malo falla en producción aunque «parezca» enchufado.
 
-El detalle de paneles, TO y canalizaciones se desarrolla en el **Tema 3**.
+!!! warning "Errores frecuentes"
+    Pares invertidos o cruzados; funda que no entra en el conector; crimpar dos veces; olvidar el tester; no etiquetar. Si el comprobador falla, abre, identifica el error y rehace: no «repite a ciegas».
+
+El detalle de paneles, tomas de usuario y canalizaciones se desarrolla en el **Tema 3**.
 
 ---
 
 ## Actividades
+
 
 !!! tip "Formato de entrega"
     Las entregas en **Aules** son **obligatorias en Markdown** (`.md`). No se aceptan PDF.  
@@ -375,6 +409,149 @@ El detalle de paneles, TO y canalizaciones se desarrolla en el **Tema 3**.
 
 ---
 
+## Para el examen
+
+El medio puede ser **guiado** (UTP, coaxial, fibra) o **no guiado** (Wi‑Fi). En cobre, la **categoría** (5e, 6, 6a, 8) habla de rendimiento; el **blindaje** (U/UTP, F/UTP…) habla de pantalla frente a EMI. Ethernet usa **RJ‑45** con terminación **T568A** o **T568B** (solo cambian naranja y verde). Cable **directo** = misma norma en ambos extremos; **cruzado** = A+B (hoy Auto‑MDIX suele aceptar directo). La fibra **MM** es para distancias cortas/medias en edificios; la **SM**, para largas distancias. Wi‑Fi (802.11) usa sobre todo 2,4 / 5 / 6 GHz; las generaciones van de Wi‑Fi 4 a 7. En taller: crimpar, probar y etiquetar.
+
+## Autocheck del tema
+
+1. **V/F.** Cat. 6 y F/UTP significan lo mismo.
+2. Empareja: **U/UTP** · **F/UTP** · **multimodo** · **monomodo** con: (a) sin pantalla · (b) pantalla global de foil · (c) núcleo ~9 μm · (d) núcleo ~50–62,5 μm.
+3. En un cable directo T568B–T568B, el pin 1 es…  
+   a) Blanco/verde · b) Blanco/naranja · c) Azul · d) Marrón
+4. **V/F.** Un cable cruzado se obtiene poniendo T568A en un extremo y T568B en el otro.
+5. ¿Qué conector usa Ethernet sobre par trenzado en el puesto de trabajo?
+6. Elige la correcta: Auto‑MDIX…  
+   a) sube la categoría del cable · b) permite que el puerto adapte TX/RX y acepte directo en muchos casos · c) solo existe en fibra
+7. Relaciona: **Wi‑Fi 5** · **Wi‑Fi 6** · **802.3** con: (a) Ethernet · (b) 802.11ac · (c) 802.11ax
+8. **V/F.** La fibra monomodo es la elección típica para el latiguillo del PC al switch del aula.
+9. Nombra dos ventajas de la fibra frente al UTP.
+10. ¿Qué pares se intercambian entre T568A y T568B?
+11. **V/F.** A 2,4 GHz suele haber más interferencias de redes vecinas y otros dispositivos ISM que a 5 GHz.
+12. En el crimpado, ¿qué compruebas antes de entregar el latiguillo?
+
+<details markdown="1">
+<summary>Soluciones</summary>
+
+1. **Falso** — categoría ≠ blindaje.
+
+2. **U/UTP** → (a); **F/UTP** → (b); **monomodo** → (c); **multimodo** → (d).
+
+3. **b) Blanco/naranja**.
+
+4. **Verdadero**.
+
+5. **RJ‑45** (8P8C).
+
+6. **b**.
+
+7. **Wi‑Fi 5** → (b); **Wi‑Fi 6** → (c); **802.3** → (a).
+
+8. **Falso** — al puesto suele ir UTP; la monomodo es para largas distancias / backbone.
+
+9. Ejemplos: más ancho de banda / distancia, inmunidad a EMI, más difícil de interceptar.
+
+10. Los pares **naranja** y **verde**.
+
+11. **Verdadero**.
+
+12. Continuidad / pares correctos en el **comprobador** (y etiquetado).
+
+</details>
+
+---
+
+## Vídeos recomendados
+
+Pablo Hidalgo explica cobre y UTP (CCNA v1.1, lección 3).
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube-nocookie.com/embed/WSwSjCiSpII"
+          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          title="CCNA v1.1 Lección 3 — cobre y UTP (Pablo Hidalgo)"></iframe>
+</div>
+
+Pablo Hidalgo explica la fibra óptica (lección 4).
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube-nocookie.com/embed/bP5fIGhhH0g"
+          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          title="CCNA v1.1 Lección 4 — fibra óptica (Pablo Hidalgo)"></iframe>
+</div>
+
+Joaquín Cantero muestra en práctica el cableado T568A y T568B.
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube-nocookie.com/embed/x7cJAv9Buhc"
+          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          title="Práctica de cableado T568A/T568B (Joaquín Cantero)"></iframe>
+</div>
+
+Contando Bits resume Wi‑Fi y el estándar 802.11.
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube-nocookie.com/embed/EQRgk2IyF_Q"
+          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          title="Wi-Fi y el estándar 802.11 (Contando Bits)"></iframe>
+</div>
+
+Alberto López explica cómo funciona el Wi‑Fi.
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube-nocookie.com/embed/KQmCgLdtp9U"
+          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          title="Cómo funciona el Wi-Fi (Alberto López)"></iframe>
+</div>
+
+## Glosario
+
+**par trenzado**{: #par-trenzado}
+Cable de cuatro pares de hilos de cobre trenzados. Base del cableado Ethernet en el puesto de trabajo (UTP y variantes apantalladas).
+
+**RJ-45**{: #rj-45}
+Conector 8P8C usado en Ethernet sobre par trenzado.
+
+**T568A / T568B**
+Dos ordenaciones de colores del RJ‑45 según TIA/EIA‑568. Entre ellas solo cambian los pares naranja y verde.
+
+**Auto-MDIX**{: #auto-mdix}
+*Automatic Medium-Dependent Interface Crossover*: el puerto detecta si hace falta cruzar TX/RX y acepta cable directo en muchos equipos modernos.
+
+**EMI**{: #emi}
+*Electromagnetic Interference*, interferencia electromagnética: ruido eléctrico que puede degradar la señal en cobre.
+
+**coaxial**{: #coaxial}
+Cable con conductor central, dieléctrico y malla. Histórico en Ethernet de bus; vigente en TV/RF.
+
+**fibra**{: #fibra}
+Medio óptico que transporta luz. Gran ancho de banda e inmunidad a EMI.
+
+**multimodo**{: #multimodo}
+Fibra de núcleo relativamente ancho (~50–62,5 μm) para distancias cortas/medias en edificios y campus.
+
+**monomodo**{: #monomodo}
+Fibra de núcleo fino (~9 μm) para largas distancias y backbones.
+
+**UTP**
+*Unshielded Twisted Pair*: par trenzado sin pantalla (U/UTP en nomenclatura ISO).
+
+---
+
 ## Referencias rápidas
 
 - Sitio del módulo: [fjavier-hernandez.github.io/ral](https://fjavier-hernandez.github.io/ral/)
@@ -391,9 +568,7 @@ El detalle de paneles, TO y canalizaciones se desarrolla en el **Tema 3**.
 *[EMI]: Interferencia electromagnética  
 *[LAN]: Local Area Network  
 *[WAN]: Wide Area Network  
-*[CLI]: Command Line Interface (interfaz de línea de comandos)  
 *[CCNA]: Cisco Certified Network Associate  
-*[CCST]: Cisco Certified Support Technician  
-*[SFP]: Small Form-factor Pluggable (transceptor enchufable)  
 *[Auto-MDIX]: Automatic Medium-Dependent Interface Crossover  
-*[DCE]: Data Circuit-terminating Equipment
+*[DCE]: Data Circuit-terminating Equipment  
+*[RJ-45]: Registered Jack 45 (8P8C)

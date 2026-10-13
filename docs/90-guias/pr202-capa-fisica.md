@@ -160,6 +160,9 @@ Responde en tu informe (frases completas):
 
 ## Entrega en Aules
 
+!!! warning "Qué se entrega"
+    Las preguntas que contestas y entregas son las de **esta guía** (apartado «Preguntas para PR202.md»). El fichero `.pka` sirve para **montar y comprobar** la red y guardar la puntuación de Packet Tracer; **las preguntas internas del PKA no se entregan**.
+
 Sube **`PR202.pka`** (guardado con la puntuación) y **`PR202.md`** con:
 
 - Captura de la pestaña **Physical** del router **Este** (o de Switch2) con los módulos ya insertados.
