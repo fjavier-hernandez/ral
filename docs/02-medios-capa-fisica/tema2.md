@@ -8,7 +8,7 @@ description: Medios guiados y no guiados; categorías UTP; T568A/B; coaxial; fib
 En este tema bajamos a la **capa física**: qué medio usamos, qué categoría de cable, cómo se termina un RJ‑45 y cuándo conviene cobre, fibra o radio. Es el tema que más se nota en el taller cuando crimpas un latiguillo o eliges el cable en Packet Tracer.
 
 !!! tip "Primera clase"
-    Empieza por el [cuestionario inicial](#cuestionario-inicial). Entrégalo en Aules **antes** de mirar el Autocheck del final.
+    Empieza por el [cuestionario inicial](#cuestionario-inicial). Si ya lo entregaste en Aules, usa el [Autocheck](#autocheck-del-tema) del final para contrastar.
 
 !!! tip "Cómo leerlo"
     Lee el párrafo de cada apartado **antes** de la tabla: qué es el concepto, para qué sirve y un ejemplo de aula o de casa. Practica de memoria el orden **T568B**: en el examen y en el crimpado no hay atajos. Los términos marcados enlazan al [glosario](#glosario). Cierra el tema con el [Autocheck](#autocheck-del-tema).
@@ -72,7 +72,7 @@ Trabajamos los **RA2** y **RA3** del módulo Redes de área local (0225):
     7. ¿En qué se diferencian las terminaciones T568A y T568B?
     8. ¿Qué es un cable directo y un cable cruzado?
 
-Entrega tus respuestas en **Aules** como tarea del cuestionario inicial **antes** de mirar el [Autocheck](#autocheck-del-tema) del final del tema. Las soluciones del Autocheck se publicarán cuando cierre la entrega del cuestionario inicial en Aules.
+El cuestionario inicial ya está cerrado en Aules. Ahora puedes contrastar con el [Autocheck](#autocheck-del-tema) del final: las soluciones van plegadas al final de esa lista.
 
 ---
 
@@ -494,8 +494,40 @@ El medio puede ser **guiado** (UTP, coaxial, fibra) o **no guiado** (Wi‑Fi, Bl
 14. A 10 Gbps, ¿qué distancia orientativa tiene OM3 y cuál OM4?
 15. ¿Por qué se trenzan los pares del cable UTP?
 
-!!! info "Soluciones"
-    Las soluciones se publicarán cuando cierre la entrega del cuestionario inicial en Aules.
+<details markdown="1">
+<summary>Soluciones</summary>
+
+1. **Falso** — categoría ≠ blindaje.
+
+2. **U/UTP** → (a); **F/UTP** → (b); **monomodo** → (c); **multimodo** → (d).
+
+3. **b) Blanco/naranja**.
+
+4. **Verdadero**.
+
+5. **RJ‑45** (8P8C).
+
+6. **b**.
+
+7. **Wi‑Fi 5** → (b); **Wi‑Fi 6** → (c); **802.3** → (a).
+
+8. **Falso** — al puesto suele ir UTP; la monomodo es para largas distancias / backbone.
+
+9. Ejemplos: más ancho de banda / distancia, inmunidad a EMI, más difícil de interceptar.
+
+10. Los pares **naranja** y **verde**.
+
+11. **Verdadero**.
+
+12. Continuidad / pares correctos en el **comprobador** (y etiquetado).
+
+13. **Falso** — 6 GHz llega con **Wi‑Fi 6E** (y Wi‑Fi 7).
+
+14. OM3 ~**300 m**; OM4 ~**400 m**.
+
+15. Para reducir la **diafonía** (interferencia entre pares).
+
+</details>
 
 ---
 
