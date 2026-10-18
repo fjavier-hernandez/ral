@@ -120,6 +120,13 @@ La infraestructura que se instala hoy (paneles de parcheo, tomas de usuario o TO
   <figcaption>Arquitectura típica: áreas de trabajo, horizontal, backbone y distribuidores.</figcaption>
 </figure>
 
+El mismo recorrido, visto como un tramo que se puede montar en el taller, va del puesto a la TO, sube por el horizontal hasta el panel del rack de planta (**[FD](#fd)**) y, dentro del armario, un latiguillo une el panel con el switch. El router o gateway de ese rack sale hacia el backbone (edificio **[BD](#bd)** y campus **[CD](#cd)**). Si cambias el switch, el tendido pasivo (TO, canaleta, panel) se queda.
+
+<figure markdown="span">
+  ![Instalación completa: puesto, TO, horizontal, panel, switch, router y backbone](../img/t3-instalacion-completa.svg){ width="860" }
+  <figcaption>Del puesto al campus: TO, horizontal, rack del FD (panel, switch y router) y backbone hacia BD y CD.</figcaption>
+</figure>
+
 !!! warning "Errores frecuentes"
     Llamar «cableado estructurado» al latiguillo del PC al switch de mesa. El latiguillo es un tramo; el sistema es TO, tendido horizontal, panel, rack y backbone.
 
@@ -233,7 +240,7 @@ El tendido horizontal no se deja suelto: va por un soporte que lo protege, respe
 
 ---
 
-## Electrónica de red
+## Electrónica de red {: #electronica-de-red }
 
 La **electrónica de red** es el conjunto de equipos que regeneran, concentran, conmutan o encaminan el tráfico. Suele ir en el rack; el punto de acceso, en techo o pared, con alimentación por PoE o por la red eléctrica.
 
@@ -257,11 +264,41 @@ La tabla siguiente resume la capa y la función de cada equipo.
 
 ### Switch (lo habitual en LAN)
 
-El **switch** aprende qué dirección MAC hay detrás de cada puerto y trabaja en full‑dúplex. Los modelos **no gestionables** no requieren configuración; los **gestionables** permiten VLAN, QoS o SNMP (las VLAN se ven en el Tema 6). **[PoE](#poe)** (*Power over Ethernet*) alimenta AP, cámaras IP y teléfonos por el mismo UTP, de modo que al techo llega un solo cable.
+El **switch** es el equipo que concentra la LAN de un aula o de una planta: cada puesto llega a un puerto y el tráfico se reenvía según la dirección **MAC** de destino, no según la IP. Frente al **hub** de la [tabla de dispositivos](#electronica-de-red), que replica la trama a todos los puertos y deja un solo dominio de colisión, el switch abre un dominio de colisión por puerto y trabaja en **full‑dúplex**. Esa diferencia ya se contó en el [Tema 1, dominios de colisión y de difusión](../01-introduccion-arquitectura/tema1.md#dominios-colision-difusion): en un enlace PC–switch moderno no hay colisión porque cada sentido tiene su canal. El hub queda para el laboratorio; en el armario del taller lo que se monta es el switch (**CE3d**, **PR301**).
+
+Al arrancar, la tabla MAC (también llamada **CAM**, *Content Addressable Memory*) está vacía. Cuando un PC envía una trama, el switch anota «esta MAC se ve en este puerto». Si ya conoce el puerto del destino, **reenvía** solo por ahí. Si no lo conoce, **inunda**: copia la trama a todos los puertos menos al de entrada, igual que hace con las tramas de **difusión** (broadcast, por ejemplo `FF:FF:FF:FF:FF:FF`). Por eso el switch **no** corta el dominio de difusión: eso lo hace el router (o, más adelante, las VLAN).
+
+<figure markdown="span">
+  ![Cuatro PC unidos a un switch y la tabla MAC con puerto y dirección](../img/t3-switch-tabla-mac.svg){ width="780" }
+  <figcaption>Aprendizaje de MAC: cada puerto queda asociado a la dirección que el switch ha visto en él. Las MAC del dibujo son de laboratorio.</figcaption>
+</figure>
+
+Los puertos habituales en cobre son **RJ‑45** a 10/100/1000 Mb/s (a veces multi‑gig). Para el backbone o para unirse a otro armario se usan módulos **SFP** o **SFP+** (fibra, o cobre en algunos transceptores). El puerto de **consola** sirve para configurar el equipo por cable serie o USB, sin pasar por la red. Un switch **no gestionable** no pide configuración: se enchufa y conmuta. Uno **gestionable** permite VLAN, QoS o SNMP; las **VLAN** se estudian en el [Tema 6](../06-enrutamiento-subnetting-vlans/tema6.md), aquí solo interesa saber que el modelo del rack puede tenerlas. Por forma hay switches de **escritorio** (pocos puertos, para un aula pequeña) y de **rack 1 U** (24 o 48 puertos, atornillados a los bastidores de 19″). **[PoE](#poe)** (*Power over Ethernet*) alimenta AP, cámaras IP y teléfonos por el mismo UTP, de modo que al techo llega un solo cable.
+
+**Ejemplo del taller.** El switch del armario didáctico se atornilla a 1 U, se etiqueta y se une al panel con latiguillos cortos. Un puerto (o un SFP, si el equipo lo tiene) hace de **uplink** hacia el router o hacia el switch de edificio: por ahí sale el aula. Si ese uplink está caído, pinguean entre sí los PC del tramo y no sale nada hacia otras redes.
+
+<figure markdown="span">
+  ![Frontal de switches Ethernet rackeables y paneles de parcheo en un armario de 19 pulgadas](../img/t3-foto-switch-rack.jpg){ width="640" }
+  <figcaption>Switches Gigabit rackeables y paneles de parcheo en un armario de 19″. Foto: <a href="https://commons.wikimedia.org/wiki/File:19-inch_rackmount_Ethernet_switches_and_patch_panels.jpg">Dsimic</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.es">CC BY-SA 4.0</a>, Wikimedia Commons.</figcaption>
+</figure>
 
 ### Router y gateway
 
-El **router** elige camino entre redes; en el borde del instituto suele hacer NAT y, a veces, DHCP. El **gateway** es la puerta de enlace: puede ser ese mismo router o un equipo que, además, filtra (cortafuegos) o traduce protocolos.
+El **router** une **redes distintas**. El switch reenvía por MAC dentro de la misma LAN; el router mira la **dirección IP** de destino y consulta su **tabla de rutas** para elegir la interfaz de salida. En el PC, esa salida se llama **puerta de enlace** (*default gateway*): es la IP LAN del router. Sin ella, el equipo habla con los vecinos de su red y no con Internet.
+
+Las interfaces que hay que reconocer en el taller son tres. La **LAN** mira hacia el switch del aula (por ejemplo `192.168.10.1/24` en un ejemplo de laboratorio). La **WAN** mira hacia el proveedor. La **consola** sirve para entrar al equipo aunque la red esté caída. En el borde del edificio el mismo aparato suele hacer **NAT** (los PC salen con una dirección pública compartida) y, a veces, **DHCP** (reparte IP, máscara y puerta de enlace). El **gateway** es esa puerta hacia otra red o protocolo; un **cortafuegos** añade filtrado (qué entra y qué sale). Pueden ser el mismo chasis o dos equipos en cascada: primero se encamina, después se filtra, o al revés según el diseño.
+
+<figure markdown="span">
+  ![Aula con switch, router con interfaces LAN y WAN, y salida al proveedor](../img/t3-router-interfaces.svg){ width="820" }
+  <figcaption>Aula → switch → router/gateway → proveedor. LAN, WAN y consola; NAT y DHCP en el borde. Direcciones de ejemplo, no del centro.</figcaption>
+</figure>
+
+<figure markdown="span">
+  ![Salida genérica de ipconfig y de ip route con puerta de enlace de laboratorio](../img/t3-ipconfig-generico.svg){ width="820" }
+  <figcaption>La puerta de enlace del PC (192.168.10.1 en el ejemplo) es la IP LAN del router. Captura genérica, sin datos del centro.</figcaption>
+</figure>
+
+**Ejemplo.** El tráfico de un aula sube al switch del rack, de ahí al router o cortafuegos del edificio y, por último, al proveedor. Si el switch está bien y el router no tiene ruta por defecto, el ping entre mesas funciona y el ping a un servidor de Internet no.
 
 ### Punto de acceso ([AP](#ap))
 
@@ -315,25 +352,30 @@ El canal Ethernet de cobre son **100 m**: **90 m** de enlace permanente (TO ↔ 
 | Equipo ↔ TO | latiguillo corto (p. ej. ≤ 5 m) |
 
 <figure markdown="span">
-  ![Distancia estación de trabajo y TO](../img/DistanciaTO.png){ width="640" }
-  <figcaption>Distancia estación de trabajo ↔ TO.</figcaption>
+  ![Equipo unido a la TO con un latiguillo de 5 metros como máximo](../img/t3-distancia-puesto-to.svg){ width="760" }
+  <figcaption>Área de trabajo: el latiguillo entre el equipo y la TO no supera 5 m y es de la misma categoría que el tendido permanente.</figcaption>
 </figure>
 
 <figure markdown="span">
-  ![Distribución horizontal y sala de telecomunicaciones](../img/DistaciaHorizontal.png){ width="640" }
-  <figcaption>Distribución horizontal y sala de telecomunicaciones.</figcaption>
+  ![Canal de cobre de 100 metros: latiguillos más 90 metros de enlace permanente](../img/t3-canal-100m.svg){ width="820" }
+  <figcaption>Canal Ethernet de cobre = 100 m: hasta 5 m + 90 m de enlace permanente (TO ↔ panel) + hasta 5 m. El punto de consolidación es opcional.</figcaption>
 </figure>
 
 <figure markdown="span">
-  ![Backbone entre distribuidores](../img/DistanciaBackbone.png){ width="400" }
-  <figcaption>Backbone: distancias mayores con fibra.</figcaption>
+  ![Distribuidores FD, BD y CD unidos por backbone de cobre o fibra](../img/t3-backbone-campus.svg){ width="800" }
+  <figcaption>Backbone y campus: FD (planta) → BD (edificio) → CD (campus). El cobre cubre tramos cortos; la fibra, distancias mayores.</figcaption>
 </figure>
 
 Con **fibra**, backbone y campus cubren cientos de metros o kilómetros según el tipo, como se vio en el Tema 2.
 
 ### Tierra (visión breve)
 
-**TIA‑607** pide una tierra de telecomunicaciones: barra principal en el BD, barras en cada sala y conductores a cada rack (verde o verde‑amarillo). En el taller no se deja el armario sin conexión a tierra si el puesto la tiene, ni se improvisan puentes con el cable de datos.
+**TIA‑607** pide una tierra de telecomunicaciones: barra principal en el BD, barras en cada sala y conductores a cada rack (verde o verde‑amarillo). Esa tierra no es un adorno del armario: protege a las **personas** si un equipo tiene un fallo de aislamiento, da un camino a las **descargas** (estática o sobretensión) y reduce el **ruido** eléctrico que acopla a los pares de datos. En el taller no se deja el armario sin conexión a tierra si el puesto la tiene, ni se improvisan puentes con el cable de datos: el UTP no es conductor de protección.
+
+<figure markdown="span">
+  ![Rack con barra de tierra unida a la barra de sala y a la barra principal del edificio](../img/t3-tierra-rack.svg){ width="720" }
+  <figcaption>Tierra de telecomunicaciones: el chasis del rack se une a la barra de sala y, desde ahí, a la barra principal del edificio (TIA‑607).</figcaption>
+</figure>
 
 !!! warning "Errores frecuentes"
     Tender 110 m de UTP «porque Cat. 6 aguanta». La norma del canal son 100 m; a partir de ahí fallan la certificación y, a menudo, el enlace. Otro error: 90 m de horizontal **más** un latiguillo de 15 m.
@@ -343,6 +385,21 @@ Con **fibra**, backbone y campus cubren cientos de metros o kilómetros según e
 ## Empalme por fusión (visión de taller)
 
 En fibra, el **empalme por fusión** une dos núcleos fundiéndolos con un arco eléctrico controlado (**fusionadora**). No es un crimpado de RJ‑45: un corte sucio o una fibra sucia deja el enlace inservible. En el taller se trabaja, por este orden, la preparación (pelado, limpieza, corte con **cleaver**), la fusión, el protector termorretráctil y una comprobación básica (continuidad o potencia, según el equipo).
+
+<figure markdown="span">
+  ![Secuencia pelado, limpieza, corte, fusión, protector y comprobación](../img/t3-proceso-fusion.svg){ width="860" }
+  <figcaption>Secuencia de fusión en taller: pelado → limpieza → corte (cleaver) → fusión → protector → comprobación.</figcaption>
+</figure>
+
+<figure markdown="span">
+  ![Fusionadora de fibra óptica en uso de campo](../img/t3-foto-fusionadora.jpg){ width="520" }
+  <figcaption>Fusionadora (Fujikura 70S) en un empalme de campo. Foto: <a href="https://commons.wikimedia.org/wiki/File:Fujikura-Fusion_Splicer_70S-01aASD.jpg">Asurnipal</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.es">CC BY-SA 4.0</a>, Wikimedia Commons.</figcaption>
+</figure>
+
+<figure markdown="span">
+  ![Cleaver para corte preciso de fibra óptica](../img/t3-foto-cleaver.jpg){ width="480" }
+  <figcaption>Cleaver: corte preciso de la fibra antes de fusionar. Foto: <a href="https://commons.wikimedia.org/wiki/File:Obcinarka_do_swiatlowodow_pg_eti_2007.jpg">Vmario</a>, dominio público, Wikimedia Commons.</figcaption>
+</figure>
 
 En **PRL** hacen falta gafas, no mirar el haz y recoger los restos de fibra en un recipiente específico: pinchan y apenas se ven.
 
