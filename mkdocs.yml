@@ -8,7 +8,6 @@ use_directory_urls: false
 exclude_docs: |
   tema01.md
   03-cableado-estructurado/tema3.md
-  certificacion/index.md
 
 nav:
   - "Inicio": "index.md"
