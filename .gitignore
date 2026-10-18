@@ -6,3 +6,10 @@ package-lock.json
 mermaid-filter.err
 Extra/__pycache__/
 __pycache__/
+
+# Material interno / datos que no van al sitio
+Planificación/figuras/horario-RAL-2026-27.jpeg
+Planificación/CALENDARIO ESCOLAR 2026-2027.xlsx
+Planificación/soluciones-autocheck-T2.md
+Planificación/soluciones-autocheck-T3.md
+Planificación/soluciones-autocheck-certificacion.md

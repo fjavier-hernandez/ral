@@ -48,10 +48,10 @@ Las ^^competencias profesionales^^ asociadas al módulo:
     | Concepto | Horas |
     | --- | ---: |
     | **Total módulo** | **233 h** |
-    | Formación en el **centro** | **133 h** |
-    | Formación en **empresa (FE)** | **100 h** |
+    | Formación en el **centro** | **186 h** |
+    | Formación en **empresa (FE)** | **47 h** |
 
-    La fecha de la formación en empresa **se comunicará cuando esté fijada**. Mientras tanto, organizamos el curso sobre las **133 h en el centro**.
+    El módulo son **233 h**. El **80 %** de cada resultado de aprendizaje se imparte en el centro (**186 h**) y el **20 %** restante (**47 h**) queda vinculado a la formación en empresa. En esas 186 h veremos **todos** los contenidos del módulo, y dedicaremos más tiempo y práctica a los fundamentales.
 
 ## Temas del curso
 
@@ -59,10 +59,10 @@ Las ^^competencias profesionales^^ asociadas al módulo:
 | ---: | --- | --- | --- | --- |
 | **1** | [Introducción. Arquitectura de redes](01-introduccion-arquitectura/tema1.md) | Tipos de redes, componentes, topologías, modelos OSI y TCP/IP | **Publicado** | RA1 |
 | **2** | [Medios de transmisión y capa física](02-medios-capa-fisica/tema2.md) | Par trenzado, fibra, Wi‑Fi básico y conectores | **Publicado** | RA2, RA3 |
-| **3** | Cableado estructurado y componentes | Racks, paneles, electrónica de red, WLAN/NetAcad | Se publicará cuando toque | RA2, RA3, RA4 |
+| **3** | Cableado estructurado y componentes | Racks, paneles, electrónica de red, WLAN | Se publicará cuando toque | RA2, RA3, RA4 |
 | **4** | Capa de enlace | Tramas, direcciones MAC, switches y dominios de colisión/difusión | Se publicará cuando toque | RA1, RA4 |
 | **5** | Capa de red | IPv4, máscaras, CIDR, ARP, ICMP y DHCP | Se publicará cuando toque | RA1, RA4 |
-| **6** | Enrutamiento, subnetting y VLANs | Subnetting, supernetting, rutas estáticas, VLANs y NetAcad | Se publicará cuando toque | RA3, RA4 |
+| **6** | Enrutamiento, subnetting y VLANs | Subnetting, supernetting, rutas estáticas, VLANs | Se publicará cuando toque | RA3, RA4 |
 | **7** | Capa de transporte | Puertos, TCP/UDP y herramientas básicas | Se publicará cuando toque | RA4, RA5 |
 | **8** | NAT e IPv6 | Traducción de direcciones (NAT/PAT) e introducción a IPv6 | Se publicará cuando toque | RA4, RA5 |
 | **9** | Servicios, diagnóstico y protección | Servicios de aplicación, diagnóstico de averías, protección y PRL | Se publicará cuando toque | RA5, RA6 |
@@ -88,7 +88,7 @@ timeline
     section 1ª Evaluación — sep–nov
         Fundamentos : T1 Introducción y arquitectura : T2 Medios y capa física : T3 Cableado y WLAN
     section 2ª Evaluación — nov–ene
-        Núcleo LAN : T4 Capa de enlace : T5 Capa de red : T6 Enrutamiento VLAN y NetAcad
+        Núcleo LAN : T4 Capa de enlace : T5 Capa de red : T6 Enrutamiento y VLAN
     section 3ª Evaluación — ene–feb
         Servicios y cierre : T7 Transporte : T8 NAT e IPv6 : T9 Diagnóstico y protección
 ```
@@ -106,14 +106,14 @@ Imagina la nota del módulo como una **tarta** repartida en seis quesitos (los R
 
 1. En cada RA, tu nota es la **media ponderada** de las actividades de ese RA (AC, PR, PY, PO).
 2. La **nota final** del módulo es la suma de (nota de cada RA × su peso).
-3. Si cumples el criterio de **NetAcad / CCNA** publicado en Aules, puedes sumar **+1 punto** sobre esa nota final. Ese +1 **no sustituye** ningún RA.
+3. Si completas el **apartado de certificación**, puedes sumar hasta **+1 punto** sobre esa nota final, que puede llegar hasta **11**. El punto tiene dos mitades: **0,5** por entregar las prácticas de Packet Tracer, hechas en casa, y superar la auditoría en clase; y **0,5** más si además apruebas un examen de certificación (cómo se acredita se concretará en Aules). Ese +1 **no sustituye** ningún RA.
 
 ``` mermaid
 flowchart TB
   A["Paso 1 — Instrumentos\nAC · PR · PY · PO"]
   B["Paso 2 — Nota de cada RA\nmedia de las actividades de ese RA"]
   C["Paso 3 — Nota final del módulo\nRA1×20% + RA2×12% + RA3×18%\n+ RA4×25% + RA5×15% + RA6×10%"]
-  D["+1 NetAcad / CCNA\nsi se concede en Aules"]
+  D["+1 Certificación\n0,5 prácticas + 0,5 examen\nhasta 11"]
   A --> B --> C
   D -.-> C
 ```
@@ -138,16 +138,16 @@ pie showData
 | Instrumento | Icono | Descripción | Escala |
 | --- | --- | --- | --- |
 | Actividad de clase | :simple-readdotcv: **AC** | Microevidencia de aula | **0–1** |
-| Práctica | :simple-neutralinojs: **PR** | Práctica / simulación / laboratorio / NetAcad | **0–10** |
+| Práctica | :simple-neutralinojs: **PR** | Práctica de taller, laboratorio o investigación con exposición | **0–10** |
 | Proyecto | :material-calendar: **PY** | Entregable mayor con rúbrica | **0–30** |
 | Prueba objetiva | :material-pen: **PO** | Examen escrito o en ordenador | **0–100** |
-| NetAcad / CCNA | :simple-cisco: **+1** | Aprovechamiento de la *class* NetAcad (según Aules) | **+1 en la nota final** |
+| Certificación | :simple-cisco: **+1** | 0,5 por las prácticas de Packet Tracer entregadas y defendidas en la auditoría; 0,5 más por aprobar un examen de certificación | **Hasta +1 en la nota final (hasta 11)** |
 
 **Resumen:**
 
 - Las calificaciones se publican en **Aules**.
 - Cada actividad indica el **RA** que evalúa y su escala. Codificación: prefijo del IE + número de tema (ej. `AC102` = actividad 02 del Tema 1; `PR101` = práctica 01 del Tema 1).
-- **Cisco NetAcad:** prácticas como **PR303** (WLAN) y **PR603** (VLAN/enrutamiento) forman parte del itinerario. Si cumples lo publicado en Aules, puedes obtener el **+1** en la nota final. La práctica opcional **PR102** (Tema 1) también suma para el +1 si la defiendes en la auditoría.
+- **Certificación y Packet Tracer:** todas las prácticas de Packet Tracer del módulo (PR102, PR103, PR202, PR303 y las de temas posteriores) son trabajo para casa del apartado de certificación. No puntúan en la nota de los RA. Entregarlas y defenderlas en clase (auditoría oral breve o demo) da **0,5** del **+1**; el punto entero exige además aprobar un examen de certificación.
 - Las entregas en Aules son **obligatorias en Markdown** (`.md`). No se aceptan PDF.
 
 !!! note "Cómo empezar con Markdown y VS Code"
@@ -161,7 +161,7 @@ pie showData
 - Aules (entregas en `.md` y calificaciones).
 - Diagramas: [Excalidraw](https://excalidraw.com/), [draw.io (diagrams.net)](https://app.diagrams.net/) o [Dia](https://wiki.gnome.org/Apps/Dia).
 - Simulación: [Cisco Packet Tracer](https://www.netacad.com/es/cisco-packet-tracer).
-- Formación NetAcad / CCNA (acceso según se indique en clase / Aules).
+- Apartado de certificación (Packet Tracer en casa y preparación del CCNA).
 - Editor de entregas: Visual Studio Code + Markdown.
 - Herramientas y cableado del taller (Temas 2–3 y Tema 9).
 
