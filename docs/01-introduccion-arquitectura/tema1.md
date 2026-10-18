@@ -110,7 +110,7 @@ Los **nodos intermedios** participan en el camino entre extremos: no sustituyen 
 !!! warning "Errores frecuentes"
     Confundir **switch** y **router** es el error más típico de examen. El switch une equipos de la **misma** red local. El router une **redes distintas** (por ejemplo, el aula con Internet) y trabaja con direcciones IP. El hub casi no se usa hoy; lo estudiaremos al contar [dominios de colisión](#dominio-de-colision).
 
-### Adaptador de red ([NIC](#nic))
+### Adaptador de red ([NIC](#nic)) {: #adaptador-de-red-nic }
 
 La **NIC** (*Network Interface Card*, tarjeta de red) conecta el equipo al medio. Puede ir integrada en la placa o ser un módulo USB/PCIe. Trabaja en las **capas 1 y 2**: bits en el medio y tramas con dirección MAC. La mayoría de NIC cableadas en el aula son **Ethernet**. Se caracteriza por el tipo de interfaz (cobre, fibra, Wi‑Fi), el modo (**half-dúplex** o **full-dúplex**) y la velocidad (Mbps / Gbps).
 
