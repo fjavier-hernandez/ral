@@ -554,7 +554,7 @@ La práctica evaluable es **PR304**. El crimpado de cobre (conectores RJ‑45) y
 | **Dónde** | **Casa** (certificación / +1). No ocupa sesiones de este tema |
 | **Instrumento** | Checklist; se corrige solo si hace falta |
 
-* :simple-cisco: **PR303**. Itinerario **NetAcad / Packet Tracer** de WLAN (AP, SSID, canal, seguridad básica) siguiendo el curso de Pablo Hidalgo. Entrega `PR303.md` con checklist y capturas cuando lo pida el profesor. **No puntúa** en la nota de los RA (entra en el +1 de certificación). **No sustituye** a **PR305**.
+* :simple-cisco: **PR303**. Práctica de **Packet Tracer** de WLAN (AP, SSID, canal, seguridad básica) siguiendo el curso de Pablo Hidalgo. Entrega `PR303.md` con checklist y capturas cuando lo pida el profesor. **No puntúa** en la nota de los RA (entra en el +1 de certificación). **No sustituye** a **PR305**.
 
 ### PR302 — Proyecto aulario
 

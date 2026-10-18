@@ -451,13 +451,15 @@ El detalle de paneles, tomas de usuario y canalizaciones se desarrolla en el **T
 
 ### PR202 — Packet Tracer: capa física { #pr202-packet-tracer-capa-fisica }
 
-* :simple-cisco: **PR202**. (RA2 // CE2c, CE2d // RA3 // CE3f // **PR 0–10**). En Packet Tracer identificas puertos y módulos, insertas los que faltan, cableas la topología según la tabla y compruebas la conectividad física.
+* :simple-cisco: **PR202**. (RA2 // CE2c, CE2d // RA3 // CE3f // **Certificación · suma en el +1**). En Packet Tracer identificas puertos y módulos, insertas los que faltan, cableas la topología según la tabla y compruebas la conectividad física.
 
-  **Antes:** [guía inicial de Packet Tracer](../90-guias/packet-tracer.md) (sesión iniciada) y el fichero `PR202.pka` de Aules.
+  **Antes:** [guía inicial de Packet Tracer](../certificacion/packet-tracer.md) (sesión iniciada) y el fichero `PR202.pka` de Aules.
 
-  **Guion:** [PR202 — Conectar la capa física](../90-guias/pr202-capa-fisica.md) (también en Aules).
+  **Guion:** [PR202 — Conectar la capa física](../certificacion/pr202-capa-fisica.md) (también en Aules).
 
   **Entrega:** `PR202.pka` + `PR202.md` (capturas y respuestas).
+
+  Es trabajo para casa del apartado de Certificación: no puntúa en la nota de los RA y cuenta para el +1 si la entregas y la defiendes en clase (auditoría oral breve o demo). La rúbrica sirve para revisarla cuando haga falta.
 
 | Criterio | Descripción | Puntos |
 | --- | --- | --- |

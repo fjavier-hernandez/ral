@@ -502,9 +502,9 @@ Las soluciones de los dos ejercicios están solo en el [Autocheck](#autocheck-de
 
 * :simple-cisco: **PR102**. (RA1 // CE1a, CE1c // **Opcional · suma en el +1**). En **Packet Tracer**, observad la encapsulación de una petición web (HTTP / TCP / IP / Ethernet) y el papel de DNS (y ARP si aparece). Es voluntaria y va más allá de lo que vemos en este tema: puertos, DNS, ARP y TCP se ven a fondo en temas posteriores. Suma para el **+1** de la nota final solo si la defiendes en una **auditoría** oral cuando el profesor lo indique.
 
-  **Antes:** instalad PT con la [guía inicial](../90-guias/packet-tracer.md).
+  **Antes:** instalad PT con la [guía inicial](../certificacion/packet-tracer.md).
 
-  **Guion:** [PR102 — Modelos OSI/TCP](../90-guias/pr102-modelos-osi.md) (también en Aules). Usa la topología `.pkt` de Aules **o** monta la mini-LAN del guion.
+  **Guion:** [PR102 — Modelos OSI/TCP](../certificacion/pr102-modelos-osi.md) (también en Aules). Usa la topología `.pkt` de Aules **o** monta la mini-LAN del guion.
 
   **Entrega:** `PR102.md` + capturas (simulación / PDU). Opcional: `.pkt`.
 
@@ -520,13 +520,15 @@ La rúbrica valora la práctica; solo cuenta para el +1 si la defiendes en la au
 
 ### PR103 — Mi primera red en Packet Tracer { #pr103-mi-primera-red-en-packet-tracer }
 
-* :simple-cisco: **PR103**. Mi primera red en Packet Tracer (RA1 // CE1c, CE1d, CE1f, CE1g // **PR 0–10**). Montas desde cero una LAN con un switch y cuatro PC, les das IP y compruebas la conectividad con ping y con el modo Simulación.
+* :simple-cisco: **PR103**. Mi primera red en Packet Tracer (RA1 // CE1c, CE1d, CE1f, CE1g // **Certificación · suma en el +1**). Montas desde cero una LAN con un switch y cuatro PC, les das IP y compruebas la conectividad con ping y con el modo Simulación.
 
-  **Antes:** [guía inicial de Packet Tracer](../90-guias/packet-tracer.md) (sesión iniciada).
+  **Antes:** [guía inicial de Packet Tracer](../certificacion/packet-tracer.md) (sesión iniciada).
 
-  **Guion:** [PR103 — Mi primera red](../90-guias/pr103-primera-red.md) (también en Aules). No hay `.pkt` de partida: lo construyes tú siguiendo el vídeo.
+  **Guion:** [PR103 — Mi primera red](../certificacion/pr103-primera-red.md) (también en Aules). No hay `.pkt` de partida: lo construyes tú siguiendo el vídeo.
 
   **Entrega:** `PR103.pkt` + `PR103.md` (capturas y respuestas).
+
+  Es trabajo para casa del apartado de Certificación: no puntúa en la nota de los RA y cuenta para el +1 si la entregas y la defiendes en clase (auditoría oral breve o demo). La rúbrica sirve para revisarla cuando haga falta.
 
 | Criterio | Descripción | Puntos |
 | --- | --- | --- |
