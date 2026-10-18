@@ -1,69 +1,76 @@
 ---
-title: Certificación — CCST Networking y el +1
-description: Certificaciones de Cisco para 1.º de SMR (CCST Networking, técnico de soporte, y CCNA, asociado de redes), trabajo para casa con Packet Tracer siguiendo el curso de Pablo Hidalgo y cómo se consigue el +1 en la nota final.
+title: Certificación CCNA y el +1
+description: Certificación CCNA (Cisco Certified Network Associate, asociado de redes certificado por Cisco) para 1.º de SMR (Sistemas Microinformáticos y Redes), recorrido del curso de Pablo Hidalgo, prácticas de Packet Tracer para casa y cómo se consigue el +1 en la nota final.
 ---
 
-# Certificación: CCST Networking y el +1
+# Certificación CCNA y el +1
 
-En el módulo aprendes redes montando cable, armarios y switches reales en el taller. Esta página recoge la otra mitad del camino: la preparación de una **certificación** profesional de Cisco y el trabajo con **Packet Tracer** que la acompaña. Todo lo que hay aquí se hace **en casa**, a tu ritmo, y se apoya en lo que ya hemos visto en clase. No sustituye a las prácticas de taller ni a los exámenes: las completa. Las prácticas de Packet Tracer no cuentan en la nota de los RA; en su lugar, en clase hacemos prácticas de taller o de investigación con exposición. Lo que trabajes aquí, si lo haces con constancia, puede sumarte **un punto** en la nota final del módulo.
+En el módulo aprendes redes montando cable, armarios y switches reales en el taller. Esta página recoge la otra mitad del camino: la preparación de la certificación profesional **CCNA** de Cisco y el trabajo con **Packet Tracer** que la acompaña. Todo lo que hay aquí se hace **en casa**, a tu ritmo, y se apoya en lo que ya hemos visto en clase. No sustituye a las prácticas de taller ni a los exámenes, sino que los completa. Las prácticas de Packet Tracer no cuentan en la nota de los RA (resultados de aprendizaje); en su lugar, en clase hacemos prácticas de taller o de investigación con exposición. Lo que trabajes aquí, si lo haces con constancia, puede sumarte **hasta un punto** en la nota final del módulo.
 
 !!! tip "Cómo usar esta página"
-    Lee primero qué es una certificación y cómo cuenta el +1. Si todavía no tienes Packet Tracer funcionando, empieza por la [guía inicial](packet-tracer.md). Después ve al bloque que corresponde a lo que ya hemos dado en clase (ahora, el [Bloque 1](#bloque-1-temas-1-y-2)) y sigue el orden que propone: vídeo, lectura del apartado del tema y práctica en Packet Tracer. La página crece a medida que avanza el curso; los bloques nuevos aparecen cuando cerramos cada tema.
+    Lee primero qué es el CCNA y cómo cuenta el +1. Si todavía no tienes Packet Tracer funcionando, empieza por la [guía inicial](packet-tracer.md). Después sigue el [recorrido CCNA](#recorrido-ccna) en el orden que propone: lección del curso, repaso del apartado de los apuntes y, cuando toca, práctica de Packet Tracer.
 
 ---
 
-## Qué es una certificación y cuál encaja en 1.º de SMR
+## Qué es una certificación y por qué el CCNA
 
 Una **certificación** es un examen oficial, organizado por un fabricante o por una entidad independiente, que acredita ante cualquier empresa que dominas unos conocimientos concretos. A diferencia del título de Técnico en Sistemas Microinformáticos y Redes, que acredita el ciclo completo, una certificación se centra en un área muy definida y la reconocen empresas de todo el mundo. En redes, las más conocidas son las de **Cisco**, el fabricante cuyos equipos y cuyo simulador, Packet Tracer, usamos en el módulo.
 
-Cisco tiene dos certificaciones que tienen sentido para ti. El **CCST Networking** (*Cisco Certified Support Technician Networking*, técnico de soporte certificado por Cisco en redes) es la certificación de entrada: comprueba que entiendes cómo funciona una red, que reconoces cables, conectores y puertos y que sabes hacer un diagnóstico básico. El **CCNA** (*Cisco Certified Network Associate*) es el siguiente escalón: exige configurar switches y routers, direccionamiento IP con subredes, enrutamiento y seguridad, y está pensado para quien ya trabaja o va a trabajar administrando redes. Para un primer curso de grado medio, la meta razonable es el CCST; el CCNA queda como objetivo a largo plazo, por ejemplo al terminar el ciclo.
+La certificación que seguimos es el **CCNA** (*Cisco Certified Network Associate*, asociado de redes certificado por Cisco), que se obtiene con un único examen, el **200-301**. Es la certificación de redes más conocida del mercado y la que suelen pedir las ofertas de empleo de técnico de redes. Exige entender cómo viaja la información por una red, conectar y diagnosticar cables e interfaces, configurar switches y routers, trabajar con direcciones IP y subredes, y aplicar seguridad básica. Va más allá del currículo de 1.º de SMR, pero puedes seguir su recorrido desde ya: buena parte de lo que pide coincide con lo que vemos en el módulo. Quienes superen la auditoría de prácticas y destaquen tendrán la oportunidad de presentarse al examen oficial, y espero que lo hagan.
 
-| | CCST Networking (100-150) | CCNA (200-301) |
-| --- | --- | --- |
-| Nivel | Entrada: soporte técnico de redes | Asociado: administración de redes |
-| Requisitos previos | Ninguno | Ninguno (se recomienda experiencia) |
-| Duración del examen | 50 minutos | 120 minutos |
-| Precio en Cisco | 125 US$ (en euros lo fija el centro examinador) | 300 US$ |
-| Validez | 5 años | 3 años |
-| Relación con RAL | Cubre buena parte de lo que vemos en el módulo | Va más allá del currículo de 1.º de SMR |
+| | CCNA (200-301) |
+| --- | --- |
+| Nivel | Asociado: instalación, configuración y diagnóstico de redes |
+| Requisitos previos | Ninguno (Cisco recomienda experiencia previa) |
+| Duración del examen | 120 minutos |
+| Precio en Cisco | 300 US$ (en euros, el que fije Pearson VUE) |
+| Idiomas | Inglés y japonés |
+| Validez | 3 años |
+| Relación con RAL | Cubre buena parte de los Temas 1 a 9 y llega más lejos |
 
 !!! warning "El CCNA cambia de versión en febrero de 2027"
-    La versión actual del CCNA (v1.1) se puede examinar hasta el **2 de febrero de 2027**. Desde el **3 de febrero de 2027** entra la **v2.0**, con el mismo código 200-301 y un temario renovado. Si piensas presentarte al CCNA en algún momento del ciclo, lo harás casi seguro con la v2.0: por eso en esta página seguimos el curso de Pablo Hidalgo preparado para esa versión.
+    La versión actual del examen (v1.1) se puede hacer hasta el **2 de febrero de 2027**. Desde el **3 de febrero de 2027** solo existe la **v2.0**, con el mismo código 200-301 y un temario renovado. Si piensas presentarte en algún momento del ciclo, lo harás con la v2.0; por eso el recorrido de esta página sigue el curso de Pablo Hidalgo preparado para esa versión.
 
-El temario oficial del CCST Networking se organiza en seis **dominios**: conceptos y estándares de red; direccionamiento y subredes; equipos finales y medios; infraestructura; diagnóstico de problemas; y seguridad. Puedes consultarlo completo en la página de Cisco ([temario del CCST Networking](https://learningnetwork.cisco.com/s/ccst-networking-exam-topics)). La tabla siguiente relaciona esos dominios con los temas del módulo, de modo que sepas qué parte ya tienes trabajada y cuál llegará más adelante.
+El temario oficial de la v2.0 se organiza en cinco **dominios**, cada uno con su peso en el examen. Puedes consultarlo completo en la página de Cisco ([temario del CCNA v2.0](https://learningnetwork.cisco.com/s/ccna-v2-exam-topics)). La tabla siguiente relaciona esos dominios con los temas del módulo.
 
-| Dominio del CCST | Qué pide, en resumen | Dónde lo vemos en RAL |
+| Dominio del CCNA v2.0 | Qué pide, en resumen | Dónde lo vemos en RAL |
 | --- | --- | --- |
-| 1. Conceptos y estándares | Modelos OSI (*Open Systems Interconnection*) y TCP/IP, tipos de red, topologías, protocolos habituales | **Tema 1** (ya visto); protocolos en los Temas 7 y 9 |
-| 2. Direccionamiento y subredes | IPv4, máscaras, subredes, IPv6, direcciones públicas y privadas | Temas 5, 6 y 8 |
-| 3. Equipos finales y medios | Cables, conectores, fibra, Wi‑Fi, interferencias | **Tema 2** (ya visto) y Tema 3 |
-| 4. Infraestructura | Puertos de los equipos, conexión según un diagrama, conmutación y enrutamiento básicos | Temas 3, 4 y 6; los puertos y módulos ya los has visto en **PR202** |
-| 5. Diagnóstico | Metodología, `ping`, `ipconfig`, comandos `show` | Tema 9; el primer `ping` ya lo hiciste en **PR103** |
-| 6. Seguridad | Cortafuegos, amenazas, seguridad Wi‑Fi | Temas 3 y 9 |
+| 1. Infraestructura y conectividad (25 %) | Cables de cobre y fibra, interfaces, Wi‑Fi, direcciones IPv4 e IPv6, conectividad de los equipos | **Tema 2** y Tema 3; direcciones en los Temas 5, 6 y 8 |
+| 2. Conmutación y acceso a la red (25 %) | Switches, VLAN, enlaces troncales, alimentación por Ethernet o PoE, `ping` y `traceroute` | Temas 3, 4 y 6; el primer `ping` se trabaja en **PR103** |
+| 3. Enrutamiento IP (20 %) | Tabla de rutas, rutas estáticas, OSPF | Tema 6 |
+| 4. Servicios de red y seguridad (20 %) | DHCP, DNS, NAT, listas de acceso, seguridad de los puertos | Temas 8 y 9 |
+| 5. IA, operación y gestión de la red (10 %) | Gestión y automatización de redes | Tema 9, en parte; el resto queda fuera del currículo de 1.º |
+
+Los fundamentos del **Tema 1** (tipos de red, topologías, modelos OSI y TCP/IP, encapsulación) no aparecen como dominio propio, pero son la base de todos: el curso de Pablo Hidalgo empieza por ellos.
 
 ---
 
 ## El +1 en la nota final {: #el-1-de-certificacion }
 
-La programación del módulo recoge un **punto extra** en la nota final para quien completa este apartado de certificación. Funciona como un itinerario de formación de Cisco, pero dentro de nuestros apuntes: tú haces en casa las prácticas de Packet Tracer de cada bloque, las entregas en Aules y yo sigo tu avance desde allí. Este apartado explica qué tienes que hacer para conseguirlo y cómo se aplica, porque es fácil malinterpretarlo: no es una nota de un RA ni sirve para aprobar uno suspendido.
+La programación del módulo recoge **hasta un punto extra** en la nota final para quien completa este apartado de certificación. Funciona como un itinerario de formación de Cisco, pero dentro de nuestros apuntes: tú haces en casa las prácticas de Packet Tracer, las entregas en Aules y yo sigo tu avance desde allí. Este apartado explica qué tienes que hacer para conseguirlo y cómo se aplica, porque es fácil malinterpretarlo: no es una nota de un RA ni sirve para aprobar uno suspendido.
 
-**Cómo cuenta.** Tu nota del módulo se calcula como se explica en la página de [Inicio](../index.md): primero la nota de cada RA (resultado de aprendizaje) a partir de sus actividades, y después la media ponderada de los seis RA. Si completas el apartado de certificación, a esa nota final se le suma **1 punto**, de modo que la nota puede llegar **hasta 11**. El +1 **no sustituye ni compensa** ningún RA: para aprobar el módulo sigues necesitando un 5 o más en cada uno de ellos. Dos ejemplos lo dejan claro. Si tu nota final es un 7,4 y has completado el apartado, el módulo queda en 8,4; si es un 10, queda en 11. En cambio, si tienes el RA4 con un 4, el módulo no está aprobado aunque hayas completado el apartado, porque el punto extra se suma a una nota final que ya exige todos los RA superados.
+**Las dos partes del +1.** El punto se gana en dos mitades, y la segunda solo se suma si tienes la primera:
 
-**Qué tienes que hacer.** El +1 se gana con trabajo constante a lo largo del curso, no con una entrega final. En concreto:
+- **0,5 puntos por las prácticas.** Entregas las prácticas de Packet Tracer de este apartado y superas la **auditoría** del profesor, en la que defiendes en clase lo que has hecho.
+- **0,5 puntos más, hasta el punto entero, por el examen.** Si, además, apruebas un **examen de certificación**, el +1 queda completo. Cómo se acredita ese examen para el +1 se concretará en Aules.
+
+**Cómo cuenta.** Tu nota del módulo se calcula como se explica en la página de [Inicio](../index.md): primero la nota de cada RA a partir de sus actividades, y después la media ponderada de los seis RA. A esa nota final se le suma lo que hayas conseguido en este apartado (0,5 o 1 punto), y la nota puede llegar **hasta 11**. El +1 **no sustituye ni compensa** ningún RA: para aprobar el módulo sigues necesitando un 5 o más en cada uno de ellos. Unos ejemplos lo dejan claro. Si tu nota final es un 7,4 y has entregado y defendido las prácticas, el módulo queda en 7,9; si además has aprobado el examen de certificación, queda en 8,4. Con un 10 y el punto entero, la nota es un 11. En cambio, si tienes el RA4 con un 4, el módulo no está aprobado aunque hayas completado el apartado, porque el punto extra se suma a una nota final que ya exige todos los RA superados.
+
+**Qué tienes que hacer.** La primera mitad se gana con trabajo constante a lo largo del curso, no con una entrega final. En concreto:
 
 1. Tener Packet Tracer instalado y la sesión iniciada, como se explica en [Acceso a Packet Tracer](#acceso-a-packet-tracer).
-2. Completar, bloque a bloque, las **prácticas de Packet Tracer** de esta página (en el Bloque 1, PR103 y PR202) y entregar en Aules, en su plazo, el fichero `.pkt` (o `.pka`) y el informe `.md`.
-3. **Defender cada práctica en clase**, con una auditoría oral breve o una demostración: abres tu fichero, haces una comprobación (por ejemplo, un `ping` o un vistazo al modo Simulación) y explicas lo que has hecho. Una práctica entregada pero no defendida no cuenta para el +1. Todas las prácticas de Packet Tracer del módulo, incluidas las de temas posteriores como PR303, cuentan solo para el +1.
-4. Seguir el resto del trabajo de cada bloque, es decir, las lecciones del curso de Pablo Hidalgo y el repaso de los apuntes, que son la preparación para entender lo que haces en cada práctica.
-5. Si entregaste la práctica opcional [PR102](../01-introduccion-arquitectura/tema1.md#pr102-modelos-en-packet-tracer) del Tema 1, defenderla en la **auditoría oral** cuando se convoque: solo así suma para el +1.
+2. Seguir el [recorrido CCNA](#recorrido-ccna): las lecciones del curso de Pablo Hidalgo y el repaso de los apuntes, que son la preparación para entender lo que haces en cada práctica.
+3. Completar las **prácticas de Packet Tracer** en el punto del recorrido en que aparecen y entregar en Aules, en su plazo, el fichero `.pkt` (o `.pka`) y el informe `.md`. Todas las prácticas de Packet Tracer del módulo, por ejemplo PR303, cuentan solo para el +1.
+4. **Superar la auditoría de cada práctica en clase**, con una explicación oral breve o una demostración: abres tu fichero, haces una comprobación (por ejemplo, un `ping` o un vistazo al modo Simulación) y explicas lo que has hecho. Una práctica entregada pero no defendida no cuenta para el +1. La práctica opcional [PR102](pr102-modelos-osi.md) solo suma si la defiendes del mismo modo.
+5. Para la segunda mitad, aprobar el examen de certificación y acreditarlo como se indique en Aules.
 
-En Aules verás el seguimiento de cada bloque: qué prácticas has entregado, cuáles has defendido y cuáles te faltan. Las prácticas de este apartado se corrigen solo cuando hace falta; lo que de verdad cuenta es que las hagas tú y que sepas explicarlas en la auditoría, igual que con PR102.
+En Aules verás el seguimiento: qué prácticas has entregado, cuáles has defendido y cuáles te faltan. Las prácticas de este apartado se corrigen solo cuando hace falta; lo que de verdad cuenta es que las hagas tú y que sepas explicarlas en la auditoría.
 
 ---
 
 ## Acceso a Packet Tracer {: #acceso-a-packet-tracer }
 
-Packet Tracer es gratuito, pero Cisco pide una **cuenta gratuita** para descargarlo y para abrirlo: al arrancar el programa tienes que iniciar sesión con una cuenta de **NetAcad** o de **Skills for All**, que son las dos plataformas de formación de Cisco. No necesitas estar en ninguna clase ni pagar nada. Los pasos de descarga, instalación e inicio de sesión están en la [guía inicial de Packet Tracer](packet-tracer.md).
+Packet Tracer es gratuito, pero Cisco pide una **cuenta gratuita** para descargarlo y para abrirlo: al arrancar el programa tienes que iniciar sesión con una cuenta de **NetAcad** (*Cisco Networking Academy*) o de **Skills for All**, que son las dos plataformas de formación de Cisco. No necesitas estar en ninguna clase ni pagar nada. Los pasos de descarga, instalación e inicio de sesión están en la [guía inicial de Packet Tracer](packet-tracer.md).
 
 Prueba primero con tu correo **`@alu.edu.gva.es`**: es la opción recomendada, porque así todo lo del módulo queda en tu cuenta del centro. Si no consigues crear la cuenta con ese correo o el inicio de sesión falla, crea una **cuenta personal gratuita de Cisco** (en NetAcad o en Skills for All) con otro correo tuyo y úsala solo para Packet Tracer. En los dos casos, la entrega sigue siendo en Aules.
 
@@ -71,60 +78,46 @@ Si Packet Tracer te avisa de que no encuentra una cuenta asociada, Cisco indica 
 
 ---
 
-## Cómo se trabaja: en casa, con Packet Tracer y el curso de Pablo Hidalgo
+## Cómo se trabaja: el curso de Pablo Hidalgo
 
-El hilo conductor es el curso gratuito en español **CCNA Recargado 2.0** de Pablo Hidalgo ([lista de reproducción en YouTube](https://www.youtube.com/playlist?list=PLK2CXnxpJHnY)), que prepara la nueva versión del CCNA. Son vídeos cortos, de seis a once minutos, que explican un concepto cada uno y, cada cierto número de lecciones, proponen un laboratorio de Packet Tracer. Ya conoces a este autor: sus vídeos aparecen en los Temas 1 y 2 y en la guía de Packet Tracer. Las lecciones de su curso anterior, **CCNA Completo v1.1** ([lista de reproducción](https://www.youtube.com/playlist?list=PLxnG_9vdV6-gEWV15pq89XK_W3G8vP5_0)), siguen siendo útiles para repasar, pero el itinerario de esta página va por el curso nuevo.
+El hilo conductor es el curso gratuito en español **CCNA Recargado 2.0** de Pablo Hidalgo ([lista de reproducción en YouTube](https://www.youtube.com/playlist?list=PLK2CXnxpJHnY)), que prepara la versión 2.0 del CCNA. Son vídeos de seis a diez minutos que explican un concepto cada uno y, cada cierto número de lecciones, proponen un laboratorio de Packet Tracer. Ya conoces a este autor: sus vídeos aparecen en los Temas 1 y 2 y en la guía de Packet Tracer.
 
-Si quieres un apoyo más, Cisco ofrece gratis el curso en línea **Networking Basics** en su plataforma NetAcad (*Cisco Networking Academy*) ([página del curso](https://www.netacad.com/courses/networking-basics)). Tiene 17 módulos con lecturas, cuestionarios y actividades de Packet Tracer, y Cisco lo presenta como preparación para el CCST Networking. Es **opcional**: no hace falta para el +1 y no se entrega.
+Algunas lecciones, sobre todo los laboratorios, están reservadas a los **miembros de pago** del canal. No las necesitas: en el recorrido se indican como opcionales, y las prácticas de esta página cubren ese trabajo. Cuando el curso nuevo todavía no ha llegado a un concepto, el recorrido remite a una lección pública del curso anterior del mismo autor, **CCNA Completo v1.1** ([lista de reproducción](https://www.youtube.com/playlist?list=PLxnG_9vdV6-gEWV15pq89XK_W3G8vP5_0)).
 
-La forma de trabajar cada bloque es siempre la misma. Primero ves las lecciones del vídeo. Después repasas el apartado del tema que se indica, porque los apuntes son la referencia del módulo y el vídeo es un complemento. Por último, haces la práctica de Packet Tracer y la entregas en Aules en Markdown (`.md`), junto con el fichero `.pkt`, igual que el resto de entregas del módulo.
+La forma de trabajar cada tramo es siempre la misma. Primero ves las lecciones. Después repasas el apartado de los apuntes que se indica, porque los apuntes son la referencia del módulo y el vídeo es un complemento. Por último, si el tramo tiene práctica, la haces en Packet Tracer y la entregas en Aules en Markdown (`.md`), junto con el fichero `.pkt`, igual que el resto de entregas del módulo.
 
 !!! note "Por qué el vídeo no basta"
-    El curso de Pablo Hidalgo prepara el CCNA, que llega más lejos que nuestro currículo, y a veces nombra conceptos que todavía no hemos visto (direcciones IP, puertos, comandos de configuración). No te preocupes si algo no lo entiendes del todo: cada bloque indica qué lecciones corresponden a lo ya dado y en qué tema verás lo demás.
+    El curso de Pablo Hidalgo prepara el CCNA, que llega más lejos que nuestro currículo, y a veces nombra conceptos que el módulo trata en otro tema (direcciones IP, puertos, comandos de configuración). No te preocupes si algo no lo entiendes del todo: cada tramo indica el apartado de los apuntes que corresponde.
 
 ---
 
-## Bloque 1. Temas 1 y 2 {: #bloque-1-temas-1-y-2 }
+## El recorrido CCNA {: #recorrido-ccna }
 
-Este bloque cubre lo que hemos visto hasta ahora: qué es una red y qué equipos intervienen, los modelos de capas y la encapsulación (Tema 1), y los medios de transmisión con el cable de cobre, la fibra y el Wi‑Fi (Tema 2). En el temario del CCST corresponde, sobre todo, a los dominios 1 y 3.
+El recorrido sigue el orden del curso de Pablo Hidalgo, que es el orden en que el CCNA construye los conocimientos: primero los fundamentos, después la capa física y Packet Tracer, luego el Wi‑Fi y la capa de enlace. Las prácticas no van en el orden de los temas del módulo, sino en el punto del curso que corresponde a su nivel. Por eso PR202, que es del Tema 2, va antes que PR103, que es del Tema 1: conectar cables y módulos solo pide capa física, mientras que dar direcciones IP y comprobar con `ping` pide algo más. PR102, la más exigente, cierra el recorrido.
 
-### Lecciones del curso de Pablo Hidalgo
+| Tramo | Lecciones (CCNA Recargado 2.0) | Repasa en los apuntes | Práctica |
+| --- | --- | --- | --- |
+| 1. Temario | [Lección 1](https://www.youtube.com/watch?v=8vg7otknnHc) | Esta página | — |
+| 2. Fundamentos de redes | [Lección 2](https://www.youtube.com/watch?v=HG7SukHUQ1E), [3](https://www.youtube.com/watch?v=dzg0-4l9CII) y [4](https://www.youtube.com/watch?v=sYRDUsufWNM) | Tema 1: [Sistemas en red](../01-introduccion-arquitectura/tema1.md#sistemas-en-red), [Topologías](../01-introduccion-arquitectura/tema1.md#topologias), [PDU y encapsulación](../01-introduccion-arquitectura/tema1.md#pdu-y-encapsulacion) y [Modelo OSI y modelo TCP/IP](../01-introduccion-arquitectura/tema1.md#modelo-osi-y-modelo-tcpip) | — |
+| 3. Capa física | [Lección 5](https://www.youtube.com/watch?v=AdPkcvqKWZE), [6](https://www.youtube.com/watch?v=TMiYyKMTnqA), [7](https://www.youtube.com/watch?v=H0zxY5-reeA), [8](https://www.youtube.com/watch?v=XwPFOAq6-D8), [9](https://www.youtube.com/watch?v=5vpe4sUW7NU) y [10](https://www.youtube.com/watch?v=nTfiNKbnjeE) | Tema 2: [Cable directo y cruzado](../02-medios-capa-fisica/tema2.md#cable-directo-y-cruzado) y [Fibra óptica](../02-medios-capa-fisica/tema2.md#fibra-optica) | — |
+| 4. Packet Tracer | [Lección 11](https://www.youtube.com/watch?v=OanaO6EF5S4); lecciones 12 y 13, laboratorios 1 y 2 (solo miembros, opcionales) | [Guía inicial de Packet Tracer](packet-tracer.md) | **[PR202](pr202-capa-fisica.md)** |
+| 5. Wi‑Fi | Lección 14 (solo miembros, opcional), [15](https://www.youtube.com/watch?v=ESquFnfym7Q) y [16](https://www.youtube.com/watch?v=MeGor4SxCCM) | Tema 2: [Medios no guiados y Wi‑Fi básico](../02-medios-capa-fisica/tema2.md#medios-no-guiados-y-wifi-basico) | — |
+| 6. Primera red con direcciones IP | Del curso v1.1: [Lección 7](https://www.youtube.com/watch?v=r-K5yZe2Ea8) y [8](https://www.youtube.com/watch?v=gQH8ezSOHh8) (IPv4 y su configuración en Windows) | Tema 1: [Sistemas en red](../01-introduccion-arquitectura/tema1.md#sistemas-en-red) | **[PR103](pr103-primera-red.md)** |
+| 7. Capa de enlace | [Lección 17](https://www.youtube.com/watch?v=ZdAWUfH8BcY) y [18](https://www.youtube.com/watch?v=CGc6XrXp_cU) | Tema 1: [PDU y encapsulación](../01-introduccion-arquitectura/tema1.md#pdu-y-encapsulacion); la capa de enlace se verá a fondo en el Tema 4 | **[PR102](pr102-modelos-osi.md)** (opcional) |
 
-La tabla relaciona cada lección del curso con el apartado de los apuntes que la explica en nuestro módulo. Ve las lecciones en orden y, al terminar cada grupo, repasa el apartado enlazado.
+Las tres prácticas se hacen en casa, se entregan en Aules, se defienden en la auditoría y cuentan solo para el +1:
 
-| Lecciones (CCNA Recargado 2.0) | Contenido | Repasa en los apuntes |
-| --- | --- | --- |
-| [Lección 1](https://www.youtube.com/watch?v=8vg7otknnHc) | Temario del CCNA y laboratorios | Esta página |
-| [Lección 2](https://www.youtube.com/watch?v=HG7SukHUQ1E), [3](https://www.youtube.com/watch?v=dzg0-4l9CII) y [4](https://www.youtube.com/watch?v=sYRDUsufWNM) | Fundamentos de redes | Tema 1: [Sistemas en red](../01-introduccion-arquitectura/tema1.md#sistemas-en-red), [Topologías](../01-introduccion-arquitectura/tema1.md#topologias) y [Modelo OSI y modelo TCP/IP](../01-introduccion-arquitectura/tema1.md#modelo-osi-y-modelo-tcpip) |
-| [Lección 5](https://www.youtube.com/watch?v=AdPkcvqKWZE), [6](https://www.youtube.com/watch?v=TMiYyKMTnqA), [7](https://www.youtube.com/watch?v=H0zxY5-reeA), [8](https://www.youtube.com/watch?v=XwPFOAq6-D8), [9](https://www.youtube.com/watch?v=5vpe4sUW7NU) y [10](https://www.youtube.com/watch?v=nTfiNKbnjeE) | Capa física | Tema 2: [Par trenzado](../02-medios-capa-fisica/tema2.md#par-trenzado), [Cable directo y cruzado](../02-medios-capa-fisica/tema2.md#cable-directo-y-cruzado) y [Fibra óptica](../02-medios-capa-fisica/tema2.md#fibra-optica) |
-| [Lección 11](https://www.youtube.com/watch?v=OanaO6EF5S4) | Cisco Packet Tracer: cuenta, descarga e inicio | [Guía inicial de Packet Tracer](packet-tracer.md) |
-| [Lección 12](https://www.youtube.com/watch?v=fgkJChXMYR4) y [13](https://www.youtube.com/watch?v=PpYSB5XvR8E) | Laboratorios de Packet Tracer 1 y 2 | Práctica del bloque (abajo) |
+- **[PR202 — Conectar la capa física](pr202-capa-fisica.md).** Identificas puertos y módulos de un router y de varios switches, eliges el cable adecuado para cada enlace y compruebas el resultado. Corresponde al primer punto del dominio 1 del CCNA: interfaces y cables de cobre y fibra.
+- **[PR103 — Mi primera red](pr103-primera-red.md).** Montas una LAN con un switch y cuatro PC, les das dirección IP y compruebas la conectividad con `ping` y con el modo Simulación. Es el primer contacto con el diagnóstico de conectividad que pide el CCNA.
+- **[PR102 — Modelos OSI y TCP/IP](pr102-modelos-osi.md)** (opcional). Observas la encapsulación de una petición web en el modo Simulación y localizas las direcciones MAC de la trama, que se explican en las lecciones 17 y 18. Los puertos, DNS y TCP que también aparecen se tratan en los Temas 7 y 9.
 
-### Si haces Networking Basics (opcional)
-
-Si sigues el curso de Networking Basics por tu cuenta, los módulos que corresponden a este bloque son el **1** (las comunicaciones en un mundo conectado), el **2** (componentes, tipos y conexiones de red), el **5** (principios de comunicación, donde aparecen los modelos de capas) y el **6** (medios de red).
-
-### Prácticas de Packet Tracer del bloque
-
-Las prácticas de este bloque son tres. Las dos primeras ya las conoces de clase y ahora pasan a formar parte de este apartado: se hacen en casa, se entregan en Aules, se defienden en clase y cuentan solo para el +1.
-
-- **[PR103 — Mi primera red](pr103-primera-red.md).** Montas una LAN con un switch y cuatro PC, les das dirección IP y compruebas la conectividad con `ping` y con el modo Simulación. Es la base del dominio de diagnóstico del CCST.
-- **[PR202 — Conectar la capa física](pr202-capa-fisica.md).** Identificas puertos y módulos de un router y de varios switches, eliges el cable adecuado para cada enlace y compruebas el resultado. Es justo lo que pide el dominio de infraestructura del CCST.
-- **[PR102 — Modelos OSI y TCP/IP](pr102-modelos-osi.md)** (opcional). Observas la encapsulación de una petición web en el modo Simulación. Va más allá de lo visto en el Tema 1 y solo suma si la defiendes en la auditoría oral.
-
-Cada guía enlaza con la rúbrica de su tema, que sirve para revisar la práctica cuando haga falta; ninguna de las tres puntúa en la nota de los RA. Si quieres practicar más, reproduce en Packet Tracer los laboratorios 1 y 2 de Pablo Hidalgo (lecciones 12 y 13): no se entregan, pero son un buen repaso antes de la auditoría.
-
----
-
-## Próximamente
-
-Los bloques siguientes se abrirán a medida que avancemos en el curso. El primero será el del **Tema 3**, con la práctica **PR303** de redes inalámbricas en Packet Tracer (punto de acceso, nombre de red o SSID, canal y seguridad básica) y las lecciones de Pablo Hidalgo dedicadas al Wi‑Fi. PR303 se hace en casa, cuenta solo para el +1 y no sustituye a la práctica de taller PR305, en la que montas un punto de acceso real.
+Cada guía enlaza con la rúbrica de su tema, que sirve para revisar la práctica cuando haga falta; ninguna de las tres puntúa en la nota de los RA.
 
 ---
 
 ## Autocheck de certificación
 
-Estas preguntas siguen el estilo del CCST, pero son propias del módulo y solo tratan lo que ya hemos visto. Son distintas del Autocheck de cada tema: aquí se mezclan conceptos de los Temas 1 y 2, como en el examen real.
+Estas preguntas siguen el estilo del CCNA, pero son propias del módulo. Son distintas del Autocheck de cada tema: aquí se mezclan conceptos de los Temas 1 y 2, como en el examen real.
 
 1. Un técnico conecta un PC a un switch con un latiguillo. ¿Qué tipo de cable usa, si no hay Auto‑MDIX, y en qué capa del modelo OSI trabaja el switch?
 2. **V/F.** La PDU (unidad de datos de protocolo) de la capa de enlace es el paquete.
@@ -142,11 +135,11 @@ Estas preguntas siguen el estilo del CCST, pero son propias del módulo y solo t
 
 ---
 
-## Cómo examinarse del CCST (si decides hacerlo)
+## Cómo examinarse del CCNA (si decides hacerlo)
 
-Presentarse al examen es voluntario y no forma parte de la nota del módulo. Si te animas, conviene que sepas cómo funciona. El CCST Networking se examina en un centro autorizado de **Certiport** o de **Pearson VUE**, las empresas que gestionan los exámenes de Cisco; el precio oficial es de 125 US$ y cada centro lo fija en euros. Antes de reservar, revisa en la página de Cisco ([exámenes y formación del CCST](https://www.cisco.com/site/us/en/learn/training-certifications/certifications/support-technician/exams-training.html)) el idioma y las condiciones vigentes.
+Presentarse al examen es voluntario. Si te animas, conviene que sepas cómo funciona. El CCNA lo gestiona **Pearson VUE**, la empresa que organiza los exámenes de Cisco, y se puede hacer en uno de sus centros autorizados o en línea desde casa, con vigilancia por cámara. El precio oficial es de 300 US$ y el examen dura 120 minutos. Ten en cuenta que no se ofrece en español, solo en inglés y en japonés. Antes de reservar, revisa en la página de Cisco ([temario y datos del examen](https://learningnetwork.cisco.com/s/ccna-v2-exam-topics)) las condiciones vigentes.
 
-Si eres menor de edad, Cisco permite examinarse entre los 13 y los 17 años con el consentimiento de tu madre, padre o tutor legal, que debe firmar el acuerdo de certificación y confidencialidad de Cisco antes de reservar el examen; los centros Certiport piden además un formulario de consentimiento firmado ([política de Cisco sobre menores](https://www.cisco.com/site/us/en/learn/training-certifications/exams/policies.html)). Para preparar el examen no necesitas NetAcad; la cuenta solo es imprescindible para usar Packet Tracer.
+Si eres menor de edad, Cisco permite examinarse entre los 13 y los 17 años con el consentimiento de tu madre, padre o tutor legal, que debe firmar el acuerdo de certificación y confidencialidad de Cisco antes de reservar el examen; si te examinas en línea, además tiene que estar presente al inicio con su documento de identidad ([política de Cisco sobre menores](https://www.cisco.com/site/us/en/learn/training-certifications/exams/policies.html)). Para preparar el examen no necesitas NetAcad; la cuenta solo es imprescindible para usar Packet Tracer.
 
 ---
 
@@ -162,14 +155,11 @@ Si eres menor de edad, Cisco permite examinarse entre los 13 y los 17 años con 
 **certificación**{: #certificacion }
 Examen oficial de un fabricante o entidad que acredita unos conocimientos concretos ante cualquier empresa.
 
-**CCST Networking**{: #ccst }
-*Cisco Certified Support Technician Networking*: certificación de entrada de Cisco en redes (examen 100-150).
-
 **CCNA**{: #ccna }
-*Cisco Certified Network Associate*: certificación de Cisco de nivel asociado (examen 200-301).
+*Cisco Certified Network Associate*: certificación de Cisco de nivel asociado en redes (examen 200-301).
 
 **NetAcad**{: #netacad }
-*Cisco Networking Academy*: plataforma formativa de Cisco. Desde ella se descarga Packet Tracer y se ofrecen cursos gratuitos como Networking Basics.
+*Cisco Networking Academy*: plataforma formativa de Cisco. Desde ella, o desde Skills for All, se descarga Packet Tracer.
 
 **dominio**{: #dominio }
 Cada uno de los grandes bloques en que Cisco divide el temario de un examen.
@@ -179,8 +169,9 @@ Comprobación oral y breve en la que explicas una práctica que has entregado.
 
 *[RA]: Resultado de aprendizaje
 *[PR]: Práctica
-*[CCST]: Cisco Certified Support Technician
 *[CCNA]: Cisco Certified Network Associate
 *[NetAcad]: Cisco Networking Academy
 *[SSID]: Service Set Identifier
 *[PDU]: Protocol Data Unit
+*[PoE]: Power over Ethernet
+*[SMR]: Sistemas Microinformáticos y Redes

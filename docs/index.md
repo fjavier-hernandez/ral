@@ -48,10 +48,10 @@ Las ^^competencias profesionales^^ asociadas al módulo:
     | Concepto | Horas |
     | --- | ---: |
     | **Total módulo** | **233 h** |
-    | Formación en el **centro** | **133 h** |
-    | Formación en **empresa (FE)** | **100 h** |
+    | Formación en el **centro** | **186 h** |
+    | Formación en **empresa (FE)** | **47 h** |
 
-    La fecha de la formación en empresa **se comunicará cuando esté fijada**. Mientras tanto, organizamos el curso sobre las **133 h en el centro**.
+    El módulo son **233 h**. El **80 %** de cada resultado de aprendizaje se imparte en el centro (**186 h**) y el **20 %** restante (**47 h**) queda vinculado a la formación en empresa. En esas 186 h veremos **todos** los contenidos del módulo, y dedicaremos más tiempo y práctica a los fundamentales.
 
 ## Temas del curso
 
@@ -106,14 +106,14 @@ Imagina la nota del módulo como una **tarta** repartida en seis quesitos (los R
 
 1. En cada RA, tu nota es la **media ponderada** de las actividades de ese RA (AC, PR, PY, PO).
 2. La **nota final** del módulo es la suma de (nota de cada RA × su peso).
-3. Si completas el **apartado de certificación** (prácticas de Packet Tracer hechas en casa, entregadas y defendidas en clase con una auditoría oral o una demo), puedes sumar **+1 punto** sobre esa nota final, que puede llegar hasta **11**. Ese +1 **no sustituye** ningún RA.
+3. Si completas el **apartado de certificación**, puedes sumar hasta **+1 punto** sobre esa nota final, que puede llegar hasta **11**. El punto tiene dos mitades: **0,5** por entregar las prácticas de Packet Tracer, hechas en casa, y superar la auditoría en clase; y **0,5** más si además apruebas un examen de certificación (cómo se acredita se concretará en Aules). Ese +1 **no sustituye** ningún RA.
 
 ``` mermaid
 flowchart TB
   A["Paso 1 — Instrumentos\nAC · PR · PY · PO"]
   B["Paso 2 — Nota de cada RA\nmedia de las actividades de ese RA"]
   C["Paso 3 — Nota final del módulo\nRA1×20% + RA2×12% + RA3×18%\n+ RA4×25% + RA5×15% + RA6×10%"]
-  D["+1 Certificación\nhasta 11"]
+  D["+1 Certificación\n0,5 prácticas + 0,5 examen\nhasta 11"]
   A --> B --> C
   D -.-> C
 ```
@@ -141,13 +141,13 @@ pie showData
 | Práctica | :simple-neutralinojs: **PR** | Práctica de taller, laboratorio o investigación con exposición | **0–10** |
 | Proyecto | :material-calendar: **PY** | Entregable mayor con rúbrica | **0–30** |
 | Prueba objetiva | :material-pen: **PO** | Examen escrito o en ordenador | **0–100** |
-| Certificación | :simple-cisco: **+1** | Prácticas de Packet Tracer del apartado de certificación, entregadas y defendidas en auditoría o demo | **+1 en la nota final (hasta 11)** |
+| Certificación | :simple-cisco: **+1** | 0,5 por las prácticas de Packet Tracer entregadas y defendidas en la auditoría; 0,5 más por aprobar un examen de certificación | **Hasta +1 en la nota final (hasta 11)** |
 
 **Resumen:**
 
 - Las calificaciones se publican en **Aules**.
 - Cada actividad indica el **RA** que evalúa y su escala. Codificación: prefijo del IE + número de tema (ej. `AC102` = actividad 02 del Tema 1; `PR101` = práctica 01 del Tema 1).
-- **Certificación y Packet Tracer:** todas las prácticas de Packet Tracer del módulo (PR102, PR103, PR202, PR303 y las de temas posteriores) son trabajo para casa del apartado de certificación. No puntúan en la nota de los RA. Para el **+1** hay que entregarlas y defenderlas en clase (auditoría oral breve o demo), igual que PR102.
+- **Certificación y Packet Tracer:** todas las prácticas de Packet Tracer del módulo (PR102, PR103, PR202, PR303 y las de temas posteriores) son trabajo para casa del apartado de certificación. No puntúan en la nota de los RA. Entregarlas y defenderlas en clase (auditoría oral breve o demo) da **0,5** del **+1**; el punto entero exige además aprobar un examen de certificación.
 - Las entregas en Aules son **obligatorias en Markdown** (`.md`). No se aceptan PDF.
 
 !!! note "Cómo empezar con Markdown y VS Code"
@@ -161,7 +161,7 @@ pie showData
 - Aules (entregas en `.md` y calificaciones).
 - Diagramas: [Excalidraw](https://excalidraw.com/), [draw.io (diagrams.net)](https://app.diagrams.net/) o [Dia](https://wiki.gnome.org/Apps/Dia).
 - Simulación: [Cisco Packet Tracer](https://www.netacad.com/es/cisco-packet-tracer).
-- Apartado de certificación (Packet Tracer en casa, preparación CCST y CCNA).
+- Apartado de certificación (Packet Tracer en casa y preparación del CCNA).
 - Editor de entregas: Visual Studio Code + Markdown.
 - Herramientas y cableado del taller (Temas 2–3 y Tema 9).
 

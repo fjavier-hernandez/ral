@@ -12,15 +12,15 @@ exclude_docs: |
 
 nav:
   - "Inicio": "index.md"
-  - "Normas del taller": "00-normas/normas_taller.md"
-  - Certificación:
-      - "Certificación y +1": "certificacion/index.md"
-      - "Packet Tracer (inicio)": "certificacion/packet-tracer.md"
-      - "PR102 — Modelos OSI/TCP (opcional)": "certificacion/pr102-modelos-osi.md"
-      - "PR103 — Mi primera red": "certificacion/pr103-primera-red.md"
-      - "PR202 — Conectar la capa física": "certificacion/pr202-capa-fisica.md"
   - "1. Introducción. Arquitectura de redes": "01-introduccion-arquitectura/tema1.md"
   - "2. Medios de transmisión y capa física": "02-medios-capa-fisica/tema2.md"
+  - "Normas del taller": "00-normas/normas_taller.md"
+  - Certificación:
+      - "Certificación CCNA y +1": "certificacion/index.md"
+      - "Packet Tracer (inicio)": "certificacion/packet-tracer.md"
+      - "PR202 — Conectar la capa física": "certificacion/pr202-capa-fisica.md"
+      - "PR103 — Mi primera red": "certificacion/pr103-primera-red.md"
+      - "PR102 — Modelos OSI/TCP (opcional)": "certificacion/pr102-modelos-osi.md"
 
 theme:
   language: es

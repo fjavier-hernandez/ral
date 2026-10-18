@@ -459,7 +459,7 @@ El detalle de paneles, tomas de usuario y canalizaciones se desarrolla en el **T
 
   **Entrega:** `PR202.pka` + `PR202.md` (capturas y respuestas).
 
-  Es trabajo para casa del apartado de Certificación: no puntúa en la nota de los RA y cuenta para el +1 si la entregas y la defiendes en clase (auditoría oral breve o demo). La rúbrica sirve para revisarla cuando haga falta.
+  Es trabajo para casa del apartado de Certificación: no puntúa en la nota de los RA y cuenta para la parte de prácticas del +1 (0,5 puntos) si la entregas y la defiendes en clase (auditoría oral breve o demo). La rúbrica sirve para revisarla cuando haga falta.
 
 | Criterio | Descripción | Puntos |
 | --- | --- | --- |

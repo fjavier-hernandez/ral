@@ -10,7 +10,7 @@ Enunciado corto y rúbrica en el [Tema 2](../02-medios-capa-fisica/tema2.md#pr20
 En esta práctica abres una actividad oficial de Packet Tracer y trabajas la **capa física**: identificas puertos y módulos de un router y de varios switches, añades los módulos que faltan (con el equipo apagado), eliges el cable correcto para cada enlace (cobre directo, cobre cruzado o fibra) y compruebas que todo queda bien conectado. La comprobación la haces con el estado de las interfaces (`show ip interface brief`), con el navegador del portátil y con la puntuación de la actividad (sobre 55 puntos).
 
 !!! tip "Esta práctica es del CCNA"
-    Es una actividad del curso oficial *Introduction to Networks* del **CCNA** (Cisco Certified Network Associate). Lo que trabajas aquí (puertos, módulos y tipos de cable) entra también en las certificaciones **CCST** (Cisco Certified Support Technician) Networking y CCNA.
+    Es una actividad del curso oficial *Introduction to Networks* del **CCNA** (Cisco Certified Network Associate). Lo que trabajas aquí (puertos, módulos y tipos de cable) entra en el primer dominio del examen CCNA: interfaces y cables de cobre y fibra.
 
 ## Qué necesitas
 
