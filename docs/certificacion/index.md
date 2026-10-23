@@ -101,17 +101,18 @@ El recorrido sigue el orden del curso de Pablo Hidalgo, que es el orden en que e
 | 2. Fundamentos de redes | [Lección 2](https://www.youtube.com/watch?v=HG7SukHUQ1E), [3](https://www.youtube.com/watch?v=dzg0-4l9CII) y [4](https://www.youtube.com/watch?v=sYRDUsufWNM) | Tema 1: [Sistemas en red](../01-introduccion-arquitectura/tema1.md#sistemas-en-red), [Topologías](../01-introduccion-arquitectura/tema1.md#topologias), [PDU y encapsulación](../01-introduccion-arquitectura/tema1.md#pdu-y-encapsulacion) y [Modelo OSI y modelo TCP/IP](../01-introduccion-arquitectura/tema1.md#modelo-osi-y-modelo-tcpip) | — |
 | 3. Capa física | [Lección 5](https://www.youtube.com/watch?v=AdPkcvqKWZE), [6](https://www.youtube.com/watch?v=TMiYyKMTnqA), [7](https://www.youtube.com/watch?v=H0zxY5-reeA), [8](https://www.youtube.com/watch?v=XwPFOAq6-D8), [9](https://www.youtube.com/watch?v=5vpe4sUW7NU) y [10](https://www.youtube.com/watch?v=nTfiNKbnjeE) | Tema 2: [Cable directo y cruzado](../02-medios-capa-fisica/tema2.md#cable-directo-y-cruzado) y [Fibra óptica](../02-medios-capa-fisica/tema2.md#fibra-optica) | — |
 | 4. Packet Tracer | [Lección 11](https://www.youtube.com/watch?v=OanaO6EF5S4); lecciones 12 y 13, laboratorios 1 y 2 (solo miembros, opcionales) | [Guía inicial de Packet Tracer](packet-tracer.md) | **[PR202](pr202-capa-fisica.md)** |
-| 5. Wi‑Fi | Lección 14 (solo miembros, opcional), [15](https://www.youtube.com/watch?v=ESquFnfym7Q) y [16](https://www.youtube.com/watch?v=MeGor4SxCCM) | Tema 2: [Medios no guiados y Wi‑Fi básico](../02-medios-capa-fisica/tema2.md#medios-no-guiados-y-wifi-basico) | — |
+| 5. Wi‑Fi | Lección 14 (solo miembros, opcional), [15](https://www.youtube.com/watch?v=ESquFnfym7Q) y [16](https://www.youtube.com/watch?v=MeGor4SxCCM) | Tema 2: [Medios no guiados y Wi‑Fi básico](../02-medios-capa-fisica/tema2.md#medios-no-guiados-y-wifi-basico); Tema 3: [punto de acceso](../03-cableado-estructurado/tema3.md#ap) | **[PR303](pr303-wlan-packet-tracer.md)** |
 | 6. Primera red con direcciones IP | Del curso v1.1: [Lección 7](https://www.youtube.com/watch?v=r-K5yZe2Ea8) y [8](https://www.youtube.com/watch?v=gQH8ezSOHh8) (IPv4 y su configuración en Windows) | Tema 1: [Sistemas en red](../01-introduccion-arquitectura/tema1.md#sistemas-en-red) | **[PR103](pr103-primera-red.md)** |
 | 7. Capa de enlace | [Lección 17](https://www.youtube.com/watch?v=ZdAWUfH8BcY) y [18](https://www.youtube.com/watch?v=CGc6XrXp_cU) | Tema 1: [PDU y encapsulación](../01-introduccion-arquitectura/tema1.md#pdu-y-encapsulacion); la capa de enlace se verá a fondo en el Tema 4 | **[PR102](pr102-modelos-osi.md)** (opcional) |
 
-Las tres prácticas se hacen en casa, se entregan en Aules, se defienden en la auditoría y cuentan solo para el +1:
+Las prácticas se hacen en casa, se entregan en Aules, se defienden en la auditoría y cuentan solo para el +1:
 
 - **[PR202 — Conectar la capa física](pr202-capa-fisica.md).** Identificas puertos y módulos de un router y de varios switches, eliges el cable adecuado para cada enlace y compruebas el resultado. Corresponde al primer punto del dominio 1 del CCNA: interfaces y cables de cobre y fibra.
+- **[PR303 — WLAN en Packet Tracer](pr303-wlan-packet-tracer.md).** Montas un AP, un switch, dos PC de cable y dos clientes Wi‑Fi; configuras SSID, canal y WPA2 y compruebas con `ping`. Es el Wi‑Fi del Tema 3 en simulador. El taller real es **PR305** y no va en este apartado.
 - **[PR103 — Mi primera red](pr103-primera-red.md).** Montas una LAN con un switch y cuatro PC, les das dirección IP y compruebas la conectividad con `ping` y con el modo Simulación. Es el primer contacto con el diagnóstico de conectividad que pide el CCNA.
 - **[PR102 — Modelos OSI y TCP/IP](pr102-modelos-osi.md)** (opcional). Observas la encapsulación de una petición web en el modo Simulación y localizas las direcciones MAC de la trama, que se explican en las lecciones 17 y 18. Los puertos, DNS y TCP que también aparecen se tratan en los Temas 7 y 9.
 
-Cada guía enlaza con la rúbrica de su tema, que sirve para revisar la práctica cuando haga falta; ninguna de las tres puntúa en la nota de los RA.
+Cada guía enlaza con el enunciado de su tema, que sirve para revisar la práctica cuando haga falta; ninguna puntúa en la nota de los RA.
 
 ---
 

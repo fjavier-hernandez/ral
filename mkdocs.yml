@@ -18,6 +18,7 @@ nav:
       - "Certificación CCNA y +1": "certificacion/index.md"
       - "Packet Tracer (inicio)": "certificacion/packet-tracer.md"
       - "PR202 — Conectar la capa física": "certificacion/pr202-capa-fisica.md"
+      - "PR303 — WLAN (Packet Tracer)": "certificacion/pr303-wlan-packet-tracer.md"
       - "PR103 — Mi primera red": "certificacion/pr103-primera-red.md"
       - "PR102 — Modelos OSI/TCP (opcional)": "certificacion/pr102-modelos-osi.md"
 
