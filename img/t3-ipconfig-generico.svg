@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 320" font-family="Consolas, Menlo, Monaco, monospace">
+  <rect width="900" height="320" fill="#f7f9fb"/>
+  <text x="450" y="26" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="15" font-weight="700" fill="#1a2332">Puerta de enlace del PC (ejemplo de laboratorio)</text>
+
+  <rect x="20" y="48" width="420" height="240" rx="6" fill="#1a2332"/>
+  <text x="36" y="74" font-size="12" fill="#9ae6b4">C:\> ipconfig</text>
+  <text x="36" y="104" font-size="12" fill="#e2e8f0">Adaptador de Ethernet Ethernet:</text>
+  <text x="36" y="132" font-size="12" fill="#e2e8f0">   Sufijo DNS . . . . : lab.local</text>
+  <text x="36" y="156" font-size="12" fill="#e2e8f0">   Dirección IPv4. . . . : 192.168.10.25</text>
+  <text x="36" y="180" font-size="12" fill="#e2e8f0">   Máscara de subred . . : 255.255.255.0</text>
+  <text x="36" y="204" font-size="12" fill="#9ae6b4">   Puerta de enlace pred.: 192.168.10.1</text>
+  <text x="36" y="240" font-size="11" fill="#a0aec0">La puerta de enlace es la IP LAN del router.</text>
+
+  <rect x="460" y="48" width="420" height="240" rx="6" fill="#1a2332"/>
+  <text x="476" y="74" font-size="12" fill="#9ae6b4">$ ip route</text>
+  <text x="476" y="112" font-size="12" fill="#9ae6b4">default via 192.168.10.1 dev eth0</text>
+  <text x="476" y="140" font-size="12" fill="#e2e8f0">192.168.10.0/24 dev eth0 proto kernel</text>
+  <text x="476" y="168" font-size="12" fill="#e2e8f0">    scope link src 192.168.10.25</text>
+  <text x="476" y="216" font-size="11" fill="#a0aec0">Direcciones de ejemplo RFC 1918.</text>
+  <text x="476" y="236" font-size="11" fill="#a0aec0">No son las del centro educativo.</text>
+</svg>

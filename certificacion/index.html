@@ -1,0 +1,1178 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Certificación CCNA (Cisco Certified Network Associate, asociado de redes certificado por Cisco) para 1.º de SMR (Sistemas Microinformáticos y Redes), recorrido del curso de Pablo Hidalgo, prácticas de Packet Tracer para casa y cómo se consigue el +1 en la nota final.">
+      
+      
+      
+        <link rel="canonical" href="https://fjavier-hernandez.github.io/ral/certificacion/index.html">
+      
+      
+        <link rel="prev" href="../00-normas/normas_taller.html">
+      
+      
+        <link rel="next" href="packet-tracer.html">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../img/ral.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Certificación CCNA y el +1 - Redes de Área Local</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-0CPJP88MBF"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-0CPJP88MBF",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-0CPJP88MBF",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>if("undefined"!=typeof __md_analytics){var consent=__md_get("__consent");consent&&consent.analytics&&__md_analytics()}</script>
+  
+
+    
+    
+  
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Certificación CCNA y el +1 - Redes de Área Local" />
+<meta property="og:description" content="Certificación CCNA (Cisco Certified Network Associate, asociado de redes certificado por Cisco) para 1.º de SMR (Sistemas Microinformáticos y Redes), recorrido del curso de Pablo Hidalgo, prácticas de Packet Tracer para casa y cómo se consigue el +1 en la nota final." />
+<meta property="og:image" content="https://fjavier-hernandez.github.io/ral/assets/images/social/certificacion/index.png" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:url" content="https://fjavier-hernandez.github.io/ral/certificacion/index.html" />
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:title" content="Certificación CCNA y el +1 - Redes de Área Local" />
+<meta property="twitter:description" content="Certificación CCNA (Cisco Certified Network Associate, asociado de redes certificado por Cisco) para 1.º de SMR (Sistemas Microinformáticos y Redes), recorrido del curso de Pablo Hidalgo, prácticas de Packet Tracer para casa y cómo se consigue el +1 en la nota final." />
+<meta property="twitter:image" content="https://fjavier-hernandez.github.io/ral/assets/images/social/certificacion/index.png" />
+</head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="javi" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#certificacion-ccna-y-el-1" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../index.html" title="Redes de Área Local" class="md-header__button md-logo" aria-label="Redes de Área Local" data-md-component="logo">
+      
+  <img src="../img/ral.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Redes de Área Local
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Certificación CCNA y el +1
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="javi" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Cambiar a modo noche"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo noche" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Cambiar a modo día"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo día" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../index.html" title="Redes de Área Local" class="md-nav__button md-logo" aria-label="Redes de Área Local" data-md-component="logo">
+      
+  <img src="../img/ral.svg" alt="logo">
+
+    </a>
+    Redes de Área Local
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-introduccion-arquitectura/tema1.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Introducción. Arquitectura de redes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-medios-capa-fisica/tema2.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Medios de transmisión y capa física
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-cableado-estructurado/tema3.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Cableado estructurado y componentes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../00-normas/normas_taller.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Normas del taller
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="index.html" class="md-nav__link md-nav__link--active">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Certificación
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link md-nav__link--active" for="__nav_6" id="__nav_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Certificación
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="packet-tracer.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Packet Tracer (inicio)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="pr202-capa-fisica.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PR202 — Conectar la capa física
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="pr303-wlan-packet-tracer.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PR303 — WLAN (Packet Tracer)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="pr103-primera-red.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PR103 — Mi primera red
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="pr102-modelos-osi.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PR102 — Modelos OSI/TCP (opcional)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#que-es-una-certificacion-y-por-que-el-ccna" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Qué es una certificación y por qué el CCNA
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#el-1-de-certificacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        El +1 en la nota final
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#acceso-a-packet-tracer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Acceso a Packet Tracer
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#como-se-trabaja-el-curso-de-pablo-hidalgo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cómo se trabaja: el curso de Pablo Hidalgo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recorrido-ccna" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        El recorrido CCNA
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#autocheck-de-certificacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Autocheck de certificación
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#como-examinarse-del-ccna-si-decides-hacerlo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cómo examinarse del CCNA (si decides hacerlo)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#que-no-usar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Qué no usar
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#glosario" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Glosario
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="certificacion-ccna-y-el-1">Certificación <abbr title="Cisco Certified Network Associate">CCNA</abbr> y el +1<a class="headerlink" href="#certificacion-ccna-y-el-1" title="Permanent link">&para;</a></h1>
+<p>En el módulo aprendes redes montando cable, armarios y switches reales en el taller. Esta página recoge la otra mitad del camino: la preparación de la certificación profesional <strong><abbr title="Cisco Certified Network Associate">CCNA</abbr></strong> de Cisco y el trabajo con <strong>Packet Tracer</strong> que la acompaña. Todo lo que hay aquí se hace <strong>en casa</strong>, a tu ritmo, y se apoya en lo que ya hemos visto en clase. No sustituye a las prácticas de taller ni a los exámenes, sino que los completa. Las prácticas de Packet Tracer no cuentan en la nota de los <abbr title="Resultado de aprendizaje">RA</abbr> (resultados de aprendizaje); en su lugar, en clase hacemos prácticas de taller o de investigación con exposición. Lo que trabajes aquí, si lo haces con constancia, puede sumarte <strong>hasta un punto</strong> en la nota final del módulo.</p>
+<div class="admonition tip">
+<p class="admonition-title">Cómo usar esta página</p>
+<p>Lee primero qué es el <abbr title="Cisco Certified Network Associate">CCNA</abbr> y cómo cuenta el +1. Si todavía no tienes Packet Tracer funcionando, empieza por la <a href="packet-tracer.html">guía inicial</a>. Después sigue el <a href="#recorrido-ccna">recorrido <abbr title="Cisco Certified Network Associate">CCNA</abbr></a> en el orden que propone: lección del curso, repaso del apartado de los apuntes y, cuando toca, práctica de Packet Tracer.</p>
+</div>
+<hr />
+<h2 id="que-es-una-certificacion-y-por-que-el-ccna">Qué es una certificación y por qué el <abbr title="Cisco Certified Network Associate">CCNA</abbr><a class="headerlink" href="#que-es-una-certificacion-y-por-que-el-ccna" title="Permanent link">&para;</a></h2>
+<p>Una <strong>certificación</strong> es un examen oficial, organizado por un fabricante o por una entidad independiente, que acredita ante cualquier empresa que dominas unos conocimientos concretos. A diferencia del título de Técnico en Sistemas Microinformáticos y Redes, que acredita el ciclo completo, una certificación se centra en un área muy definida y la reconocen empresas de todo el mundo. En redes, las más conocidas son las de <strong>Cisco</strong>, el fabricante cuyos equipos y cuyo simulador, Packet Tracer, usamos en el módulo.</p>
+<p>La certificación que seguimos es el <strong><abbr title="Cisco Certified Network Associate">CCNA</abbr></strong> (<em>Cisco Certified Network Associate</em>, asociado de redes certificado por Cisco), que se obtiene con un único examen, el <strong>200-301</strong>. Es la certificación de redes más conocida del mercado y la que suelen pedir las ofertas de empleo de técnico de redes. Exige entender cómo viaja la información por una red, conectar y diagnosticar cables e interfaces, configurar switches y routers, trabajar con direcciones IP y subredes, y aplicar seguridad básica. Va más allá del currículo de 1.º de <abbr title="Sistemas Microinformáticos y Redes">SMR</abbr>, pero puedes seguir su recorrido desde ya: buena parte de lo que pide coincide con lo que vemos en el módulo. Quienes superen la auditoría de prácticas y destaquen tendrán la oportunidad de presentarse al examen oficial, y espero que lo hagan.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><abbr title="Cisco Certified Network Associate">CCNA</abbr> (200-301)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Nivel</td>
+<td>Asociado: instalación, configuración y diagnóstico de redes</td>
+</tr>
+<tr>
+<td>Requisitos previos</td>
+<td>Ninguno (Cisco recomienda experiencia previa)</td>
+</tr>
+<tr>
+<td>Duración del examen</td>
+<td>120 minutos</td>
+</tr>
+<tr>
+<td>Precio en Cisco</td>
+<td>300 US$ (en euros, el que fije Pearson VUE)</td>
+</tr>
+<tr>
+<td>Idiomas</td>
+<td>Inglés y japonés</td>
+</tr>
+<tr>
+<td>Validez</td>
+<td>3 años</td>
+</tr>
+<tr>
+<td>Relación con RAL</td>
+<td>Cubre buena parte de los Temas 1 a 9 y llega más lejos</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">El <abbr title="Cisco Certified Network Associate">CCNA</abbr> cambia de versión en febrero de 2027</p>
+<p>La versión actual del examen (v1.1) se puede hacer hasta el <strong>2 de febrero de 2027</strong>. Desde el <strong>3 de febrero de 2027</strong> solo existe la <strong>v2.0</strong>, con el mismo código 200-301 y un temario renovado. Si piensas presentarte en algún momento del ciclo, lo harás con la v2.0; por eso el recorrido de esta página sigue el curso de Pablo Hidalgo preparado para esa versión.</p>
+</div>
+<p>El temario oficial de la v2.0 se organiza en cinco <strong>dominios</strong>, cada uno con su peso en el examen. Puedes consultarlo completo en la página de Cisco (<a href="https://learningnetwork.cisco.com/s/ccna-v2-exam-topics">temario del <abbr title="Cisco Certified Network Associate">CCNA</abbr> v2.0</a>). La tabla siguiente relaciona esos dominios con los temas del módulo.</p>
+<table>
+<thead>
+<tr>
+<th>Dominio del <abbr title="Cisco Certified Network Associate">CCNA</abbr> v2.0</th>
+<th>Qué pide, en resumen</th>
+<th>Dónde lo vemos en RAL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1. Infraestructura y conectividad (25 %)</td>
+<td>Cables de cobre y fibra, interfaces, Wi‑Fi, direcciones IPv4 e IPv6, conectividad de los equipos</td>
+<td><strong>Tema 2</strong> y Tema 3; direcciones en los Temas 5, 6 y 8</td>
+</tr>
+<tr>
+<td>2. Conmutación y acceso a la red (25 %)</td>
+<td>Switches, VLAN, enlaces troncales, alimentación por Ethernet o <abbr title="Power over Ethernet">PoE</abbr>, <code>ping</code> y <code>traceroute</code></td>
+<td>Temas 3, 4 y 6; el primer <code>ping</code> se trabaja en <strong>PR103</strong></td>
+</tr>
+<tr>
+<td>3. Enrutamiento IP (20 %)</td>
+<td>Tabla de rutas, rutas estáticas, OSPF</td>
+<td>Tema 6</td>
+</tr>
+<tr>
+<td>4. Servicios de red y seguridad (20 %)</td>
+<td>DHCP, DNS, NAT, listas de acceso, seguridad de los puertos</td>
+<td>Temas 8 y 9</td>
+</tr>
+<tr>
+<td>5. IA, operación y gestión de la red (10 %)</td>
+<td>Gestión y automatización de redes</td>
+<td>Tema 9, en parte; el resto queda fuera del currículo de 1.º</td>
+</tr>
+</tbody>
+</table>
+<p>Los fundamentos del <strong>Tema 1</strong> (tipos de red, topologías, modelos OSI y TCP/IP, encapsulación) no aparecen como dominio propio, pero son la base de todos: el curso de Pablo Hidalgo empieza por ellos.</p>
+<hr />
+<h2 id="el-1-de-certificacion">El +1 en la nota final<a class="headerlink" href="#el-1-de-certificacion" title="Permanent link">&para;</a></h2>
+<p>La programación del módulo recoge <strong>hasta un punto extra</strong> en la nota final para quien completa este apartado de certificación. Funciona como un itinerario de formación de Cisco, pero dentro de nuestros apuntes: tú haces en casa las prácticas de Packet Tracer, las entregas en Aules y yo sigo tu avance desde allí. Este apartado explica qué tienes que hacer para conseguirlo y cómo se aplica, porque es fácil malinterpretarlo: no es una nota de un <abbr title="Resultado de aprendizaje">RA</abbr> ni sirve para aprobar uno suspendido.</p>
+<p><strong>Las dos partes del +1.</strong> El punto se gana en dos mitades, y la segunda solo se suma si tienes la primera:</p>
+<ul>
+<li><strong>0,5 puntos por las prácticas.</strong> Entregas las prácticas de Packet Tracer de este apartado y superas la <strong>auditoría</strong> del profesor, en la que defiendes en clase lo que has hecho.</li>
+<li><strong>0,5 puntos más, hasta el punto entero, por el examen.</strong> Si, además, apruebas un <strong>examen de certificación</strong>, el +1 queda completo. Cómo se acredita ese examen para el +1 se concretará en Aules.</li>
+</ul>
+<p><strong>Cómo cuenta.</strong> Tu nota del módulo se calcula como se explica en la página de <a href="../index.html">Inicio</a>: primero la nota de cada <abbr title="Resultado de aprendizaje">RA</abbr> a partir de sus actividades, y después la media ponderada de los seis <abbr title="Resultado de aprendizaje">RA</abbr>. A esa nota final se le suma lo que hayas conseguido en este apartado (0,5 o 1 punto), y la nota puede llegar <strong>hasta 11</strong>. El +1 <strong>no sustituye ni compensa</strong> ningún <abbr title="Resultado de aprendizaje">RA</abbr>: para aprobar el módulo sigues necesitando un 5 o más en cada uno de ellos. Unos ejemplos lo dejan claro. Si tu nota final es un 7,4 y has entregado y defendido las prácticas, el módulo queda en 7,9; si además has aprobado el examen de certificación, queda en 8,4. Con un 10 y el punto entero, la nota es un 11. En cambio, si tienes el RA4 con un 4, el módulo no está aprobado aunque hayas completado el apartado, porque el punto extra se suma a una nota final que ya exige todos los <abbr title="Resultado de aprendizaje">RA</abbr> superados.</p>
+<p><strong>Qué tienes que hacer.</strong> La primera mitad se gana con trabajo constante a lo largo del curso, no con una entrega final. En concreto:</p>
+<ol>
+<li>Tener Packet Tracer instalado y la sesión iniciada, como se explica en <a href="#acceso-a-packet-tracer">Acceso a Packet Tracer</a>.</li>
+<li>Seguir el <a href="#recorrido-ccna">recorrido <abbr title="Cisco Certified Network Associate">CCNA</abbr></a>: las lecciones del curso de Pablo Hidalgo y el repaso de los apuntes, que son la preparación para entender lo que haces en cada práctica.</li>
+<li>Completar las <strong>prácticas de Packet Tracer</strong> en el punto del recorrido en que aparecen y entregar en Aules, en su plazo, el fichero <code>.pkt</code> (o <code>.pka</code>) y el informe <code>.md</code>. Todas las prácticas de Packet Tracer del módulo, por ejemplo PR303, cuentan solo para el +1.</li>
+<li><strong>Superar la auditoría de cada práctica en clase</strong>, con una explicación oral breve o una demostración: abres tu fichero, haces una comprobación (por ejemplo, un <code>ping</code> o un vistazo al modo Simulación) y explicas lo que has hecho. Una práctica entregada pero no defendida no cuenta para el +1. La práctica opcional <a href="pr102-modelos-osi.html">PR102</a> solo suma si la defiendes del mismo modo.</li>
+<li>Para la segunda mitad, aprobar el examen de certificación y acreditarlo como se indique en Aules.</li>
+</ol>
+<p>En Aules verás el seguimiento: qué prácticas has entregado, cuáles has defendido y cuáles te faltan. Las prácticas de este apartado se corrigen solo cuando hace falta; lo que de verdad cuenta es que las hagas tú y que sepas explicarlas en la auditoría.</p>
+<hr />
+<h2 id="acceso-a-packet-tracer">Acceso a Packet Tracer<a class="headerlink" href="#acceso-a-packet-tracer" title="Permanent link">&para;</a></h2>
+<p>Packet Tracer es gratuito, pero Cisco pide una <strong>cuenta gratuita</strong> para descargarlo y para abrirlo: al arrancar el programa tienes que iniciar sesión con una cuenta de <strong><abbr title="Cisco Networking Academy">NetAcad</abbr></strong> (<em>Cisco Networking Academy</em>) o de <strong>Skills for All</strong>, que son las dos plataformas de formación de Cisco. No necesitas estar en ninguna clase ni pagar nada. Los pasos de descarga, instalación e inicio de sesión están en la <a href="packet-tracer.html">guía inicial de Packet Tracer</a>.</p>
+<p>Prueba primero con tu correo <strong><code>@alu.edu.gva.es</code></strong>: es la opción recomendada, porque así todo lo del módulo queda en tu cuenta del centro. Si no consigues crear la cuenta con ese correo o el inicio de sesión falla, crea una <strong>cuenta personal gratuita de Cisco</strong> (en <abbr title="Cisco Networking Academy">NetAcad</abbr> o en Skills for All) con otro correo tuyo y úsala solo para Packet Tracer. En los dos casos, la entrega sigue siendo en Aules.</p>
+<p>Si Packet Tracer te avisa de que no encuentra una cuenta asociada, Cisco indica que suele bastar con matricularte en su curso gratuito <em>Getting Started with Cisco Packet Tracer</em>, que es además el camino oficial para la descarga y aparece en la guía inicial (<a href="https://www.netacad.com/courses/packet-tracer/faq">preguntas frecuentes de Cisco</a>).</p>
+<hr />
+<h2 id="como-se-trabaja-el-curso-de-pablo-hidalgo">Cómo se trabaja: el curso de Pablo Hidalgo<a class="headerlink" href="#como-se-trabaja-el-curso-de-pablo-hidalgo" title="Permanent link">&para;</a></h2>
+<p>El hilo conductor es el curso gratuito en español <strong><abbr title="Cisco Certified Network Associate">CCNA</abbr> Recargado 2.0</strong> de Pablo Hidalgo (<a href="https://www.youtube.com/playlist?list=PLK2CXnxpJHnY">lista de reproducción en YouTube</a>), que prepara la versión 2.0 del <abbr title="Cisco Certified Network Associate">CCNA</abbr>. Son vídeos de seis a diez minutos que explican un concepto cada uno y, cada cierto número de lecciones, proponen un laboratorio de Packet Tracer. Ya conoces a este autor: sus vídeos aparecen en los Temas 1 y 2 y en la guía de Packet Tracer.</p>
+<p>Algunas lecciones, sobre todo los laboratorios, están reservadas a los <strong>miembros de pago</strong> del canal. No las necesitas: en el recorrido se indican como opcionales, y las prácticas de esta página cubren ese trabajo. Cuando el curso nuevo todavía no ha llegado a un concepto, el recorrido remite a una lección pública del curso anterior del mismo autor, <strong><abbr title="Cisco Certified Network Associate">CCNA</abbr> Completo v1.1</strong> (<a href="https://www.youtube.com/playlist?list=PLxnG_9vdV6-gEWV15pq89XK_W3G8vP5_0">lista de reproducción</a>).</p>
+<p>La forma de trabajar cada tramo es siempre la misma. Primero ves las lecciones. Después repasas el apartado de los apuntes que se indica, porque los apuntes son la referencia del módulo y el vídeo es un complemento. Por último, si el tramo tiene práctica, la haces en Packet Tracer y la entregas en Aules en Markdown (<code>.md</code>), junto con el fichero <code>.pkt</code>, igual que el resto de entregas del módulo.</p>
+<div class="admonition note">
+<p class="admonition-title">Por qué el vídeo no basta</p>
+<p>El curso de Pablo Hidalgo prepara el <abbr title="Cisco Certified Network Associate">CCNA</abbr>, que llega más lejos que nuestro currículo, y a veces nombra conceptos que el módulo trata en otro tema (direcciones IP, puertos, comandos de configuración). No te preocupes si algo no lo entiendes del todo: cada tramo indica el apartado de los apuntes que corresponde.</p>
+</div>
+<hr />
+<h2 id="recorrido-ccna">El recorrido <abbr title="Cisco Certified Network Associate">CCNA</abbr><a class="headerlink" href="#recorrido-ccna" title="Permanent link">&para;</a></h2>
+<p>El recorrido sigue el orden del curso de Pablo Hidalgo, que es el orden en que el <abbr title="Cisco Certified Network Associate">CCNA</abbr> construye los conocimientos: primero los fundamentos, después la capa física y Packet Tracer, luego el Wi‑Fi y la capa de enlace. Las prácticas no van en el orden de los temas del módulo, sino en el punto del curso que corresponde a su nivel. Por eso PR202, que es del Tema 2, va antes que PR103, que es del Tema 1: conectar cables y módulos solo pide capa física, mientras que dar direcciones IP y comprobar con <code>ping</code> pide algo más. PR102, la más exigente, cierra el recorrido.</p>
+<table>
+<thead>
+<tr>
+<th>Tramo</th>
+<th>Lecciones (<abbr title="Cisco Certified Network Associate">CCNA</abbr> Recargado 2.0)</th>
+<th>Repasa en los apuntes</th>
+<th>Práctica</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1. Temario</td>
+<td><a href="https://www.youtube.com/watch?v=8vg7otknnHc">Lección 1</a></td>
+<td>Esta página</td>
+<td>—</td>
+</tr>
+<tr>
+<td>2. Fundamentos de redes</td>
+<td><a href="https://www.youtube.com/watch?v=HG7SukHUQ1E">Lección 2</a>, <a href="https://www.youtube.com/watch?v=dzg0-4l9CII">3</a> y <a href="https://www.youtube.com/watch?v=sYRDUsufWNM">4</a></td>
+<td>Tema 1: <a href="../01-introduccion-arquitectura/tema1.html#sistemas-en-red">Sistemas en red</a>, <a href="../01-introduccion-arquitectura/tema1.html#topologias">Topologías</a>, <a href="../01-introduccion-arquitectura/tema1.html#pdu-y-encapsulacion"><abbr title="Protocol Data Unit">PDU</abbr> y encapsulación</a> y <a href="../01-introduccion-arquitectura/tema1.html#modelo-osi-y-modelo-tcpip">Modelo OSI y modelo TCP/IP</a></td>
+<td>—</td>
+</tr>
+<tr>
+<td>3. Capa física</td>
+<td><a href="https://www.youtube.com/watch?v=AdPkcvqKWZE">Lección 5</a>, <a href="https://www.youtube.com/watch?v=TMiYyKMTnqA">6</a>, <a href="https://www.youtube.com/watch?v=H0zxY5-reeA">7</a>, <a href="https://www.youtube.com/watch?v=XwPFOAq6-D8">8</a>, <a href="https://www.youtube.com/watch?v=5vpe4sUW7NU">9</a> y <a href="https://www.youtube.com/watch?v=nTfiNKbnjeE">10</a></td>
+<td>Tema 2: <a href="../02-medios-capa-fisica/tema2.html#cable-directo-y-cruzado">Cable directo y cruzado</a> y <a href="../02-medios-capa-fisica/tema2.html#fibra-optica">Fibra óptica</a></td>
+<td>—</td>
+</tr>
+<tr>
+<td>4. Packet Tracer</td>
+<td><a href="https://www.youtube.com/watch?v=OanaO6EF5S4">Lección 11</a>; lecciones 12 y 13, laboratorios 1 y 2 (solo miembros, opcionales)</td>
+<td><a href="packet-tracer.html">Guía inicial de Packet Tracer</a></td>
+<td><strong><a href="pr202-capa-fisica.html">PR202</a></strong></td>
+</tr>
+<tr>
+<td>5. Wi‑Fi</td>
+<td>Lección 14 (solo miembros, opcional), <a href="https://www.youtube.com/watch?v=ESquFnfym7Q">15</a> y <a href="https://www.youtube.com/watch?v=MeGor4SxCCM">16</a></td>
+<td>Tema 2: <a href="../02-medios-capa-fisica/tema2.html#medios-no-guiados-y-wifi-basico">Medios no guiados y Wi‑Fi básico</a>; Tema 3: <a href="../03-cableado-estructurado/tema3.html#ap">punto de acceso</a></td>
+<td><strong><a href="pr303-wlan-packet-tracer.html">PR303</a></strong></td>
+</tr>
+<tr>
+<td>6. Primera red con direcciones IP</td>
+<td>Del curso v1.1: <a href="https://www.youtube.com/watch?v=r-K5yZe2Ea8">Lección 7</a> y <a href="https://www.youtube.com/watch?v=gQH8ezSOHh8">8</a> (IPv4 y su configuración en Windows)</td>
+<td>Tema 1: <a href="../01-introduccion-arquitectura/tema1.html#sistemas-en-red">Sistemas en red</a></td>
+<td><strong><a href="pr103-primera-red.html">PR103</a></strong></td>
+</tr>
+<tr>
+<td>7. Capa de enlace</td>
+<td><a href="https://www.youtube.com/watch?v=ZdAWUfH8BcY">Lección 17</a> y <a href="https://www.youtube.com/watch?v=CGc6XrXp_cU">18</a></td>
+<td>Tema 1: <a href="../01-introduccion-arquitectura/tema1.html#pdu-y-encapsulacion"><abbr title="Protocol Data Unit">PDU</abbr> y encapsulación</a>; la capa de enlace se verá a fondo en el Tema 4</td>
+<td><strong><a href="pr102-modelos-osi.html">PR102</a></strong> (opcional)</td>
+</tr>
+</tbody>
+</table>
+<p>Las prácticas se hacen en casa, se entregan en Aules, se defienden en la auditoría y cuentan solo para el +1:</p>
+<ul>
+<li><strong><a href="pr202-capa-fisica.html">PR202 — Conectar la capa física</a>.</strong> Identificas puertos y módulos de un router y de varios switches, eliges el cable adecuado para cada enlace y compruebas el resultado. Corresponde al primer punto del dominio 1 del <abbr title="Cisco Certified Network Associate">CCNA</abbr>: interfaces y cables de cobre y fibra.</li>
+<li><strong><a href="pr303-wlan-packet-tracer.html">PR303 — WLAN en Packet Tracer</a>.</strong> Montas un AP, un switch, dos PC de cable y dos clientes Wi‑Fi; configuras <abbr title="Service Set Identifier">SSID</abbr>, canal y WPA2 y compruebas con <code>ping</code>. Es el Wi‑Fi del Tema 3 en simulador. El taller real es <strong>PR305</strong> y no va en este apartado.</li>
+<li><strong><a href="pr103-primera-red.html">PR103 — Mi primera red</a>.</strong> Montas una LAN con un switch y cuatro PC, les das dirección IP y compruebas la conectividad con <code>ping</code> y con el modo Simulación. Es el primer contacto con el diagnóstico de conectividad que pide el <abbr title="Cisco Certified Network Associate">CCNA</abbr>.</li>
+<li><strong><a href="pr102-modelos-osi.html">PR102 — Modelos OSI y TCP/IP</a></strong> (opcional). Observas la encapsulación de una petición web en el modo Simulación y localizas las direcciones MAC de la trama, que se explican en las lecciones 17 y 18. Los puertos, DNS y TCP que también aparecen se tratan en los Temas 7 y 9.</li>
+</ul>
+<p>Cada guía enlaza con el enunciado de su tema, que sirve para revisar la práctica cuando haga falta; ninguna puntúa en la nota de los <abbr title="Resultado de aprendizaje">RA</abbr>.</p>
+<hr />
+<h2 id="autocheck-de-certificacion">Autocheck de certificación<a class="headerlink" href="#autocheck-de-certificacion" title="Permanent link">&para;</a></h2>
+<p>Estas preguntas siguen el estilo del <abbr title="Cisco Certified Network Associate">CCNA</abbr>, pero son propias del módulo. Son distintas del Autocheck de cada tema: aquí se mezclan conceptos de los Temas 1 y 2, como en el examen real.</p>
+<ol>
+<li>Un técnico conecta un PC a un switch con un latiguillo. ¿Qué tipo de cable usa, si no hay Auto‑MDIX, y en qué capa del modelo OSI trabaja el switch?</li>
+<li><strong>V/F.</strong> La <abbr title="Protocol Data Unit">PDU</abbr> (unidad de datos de protocolo) de la capa de enlace es el paquete.</li>
+<li>Ordena de menor a mayor alcance: WAN · PAN · LAN · MAN.</li>
+<li>Un edificio tiene un motor industrial junto al tendido de cobre. ¿Qué perturbación es la más probable y qué tipo de cable la reduce?</li>
+<li>Entre dos edificios separados por 250 m se quiere un enlace de 10 Gbps. ¿Cobre o fibra? Si es fibra, ¿multimodo o monomodo, y de qué clase?</li>
+<li><strong>V/F.</strong> En un enlace full‑dúplex entre un PC y un switch no se producen colisiones.</li>
+<li>¿Qué organismo publica la familia de estándares 802 y qué número corresponde a Ethernet y cuál al Wi‑Fi?</li>
+<li>Una red Wi‑Fi del aula funciona lenta y hay muchos puntos de acceso vecinos. ¿Qué banda conviene revisar primero y por qué?</li>
+<li>Elige la correcta: el conector de Ethernet sobre par trenzado es… a) RJ‑11 · b) RJ‑45 · c) BNC · d) LC</li>
+<li>Cuatro PC conectados a un hub, y el hub conectado a un switch con dos PC más. ¿Cuántos dominios de colisión y de difusión hay?</li>
+</ol>
+<div class="admonition info">
+<p class="admonition-title">Soluciones</p>
+<p>Las soluciones se publicarán aquí cuando cierre el bloque en Aules.</p>
+</div>
+<hr />
+<h2 id="como-examinarse-del-ccna-si-decides-hacerlo">Cómo examinarse del <abbr title="Cisco Certified Network Associate">CCNA</abbr> (si decides hacerlo)<a class="headerlink" href="#como-examinarse-del-ccna-si-decides-hacerlo" title="Permanent link">&para;</a></h2>
+<p>Presentarse al examen es voluntario. Si te animas, conviene que sepas cómo funciona. El <abbr title="Cisco Certified Network Associate">CCNA</abbr> lo gestiona <strong>Pearson VUE</strong>, la empresa que organiza los exámenes de Cisco, y se puede hacer en uno de sus centros autorizados o en línea desde casa, con vigilancia por cámara. El precio oficial es de 300 US$ y el examen dura 120 minutos. Ten en cuenta que no se ofrece en español, solo en inglés y en japonés. Antes de reservar, revisa en la página de Cisco (<a href="https://learningnetwork.cisco.com/s/ccna-v2-exam-topics">temario y datos del examen</a>) las condiciones vigentes.</p>
+<p>Si eres menor de edad, Cisco permite examinarse entre los 13 y los 17 años con el consentimiento de tu madre, padre o tutor legal, que debe firmar el acuerdo de certificación y confidencialidad de Cisco antes de reservar el examen; si te examinas en línea, además tiene que estar presente al inicio con su documento de identidad (<a href="https://www.cisco.com/site/us/en/learn/training-certifications/exams/policies.html">política de Cisco sobre menores</a>). Para preparar el examen no necesitas <abbr title="Cisco Networking Academy">NetAcad</abbr>; la cuenta solo es imprescindible para usar Packet Tracer.</p>
+<hr />
+<h2 id="que-no-usar">Qué no usar<a class="headerlink" href="#que-no-usar" title="Permanent link">&para;</a></h2>
+<div class="admonition danger">
+<p class="admonition-title">Webs de respuestas y preguntas «reales» de examen</p>
+<p>Cisco prohíbe usar o difundir preguntas de sus exámenes: al examinarte aceptas un acuerdo de confidencialidad, y quien lo incumple puede perder las certificaciones que tenga y quedarse sin poder examinarse nunca más. Las respuestas de las actividades de <abbr title="Cisco Networking Academy">NetAcad</abbr> también son material protegido. Por eso en este módulo <strong>no se usan</strong> páginas que publican preguntas «recordadas» del examen o respuestas de <abbr title="Cisco Networking Academy">NetAcad</abbr>, como ExamTopics, ITExamAnswers, ccnadesdecero, ExamCollection, Exam-Labs, Test-King, Fast2Test o certprep.io, ni canales de vídeo que resuelven las actividades de <abbr title="Cisco Networking Academy">NetAcad</abbr>. Además del riesgo, no aprendes: el día del examen, o el día que tengas delante un switch real en una empresa, no habrá respuestas que copiar.</p>
+</div>
+<hr />
+<h2 id="glosario">Glosario<a class="headerlink" href="#glosario" title="Permanent link">&para;</a></h2>
+<p><strong id="certificacion">certificación</strong>
+Examen oficial de un fabricante o entidad que acredita unos conocimientos concretos ante cualquier empresa.</p>
+<p><strong id="ccna"><abbr title="Cisco Certified Network Associate">CCNA</abbr></strong>
+<em>Cisco Certified Network Associate</em>: certificación de Cisco de nivel asociado en redes (examen 200-301).</p>
+<p><strong id="netacad"><abbr title="Cisco Networking Academy">NetAcad</abbr></strong>
+<em>Cisco Networking Academy</em>: plataforma formativa de Cisco. Desde ella, o desde Skills for All, se descarga Packet Tracer.</p>
+<p><strong id="dominio">dominio</strong>
+Cada uno de los grandes bloques en que Cisco divide el temario de un examen.</p>
+<p><strong id="auditoria">auditoría</strong>
+Comprobación oral y breve en la que explicas una práctica que has entregado.</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Pie" >
+        
+          
+          <a href="../00-normas/normas_taller.html" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Normas del taller">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              <div class="md-ellipsis">
+                Normas del taller
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="packet-tracer.html" class="md-footer__link md-footer__link--next" aria-label="Siguiente: Packet Tracer (inicio)">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Siguiente
+              </span>
+              <div class="md-ellipsis">
+                Packet Tracer (inicio)
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      2026-2027 Francisco Javier Hernández Illán - <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es">Licencia CC BY-NC-SA</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="mailto:<fj.hernandez@edu.gva.es>" target="_blank" rel="noopener" title="" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4l208 156a48 48 0 0 0 57.6 0l208-156c12.1-9.1 19.2-23.3 19.2-38.4 0-26.5-21.5-48-48-48zM0 196v188c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V196L313.6 344.8c-34.1 25.6-81.1 25.6-115.2 0z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.linkedin.com/in/fjavier-hernandez-illan" target="_blank" rel="noopener" title="www.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77m282.1 320h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+      <div class="md-consent" data-md-component="consent" id="__consent" hidden>
+        <div class="md-consent__overlay"></div>
+        <aside class="md-consent__inner">
+          <form class="md-consent__form md-grid md-typeset" name="consent">
+            
+
+
+  
+
+
+<h4>Consentimiento de cookie</h4>
+<p>Esta página de apuntes utiliza cookies para reconocer las visitas, medir la efectividad de la documentación y averiguar si encuentras aquello que buscas o cómo has llegado a estos apuntes. Con tu consentimiento, me ayudas a mejorar estos materiales.</p>
+<input class="md-toggle" type="checkbox" id="__settings" >
+<div class="md-consent__settings">
+  <ul class="task-list">
+    
+    
+      
+        
+  
+  
+    
+    
+  
+  <li class="task-list-item">
+    <label class="task-list-control">
+      <input type="checkbox" name="analytics" checked>
+      <span class="task-list-indicator"></span>
+      Google Analytics
+    </label>
+  </li>
+
+      
+    
+    
+      
+    
+    
+  </ul>
+</div>
+<div class="md-consent__controls">
+  
+    
+      <button class="md-button md-button--primary">Aceptar</button>
+    
+    
+    
+  
+    
+    
+    
+      <label class="md-button" for="__settings">Gestionar cookies</label>
+    
+  
+</div>
+          </form>
+        </aside>
+      </div>
+      <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout((function(){document.querySelector("[data-md-component=consent]").hidden=!1}),250);var form=document.forms.consent;for(var action of["submit","reset"])form.addEventListener(action,(function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map((function(e){return[e,!0]})))),location.hash="",location.reload()}))</script>
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["header.autohide", "navigation.top", "navigation.tracking", "navigation.footer", "navigation.indexes", "content.code.annotate", "announce.dismiss", "toc.follow", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../js/print-site.js"></script>
+      
+    
+  </body>
+</html>

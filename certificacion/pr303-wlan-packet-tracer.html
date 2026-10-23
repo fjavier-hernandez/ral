@@ -1,0 +1,1398 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Guion de práctica — montar una WLAN (red de área local inalámbrica) con AP, SSID, canal y WPA2 en Packet Tracer.">
+      
+      
+      
+        <link rel="canonical" href="https://fjavier-hernandez.github.io/ral/certificacion/pr303-wlan-packet-tracer.html">
+      
+      
+        <link rel="prev" href="pr202-capa-fisica.html">
+      
+      
+        <link rel="next" href="pr103-primera-red.html">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../img/ral.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>PR303 — WLAN en Packet Tracer - Redes de Área Local</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-0CPJP88MBF"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-0CPJP88MBF",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-0CPJP88MBF",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>if("undefined"!=typeof __md_analytics){var consent=__md_get("__consent");consent&&consent.analytics&&__md_analytics()}</script>
+  
+
+    
+    
+  
+<meta property="og:type" content="website" />
+<meta property="og:title" content="PR303 — WLAN en Packet Tracer - Redes de Área Local" />
+<meta property="og:description" content="Guion de práctica — montar una WLAN (red de área local inalámbrica) con AP, SSID, canal y WPA2 en Packet Tracer." />
+<meta property="og:image" content="https://fjavier-hernandez.github.io/ral/assets/images/social/certificacion/pr303-wlan-packet-tracer.png" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:url" content="https://fjavier-hernandez.github.io/ral/certificacion/pr303-wlan-packet-tracer.html" />
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:title" content="PR303 — WLAN en Packet Tracer - Redes de Área Local" />
+<meta property="twitter:description" content="Guion de práctica — montar una WLAN (red de área local inalámbrica) con AP, SSID, canal y WPA2 en Packet Tracer." />
+<meta property="twitter:image" content="https://fjavier-hernandez.github.io/ral/assets/images/social/certificacion/pr303-wlan-packet-tracer.png" />
+</head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="javi" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#pr303-wlan-en-packet-tracer" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../index.html" title="Redes de Área Local" class="md-header__button md-logo" aria-label="Redes de Área Local" data-md-component="logo">
+      
+  <img src="../img/ral.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Redes de Área Local
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              PR303 — WLAN en Packet Tracer
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="javi" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Cambiar a modo noche"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo noche" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Cambiar a modo día"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo día" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../index.html" title="Redes de Área Local" class="md-nav__button md-logo" aria-label="Redes de Área Local" data-md-component="logo">
+      
+  <img src="../img/ral.svg" alt="logo">
+
+    </a>
+    Redes de Área Local
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-introduccion-arquitectura/tema1.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Introducción. Arquitectura de redes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-medios-capa-fisica/tema2.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Medios de transmisión y capa física
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-cableado-estructurado/tema3.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Cableado estructurado y componentes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../00-normas/normas_taller.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Normas del taller
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Certificación
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Certificación
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="packet-tracer.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Packet Tracer (inicio)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="pr202-capa-fisica.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PR202 — Conectar la capa física
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PR303 — WLAN (Packet Tracer)
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="pr303-wlan-packet-tracer.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PR303 — WLAN (Packet Tracer)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#video-de-apoyo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vídeo de apoyo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#que-necesitas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Qué necesitas
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parametros-de-laboratorio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parámetros de laboratorio
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pasos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pasos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pasos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-colocar-los-equipos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Colocar los equipos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-cablear-el-tramo-de-cobre" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Cablear el tramo de cobre
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-modulo-wifi-en-los-portatiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Módulo Wi‑Fi en los portátiles
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-configurar-el-ap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Configurar el AP
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-direcciones-ip-en-los-pc-de-cable" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Direcciones IP en los PC de cable
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-asociar-los-portatiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Asociar los portátiles
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-comprobar-la-wlan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Comprobar la WLAN
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-guardar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Guardar
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#entrega-en-aules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Entrega en Aules
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#antes-de-entregar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Antes de entregar
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="pr103-primera-red.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PR103 — Mi primera red
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="pr102-modelos-osi.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PR102 — Modelos OSI/TCP (opcional)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#video-de-apoyo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vídeo de apoyo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#que-necesitas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Qué necesitas
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parametros-de-laboratorio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parámetros de laboratorio
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pasos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pasos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pasos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-colocar-los-equipos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Colocar los equipos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-cablear-el-tramo-de-cobre" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Cablear el tramo de cobre
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-modulo-wifi-en-los-portatiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Módulo Wi‑Fi en los portátiles
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-configurar-el-ap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Configurar el AP
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-direcciones-ip-en-los-pc-de-cable" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Direcciones IP en los PC de cable
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-asociar-los-portatiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Asociar los portátiles
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-comprobar-la-wlan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Comprobar la WLAN
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-guardar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Guardar
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#entrega-en-aules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Entrega en Aules
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#antes-de-entregar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Antes de entregar
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="pr303-wlan-en-packet-tracer">PR303 — WLAN en Packet Tracer<a class="headerlink" href="#pr303-wlan-en-packet-tracer" title="Permanent link">&para;</a></h1>
+<p>Enunciado corto en el <a href="../03-cableado-estructurado/tema3.html#pr303-pasa-a-certificacion-trabajo-para-casa">Tema 3</a>. El montaje real del aula es <strong>PR305</strong>; esta práctica no lo sustituye.</p>
+<p>Vas a montar en Packet Tracer una <strong>WLAN</strong> (<em>Wireless Local Area Network</em>, red de área local inalámbrica) mínima: un <strong>AP</strong> (<em>Access Point</em>, punto de acceso) unido a un switch, dos PC por cable y dos clientes Wi‑Fi. Configuras el <strong>SSID</strong> (<em>Service Set Identifier</em>, nombre de la red), el canal y <strong>WPA2</strong> (<em>Wi‑Fi Protected Access 2</em>, acceso Wi‑Fi protegido versión 2), asocias los clientes y compruebas con <code>ping</code>. No partimos de un archivo <code>.pka</code> ni <code>.pkt</code> del profesor: lo construyes tú desde cero, como en <a href="pr103-primera-red.html">PR103</a>.</p>
+<div class="admonition tip">
+<p class="admonition-title">Cuenta solo para el +1</p>
+<p>PR303 se hace <strong>en casa</strong>, se entrega en Aules y se defiende en la auditoría. <strong>No puntúa</strong> en la nota de los RA (resultados de aprendizaje). <strong>No sustituye</strong> a <a href="../03-cableado-estructurado/tema3.html#pr305-taller-wlan-real">PR305</a> (taller: NIC, AP o router Wi‑Fi del centro y WLAN usable).</p>
+</div>
+<p>Antes de empezar, Packet Tracer con la sesión iniciada. Si aún no lo tienes listo, sigue la <a href="packet-tracer.html">guía inicial</a>. Entra con tu cuenta <strong><code>@alu.edu.gva.es</code></strong>, no con Google.</p>
+<p>Los modos del AP, el SSID, el canal y WPA2/WPA3 ya están en el <a href="../03-cableado-estructurado/tema3.html#ap">Tema 3, punto de acceso</a>. El medio Wi‑Fi (bandas 2,4 GHz y 5 GHz, interferencia) está en el <a href="../02-medios-capa-fisica/tema2.html#medios-no-guiados-y-wifi-basico">Tema 2</a>. Aquí solo montas y compruebas.</p>
+<h2 id="video-de-apoyo">Vídeo de apoyo<a class="headerlink" href="#video-de-apoyo" title="Permanent link">&para;</a></h2>
+<p>Las lecciones de Wi‑Fi del curso <strong>CCNA Recargado 2.0</strong> de Pablo Hidalgo que están abiertas sin membresía son la <a href="https://www.youtube.com/watch?v=ESquFnfym7Q">15</a> y la <a href="https://www.youtube.com/watch?v=MeGor4SxCCM">16</a>. Sirven para el concepto (SSID, canal, seguridad). El laboratorio de Packet Tracer de ese curso (lección 14 y, en el curso v1.1, las lecciones 34–38) es de <strong>pago</strong>: no lo necesitas. El guion de esta página es el que cuentas en la auditoría.</p>
+<p>Puedes ver la lección 15 como repaso; los clics de Packet Tracer los haces con los pasos de abajo.</p>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube-nocookie.com/embed/ESquFnfym7Q"
+          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          title="CCNA Recargado 2.0 — lección 15, Wi‑Fi (Pablo Hidalgo)"></iframe>
+</div>
+
+<div class="admonition tip">
+<p class="admonition-title">Avisos sobre el vídeo</p>
+<p>El vídeo nombra ideas del CCNA que el módulo trata más adelante. Para esta práctica basta con SSID, canal y WPA2.</p>
+<p>Si Packet Tracer o NetAcad te pide iniciar sesión, usa tu cuenta <strong><code>@alu.edu.gva.es</code></strong>, no Google.</p>
+</div>
+<h2 id="que-necesitas">Qué necesitas<a class="headerlink" href="#que-necesitas" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Packet Tracer con la sesión iniciada (<a href="packet-tracer.html">guía inicial</a>).</li>
+<li>Un archivo nuevo, vacío: no hay <code>PR303.pka</code> en Aules. Montas la topología y la guardas como <strong><code>PR303.pkt</code></strong>.</li>
+</ul>
+<h2 id="parametros-de-laboratorio">Parámetros de laboratorio<a class="headerlink" href="#parametros-de-laboratorio" title="Permanent link">&para;</a></h2>
+<p>Usa <strong>estos</strong> valores, no el SSID ni la clave del centro.</p>
+<table>
+<thead>
+<tr>
+<th>Parámetro</th>
+<th>Valor de laboratorio</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SSID</td>
+<td><code>RAL-LAB-WLAN</code></td>
+</tr>
+<tr>
+<td>Banda / canal</td>
+<td>2,4 GHz · canal <strong>6</strong></td>
+</tr>
+<tr>
+<td>Seguridad</td>
+<td><strong>WPA2-PSK</strong> (clave precompartida), cifrado <strong>AES</strong> si el equipo lo deja elegir</td>
+</tr>
+<tr>
+<td>Frase de paso</td>
+<td><code>LabNet-2026!</code></td>
+</tr>
+<tr>
+<td>Red</td>
+<td><code>192.168.10.0</code> / máscara <code>255.255.255.0</code></td>
+</tr>
+<tr>
+<td>Puerta de enlace</td>
+<td>vacía (no hay router)</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Equipo</th>
+<th>Dirección IP</th>
+<th>Máscara</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PC1 (cable)</td>
+<td>192.168.10.10</td>
+<td>255.255.255.0</td>
+</tr>
+<tr>
+<td>PC2 (cable)</td>
+<td>192.168.10.11</td>
+<td>255.255.255.0</td>
+</tr>
+<tr>
+<td>LT1 (Wi‑Fi)</td>
+<td>192.168.10.20</td>
+<td>255.255.255.0</td>
+</tr>
+<tr>
+<td>LT2 (Wi‑Fi)</td>
+<td>192.168.10.21</td>
+<td>255.255.255.0</td>
+</tr>
+</tbody>
+</table>
+<p>El AP de Packet Tracer (<em>Access Point-PT</em>) es un puente de capa 2: no le pongas IP. Une el aire con el cable, igual que el AP del taller cuando trabaja en modo infraestructura.</p>
+<h2 id="pasos">Pasos<a class="headerlink" href="#pasos" title="Permanent link">&para;</a></h2>
+<h3 id="1-colocar-los-equipos">1. Colocar los equipos<a class="headerlink" href="#1-colocar-los-equipos" title="Permanent link">&para;</a></h3>
+<ol>
+<li>En <em>Network Devices &gt; Switches</em>, un <strong>switch 2960</strong>. Nombre <strong>SW1</strong> (<em>Config &gt; Display Name</em>).</li>
+<li>En <em>Wireless Devices</em>, un <strong>Access Point-PT</strong>. Nombre <strong>AP1</strong>.</li>
+<li>En <em>End Devices</em>, <strong>dos PC</strong> (<strong>PC1</strong>, <strong>PC2</strong>) y <strong>dos portátiles</strong> (<strong>LT1</strong>, <strong>LT2</strong>).</li>
+</ol>
+<h3 id="2-cablear-el-tramo-de-cobre">2. Cablear el tramo de cobre<a class="headerlink" href="#2-cablear-el-tramo-de-cobre" title="Permanent link">&para;</a></h3>
+<p>Con cable <strong>automático</strong> o <strong>directo</strong>:</p>
+<ul>
+<li>AP1, interfaz <strong>Port 0</strong>, a SW1 <strong>Fa0/1</strong>.</li>
+<li>PC1 a SW1 <strong>Fa0/2</strong>.</li>
+<li>PC2 a SW1 <strong>Fa0/3</strong>.</li>
+</ul>
+<p>Espera a que los tres enlaces queden en <strong>verde</strong>. El AP se alimenta en Packet Tracer al conectarlo: no hace falta simular PoE (<em>Power over Ethernet</em>, alimentación por Ethernet) para esta práctica.</p>
+<h3 id="3-modulo-wifi-en-los-portatiles">3. Módulo Wi‑Fi en los portátiles<a class="headerlink" href="#3-modulo-wifi-en-los-portatiles" title="Permanent link">&para;</a></h3>
+<p>El portátil de Packet Tracer sale de fábrica con tarjeta <strong>Ethernet</strong>. Para asociarse al AP hay que ponerle una NIC inalámbrica, con el equipo <strong>apagado</strong> (la misma precaución que al insertar módulos en <a href="pr202-capa-fisica.html">PR202</a>).</p>
+<p>En <strong>LT1</strong>:</p>
+<ol>
+<li>Pestaña <strong>Physical</strong>. Apaga el portátil con el interruptor.</li>
+<li>Arrastra el módulo <strong>FastEthernet</strong> (el de la ranura lateral) hasta la lista de módulos, para quitarlo.</li>
+<li>Arrastra el módulo <strong>WPC300N</strong> (o el adaptador inalámbrico que ofrezca tu versión) a esa ranura.</li>
+<li>Enciende el portátil.</li>
+</ol>
+<p>Repite en <strong>LT2</strong>. Si dejas Ethernet y Wi‑Fi a la vez, el <code>ping</code> puede salir por el cable y la práctica no demuestra la WLAN.</p>
+<h3 id="4-configurar-el-ap">4. Configurar el AP<a class="headerlink" href="#4-configurar-el-ap" title="Permanent link">&para;</a></h3>
+<p>Clic en <strong>AP1</strong> → pestaña <strong>Config</strong> → interfaz inalámbrica (<strong>Port 1</strong> en <em>Access Point-PT</em>):</p>
+<ol>
+<li><strong>SSID:</strong> <code>RAL-LAB-WLAN</code>.</li>
+<li><strong>Channel:</strong> <code>6</code>.</li>
+<li><strong>Authentication:</strong> <code>WPA2-PSK</code>. Si aparece el tipo de cifrado, elige <strong>AES</strong>.</li>
+<li><strong>PSK Pass Phrase</strong> (o equivalente): <code>LabNet-2026!</code>.</li>
+</ol>
+<p>No dejes el AP abierto ni uses WEP: en el módulo la seguridad de aula es WPA2 o WPA3, como se indica en el <a href="../03-cableado-estructurado/tema3.html#ap">Tema 3</a>. Si tu versión de Packet Tracer ofrece <strong>WPA3</strong>, puedes usarlo con la misma frase; en el informe anota cuál has dejado.</p>
+<h3 id="5-direcciones-ip-en-los-pc-de-cable">5. Direcciones IP en los PC de cable<a class="headerlink" href="#5-direcciones-ip-en-los-pc-de-cable" title="Permanent link">&para;</a></h3>
+<p>En PC1 y PC2: <em>Desktop &gt; IP Configuration</em>, modo <strong>Static</strong>, según la tabla. <strong>Gateway</strong> y <strong>DNS</strong> en blanco.</p>
+<p>Comprueba primero el tramo cableado: en PC1, <em>Command Prompt</em>:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>ping 192.168.10.11
+</code></pre></div>
+<p>Si ese ping falla, no pases al Wi‑Fi: el fallo está en el switch, en el cable o en las IP.</p>
+<h3 id="6-asociar-los-portatiles">6. Asociar los portátiles<a class="headerlink" href="#6-asociar-los-portatiles" title="Permanent link">&para;</a></h3>
+<p>En <strong>LT1</strong>: <em>Desktop &gt; PC Wireless</em> (o <em>Config &gt; Wireless0</em>, según la versión).</p>
+<ol>
+<li>Pestaña <strong>Connect</strong>. Pulsa <strong>Refresh</strong> / Actualizar.</li>
+<li>Elige la red <strong><code>RAL-LAB-WLAN</code></strong>.</li>
+<li>Introduce la frase <code>LabNet-2026!</code> y conéctate.</li>
+<li>Cuando el estado sea asociado (<em>Connected</em> / conectado), ve a <em>Desktop &gt; IP Configuration</em> y pon <strong>192.168.10.20</strong> / <strong>255.255.255.0</strong>, puerta de enlace vacía.</li>
+</ol>
+<p>Repite en <strong>LT2</strong> con <strong>192.168.10.21</strong>.</p>
+<p>Si no aparece el SSID: revisa el módulo WPC300N, que el portátil esté encendido y que el SSID del AP coincida carácter a carácter (mayúsculas incluidas).</p>
+<h3 id="7-comprobar-la-wlan">7. Comprobar la WLAN<a class="headerlink" href="#7-comprobar-la-wlan" title="Permanent link">&para;</a></h3>
+<p>Desde <strong>LT1</strong>, <em>Command Prompt</em>:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>ping 192.168.10.10
+<span class="linenos" data-linenos="2 "></span>ping 192.168.10.11
+<span class="linenos" data-linenos="3 "></span>ping 192.168.10.21
+</code></pre></div>
+<p>Los tres deben responder. El primero demuestra que el cliente Wi‑Fi llega al PC de cable a través del AP y del switch. El último, que los dos clientes inalámbricos se ven entre sí.</p>
+<p>Opcional: modo <strong>Simulación</strong>, filtro <strong>ICMP</strong>, PDU simple de LT1 a PC1, y avanza hasta la respuesta. No es obligatorio para la entrega.</p>
+<h3 id="8-guardar">8. Guardar<a class="headerlink" href="#8-guardar" title="Permanent link">&para;</a></h3>
+<p><em>Archivo &gt; Guardar como</em> / <em>File &gt; Save As</em> → <strong><code>PR303.pkt</code></strong>. Si dudas del menú, mira <a href="packet-tracer.html#6-abrir-guardar-y-entregar-un-pkt">abrir y guardar</a>.</p>
+<h2 id="entrega-en-aules">Entrega en Aules<a class="headerlink" href="#entrega-en-aules" title="Permanent link">&para;</a></h2>
+<p>Sube <strong><code>PR303.pkt</code></strong> y <strong><code>PR303.md</code></strong> con:</p>
+<ul>
+<li>Captura de la config del AP (SSID, canal, WPA2 o WPA3; <strong>sin</strong> la frase de paso del centro: aquí solo la de laboratorio).</li>
+<li>Captura de un portátil asociado a <code>RAL-LAB-WLAN</code>.</li>
+<li>Captura del <code>ping</code> de LT1 a PC1 (solo la ventana <em>Command Prompt</em>).</li>
+<li>Respuestas a:
+  1. ¿Qué hace el AP en esta topología respecto al switch y a los clientes Wi‑Fi?
+  2. ¿Por qué el AP no lleva dirección IP en esta práctica?
+  3. ¿Qué ocurriría si el portátil se asociara al SSID pero tuviera una IP de otra red (por ejemplo <code>192.168.20.20</code>)?</li>
+</ul>
+<p>Sin nombres, correos ni SSID reales del centro en capturas ni en el <code>.md</code>.</p>
+<h2 id="antes-de-entregar">Antes de entregar<a class="headerlink" href="#antes-de-entregar" title="Permanent link">&para;</a></h2>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Packet Tracer con sesión iniciada (<code>@alu.edu.gva.es</code>)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> SW1, AP1, PC1, PC2, LT1 y LT2; enlaces de cobre en verde</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Módulo inalámbrico en LT1 y LT2 (Ethernet quitado)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> SSID <code>RAL-LAB-WLAN</code>, canal 6, WPA2-PSK (o WPA3), frase de laboratorio</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> IP según la tabla; ping de LT1 a PC1 y a LT2</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>PR303.pkt</code> y <code>PR303.md</code> listos para Aules</li>
+</ul>
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Pie" >
+        
+          
+          <a href="pr202-capa-fisica.html" class="md-footer__link md-footer__link--prev" aria-label="Anterior: PR202 — Conectar la capa física">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              <div class="md-ellipsis">
+                PR202 — Conectar la capa física
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="pr103-primera-red.html" class="md-footer__link md-footer__link--next" aria-label="Siguiente: PR103 — Mi primera red">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Siguiente
+              </span>
+              <div class="md-ellipsis">
+                PR103 — Mi primera red
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      2026-2027 Francisco Javier Hernández Illán - <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es">Licencia CC BY-NC-SA</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="mailto:<fj.hernandez@edu.gva.es>" target="_blank" rel="noopener" title="" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4l208 156a48 48 0 0 0 57.6 0l208-156c12.1-9.1 19.2-23.3 19.2-38.4 0-26.5-21.5-48-48-48zM0 196v188c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V196L313.6 344.8c-34.1 25.6-81.1 25.6-115.2 0z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.linkedin.com/in/fjavier-hernandez-illan" target="_blank" rel="noopener" title="www.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77m282.1 320h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+      <div class="md-consent" data-md-component="consent" id="__consent" hidden>
+        <div class="md-consent__overlay"></div>
+        <aside class="md-consent__inner">
+          <form class="md-consent__form md-grid md-typeset" name="consent">
+            
+
+
+  
+
+
+<h4>Consentimiento de cookie</h4>
+<p>Esta página de apuntes utiliza cookies para reconocer las visitas, medir la efectividad de la documentación y averiguar si encuentras aquello que buscas o cómo has llegado a estos apuntes. Con tu consentimiento, me ayudas a mejorar estos materiales.</p>
+<input class="md-toggle" type="checkbox" id="__settings" >
+<div class="md-consent__settings">
+  <ul class="task-list">
+    
+    
+      
+        
+  
+  
+    
+    
+  
+  <li class="task-list-item">
+    <label class="task-list-control">
+      <input type="checkbox" name="analytics" checked>
+      <span class="task-list-indicator"></span>
+      Google Analytics
+    </label>
+  </li>
+
+      
+    
+    
+      
+    
+    
+  </ul>
+</div>
+<div class="md-consent__controls">
+  
+    
+      <button class="md-button md-button--primary">Aceptar</button>
+    
+    
+    
+  
+    
+    
+    
+      <label class="md-button" for="__settings">Gestionar cookies</label>
+    
+  
+</div>
+          </form>
+        </aside>
+      </div>
+      <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout((function(){document.querySelector("[data-md-component=consent]").hidden=!1}),250);var form=document.forms.consent;for(var action of["submit","reset"])form.addEventListener(action,(function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map((function(e){return[e,!0]})))),location.hash="",location.reload()}))</script>
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["header.autohide", "navigation.top", "navigation.tracking", "navigation.footer", "navigation.indexes", "content.code.annotate", "announce.dismiss", "toc.follow", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../js/print-site.js"></script>
+      
+    
+  </body>
+</html>
