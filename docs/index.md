@@ -48,10 +48,10 @@ Las ^^competencias profesionales^^ asociadas al módulo:
     | Concepto | Horas |
     | --- | ---: |
     | **Total módulo** | **233 h** |
-    | Formación en el **centro** | **186 h** |
-    | Formación en **empresa (FE)** | **47 h** |
+    | Formación en el **centro** | **133 h** |
+    | Formación en **empresa (FE)** | **100 h** |
 
-    El módulo son **233 h**. El **80 %** de cada resultado de aprendizaje se imparte en el centro (**186 h**) y el **20 %** restante (**47 h**) queda vinculado a la formación en empresa. En esas 186 h veremos **todos** los contenidos del módulo, y dedicaremos más tiempo y práctica a los fundamentales.
+    El módulo son **233 h**: **133** en el centro y **100** de formación en empresa. En esas 133 h de centro veremos **todos** los contenidos del módulo, y dedicaremos más tiempo y práctica a los fundamentales. La formación en empresa empieza el **17 de mayo de 2027**.
 
 ## Temas del curso
 
@@ -89,12 +89,12 @@ timeline
         Fundamentos : T1 Introducción y arquitectura : T2 Medios y capa física : T3 Cableado y WLAN
     section 2ª Evaluación — nov–ene
         Núcleo LAN : T4 Capa de enlace : T5 Capa de red : T6 Enrutamiento y VLAN
-    section 3ª Evaluación — ene–feb
+    section 3ª Evaluación — ene–mayo
         Servicios y cierre : T7 Transporte : T8 NAT e IPv6 : T9 Diagnóstico y protección
 ```
 
 !!! tip "Núcleo del curso"
-    Enlace, direccionamiento IP, subnetting y VLANs concentran una parte importante de la evaluación (sobre todo en la 2.ª evaluación). El Tema 9 cierra el curso en el centro con **diagnóstico (RA5)** y **prevención de riesgos (RA6)**. Tenemos **7 sesiones por semana** (55 minutos cada una).
+    Enlace, direccionamiento IP, subnetting y VLANs concentran una parte importante de la evaluación (sobre todo en la 2.ª evaluación). El Tema 9 cierra el bloque de centro hacia el **5 de mayo de 2027**, con **diagnóstico (RA5)** y **prevención de riesgos (RA6)**. La formación en empresa empieza el **17 de mayo de 2027**. Tenemos **7 sesiones por semana**.
 
 ## Evaluación
 
