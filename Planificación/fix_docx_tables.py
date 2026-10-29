@@ -7,6 +7,9 @@
   salvo el último párrafo, para que un título no se quede solo y una tabla
   corta no empiece al final de la página. Las tablas largas sí pueden
   pasar de página, con la cabecera repetida y las filas enteras.
+- Algunos tipos de tabla, reconocidos por su cabecera, reciben anchos de
+  columna fijos (COLUMN_WIDTHS) para que los títulos estrechos no se partan
+  letra a letra y la columna con más texto sea la ancha.
 """
 from __future__ import annotations
 
@@ -18,6 +21,17 @@ import xml.etree.ElementTree as ET
 W = "{http://schemas.openxmlformats.org/wordprocessingml/2006/main}"
 # Tablas de hasta este número de filas se intentan mantener en la misma página.
 MAX_ROWS_KEEP_TOGETHER = 8
+
+# Anchos por tipo de tabla, en porcentaje del ancho de texto.
+# Clave: textos de la cabecera, en orden; valor: porcentaje de cada columna.
+COLUMN_WIDTHS: dict[tuple[str, ...], tuple[int, ...]] = {
+    # Secuencia orientativa de cada UP (apartado 9).
+    ("Fase", "Sesiones", "Actividades"): (30, 13, 57),
+    # Anexo A.1. Resumen por RA.
+    ("RA", "Nº CE BOE", "Cobertura", "IE principales (muestra)"): (10, 14, 14, 62),
+    # Anexo A. Matriz de criterios de evaluación.
+    ("Código CE", "Enunciado (BOE)", "RA", "Tema(s)", "Actividades / IE"): (11, 44, 7, 13, 25),
+}
 
 
 def ensure_child(parent, tag: str):
@@ -43,12 +57,55 @@ def p_pr(p):
     return pr
 
 
-def fix_tree(root) -> tuple[int, int]:
+def cell_text(tc) -> str:
+    return " ".join("".join(t.text or "" for t in tc.iter(f"{W}t")).split())
+
+
+def set_widths(tbl, trs) -> bool:
+    if not trs:
+        return False
+    header = tuple(cell_text(tc) for tc in trs[0].findall(f"{W}tc"))
+    widths = COLUMN_WIDTHS.get(header)
+    if widths is None:
+        return False
+    tbl_pr = tbl.find(f"{W}tblPr")
+    tbl_w = ensure_child(tbl_pr, f"{W}tblW")
+    tbl_w.set(f"{W}type", "pct")
+    tbl_w.set(f"{W}w", "5000")
+    layout = tbl_pr.find(f"{W}tblLayout")
+    if layout is None:
+        layout = ET.Element(f"{W}tblLayout")
+        tbl_pr.insert(list(tbl_pr).index(tbl_w) + 1, layout)
+    layout.set(f"{W}type", "fixed")
+    grid = tbl.find(f"{W}tblGrid")
+    cols = grid.findall(f"{W}gridCol")
+    total = sum(int(c.get(f"{W}w", "0")) for c in cols) or 9000
+    for col, pct in zip(cols, widths):
+        col.set(f"{W}w", str(round(total * pct / 100)))
+    for tr in trs:
+        for tc, pct in zip(tr.findall(f"{W}tc"), widths):
+            tc_pr = tc.find(f"{W}tcPr")
+            if tc_pr is None:
+                tc_pr = ET.Element(f"{W}tcPr")
+                tc.insert(0, tc_pr)
+            tc_w = tc_pr.find(f"{W}tcW")
+            if tc_w is None:
+                tc_w = ET.Element(f"{W}tcW")
+                tc_pr.insert(0, tc_w)
+            tc_w.set(f"{W}type", "pct")
+            tc_w.set(f"{W}w", str(pct * 50))
+    return True
+
+
+def fix_tree(root) -> tuple[int, int, int]:
     tables = 0
     rows = 0
+    sized = 0
     for tbl in root.iter(f"{W}tbl"):
         tables += 1
         trs = list(tbl.findall(f"{W}tr"))
+        if set_widths(tbl, trs):
+            sized += 1
         for index, tr in enumerate(trs):
             rows += 1
             pr = tr_pr(tr)
@@ -63,7 +120,7 @@ def fix_tree(root) -> tuple[int, int]:
             for p in paragraphs[:-1]:
                 ensure_child(p_pr(p), f"{W}keepNext")
                 ensure_child(p_pr(p), f"{W}keepLines")
-    return tables, rows
+    return tables, rows, sized
 
 
 def main() -> None:
@@ -74,7 +131,7 @@ def main() -> None:
         xml = zin.read("word/document.xml")
         others = {name: zin.read(name) for name in zin.namelist() if name != "word/document.xml"}
     root = ET.fromstring(xml)
-    tables, rows = fix_tree(root)
+    tables, rows, sized = fix_tree(root)
     new_xml = ET.tostring(root, encoding="utf-8", xml_declaration=True)
     tmp = path.with_suffix(".docx.tmp")
     with zipfile.ZipFile(tmp, "w", compression=zipfile.ZIP_DEFLATED) as zout:
@@ -82,7 +139,7 @@ def main() -> None:
             zout.writestr(name, data)
         zout.writestr("word/document.xml", new_xml)
     tmp.replace(path)
-    print(f"Tablas ajustadas: {tables}. Filas: {rows}.")
+    print(f"Tablas ajustadas: {tables}. Filas: {rows}. Con anchos fijos: {sized}.")
 
 
 if __name__ == "__main__":
