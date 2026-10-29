@@ -1,15 +1,24 @@
 -- Índice con hipervínculos reales (no un campo TOC vacío) y sin el
 -- índice manual del Markdown, que solo sirve para leer el .md.
 
+-- Quita el índice manual y devuelve la posición que ocupaba, para poner
+-- allí el índice del Word: después de la portada y antes del apartado 1.
 local function skip_manual_index(blocks)
   local out = {}
+  local position = nil
   for _, block in ipairs(blocks) do
     local drop = block.t == "Div" and block.classes:includes("manual-index")
-    if not drop then
+    if drop then
+      position = position or (#out + 1)
+    else
       table.insert(out, block)
     end
   end
-  return out
+  return out, position
+end
+
+local function page_break()
+  return pandoc.RawBlock("openxml", '<w:p><w:r><w:br w:type="page"/></w:r></w:p>')
 end
 
 local function collect_headers(blocks)
@@ -60,7 +69,8 @@ local function nested_list(headers, index, level)
 end
 
 function Pandoc(doc)
-  doc.blocks = skip_manual_index(doc.blocks)
+  local position
+  doc.blocks, position = skip_manual_index(doc.blocks)
   local headers = collect_headers(doc.blocks)
   if #headers == 0 then
     return doc
@@ -80,8 +90,20 @@ function Pandoc(doc)
     pandoc.Str("correspondiente."),
   })
   local index_header = pandoc.Header(1, "Índice", pandoc.Attr("indice", {}, {}))
-  table.insert(doc.blocks, 1, pandoc.BulletList(items))
-  table.insert(doc.blocks, 1, intro)
-  table.insert(doc.blocks, 1, index_header)
+  if position == nil then
+    -- Sin índice manual: el índice va antes del apartado 1.
+    position = 1
+    for i, block in ipairs(doc.blocks) do
+      if block.t == "Header" and pandoc.utils.stringify(block):match("^1%. Introducción") then
+        position = i
+        break
+      end
+    end
+  end
+  -- Portada, salto de página, índice, salto de página y apartado 1.
+  local index_blocks = { page_break(), index_header, intro, pandoc.BulletList(items), page_break() }
+  for offset, block in ipairs(index_blocks) do
+    table.insert(doc.blocks, position + offset - 1, block)
+  end
   return doc
 end

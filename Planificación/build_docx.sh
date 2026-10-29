@@ -4,7 +4,7 @@
 # Uso, desde la raíz del repositorio o desde Planificación/:
 #   bash Planificación/build_docx.sh
 #
-# El índice del Word lo escribe docx_format.lua: una lista de hipervínculos
+# El índice del Word lo escribe docx_format.lua después de la portada: una lista de hipervínculos
 # a cada apartado. No se usa el campo TOC de Word, que queda vacío hasta
 # que el editor lo actualiza. El índice manual del Markdown se omite.
 #
