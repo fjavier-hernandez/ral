@@ -48,10 +48,10 @@ Las ^^competencias profesionales^^ asociadas al módulo:
     | Concepto | Horas |
     | --- | ---: |
     | **Total módulo** | **233 h** |
-    | Formación en el **centro** | **133 h** |
-    | Formación en **empresa (FE)** | **100 h** |
+    | Formación en el **centro** | **186 h** |
+    | Formación en **empresa (FE)** | **47 h** |
 
-    El módulo son **233 h**: **133** en el centro y **100** de formación en empresa. En esas 133 h de centro veremos **todos** los contenidos del módulo, y dedicaremos más tiempo y práctica a los fundamentales. La formación en empresa empieza el **17 de mayo de 2027**.
+    El módulo son **233 h**: **186** en el centro (80 %) y **47** de formación en empresa (20 %), según el acuerdo de departamento. En el centro veremos **todos** los contenidos del módulo. La formación en empresa empieza el **17 de mayo de 2027**.
 
 ## Temas del curso
 
@@ -104,14 +104,15 @@ La evaluación se organiza por **resultados de aprendizaje (RA)**. Cada activida
 
 Imagina la nota del módulo como una **tarta** repartida en seis quesitos (los RA). Cada quesito tiene un tamaño fijo (el peso de la tabla de arriba: 20 %, 12 %, 18 %, 25 %, 15 % y 10 %).
 
-1. En cada RA, tu nota es la **media ponderada** de las actividades de ese RA (AC, PR, PY, PO).
-2. La **nota final** del módulo es la suma de (nota de cada RA × su peso).
-3. Si completas el **apartado de certificación**, puedes sumar hasta **+1 punto** sobre esa nota final, que puede llegar hasta **11**. El punto tiene dos mitades: **0,5** por entregar las prácticas de Packet Tracer, hechas en casa, y superar la auditoría en clase; y **0,5** más si además apruebas un examen de certificación (cómo se acredita se concretará en Aules). Ese +1 **no sustituye** ningún RA.
+1. En cada RA, la nota de centro es la **media ponderada** de las actividades de ese RA (AC, PR, PY, PO).
+2. La nota del RA es el **80 %** de esa nota de centro más el **20 %** de la formación en empresa. El profesorado califica las dos partes.
+3. La **nota final** del módulo es la suma de (nota de cada RA × su peso).
+4. Si completas el **apartado de certificación**, puedes sumar hasta **+1 punto** sobre esa nota final, que puede llegar hasta **11**. El punto tiene dos mitades: **0,5** por entregar las prácticas de Packet Tracer, hechas en casa, y superar la auditoría en clase; y **0,5** más si además apruebas un examen de certificación (cómo se acredita se concretará en Aules). Ese +1 **no sustituye** ningún RA.
 
 ``` mermaid
 flowchart TB
   A["Paso 1 — Instrumentos\nAC · PR · PY · PO"]
-  B["Paso 2 — Nota de cada RA\nmedia de las actividades de ese RA"]
+  B["Paso 2 — Nota de cada RA\n80 % centro + 20 % empresa"]
   C["Paso 3 — Nota final del módulo\nRA1×20% + RA2×12% + RA3×18%\n+ RA4×25% + RA5×15% + RA6×10%"]
   D["+1 Certificación\n0,5 prácticas + 0,5 examen\nhasta 11"]
   A --> B --> C

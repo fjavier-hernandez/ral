@@ -29,8 +29,8 @@ COLUMN_WIDTHS: dict[tuple[str, ...], tuple[int, ...]] = {
     ("Campo", "Contenido"): (28, 72),
     # Secuencia orientativa de cada UP (anexo B.3).
     ("Fase", "Sesiones", "Actividades"): (30, 13, 57),
-    # Anexo A.3. Porcentaje de comprobación de cada CE.
-    ("Código CE", "RA", "Porcentaje del módulo"): (22, 16, 62),
+    # Anexo A.3. Porcentaje de comprobación de cada CE (centro y empresa).
+    ("Código CE", "RA", "Centro", "FE", "Total"): (16, 12, 24, 24, 24),
     # Anexo A.1. Resumen por RA.
     ("RA", "Nº CE BOE", "Cobertura", "IE principales (muestra)"): (10, 14, 14, 62),
     # Anexo A. Matriz de criterios de evaluación.
