@@ -395,6 +395,13 @@ Esa arquitectura se llama **[GPON](#gpon)** (*Gigabit-capable Passive Optical Ne
 3. La **acometida** es el último tramo de fibra, desde la caja final hasta el domicilio.
 4. La **[ONT](#ont)** (*Optical Network Terminal*, terminal de red óptica) está en casa del abonado. La norma llama ONU (*Optical Network Unit*, unidad de red óptica) al equipo de usuario en general; en FTTH ese equipo es la ONT, y de ella salen **internet**, **telefonía** y **televisión**.
 
+En el taller hay un panel con estas piezas montadas, que se trabajará en la sesión práctica.
+
+<figure markdown="span">
+  ![Panel de prácticas FTTH montado en el taller, con cajas de empalme y distribución, caja terminal con divisor, roseta óptica y equipos de usuario](../img/t3-gpon-panel-taller.jpg){ width="500" }
+  <figcaption>Panel de prácticas FTTH del taller. Arriba, las cajas de planta exterior; a la izquierda, la caja terminal abierta con el divisor; en el centro, la roseta óptica y el equipo de usuario. Foto: Departamento de Informática.</figcaption>
+</figure>
+
 Los dos sentidos viajan por **una sola fibra**, separados por longitud de onda (multiplexación **WDM**, *Wavelength Division Multiplexing*). La bajada va a **1490 nm**, la subida a **1310 nm** y, cuando la red superpone vídeo de radiofrecuencia (RF), ese canal va a **1550 nm** junto con la bajada. Si la televisión va por IP, la longitud de 1550 nm puede no usarse. La bajada es de **difusión**: el divisor copia la misma luz hacia todas las ONT y cada una se queda con sus datos. La subida usa acceso múltiple por división en el tiempo (**TDMA**, *Time Division Multiple Access*): la OLT concede un turno a cada ONT para que no emitan a la vez sobre la fibra que comparten.
 
 ### Ejemplo 1. Recorrido de la señal
