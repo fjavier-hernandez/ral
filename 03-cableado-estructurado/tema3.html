@@ -1,0 +1,2983 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Racks, paneles, tomas de usuario o TO (rosetas), canalizaciones, electrónica de red, AP Wi‑Fi, distancias ISO/TIA y prácticas de taller.">
+      
+      
+      
+        <link rel="canonical" href="https://fjavier-hernandez.github.io/ral/03-cableado-estructurado/tema3.html">
+      
+      
+        <link rel="prev" href="../02-medios-capa-fisica/tema2.html">
+      
+      
+        <link rel="next" href="../00-normas/normas_taller.html">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../img/ral.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
+    
+    
+      
+        <title>Tema 3 — Cableado estructurado y componentes - Redes de Área Local</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-0CPJP88MBF"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-0CPJP88MBF",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-0CPJP88MBF",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>if("undefined"!=typeof __md_analytics){var consent=__md_get("__consent");consent&&consent.analytics&&__md_analytics()}</script>
+  
+
+    
+    
+  
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Tema 3 — Cableado estructurado y componentes - Redes de Área Local" />
+<meta property="og:description" content="Racks, paneles, tomas de usuario o TO (rosetas), canalizaciones, electrónica de red, AP Wi‑Fi, distancias ISO/TIA y prácticas de taller." />
+<meta property="og:image" content="https://fjavier-hernandez.github.io/ral/assets/images/social/03-cableado-estructurado/tema3.png" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:url" content="https://fjavier-hernandez.github.io/ral/03-cableado-estructurado/tema3.html" />
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:title" content="Tema 3 — Cableado estructurado y componentes - Redes de Área Local" />
+<meta property="twitter:description" content="Racks, paneles, tomas de usuario o TO (rosetas), canalizaciones, electrónica de red, AP Wi‑Fi, distancias ISO/TIA y prácticas de taller." />
+<meta property="twitter:image" content="https://fjavier-hernandez.github.io/ral/assets/images/social/03-cableado-estructurado/tema3.png" />
+</head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="javi" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#tema-3-cableado-estructurado-y-componentes" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../index.html" title="Redes de Área Local" class="md-header__button md-logo" aria-label="Redes de Área Local" data-md-component="logo">
+      
+  <img src="../img/ral.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Redes de Área Local
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Tema 3 — Cableado estructurado y componentes
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="javi" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Cambiar a modo noche"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo noche" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Cambiar a modo día"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo día" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../index.html" title="Redes de Área Local" class="md-nav__button md-logo" aria-label="Redes de Área Local" data-md-component="logo">
+      
+  <img src="../img/ral.svg" alt="logo">
+
+    </a>
+    Redes de Área Local
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-introduccion-arquitectura/tema1.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Introducción. Arquitectura de redes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-medios-capa-fisica/tema2.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Medios de transmisión y capa física
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Cableado estructurado y componentes
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="tema3.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Cableado estructurado y componentes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#propuesta-didactica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Propuesta didáctica
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Propuesta didáctica">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#criterios-de-evaluacion-seleccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Criterios de evaluación (selección)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contenidos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Contenidos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#programacion-de-aula-orientativa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Programación de aula (orientativa)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cuestionario-inicial" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cuestionario inicial
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#que-es-el-cableado-estructurado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ¿Qué es el cableado estructurado?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#montaje-del-adaptador-de-red" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Montaje del adaptador de red
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#armario-de-distribucion-rack" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Armario de distribución (rack)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Armario de distribución (rack)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#estandar-19-y-unidad-u" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estándar 19″ y unidad U
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#panel-de-parcheo_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Panel de parcheo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tomas-de-usuario-latiguillos-y-guiado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tomas de usuario, latiguillos y guiado
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tomas de usuario, latiguillos y guiado">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#toma-de-usuario-o-to-roseta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Toma de usuario o TO (roseta)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#latiguillos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Latiguillos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#soportes-de-guiado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Soportes de guiado
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#electronica-de-red" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Electrónica de red
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Electrónica de red">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#switch-lo-habitual-en-lan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Switch (lo habitual en LAN)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#router-y-gateway" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Router y gateway
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#punto-de-acceso-ap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Punto de acceso (AP)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#normas-y-distancias" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Normas y distancias
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Normas y distancias">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bloques-funcionales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bloques funcionales
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#distancias-orientativas-cobre" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Distancias orientativas (cobre)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tierra-vision-breve" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tierra (visión breve)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#redes-ftthgpon" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Redes FTTH/GPON
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Redes FTTH/GPON">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-1-recorrido-de-la-senal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejemplo 1. Recorrido de la señal
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-2-calculo-sencillo-de-perdidas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejemplo 2. Cálculo sencillo de pérdidas
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#empalme-por-fusion-vision-de-taller" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Empalme por fusión (visión de taller)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#actividades" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Actividades
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Actividades">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ac301-nic-comparativa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AC301 — NIC comparativa
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ac302-armario-rack" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AC302 — Armario / rack
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ac303-electronica-y-capas-osi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AC303 — Electrónica y capas OSI
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ac304-tomas-latiguillos-y-guiado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AC304 — Tomas, latiguillos y guiado
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ac305-propuesta-electronica-centro-educativo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AC305 — Propuesta electrónica (centro educativo)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pr301-taller-panel-tomas-armario-y-switch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PR301 — Taller: panel, tomas, armario y switch
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pr304-taller-fusion-de-fibra-fusionadoras" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PR304 — Taller: fusión de fibra / fusionadoras
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pr305-taller-wlan-real" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PR305 — Taller: WLAN real
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pr303-pasa-a-certificacion-trabajo-para-casa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PR303 — Pasa a certificación: trabajo para casa
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pr302-proyecto-aulario" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PR302 — Proyecto aulario
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#para-el-examen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Para el examen
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#autocheck-del-tema" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Autocheck del tema
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#videos-recomendados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vídeos recomendados
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#glosario" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Glosario
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#relacion-con-el-resto-del-modulo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Relación con el resto del módulo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referencias-rapidas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Referencias rápidas
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../00-normas/normas_taller.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Normas del taller
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../certificacion/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Certificación
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Certificación
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../certificacion/packet-tracer.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Packet Tracer (inicio)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../certificacion/pr202-capa-fisica.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PR202 — Conectar la capa física
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../certificacion/pr303-wlan-packet-tracer.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PR303 — WLAN (Packet Tracer)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../certificacion/pr103-primera-red.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PR103 — Mi primera red
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../certificacion/pr102-modelos-osi.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PR102 — Modelos OSI/TCP (opcional)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#propuesta-didactica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Propuesta didáctica
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Propuesta didáctica">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#criterios-de-evaluacion-seleccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Criterios de evaluación (selección)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contenidos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Contenidos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#programacion-de-aula-orientativa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Programación de aula (orientativa)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cuestionario-inicial" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cuestionario inicial
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#que-es-el-cableado-estructurado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ¿Qué es el cableado estructurado?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#montaje-del-adaptador-de-red" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Montaje del adaptador de red
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#armario-de-distribucion-rack" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Armario de distribución (rack)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Armario de distribución (rack)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#estandar-19-y-unidad-u" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Estándar 19″ y unidad U
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#panel-de-parcheo_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Panel de parcheo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tomas-de-usuario-latiguillos-y-guiado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tomas de usuario, latiguillos y guiado
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tomas de usuario, latiguillos y guiado">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#toma-de-usuario-o-to-roseta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Toma de usuario o TO (roseta)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#latiguillos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Latiguillos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#soportes-de-guiado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Soportes de guiado
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#electronica-de-red" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Electrónica de red
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Electrónica de red">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#switch-lo-habitual-en-lan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Switch (lo habitual en LAN)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#router-y-gateway" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Router y gateway
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#punto-de-acceso-ap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Punto de acceso (AP)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#normas-y-distancias" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Normas y distancias
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Normas y distancias">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bloques-funcionales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bloques funcionales
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#distancias-orientativas-cobre" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Distancias orientativas (cobre)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tierra-vision-breve" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tierra (visión breve)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#redes-ftthgpon" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Redes FTTH/GPON
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Redes FTTH/GPON">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-1-recorrido-de-la-senal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejemplo 1. Recorrido de la señal
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-2-calculo-sencillo-de-perdidas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ejemplo 2. Cálculo sencillo de pérdidas
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#empalme-por-fusion-vision-de-taller" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Empalme por fusión (visión de taller)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#actividades" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Actividades
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Actividades">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ac301-nic-comparativa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AC301 — NIC comparativa
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ac302-armario-rack" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AC302 — Armario / rack
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ac303-electronica-y-capas-osi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AC303 — Electrónica y capas OSI
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ac304-tomas-latiguillos-y-guiado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AC304 — Tomas, latiguillos y guiado
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ac305-propuesta-electronica-centro-educativo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AC305 — Propuesta electrónica (centro educativo)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pr301-taller-panel-tomas-armario-y-switch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PR301 — Taller: panel, tomas, armario y switch
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pr304-taller-fusion-de-fibra-fusionadoras" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PR304 — Taller: fusión de fibra / fusionadoras
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pr305-taller-wlan-real" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PR305 — Taller: WLAN real
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pr303-pasa-a-certificacion-trabajo-para-casa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PR303 — Pasa a certificación: trabajo para casa
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pr302-proyecto-aulario" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PR302 — Proyecto aulario
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#para-el-examen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Para el examen
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#autocheck-del-tema" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Autocheck del tema
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#videos-recomendados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vídeos recomendados
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#glosario" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Glosario
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#relacion-con-el-resto-del-modulo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Relación con el resto del módulo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referencias-rapidas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Referencias rápidas
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="tema-3-cableado-estructurado-y-componentes">Tema 3. Cableado estructurado y componentes<a class="headerlink" href="#tema-3-cableado-estructurado-y-componentes" title="Permanent link">&para;</a></h1>
+<p>En este tema organizamos el cableado del <strong>edificio</strong>: desde la toma del puesto hasta el <strong><a href="#rack">rack</a></strong>, pasando por paneles, canalizaciones y la electrónica (switch, router, <a href="#ap">punto de acceso</a>…). El medio del Tema 2 (categoría, conector, crimpado) solo funciona como red si forma parte de un sistema que se pueda ampliar, etiquetar y mantener.</p>
+<div class="admonition tip">
+<p class="admonition-title">Primera clase</p>
+<p>Empieza por el <a href="#cuestionario-inicial">cuestionario inicial</a>. No hace falta haber leído el tema entero: sirve para ver qué traes antes de estudiar. Entrégalo en Aules <strong>antes</strong> de mirar el Autocheck.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Cómo leerlo</p>
+<p>Lee cada apartado completo: primero el párrafo (qué es, para qué sirve y un ejemplo), después la tabla o la figura, y al final los errores frecuentes. No estudies solo las tablas. Los términos marcados enlazan al <a href="#glosario">glosario</a>. Cuando acabes el tema, haz el <a href="#autocheck-del-tema">Autocheck</a>.</p>
+</div>
+<h2 id="propuesta-didactica">Propuesta didáctica<a class="headerlink" href="#propuesta-didactica" title="Permanent link">&para;</a></h2>
+<p>Trabajamos los <strong>RA2</strong>, <strong>RA3</strong> y <strong>RA4</strong> del módulo Redes de área local (0225):</p>
+<blockquote>
+<p><strong>RA2.</strong> <em>Despliega el cableado de una red local interpretando especificaciones y aplicando técnicas de montaje.</em></p>
+<p><strong>RA3.</strong> <em>Interconecta equipos en redes locales cableadas describiendo estándares de cableado y aplicando técnicas de montaje de conectores.</em></p>
+<p><strong>RA4.</strong> <em>Instala equipos en red, describiendo sus prestaciones y aplicando técnicas de montaje.</em></p>
+</blockquote>
+<h3 id="criterios-de-evaluacion-seleccion">Criterios de evaluación (selección)<a class="headerlink" href="#criterios-de-evaluacion-seleccion" title="Permanent link">&para;</a></h3>
+<p><strong>RA2</strong></p>
+<ul>
+<li><strong>CE2c</strong>: Se han diferenciado los medios de transmisión.</li>
+<li><strong>CE2d</strong> <strong>(clave)</strong>: Se han reconocido los detalles del cableado de la instalación y su despliegue (categoría del cableado, espacios por los que discurre, soporte para las canalizaciones, entre otros).</li>
+<li><strong>CE2e</strong>: Se han seleccionado y montado las canalizaciones y tubos.</li>
+<li><strong>CE2f</strong> <strong>(clave)</strong>: Se han montado los armarios de comunicaciones y sus accesorios.</li>
+<li><strong>CE2g</strong> <strong>(clave)</strong>: Se han montado y conexionado las tomas de usuario y paneles de parcheo.</li>
+<li><strong>CE2i</strong>: Se han etiquetado los cables y tomas de usuario.</li>
+<li><strong>CE2j</strong>: Se ha trabajado con la calidad y seguridad requeridas.</li>
+</ul>
+<p><strong>RA3</strong></p>
+<ul>
+<li><strong>CE3a</strong> <strong>(clave)</strong>: Se ha interpretado el plan de montaje lógico de la red.</li>
+<li><strong>CE3b</strong>: Se han montado los adaptadores de red en los equipos.</li>
+<li><strong>CE3c</strong> <strong>(clave)</strong>: Se han montado conectores sobre cables (cobre y fibra) de red.</li>
+<li><strong>CE3d</strong>: Se han montado los equipos de conmutación en los armarios de comunicaciones.</li>
+<li><strong>CE3e</strong>: Se han conectado los equipos de conmutación a los paneles de parcheo.</li>
+<li><strong>CE3f</strong> <strong>(clave)</strong>: Se ha verificado la conectividad de la instalación.</li>
+<li><strong>CE3g</strong>: Se ha trabajado con la calidad requerida.</li>
+</ul>
+<p><strong>RA4</strong></p>
+<ul>
+<li><strong>CE4a</strong>: Se han identificado las características funcionales de las redes inalámbricas.</li>
+<li><strong>CE4b</strong>: Se han identificado los modos de funcionamiento de las redes inalámbricas.</li>
+<li><strong>CE4c</strong>: Se han instalado adaptadores y puntos de acceso inalámbrico.</li>
+<li><strong>CE4d</strong> <strong>(clave)</strong>: Se han configurado los modos de funcionamiento y los parámetros básicos.</li>
+<li><strong>CE4e</strong>: Se ha comprobado la conectividad entre diversos dispositivos y adaptadores inalámbricos.</li>
+<li><strong>CE4f</strong>: Se ha instalado el software correspondiente.</li>
+<li><strong>CE4i</strong> <strong>(clave)</strong>: Se han aplicado mecanismos básicos de seguridad.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">VLAN</p>
+<p>Las <strong>VLAN</strong> (CE4j) se desarrollan en el <strong>Tema 6</strong>. Aquí solo las mencionamos como capacidad de muchos switches gestionables.</p>
+</div>
+<h3 id="contenidos">Contenidos<a class="headerlink" href="#contenidos" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Montaje físico del adaptador de red (PCIe o USB) e instalación del driver, ligado a PR305. La <abbr title="Network Interface Card">NIC</abbr> como concepto está en el Tema 1.</li>
+<li>Armario o rack de 19″ y unidades <strong>U</strong>; paneles de parcheo; toma de usuario o <abbr title="Telecommunications Outlet">TO</abbr> (roseta) y latiguillos.</li>
+<li>Canalizaciones, bandejas, guías y pasahilos; etiquetado (TIA‑606).</li>
+<li>Electrónica: hub, switch, router, gateway, punto de acceso; <abbr title="Power over Ethernet">PoE</abbr>.</li>
+<li>WLAN de aula: modos del <abbr title="Access Point">AP</abbr>, <abbr title="Service Set Identifier">SSID</abbr>, canal, WPA2/WPA3.</li>
+<li>Visión ISO/TIA: horizontal, backbone, distancias; idea de tierra (TIA‑607).</li>
+<li>Empalme por <strong>fusión</strong> de fibra (fusionadora, protectores, comprobación básica, PRL).</li>
+</ul>
+<h3 id="programacion-de-aula-orientativa">Programación de aula (orientativa)<a class="headerlink" href="#programacion-de-aula-orientativa" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Sesiones</th>
+<th>Contenidos</th>
+<th>Actividades</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Presentación + cuestionario inicial</td>
+<td>Cuestionario</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Montaje del adaptador (PCIe/USB) y driver</td>
+<td><strong>AC301</strong></td>
+</tr>
+<tr>
+<td>3–4</td>
+<td>Rack, panel, <abbr title="Telecommunications Outlet">TO</abbr>, guiado</td>
+<td>AC302, AC304</td>
+</tr>
+<tr>
+<td>5–7</td>
+<td>Electrónica de red y <abbr title="Access Point">AP</abbr> (teoría)</td>
+<td>AC303</td>
+</tr>
+<tr>
+<td>8–9</td>
+<td>Normas ISO/TIA, distancias, etiquetado</td>
+<td>—</td>
+</tr>
+<tr>
+<td>10–11</td>
+<td>Propuesta electrónica (centro educativo)</td>
+<td><strong>AC305</strong></td>
+</tr>
+<tr>
+<td>12–13</td>
+<td><strong>Taller:</strong> panel, tomas, armario y switch</td>
+<td><strong>PR301</strong></td>
+</tr>
+<tr>
+<td>14–15</td>
+<td><strong>Taller:</strong> fusión de fibra</td>
+<td><strong>PR304</strong></td>
+</tr>
+<tr>
+<td>16–18</td>
+<td><strong>Taller:</strong> WLAN real</td>
+<td><strong>PR305</strong></td>
+</tr>
+<tr>
+<td>19–20</td>
+<td>Proyecto aulario (grupo)</td>
+<td><strong>PR302</strong></td>
+</tr>
+<tr>
+<td>Casa</td>
+<td>Certificación: WLAN / Packet Tracer</td>
+<td><strong>PR303</strong></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="cuestionario-inicial">Cuestionario inicial<a class="headerlink" href="#cuestionario-inicial" title="Permanent link">&para;</a></h2>
+<div class="admonition question">
+<p class="admonition-title">Antes de empezar — responde con lo que sepas</p>
+<ol>
+<li>¿Qué es un adaptador de red (<abbr title="Network Interface Card">NIC</abbr>) y qué características tiene?</li>
+<li>¿Qué elementos hay dentro de un armario de comunicaciones?</li>
+<li>¿Para qué sirve un panel de parcheo?</li>
+<li>¿Qué diferencia hay entre un hub y un switch?</li>
+<li>¿Qué hace un router en una red?</li>
+<li>¿Cómo funciona un punto de acceso Wi‑Fi?</li>
+<li>¿Qué tipos de tomas de usuario conoces?</li>
+<li>¿Qué es <abbr title="Power over Ethernet">PoE</abbr> y para qué se usa?</li>
+<li>¿Qué distancia máxima suele tener el cableado horizontal?</li>
+</ol>
+</div>
+<p>Entrega tus respuestas en <strong>Aules</strong> como tarea del cuestionario inicial <strong>antes</strong> de mirar el <a href="#autocheck-del-tema">Autocheck</a> del final del tema. Las soluciones no están aquí a propósito: primero entregas, después contrastas.</p>
+<hr />
+<h2 id="que-es-el-cableado-estructurado">¿Qué es el cableado estructurado?<a class="headerlink" href="#que-es-el-cableado-estructurado" title="Permanent link">&para;</a></h2>
+<p>El <strong>cableado estructurado</strong> es el sistema de telecomunicaciones del edificio: voz, datos y, en muchos casos, otros servicios (vídeo, alarmas) comparten un mismo diseño, según normas como <strong>ANSI/TIA/EIA‑568/569</strong> e <strong>ISO/IEC 11801</strong>. No se trata de un latiguillo suelto entre el PC y el switch de mesa, sino del conjunto de tomas, tendidos, paneles y armarios que recorre el edificio.</p>
+<p>La infraestructura que se instala hoy (paneles de parcheo, tomas de usuario o <abbr title="Telecommunications Outlet">TO</abbr> (roseta) y bandejas) debe seguir sirviendo cuando, dentro de unos años, se cambie el switch. Por eso el diseño se apoya en tres ideas clave para el taller y el examen:</p>
+<ul>
+<li><strong>Flexibilidad.</strong> Se puede reorganizar un puesto cambiando latiguillos, sin rehacer el tendido horizontal.</li>
+<li><strong>Evolución.</strong> Se sustituye la electrónica (switch, router, <abbr title="Access Point">AP</abbr>) sin retirar el cableado pasivo.</li>
+<li><strong>Centralización.</strong> Los servicios se concentran en distribuidores: racks o salas de telecomunicaciones (TR).</li>
+</ul>
+<p><strong>Ejemplo de aula.</strong> El PC de la mesa llega a la toma de la canaleta; desde ahí un UTP sube al armario del fondo. En el panel debe aparecer la misma etiqueta que en la toma, y un latiguillo corto une ese puerto del panel con el switch. Si las etiquetas no coinciden, para localizar un fallo hay que ir probando cable a cable, en lugar de seguir la documentación.</p>
+<figure>
+  <img alt="Elementos del cableado estructurado" src="../img/ElementosCableadoEstructurado.png" width="800" />
+<br />
+<figcaption>Arquitectura típica: áreas de trabajo, horizontal, backbone y distribuidores.</figcaption>
+</figure>
+<p>El mismo recorrido, visto como un tramo que se puede montar en el taller, va del puesto a la <abbr title="Telecommunications Outlet">TO</abbr>, sube por el horizontal hasta el panel del rack de planta (<strong><a href="#fd"><abbr title="Floor Distributor">FD</abbr></a></strong>) y, dentro del armario, un latiguillo une el panel con el switch. El router o gateway de ese rack sale hacia el backbone (edificio <strong><a href="#bd"><abbr title="Building Distributor">BD</abbr></a></strong> y campus <strong><a href="#cd"><abbr title="Campus Distributor">CD</abbr></a></strong>). Si cambias el switch, el tendido pasivo (<abbr title="Telecommunications Outlet">TO</abbr>, canaleta, panel) se queda.</p>
+<figure>
+  <img alt="Instalación completa: puesto, TO, horizontal, panel, switch, router y backbone" src="../img/t3-instalacion-completa.svg" width="860" />
+<br />
+<figcaption>Del puesto al campus: TO, horizontal, rack del FD (panel, switch y router) y backbone hacia BD y CD.</figcaption>
+</figure>
+<div class="admonition warning">
+<p class="admonition-title">Errores frecuentes</p>
+<p>Llamar «cableado estructurado» al latiguillo del PC al switch de mesa. El latiguillo es un tramo; el sistema es <abbr title="Telecommunications Outlet">TO</abbr>, tendido horizontal, panel, rack y backbone.</p>
+</div>
+<hr />
+<h2 id="montaje-del-adaptador-de-red">Montaje del adaptador de red<a class="headerlink" href="#montaje-del-adaptador-de-red" title="Permanent link">&para;</a></h2>
+<p>La <strong><a href="#nic"><abbr title="Network Interface Card">NIC</abbr></a></strong> (<em>Network Interface Card</em>, tarjeta o adaptador de red), la dirección MAC y el dúplex ya se explicaron en el <a href="../01-introduccion-arquitectura/tema1.html#adaptador-de-red-nic">Tema 1, apartado Adaptador de red</a>. En este tema nos centramos en su montaje.</p>
+<p>En este tema lo que importa es el <strong>montaje físico</strong> y el <strong>software del adaptador</strong>, porque ambos entran en el taller. Una <abbr title="Network Interface Card">NIC</abbr> puede ir integrada en la placa, instalarse en una ranura <strong>PCIe</strong> o conectarse por <strong>USB</strong> (incluido un dongle Wi‑Fi). Tras el montaje hay que instalar el <strong>driver</strong> y comprobar que el sistema operativo ve la interfaz. Eso cubre <strong>CE3b</strong> (montar el adaptador en el equipo) y <strong>CE4f</strong> (instalar el software), y se practica en <strong>PR305</strong>.</p>
+<p><strong>Ejemplo de aula.</strong> En el taller, si montáis una <abbr title="Network Interface Card">NIC</abbr> PCIe, se apaga el PC, se descarga la electricidad estática y se encaja la tarjeta hasta el fondo. En Windows o Linux no basta con que «esté puesta»: tiene que aparecer en el administrador de dispositivos o en <code>ip link</code> / <code>ipconfig</code>. Si no hay enlace, se mira primero el latiguillo y el puerto del switch, no se reinstala el driver a ciegas.</p>
+<div class="admonition warning">
+<p class="admonition-title">Errores frecuentes</p>
+<p>Confundir la velocidad de la <abbr title="Network Interface Card">NIC</abbr> con la del switch: el enlace baja al mínimo común. Pensar que montar la tarjeta sin driver ya deja el equipo en red.</p>
+</div>
+<hr />
+<h2 id="armario-de-distribucion-rack">Armario de distribución (<a href="#rack">rack</a>)<a class="headerlink" href="#armario-de-distribucion-rack" title="Permanent link">&para;</a></h2>
+<p>El <strong>rack</strong> concentra el cableado de una zona: paneles de parcheo, switches, unidades de alimentación (PDU o SAI), ventilación y accesorios de ordenación. La puerta transparente permite ver los LED sin abrir el armario; el techo y los laterales suelen ser desmontables para unir armarios o pasar mazos. Sin ese punto central, cada aula sería un ovillo de cables independiente y no habría forma razonable de mantener el edificio.</p>
+<figure>
+  <img alt="Vista frontal de un armario de distribución" src="../img/armario_distribucion_frontal.png" width="400" />
+<br />
+<figcaption>Vista frontal de un armario de distribución.</figcaption>
+</figure>
+<h3 id="estandar-19-y-unidad-u">Estándar 19″ y unidad U<a class="headerlink" href="#estandar-19-y-unidad-u" title="Permanent link">&para;</a></h3>
+<p>El interior tiene bastidores de <strong>19 pulgadas</strong>: cualquier equipo <strong>rackeable</strong> encaja en esa anchura. La altura se mide en <strong>unidades U</strong> (aproximadamente 4,45 cm). Un panel de 24 puertos suele ocupar <strong>1 U</strong>; un switch, 1 U o 2 U. Planificar las U libres evita llenar el armario el primer día y no poder añadir un segundo switch o un pasahilos.</p>
+<p>Por tamaño, lo habitual es:</p>
+<ul>
+<li>menos de <strong>12 U</strong>, redes pequeñas, a menudo de pared;</li>
+<li><strong>12–25 U</strong>, planta o edificio pequeño;</li>
+<li>más de <strong>24 U</strong>, armarios de suelo, con ventilación y filtrado.</li>
+</ul>
+<p><strong>Ejemplo.</strong> Si el armario didáctico tiene 12 U y el panel ya ocupa 1 U, el switch se atornilla a los bastidores. Si solo se apoya sobre el panel, sin atornillar, se desplaza en cuanto se tensa un latiguillo.</p>
+<div class="admonition warning">
+<p class="admonition-title">Errores frecuentes</p>
+<p>Estimar las U a ojo y dejar el switch en el canto del armario. Lo rackeable se atornilla a los bastidores.</p>
+</div>
+<hr />
+<h2 id="panel-de-parcheo_1">Panel de parcheo<a class="headerlink" href="#panel-de-parcheo_1" title="Permanent link">&para;</a></h2>
+<p>El <strong><a href="#panel-de-parcheo">panel de parcheo</a></strong> (<em>patch panel</em>) organiza las líneas que llegan al armario. Cada toma del panel se corresponde —y se <strong>etiqueta</strong>— con una <abbr title="Telecommunications Outlet">TO</abbr> del área de trabajo. De ese modo, cambiar un puesto es cambiar un latiguillo en el frontal, no abrir la canaleta.</p>
+<p>Lo habitual son <strong>24</strong> o <strong>48</strong> puertos RJ‑45 en 1–2 U. También hay cajones de <strong>fibra</strong>. En la parte trasera, las regletas IDC usan el mismo código de colores que al crimpar el RJ‑45.</p>
+<p><strong>Ejemplo.</strong> El puerto 12 del panel corresponde a la mesa 12, y el latiguillo 12 va al puerto 12 del switch. Si las etiquetas se cruzan, un ping fallido ya no se puede diagnosticar con método.</p>
+<figure>
+  <img alt="Código de colores del patch panel" src="../img/codigoColoresPatchPanel.png" width="500" />
+<br />
+<figcaption>Detalle trasero: numeración y código de colores.</figcaption>
+</figure>
+<hr />
+<h2 id="tomas-de-usuario-latiguillos-y-guiado">Tomas de usuario, latiguillos y guiado<a class="headerlink" href="#tomas-de-usuario-latiguillos-y-guiado" title="Permanent link">&para;</a></h2>
+<h3 id="toma-de-usuario-o-to-roseta">Toma de usuario o <abbr title="Telecommunications Outlet">TO</abbr> (roseta)<a class="headerlink" href="#toma-de-usuario-o-to-roseta" title="Permanent link">&para;</a></h3>
+<p>La <strong>toma de usuario</strong> o <strong><a href="#to"><abbr title="Telecommunications Outlet">TO</abbr></a></strong> (<em>Telecommunications Outlet</em>), también llamada <strong>roseta</strong>, es el punto de conexión del puesto: una o más hembras RJ‑45 (datos, voz y, si hay previsión, reserva). A partir de aquí, en el tema se usa <strong><abbr title="Telecommunications Outlet">TO</abbr></strong>. Tipos habituales:</p>
+<ul>
+<li><strong>superficie</strong> (canaleta), frecuente en aulas reformadas;</li>
+<li><strong>empotrable</strong>, en obra nueva;</li>
+<li><strong>suelo técnico</strong>, en salas de informática o CPD.</li>
+</ul>
+<p>La norma recomienda <strong>tres tomas</strong> por puesto (voz, datos y reserva) y un área de trabajo tipo de unos <strong>10 m²</strong>. El latiguillo entre el equipo y la <abbr title="Telecommunications Outlet">TO</abbr> no debe superar <strong>5 m</strong> y ha de ser de la misma categoría que el tendido permanente. Si el latiguillo es más largo o de categoría inferior, el canal deja de cumplir la certificación aunque el UTP de la pared sea correcto.</p>
+<h3 id="latiguillos">Latiguillos<a class="headerlink" href="#latiguillos" title="Permanent link">&para;</a></h3>
+<p>Los <strong>latiguillos</strong> son cables cortos con RJ‑45 en ambos extremos. Hay dos usos que no se mezclan: el del puesto (equipo ↔ <abbr title="Telecommunications Outlet">TO</abbr>) y el de parcheo (panel ↔ switch). Las longitudes comerciales habituales son 0,5 m, 1 m y 2 m. A partir de Cat. 6, muchos pliegos piden latiguillos <strong>certificados de fábrica</strong>. El de <strong>PR201</strong> sirve para practicar el crimpado; no siempre vale como material de obra.</p>
+<h3 id="soportes-de-guiado">Soportes de guiado<a class="headerlink" href="#soportes-de-guiado" title="Permanent link">&para;</a></h3>
+<p>El tendido horizontal no se deja suelto: va por un soporte que lo protege, respeta el radio de curvatura y permite ampliar. Canaletas y tubos recorren paredes y suelos; las bandejas llevan mazos por techo o suelo técnico; las guías ordenan el interior del rack; el <strong>pasahilos</strong> (1 U) peina los latiguillos del frontal para que no tapen los LED del switch.</p>
+<table>
+<thead>
+<tr>
+<th>Elemento</th>
+<th>Función</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Canalizaciones</strong></td>
+<td>Tubos / canaletas por paredes y suelos</td>
+</tr>
+<tr>
+<td><strong>Bandejas</strong></td>
+<td>Mazos en techo o suelo técnico</td>
+</tr>
+<tr>
+<td><strong>Guías de cable</strong></td>
+<td>Orden en el rack</td>
+</tr>
+<tr>
+<td><strong>Pasahilos</strong></td>
+<td>1 U para peinar latiguillos</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Ejemplo.</strong> En el armario del taller, sin pasahilos los latiguillos cubren los LED del switch y no se ve qué puerto está caído.</p>
+<figure>
+  <img alt="Canalizaciones para cableado de red" src="../img/canalizaciones.png" width="400" />
+<br />
+<figcaption>Canalizaciones para cableado de red.</figcaption>
+</figure>
+<figure>
+  <img alt="Bandejas de guiado" src="../img/bandejas_guiado.png" width="400" />
+<br />
+<figcaption>Bandejas de guiado (horizontal / vertical).</figcaption>
+</figure>
+<figure>
+  <img alt="Guías de cable en el rack" src="../img/GuiasCable.png" width="400" />
+<br />
+<figcaption>Guías en el rack.</figcaption>
+</figure>
+<figure>
+  <img alt="Pasahilos de 1 U" src="../img/PasaHilos.png" width="400" />
+<br />
+<figcaption>Pasahilos (1 U).</figcaption>
+</figure>
+<div class="admonition tip">
+<p class="admonition-title">Etiquetado</p>
+<p>Sin una correspondencia clara entre <abbr title="Telecommunications Outlet">TO</abbr>, panel y puerto del switch, cualquier avería o cambio de puesto obliga a rastrear los cables uno a uno. Es criterio de calidad (<strong>CE2i</strong>). La familia <strong>TIA‑606</strong> trata precisamente la administración y el etiquetado.</p>
+</div>
+<hr />
+<h2 id="electronica-de-red">Electrónica de red<a class="headerlink" href="#electronica-de-red" title="Permanent link">&para;</a></h2>
+<p>La <strong>electrónica de red</strong> es el conjunto de equipos que regeneran, concentran, conmutan o encaminan el tráfico. Suele ir en el rack; el punto de acceso, en techo o pared, con alimentación por <abbr title="Power over Ethernet">PoE</abbr> o por la red eléctrica.</p>
+<p>El <strong>repetidor</strong> solo regenera la señal (capa 1) y <strong>no</strong> divide el dominio de colisión. El <strong>hub</strong> reparte la señal a todos los puertos; hoy se usa en laboratorio. El <strong>switch</strong> reenvía por dirección MAC. El <strong>router</strong> une redes distintas. El <strong>gateway</strong> es la puerta hacia otra red o protocolo y a menudo incluye filtrado. El <strong><abbr title="Access Point">AP</abbr></strong> extiende la LAN por Wi‑Fi.</p>
+<p>La tabla siguiente resume la capa y la función de cada equipo.</p>
+<table>
+<thead>
+<tr>
+<th>Dispositivo</th>
+<th>Capa OSI</th>
+<th>Idea clave</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Repetidor</strong></td>
+<td>1</td>
+<td>Regenera la señal; no divide colisión</td>
+</tr>
+<tr>
+<td><strong>Hub</strong></td>
+<td>1</td>
+<td>Replica a todos los puertos (laboratorio)</td>
+</tr>
+<tr>
+<td><strong>Switch</strong></td>
+<td>2</td>
+<td>Reenvía por MAC; reduce colisiones</td>
+</tr>
+<tr>
+<td><strong>Router</strong></td>
+<td>3</td>
+<td>Une redes distintas (IP)</td>
+</tr>
+<tr>
+<td><strong>Gateway</strong></td>
+<td>varias</td>
+<td>Frontera / traducción / seguridad</td>
+</tr>
+<tr>
+<td><strong><abbr title="Access Point">AP</abbr></strong></td>
+<td>1–2</td>
+<td>Extiende la LAN por Wi‑Fi</td>
+</tr>
+</tbody>
+</table>
+<figure>
+  <img alt="Hub Ethernet de laboratorio" src="../img/hub_ethernet_legacy.jpg" width="480" />
+<br />
+<figcaption>Hub Ethernet (uso residual / laboratorio).</figcaption>
+</figure>
+<h3 id="switch-lo-habitual-en-lan">Switch (lo habitual en LAN)<a class="headerlink" href="#switch-lo-habitual-en-lan" title="Permanent link">&para;</a></h3>
+<p>El <strong>switch</strong> es el equipo que concentra la LAN de un aula o de una planta: cada puesto llega a un puerto y el tráfico se reenvía según la dirección <strong>MAC</strong> de destino, no según la IP. Frente al <strong>hub</strong> de la <a href="#electronica-de-red">tabla de dispositivos</a>, que replica la trama a todos los puertos y deja un solo dominio de colisión, el switch abre un dominio de colisión por puerto y trabaja en <strong>full‑dúplex</strong>. Esa diferencia ya se contó en el <a href="../01-introduccion-arquitectura/tema1.html#dominios-colision-difusion">Tema 1, dominios de colisión y de difusión</a>: en un enlace PC–switch moderno no hay colisión porque cada sentido tiene su canal. El hub queda para el laboratorio; en el armario del taller lo que se monta es el switch (<strong>CE3d</strong>, <strong>PR301</strong>).</p>
+<p>Al arrancar, la tabla MAC (también llamada <strong>CAM</strong>, <em>Content Addressable Memory</em>) está vacía. Cuando un PC envía una trama, el switch anota «esta MAC se ve en este puerto». Si ya conoce el puerto del destino, <strong>reenvía</strong> solo por ahí. Si no lo conoce, <strong>inunda</strong>: copia la trama a todos los puertos menos al de entrada, igual que hace con las tramas de <strong>difusión</strong> (broadcast, por ejemplo <code>FF:FF:FF:FF:FF:FF</code>). Por eso el switch <strong>no</strong> corta el dominio de difusión: eso lo hace el router (o, más adelante, las VLAN).</p>
+<figure>
+  <img alt="Cuatro PC unidos a un switch y la tabla MAC con puerto y dirección" src="../img/t3-switch-tabla-mac.svg" width="780" />
+<br />
+<figcaption>Aprendizaje de MAC: cada puerto queda asociado a la dirección que el switch ha visto en él. Las MAC del dibujo son de laboratorio.</figcaption>
+</figure>
+<p>Los puertos habituales en cobre son <strong>RJ‑45</strong> a 10/100/1000 Mb/s (a veces multi‑gig). Para el backbone o para unirse a otro armario se usan módulos <strong>SFP</strong> o <strong>SFP+</strong> (fibra, o cobre en algunos transceptores). El puerto de <strong>consola</strong> sirve para configurar el equipo por cable serie o USB, sin pasar por la red. Un switch <strong>no gestionable</strong> no pide configuración: se enchufa y conmuta. Uno <strong>gestionable</strong> permite VLAN, QoS o SNMP; las <strong>VLAN</strong> se estudian en el <a href="../06-enrutamiento-subnetting-vlans/tema6.html">Tema 6</a>, aquí solo interesa saber que el modelo del rack puede tenerlas. Por forma hay switches de <strong>escritorio</strong> (pocos puertos, para un aula pequeña) y de <strong>rack 1 U</strong> (24 o 48 puertos, atornillados a los bastidores de 19″). <strong><a href="#poe"><abbr title="Power over Ethernet">PoE</abbr></a></strong> (<em>Power over Ethernet</em>) alimenta <abbr title="Access Point">AP</abbr>, cámaras IP y teléfonos por el mismo UTP, de modo que al techo llega un solo cable.</p>
+<p><strong>Ejemplo del taller.</strong> El switch del armario didáctico se atornilla a 1 U, se etiqueta y se une al panel con latiguillos cortos. Un puerto (o un SFP, si el equipo lo tiene) hace de <strong>uplink</strong> hacia el router o hacia el switch de edificio: por ahí sale el aula. Si ese uplink está caído, pinguean entre sí los PC del tramo y no sale nada hacia otras redes.</p>
+<figure>
+  <img alt="Frontal de switches Ethernet rackeables y paneles de parcheo en un armario de 19 pulgadas" src="../img/t3-foto-switch-rack.jpg" width="640" />
+<br />
+<figcaption>Switches Gigabit rackeables y paneles de parcheo en un armario de 19″. Foto: <a href="https://commons.wikimedia.org/wiki/File:19-inch_rackmount_Ethernet_switches_and_patch_panels.jpg">Dsimic</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.es">CC BY-SA 4.0</a>, Wikimedia Commons.</figcaption>
+</figure>
+<h3 id="router-y-gateway">Router y gateway<a class="headerlink" href="#router-y-gateway" title="Permanent link">&para;</a></h3>
+<p>El <strong>router</strong> une <strong>redes distintas</strong>. El switch reenvía por MAC dentro de la misma LAN; el router mira la <strong>dirección IP</strong> de destino y consulta su <strong>tabla de rutas</strong> para elegir la interfaz de salida. En el PC, esa salida se llama <strong>puerta de enlace</strong> (<em>default gateway</em>): es la IP LAN del router. Sin ella, el equipo habla con los vecinos de su red y no con Internet.</p>
+<p>Las interfaces que hay que reconocer en el taller son tres. La <strong>LAN</strong> mira hacia el switch del aula (por ejemplo <code>192.168.10.1/24</code> en un ejemplo de laboratorio). La <strong>WAN</strong> mira hacia el proveedor. La <strong>consola</strong> sirve para entrar al equipo aunque la red esté caída. En el borde del edificio el mismo aparato suele hacer <strong>NAT</strong> (los PC salen con una dirección pública compartida) y, a veces, <strong>DHCP</strong> (reparte IP, máscara y puerta de enlace). El <strong>gateway</strong> es esa puerta hacia otra red o protocolo; un <strong>cortafuegos</strong> añade filtrado (qué entra y qué sale). Pueden ser el mismo chasis o dos equipos en cascada: primero se encamina, después se filtra, o al revés según el diseño.</p>
+<figure>
+  <img alt="Aula con switch, router con interfaces LAN y WAN, y salida al proveedor" src="../img/t3-router-interfaces.svg" width="820" />
+<br />
+<figcaption>Aula → switch → router/gateway → proveedor. LAN, WAN y consola; NAT y DHCP en el borde. Direcciones de ejemplo, no del centro.</figcaption>
+</figure>
+<figure>
+  <img alt="Salida genérica de ipconfig y de ip route con puerta de enlace de laboratorio" src="../img/t3-ipconfig-generico.svg" width="820" />
+<br />
+<figcaption>La puerta de enlace del PC (192.168.10.1 en el ejemplo) es la IP LAN del router. Captura genérica, sin datos del centro.</figcaption>
+</figure>
+<p><strong>Ejemplo.</strong> El tráfico de un aula sube al switch del rack, de ahí al router o cortafuegos del edificio y, por último, al proveedor. Si el switch está bien y el router no tiene ruta por defecto, el ping entre mesas funciona y el ping a un servidor de Internet no.</p>
+<h3 id="punto-de-acceso-ap">Punto de acceso (<a href="#ap"><abbr title="Access Point">AP</abbr></a>)<a class="headerlink" href="#punto-de-acceso-ap" title="Permanent link">&para;</a></h3>
+<p>El <strong><abbr title="Access Point">AP</abbr></strong> (<em>Access Point</em>) enlaza clientes Wi‑Fi con la red cableada. Los hay de interior y de exterior; muchos se alimentan por <abbr title="Power over Ethernet">PoE</abbr>. Para el examen y para <strong>PR305</strong> hay que distinguir modos (<strong>CE4b</strong>), no solo «poner Wi‑Fi».</p>
+<table>
+<thead>
+<tr>
+<th>Modo</th>
+<th>Qué hace</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong><abbr title="Access Point">AP</abbr> (infraestructura)</strong></td>
+<td>Los clientes se asocian a él; él puentea hacia el switch</td>
+</tr>
+<tr>
+<td><strong>Repetidor</strong></td>
+<td>Recibe un Wi‑Fi y lo vuelve a emitir (se reduce el caudal útil)</td>
+</tr>
+<tr>
+<td><strong>Cliente / estación</strong></td>
+<td>El <abbr title="Access Point">AP</abbr> se comporta como una <abbr title="Network Interface Card">NIC</abbr> Wi‑Fi hacia otro <abbr title="Access Point">AP</abbr></td>
+</tr>
+<tr>
+<td><strong>Bridge</strong></td>
+<td>Une dos redes cableadas por un enlace Wi‑Fi</td>
+</tr>
+</tbody>
+</table>
+<p>Los parámetros básicos (<strong>CE4d</strong>) son el <strong><abbr title="Service Set Identifier">SSID</abbr></strong> (nombre de la red), el <strong>canal</strong> y la banda (2,4 GHz o 5 GHz) y la potencia. En seguridad (<strong>CE4i</strong>) se usa <strong>WPA2</strong> o <strong>WPA3</strong> con una clave no trivial. WEP y las redes abiertas no se usan en el taller salvo que se pida expresamente para una prueba.</p>
+<figure>
+  <img alt="Punto de acceso para interiores" src="../img/ap_unifi_ac_lite.jpg" width="480" />
+<br />
+<figcaption>Punto de acceso para interiores.</figcaption>
+</figure>
+<div class="admonition note">
+<p class="admonition-title">Para la certificación CCNA</p>
+<p>En campus grandes el <abbr title="Access Point">AP</abbr> ligero lo gestiona un <strong>WLC</strong> (<em>Wireless LAN Controller</em>) con CAPWAP. En el taller usamos <abbr title="Access Point">AP</abbr> <strong>autónomos</strong>, cada uno con su propia configuración web. El CCNA pregunta las dos ideas; en el examen del módulo cuenta el <abbr title="Access Point">AP</abbr> que se monta en <strong>PR305</strong>.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Errores frecuentes</p>
+<p>Confundir <strong>switch</strong> y <strong>router</strong>. Poner el <abbr title="Access Point">AP</abbr> en el mismo canal que el aula contigua (interferencia). Configurar WPA2 con una clave trivial y dar por resuelta la seguridad.</p>
+</div>
+<hr />
+<h2 id="normas-y-distancias">Normas y distancias<a class="headerlink" href="#normas-y-distancias" title="Permanent link">&para;</a></h2>
+<p>Las normas no son un adorno del temario: fijan distancias, espacios y cómo se etiqueta para que otra persona pueda mantener la instalación. La familia útil es <strong>TIA‑568</strong> (cableado), <strong>569</strong> (espacios y canalizaciones), <strong>606</strong> (etiquetado) y <strong>607</strong> (tierra), con equivalente <strong>ISO/IEC 11801</strong>. TIA‑570 se cita en vivienda y TIA‑942 en centros de datos; no hace falta memorizarlas.</p>
+<h3 id="bloques-funcionales">Bloques funcionales<a class="headerlink" href="#bloques-funcionales" title="Permanent link">&para;</a></h3>
+<p>La norma divide la instalación en cuatro bloques, del puesto de trabajo hacia fuera:</p>
+<ol>
+<li><strong>Área de trabajo:</strong> puestos, <abbr title="Telecommunications Outlet">TO</abbr> y latiguillo corto (hasta 5 m).</li>
+<li><strong>Horizontal:</strong> <abbr title="Telecommunications Outlet">TO</abbr> ↔ panel del <strong><a href="#fd"><abbr title="Floor Distributor">FD</abbr></a></strong> (distribuidor de planta).</li>
+<li><strong>Backbone (vertical):</strong> planta ↔ <strong><a href="#bd"><abbr title="Building Distributor">BD</abbr></a></strong> (distribuidor de edificio), a menudo en fibra.</li>
+<li><strong>Campus:</strong> edificios ↔ <strong><a href="#cd"><abbr title="Campus Distributor">CD</abbr></a></strong>, normalmente en fibra.</li>
+</ol>
+<p>En el horizontal puede haber un <strong>punto de consolidación</strong> (a no menos de 15 m del <abbr title="Floor Distributor">FD</abbr>) cuando las mesas se reorganizan con frecuencia.</p>
+<h3 id="distancias-orientativas-cobre">Distancias orientativas (cobre)<a class="headerlink" href="#distancias-orientativas-cobre" title="Permanent link">&para;</a></h3>
+<p>El canal Ethernet de cobre son <strong>100 m</strong>: <strong>90 m</strong> de enlace permanente (<abbr title="Telecommunications Outlet">TO</abbr> ↔ panel) más unos <strong>10 m</strong> de latiguillos (hasta 5 m en cada extremo). Superar esa cifra no es «un poco más de cable»: deja de cumplirse la certificación y el enlace suele degradarse.</p>
+<table>
+<thead>
+<tr>
+<th>Tramo</th>
+<th>Límite habitual</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Horizontal (<abbr title="Telecommunications Outlet">TO</abbr> ↔ panel)</td>
+<td><strong>90 m</strong> de cable permanente</td>
+</tr>
+<tr>
+<td>Latiguillos (ambos extremos)</td>
+<td>hasta ~5 m + ~5 m → <strong>100 m</strong> de canal</td>
+</tr>
+<tr>
+<td>Equipo ↔ <abbr title="Telecommunications Outlet">TO</abbr></td>
+<td>latiguillo corto (p. ej. ≤ 5 m)</td>
+</tr>
+</tbody>
+</table>
+<figure>
+  <img alt="Equipo unido a la TO con un latiguillo de 5 metros como máximo" src="../img/t3-distancia-puesto-to.svg" width="760" />
+<br />
+<figcaption>Área de trabajo: el latiguillo entre el equipo y la TO no supera 5 m y es de la misma categoría que el tendido permanente.</figcaption>
+</figure>
+<figure>
+  <img alt="Canal de cobre de 100 metros: latiguillos más 90 metros de enlace permanente" src="../img/t3-canal-100m.svg" width="820" />
+<br />
+<figcaption>Canal Ethernet de cobre = 100 m: hasta 5 m + 90 m de enlace permanente (TO ↔ panel) + hasta 5 m. El punto de consolidación es opcional.</figcaption>
+</figure>
+<figure>
+  <img alt="Distribuidores FD, BD y CD unidos por backbone de cobre o fibra" src="../img/t3-backbone-campus.svg" width="800" />
+<br />
+<figcaption>Backbone y campus: FD (planta) → BD (edificio) → CD (campus). El cobre cubre tramos cortos; la fibra, distancias mayores.</figcaption>
+</figure>
+<p>Con <strong>fibra</strong>, backbone y campus cubren cientos de metros o kilómetros según el tipo, como se vio en el Tema 2.</p>
+<h3 id="tierra-vision-breve">Tierra (visión breve)<a class="headerlink" href="#tierra-vision-breve" title="Permanent link">&para;</a></h3>
+<p><strong>TIA‑607</strong> pide una tierra de telecomunicaciones: barra principal en el <abbr title="Building Distributor">BD</abbr>, barras en cada sala y conductores a cada rack (verde o verde‑amarillo). Esa tierra no es un adorno del armario: protege a las <strong>personas</strong> si un equipo tiene un fallo de aislamiento, da un camino a las <strong>descargas</strong> (estática o sobretensión) y reduce el <strong>ruido</strong> eléctrico que acopla a los pares de datos. En el taller no se deja el armario sin conexión a tierra si el puesto la tiene, ni se improvisan puentes con el cable de datos: el UTP no es conductor de protección.</p>
+<figure>
+  <img alt="Rack con barra de tierra unida a la barra de sala y a la barra principal del edificio" src="../img/t3-tierra-rack.svg" width="720" />
+<br />
+<figcaption>Tierra de telecomunicaciones: el chasis del rack se une a la barra de sala y, desde ahí, a la barra principal del edificio (TIA‑607).</figcaption>
+</figure>
+<div class="admonition warning">
+<p class="admonition-title">Errores frecuentes</p>
+<p>Tender 110 m de UTP «porque Cat. 6 aguanta». La norma del canal son 100 m; a partir de ahí fallan la certificación y, a menudo, el enlace. Otro error: 90 m de horizontal <strong>más</strong> un latiguillo de 15 m.</p>
+</div>
+<hr />
+<h2 id="redes-ftthgpon">Redes FTTH/GPON<a class="headerlink" href="#redes-ftthgpon" title="Permanent link">&para;</a></h2>
+<p>La <strong>fibra hasta el hogar</strong> (<strong><a href="#ftth">FTTH</a></strong>, <em>Fiber To The Home</em>) lleva la fibra óptica hasta el domicilio del abonado. Sustituye al coaxial de la acometida y a la red híbrida de fibra y coaxial (<strong>HFC</strong>, <em>Hybrid Fiber-Coaxial</em>), en la que la fibra acaba en un nodo de calle y el último tramo sigue siendo coaxial, con amplificadores que hay que alimentar y ajustar. El medio de una FTTH es la fibra monomodo del <a href="../02-medios-capa-fisica/tema2.html#multimodo-mm-y-monomodo-sm">Tema 2</a>: un solo modo de luz y distancias de kilómetros.</p>
+<p>La planta exterior no lleva equipos activos. Los divisores solo parten la luz, así que no necesitan alimentación eléctrica ni ajustes de nivel. Al eliminar el cobre y esa alimentación desaparece una fuente habitual de averías del coaxial. El alcance también cambia: la UIT-T G.984.2 contempla hasta <strong>20 km</strong> de fibra entre la central y el abonado. La distancia que de verdad se alcanza depende de las pérdidas; el ejemplo 2 hace esa cuenta. Con coaxial, de forma orientativa, el tramo útil se queda en unos <strong>2 km</strong> en el mejor de los casos. La fibra admite más velocidad: en GPON, la bajada de referencia es de <strong>2,5 Gbit/s</strong> y la subida de <strong>1,25 Gbit/s</strong>, compartidas por los abonados de un mismo árbol. La evolución <strong>XGS-PON</strong> (<em>10-Gigabit-capable Symmetric Passive Optical Network</em>, UIT-T G.9807.1) llega a <strong>10 Gbit/s</strong> en los dos sentidos y conserva la misma planta pasiva.</p>
+<p>Esa arquitectura se llama <strong><a href="#gpon">GPON</a></strong> (<em>Gigabit-capable Passive Optical Network</em>, red óptica pasiva con capacidad de gigabit) y está descrita en la UIT-T G.984. De la central a la casa intervienen cuatro piezas:</p>
+<ol>
+<li>La <strong><a href="#olt">OLT</a></strong> (<em>Optical Line Terminal</em>, terminal de línea óptica) está en la central. Genera la señal de bajada, recibe la de subida y asigna el turno de cada abonado.</li>
+<li>La <strong>red de distribución óptica</strong> es el conjunto de fibras y cajas que hay entre la OLT y el domicilio. En las <strong>cajas de distribución</strong> y en las <strong>cajas terminales</strong> o finales se colocan los <strong><a href="#divisor-optico">divisores ópticos</a></strong> pasivos, con relaciones <strong>1:8</strong>, <strong>1:16</strong>, <strong>1:32</strong> o <strong>1:64</strong>. El reparto puede hacerse en un solo divisor o en dos escalones, uno en cada caja.</li>
+<li>La <strong>acometida</strong> es el último tramo de fibra, desde la caja final hasta el domicilio.</li>
+<li>La <strong><a href="#ont">ONT</a></strong> (<em>Optical Network Terminal</em>, terminal de red óptica) está en casa del abonado. La norma llama ONU (<em>Optical Network Unit</em>, unidad de red óptica) al equipo de usuario en general; en FTTH ese equipo es la ONT, y de ella salen <strong>internet</strong>, <strong>telefonía</strong> y <strong>televisión</strong>.</li>
+</ol>
+<p>En el taller hay un panel con estas piezas montadas, que se trabajará en la sesión práctica.</p>
+<figure>
+  <img alt="Panel de prácticas FTTH montado en el taller, con cajas de empalme y distribución, caja terminal con divisor, roseta óptica y equipos de usuario" src="../img/t3-gpon-panel-taller.jpg" width="500" />
+<br />
+<figcaption>Panel de prácticas FTTH del taller. Arriba, las cajas de planta exterior; a la izquierda, la caja terminal abierta con el divisor; en el centro, la roseta óptica y el equipo de usuario. Foto: Departamento de Informática.</figcaption>
+</figure>
+<p>Los dos sentidos viajan por <strong>una sola fibra</strong>, separados por longitud de onda (multiplexación <strong>WDM</strong>, <em>Wavelength Division Multiplexing</em>). La bajada va a <strong>1490 nm</strong>, la subida a <strong>1310 nm</strong> y, cuando la red superpone vídeo de radiofrecuencia (RF), ese canal va a <strong>1550 nm</strong> junto con la bajada. Si la televisión va por IP, la longitud de 1550 nm puede no usarse. La bajada es de <strong>difusión</strong>: el divisor copia la misma luz hacia todas las ONT y cada una se queda con sus datos. La subida usa acceso múltiple por división en el tiempo (<strong>TDMA</strong>, <em>Time Division Multiple Access</em>): la OLT concede un turno a cada ONT para que no emitan a la vez sobre la fibra que comparten.</p>
+<h3 id="ejemplo-1-recorrido-de-la-senal">Ejemplo 1. Recorrido de la señal<a class="headerlink" href="#ejemplo-1-recorrido-de-la-senal" title="Permanent link">&para;</a></h3>
+<p>La OLT inyecta la bajada a 1490 nm en la fibra que sale de la central. En la caja de distribución, el divisor pasivo reparte esa luz entre varias fibras. Una de ellas llega a la caja final del edificio o de la calle, y desde ahí la acometida entra en el domicilio hasta la ONT. La ONT convierte la luz en internet, telefonía y televisión. A la vuelta, la ONT transmite a 1310 nm solo durante su turno; el mismo divisor junta las subidas y las devuelve a la OLT. El resto de salidas del divisor llevan la misma bajada a otros abonados.</p>
+<figure>
+  <img alt="Recorrido GPON desde la OLT de la central, por el divisor pasivo y la caja final, hasta la ONT y los servicios de internet, telefonía y televisión" src="../img/t3-gpon-recorrido.svg" width="900" />
+<br />
+<figcaption>Ejemplo de recorrido. Una sola fibra lleva la bajada (1490 nm), la subida (1310 nm) y, si se usa, el vídeo RF (1550 nm). El divisor no se alimenta y copia la bajada hacia cada abonado.</figcaption>
+</figure>
+<h3 id="ejemplo-2-calculo-sencillo-de-perdidas">Ejemplo 2. Cálculo sencillo de pérdidas<a class="headerlink" href="#ejemplo-2-calculo-sencillo-de-perdidas" title="Permanent link">&para;</a></h3>
+<p>Casi todo el margen se lo queda el divisor. En este ejemplo, la fibra, las fusiones y los conectores se cuentan con cifras <strong>orientativas de proyecto</strong>; el intervalo de la clase B+ sí lo fija la norma. Un divisor <strong>1:32</strong> se toma a <strong>17 dB</strong>, valor típico de catálogo: solo repartir la luz entre 32 salidas ya ronda los 15 dB, y el divisor real añade un poco más. La fibra de planta se toma a <strong>0,35 dB/km</strong> a <strong>1310 nm</strong>, por debajo del máximo de <strong>0,4 dB/km</strong> que la UIT-T G.652 asigna a la fibra monomodo de cable en esa longitud. Cada fusión bien hecha se cuenta a <strong>0,1 dB</strong> y cada conector a <strong>0,5 dB</strong>.</p>
+<p>Se calcula la <strong>subida</strong>, a 1310 nm, porque ahí la fibra atenúa más que a 1490 nm. El enlace del ejemplo tiene <strong>8 km</strong>, un solo divisor 1:32, <strong>cuatro fusiones</strong> y <strong>cuatro conectores</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Concepto</th>
+<th>Cálculo</th>
+<th>Pérdida</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Divisor óptico 1:32</td>
+<td>valor típico</td>
+<td>17 dB</td>
+</tr>
+<tr>
+<td>Fibra de planta, 8 km a 1310 nm</td>
+<td>8 × 0,35 dB/km</td>
+<td>2,8 dB</td>
+</tr>
+<tr>
+<td>4 fusiones bien hechas</td>
+<td>4 × 0,1 dB</td>
+<td>0,4 dB</td>
+</tr>
+<tr>
+<td>4 conectores</td>
+<td>4 × 0,5 dB</td>
+<td>2,0 dB</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td></td>
+<td><strong>22,2 dB</strong></td>
+</tr>
+</tbody>
+</table>
+<p>La clase <strong>B+</strong> admite entre <strong>13 dB</strong> y <strong>28 dB</strong> de pérdida, tanto a 1490 nm como a 1310 nm (UIT-T G.984.2, anexo A, tabla A.2). Por debajo de 13 dB llega demasiada potencia y el receptor puede saturarse; por encima de 28 dB la señal ya no basta. El total de 22,2 dB entra en ese intervalo: el enlace funciona. Hasta el máximo quedan <strong>5,8 dB</strong> de margen (28 − 22,2).</p>
+<p>Ese margen es el que se trabaja en el <a href="#empalme-por-fusion-vision-de-taller">empalme por fusión</a>. Si las cuatro fusiones quedaran en 1 dB en lugar de 0,1 dB, aportarían 4 dB en vez de 0,4 dB y el total pasaría a <strong>25,8 dB</strong>. El enlace seguiría dentro, pero el margen bajaría a 2,2 dB. Unos empalmes defectuosos de más sacan el enlace de los 28 dB y la ONT deja de recibir nivel suficiente.</p>
+<div class="admonition warning">
+<p class="admonition-title">Errores frecuentes</p>
+<p>Invertir bajada y subida: a 1490 nm la señal llega a todas las ONT; a 1310 nm cada ONT espera su turno. Tratar el divisor como un amplificador de coaxial: no se alimenta y no se ajusta. Sumar dos divisores cuando el reparto del ejemplo es uno solo. Dar por buena una fusión deficiente porque aún se mide algo de luz: cada décima de más sale del margen de 28 dB.</p>
+</div>
+<hr />
+<h2 id="empalme-por-fusion-vision-de-taller">Empalme por fusión (visión de taller)<a class="headerlink" href="#empalme-por-fusion-vision-de-taller" title="Permanent link">&para;</a></h2>
+<p>En fibra, el <strong>empalme por fusión</strong> une dos núcleos fundiéndolos con un arco eléctrico controlado (<strong>fusionadora</strong>). No es un crimpado de RJ‑45: un corte sucio o una fibra sucia deja el enlace inservible. En el taller se trabaja, por este orden, la preparación (pelado, limpieza, corte con <strong>cleaver</strong>), la fusión, el protector termorretráctil y una comprobación básica (continuidad o potencia, según el equipo).</p>
+<figure>
+  <img alt="Secuencia pelado, limpieza, corte, fusión, protector y comprobación" src="../img/t3-proceso-fusion.svg" width="860" />
+<br />
+<figcaption>Secuencia de fusión en taller: pelado → limpieza → corte (cleaver) → fusión → protector → comprobación.</figcaption>
+</figure>
+<figure>
+  <img alt="Fusionadora de fibra óptica en uso de campo" src="../img/t3-foto-fusionadora.jpg" width="520" />
+<br />
+<figcaption>Fusionadora (Fujikura 70S) en un empalme de campo. Foto: <a href="https://commons.wikimedia.org/wiki/File:Fujikura-Fusion_Splicer_70S-01aASD.jpg">Asurnipal</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.es">CC BY-SA 4.0</a>, Wikimedia Commons.</figcaption>
+</figure>
+<figure>
+  <img alt="Cleaver para corte preciso de fibra óptica" src="../img/t3-foto-cleaver.jpg" width="480" />
+<br />
+<figcaption>Cleaver: corte preciso de la fibra antes de fusionar. Foto: <a href="https://commons.wikimedia.org/wiki/File:Obcinarka_do_swiatlowodow_pg_eti_2007.jpg">Vmario</a>, dominio público, Wikimedia Commons.</figcaption>
+</figure>
+<p>En <strong>PRL</strong> hacen falta gafas, no mirar el haz y recoger los restos de fibra en un recipiente específico: pinchan y apenas se ven.</p>
+<p>La práctica evaluable es <strong>PR304</strong>. El crimpado de cobre (conectores RJ‑45) ya se hizo en <strong>PR201</strong> (CE3c); aquí el mismo criterio se aplica a la fibra.</p>
+<hr />
+<h2 id="actividades">Actividades<a class="headerlink" href="#actividades" title="Permanent link">&para;</a></h2>
+<div class="admonition tip">
+<p class="admonition-title">Formato de entrega</p>
+<p>Las entregas en <strong>Aules</strong> son <strong>obligatorias en Markdown</strong> (<code>.md</code>). No se aceptan PDF.<br />
+Nombre del archivo: <code>AC3XX.md</code> o <code>PR3XX.md</code> (sustituye XX por el número). Respeta la fecha de vencimiento.<br />
+Escribiremos los <code>.md</code> con <strong>Visual Studio Code</strong>.</p>
+<div class="admonition note">
+<p class="admonition-title">Cómo empezar</p>
+<ul>
+<li>Guía de Markdown: <a href="https://tutorialmarkdown.com/guia">tutorialmarkdown.com/guia</a></li>
+<li>Documentación de Visual Studio Code: <a href="https://code.visualstudio.com/docs">code.visualstudio.com/docs</a></li>
+</ul>
+</div>
+</div>
+<h3 id="ac301-nic-comparativa">AC301 — <abbr title="Network Interface Card">NIC</abbr> comparativa<a class="headerlink" href="#ac301-nic-comparativa" title="Permanent link">&para;</a></h3>
+<ul>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.832 3.367 8.668.108a3.15 3.15 0 0 0-3.856 2.226L.943 16.777a3.15 3.15 0 0 0 2.226 3.856l12.163 3.259a3.15 3.15 0 0 0 3.855-2.226l3.87-14.443a3.15 3.15 0 0 0-2.226-3.856M6.332 2.741a1.574 1.574 0 0 1 1.928-1.113l12.163 3.26a1.574 1.574 0 0 1 1.113 1.927l-3.87 14.444a1.574 1.574 0 0 1-1.928 1.113l-12.163-3.26a1.574 1.574 0 0 1-1.113-1.927zm2.634 2.336a.787.787 0 1 0-.407 1.52l9.122 2.444a.787.787 0 1 0 .407-1.52zM6.985 9.434a.787.787 0 0 1 .963-.557l9.123 2.445a.787.787 0 0 1-.408 1.52l-9.122-2.444a.787.787 0 0 1-.556-.964m-.055 3.244a.787.787 0 0 0-.407 1.52l5.32 1.427a.787.787 0 0 0 .408-1.52z"/></svg></span> <strong>AC301</strong>. (RA3 // CE3b // RA4 // CE4a // <strong><abbr title="Actividad de clase">AC</abbr> 0–1</strong>). Tabla comparativa de <abbr title="Network Interface Card">NIC</abbr> (cableada / USB / Wi‑Fi): velocidades, dúplex, interfaz y uso típico. Incluye qué es la MAC.</li>
+</ul>
+<h3 id="ac302-armario-rack">AC302 — Armario / rack<a class="headerlink" href="#ac302-armario-rack" title="Permanent link">&para;</a></h3>
+<ul>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.832 3.367 8.668.108a3.15 3.15 0 0 0-3.856 2.226L.943 16.777a3.15 3.15 0 0 0 2.226 3.856l12.163 3.259a3.15 3.15 0 0 0 3.855-2.226l3.87-14.443a3.15 3.15 0 0 0-2.226-3.856M6.332 2.741a1.574 1.574 0 0 1 1.928-1.113l12.163 3.26a1.574 1.574 0 0 1 1.113 1.927l-3.87 14.444a1.574 1.574 0 0 1-1.928 1.113l-12.163-3.26a1.574 1.574 0 0 1-1.113-1.927zm2.634 2.336a.787.787 0 1 0-.407 1.52l9.122 2.444a.787.787 0 1 0 .407-1.52zM6.985 9.434a.787.787 0 0 1 .963-.557l9.123 2.445a.787.787 0 0 1-.408 1.52l-9.122-2.444a.787.787 0 0 1-.556-.964m-.055 3.244a.787.787 0 0 0-.407 1.52l5.32 1.427a.787.787 0 0 0 .408-1.52z"/></svg></span> <strong>AC302</strong>. (RA2 // CE2f // <strong><abbr title="Actividad de clase">AC</abbr> 0–1</strong>). Documenta estructura del rack 19″, unidades U, elementos internos (panel, electrónica, PDU, guías) y tipos según tamaño.</li>
+</ul>
+<h3 id="ac303-electronica-y-capas-osi">AC303 — Electrónica y capas OSI<a class="headerlink" href="#ac303-electronica-y-capas-osi" title="Permanent link">&para;</a></h3>
+<ul>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.832 3.367 8.668.108a3.15 3.15 0 0 0-3.856 2.226L.943 16.777a3.15 3.15 0 0 0 2.226 3.856l12.163 3.259a3.15 3.15 0 0 0 3.855-2.226l3.87-14.443a3.15 3.15 0 0 0-2.226-3.856M6.332 2.741a1.574 1.574 0 0 1 1.928-1.113l12.163 3.26a1.574 1.574 0 0 1 1.113 1.927l-3.87 14.444a1.574 1.574 0 0 1-1.928 1.113l-12.163-3.26a1.574 1.574 0 0 1-1.113-1.927zm2.634 2.336a.787.787 0 1 0-.407 1.52l9.122 2.444a.787.787 0 1 0 .407-1.52zM6.985 9.434a.787.787 0 0 1 .963-.557l9.123 2.445a.787.787 0 0 1-.408 1.52l-9.122-2.444a.787.787 0 0 1-.556-.964m-.055 3.244a.787.787 0 0 0-.407 1.52l5.32 1.427a.787.787 0 0 0 .408-1.52z"/></svg></span> <strong>AC303</strong>. (RA3 // CE3d // RA4 // CE4a, CE4b // <strong><abbr title="Actividad de clase">AC</abbr> 0–1</strong>). Tabla: hub, switch, router, gateway y <abbr title="Access Point">AP</abbr> — capa OSI, función, escenario de uso y una limitación de cada uno.</li>
+</ul>
+<h3 id="ac304-tomas-latiguillos-y-guiado">AC304 — Tomas, latiguillos y guiado<a class="headerlink" href="#ac304-tomas-latiguillos-y-guiado" title="Permanent link">&para;</a></h3>
+<ul>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.832 3.367 8.668.108a3.15 3.15 0 0 0-3.856 2.226L.943 16.777a3.15 3.15 0 0 0 2.226 3.856l12.163 3.259a3.15 3.15 0 0 0 3.855-2.226l3.87-14.443a3.15 3.15 0 0 0-2.226-3.856M6.332 2.741a1.574 1.574 0 0 1 1.928-1.113l12.163 3.26a1.574 1.574 0 0 1 1.113 1.927l-3.87 14.444a1.574 1.574 0 0 1-1.928 1.113l-12.163-3.26a1.574 1.574 0 0 1-1.113-1.927zm2.634 2.336a.787.787 0 1 0-.407 1.52l9.122 2.444a.787.787 0 1 0 .407-1.52zM6.985 9.434a.787.787 0 0 1 .963-.557l9.123 2.445a.787.787 0 0 1-.408 1.52l-9.122-2.444a.787.787 0 0 1-.556-.964m-.055 3.244a.787.787 0 0 0-.407 1.52l5.32 1.427a.787.787 0 0 0 .408-1.52z"/></svg></span> <strong>AC304</strong>. (RA2 // CE2d, CE2e, CE2g, CE2i // <strong><abbr title="Actividad de clase">AC</abbr> 0–1</strong>). Tipos de <abbr title="Telecommunications Outlet">TO</abbr>, uso de latiguillos, canalizaciones/bandejas/guías/pasahilos y buenas prácticas de etiquetado.</li>
+</ul>
+<h3 id="ac305-propuesta-electronica-centro-educativo">AC305 — Propuesta electrónica (centro educativo)<a class="headerlink" href="#ac305-propuesta-electronica-centro-educativo" title="Permanent link">&para;</a></h3>
+<ul>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.832 3.367 8.668.108a3.15 3.15 0 0 0-3.856 2.226L.943 16.777a3.15 3.15 0 0 0 2.226 3.856l12.163 3.259a3.15 3.15 0 0 0 3.855-2.226l3.87-14.443a3.15 3.15 0 0 0-2.226-3.856M6.332 2.741a1.574 1.574 0 0 1 1.928-1.113l12.163 3.26a1.574 1.574 0 0 1 1.113 1.927l-3.87 14.444a1.574 1.574 0 0 1-1.928 1.113l-12.163-3.26a1.574 1.574 0 0 1-1.113-1.927zm2.634 2.336a.787.787 0 1 0-.407 1.52l9.122 2.444a.787.787 0 1 0 .407-1.52zM6.985 9.434a.787.787 0 0 1 .963-.557l9.123 2.445a.787.787 0 0 1-.408 1.52l-9.122-2.444a.787.787 0 0 1-.556-.964m-.055 3.244a.787.787 0 0 0-.407 1.52l5.32 1.427a.787.787 0 0 0 .408-1.52z"/></svg></span> <strong>AC305</strong>. (RA3 // CE3a, CE3d // RA4 // CE4c // <strong><abbr title="Actividad de clase">AC</abbr> 0–1</strong>). Propón la electrónica para un centro con <strong>dos edificios</strong>: switches de armario, router de salida, gateway/firewall y <abbr title="Access Point">AP</abbr> interiores/exteriores. Diagrama en <a href="https://excalidraw.com/">Excalidraw</a>, <a href="https://app.diagrams.net/">draw.io</a> o <a href="https://wiki.gnome.org/Apps/Dia">Dia</a> + breve justificación en el <code>.md</code>.</li>
+</ul>
+<h3 id="pr301-taller-panel-tomas-armario-y-switch">PR301 — Taller: panel, tomas, armario y switch<a class="headerlink" href="#pr301-taller-panel-tomas-armario-y-switch" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Valor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Código</strong></td>
+<td><strong>PR301</strong></td>
+</tr>
+<tr>
+<td><strong>UP / tema</strong></td>
+<td>T3 — Cableado estructurado</td>
+</tr>
+<tr>
+<td><strong><abbr title="Resultado de aprendizaje">RA</abbr> principal</strong></td>
+<td><strong>RA2</strong> (despliegue) + <strong>RA3</strong> (interconexión). Apoyo <strong>RA4</strong></td>
+</tr>
+<tr>
+<td><strong><abbr title="Criterio de evaluación">CE</abbr> de cobertura</strong></td>
+<td>CE2d, CE2f, CE2g, CE2i, CE2j · CE3a, CE3d, CE3e, CE3f</td>
+</tr>
+<tr>
+<td><strong>Sesiones estimadas</strong></td>
+<td><strong>2</strong></td>
+</tr>
+<tr>
+<td><strong>Instrumento</strong></td>
+<td>Checklist de montaje + rúbrica 0–10</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5.563 1.396a.95.95 0 0 0-.534.184c-.404.307-.501.9-.425 1.654.075.755.335 1.704.751 2.8.357.937.835 1.984 1.407 3.095-1.17.146-2.24.338-3.158.57-1.08.274-1.958.6-2.583.973C.397 11.045 0 11.484 0 12s.397.955 1.021 1.328c.55.33 1.308.618 2.217.87a1 1 0 0 0-.006.097c0 .485.365.887.82.887.368 0 .678-.26.784-.616q.89.171 1.898.297a31 31 0 0 0-1.408 3.067c-.421 1.093-.686 2.04-.765 2.795-.08.754.016 1.347.42 1.656.201.154.46.208.734.181s.572-.125.896-.287c.649-.323 1.407-.894 2.244-1.67.962-.89 2.026-2.058 3.118-3.421 1.086 1.37 2.146 2.543 3.103 3.439.834.78 1.588 1.355 2.235 1.682.323.163.62.265.894.293s.534-.025.736-.178c.405-.307.502-.9.426-1.654-.054-.54-.206-1.18-.437-1.9a.91.91 0 0 0 .343-.72.92.92 0 0 0-.238-.625.8.8 0 0 0-.701-.251c-.312-.75-.69-1.557-1.125-2.4a27 27 0 0 0 3.187-.575c1.08-.273 1.958-.597 2.583-.97.624-.374 1.021-.813 1.021-1.329s-.397-.957-1.021-1.33c-.625-.373-1.503-.696-2.583-.969a27 27 0 0 0-3.156-.568 31 31 0 0 0 1.406-3.063c.422-1.093.687-2.04.766-2.795.08-.754-.017-1.347-.42-1.656a.95.95 0 0 0-.531-.185 1.3 1.3 0 0 0-.203.004c-.274.026-.57.127-.895.289-.51.254-1.092.665-1.722 1.205a.8.8 0 0 0-.418-.123c-.456 0-.82.4-.82.886q0 .178.06.334a35 35 0 0 0-2.465 2.791c-1.086-1.37-2.146-2.543-3.103-3.439-.834-.78-1.588-1.355-2.235-1.682-.323-.163-.62-.265-.894-.293a1.3 1.3 0 0 0-.204-.006zm.021.385a1 1 0 0 1 .143.004c.205.02.462.105.757.254.592.298 1.33.855 2.147 1.62.955.893 2.022 2.077 3.119 3.466-.428.544-.859 1.12-1.29 1.72a42 42 0 0 0-3.29.235 31 31 0 0 1-1.453-3.184c-.409-1.075-.658-2.002-.729-2.7-.07-.7.05-1.136.276-1.307a.55.55 0 0 1 .32-.108m12.854.033a.55.55 0 0 1 .32.108c.225.172.343.61.27 1.308s-.33 1.624-.743 2.698a31 31 0 0 1-1.455 3.15 42 42 0 0 0-3.312-.234 49 49 0 0 0-1.274-1.717 35 35 0 0 1 2.436-2.772.78.78 0 0 0 .543.223c.456 0 .82-.401.82-.887a.94.94 0 0 0-.133-.484c.61-.519 1.163-.909 1.625-1.139.297-.147.555-.23.76-.25a1 1 0 0 1 .142-.004zm-6.442 5.622c.344.443.69.913 1.035 1.394q-.51-.012-1.031-.014-.532.001-1.05.014c.35-.481.699-.95 1.046-1.394M12 9.203q.668.001 1.314.02.398.563.793 1.154c.366.55.71 1.093 1.041 1.633a54 54 0 0 1-1.046 1.623q-.395.584-.791 1.138-.646.02-1.311.022-.684-.001-1.348-.022a53 53 0 0 1-.789-1.148 52 52 0 0 1-1.04-1.633 53 53 0 0 1 1.84-2.765q.658-.02 1.337-.022m-1.824.04q-.315.444-.625.905c-.334.496-.647.988-.953 1.477a47 47 0 0 1-1.239-2.178 41 41 0 0 1 2.817-.205zm3.625 0a41 41 0 0 1 2.838.202 47 47 0 0 1-1.264 2.198 53 53 0 0 0-1.574-2.4m3.248.251c1.213.146 2.317.34 3.252.576 1.057.268 1.907.587 2.478.928s.834.689.834.998-.263.655-.834.996c-.57.342-1.421.662-2.478.93-.943.239-2.056.433-3.281.58a47 47 0 0 0-1.416-2.492 47 47 0 0 0 1.445-2.516M6.95 9.496c.424.805.899 1.64 1.418 2.494a47 47 0 0 0-1.443 2.508 30 30 0 0 1-2.059-.318.9.9 0 0 0-.23-.508.8.8 0 0 0-.584-.262.8.8 0 0 0-.696.418c-.894-.247-1.63-.53-2.136-.832C.65 12.655.387 12.31.387 12s.263-.654.834-.996c.57-.342 1.421-.662 2.478-.93.935-.237 2.039-.431 3.252-.578zm4.34.8c-.576 0-1.041.5-1.041 1.112 0 .484.29.897.695 1.049v.063c0 .612.466 1.109 1.041 1.109.576 0 1.041-.497 1.041-1.11q0-.025-.002-.05c.424-.141.73-.565.73-1.063 0-.294-.107-.575-.302-.783a1.01 1.01 0 0 0-.738-.326 1 1 0 0 0-.711.3 1 1 0 0 0-.713-.3zm-2.695 2.061a51 51 0 0 0 1.572 2.397c-.99-.04-1.941-.108-2.832-.205q.573-1.067 1.26-2.192m6.779.02c.448.743.862 1.472 1.236 2.176a42 42 0 0 1-2.814.199q.313-.443.625-.902c.333-.495.647-.986.953-1.473m-8.23 2.537c1.033.117 2.141.198 3.304.236.427.6.854 1.179 1.278 1.723-1.103 1.382-2.176 2.561-3.135 3.45-.821.76-1.562 1.31-2.155 1.605-.296.147-.554.23-.76.25s-.35-.018-.462-.104c-.225-.172-.343-.61-.27-1.308s.329-1.624.742-2.698c.366-.948.861-2.018 1.458-3.154m9.656.004c.459.884.854 1.727 1.178 2.504a.91.91 0 0 0-.348.724c0 .486.364.887.82.887a1 1 0 0 0 .123-.01c.218.686.36 1.293.408 1.782.07.698-.05 1.135-.275 1.306-.113.086-.258.124-.463.104s-.462-.105-.758-.254c-.59-.298-1.329-.855-2.146-1.62-.955-.893-2.023-2.077-3.12-3.466.43-.545.862-1.123 1.294-1.725a42 42 0 0 0 3.287-.232m-3.776.246a49 49 0 0 1-1.05 1.4 49 49 0 0 1-1.04-1.398 47 47 0 0 0 2.09-.002"/></svg></span> <strong>PR301</strong>. En el <strong>aula-taller</strong> (no solo simulación): montad y conexionad un tramo didáctico de cableado estructurado.</li>
+</ul>
+<p><strong>Enunciado (qué hace el alumno):</strong></p>
+<ol>
+<li>Preparar el <strong>armario / rack</strong> didáctico (orden, U libres, guiado, seguridad).</li>
+<li>Montar o completar <strong>panel de parcheo</strong> y, si el puesto lo permite, <strong>toma de usuario (<abbr title="Telecommunications Outlet">TO</abbr>)</strong> o equivalente didáctico.</li>
+<li>Instalar el <strong>switch</strong> en el armario (fijación, alimentación, etiquetado del equipo).</li>
+<li>Conexionar <strong>panel ↔ switch</strong> con latiguillos; etiquetar puertos según el plan del profesor.</li>
+<li>Verificar <strong>conectividad</strong> básica (enlace / ping entre dos puestos del tramo).</li>
+<li>Documentar el montaje (fotos + esquema de puertos).</li>
+</ol>
+<p><strong>Evidencia:</strong> fotos del rack (antes/después), etiquetado visible, checklist de montaje, prueba de conectividad, <code>PR301.md</code>.</p>
+<p><strong>Entrega:</strong> <code>PR301.md</code> + evidencias en Aules.</p>
+<table>
+<thead>
+<tr>
+<th>Criterio (rúbrica)</th>
+<th>Descripción</th>
+<th>Puntos</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Rack / panel / <abbr title="Telecommunications Outlet">TO</abbr></td>
+<td>Montaje ordenado y conforme al plan</td>
+<td>0–3</td>
+</tr>
+<tr>
+<td>Switch + conexionado</td>
+<td>Equipo fijado y enlazado a paneles</td>
+<td>0–3</td>
+</tr>
+<tr>
+<td>Verificación</td>
+<td>Conectividad demostrada</td>
+<td>0–2</td>
+</tr>
+<tr>
+<td>Informe <code>.md</code></td>
+<td>Fotos, etiquetado, incidencias</td>
+<td>0–2</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td></td>
+<td><strong>/10</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="pr304-taller-fusion-de-fibra-fusionadoras">PR304 — Taller: fusión de fibra / fusionadoras<a class="headerlink" href="#pr304-taller-fusion-de-fibra-fusionadoras" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Valor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Código</strong></td>
+<td><strong>PR304</strong></td>
+</tr>
+<tr>
+<td><strong>UP / tema</strong></td>
+<td>T3 — Cableado estructurado</td>
+</tr>
+<tr>
+<td><strong><abbr title="Resultado de aprendizaje">RA</abbr> principal</strong></td>
+<td><strong>RA3</strong> (empalmes en fibra). Apoyo <strong>RA2</strong> y <strong>RA6</strong></td>
+</tr>
+<tr>
+<td><strong><abbr title="Criterio de evaluación">CE</abbr> de cobertura</strong></td>
+<td>CE3c, CE3f, CE3g · CE2c, CE2j · CE6b, CE6e</td>
+</tr>
+<tr>
+<td><strong>Sesiones estimadas</strong></td>
+<td><strong>2</strong></td>
+</tr>
+<tr>
+<td><strong>Instrumento</strong></td>
+<td>Checklist de fusión + rúbrica 0–10</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5.563 1.396a.95.95 0 0 0-.534.184c-.404.307-.501.9-.425 1.654.075.755.335 1.704.751 2.8.357.937.835 1.984 1.407 3.095-1.17.146-2.24.338-3.158.57-1.08.274-1.958.6-2.583.973C.397 11.045 0 11.484 0 12s.397.955 1.021 1.328c.55.33 1.308.618 2.217.87a1 1 0 0 0-.006.097c0 .485.365.887.82.887.368 0 .678-.26.784-.616q.89.171 1.898.297a31 31 0 0 0-1.408 3.067c-.421 1.093-.686 2.04-.765 2.795-.08.754.016 1.347.42 1.656.201.154.46.208.734.181s.572-.125.896-.287c.649-.323 1.407-.894 2.244-1.67.962-.89 2.026-2.058 3.118-3.421 1.086 1.37 2.146 2.543 3.103 3.439.834.78 1.588 1.355 2.235 1.682.323.163.62.265.894.293s.534-.025.736-.178c.405-.307.502-.9.426-1.654-.054-.54-.206-1.18-.437-1.9a.91.91 0 0 0 .343-.72.92.92 0 0 0-.238-.625.8.8 0 0 0-.701-.251c-.312-.75-.69-1.557-1.125-2.4a27 27 0 0 0 3.187-.575c1.08-.273 1.958-.597 2.583-.97.624-.374 1.021-.813 1.021-1.329s-.397-.957-1.021-1.33c-.625-.373-1.503-.696-2.583-.969a27 27 0 0 0-3.156-.568 31 31 0 0 0 1.406-3.063c.422-1.093.687-2.04.766-2.795.08-.754-.017-1.347-.42-1.656a.95.95 0 0 0-.531-.185 1.3 1.3 0 0 0-.203.004c-.274.026-.57.127-.895.289-.51.254-1.092.665-1.722 1.205a.8.8 0 0 0-.418-.123c-.456 0-.82.4-.82.886q0 .178.06.334a35 35 0 0 0-2.465 2.791c-1.086-1.37-2.146-2.543-3.103-3.439-.834-.78-1.588-1.355-2.235-1.682-.323-.163-.62-.265-.894-.293a1.3 1.3 0 0 0-.204-.006zm.021.385a1 1 0 0 1 .143.004c.205.02.462.105.757.254.592.298 1.33.855 2.147 1.62.955.893 2.022 2.077 3.119 3.466-.428.544-.859 1.12-1.29 1.72a42 42 0 0 0-3.29.235 31 31 0 0 1-1.453-3.184c-.409-1.075-.658-2.002-.729-2.7-.07-.7.05-1.136.276-1.307a.55.55 0 0 1 .32-.108m12.854.033a.55.55 0 0 1 .32.108c.225.172.343.61.27 1.308s-.33 1.624-.743 2.698a31 31 0 0 1-1.455 3.15 42 42 0 0 0-3.312-.234 49 49 0 0 0-1.274-1.717 35 35 0 0 1 2.436-2.772.78.78 0 0 0 .543.223c.456 0 .82-.401.82-.887a.94.94 0 0 0-.133-.484c.61-.519 1.163-.909 1.625-1.139.297-.147.555-.23.76-.25a1 1 0 0 1 .142-.004zm-6.442 5.622c.344.443.69.913 1.035 1.394q-.51-.012-1.031-.014-.532.001-1.05.014c.35-.481.699-.95 1.046-1.394M12 9.203q.668.001 1.314.02.398.563.793 1.154c.366.55.71 1.093 1.041 1.633a54 54 0 0 1-1.046 1.623q-.395.584-.791 1.138-.646.02-1.311.022-.684-.001-1.348-.022a53 53 0 0 1-.789-1.148 52 52 0 0 1-1.04-1.633 53 53 0 0 1 1.84-2.765q.658-.02 1.337-.022m-1.824.04q-.315.444-.625.905c-.334.496-.647.988-.953 1.477a47 47 0 0 1-1.239-2.178 41 41 0 0 1 2.817-.205zm3.625 0a41 41 0 0 1 2.838.202 47 47 0 0 1-1.264 2.198 53 53 0 0 0-1.574-2.4m3.248.251c1.213.146 2.317.34 3.252.576 1.057.268 1.907.587 2.478.928s.834.689.834.998-.263.655-.834.996c-.57.342-1.421.662-2.478.93-.943.239-2.056.433-3.281.58a47 47 0 0 0-1.416-2.492 47 47 0 0 0 1.445-2.516M6.95 9.496c.424.805.899 1.64 1.418 2.494a47 47 0 0 0-1.443 2.508 30 30 0 0 1-2.059-.318.9.9 0 0 0-.23-.508.8.8 0 0 0-.584-.262.8.8 0 0 0-.696.418c-.894-.247-1.63-.53-2.136-.832C.65 12.655.387 12.31.387 12s.263-.654.834-.996c.57-.342 1.421-.662 2.478-.93.935-.237 2.039-.431 3.252-.578zm4.34.8c-.576 0-1.041.5-1.041 1.112 0 .484.29.897.695 1.049v.063c0 .612.466 1.109 1.041 1.109.576 0 1.041-.497 1.041-1.11q0-.025-.002-.05c.424-.141.73-.565.73-1.063 0-.294-.107-.575-.302-.783a1.01 1.01 0 0 0-.738-.326 1 1 0 0 0-.711.3 1 1 0 0 0-.713-.3zm-2.695 2.061a51 51 0 0 0 1.572 2.397c-.99-.04-1.941-.108-2.832-.205q.573-1.067 1.26-2.192m6.779.02c.448.743.862 1.472 1.236 2.176a42 42 0 0 1-2.814.199q.313-.443.625-.902c.333-.495.647-.986.953-1.473m-8.23 2.537c1.033.117 2.141.198 3.304.236.427.6.854 1.179 1.278 1.723-1.103 1.382-2.176 2.561-3.135 3.45-.821.76-1.562 1.31-2.155 1.605-.296.147-.554.23-.76.25s-.35-.018-.462-.104c-.225-.172-.343-.61-.27-1.308s.329-1.624.742-2.698c.366-.948.861-2.018 1.458-3.154m9.656.004c.459.884.854 1.727 1.178 2.504a.91.91 0 0 0-.348.724c0 .486.364.887.82.887a1 1 0 0 0 .123-.01c.218.686.36 1.293.408 1.782.07.698-.05 1.135-.275 1.306-.113.086-.258.124-.463.104s-.462-.105-.758-.254c-.59-.298-1.329-.855-2.146-1.62-.955-.893-2.023-2.077-3.12-3.466.43-.545.862-1.123 1.294-1.725a42 42 0 0 0 3.287-.232m-3.776.246a49 49 0 0 1-1.05 1.4 49 49 0 0 1-1.04-1.398 47 47 0 0 0 2.09-.002"/></svg></span> <strong>PR304</strong>. En taller, bajo supervisión: realizad un <strong>empalme por fusión</strong> (o la secuencia completa de preparación + fusión + protector que permita el material del centro).</li>
+</ul>
+<p><strong>Enunciado (pasos):</strong></p>
+<ol>
+<li>EPI y normas: gafas; no mirar fuentes ópticas; recoger restos de fibra.</li>
+<li>Preparar fibras (pelado, limpieza, corte con cleaver).</li>
+<li>Ejecutar la fusión en la <strong>fusionadora</strong>; anotar la atenuación estimada si el equipo la muestra.</li>
+<li>Colocar el <strong>protector</strong> termorretráctil y asentar el empalme.</li>
+<li>Comprobación básica según el equipo disponible (continuidad / potencia / OK de la fusionadora).</li>
+<li>Documentar errores típicos (corte malo, suciedad, protector mal colocado) y cómo se corrigieron.</li>
+</ol>
+<p><strong>Evidencia:</strong> foto del puesto/fusionadora, captura o lectura de resultado, checklist PRL, <code>PR304.md</code>.</p>
+<p><strong>Entrega:</strong> <code>PR304.md</code> + evidencias en Aules.</p>
+<table>
+<thead>
+<tr>
+<th>Criterio (rúbrica)</th>
+<th>Descripción</th>
+<th>Puntos</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PRL / EPI</td>
+<td>Normas aplicadas y documentadas</td>
+<td>0–2</td>
+</tr>
+<tr>
+<td>Preparación y corte</td>
+<td>Cleaver / limpieza correctos</td>
+<td>0–2</td>
+</tr>
+<tr>
+<td>Fusión + protector</td>
+<td>Empalme válido / protector asentado</td>
+<td>0–3</td>
+</tr>
+<tr>
+<td>Comprobación + informe</td>
+<td>Evidencia de OK + <code>.md</code></td>
+<td>0–3</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td></td>
+<td><strong>/10</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="pr305-taller-wlan-real">PR305 — Taller: WLAN real<a class="headerlink" href="#pr305-taller-wlan-real" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Valor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Código</strong></td>
+<td><strong>PR305</strong></td>
+</tr>
+<tr>
+<td><strong>UP / tema</strong></td>
+<td>T3 — Cableado estructurado</td>
+</tr>
+<tr>
+<td><strong><abbr title="Resultado de aprendizaje">RA</abbr> principal</strong></td>
+<td><strong>RA4</strong>. Apoyo <strong>RA3</strong> (CE3b)</td>
+</tr>
+<tr>
+<td><strong><abbr title="Criterio de evaluación">CE</abbr> de cobertura</strong></td>
+<td>CE4a, CE4b, CE4c, CE4d, CE4e, CE4f, CE4i · CE3b</td>
+</tr>
+<tr>
+<td><strong>Sesiones estimadas</strong></td>
+<td><strong>3</strong></td>
+</tr>
+<tr>
+<td><strong>Instrumento</strong></td>
+<td>Checklist de montaje + rúbrica 0–10</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5.563 1.396a.95.95 0 0 0-.534.184c-.404.307-.501.9-.425 1.654.075.755.335 1.704.751 2.8.357.937.835 1.984 1.407 3.095-1.17.146-2.24.338-3.158.57-1.08.274-1.958.6-2.583.973C.397 11.045 0 11.484 0 12s.397.955 1.021 1.328c.55.33 1.308.618 2.217.87a1 1 0 0 0-.006.097c0 .485.365.887.82.887.368 0 .678-.26.784-.616q.89.171 1.898.297a31 31 0 0 0-1.408 3.067c-.421 1.093-.686 2.04-.765 2.795-.08.754.016 1.347.42 1.656.201.154.46.208.734.181s.572-.125.896-.287c.649-.323 1.407-.894 2.244-1.67.962-.89 2.026-2.058 3.118-3.421 1.086 1.37 2.146 2.543 3.103 3.439.834.78 1.588 1.355 2.235 1.682.323.163.62.265.894.293s.534-.025.736-.178c.405-.307.502-.9.426-1.654-.054-.54-.206-1.18-.437-1.9a.91.91 0 0 0 .343-.72.92.92 0 0 0-.238-.625.8.8 0 0 0-.701-.251c-.312-.75-.69-1.557-1.125-2.4a27 27 0 0 0 3.187-.575c1.08-.273 1.958-.597 2.583-.97.624-.374 1.021-.813 1.021-1.329s-.397-.957-1.021-1.33c-.625-.373-1.503-.696-2.583-.969a27 27 0 0 0-3.156-.568 31 31 0 0 0 1.406-3.063c.422-1.093.687-2.04.766-2.795.08-.754-.017-1.347-.42-1.656a.95.95 0 0 0-.531-.185 1.3 1.3 0 0 0-.203.004c-.274.026-.57.127-.895.289-.51.254-1.092.665-1.722 1.205a.8.8 0 0 0-.418-.123c-.456 0-.82.4-.82.886q0 .178.06.334a35 35 0 0 0-2.465 2.791c-1.086-1.37-2.146-2.543-3.103-3.439-.834-.78-1.588-1.355-2.235-1.682-.323-.163-.62-.265-.894-.293a1.3 1.3 0 0 0-.204-.006zm.021.385a1 1 0 0 1 .143.004c.205.02.462.105.757.254.592.298 1.33.855 2.147 1.62.955.893 2.022 2.077 3.119 3.466-.428.544-.859 1.12-1.29 1.72a42 42 0 0 0-3.29.235 31 31 0 0 1-1.453-3.184c-.409-1.075-.658-2.002-.729-2.7-.07-.7.05-1.136.276-1.307a.55.55 0 0 1 .32-.108m12.854.033a.55.55 0 0 1 .32.108c.225.172.343.61.27 1.308s-.33 1.624-.743 2.698a31 31 0 0 1-1.455 3.15 42 42 0 0 0-3.312-.234 49 49 0 0 0-1.274-1.717 35 35 0 0 1 2.436-2.772.78.78 0 0 0 .543.223c.456 0 .82-.401.82-.887a.94.94 0 0 0-.133-.484c.61-.519 1.163-.909 1.625-1.139.297-.147.555-.23.76-.25a1 1 0 0 1 .142-.004zm-6.442 5.622c.344.443.69.913 1.035 1.394q-.51-.012-1.031-.014-.532.001-1.05.014c.35-.481.699-.95 1.046-1.394M12 9.203q.668.001 1.314.02.398.563.793 1.154c.366.55.71 1.093 1.041 1.633a54 54 0 0 1-1.046 1.623q-.395.584-.791 1.138-.646.02-1.311.022-.684-.001-1.348-.022a53 53 0 0 1-.789-1.148 52 52 0 0 1-1.04-1.633 53 53 0 0 1 1.84-2.765q.658-.02 1.337-.022m-1.824.04q-.315.444-.625.905c-.334.496-.647.988-.953 1.477a47 47 0 0 1-1.239-2.178 41 41 0 0 1 2.817-.205zm3.625 0a41 41 0 0 1 2.838.202 47 47 0 0 1-1.264 2.198 53 53 0 0 0-1.574-2.4m3.248.251c1.213.146 2.317.34 3.252.576 1.057.268 1.907.587 2.478.928s.834.689.834.998-.263.655-.834.996c-.57.342-1.421.662-2.478.93-.943.239-2.056.433-3.281.58a47 47 0 0 0-1.416-2.492 47 47 0 0 0 1.445-2.516M6.95 9.496c.424.805.899 1.64 1.418 2.494a47 47 0 0 0-1.443 2.508 30 30 0 0 1-2.059-.318.9.9 0 0 0-.23-.508.8.8 0 0 0-.584-.262.8.8 0 0 0-.696.418c-.894-.247-1.63-.53-2.136-.832C.65 12.655.387 12.31.387 12s.263-.654.834-.996c.57-.342 1.421-.662 2.478-.93.935-.237 2.039-.431 3.252-.578zm4.34.8c-.576 0-1.041.5-1.041 1.112 0 .484.29.897.695 1.049v.063c0 .612.466 1.109 1.041 1.109.576 0 1.041-.497 1.041-1.11q0-.025-.002-.05c.424-.141.73-.565.73-1.063 0-.294-.107-.575-.302-.783a1.01 1.01 0 0 0-.738-.326 1 1 0 0 0-.711.3 1 1 0 0 0-.713-.3zm-2.695 2.061a51 51 0 0 0 1.572 2.397c-.99-.04-1.941-.108-2.832-.205q.573-1.067 1.26-2.192m6.779.02c.448.743.862 1.472 1.236 2.176a42 42 0 0 1-2.814.199q.313-.443.625-.902c.333-.495.647-.986.953-1.473m-8.23 2.537c1.033.117 2.141.198 3.304.236.427.6.854 1.179 1.278 1.723-1.103 1.382-2.176 2.561-3.135 3.45-.821.76-1.562 1.31-2.155 1.605-.296.147-.554.23-.76.25s-.35-.018-.462-.104c-.225-.172-.343-.61-.27-1.308s.329-1.624.742-2.698c.366-.948.861-2.018 1.458-3.154m9.656.004c.459.884.854 1.727 1.178 2.504a.91.91 0 0 0-.348.724c0 .486.364.887.82.887a1 1 0 0 0 .123-.01c.218.686.36 1.293.408 1.782.07.698-.05 1.135-.275 1.306-.113.086-.258.124-.463.104s-.462-.105-.758-.254c-.59-.298-1.329-.855-2.146-1.62-.955-.893-2.023-2.077-3.12-3.466.43-.545.862-1.123 1.294-1.725a42 42 0 0 0 3.287-.232m-3.776.246a49 49 0 0 1-1.05 1.4 49 49 0 0 1-1.04-1.398 47 47 0 0 0 2.09-.002"/></svg></span> <strong>PR305</strong>. En el aula-taller, por grupos: montáis una <strong><abbr title="Network Interface Card">NIC</abbr></strong> (PCIe o USB Wi‑Fi) con su driver, instaláis un <strong><abbr title="Access Point">AP</abbr></strong> o router Wi‑Fi del centro y dejáis una WLAN usable.</li>
+</ul>
+<p><strong>Enunciado (pasos):</strong></p>
+<ol>
+<li>EPI y, si montáis PCIe, apagad el PC y descargad electricidad estática.</li>
+<li>Instalar la <abbr title="Network Interface Card">NIC</abbr> o el adaptador USB y el <strong>driver</strong> hasta que el sistema vea la interfaz (CE3b, CE4f).</li>
+<li>Cablear el <abbr title="Access Point">AP</abbr> al switch del puesto; alimentar por <strong><abbr title="Power over Ethernet">PoE</abbr></strong> o por el adaptador de corriente.</li>
+<li>Entrar a la configuración (web o app que indique el profesor).</li>
+<li>Configurar <strong>modo</strong> (<abbr title="Access Point">AP</abbr>; repetidor o cliente si se pide), <strong><abbr title="Service Set Identifier">SSID</abbr></strong>, <strong>canal</strong>/banda y <strong>WPA2 o WPA3</strong> con la clave del puesto. Si el equipo lo tiene, red de invitados (CE4a–d, CE4i).</li>
+<li>Asociar portátil o móvil y comprobar <strong>ping</strong> o navegación (CE4e).</li>
+<li>Anotar canal e interferencias (analizador o lista de redes vecinas).</li>
+<li>Foto del montaje y captura de estado (<abbr title="Service Set Identifier">SSID</abbr>, canal, seguridad, IP).</li>
+</ol>
+<p><strong>Evidencia:</strong> fotos, capturas de config y de conectividad, <code>PR305.md</code>.</p>
+<p><strong>Entrega:</strong> <code>PR305.md</code> + evidencias en Aules.</p>
+<p><strong>No sustituye</strong> PR301 ni PR304. No se hace en Packet Tracer.</p>
+<table>
+<thead>
+<tr>
+<th>Criterio (rúbrica)</th>
+<th>Descripción</th>
+<th>Puntos</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Montaje <abbr title="Network Interface Card">NIC</abbr> + driver</td>
+<td>Adaptador instalado y reconocido</td>
+<td>0–2</td>
+</tr>
+<tr>
+<td><abbr title="Access Point">AP</abbr> instalado y alimentado</td>
+<td>Cableado / <abbr title="Power over Ethernet">PoE</abbr> correctos</td>
+<td>0–2</td>
+</tr>
+<tr>
+<td>Parámetros y seguridad</td>
+<td>Modo, <abbr title="Service Set Identifier">SSID</abbr>, canal, WPA2/WPA3</td>
+<td>0–3</td>
+</tr>
+<tr>
+<td>Conectividad</td>
+<td>Cliente asociado y ping o web</td>
+<td>0–2</td>
+</tr>
+<tr>
+<td>Informe <code>.md</code></td>
+<td>Capturas, canal e incidencias</td>
+<td>0–1</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td></td>
+<td><strong>/10</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="pr303-pasa-a-certificacion-trabajo-para-casa">PR303 — Pasa a certificación: trabajo para casa<a class="headerlink" href="#pr303-pasa-a-certificacion-trabajo-para-casa" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Valor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Código</strong></td>
+<td><strong>PR303</strong></td>
+</tr>
+<tr>
+<td><strong>UP / tema</strong></td>
+<td>T3 — Cableado estructurado</td>
+</tr>
+<tr>
+<td><strong>Dónde</strong></td>
+<td><strong>Casa</strong> (certificación / +1). No ocupa sesiones de este tema</td>
+</tr>
+<tr>
+<td><strong>Instrumento</strong></td>
+<td>Checklist; se corrige solo si hace falta</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16.331 18.171V17.06l-.022.01c-.25.121-.522.19-.801.203a1.2 1.2 0 0 1-.806-.237 1.04 1.04 0 0 1-.352-.498 1.2 1.2 0 0 1-.023-.667c.052-.225.178-.426.357-.569.16-.134.355-.218.562-.242a1.85 1.85 0 0 1 1.061.198l.024.013v-1.117l-.051-.014a2.9 2.9 0 0 0-1.011-.132 2.3 2.3 0 0 0-.903.206c-.287.132-.54.327-.739.571a2.22 2.22 0 0 0-.04 2.705c.295.378.709.645 1.175.756.491.12 1.006.102 1.487-.052zm-10.995 0V17.06l-.022.01c-.25.121-.522.19-.801.203a1.18 1.18 0 0 1-.806-.237 1.03 1.03 0 0 1-.351-.498 1.2 1.2 0 0 1-.024-.667c.052-.225.177-.426.357-.569.16-.134.355-.218.562-.242a1.85 1.85 0 0 1 1.061.198l.024.013v-1.117l-.051-.014a2.9 2.9 0 0 0-1.011-.132 2.3 2.3 0 0 0-.903.206 2.1 2.1 0 0 0-.74.571 2.224 2.224 0 0 0-.041 2.705 2.1 2.1 0 0 0 1.176.756c.491.12 1.005.102 1.487-.052zm3.924-.922-.004.957.07.012q.33.061.664.085.293.028.587.012.282-.021.551-.104c.21-.06.405-.163.571-.305a1.16 1.16 0 0 0 .333-.478 1.3 1.3 0 0 0-.007-.96 1.1 1.1 0 0 0-.298-.414 1.3 1.3 0 0 0-.438-.255l-.722-.268a.4.4 0 0 1-.197-.188.25.25 0 0 1 .008-.219.4.4 0 0 1 .154-.142.8.8 0 0 1 .257-.074q.23-.034.46.005.27.03.533.096l.038.008v-.883l-.069-.015a5 5 0 0 0-.543-.097 2.8 2.8 0 0 0-.714-.003c-.3.027-.585.143-.821.33-.16.126-.281.293-.351.484-.104.29-.105.608 0 .899q.082.219.252.381.146.14.327.236.236.126.497.195.086.026.17.054l.085.031.024.01c.084.03.162.078.226.14q.068.064.101.151a.3.3 0 0 1 .001.161.34.34 0 0 1-.166.198.9.9 0 0 1-.275.086 2 2 0 0 1-.427.021 5 5 0 0 1-.557-.074 9 9 0 0 1-.287-.067zm-2.475.995h1.05v-4.167h-1.05zm12.162-2.936a1.095 1.095 0 0 1 1.541.158 1.094 1.094 0 0 1-.157 1.541l-.017.014a1.096 1.096 0 0 1-1.367-1.713m-1.525.854a2.193 2.193 0 0 0 2.666 2.107 2.139 2.139 0 0 0 .701-3.937 2.207 2.207 0 0 0-3.367 1.83m5.539-5.434a.52.52 0 0 0 1.039 0V9.573a.52.52 0 0 0-1.039 0zm-2.844 0a.522.522 0 0 0 1.041 0V8.139a.521.521 0 0 0-1.04 0v2.589m-2.887 1.043a.521.521 0 0 0 1.039 0V6.17a.52.52 0 0 0-1.039 0zm-2.838-1.043a.521.521 0 0 0 1.04 0V8.139a.52.52 0 0 0-1.039 0zm-2.9 0a.522.522 0 0 0 1.039 0V9.573a.52.52 0 0 0-1.039 0zm-2.87 0a.52.52 0 0 0 1.039 0V8.139a.52.52 0 0 0-1.039 0zm-2.887 1.043a.52.52 0 0 0 1.039 0V6.17a.52.52 0 0 0-1.039 0zm-2.861-1.043a.522.522 0 0 0 1.04 0V8.139a.52.52 0 0 0-1.039 0zm-2.877 0a.521.521 0 0 0 1.039 0V9.573a.52.52 0 0 0-1.039 0z"/></svg></span> <strong>PR303</strong>. Práctica de <strong>Packet Tracer</strong> de WLAN (<abbr title="Access Point">AP</abbr>, <abbr title="Service Set Identifier">SSID</abbr>, canal, seguridad básica). Guion: <a href="../certificacion/pr303-wlan-packet-tracer.html">PR303 — WLAN en Packet Tracer</a>. Entrega <code>PR303.pkt</code> y <code>PR303.md</code> cuando lo pida el profesor. <strong>No puntúa</strong> en la nota de los <abbr title="Resultado de aprendizaje">RA</abbr> (entra en el +1 de certificación). <strong>No sustituye</strong> a <strong>PR305</strong>.</li>
+</ul>
+<h3 id="pr302-proyecto-aulario">PR302 — Proyecto aulario<a class="headerlink" href="#pr302-proyecto-aulario" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Valor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Código</strong></td>
+<td><strong>PR302</strong></td>
+</tr>
+<tr>
+<td><strong>UP / tema</strong></td>
+<td>T3 — Cableado estructurado</td>
+</tr>
+<tr>
+<td><strong><abbr title="Resultado de aprendizaje">RA</abbr> principal</strong></td>
+<td><strong>RA2</strong>. Apoyo <strong>RA3</strong></td>
+</tr>
+<tr>
+<td><strong><abbr title="Criterio de evaluación">CE</abbr> de cobertura</strong></td>
+<td>CE2d, CE2e, CE2f, CE2g, CE2i, CE2j · CE3a</td>
+</tr>
+<tr>
+<td><strong>Sesiones estimadas</strong></td>
+<td><strong>1–2</strong></td>
+</tr>
+<tr>
+<td><strong>Instrumento</strong></td>
+<td>Rúbrica de diseño 0–10</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5.563 1.396a.95.95 0 0 0-.534.184c-.404.307-.501.9-.425 1.654.075.755.335 1.704.751 2.8.357.937.835 1.984 1.407 3.095-1.17.146-2.24.338-3.158.57-1.08.274-1.958.6-2.583.973C.397 11.045 0 11.484 0 12s.397.955 1.021 1.328c.55.33 1.308.618 2.217.87a1 1 0 0 0-.006.097c0 .485.365.887.82.887.368 0 .678-.26.784-.616q.89.171 1.898.297a31 31 0 0 0-1.408 3.067c-.421 1.093-.686 2.04-.765 2.795-.08.754.016 1.347.42 1.656.201.154.46.208.734.181s.572-.125.896-.287c.649-.323 1.407-.894 2.244-1.67.962-.89 2.026-2.058 3.118-3.421 1.086 1.37 2.146 2.543 3.103 3.439.834.78 1.588 1.355 2.235 1.682.323.163.62.265.894.293s.534-.025.736-.178c.405-.307.502-.9.426-1.654-.054-.54-.206-1.18-.437-1.9a.91.91 0 0 0 .343-.72.92.92 0 0 0-.238-.625.8.8 0 0 0-.701-.251c-.312-.75-.69-1.557-1.125-2.4a27 27 0 0 0 3.187-.575c1.08-.273 1.958-.597 2.583-.97.624-.374 1.021-.813 1.021-1.329s-.397-.957-1.021-1.33c-.625-.373-1.503-.696-2.583-.969a27 27 0 0 0-3.156-.568 31 31 0 0 0 1.406-3.063c.422-1.093.687-2.04.766-2.795.08-.754-.017-1.347-.42-1.656a.95.95 0 0 0-.531-.185 1.3 1.3 0 0 0-.203.004c-.274.026-.57.127-.895.289-.51.254-1.092.665-1.722 1.205a.8.8 0 0 0-.418-.123c-.456 0-.82.4-.82.886q0 .178.06.334a35 35 0 0 0-2.465 2.791c-1.086-1.37-2.146-2.543-3.103-3.439-.834-.78-1.588-1.355-2.235-1.682-.323-.163-.62-.265-.894-.293a1.3 1.3 0 0 0-.204-.006zm.021.385a1 1 0 0 1 .143.004c.205.02.462.105.757.254.592.298 1.33.855 2.147 1.62.955.893 2.022 2.077 3.119 3.466-.428.544-.859 1.12-1.29 1.72a42 42 0 0 0-3.29.235 31 31 0 0 1-1.453-3.184c-.409-1.075-.658-2.002-.729-2.7-.07-.7.05-1.136.276-1.307a.55.55 0 0 1 .32-.108m12.854.033a.55.55 0 0 1 .32.108c.225.172.343.61.27 1.308s-.33 1.624-.743 2.698a31 31 0 0 1-1.455 3.15 42 42 0 0 0-3.312-.234 49 49 0 0 0-1.274-1.717 35 35 0 0 1 2.436-2.772.78.78 0 0 0 .543.223c.456 0 .82-.401.82-.887a.94.94 0 0 0-.133-.484c.61-.519 1.163-.909 1.625-1.139.297-.147.555-.23.76-.25a1 1 0 0 1 .142-.004zm-6.442 5.622c.344.443.69.913 1.035 1.394q-.51-.012-1.031-.014-.532.001-1.05.014c.35-.481.699-.95 1.046-1.394M12 9.203q.668.001 1.314.02.398.563.793 1.154c.366.55.71 1.093 1.041 1.633a54 54 0 0 1-1.046 1.623q-.395.584-.791 1.138-.646.02-1.311.022-.684-.001-1.348-.022a53 53 0 0 1-.789-1.148 52 52 0 0 1-1.04-1.633 53 53 0 0 1 1.84-2.765q.658-.02 1.337-.022m-1.824.04q-.315.444-.625.905c-.334.496-.647.988-.953 1.477a47 47 0 0 1-1.239-2.178 41 41 0 0 1 2.817-.205zm3.625 0a41 41 0 0 1 2.838.202 47 47 0 0 1-1.264 2.198 53 53 0 0 0-1.574-2.4m3.248.251c1.213.146 2.317.34 3.252.576 1.057.268 1.907.587 2.478.928s.834.689.834.998-.263.655-.834.996c-.57.342-1.421.662-2.478.93-.943.239-2.056.433-3.281.58a47 47 0 0 0-1.416-2.492 47 47 0 0 0 1.445-2.516M6.95 9.496c.424.805.899 1.64 1.418 2.494a47 47 0 0 0-1.443 2.508 30 30 0 0 1-2.059-.318.9.9 0 0 0-.23-.508.8.8 0 0 0-.584-.262.8.8 0 0 0-.696.418c-.894-.247-1.63-.53-2.136-.832C.65 12.655.387 12.31.387 12s.263-.654.834-.996c.57-.342 1.421-.662 2.478-.93.935-.237 2.039-.431 3.252-.578zm4.34.8c-.576 0-1.041.5-1.041 1.112 0 .484.29.897.695 1.049v.063c0 .612.466 1.109 1.041 1.109.576 0 1.041-.497 1.041-1.11q0-.025-.002-.05c.424-.141.73-.565.73-1.063 0-.294-.107-.575-.302-.783a1.01 1.01 0 0 0-.738-.326 1 1 0 0 0-.711.3 1 1 0 0 0-.713-.3zm-2.695 2.061a51 51 0 0 0 1.572 2.397c-.99-.04-1.941-.108-2.832-.205q.573-1.067 1.26-2.192m6.779.02c.448.743.862 1.472 1.236 2.176a42 42 0 0 1-2.814.199q.313-.443.625-.902c.333-.495.647-.986.953-1.473m-8.23 2.537c1.033.117 2.141.198 3.304.236.427.6.854 1.179 1.278 1.723-1.103 1.382-2.176 2.561-3.135 3.45-.821.76-1.562 1.31-2.155 1.605-.296.147-.554.23-.76.25s-.35-.018-.462-.104c-.225-.172-.343-.61-.27-1.308s.329-1.624.742-2.698c.366-.948.861-2.018 1.458-3.154m9.656.004c.459.884.854 1.727 1.178 2.504a.91.91 0 0 0-.348.724c0 .486.364.887.82.887a1 1 0 0 0 .123-.01c.218.686.36 1.293.408 1.782.07.698-.05 1.135-.275 1.306-.113.086-.258.124-.463.104s-.462-.105-.758-.254c-.59-.298-1.329-.855-2.146-1.62-.955-.893-2.023-2.077-3.12-3.466.43-.545.862-1.123 1.294-1.725a42 42 0 0 0 3.287-.232m-3.776.246a49 49 0 0 1-1.05 1.4 49 49 0 0 1-1.04-1.398 47 47 0 0 0 2.09-.002"/></svg></span> <strong>PR302</strong>. En grupo, diseñad el cableado del <strong>aulario</strong> (dos plantas, aulas, Wi‑Fi, enlace al edificio principal vía campus). El diseño debe ser coherente con el <strong>taller</strong> (PR301, PR304, PR305): rack, paneles, fusión/medios, electrónica y WLAN.</p>
+</li>
+<li>
+<p>Plano funcional: zonas, <abbr title="Floor Distributor">FD</abbr>/<abbr title="Building Distributor">BD</abbr>/<abbr title="Campus Distributor">CD</abbr>, horizontal y backbone.</p>
+</li>
+<li>Diagrama en Excalidraw / draw.io / Dia.</li>
+<li>Justificación de medios (cobre/fibra), canalizaciones y electrónica básica.</li>
+<li>Idea de etiquetado y crecimiento (reserva de puertos/cables).</li>
+</ul>
+<p><strong>Evidencia / entrega:</strong> <code>PR302.md</code> + diagrama (PNG/SVG o archivo del editor, según Aules). Exposición breve (~5 min) si se indica en clase.</p>
+<table>
+<thead>
+<tr>
+<th>Criterio (rúbrica)</th>
+<th>Descripción</th>
+<th>Puntos</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Análisis del escenario</td>
+<td>Necesidades y condicionantes claros</td>
+<td>0–2</td>
+</tr>
+<tr>
+<td>Diseño del cableado</td>
+<td>Elementos funcionales y normativa coherentes</td>
+<td>0–2</td>
+</tr>
+<tr>
+<td>Justificación técnica</td>
+<td>Medios, canalizaciones y equipos argumentados</td>
+<td>0–2</td>
+</tr>
+<tr>
+<td>Etiquetado y mantenimiento</td>
+<td>Identificación y plan básico de ampliación</td>
+<td>0–2</td>
+</tr>
+<tr>
+<td>Documentación <code>.md</code> + diagrama</td>
+<td>Claridad y completitud</td>
+<td>0–2</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td></td>
+<td><strong>/10</strong></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="para-el-examen">Para el examen<a class="headerlink" href="#para-el-examen" title="Permanent link">&para;</a></h2>
+<p>El cableado estructurado es el sistema del edificio (<abbr title="Telecommunications Outlet">TO</abbr>, horizontal de 90 m, panel, rack, backbone), no el latiguillo suelto. La <strong><abbr title="Network Interface Card">NIC</abbr></strong> (Tema 1) se <strong>monta</strong> aquí (PCIe o USB) y lleva <strong>driver</strong>. El <strong>rack</strong> es de 19″ y la altura se mide en <strong>U</strong>. El <strong>panel</strong> empareja cada <abbr title="Telecommunications Outlet">TO</abbr> con un puerto etiquetado; de ahí un latiguillo al <strong>switch</strong>. El <strong>hub</strong> queda para laboratorio; el <strong>switch</strong>, para la LAN; el <strong>router</strong> o <strong>gateway</strong>, para otras redes; el <strong><abbr title="Access Point">AP</abbr></strong>, para Wi‑Fi con <abbr title="Service Set Identifier">SSID</abbr>, canal y <strong>WPA2/WPA3</strong>, a menudo con <strong><abbr title="Power over Ethernet">PoE</abbr></strong>. En fusión de fibra: cleaver, fusionadora, protector y PRL. En FTTH/GPON la OLT de la central llega a la ONT por divisores pasivos, con bajada a 1490 nm, subida a 1310 nm y vídeo RF a 1550 nm si se usa, y la pérdida del enlace tiene que caber en la clase B+ (13–28 dB). <abbr title="Criterio de evaluación">CE</abbr> clave de este tema: <strong>CE2d, CE2f, CE2g, CE3a, CE3c, CE3f, CE4d, CE4i</strong>.</p>
+<h2 id="autocheck-del-tema">Autocheck del tema<a class="headerlink" href="#autocheck-del-tema" title="Permanent link">&para;</a></h2>
+<p>Hazlo <strong>después</strong> de entregar el cuestionario inicial en Aules.</p>
+<ol>
+<li><strong>V/F.</strong> El latiguillo del PC al switch de mesa ya es, por sí solo, un sistema de cableado estructurado.</li>
+<li>Empareja: <strong><abbr title="Telecommunications Outlet">TO</abbr></strong> · <strong><abbr title="Floor Distributor">FD</abbr></strong> · <strong><abbr title="Campus Distributor">CD</abbr></strong> con: (a) toma del puesto · (b) enlace entre edificios · (c) distribuidor de planta.</li>
+<li>El enlace permanente de cobre (<abbr title="Telecommunications Outlet">TO</abbr> ↔ panel) suele limitarse a…<br />
+   a) 10 m · b) 55 m · c) 90 m · d) 300 m</li>
+<li><strong>V/F.</strong> Una <abbr title="Network Interface Card">NIC</abbr> Wi‑Fi no tiene dirección MAC.</li>
+<li>Relaciona: <strong>hub</strong> · <strong>switch</strong> · <strong>router</strong> con capas <strong>1</strong>, <strong>2</strong> y <strong>3</strong>.</li>
+<li>Elige la correcta: <abbr title="Power over Ethernet">PoE</abbr>…<br />
+   a) sube la categoría del UTP · b) alimenta equipos por el mismo par trenzado · c) solo existe en fibra</li>
+<li>Nombra dos modos de funcionamiento de un <abbr title="Access Point">AP</abbr>.</li>
+<li><strong>V/F.</strong> WEP es la seguridad recomendada hoy en el taller.</li>
+<li>¿Qué distancia máxima se recomienda para el latiguillo equipo ↔ <abbr title="Telecommunications Outlet">TO</abbr>?</li>
+<li>El estándar que habla de etiquetado y administración del cableado es…<br />
+    a) TIA‑568 · b) TIA‑606 · c) IEEE 802.11 · d) RFC 1918</li>
+<li><strong>V/F.</strong> El repetidor divide el dominio de colisión.</li>
+<li>En la fusión de fibra, ¿para qué sirve el cleaver?</li>
+<li><strong>V/F.</strong> El montaje de una <abbr title="Network Interface Card">NIC</abbr> PCIe o USB cubre, entre otros, el criterio de instalar el adaptador en el equipo.</li>
+<li>Un canal Ethernet de cobre de 100 m se reparte, de forma habitual, en…</li>
+<li>¿Qué compruebas en PR305 después de configurar <abbr title="Service Set Identifier">SSID</abbr>, canal y WPA2/WPA3?</li>
+<li>Empareja: <strong>OLT</strong> · <strong>ONT</strong> · <strong>divisor óptico</strong> con: (a) equipo en el domicilio, con internet, telefonía y TV · (b) equipo en la central · (c) reparte la luz y no se alimenta.</li>
+<li>Un enlace GPON suma 17 dB de un divisor 1:32, 2,8 dB de fibra, 0,4 dB de fusiones y 2,0 dB de conectores. ¿Cabe en el máximo de 28 dB de la clase B+? ¿Qué margen queda?</li>
+</ol>
+<div class="admonition info">
+<p class="admonition-title">Soluciones</p>
+<p>Las soluciones se publicarán aquí cuando cierre el cuestionario inicial en Aules.</p>
+</div>
+<hr />
+<h2 id="videos-recomendados">Vídeos recomendados<a class="headerlink" href="#videos-recomendados" title="Permanent link">&para;</a></h2>
+<p>Pablo Hidalgo explica cómo trabaja un switch Ethernet de capa 2 (CCNA v1.1, lección 6): tabla MAC, unicast y broadcast.</p>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube-nocookie.com/embed/vYKwD7OF6xY"
+          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          title="CCNA v1.1 Lección 6 — switches Ethernet de capa 2 (Pablo Hidalgo)"></iframe>
+</div>
+
+<p>Las lecciones 34–38 de la misma playlist (<a href="https://www.youtube.com/playlist?list=PLxnG_9vdV6-gEWV15pq89XK_W3G8vP5_0">CCNA Completo v1.1</a>) tratan WLAN (transmisión, estándares, WLC, WPA2/WPA3) y requieren membresía. El cobre y la fibra (lecciones 3 y 4) están en el Tema 2.</p>
+<h2 id="glosario">Glosario<a class="headerlink" href="#glosario" title="Permanent link">&para;</a></h2>
+<p><strong id="nic"><abbr title="Network Interface Card">NIC</abbr></strong>
+<em>Network Interface Card</em>: adaptador de red. Concepto y MAC en el Tema 1; en este tema, montaje (PCIe/USB) y driver.</p>
+<p><strong id="rack">rack</strong>
+Armario de comunicaciones con bastidores de 19 pulgadas; la altura se mide en unidades U.</p>
+<p><strong id="panel-de-parcheo">panel de parcheo</strong>
+Panel (habitualmente RJ‑45) que concentra el cableado horizontal y se etiqueta <abbr title="Telecommunications Outlet">TO</abbr> a <abbr title="Telecommunications Outlet">TO</abbr>.</p>
+<p><strong id="to"><abbr title="Telecommunications Outlet">TO</abbr></strong>
+Toma de usuario o <abbr title="Telecommunications Outlet">TO</abbr> (<em>Telecommunications Outlet</em>), también llamada <strong>roseta</strong>: punto de conexión del puesto (superficie, empotrable o de suelo).</p>
+<p><strong id="fd"><abbr title="Floor Distributor">FD</abbr></strong>
+<em>Floor Distributor</em>: distribuidor de planta.</p>
+<p><strong id="bd"><abbr title="Building Distributor">BD</abbr></strong>
+<em>Building Distributor</em>: distribuidor de edificio.</p>
+<p><strong id="cd"><abbr title="Campus Distributor">CD</abbr></strong>
+<em>Campus Distributor</em>: distribuidor de campus (entre edificios).</p>
+<p><strong id="ap"><abbr title="Access Point">AP</abbr></strong>
+<em>Access Point</em>: punto de acceso Wi‑Fi que puentea clientes inalámbricos hacia la LAN cableada.</p>
+<p><strong id="poe"><abbr title="Power over Ethernet">PoE</abbr></strong>
+<em>Power over Ethernet</em>: alimentación eléctrica por el mismo UTP (<abbr title="Access Point">AP</abbr>, cámaras, teléfonos).</p>
+<p><strong id="ssid"><abbr title="Service Set Identifier">SSID</abbr></strong>
+Nombre de la red Wi‑Fi que anuncia el <abbr title="Access Point">AP</abbr>.</p>
+<p><strong id="wpa">WPA2 / WPA3</strong>
+Mecanismos de seguridad Wi‑Fi actuales (clave o 802.1X). WEP está obsoleto.</p>
+<p><strong id="ftth">FTTH</strong>
+<em>Fiber To The Home</em>, fibra hasta el hogar: la fibra óptica llega al domicilio del abonado y termina en la ONT.</p>
+<p><strong id="gpon">GPON</strong>
+<em>Gigabit-capable Passive Optical Network</em>, red óptica pasiva con capacidad de gigabit (UIT-T G.984): una OLT reparte la fibra entre varias ONT mediante divisores sin alimentación.</p>
+<p><strong id="olt">OLT</strong>
+<em>Optical Line Terminal</em>, terminal de línea óptica: equipo de la central. Origina la bajada y asigna los turnos de subida.</p>
+<p><strong id="ont">ONT</strong>
+<em>Optical Network Terminal</em>, terminal de red óptica: equipo en casa del abonado. Entrega internet, telefonía y televisión.</p>
+<p><strong id="divisor-optico">divisor óptico</strong>
+Repartidor pasivo (<em>splitter</em>): parte la potencia de una fibra entre varias salidas (1:8, 1:16, 1:32, 1:64…). No se alimenta y concentra la mayor parte de la pérdida del enlace.</p>
+<hr />
+<h2 id="relacion-con-el-resto-del-modulo">Relación con el resto del módulo<a class="headerlink" href="#relacion-con-el-resto-del-modulo" title="Permanent link">&para;</a></h2>
+<p>El <strong>Tema 1</strong> dio dispositivos, capas y la <abbr title="Network Interface Card">NIC</abbr>; el <strong>Tema 2</strong>, el medio (UTP, fibra, Wi‑Fi, crimpado). Aquí se monta el <strong>edificio</strong>: rack, panel, <abbr title="Telecommunications Outlet">TO</abbr> y WLAN real (<strong>PR305</strong>). El <strong>Tema 4</strong> profundiza en la trama y en el switch; el <strong>Tema 6</strong>, en VLAN sobre switch físico (<strong>PR604</strong>). La certificación (<strong>PR303</strong> y el resto de Packet Tracer) se hace en casa.</p>
+<hr />
+<h2 id="referencias-rapidas">Referencias rápidas<a class="headerlink" href="#referencias-rapidas" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Sitio del módulo: <a href="https://fjavier-hernandez.github.io/ral/">fjavier-hernandez.github.io/ral</a></li>
+<li>Diagramas: <a href="https://excalidraw.com/">Excalidraw</a>, <a href="https://app.diagrams.net/">draw.io (diagrams.net)</a>, <a href="https://wiki.gnome.org/Apps/Dia">Dia</a></li>
+<li>Simulación: <a href="https://www.netacad.com/es/cisco-packet-tracer">Cisco Packet Tracer</a></li>
+<li>Entregas: <a href="https://code.visualstudio.com/docs">Visual Studio Code</a> + <a href="https://tutorialmarkdown.com/guia">Markdown</a></li>
+<li>Normas: <a href="../00-normas/normas_taller.html">Normas del taller</a></li>
+<li>Playlist CCNA (Pablo Hidalgo): <a href="https://www.youtube.com/playlist?list=PLxnG_9vdV6-gEWV15pq89XK_W3G8vP5_0">CCNA Completo v1.1</a></li>
+</ul>
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Pie" >
+        
+          
+          <a href="../02-medios-capa-fisica/tema2.html" class="md-footer__link md-footer__link--prev" aria-label="Anterior: 2. Medios de transmisión y capa física">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              <div class="md-ellipsis">
+                2. Medios de transmisión y capa física
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../00-normas/normas_taller.html" class="md-footer__link md-footer__link--next" aria-label="Siguiente: Normas del taller">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Siguiente
+              </span>
+              <div class="md-ellipsis">
+                Normas del taller
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      2026-2027 Francisco Javier Hernández Illán - <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es">Licencia CC BY-NC-SA</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="mailto:<fj.hernandez@edu.gva.es>" target="_blank" rel="noopener" title="" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4l208 156a48 48 0 0 0 57.6 0l208-156c12.1-9.1 19.2-23.3 19.2-38.4 0-26.5-21.5-48-48-48zM0 196v188c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V196L313.6 344.8c-34.1 25.6-81.1 25.6-115.2 0z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.linkedin.com/in/fjavier-hernandez-illan" target="_blank" rel="noopener" title="www.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77m282.1 320h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+      <div class="md-consent" data-md-component="consent" id="__consent" hidden>
+        <div class="md-consent__overlay"></div>
+        <aside class="md-consent__inner">
+          <form class="md-consent__form md-grid md-typeset" name="consent">
+            
+
+
+  
+
+
+<h4>Consentimiento de cookie</h4>
+<p>Esta página de apuntes utiliza cookies para reconocer las visitas, medir la efectividad de la documentación y averiguar si encuentras aquello que buscas o cómo has llegado a estos apuntes. Con tu consentimiento, me ayudas a mejorar estos materiales.</p>
+<input class="md-toggle" type="checkbox" id="__settings" >
+<div class="md-consent__settings">
+  <ul class="task-list">
+    
+    
+      
+        
+  
+  
+    
+    
+  
+  <li class="task-list-item">
+    <label class="task-list-control">
+      <input type="checkbox" name="analytics" checked>
+      <span class="task-list-indicator"></span>
+      Google Analytics
+    </label>
+  </li>
+
+      
+    
+    
+      
+    
+    
+  </ul>
+</div>
+<div class="md-consent__controls">
+  
+    
+      <button class="md-button md-button--primary">Aceptar</button>
+    
+    
+    
+  
+    
+    
+    
+      <label class="md-button" for="__settings">Gestionar cookies</label>
+    
+  
+</div>
+          </form>
+        </aside>
+      </div>
+      <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout((function(){document.querySelector("[data-md-component=consent]").hidden=!1}),250);var form=document.forms.consent;for(var action of["submit","reset"])form.addEventListener(action,(function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map((function(e){return[e,!0]})))),location.hash="",location.reload()}))</script>
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["header.autohide", "navigation.top", "navigation.tracking", "navigation.footer", "navigation.indexes", "content.code.annotate", "announce.dismiss", "toc.follow", "content.code.copy"], "search": "../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.c21346df.min.js"></script>
+      
+        <script src="../js/print-site.js"></script>
+      
+    
+  </body>
+</html>

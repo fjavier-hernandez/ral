@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 480" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+  <rect width="860" height="480" fill="#f7f9fb"/>
+  <text x="430" y="28" text-anchor="middle" font-size="16" font-weight="700" fill="#1a2332">Switch: aprendizaje de MAC y reenvío por puerto</text>
+  <text x="430" y="50" text-anchor="middle" font-size="12" fill="#4a5560">Cuatro PC en el mismo switch. La tabla MAC asocia cada puerto a la MAC que ha visto en él.</text>
+
+  <rect x="40" y="70" width="70" height="36" rx="4" fill="#3b6ea5"/>
+  <text x="75" y="93" text-anchor="middle" fill="#fff" font-size="13" font-weight="600">PC1</text>
+  <rect x="240" y="70" width="70" height="36" rx="4" fill="#3b6ea5"/>
+  <text x="275" y="93" text-anchor="middle" fill="#fff" font-size="13" font-weight="600">PC2</text>
+  <rect x="540" y="70" width="70" height="36" rx="4" fill="#3b6ea5"/>
+  <text x="575" y="93" text-anchor="middle" fill="#fff" font-size="13" font-weight="600">PC3</text>
+  <rect x="750" y="70" width="70" height="36" rx="4" fill="#3b6ea5"/>
+  <text x="785" y="93" text-anchor="middle" fill="#fff" font-size="13" font-weight="600">PC4</text>
+
+  <text x="75" y="124" text-anchor="middle" font-size="10" fill="#4a5560">00:11:22:AA:00:01</text>
+  <text x="275" y="124" text-anchor="middle" font-size="10" fill="#4a5560">00:11:22:AA:00:02</text>
+  <text x="575" y="124" text-anchor="middle" font-size="10" fill="#4a5560">00:11:22:AA:00:03</text>
+  <text x="785" y="124" text-anchor="middle" font-size="10" fill="#4a5560">00:11:22:AA:00:04</text>
+
+  <line x1="75" y1="128" x2="300" y2="200" stroke="#4a5560" stroke-width="2"/>
+  <line x1="275" y1="128" x2="360" y2="200" stroke="#4a5560" stroke-width="2"/>
+  <line x1="575" y1="128" x2="500" y2="200" stroke="#4a5560" stroke-width="2"/>
+  <line x1="785" y1="128" x2="560" y2="200" stroke="#4a5560" stroke-width="2"/>
+
+  <rect x="250" y="200" width="360" height="56" rx="6" fill="#2f7d4a" stroke="#1a2332"/>
+  <text x="430" y="225" text-anchor="middle" fill="#fff" font-size="15" font-weight="700">SWITCH (capa 2)</text>
+  <text x="430" y="246" text-anchor="middle" fill="#e8f5ee" font-size="11">Fa0/1 · Fa0/2 · Fa0/3 · Fa0/4</text>
+
+  <rect x="230" y="280" width="400" height="170" rx="6" fill="#fff" stroke="#4a5560"/>
+  <text x="430" y="304" text-anchor="middle" font-size="13" font-weight="700" fill="#1a2332">Tabla MAC (CAM)</text>
+  <line x1="250" y1="316" x2="610" y2="316" stroke="#cbd5e0"/>
+  <text x="310" y="338" font-size="12" font-weight="600" fill="#1a2332">Puerto</text>
+  <text x="470" y="338" font-size="12" font-weight="600" fill="#1a2332">Dirección MAC</text>
+  <text x="270" y="364" font-size="12" fill="#1a2332">Fa0/1</text>
+  <text x="430" y="364" font-size="12" fill="#1a2332">00:11:22:AA:00:01</text>
+  <text x="270" y="388" font-size="12" fill="#1a2332">Fa0/2</text>
+  <text x="430" y="388" font-size="12" fill="#1a2332">00:11:22:AA:00:02</text>
+  <text x="270" y="412" font-size="12" fill="#1a2332">Fa0/3</text>
+  <text x="430" y="412" font-size="12" fill="#1a2332">00:11:22:AA:00:03</text>
+  <text x="270" y="436" font-size="12" fill="#1a2332">Fa0/4</text>
+  <text x="430" y="436" font-size="12" fill="#1a2332">00:11:22:AA:00:04</text>
+</svg>
