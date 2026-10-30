@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 430" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+  <rect width="1000" height="430" fill="#f7f9fb"/>
+  <text x="500" y="28" text-anchor="middle" font-size="16" font-weight="700" fill="#1a2332">Recorrido de la señal: de la OLT a los servicios</text>
+
+  <rect x="16" y="56" width="156" height="112" rx="8" fill="#6b4ea1"/>
+  <text x="94" y="100" text-anchor="middle" fill="#fff" font-size="16" font-weight="700">OLT</text>
+  <text x="94" y="122" text-anchor="middle" fill="#f3e8f6" font-size="12">Central</text>
+  <text x="94" y="140" text-anchor="middle" fill="#f3e8f6" font-size="11">terminal de línea</text>
+
+  <line x1="172" y1="112" x2="204" y2="112" stroke="#1a2332" stroke-width="2"/>
+  <polygon points="204,106 218,112 204,118" fill="#1a2332"/>
+
+  <rect x="224" y="56" width="200" height="112" rx="8" fill="#fff3d6" stroke="#d68910" stroke-width="2"/>
+  <text x="324" y="96" text-anchor="middle" fill="#1a2332" font-size="13" font-weight="700">Caja de distribución</text>
+  <text x="324" y="118" text-anchor="middle" fill="#4a5560" font-size="12">Divisor pasivo 1:N</text>
+  <text x="324" y="138" text-anchor="middle" fill="#4a5560" font-size="11">sin alimentación</text>
+
+  <line x1="424" y1="112" x2="456" y2="112" stroke="#1a2332" stroke-width="2"/>
+  <polygon points="456,106 470,112 456,118" fill="#1a2332"/>
+
+  <rect x="476" y="56" width="156" height="112" rx="8" fill="#e8f5ee" stroke="#2f7d4a" stroke-width="2"/>
+  <text x="554" y="100" text-anchor="middle" fill="#1a2332" font-size="14" font-weight="700">Caja final</text>
+  <text x="554" y="122" text-anchor="middle" fill="#4a5560" font-size="12">sale la acometida</text>
+  <text x="554" y="140" text-anchor="middle" fill="#4a5560" font-size="11">hacia el domicilio</text>
+
+  <line x1="632" y1="112" x2="664" y2="112" stroke="#1a2332" stroke-width="2"/>
+  <polygon points="664,106 678,112 664,118" fill="#1a2332"/>
+
+  <rect x="684" y="56" width="140" height="112" rx="8" fill="#3b6ea5"/>
+  <text x="754" y="100" text-anchor="middle" fill="#fff" font-size="16" font-weight="700">ONT</text>
+  <text x="754" y="122" text-anchor="middle" fill="#e8f1fb" font-size="12">Casa del abonado</text>
+  <text x="754" y="140" text-anchor="middle" fill="#e8f1fb" font-size="11">terminal de red</text>
+
+  <line x1="824" y1="112" x2="848" y2="112" stroke="#1a2332" stroke-width="2"/>
+  <line x1="848" y1="78" x2="848" y2="146" stroke="#1a2332" stroke-width="2"/>
+  <line x1="848" y1="78" x2="864" y2="78" stroke="#1a2332" stroke-width="2"/>
+  <line x1="848" y1="112" x2="864" y2="112" stroke="#1a2332" stroke-width="2"/>
+  <line x1="848" y1="146" x2="864" y2="146" stroke="#1a2332" stroke-width="2"/>
+  <polygon points="864,73 876,78 864,83" fill="#1a2332"/>
+  <polygon points="864,107 876,112 864,117" fill="#1a2332"/>
+  <polygon points="864,141 876,146 864,151" fill="#1a2332"/>
+
+  <rect x="880" y="62" width="104" height="32" rx="6" fill="#3b6ea5"/>
+  <text x="932" y="83" text-anchor="middle" fill="#fff" font-size="12" font-weight="700">Internet</text>
+  <rect x="880" y="96" width="104" height="32" rx="6" fill="#3b6ea5"/>
+  <text x="932" y="117" text-anchor="middle" fill="#fff" font-size="12" font-weight="700">Telefonía</text>
+  <rect x="880" y="130" width="104" height="32" rx="6" fill="#3b6ea5"/>
+  <text x="932" y="151" text-anchor="middle" fill="#fff" font-size="12" font-weight="700">TV</text>
+
+  <line x1="324" y1="168" x2="324" y2="214" stroke="#3b6ea5" stroke-width="2"/>
+  <polygon points="318,214 324,228 330,214" fill="#3b6ea5"/>
+  <text x="336" y="198" font-size="11" fill="#4a5560">otras salidas</text>
+
+  <rect x="234" y="232" width="180" height="58" rx="8" fill="#e8f1fb" stroke="#3b6ea5"/>
+  <text x="324" y="256" text-anchor="middle" fill="#1a2332" font-size="13" font-weight="700">Otras ONT</text>
+  <text x="324" y="274" text-anchor="middle" fill="#4a5560" font-size="11">reciben la misma bajada</text>
+
+  <text x="500" y="328" text-anchor="middle" font-size="12" fill="#4a5560">Planta exterior pasiva: las cajas y el divisor no llevan alimentación eléctrica.</text>
+  <text x="500" y="352" text-anchor="middle" font-size="12" fill="#4a5560">Una sola fibra: bajada 1490 nm (a todas las ONT), subida 1310 nm (por turnos)</text>
+  <text x="500" y="372" text-anchor="middle" font-size="12" fill="#4a5560">y vídeo RF a 1550 nm, si la red lo superpone.</text>
+</svg>
