@@ -51,7 +51,7 @@ Las ^^competencias profesionales^^ asociadas al módulo:
     | Formación en el **centro** | **186 h** |
     | Formación en **empresa (FE)** | **47 h** |
 
-    El módulo son **233 h**. El **80 %** de cada resultado de aprendizaje se imparte en el centro (**186 h**) y el **20 %** restante (**47 h**) queda vinculado a la formación en empresa. En esas 186 h veremos **todos** los contenidos del módulo, y dedicaremos más tiempo y práctica a los fundamentales.
+    El módulo son **233 h**: **186** en el centro (80 %) y **47** de formación en empresa (20 %), según el acuerdo de departamento. En el centro veremos **todos** los contenidos del módulo. La formación en empresa empieza el **17 de mayo de 2027**.
 
 ## Temas del curso
 
@@ -89,12 +89,12 @@ timeline
         Fundamentos : T1 Introducción y arquitectura : T2 Medios y capa física : T3 Cableado y WLAN
     section 2ª Evaluación — nov–ene
         Núcleo LAN : T4 Capa de enlace : T5 Capa de red : T6 Enrutamiento y VLAN
-    section 3ª Evaluación — ene–feb
+    section 3ª Evaluación — ene–mayo
         Servicios y cierre : T7 Transporte : T8 NAT e IPv6 : T9 Diagnóstico y protección
 ```
 
 !!! tip "Núcleo del curso"
-    Enlace, direccionamiento IP, subnetting y VLANs concentran una parte importante de la evaluación (sobre todo en la 2.ª evaluación). El Tema 9 cierra el curso en el centro con **diagnóstico (RA5)** y **prevención de riesgos (RA6)**. Tenemos **7 sesiones por semana** (55 minutos cada una).
+    Enlace, direccionamiento IP, subnetting y VLANs concentran una parte importante de la evaluación (sobre todo en la 2.ª evaluación). El Tema 9 cierra el bloque de centro hacia el **5 de mayo de 2027**, con **diagnóstico (RA5)** y **prevención de riesgos (RA6)**. La formación en empresa empieza el **17 de mayo de 2027**. Tenemos **7 sesiones por semana**.
 
 ## Evaluación
 
@@ -104,14 +104,15 @@ La evaluación se organiza por **resultados de aprendizaje (RA)**. Cada activida
 
 Imagina la nota del módulo como una **tarta** repartida en seis quesitos (los RA). Cada quesito tiene un tamaño fijo (el peso de la tabla de arriba: 20 %, 12 %, 18 %, 25 %, 15 % y 10 %).
 
-1. En cada RA, tu nota es la **media ponderada** de las actividades de ese RA (AC, PR, PY, PO).
-2. La **nota final** del módulo es la suma de (nota de cada RA × su peso).
-3. Si completas el **apartado de certificación**, puedes sumar hasta **+1 punto** sobre esa nota final, que puede llegar hasta **11**. El punto tiene dos mitades: **0,5** por entregar las prácticas de Packet Tracer, hechas en casa, y superar la auditoría en clase; y **0,5** más si además apruebas un examen de certificación (cómo se acredita se concretará en Aules). Ese +1 **no sustituye** ningún RA.
+1. En cada RA, la nota de centro es la **media ponderada** de las actividades de ese RA (AC, PR, PY, PO).
+2. La nota del RA es el **80 %** de esa nota de centro más el **20 %** de la formación en empresa. El profesorado califica las dos partes.
+3. La **nota final** del módulo es la suma de (nota de cada RA × su peso).
+4. Si completas el **apartado de certificación**, puedes sumar hasta **+1 punto** sobre esa nota final, que puede llegar hasta **11**. El punto tiene dos mitades: **0,5** por entregar las prácticas de Packet Tracer, hechas en casa, y superar la auditoría en clase; y **0,5** más si además apruebas un examen de certificación (cómo se acredita se concretará en Aules). Ese +1 **no sustituye** ningún RA.
 
 ``` mermaid
 flowchart TB
   A["Paso 1 — Instrumentos\nAC · PR · PY · PO"]
-  B["Paso 2 — Nota de cada RA\nmedia de las actividades de ese RA"]
+  B["Paso 2 — Nota de cada RA\n80 % centro + 20 % empresa"]
   C["Paso 3 — Nota final del módulo\nRA1×20% + RA2×12% + RA3×18%\n+ RA4×25% + RA5×15% + RA6×10%"]
   D["+1 Certificación\n0,5 prácticas + 0,5 examen\nhasta 11"]
   A --> B --> C
