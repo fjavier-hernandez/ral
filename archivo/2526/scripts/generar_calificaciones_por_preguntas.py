@@ -4,9 +4,25 @@ import csv
 import re
 from collections import defaultdict
 from datetime import datetime
+import argparse
+import sys
+from pathlib import Path
 
-# Leer el CSV
-csv_file = "/Users/javih/Downloads/Xarxes locals-1CFMSMIR L   1756975370-Examen desarrollo UT1 y UT2-respostes.csv"
+# Rutas por línea de órdenes (sin rutas personales en el código)
+parser = argparse.ArgumentParser(
+    description="Genera un Markdown con las calificaciones por pregunta a partir del CSV de respuestas exportado de Aules."
+)
+parser.add_argument("csv", help="Ruta al CSV de respuestas del examen (exportado de Aules)")
+parser.add_argument(
+    "-o", "--salida",
+    default="Calificaciones_Examen_Redes.md",
+    help="Fichero Markdown de salida (por defecto: Calificaciones_Examen_Redes.md en el directorio actual)",
+)
+args = parser.parse_args()
+
+csv_file = args.csv
+if not Path(csv_file).is_file():
+    sys.exit(f"Error: no se encuentra el CSV de respuestas: {csv_file}")
 
 # Puntos máximos por pregunta
 puntos_maximos = {
@@ -295,7 +311,7 @@ for alumno in alumnos:
     totales_alumnos[alumno['nombre']] = total_alumno
 
 # Generar Markdown
-output_file = "/Users/javih/Library/CloudStorage/OneDrive-Conselleriad'Educació/[MKDOCS]/ral/Correccion UT1y2/Calificaciones_Examen_Redes.md"
+output_file = args.salida
 
 with open(output_file, 'w', encoding='utf-8') as f:
     f.write("# Calificaciones - Examen Desarrollo UT1 y UT2\n")
