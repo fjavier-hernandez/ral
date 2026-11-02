@@ -575,8 +575,10 @@ La práctica evaluable es **PR304**. El crimpado de cobre (conectores RJ‑45) y
 
   **Enunciado (pasos):**
 
-  1. EPI y, si montáis PCIe, apagad el PC y descargad electricidad estática.
-  2. Instalar la NIC o el adaptador USB y el **driver** hasta que el sistema vea la interfaz (CE3b, CE4f).
+  Seguid la [guía paso a paso de la PR305](pr305-guia-wlan.md), que incluye los enlaces de descarga de drivers y herramientas.
+
+  1. Con el equipo apagado y desenchufado, descargad la electricidad estática tocando una parte metálica sin pintar del chasis.
+  2. Extraer la NIC que ya trae el equipo (o conectar el adaptador USB), identificarla, volver a montarla y comprobar el **driver** hasta que el sistema vea la interfaz (CE3b, CE4f).
   3. Cablear el AP al switch del puesto; alimentar por **PoE** o por el adaptador de corriente.
   4. Entrar a la configuración (web o app que indique el profesor).
   5. Configurar **modo** (AP; repetidor o cliente si se pide), **SSID**, **canal**/banda y **WPA2 o WPA3** con la clave del puesto. Si el equipo lo tiene, red de invitados (CE4a–d, CE4i).
@@ -592,7 +594,7 @@ La práctica evaluable es **PR304**. El crimpado de cobre (conectores RJ‑45) y
 
 | Criterio (rúbrica) | Descripción | Puntos |
 | --- | --- | --- |
-| Montaje NIC + driver | Adaptador instalado y reconocido | 0–2 |
+| Montaje NIC + driver | Tarjeta extraída, identificada, montada de nuevo y reconocida | 0–2 |
 | AP instalado y alimentado | Cableado / PoE correctos | 0–2 |
 | Parámetros y seguridad | Modo, SSID, canal, WPA2/WPA3 | 0–3 |
 | Conectividad | Cliente asociado y ping o web | 0–2 |

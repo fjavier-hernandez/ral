@@ -13,6 +13,7 @@ nav:
   - "1. Introducción. Arquitectura de redes": "01-introduccion-arquitectura/tema1.md"
   - "2. Medios de transmisión y capa física": "02-medios-capa-fisica/tema2.md"
   - "3. Cableado estructurado y componentes": "03-cableado-estructurado/tema3.md"
+  - "PR305 — Guía de taller: NIC y WLAN": "03-cableado-estructurado/pr305-guia-wlan.md"
   - "Normas del taller": "00-normas/normas_taller.md"
   - Certificación:
       - "Certificación CCNA y +1": "certificacion/index.md"
