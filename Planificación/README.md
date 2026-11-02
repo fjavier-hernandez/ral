@@ -14,9 +14,7 @@ Figuras Word (C4): `figuras/calculo_nota.png`, `figuras/pesos_RA.png`.
 
 ## Otros materiales (solo en CURSOS)
 
-Canónico en OneDrive `[CURSOS]`  
-(ruta real: `…/OneDrive - Conselleria d'Educació/[CURSOS]/`  
-o el espejo `…/Library/CloudStorage/OneDrive-Conselleriad'Educació/[CURSOS]/`):
+Canónico en la carpeta de departamento `[CURSOS]`:
 
 | Qué | Ruta canónica |
 | --- | --- |
