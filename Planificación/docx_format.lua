@@ -105,17 +105,11 @@ function Pandoc(doc)
   for offset, block in ipairs(index_blocks) do
     table.insert(doc.blocks, position + offset - 1, block)
   end
-  -- Cada ficha del apartado 9 empieza en una página propia.
+  -- Las fichas del apartado 9 y el apartado 10 no fuerzan salto de página:
+  -- cada ficha sigue a la anterior con su título, para no dejar hojas
+  -- a medio llenar.
   local blocks = {}
   for _, block in ipairs(doc.blocks) do
-    if block.t == "Header" then
-      local text = pandoc.utils.stringify(block)
-      local ficha = block.level == 2 and text:match("^9%.%d+")
-      local despues = block.level == 1 and text:match("^10%.")
-      if ficha or despues then
-        table.insert(blocks, page_break())
-      end
-    end
     table.insert(blocks, block)
   end
   doc.blocks = blocks
