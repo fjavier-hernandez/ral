@@ -1,6 +1,6 @@
 # PR305 — Guía de taller: NIC y WLAN real
 
-Esta guía desarrolla paso a paso la práctica **PR305** del [Tema 3](tema3.md#pr305-taller-wlan-real). Se trabaja por grupos en el aula-taller con equipos de sobremesa del centro y con los puntos de acceso y routers Wi‑Fi del taller. La rúbrica y la entrega son las del tema.
+Antes de empezar, repasad las [normas del taller](../00-normas/normas_taller.md). Esta guía desarrolla paso a paso la práctica **PR305** del [Tema 3](../03-cableado-estructurado/tema3.md#pr305-taller-wlan-real). Se trabaja por grupos en el aula-taller con equipos de sobremesa del centro y con los puntos de acceso y routers Wi‑Fi del taller. La rúbrica y la entrega son las del tema.
 
 !!! warning "Antes de empezar"
     - El router o AP del grupo **no se conecta nunca a la red del centro** (ni a las rosetas de la pared ni al switch del aula). Si se conecta, su servidor DHCP (el servicio que reparte direcciones IP) puede dejar sin red a otros equipos del instituto. Cada grupo trabaja con la red propia de su router.
@@ -10,7 +10,7 @@ Esta guía desarrolla paso a paso la práctica **PR305** del [Tema 3](tema3.md#p
 
 - Un equipo de sobremesa con una NIC (*Network Interface Card*, tarjeta de red) PCIe ya instalada, o un adaptador USB Wi‑Fi.
 - Un router o punto de acceso (AP, *Access Point*) Wi‑Fi del taller con su alimentador.
-- Un latiguillo RJ‑45. Podéis usar los que hicisteis en la [PR201](../02-medios-capa-fisica/tema2.md).
+- Un latiguillo RJ‑45. Podéis usar los que hicisteis en la [PR201](pr201-guia-crimpado.md).
 - Un destornillador de estrella y un portátil o un móvil para hacer de cliente Wi‑Fi.
 
 ## Fase 1. Extraer y volver a montar la NIC (CE3b)
@@ -75,6 +75,26 @@ En el panel web, en el apartado *Wireless* o *Inalámbrico*:
 2. Desconectad el latiguillo y el alimentador y guardad el material en su caja.
 3. Comprobad que el equipo de sobremesa arranca y sigue viendo su tarjeta de red.
 
+## Ampliación opcional: firmware DD-WRT
+
+Esta fase solo se hace si el profesor lo autoriza y sobre los modelos que él indique. **DD‑WRT** es un firmware libre (el software interno del router) que sustituye al del fabricante y añade funciones avanzadas. El objetivo es comparar las dos interfaces y sus opciones.
+
+!!! danger "Riesgo de dejar el router inservible"
+    Si se carga un firmware que no corresponde exactamente al modelo **y a la versión de hardware** del router, o si se corta la corriente durante la carga, el equipo puede quedar inutilizado. Por eso:
+
+    - Comprobad el modelo y la versión (por ejemplo «V9») en la etiqueta del router.
+    - Buscadlo en la [base de datos oficial de routers de DD‑WRT](https://dd-wrt.com/support/router-database/). Si no aparece como compatible, **no se instala**.
+    - Antes de nada, descargad el **firmware original** del fabricante para ese modelo y versión, por ejemplo desde el [centro de descargas de TP‑Link](https://www.tp-link.com/es/support/download/), para poder volver atrás.
+    - Cargad el firmware **siempre por cable**, nunca por Wi‑Fi, y no toquéis el router hasta que termine.
+
+1. Antes de instalar nada, explorad la [demostración oficial de la interfaz de DD‑WRT](https://dd-wrt.com/demo/) para saber qué os vais a encontrar.
+2. Seguid la [guía oficial de instalación de DD‑WRT](https://wiki.dd-wrt.com/wiki/index.php/Installation) y las instrucciones específicas que la base de datos indique para vuestro modelo. Algunos modelos necesitan primero un fichero de tipo *factory-to-ddwrt* y después otro de tipo *webflash*.
+3. Tras la instalación, la dirección de acceso suele pasar a ser `192.168.1.1`. Repetid la configuración de la fase 4 (SSID, canal, WPA2 y red de invitados) en DD‑WRT.
+4. Haced una **tabla comparativa** entre el firmware original y DD‑WRT: opciones de modo (AP, repetidor, cliente, puente), seguridad, red de invitados, control de potencia de emisión, estadísticas y facilidad de uso.
+5. Al terminar, volved a cargar el firmware original si el profesor lo pide.
+
+Añadid la tabla comparativa y las capturas de DD‑WRT al `PR305.md`. Como alternativa a DD‑WRT existe [OpenWrt](https://openwrt.org/toh/start), con su propia lista de equipos compatibles.
+
 ## Entrega
 
 Un fichero `PR305.md` por grupo, subido a Aules, con:
@@ -84,6 +104,7 @@ Un fichero `PR305.md` por grupo, subido a Aules, con:
 - Las capturas de la configuración: modo, SSID, banda, canal, seguridad y red de invitados.
 - La IP del cliente, el `ping` y la lista de clientes del router.
 - El análisis de canales y por qué elegisteis el vuestro.
+- Si hicisteis la ampliación, la tabla comparativa entre el firmware original y DD‑WRT.
 - Las incidencias que hayáis tenido y cómo las resolvisteis.
 
-La calificación sigue la rúbrica de la [PR305 en el Tema 3](tema3.md#pr305-taller-wlan-real).
+La calificación sigue la rúbrica de la [PR305 en el Tema 3](../03-cableado-estructurado/tema3.md#pr305-taller-wlan-real).

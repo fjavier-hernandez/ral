@@ -425,27 +425,9 @@ El detalle de paneles, tomas de usuario y canalizaciones se desarrolla en el **T
 
 * :simple-neutralinojs: **PR201**. En taller, en pareja: fabricad un latiguillo **UTP directo** con terminación **T568B** en ambos extremos (el profesor puede pedir un extremo en **T568A** para contrastar el estándar). Probad con el **comprobador**, **etiquetad** el cable y documentad el proceso.
 
-    Antes de crimpar, mira una vez el procedimiento completo (corte, orden de hilos, crimpado y comprobador) para no improvisar en el primer conector.
+    Seguid la [guía paso a paso de la PR201](../taller/pr201-guia-crimpado.md), con el vídeo de referencia, la tabla de colores T568A/B, la comprobación y los errores típicos.
 
-    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-      <iframe src="https://www.youtube-nocookie.com/embed/x7cJAv9Buhc"
-              style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-              title="Joaquín Cantero — Práctica de cableado de red (Normas T568A y T568B)"></iframe>
-    </div>
-
-    **Enunciado (pasos):**
-
-    1. Materiales: UTP de la categoría indicada, 2× RJ‑45, pelacables, crimpadora, cutter, comprobador, etiquetas.
-    2. Pelar ~2–2,5 cm; ordenar pares según el esquema (T568B por defecto); cortar a la misma longitud; insertar hasta el tope (la funda entra en el conector).
-    3. Crimpar de un solo golpe; repetir el otro extremo.
-    4. Probar en el comprobador (continuidad / pares / polaridad). Si falla: abrir, identificar el error y rehacer.
-    5. Etiquetar (código que indique el profesor, p. ej. `PR201-Gx-nn`).
-    6. Entregar el **cable físico** + evidencias digitales.
-
-    **Errores típicos a evitar / documentar si ocurren:** pares cruzados o invertidos; hilos fuera del conector; funda que no entra; crimpado doble o incompleto; no etiquetar; ignorar EPI (gafas si el taller lo exige).
+    Resumen: preparar el cable, ordenar los hilos según la norma, crimpar los dos extremos, comprobar con el tester, etiquetar y entregar el **cable físico** con las evidencias.
 
     **Evidencia:** latiguillo OK al tester + foto de ambos extremos (colores visibles) + foto/captura del comprobador + checklist firmada + `PR201.md`.
 

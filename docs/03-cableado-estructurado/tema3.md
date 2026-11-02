@@ -575,7 +575,7 @@ La práctica evaluable es **PR304**. El crimpado de cobre (conectores RJ‑45) y
 
   **Enunciado (pasos):**
 
-  Seguid la [guía paso a paso de la PR305](pr305-guia-wlan.md), que incluye los enlaces de descarga de drivers y herramientas.
+  Seguid la [guía paso a paso de la PR305](../taller/pr305-guia-wlan.md), que incluye los enlaces de descarga de drivers y herramientas.
 
   1. Con el equipo apagado y desenchufado, descargad la electricidad estática tocando una parte metálica sin pintar del chasis.
   2. Extraer la NIC que ya trae el equipo (o conectar el adaptador USB), identificarla, volver a montarla y comprobar el **driver** hasta que el sistema vea la interfaz (CE3b, CE4f).
