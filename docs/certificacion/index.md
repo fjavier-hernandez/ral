@@ -108,7 +108,7 @@ El recorrido sigue el orden del curso de Pablo Hidalgo, que es el orden en que e
 Las prácticas se hacen en casa, se entregan en Aules, se defienden en la auditoría y cuentan solo para el +1:
 
 - **[PR202 — Conectar la capa física](pr202-capa-fisica.md).** Identificas puertos y módulos de un router y de varios switches, eliges el cable adecuado para cada enlace y compruebas el resultado. Corresponde al primer punto del dominio 1 del CCNA: interfaces y cables de cobre y fibra.
-- **[PR303 — WLAN en Packet Tracer](pr303-wlan-packet-tracer.md).** Montas un AP, un switch, dos PC de cable y dos clientes Wi‑Fi; configuras SSID, canal y WPA2 y compruebas con `ping`. Es el Wi‑Fi del Tema 3 en simulador. El taller real es **PR305** y no va en este apartado.
+- **[PR303 — WLAN en Packet Tracer](pr303-wlan-packet-tracer.md).** Montas un AP, un switch, dos PC de cable y dos clientes Wi‑Fi; configuras SSID, canal y WPA2 y compruebas con `ping`. Es el Wi‑Fi del Tema 3 en simulador. El taller real es **[PR301](../03-cableado-estructurado/tema3.md#pr301-taller-nic-y-wlan-real)** y no va en este apartado. Esta guía conserva de momento el código PR303; en el Tema 3 ese código es el taller de fusión de fibra.
 - **[PR103 — Mi primera red](pr103-primera-red.md).** Montas una LAN con un switch y cuatro PC, les das dirección IP y compruebas la conectividad con `ping` y con el modo Simulación. Es el primer contacto con el diagnóstico de conectividad que pide el CCNA.
 - **[PR102 — Modelos OSI y TCP/IP](pr102-modelos-osi.md)** (opcional). Observas la encapsulación de una petición web en el modo Simulación y localizas las direcciones MAC de la trama, que se explican en las lecciones 17 y 18. Los puertos, DNS y TCP que también aparecen se tratan en los Temas 7 y 9.
 
