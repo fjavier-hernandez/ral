@@ -7,6 +7,11 @@ use_directory_urls: false
 # tema01.md es borrador huérfano (no usar); el canónico es 01-…/tema1.md
 exclude_docs: |
   tema01.md
+  _reserva/**
+
+# Fuera de la navegación y, con exclude_docs, también de la build.
+not_in_nav: |
+  _reserva/**
 
 nav:
   - "Inicio": "index.md"
@@ -16,7 +21,7 @@ nav:
   - Taller:
       - "Normas del taller": "00-normas/normas_taller.md"
       - "PR201 — Crimpado de latiguillos UTP": "taller/pr201-guia-crimpado.md"
-      - "PR305 — NIC y WLAN real": "taller/pr305-guia-wlan.md"
+      - "PR301 — NIC y WLAN real": "taller/pr301-guia-wlan.md"
   - Certificación:
       - "Certificación CCNA y +1": "certificacion/index.md"
       - "Packet Tracer (inicio)": "certificacion/packet-tracer.md"

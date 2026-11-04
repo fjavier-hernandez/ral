@@ -1,6 +1,6 @@
-# PR305 — Guía de taller: NIC y WLAN real
+# PR301 — Guía de taller: NIC y WLAN real
 
-Antes de empezar, repasad las [normas del taller](../00-normas/normas_taller.md). Esta guía desarrolla paso a paso la práctica **PR305** del [Tema 3](../03-cableado-estructurado/tema3.md#pr305-taller-wlan-real). Se trabaja por grupos en el aula-taller con equipos de sobremesa del centro y con los puntos de acceso y routers Wi‑Fi del taller. La rúbrica y la entrega son las del tema.
+Antes de empezar, repasad las [normas del taller](../00-normas/normas_taller.md). Esta guía desarrolla paso a paso la práctica **PR301** del [Tema 3](../03-cableado-estructurado/tema3.md#pr301-taller-nic-y-wlan-real). Se trabaja por grupos en el aula-taller con equipos de sobremesa del centro y con los puntos de acceso y routers Wi‑Fi del taller. La rúbrica y la entrega son las del tema.
 
 !!! warning "Antes de empezar"
     - El router o AP del grupo **no se conecta nunca a la red del centro** (ni a las rosetas de la pared ni al switch del aula). Si se conecta, su servidor DHCP (el servicio que reparte direcciones IP) puede dejar sin red a otros equipos del instituto. Cada grupo trabaja con la red propia de su router.
@@ -93,11 +93,11 @@ Esta fase solo se hace si el profesor lo autoriza y sobre los modelos que él in
 4. Haced una **tabla comparativa** entre el firmware original y DD‑WRT: opciones de modo (AP, repetidor, cliente, puente), seguridad, red de invitados, control de potencia de emisión, estadísticas y facilidad de uso.
 5. Al terminar, volved a cargar el firmware original si el profesor lo pide.
 
-Añadid la tabla comparativa y las capturas de DD‑WRT al `PR305.md`. Como alternativa a DD‑WRT existe [OpenWrt](https://openwrt.org/toh/start), con su propia lista de equipos compatibles.
+Añadid la tabla comparativa y las capturas de DD‑WRT al `PR301.md`. Como alternativa a DD‑WRT existe [OpenWrt](https://openwrt.org/toh/start), con su propia lista de equipos compatibles.
 
 ## Entrega
 
-Un fichero `PR305.md` por grupo, subido a Aules, con:
+Un fichero `PR301.md` por grupo, subido a Aules, con:
 
 - Las fotos de la tarjeta (antes, fuera de la ranura y montada) y sus datos: fabricante, modelo, ranura y MAC.
 - Las capturas del Administrador de dispositivos y de `ipconfig /all`.
@@ -107,4 +107,4 @@ Un fichero `PR305.md` por grupo, subido a Aules, con:
 - Si hicisteis la ampliación, la tabla comparativa entre el firmware original y DD‑WRT.
 - Las incidencias que hayáis tenido y cómo las resolvisteis.
 
-La calificación sigue la rúbrica de la [PR305 en el Tema 3](../03-cableado-estructurado/tema3.md#pr305-taller-wlan-real).
+La calificación sigue la rúbrica de la [PR301 en el Tema 3](../03-cableado-estructurado/tema3.md#pr301-taller-nic-y-wlan-real).

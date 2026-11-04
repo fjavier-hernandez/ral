@@ -147,7 +147,7 @@ pie showData
 
 - Las calificaciones se publican en **Aules**.
 - Cada actividad indica el **RA** que evalúa y su escala. Codificación: prefijo del IE + número de tema (ej. `AC102` = actividad 02 del Tema 1; `PR101` = práctica 01 del Tema 1).
-- **Certificación y Packet Tracer:** todas las prácticas de Packet Tracer del módulo (PR102, PR103, PR202, PR303 y las de temas posteriores) son trabajo para casa del apartado de certificación. No puntúan en la nota de los RA. Entregarlas y defenderlas en clase (auditoría oral breve o demo) da **0,5** del **+1**; el punto entero exige además aprobar un examen de certificación.
+- **Certificación y Packet Tracer:** todas las prácticas de Packet Tracer del módulo (PR102, PR103, PR202, la de WLAN y las de temas posteriores) son trabajo para casa del apartado de certificación. No puntúan en la nota de los RA. Entregarlas y defenderlas en clase (auditoría oral breve o demo) da **0,5** del **+1**; el punto entero exige además aprobar un examen de certificación.
 - Las entregas en Aules son **obligatorias en Markdown** (`.md`). No se aceptan PDF.
 
 !!! note "Cómo empezar con Markdown y VS Code"

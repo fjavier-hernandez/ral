@@ -5,12 +5,12 @@ description: Guion de práctica — montar una WLAN (red de área local inalámb
 
 # PR303 — WLAN en Packet Tracer
 
-Enunciado corto en el [Tema 3](../03-cableado-estructurado/tema3.md#pr303-pasa-a-certificacion-trabajo-para-casa). El montaje real del aula es **PR305**; esta práctica no lo sustituye.
+Enunciado corto en el [Tema 3](../03-cableado-estructurado/tema3.md#certificacion-wlan-packet-tracer). El montaje real del aula es **PR301**; esta práctica no lo sustituye.
 
 Vas a montar en Packet Tracer una **WLAN** (*Wireless Local Area Network*, red de área local inalámbrica) mínima: un **AP** (*Access Point*, punto de acceso) unido a un switch, dos PC por cable y dos clientes Wi‑Fi. Configuras el **SSID** (*Service Set Identifier*, nombre de la red), el canal y **WPA2** (*Wi‑Fi Protected Access 2*, acceso Wi‑Fi protegido versión 2), asocias los clientes y compruebas con `ping`. No partimos de un archivo `.pka` ni `.pkt` del profesor: lo construyes tú desde cero, como en [PR103](pr103-primera-red.md).
 
 !!! tip "Cuenta solo para el +1"
-    PR303 se hace **en casa**, se entrega en Aules y se defiende en la auditoría. **No puntúa** en la nota de los RA (resultados de aprendizaje). **No sustituye** a [PR305](../03-cableado-estructurado/tema3.md#pr305-taller-wlan-real) (taller: NIC, AP o router Wi‑Fi del centro y WLAN usable).
+    Esta guía conserva de momento el código **PR303**. En el Tema 3 ese código es el taller de fusión de fibra; la WLAN real de aula es [PR301](../03-cableado-estructurado/tema3.md#pr301-taller-nic-y-wlan-real). Se hace **en casa**, se entrega en Aules y se defiende en la auditoría. **No puntúa** en la nota de los RA (resultados de aprendizaje). **No sustituye** a PR301.
 
 Antes de empezar, Packet Tracer con la sesión iniciada. Si aún no lo tienes listo, sigue la [guía inicial](packet-tracer.md). Entra con tu cuenta **`@alu.edu.gva.es`**, no con Google.
 

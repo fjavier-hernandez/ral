@@ -1,6 +1,6 @@
 ---
 title: Tema 3 — Cableado estructurado y componentes
-description: Racks, paneles, tomas de usuario o TO (rosetas), canalizaciones, electrónica de red, AP Wi‑Fi, distancias ISO/TIA y prácticas de taller.
+description: Racks, paneles, tomas de usuario o TO (rosetas), canalizaciones, fibra de backbone, electrónica de red, AP Wi‑Fi, distancias ISO/TIA y prácticas de taller.
 ---
 
 # Tema 3. Cableado estructurado y componentes
@@ -60,12 +60,13 @@ Trabajamos los **RA2**, **RA3** y **RA4** del módulo Redes de área local (0225
 
 ### Contenidos
 
-* Montaje físico del adaptador de red (PCIe o USB) e instalación del driver, ligado a PR305. La NIC como concepto está en el Tema 1.
+* Montaje físico del adaptador de red (PCIe o USB) e instalación del driver, ligado a PR301. La NIC como concepto está en el Tema 1.
 * Armario o rack de 19″ y unidades **U**; paneles de parcheo; toma de usuario o TO (roseta) y latiguillos.
 * Canalizaciones, bandejas, guías y pasahilos; etiquetado (TIA‑606).
 * Electrónica: hub, switch, router, gateway, punto de acceso; PoE.
 * WLAN de aula: modos del AP, SSID, canal, WPA2/WPA3.
 * Visión ISO/TIA: horizontal, backbone, distancias; idea de tierra (TIA‑607).
+* Fibra en el cableado estructurado: vertical (FD–BD) en multimodo OM3/OM4 y campus (BD–CD) en monomodo OS2; terminación en ODF y balance de pérdidas.
 * Empalme por **fusión** de fibra (fusionadora, protectores, comprobación básica, PRL).
 
 ### Programación de aula (orientativa)
@@ -78,11 +79,12 @@ Trabajamos los **RA2**, **RA3** y **RA4** del módulo Redes de área local (0225
 | 5–7 | Electrónica de red y AP (teoría) | AC303 |
 | 8–9 | Normas ISO/TIA, distancias, etiquetado | — |
 | 10–11 | Propuesta electrónica (centro educativo) | **AC305** |
-| 12–13 | **Taller:** panel, tomas, armario y switch | **PR301** |
-| 14–15 | **Taller:** fusión de fibra | **PR304** |
-| 16–18 | **Taller:** WLAN real | **PR305** |
-| 19–20 | Proyecto aulario (grupo) | **PR302** |
-| Casa | Certificación: WLAN / Packet Tracer | **PR303** |
+| 12–14 | **Taller:** NIC y WLAN real | **PR301** |
+| 15–16 | **Taller:** panel, tomas, armario y switch | **PR302** |
+| 17–18 | **Taller:** fusión de fibra | **PR303** |
+| 19–20 | Diseño de cableado estructurado en diagrama | **PR304** |
+| 21–22 | Proyecto aulario sur (grupo) | **PR305** |
+| Casa | Certificación: WLAN en Packet Tracer | [guion](../certificacion/pr303-wlan-packet-tracer.md) |
 
 ---
 
@@ -136,7 +138,7 @@ El mismo recorrido, visto como un tramo que se puede montar en el taller, va del
 
 La **[NIC](#nic)** (*Network Interface Card*, tarjeta o adaptador de red), la dirección MAC y el dúplex ya se explicaron en el [Tema 1, apartado Adaptador de red](../01-introduccion-arquitectura/tema1.md#adaptador-de-red-nic). En este tema nos centramos en su montaje.
 
-En este tema lo que importa es el **montaje físico** y el **software del adaptador**, porque ambos entran en el taller. Una NIC puede ir integrada en la placa, instalarse en una ranura **PCIe** o conectarse por **USB** (incluido un dongle Wi‑Fi). Tras el montaje hay que instalar el **driver** y comprobar que el sistema operativo ve la interfaz. Eso cubre **CE3b** (montar el adaptador en el equipo) y **CE4f** (instalar el software), y se practica en **PR305**.
+En este tema lo que importa es el **montaje físico** y el **software del adaptador**, porque ambos entran en el taller. Una NIC puede ir integrada en la placa, instalarse en una ranura **PCIe** o conectarse por **USB** (incluido un dongle Wi‑Fi). Tras el montaje hay que instalar el **driver** y comprobar que el sistema operativo ve la interfaz. Eso cubre **CE3b** (montar el adaptador en el equipo) y **CE4f** (instalar el software), y se practica en **[PR301](#pr301-taller-nic-y-wlan-real)**.
 
 **Ejemplo de aula.** En el taller, si montáis una NIC PCIe, se apaga el PC, se descarga la electricidad estática y se encaja la tarjeta hasta el fondo. En Windows o Linux no basta con que «esté puesta»: tiene que aparecer en el administrador de dispositivos o en `ip link` / `ipconfig`. Si no hay enlace, se mira primero el latiguillo y el puerto del switch, no se reinstala el driver a ciegas.
 
@@ -264,7 +266,7 @@ La tabla siguiente resume la capa y la función de cada equipo.
 
 ### Switch (lo habitual en LAN)
 
-El **switch** es el equipo que concentra la LAN de un aula o de una planta: cada puesto llega a un puerto y el tráfico se reenvía según la dirección **MAC** de destino, no según la IP. Frente al **hub** de la [tabla de dispositivos](#electronica-de-red), que replica la trama a todos los puertos y deja un solo dominio de colisión, el switch abre un dominio de colisión por puerto y trabaja en **full‑dúplex**. Esa diferencia ya se contó en el [Tema 1, dominios de colisión y de difusión](../01-introduccion-arquitectura/tema1.md#dominios-colision-difusion): en un enlace PC–switch moderno no hay colisión porque cada sentido tiene su canal. El hub queda para el laboratorio; en el armario del taller lo que se monta es el switch (**CE3d**, **PR301**).
+El **switch** es el equipo que concentra la LAN de un aula o de una planta: cada puesto llega a un puerto y el tráfico se reenvía según la dirección **MAC** de destino, no según la IP. Frente al **hub** de la [tabla de dispositivos](#electronica-de-red), que replica la trama a todos los puertos y deja un solo dominio de colisión, el switch abre un dominio de colisión por puerto y trabaja en **full‑dúplex**. Esa diferencia ya se contó en el [Tema 1, dominios de colisión y de difusión](../01-introduccion-arquitectura/tema1.md#dominios-colision-difusion): en un enlace PC–switch moderno no hay colisión porque cada sentido tiene su canal. El hub queda para el laboratorio; en el armario del taller lo que se monta es el switch (**CE3d**, **[PR302](#pr302-taller-panel-tomas-armario-y-switch)**).
 
 Al arrancar, la tabla MAC (también llamada **CAM**, *Content Addressable Memory*) está vacía. Cuando un PC envía una trama, el switch anota «esta MAC se ve en este puerto». Si ya conoce el puerto del destino, **reenvía** solo por ahí. Si no lo conoce, **inunda**: copia la trama a todos los puertos menos al de entrada, igual que hace con las tramas de **difusión** (broadcast, por ejemplo `FF:FF:FF:FF:FF:FF`). Por eso el switch **no** corta el dominio de difusión: eso lo hace el router (o, más adelante, las VLAN).
 
@@ -302,7 +304,7 @@ Las interfaces que hay que reconocer en el taller son tres. La **LAN** mira haci
 
 ### Punto de acceso ([AP](#ap))
 
-El **AP** (*Access Point*) enlaza clientes Wi‑Fi con la red cableada. Los hay de interior y de exterior; muchos se alimentan por PoE. Para el examen y para **PR305** hay que distinguir modos (**CE4b**), no solo «poner Wi‑Fi».
+El **AP** (*Access Point*) enlaza clientes Wi‑Fi con la red cableada. Los hay de interior y de exterior; muchos se alimentan por PoE. Para el examen y para **[PR301](#pr301-taller-nic-y-wlan-real)** hay que distinguir modos (**CE4b**), no solo «poner Wi‑Fi».
 
 | Modo | Qué hace |
 | --- | --- |
@@ -319,7 +321,7 @@ Los parámetros básicos (**CE4d**) son el **SSID** (nombre de la red), el **can
 </figure>
 
 !!! note "Para la certificación CCNA"
-    En campus grandes el AP ligero lo gestiona un **WLC** (*Wireless LAN Controller*) con CAPWAP. En el taller usamos AP **autónomos**, cada uno con su propia configuración web. El CCNA pregunta las dos ideas; en el examen del módulo cuenta el AP que se monta en **PR305**.
+    En campus grandes el AP ligero lo gestiona un **WLC** (*Wireless LAN Controller*) con CAPWAP. En el taller usamos AP **autónomos**, cada uno con su propia configuración web. El CCNA pregunta las dos ideas; en el examen del módulo cuenta el AP que se monta en **[PR301](#pr301-taller-nic-y-wlan-real)**.
 
 !!! warning "Errores frecuentes"
     Confundir **switch** y **router**. Poner el AP en el mismo canal que el aula contigua (interferencia). Configurar WPA2 con una clave trivial y dar por resuelta la seguridad.
@@ -366,7 +368,7 @@ El canal Ethernet de cobre son **100 m**: **90 m** de enlace permanente (TO ↔ 
   <figcaption>Backbone y campus: FD (planta) → BD (edificio) → CD (campus). El cobre cubre tramos cortos; la fibra, distancias mayores.</figcaption>
 </figure>
 
-Con **fibra**, backbone y campus cubren cientos de metros o kilómetros según el tipo, como se vio en el Tema 2.
+Con **fibra**, backbone y campus cubren cientos de metros o kilómetros según el tipo, como se vio en el Tema 2. Qué tramo lleva cada clase y cómo se calcula la pérdida del enlace está en [Fibra en el cableado estructurado](#fibra-en-el-cableado-estructurado).
 
 ### Tierra (visión breve)
 
@@ -382,57 +384,54 @@ Con **fibra**, backbone y campus cubren cientos de metros o kilómetros según e
 
 ---
 
-## Redes FTTH/GPON
+## Fibra en el cableado estructurado {: #fibra-en-el-cableado-estructurado }
 
-La **fibra hasta el hogar** (**[FTTH](#ftth)**, *Fiber To The Home*) lleva la fibra óptica hasta el domicilio del abonado. Sustituye al coaxial de la acometida y a la red híbrida de fibra y coaxial (**HFC**, *Hybrid Fiber-Coaxial*), en la que la fibra acaba en un nodo de calle y el último tramo sigue siendo coaxial, con amplificadores que hay que alimentar y ajustar. El medio de una FTTH es la fibra monomodo del [Tema 2](../02-medios-capa-fisica/tema2.md#multimodo-mm-y-monomodo-sm): un solo modo de luz y distancias de kilómetros.
+En el cableado estructurado el puesto sigue en cobre. El latiguillo del área de trabajo y el horizontal, desde el equipo hasta el panel del distribuidor de planta (**[FD](#fd)**, *Floor Distributor*), se tienden en par trenzado. La fibra se reserva para los tramos en los que el cobre se queda corto: el **subsistema vertical**, entre el FD y el distribuidor de edificio (**[BD](#bd)**, *Building Distributor*), y el **subsistema de campus**, entre el BD y el distribuidor de campus (**[CD](#cd)**, *Campus Distributor*).
 
-La planta exterior no lleva equipos activos. Los divisores solo parten la luz, así que no necesitan alimentación eléctrica ni ajustes de nivel. Al eliminar el cobre y esa alimentación desaparece una fuente habitual de averías del coaxial. El alcance también cambia: la UIT-T G.984.2 contempla hasta **20 km** de fibra entre la central y el abonado. La distancia que de verdad se alcanza depende de las pérdidas; el ejemplo 2 hace esa cuenta. Con coaxial, de forma orientativa, el tramo útil se queda en unos **2 km** en el mejor de los casos. La fibra admite más velocidad: en GPON, la bajada de referencia es de **2,5 Gbit/s** y la subida de **1,25 Gbit/s**, compartidas por los abonados de un mismo árbol. La evolución **XGS-PON** (*10-Gigabit-capable Symmetric Passive Optical Network*, UIT-T G.9807.1) llega a **10 Gbit/s** en los dos sentidos y conserva la misma planta pasiva.
-
-Esa arquitectura se llama **[GPON](#gpon)** (*Gigabit-capable Passive Optical Network*, red óptica pasiva con capacidad de gigabit) y está descrita en la UIT-T G.984. De la central a la casa intervienen cuatro piezas:
-
-1. La **[OLT](#olt)** (*Optical Line Terminal*, terminal de línea óptica) está en la central. Genera la señal de bajada, recibe la de subida y asigna el turno de cada abonado.
-2. La **red de distribución óptica** es el conjunto de fibras y cajas que hay entre la OLT y el domicilio. En las **cajas de distribución** y en las **cajas terminales** o finales se colocan los **[divisores ópticos](#divisor-optico)** pasivos, con relaciones **1:8**, **1:16**, **1:32** o **1:64**. El reparto puede hacerse en un solo divisor o en dos escalones, uno en cada caja.
-3. La **acometida** es el último tramo de fibra, desde la caja final hasta el domicilio.
-4. La **[ONT](#ont)** (*Optical Network Terminal*, terminal de red óptica) está en casa del abonado. La norma llama ONU (*Optical Network Unit*, unidad de red óptica) al equipo de usuario en general; en FTTH ese equipo es la ONT, y de ella salen **internet**, **telefonía** y **televisión**.
-
-En el taller hay un panel con estas piezas montadas, que se trabajará en la sesión práctica.
+El horizontal de cobre admite **90 m** de enlace permanente, de la toma de usuario o **[TO](#to)** al panel, y el latiguillo del puesto no debe pasar de **5 m**. Esas cifras están en [Normas y distancias](#normas-y-distancias). Dentro del edificio, el vertical se hace en fibra **multimodo** de clase **[OM3](#om3-om4)** u **OM4** (*optical multimode*, multimodo óptico: el número indica la clase). Entre edificios, el campus se hace en fibra **monomodo** de clase **[OS2](#os2)** (*optical singlemode*, monomodo óptico). El diámetro del núcleo, el tipo de emisor y las distancias orientativas a 10 Gbit/s —OM3 unos 300 m, OM4 unos 400 m, y OS2 del orden de kilómetros— están en el [Tema 2, multimodo y monomodo](../02-medios-capa-fisica/tema2.md#multimodo-mm-y-monomodo-sm). En este tema interesa elegir la clase de cada tramo y saber cómo termina en el rack.
 
 <figure markdown="span">
-  ![Panel de prácticas FTTH montado en el taller, con cajas de empalme y distribución, caja terminal con divisor, roseta óptica y equipos de usuario](../img/t3-gpon-panel-taller.jpg){ width="500" }
-  <figcaption>Panel de prácticas FTTH del taller. Arriba, las cajas de planta exterior; a la izquierda, la caja terminal abierta con el divisor; en el centro, la roseta óptica y el equipo de usuario. Foto: Departamento de Informática.</figcaption>
+  ![Edificio y campus con CD, BD, FD y TO: el puesto y el horizontal en cobre, el vertical en fibra multimodo y el campus en fibra monomodo, con las distancias de cada tramo](../img/t3-fibra-edificio-campus.svg){ width="900" }
+  <figcaption>El latiguillo (hasta 5 m) y el horizontal (hasta 90 m de enlace permanente) van en cobre. El vertical FD–BD va en multimodo OM3 u OM4. El campus BD–CD va en monomodo OS2 y se mide en kilómetros. Las distancias de la fibra son orientativas, a 10 Gbit/s.</figcaption>
 </figure>
 
-Los dos sentidos viajan por **una sola fibra**, separados por longitud de onda (multiplexación **WDM**, *Wavelength Division Multiplexing*). La bajada va a **1490 nm**, la subida a **1310 nm** y, cuando la red superpone vídeo de radiofrecuencia (RF), ese canal va a **1550 nm** junto con la bajada. Si la televisión va por IP, la longitud de 1550 nm puede no usarse. La bajada es de **difusión**: el divisor copia la misma luz hacia todas las ONT y cada una se queda con sus datos. La subida usa acceso múltiple por división en el tiempo (**TDMA**, *Time Division Multiple Access*): la OLT concede un turno a cada ONT para que no emitan a la vez sobre la fibra que comparten.
+**Ejemplo.** En un instituto, el aula llega al FD de la planta por cable de pares. De ese armario al BD del edificio baja un troncal multimodo OM3 u OM4: cubre la altura del inmueble y un enlace a 10 Gbit/s de unos cientos de metros. Si el otro edificio queda más lejos de lo que alcanza el multimodo, el troncal del BD al CD es monomodo OS2.
 
-### Ejemplo 1. Recorrido de la señal
+!!! warning "Errores frecuentes"
+    Tender fibra en el horizontal del puesto, o dejar el vertical de un edificio en cobre porque la categoría «aguanta». El horizontal sigue en cobre y conserva el límite de 90 m. El vertical y el campus se proyectan en la fibra que corresponde a la distancia, no alargando un latiguillo de cobre.
 
-La OLT inyecta la bajada a 1490 nm en la fibra que sale de la central. En la caja de distribución, el divisor pasivo reparte esa luz entre varias fibras. Una de ellas llega a la caja final del edificio o de la calle, y desde ahí la acometida entra en el domicilio hasta la ONT. La ONT convierte la luz en internet, telefonía y televisión. A la vuelta, la ONT transmite a 1310 nm solo durante su turno; el mismo divisor junta las subidas y las devuelve a la OLT. El resto de salidas del divisor llevan la misma bajada a otros abonados.
+### Terminación en el rack
 
-<figure markdown="span">
-  ![Recorrido GPON desde la OLT de la central, por el divisor pasivo y la caja final, hasta la ONT y los servicios de internet, telefonía y televisión](../img/t3-gpon-recorrido.svg){ width="900" }
-  <figcaption>Ejemplo de recorrido. Una sola fibra lleva la bajada (1490 nm), la subida (1310 nm) y, si se usa, el vídeo RF (1550 nm). El divisor no se alimenta y copia la bajada hacia cada abonado.</figcaption>
-</figure>
+El cable troncal no se enchufa al switch. Entra en el armario, se fija y se empalma en una **bandeja de empalmes**. Los conectores que quedan a la vista están en el **[ODF](#odf)** (*Optical Distribution Frame*, distribuidor óptico): un panel o un casete, a menudo en la misma bandeja, con adaptadores **[LC](#lc)** (*Lucent Connector*, conector Lucent) o **[SC](#sc)** (*Subscriber Connector*, conector de abonado). El LC es el habitual en los racks y en los módulos de fibra actuales, porque ocupa menos espacio en el panel. El SC, de cuerpo cuadrado, sigue presente en instalaciones anteriores. Los dos se enchufan a presión; no se giran como el conector ST antiguo.
 
-### Ejemplo 2. Cálculo sencillo de pérdidas
+Entre el troncal y el ODF se fusiona un **[pigtail](#pigtail)** (rabillo): un tramo corto de fibra con conector de fábrica en un extremo y fibra desnuda en el otro. El extremo desnudo se funde con una fibra del troncal; el extremo con conector se enchufa en el adaptador del ODF. Del ODF al puerto óptico del switch va un **latiguillo** de fibra, conectorizado en los dos extremos y de la misma clase que el troncal. No se mezcla multimodo con monomodo, ni un conector LC con un adaptador SC.
 
-Casi todo el margen se lo queda el divisor. En este ejemplo, la fibra, las fusiones y los conectores se cuentan con cifras **orientativas de proyecto**; el intervalo de la clase B+ sí lo fija la norma. Un divisor **1:32** se toma a **17 dB**, valor típico de catálogo: solo repartir la luz entre 32 salidas ya ronda los 15 dB, y el divisor real añade un poco más. La fibra de planta se toma a **0,35 dB/km** a **1310 nm**, por debajo del máximo de **0,4 dB/km** que la UIT-T G.652 asigna a la fibra monomodo de cable en esa longitud. Cada fusión bien hecha se cuenta a **0,1 dB** y cada conector a **0,5 dB**.
+La fusión del pigtail es la operación del apartado [Empalme por fusión](#empalme-por-fusion-vision-de-taller): corte con cleaver, arco de la fusionadora y protector. Una fusión deficiente no se aprecia al mirar el frontal del rack. Se aprecia en el balance de pérdidas.
 
-Se calcula la **subida**, a 1310 nm, porque ahí la fibra atenúa más que a 1490 nm. El enlace del ejemplo tiene **8 km**, un solo divisor 1:32, **cuatro fusiones** y **cuatro conectores**:
+### Balance de pérdidas de un enlace de backbone
+
+El **[balance de pérdidas](#balance-de-perdidas)** suma, en **decibelios (dB)**, todo lo que atenúa la luz en un sentido del enlace y compara esa suma con el máximo que admite el equipo. Si la suma se pasa, el indicador de enlace puede encenderse y la comunicación fallar de todos modos, o el enlace puede funcionar un tiempo y caer cuando se añade otro empalme.
+
+Las cifras siguientes son **orientativas de proyecto**. El enlace del ejemplo es un backbone de campus de **8 km** de monomodo, a **1310 nm**, de un rack al otro, sin repartir la luz. La fibra se cuenta a **0,35 dB/km**. Cada fusión bien hecha, a **0,1 dB**. Cada conector —cada pareja enchufada—, a **0,5 dB**. En cada rack se cuentan dos conectores, el del latiguillo en el equipo y el del latiguillo en el ODF, y dos fusiones, la del pigtail en la bandeja y otra en la caja de empalme del tendido. Entre los dos racks son cuatro conectores y cuatro fusiones.
 
 | Concepto | Cálculo | Pérdida |
 | --- | --- | --- |
-| Divisor óptico 1:32 | valor típico | 17 dB |
-| Fibra de planta, 8 km a 1310 nm | 8 × 0,35 dB/km | 2,8 dB |
+| Fibra, 8 km a 1310 nm | 8 × 0,35 dB/km | 2,8 dB |
 | 4 fusiones bien hechas | 4 × 0,1 dB | 0,4 dB |
 | 4 conectores | 4 × 0,5 dB | 2,0 dB |
-| **Total** | | **22,2 dB** |
+| **Total** | | **5,2 dB** |
 
-La clase **B+** admite entre **13 dB** y **28 dB** de pérdida, tanto a 1490 nm como a 1310 nm (UIT-T G.984.2, anexo A, tabla A.2). Por debajo de 13 dB llega demasiada potencia y el receptor puede saturarse; por encima de 28 dB la señal ya no basta. El total de 22,2 dB entra en ese intervalo: el enlace funciona. Hasta el máximo quedan **5,8 dB** de margen (28 − 22,2).
+Para un enlace Ethernet de 10 Gbit/s sobre monomodo, con alcance nominal de unos 10 km (la aplicación se denomina **10GBASE-LR**), el canal se estima con 0,4 dB/km de fibra y 2 dB para conectores y empalmes: 10 × 0,4 + 2 = **6,0 dB**. Ese es el máximo orientativo de este ejemplo. En el taller prevalece la hoja del transceptor si indica otra cifra. El total de 5,2 dB cabe. El margen es 6,0 − 5,2 = **0,8 dB**.
 
-Ese margen es el que se trabaja en el [empalme por fusión](#empalme-por-fusion-vision-de-taller). Si las cuatro fusiones quedaran en 1 dB en lugar de 0,1 dB, aportarían 4 dB en vez de 0,4 dB y el total pasaría a **25,8 dB**. El enlace seguiría dentro, pero el margen bajaría a 2,2 dB. Unos empalmes defectuosos de más sacan el enlace de los 28 dB y la ONT deja de recibir nivel suficiente.
+Ese margen es el que se trabaja en el [empalme por fusión](#empalme-por-fusion-vision-de-taller). Si las cuatro fusiones quedaran en 1 dB en lugar de 0,1 dB, aportarían 4,0 dB en vez de 0,4 dB. El total pasaría a **8,8 dB**, por encima de 6,0 dB, y el enlace saldría del presupuesto. Una fusión de 1 dB no es una desviación menor: en este ejemplo las cuatro suman 3,6 dB de más y dejan el troncal fuera de servicio aunque el cobre de la planta esté bien.
+
+<figure markdown="span">
+  ![Enlace de fibra de backbone entre dos racks: latiguillo, conectores, ODF, pigtail, fusiones y cable troncal, con la pérdida en decibelios de cada elemento](../img/t3-fibra-balance-backbone.svg){ width="900" }
+  <figcaption>Un sentido del enlace, del rack A al rack B. Cada conector resta 0,5 dB y cada fusión 0,1 dB; el troncal de 8 km aporta 2,8 dB. La suma es 5,2 dB, y el máximo orientativo de este ejemplo es 6,0 dB. El sentido contrario repite las mismas pérdidas.</figcaption>
+</figure>
 
 !!! warning "Errores frecuentes"
-    Invertir bajada y subida: a 1490 nm la señal llega a todas las ONT; a 1310 nm cada ONT espera su turno. Tratar el divisor como un amplificador de coaxial: no se alimenta y no se ajusta. Sumar dos divisores cuando el reparto del ejemplo es uno solo. Dar por buena una fusión deficiente porque aún se mide algo de luz: cada décima de más sale del margen de 28 dB.
+    Contar solo los kilómetros de fibra y olvidar conectores y fusiones: en este ejemplo los conectores (2,0 dB) pesan casi tanto como los 8 km de cable (2,8 dB). Dar por cerrada una fusión de 1 dB porque la fusionadora ha terminado el ciclo: el equipo muestra una estimación, y el empalme se repite si esa estimación se dispara. Mezclar en el mismo troncal un latiguillo multimodo con un cable monomodo.
 
 ---
 
@@ -457,7 +456,7 @@ En fibra, el **empalme por fusión** une dos núcleos fundiéndolos con un arco 
 
 En **PRL** hacen falta gafas, no mirar el haz y recoger los restos de fibra en un recipiente específico: pinchan y apenas se ven.
 
-La práctica evaluable es **PR304**. El crimpado de cobre (conectores RJ‑45) ya se hizo en **PR201** (CE3c); aquí el mismo criterio se aplica a la fibra.
+La práctica evaluable es **[PR303](#pr303-taller-fusion-de-fibra)**. El crimpado de cobre (conectores RJ‑45) ya se hizo en **PR201** (CE3c); aquí el mismo criterio se aplica a la fibra.
 
 ---
 
@@ -492,90 +491,22 @@ La práctica evaluable es **PR304**. El crimpado de cobre (conectores RJ‑45) y
 
 * :simple-readdotcv: **AC305**. (RA3 // CE3a, CE3d // RA4 // CE4c // **AC 0–1**). Propón la electrónica para un centro con **dos edificios**: switches de armario, router de salida, gateway/firewall y AP interiores/exteriores. Diagrama en [Excalidraw](https://excalidraw.com/), [draw.io](https://app.diagrams.net/) o [Dia](https://wiki.gnome.org/Apps/Dia) + breve justificación en el `.md`.
 
-### PR301 — Taller: panel, tomas, armario y switch
+### PR301 — Taller: NIC y WLAN real { #pr301-taller-nic-y-wlan-real }
 
 | Campo | Valor |
 | --- | --- |
 | **Código** | **PR301** |
-| **UP / tema** | T3 — Cableado estructurado |
-| **RA principal** | **RA2** (despliegue) + **RA3** (interconexión). Apoyo **RA4** |
-| **CE de cobertura** | CE2d, CE2f, CE2g, CE2i, CE2j · CE3a, CE3d, CE3e, CE3f |
-| **Sesiones estimadas** | **2** |
-| **Instrumento** | Checklist de montaje + rúbrica 0–10 |
-
-* :simple-neutralinojs: **PR301**. En el **aula-taller** (no solo simulación): montad y conexionad un tramo didáctico de cableado estructurado.
-
-  **Enunciado (qué hace el alumno):**
-
-  1. Preparar el **armario / rack** didáctico (orden, U libres, guiado, seguridad).
-  2. Montar o completar **panel de parcheo** y, si el puesto lo permite, **toma de usuario (TO)** o equivalente didáctico.
-  3. Instalar el **switch** en el armario (fijación, alimentación, etiquetado del equipo).
-  4. Conexionar **panel ↔ switch** con latiguillos; etiquetar puertos según el plan del profesor.
-  5. Verificar **conectividad** básica (enlace / ping entre dos puestos del tramo).
-  6. Documentar el montaje (fotos + esquema de puertos).
-
-  **Evidencia:** fotos del rack (antes/después), etiquetado visible, checklist de montaje, prueba de conectividad, `PR301.md`.
-
-  **Entrega:** `PR301.md` + evidencias en Aules.
-
-| Criterio (rúbrica) | Descripción | Puntos |
-| --- | --- | --- |
-| Rack / panel / TO | Montaje ordenado y conforme al plan | 0–3 |
-| Switch + conexionado | Equipo fijado y enlazado a paneles | 0–3 |
-| Verificación | Conectividad demostrada | 0–2 |
-| Informe `.md` | Fotos, etiquetado, incidencias | 0–2 |
-| **Total** | | **/10** |
-
-### PR304 — Taller: fusión de fibra / fusionadoras
-
-| Campo | Valor |
-| --- | --- |
-| **Código** | **PR304** |
-| **UP / tema** | T3 — Cableado estructurado |
-| **RA principal** | **RA3** (empalmes en fibra). Apoyo **RA2** y **RA6** |
-| **CE de cobertura** | CE3c, CE3f, CE3g · CE2c, CE2j · CE6b, CE6e |
-| **Sesiones estimadas** | **2** |
-| **Instrumento** | Checklist de fusión + rúbrica 0–10 |
-
-* :simple-neutralinojs: **PR304**. En taller, bajo supervisión: realizad un **empalme por fusión** (o la secuencia completa de preparación + fusión + protector que permita el material del centro).
-
-  **Enunciado (pasos):**
-
-  1. EPI y normas: gafas; no mirar fuentes ópticas; recoger restos de fibra.
-  2. Preparar fibras (pelado, limpieza, corte con cleaver).
-  3. Ejecutar la fusión en la **fusionadora**; anotar la atenuación estimada si el equipo la muestra.
-  4. Colocar el **protector** termorretráctil y asentar el empalme.
-  5. Comprobación básica según el equipo disponible (continuidad / potencia / OK de la fusionadora).
-  6. Documentar errores típicos (corte malo, suciedad, protector mal colocado) y cómo se corrigieron.
-
-  **Evidencia:** foto del puesto/fusionadora, captura o lectura de resultado, checklist PRL, `PR304.md`.
-
-  **Entrega:** `PR304.md` + evidencias en Aules.
-
-| Criterio (rúbrica) | Descripción | Puntos |
-| --- | --- | --- |
-| PRL / EPI | Normas aplicadas y documentadas | 0–2 |
-| Preparación y corte | Cleaver / limpieza correctos | 0–2 |
-| Fusión + protector | Empalme válido / protector asentado | 0–3 |
-| Comprobación + informe | Evidencia de OK + `.md` | 0–3 |
-| **Total** | | **/10** |
-
-### PR305 — Taller: WLAN real
-
-| Campo | Valor |
-| --- | --- |
-| **Código** | **PR305** |
 | **UP / tema** | T3 — Cableado estructurado |
 | **RA principal** | **RA4**. Apoyo **RA3** (CE3b) |
 | **CE de cobertura** | CE4a, CE4b, CE4c, CE4d, CE4e, CE4f, CE4i · CE3b |
 | **Sesiones estimadas** | **3** |
 | **Instrumento** | Checklist de montaje + rúbrica 0–10 |
 
-* :simple-neutralinojs: **PR305**. En el aula-taller, por grupos: montáis una **NIC** (PCIe o USB Wi‑Fi) con su driver, instaláis un **AP** o router Wi‑Fi del centro y dejáis una WLAN usable.
+* :simple-neutralinojs: **PR301**. En el aula-taller, por grupos: montáis una **NIC** (PCIe o USB Wi‑Fi) con su driver, instaláis un **AP** o router Wi‑Fi del centro y dejáis una WLAN usable.
 
   **Enunciado (pasos):**
 
-  Seguid la [guía paso a paso de la PR305](../taller/pr305-guia-wlan.md), que incluye los enlaces de descarga de drivers y herramientas.
+  Seguid la [guía paso a paso de la PR301](../taller/pr301-guia-wlan.md), que incluye los enlaces de descarga de drivers y herramientas.
 
   1. Con el equipo apagado y desenchufado, descargad la electricidad estática tocando una parte metálica sin pintar del chasis.
   2. Extraer la NIC que ya trae el equipo (o conectar el adaptador USB), identificarla, volver a montarla y comprobar el **driver** hasta que el sistema vea la interfaz (CE3b, CE4f).
@@ -586,11 +517,11 @@ La práctica evaluable es **PR304**. El crimpado de cobre (conectores RJ‑45) y
   7. Anotar canal e interferencias (analizador o lista de redes vecinas).
   8. Foto del montaje y captura de estado (SSID, canal, seguridad, IP).
 
-  **Evidencia:** fotos, capturas de config y de conectividad, `PR305.md`.
+  **Evidencia:** fotos, capturas de config y de conectividad, `PR301.md`.
 
-  **Entrega:** `PR305.md` + evidencias en Aules.
+  **Entrega:** `PR301.md` + evidencias en Aules.
 
-  **No sustituye** PR301 ni PR304. No se hace en Packet Tracer.
+  **No sustituye** a PR302 ni a PR303. No se hace en Packet Tracer.
 
 | Criterio (rúbrica) | Descripción | Puntos |
 | --- | --- | --- |
@@ -601,36 +532,137 @@ La práctica evaluable es **PR304**. El crimpado de cobre (conectores RJ‑45) y
 | Informe `.md` | Capturas, canal e incidencias | 0–1 |
 | **Total** | | **/10** |
 
-### PR303 — Pasa a certificación: trabajo para casa { #pr303-pasa-a-certificacion-trabajo-para-casa }
+### PR302 — Taller: panel, tomas, armario y switch { #pr302-taller-panel-tomas-armario-y-switch }
+
+| Campo | Valor |
+| --- | --- |
+| **Código** | **PR302** |
+| **UP / tema** | T3 — Cableado estructurado |
+| **RA principal** | **RA2** (despliegue) + **RA3** (interconexión). Apoyo **RA4** |
+| **CE de cobertura** | CE2d, CE2f, CE2g, CE2i, CE2j · CE3a, CE3d, CE3e, CE3f |
+| **Sesiones estimadas** | **2** |
+| **Instrumento** | Checklist de montaje + rúbrica 0–10 |
+
+* :simple-neutralinojs: **PR302**. En el **aula-taller** (no solo simulación): montad y conexionad un tramo didáctico de cableado estructurado.
+
+  **Enunciado (qué hace el alumno):**
+
+  1. Preparar el **armario / rack** didáctico (orden, U libres, guiado, seguridad).
+  2. Montar o completar **panel de parcheo** y, si el puesto lo permite, **toma de usuario (TO)** o equivalente didáctico.
+  3. Instalar el **switch** en el armario (fijación, alimentación, etiquetado del equipo).
+  4. Conexionar **panel ↔ switch** con latiguillos; etiquetar puertos según el plan del profesor.
+  5. Verificar **conectividad** básica (enlace / ping entre dos puestos del tramo).
+  6. Documentar el montaje (fotos + esquema de puertos).
+
+  **Evidencia:** fotos del rack (antes/después), etiquetado visible, checklist de montaje, prueba de conectividad, `PR302.md`.
+
+  **Entrega:** `PR302.md` + evidencias en Aules.
+
+| Criterio (rúbrica) | Descripción | Puntos |
+| --- | --- | --- |
+| Rack / panel / TO | Montaje ordenado y conforme al plan | 0–3 |
+| Switch + conexionado | Equipo fijado y enlazado a paneles | 0–3 |
+| Verificación | Conectividad demostrada | 0–2 |
+| Informe `.md` | Fotos, etiquetado, incidencias | 0–2 |
+| **Total** | | **/10** |
+
+### PR303 — Taller: fusión de fibra { #pr303-taller-fusion-de-fibra }
 
 | Campo | Valor |
 | --- | --- |
 | **Código** | **PR303** |
 | **UP / tema** | T3 — Cableado estructurado |
-| **Dónde** | **Casa** (certificación / +1). No ocupa sesiones de este tema |
-| **Instrumento** | Checklist; se corrige solo si hace falta |
+| **RA principal** | **RA3** (empalmes en fibra). Apoyo **RA2** y **RA6** |
+| **CE de cobertura** | CE3c, CE3f, CE3g · CE2c, CE2j · CE6b, CE6e |
+| **Sesiones estimadas** | **2** |
+| **Instrumento** | Checklist de fusión + rúbrica 0–10 |
 
-* :simple-cisco: **PR303**. Práctica de **Packet Tracer** de WLAN (AP, SSID, canal, seguridad básica). Guion: [PR303 — WLAN en Packet Tracer](../certificacion/pr303-wlan-packet-tracer.md). Entrega `PR303.pkt` y `PR303.md` cuando lo pida el profesor. **No puntúa** en la nota de los RA (entra en el +1 de certificación). **No sustituye** a **PR305**.
+* :simple-neutralinojs: **PR303**. En taller, bajo supervisión: realizad un **empalme por fusión** (o la secuencia completa de preparación + fusión + protector que permita el material del centro).
 
-### PR302 — Proyecto aulario
+  **Enunciado (pasos):**
+
+  1. EPI y normas: gafas; no mirar fuentes ópticas; recoger restos de fibra.
+  2. Preparar fibras (pelado, limpieza, corte con cleaver).
+  3. Ejecutar la fusión en la **fusionadora**; anotar la atenuación estimada si el equipo la muestra.
+  4. Colocar el **protector** termorretráctil y asentar el empalme.
+  5. Comprobación básica según el equipo disponible (continuidad / potencia / OK de la fusionadora).
+  6. Documentar errores típicos (corte malo, suciedad, protector mal colocado) y cómo se corrigieron.
+
+  **Evidencia:** foto del puesto/fusionadora, captura o lectura de resultado, checklist PRL, `PR303.md`.
+
+  **Entrega:** `PR303.md` + evidencias en Aules.
+
+| Criterio (rúbrica) | Descripción | Puntos |
+| --- | --- | --- |
+| PRL / EPI | Normas aplicadas y documentadas | 0–2 |
+| Preparación y corte | Cleaver / limpieza correctos | 0–2 |
+| Fusión + protector | Empalme válido / protector asentado | 0–3 |
+| Comprobación + informe | Evidencia de OK + `.md` | 0–3 |
+| **Total** | | **/10** |
+
+### PR304 — Diseño de cableado estructurado en diagrama { #pr304-diseno-cableado-estructurado }
 
 | Campo | Valor |
 | --- | --- |
-| **Código** | **PR302** |
+| **Código** | **PR304** |
+| **Agrupamiento** | **Individual** |
+| **UP / tema** | T3 — Cableado estructurado |
+| **RA principal** | **RA2**. Apoyo **RA3** |
+| **CE de cobertura** | CE2d, CE2e, CE2f, CE2g, CE2i |
+| **Sesiones estimadas** | **1–2** |
+| **Instrumento** | Rúbrica de diseño 0–10 |
+
+* :simple-neutralinojs: **PR304**. Trabajo **individual**. Diseñad el cableado estructurado de una oficina bancaria de una sola planta, de **16 m × 9,5 m** y **3,7 m** de altura libre. El plano de partida no trae tomas, ni cuarto de telecomunicaciones, ni canalizaciones: hay que completar el diseño. No se publica una solución.
+
+<figure markdown="span">
+  ![Plano de una oficina bancaria con salas de trabajo, una sala de reuniones y puestos, sin tomas ni cuarto de telecomunicaciones](../img/t3-pr304-oficina.jpg){ width="720" }
+  <figcaption>Plano de partida de la PR304. La sala de reuniones viene rotulada; el resto de los locales se reconoce por el mobiliario. Sobre este dibujo se codifican las salas, se sitúan las tomas, se elige el cuarto de telecomunicaciones y se traza el horizontal.</figcaption>
+</figure>
+
+**Enunciado:**
+
+El dibujo se hace en [draw.io (diagrams.net)](https://app.diagrams.net/), [Excalidraw](https://excalidraw.com/) o [Dia](https://wiki.gnome.org/Apps/Dia). Si usáis Excalidraw y no lo habéis abierto antes, la [guía de Excalidraw](https://github.com/fjavier-hernandez/ral/blob/main/archivo/2526/docs/guia_excalidraw.md) del material de curso resume la interfaz. El plano de esta página puede servir de base: calcadlo o redibujadlo en la herramienta.
+
+1. Codificad todas las salas del plano con un criterio que se pueda mantener en el resto del diseño (por ejemplo, un código de planta y de local). Situad las tomas de usuario. Cada puesto de trabajo lleva **dos tomas de datos**. El punto de acceso lleva **su propia toma**, distinta de las de los puestos.
+2. Elegid el cuarto de telecomunicaciones, que es el local donde irá el rack, y justificad la elección por escrito. Tienen que cumplirse a la vez tres condiciones: el enlace permanente, desde la TO hasta el panel, no supera **90 m**; el latiguillo de usuario no supera **5 m**; y el local tiene ventilación suficiente para el armario: hace falta rejilla o renovación de aire, no un local cerrado sin ninguna de las dos. Explicad por qué el sitio elegido las cumple y por qué descartáis al menos otro local.
+3. Trazad el cableado horizontal **dos veces**: primero por canaleta de superficie y después por techo técnico. Comparad los dos trazados: longitud, cruces, facilidad para ampliar y qué supone la altura de 3,7 m en cada uno. El diseño que entreguéis adopta uno de los dos. El informe indica cuál y por qué.
+4. Haced una tabla de metros **por toma**, sobre el trazado elegido. Medid el recorrido del cable, no la línea recta, y añadid un **25 %** de margen (los metros con margen son los medidos multiplicados por 1,25). La tabla incluye, como mínimo, el código de la toma, la sala, los metros medidos y los metros con margen.
+5. Dibujad el frontal del rack con los paneles de parcheo, el switch y los pasahilos. Indicad las unidades U de cada elemento y la suma, y dejad U libres.
+6. Etiquetad de forma coherente cada TO y el puerto del panel que le corresponde: el mismo código en los dos extremos. El criterio se ve en el diagrama y se explica en el informe.
+7. Cerrad con un inventario y un presupuesto **solo de material**: cable, canalización o techo según el trazado elegido, tomas, paneles, latiguillos, switch, pasahilos y etiquetas. Cada línea lleva una referencia de catálogo o de fabricante. No incluyáis mano de obra ni datos personales.
+
+**Evidencia / entrega:** `PR304.md` y el diagrama (PNG, SVG o el fichero del editor), en Aules.
+
+**No sustituye** al montaje de taller de PR302 ni a la fusión de PR303.
+
+| Criterio (rúbrica) | Descripción | Puntos |
+| --- | --- | --- |
+| Codificación y tomas | Salas codificadas; dos tomas de datos por puesto y toma propia del AP | 0–2 |
+| Cuarto de telecomunicaciones | Elección justificada con los 90 m, los 5 m y la ventilación | 0–2 |
+| Horizontal y metros | Canaleta y techo técnico comparados; tabla por toma con el 25 % | 0–2 |
+| Rack y etiquetado | Paneles, switch, pasahilos y suma de U; la misma etiqueta en la TO y en el panel | 0–2 |
+| Inventario y entrega | Presupuesto solo de material, con referencias; `.md` y diagrama | 0–2 |
+| **Total** | | **/10** |
+
+### PR305 — Proyecto aulario sur del IES { #pr305-proyecto-aulario-sur }
+
+| Campo | Valor |
+| --- | --- |
+| **Código** | **PR305** |
 | **UP / tema** | T3 — Cableado estructurado |
 | **RA principal** | **RA2**. Apoyo **RA3** |
 | **CE de cobertura** | CE2d, CE2e, CE2f, CE2g, CE2i, CE2j · CE3a |
 | **Sesiones estimadas** | **1–2** |
 | **Instrumento** | Rúbrica de diseño 0–10 |
 
-* :simple-neutralinojs: **PR302**. En grupo, diseñad el cableado del **aulario** (dos plantas, aulas, Wi‑Fi, enlace al edificio principal vía campus). El diseño debe ser coherente con el **taller** (PR301, PR304, PR305): rack, paneles, fusión/medios, electrónica y WLAN.
+* :simple-neutralinojs: **PR305**. En grupo, diseñad el cableado del **aulario sur** del instituto: dos plantas, aulas, Wi‑Fi y enlace al edificio principal por el subsistema de campus. El diseño debe ser coherente con lo trabajado en el tema (PR301, PR302, PR303 y PR304): rack, paneles, fibra, electrónica y WLAN.
 
-  - Plano funcional: zonas, FD/BD/CD, horizontal y backbone.
-  - Diagrama en Excalidraw / draw.io / Dia.
-  - Justificación de medios (cobre/fibra), canalizaciones y electrónica básica.
-  - Idea de etiquetado y crecimiento (reserva de puertos/cables).
+  1. Dibujad un plano funcional con las zonas, los distribuidores FD, BD y CD, el horizontal y el backbone.
+  2. Haced el diagrama en [Excalidraw](https://excalidraw.com/), [draw.io](https://app.diagrams.net/) o [Dia](https://wiki.gnome.org/Apps/Dia). La [guía de Excalidraw](https://github.com/fjavier-hernandez/ral/blob/main/archivo/2526/docs/guia_excalidraw.md) sirve si aún no habéis usado la herramienta.
+  3. Justificad los medios (cobre en el horizontal, fibra en vertical y campus), las canalizaciones y la electrónica básica.
+  4. Definid el etiquetado y dejad prevista una reserva de puertos y de cables para crecer.
 
-  **Evidencia / entrega:** `PR302.md` + diagrama (PNG/SVG o archivo del editor, según Aules). Exposición breve (~5 min) si se indica en clase.
+  **Evidencia / entrega:** `PR305.md` + diagrama (PNG/SVG o archivo del editor, según Aules). Exposición breve (~5 min) si se indica en clase.
 
 | Criterio (rúbrica) | Descripción | Puntos |
 | --- | --- | --- |
@@ -641,11 +673,16 @@ La práctica evaluable es **PR304**. El crimpado de cobre (conectores RJ‑45) y
 | Documentación `.md` + diagrama | Claridad y completitud | 0–2 |
 | **Total** | | **/10** |
 
+### Certificación: WLAN en Packet Tracer {: #certificacion-wlan-packet-tracer }
+
+La práctica de WLAN en Packet Tracer (punto de acceso, SSID, canal y seguridad básica) no forma parte de las prácticas numeradas de este tema. El guion está en el [apartado de certificación](../certificacion/pr303-wlan-packet-tracer.md). Se hace en casa, cuenta para el +1 y no puntúa en la nota de los RA. No sustituye al taller de NIC y WLAN (**[PR301](#pr301-taller-nic-y-wlan-real)**).
+
 ---
+
 
 ## Para el examen
 
-El cableado estructurado es el sistema del edificio (TO, horizontal de 90 m, panel, rack, backbone), no el latiguillo suelto. La **NIC** (Tema 1) se **monta** aquí (PCIe o USB) y lleva **driver**. El **rack** es de 19″ y la altura se mide en **U**. El **panel** empareja cada TO con un puerto etiquetado; de ahí un latiguillo al **switch**. El **hub** queda para laboratorio; el **switch**, para la LAN; el **router** o **gateway**, para otras redes; el **AP**, para Wi‑Fi con SSID, canal y **WPA2/WPA3**, a menudo con **PoE**. En fusión de fibra: cleaver, fusionadora, protector y PRL. En FTTH/GPON la OLT de la central llega a la ONT por divisores pasivos, con bajada a 1490 nm, subida a 1310 nm y vídeo RF a 1550 nm si se usa, y la pérdida del enlace tiene que caber en la clase B+ (13–28 dB). CE clave de este tema: **CE2d, CE2f, CE2g, CE3a, CE3c, CE3f, CE4d, CE4i**.
+El cableado estructurado es el sistema del edificio (TO, horizontal de 90 m, panel, rack, backbone), no el latiguillo suelto. La **NIC** (Tema 1) se **monta** aquí (PCIe o USB) y lleva **driver**. El **rack** es de 19″ y la altura se mide en **U**. El **panel** empareja cada TO con un puerto etiquetado; de ahí un latiguillo al **switch**. El **hub** queda para laboratorio; el **switch**, para la LAN; el **router** o **gateway**, para otras redes; el **AP**, para Wi‑Fi con SSID, canal y **WPA2/WPA3**, a menudo con **PoE**. En fusión de fibra: cleaver, fusionadora, protector y PRL. En la fibra del edificio, el horizontal sigue en cobre (90 m de enlace permanente y 5 m de latiguillo). El vertical FD–BD va en multimodo OM3/OM4 y el campus BD–CD en monomodo OS2. En el rack el troncal termina en la bandeja de empalmes y en el ODF, con pigtail fusionado y latiguillo LC o SC hasta el switch. El balance de pérdidas suma fibra, fusiones y conectores; una fusión mala reduce el margen y puede dejar el enlace por encima del máximo. CE clave de este tema: **CE2d, CE2f, CE2g, CE3a, CE3c, CE3f, CE4d, CE4i**.
 
 ## Autocheck del tema
 
@@ -668,9 +705,9 @@ Hazlo **después** de entregar el cuestionario inicial en Aules.
 12. En la fusión de fibra, ¿para qué sirve el cleaver?
 13. **V/F.** El montaje de una NIC PCIe o USB cubre, entre otros, el criterio de instalar el adaptador en el equipo.
 14. Un canal Ethernet de cobre de 100 m se reparte, de forma habitual, en…
-15. ¿Qué compruebas en PR305 después de configurar SSID, canal y WPA2/WPA3?
-16. Empareja: **OLT** · **ONT** · **divisor óptico** con: (a) equipo en el domicilio, con internet, telefonía y TV · (b) equipo en la central · (c) reparte la luz y no se alimenta.
-17. Un enlace GPON suma 17 dB de un divisor 1:32, 2,8 dB de fibra, 0,4 dB de fusiones y 2,0 dB de conectores. ¿Cabe en el máximo de 28 dB de la clase B+? ¿Qué margen queda?
+15. ¿Qué compruebas en PR301 después de configurar SSID, canal y WPA2/WPA3?
+16. ¿Qué subsistema del cableado estructurado se tiende en cobre y cuáles en fibra? Nombra la clase habitual del vertical y la del campus.
+17. Un enlace de backbone suma 2,8 dB de fibra, 0,4 dB de fusiones y 2,0 dB de conectores. Si el máximo orientativo es 6,0 dB, ¿qué margen queda? Si las cuatro fusiones pasaran de 0,1 dB a 1 dB, ¿el total seguiría por debajo de 6,0 dB?
 
 !!! info "Soluciones"
     Las soluciones se publicarán aquí cuando cierre el cuestionario inicial en Aules.
@@ -727,26 +764,32 @@ Nombre de la red Wi‑Fi que anuncia el AP.
 **WPA2 / WPA3**{: #wpa}
 Mecanismos de seguridad Wi‑Fi actuales (clave o 802.1X). WEP está obsoleto.
 
-**FTTH**{: #ftth}
-*Fiber To The Home*, fibra hasta el hogar: la fibra óptica llega al domicilio del abonado y termina en la ONT.
+**ODF**{: #odf}
+*Optical Distribution Frame*, distribuidor óptico: panel o casete del rack donde terminan los conectores de la fibra. Suele ir con la bandeja de empalmes.
 
-**GPON**{: #gpon}
-*Gigabit-capable Passive Optical Network*, red óptica pasiva con capacidad de gigabit (UIT-T G.984): una OLT reparte la fibra entre varias ONT mediante divisores sin alimentación.
+**pigtail**{: #pigtail}
+Rabillo: tramo corto de fibra con conector de fábrica en un extremo y fibra desnuda en el otro, que se fusiona al cable troncal.
 
-**OLT**{: #olt}
-*Optical Line Terminal*, terminal de línea óptica: equipo de la central. Origina la bajada y asigna los turnos de subida.
+**LC**{: #lc}
+*Lucent Connector*, conector Lucent: conector óptico pequeño, habitual en paneles y en los módulos de fibra de los racks actuales.
 
-**ONT**{: #ont}
-*Optical Network Terminal*, terminal de red óptica: equipo en casa del abonado. Entrega internet, telefonía y televisión.
+**SC**{: #sc}
+*Subscriber Connector*, conector de abonado: conector óptico de cuerpo cuadrado y enganche a presión. Frecuente en instalaciones anteriores.
 
-**divisor óptico**{: #divisor-optico}
-Repartidor pasivo (*splitter*): parte la potencia de una fibra entre varias salidas (1:8, 1:16, 1:32, 1:64…). No se alimenta y concentra la mayor parte de la pérdida del enlace.
+**OM3 / OM4**{: #om3-om4}
+Clases de fibra multimodo (*optical multimode*) para el backbone vertical del edificio. Distancias y núcleo en el [Tema 2](../02-medios-capa-fisica/tema2.md#multimodo-mm-y-monomodo-sm).
+
+**OS2**{: #os2}
+Clase de fibra monomodo (*optical singlemode*) para el enlace de campus. Detalle en el [Tema 2](../02-medios-capa-fisica/tema2.md#multimodo-mm-y-monomodo-sm).
+
+**balance de pérdidas**{: #balance-de-perdidas}
+Suma, en decibelios, de la atenuación de la fibra, las fusiones y los conectores de un enlace, comparada con el máximo que admite el equipo.
 
 ---
 
 ## Relación con el resto del módulo
 
-El **Tema 1** dio dispositivos, capas y la NIC; el **Tema 2**, el medio (UTP, fibra, Wi‑Fi, crimpado). Aquí se monta el **edificio**: rack, panel, TO y WLAN real (**PR305**). El **Tema 4** profundiza en la trama y en el switch; el **Tema 6**, en VLAN sobre switch físico (**PR604**). La certificación (**PR303** y el resto de Packet Tracer) se hace en casa.
+El **Tema 1** dio dispositivos, capas y la NIC; el **Tema 2**, el medio (UTP, fibra, Wi‑Fi, crimpado). Aquí se monta el **edificio**: rack, panel, TO, fibra de backbone y WLAN real (**[PR301](#pr301-taller-nic-y-wlan-real)**). El **Tema 4** profundiza en la trama y en el switch; el **Tema 6**, en VLAN sobre switch físico (**PR604**). La práctica de Packet Tracer de WLAN y el resto de la certificación se hacen en casa.
 
 ---
 
@@ -769,5 +812,8 @@ El **Tema 1** dio dispositivos, capas y la NIC; el **Tema 2**, el medio (UTP, fi
 *[FD]: Floor Distributor
 *[BD]: Building Distributor
 *[CD]: Campus Distributor
+*[ODF]: Optical Distribution Frame
+*[LC]: Lucent Connector
+*[SC]: Subscriber Connector
 *[AP]: Access Point
 *[SSID]: Service Set Identifier
