@@ -1,0 +1,1342 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Apuntes para el módulo profesional de Redes de Área Local del ciclo formativo de grado medio de Sistemas Microinformáticos y Redes.">
+      
+      
+      
+        <link rel="canonical" href="https://fjavier-hernandez.github.io/ral/taller/pr301-guia-wlan.html">
+      
+      
+        <link rel="prev" href="pr201-guia-crimpado.html">
+      
+      
+        <link rel="next" href="../certificacion/index.html">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../img/ral.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
+    
+    
+      
+        <title>PR301 — NIC y WLAN real - Redes de Área Local</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-0CPJP88MBF"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-0CPJP88MBF",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-0CPJP88MBF",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>if("undefined"!=typeof __md_analytics){var consent=__md_get("__consent");consent&&consent.analytics&&__md_analytics()}</script>
+  
+
+    
+    
+  
+<meta property="og:type" content="website" />
+<meta property="og:title" content="PR301 — NIC y WLAN real - Redes de Área Local" />
+<meta property="og:description" content="Apuntes para el módulo profesional de Redes de Área Local del ciclo formativo de grado medio de Sistemas Microinformáticos y Redes." />
+<meta property="og:image" content="https://fjavier-hernandez.github.io/ral/assets/images/social/taller/pr301-guia-wlan.png" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:url" content="https://fjavier-hernandez.github.io/ral/taller/pr301-guia-wlan.html" />
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:title" content="PR301 — NIC y WLAN real - Redes de Área Local" />
+<meta property="twitter:description" content="Apuntes para el módulo profesional de Redes de Área Local del ciclo formativo de grado medio de Sistemas Microinformáticos y Redes." />
+<meta property="twitter:image" content="https://fjavier-hernandez.github.io/ral/assets/images/social/taller/pr301-guia-wlan.png" />
+</head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="javi" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#pr301-guia-de-taller-nic-y-wlan-real" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../index.html" title="Redes de Área Local" class="md-header__button md-logo" aria-label="Redes de Área Local" data-md-component="logo">
+      
+  <img src="../img/ral.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Redes de Área Local
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              PR301 — NIC y WLAN real
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="javi" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Cambiar a modo noche"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo noche" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Cambiar a modo día"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo día" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../index.html" title="Redes de Área Local" class="md-nav__button md-logo" aria-label="Redes de Área Local" data-md-component="logo">
+      
+  <img src="../img/ral.svg" alt="logo">
+
+    </a>
+    Redes de Área Local
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-introduccion-arquitectura/tema1.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Introducción. Arquitectura de redes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-medios-capa-fisica/tema2.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Medios de transmisión y capa física
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-cableado-estructurado/tema3.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Cableado estructurado y componentes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Taller
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Taller
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../00-normas/normas_taller.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Normas del taller
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="pr201-guia-crimpado.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PR201 — Crimpado de latiguillos UTP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PR301 — NIC y WLAN real
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="pr301-guia-wlan.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PR301 — NIC y WLAN real
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#material-por-grupo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Material por grupo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fase-1-extraer-y-volver-a-montar-la-nic-ce3b" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fase 1. Extraer y volver a montar la NIC (CE3b)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fase-2-driver-y-comprobacion-en-el-sistema-ce4f" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fase 2. Driver y comprobación en el sistema (CE4f)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fase-3-restablecer-y-conectar-el-ap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fase 3. Restablecer y conectar el AP
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fase-4-configurar-la-wlan-ce4ace4d-ce4i" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fase 4. Configurar la WLAN (CE4a–CE4d, CE4i)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fase-5-conectar-un-cliente-y-comprobar-ce4e" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fase 5. Conectar un cliente y comprobar (CE4e)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fase-6-canales-e-interferencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fase 6. Canales e interferencias
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fase-7-dejarlo-todo-como-estaba" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fase 7. Dejarlo todo como estaba
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ampliacion-opcional-firmware-dd-wrt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ampliación opcional: firmware DD-WRT
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#entrega" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Entrega
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../certificacion/index.html" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Certificación
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Certificación
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../certificacion/packet-tracer.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Packet Tracer (inicio)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../certificacion/pr202-capa-fisica.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PR202 — Conectar la capa física
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../certificacion/pr303-wlan-packet-tracer.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PR303 — WLAN (Packet Tracer)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../certificacion/pr103-primera-red.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PR103 — Mi primera red
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../certificacion/pr102-modelos-osi.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PR102 — Modelos OSI/TCP (opcional)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#material-por-grupo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Material por grupo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fase-1-extraer-y-volver-a-montar-la-nic-ce3b" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fase 1. Extraer y volver a montar la NIC (CE3b)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fase-2-driver-y-comprobacion-en-el-sistema-ce4f" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fase 2. Driver y comprobación en el sistema (CE4f)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fase-3-restablecer-y-conectar-el-ap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fase 3. Restablecer y conectar el AP
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fase-4-configurar-la-wlan-ce4ace4d-ce4i" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fase 4. Configurar la WLAN (CE4a–CE4d, CE4i)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fase-5-conectar-un-cliente-y-comprobar-ce4e" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fase 5. Conectar un cliente y comprobar (CE4e)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fase-6-canales-e-interferencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fase 6. Canales e interferencias
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fase-7-dejarlo-todo-como-estaba" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fase 7. Dejarlo todo como estaba
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ampliacion-opcional-firmware-dd-wrt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ampliación opcional: firmware DD-WRT
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#entrega" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Entrega
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="pr301-guia-de-taller-nic-y-wlan-real">PR301 — Guía de taller: NIC y WLAN real<a class="headerlink" href="#pr301-guia-de-taller-nic-y-wlan-real" title="Permanent link">&para;</a></h1>
+<p>Antes de empezar, repasad las <a href="../00-normas/normas_taller.html">normas del taller</a>. Esta guía desarrolla paso a paso la práctica <strong>PR301</strong> del <a href="../03-cableado-estructurado/tema3.html#pr301-taller-nic-y-wlan-real">Tema 3</a>. Se trabaja por grupos en el aula-taller con equipos de sobremesa del centro y con los puntos de acceso y routers Wi‑Fi del taller. La rúbrica y la entrega son las del tema.</p>
+<div class="admonition warning">
+<p class="admonition-title">Antes de empezar</p>
+<ul>
+<li>El router o AP del grupo <strong>no se conecta nunca a la red del centro</strong> (ni a las rosetas de la pared ni al switch del aula). Si se conecta, su servidor DHCP (el servicio que reparte direcciones IP) puede dejar sin red a otros equipos del instituto. Cada grupo trabaja con la red propia de su router.</li>
+<li>El equipo se abre <strong>siempre apagado y desenchufado</strong>.</li>
+</ul>
+</div>
+<h2 id="material-por-grupo">Material por grupo<a class="headerlink" href="#material-por-grupo" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Un equipo de sobremesa con una NIC (<em>Network Interface Card</em>, tarjeta de red) PCIe ya instalada, o un adaptador USB Wi‑Fi.</li>
+<li>Un router o punto de acceso (AP, <em>Access Point</em>) Wi‑Fi del taller con su alimentador.</li>
+<li>Un latiguillo RJ‑45. Podéis usar los que hicisteis en la <a href="pr201-guia-crimpado.html">PR201</a>.</li>
+<li>Un destornillador de estrella y un portátil o un móvil para hacer de cliente Wi‑Fi.</li>
+</ul>
+<h2 id="fase-1-extraer-y-volver-a-montar-la-nic-ce3b">Fase 1. Extraer y volver a montar la NIC (CE3b)<a class="headerlink" href="#fase-1-extraer-y-volver-a-montar-la-nic-ce3b" title="Permanent link">&para;</a></h2>
+<p>Los equipos del taller ya tienen la tarjeta de red instalada. El objetivo es <strong>extraerla, identificarla y volver a montarla</strong> correctamente, como haríais al sustituir una tarjeta averiada.</p>
+<ol>
+<li>Apagad el equipo desde el sistema operativo y <strong>desenchufad el cable de corriente</strong>. Con el equipo ya desenchufado, mantened pulsado el botón de encendido unos segundos para descargar la energía que queda en la fuente.</li>
+<li><strong>Descarga de electricidad estática.</strong> Antes de tocar ningún componente, tocad con la mano una parte metálica <strong>sin pintar</strong> del chasis. Repetidlo cada vez que os mováis o cojáis algo. Sujetad la tarjeta siempre por los bordes, sin tocar los contactos dorados ni los chips.</li>
+<li>Abrid la tapa lateral y localizad la tarjeta en su ranura <strong>PCIe</strong> (<em>PCI Express</em>, el bus de expansión de la placa base). Haced una <strong>foto antes de tocar nada</strong>.</li>
+<li>Quitad el tornillo o la pestaña que la sujeta al chasis y tirad de ella hacia arriba con suavidad y de forma recta. Si la ranura tiene una patilla de bloqueo, liberadla primero.</li>
+<li><strong>Identificad la tarjeta</strong>: anotad el fabricante, el modelo, el tipo de ranura (x1, x4…) y la dirección MAC (<em>Media Access Control</em>, el identificador físico de la tarjeta) si viene en la pegatina. Haced una foto de la tarjeta.</li>
+<li>Volved a montarla: alineadla con la ranura, presionad de forma uniforme hasta que encaje del todo y atornilladla al chasis. Cerrad la tapa.</li>
+<li>Si vuestro grupo usa un adaptador USB Wi‑Fi en lugar de una tarjeta PCIe, conectadlo a un puerto USB del equipo y anotad igualmente el fabricante y el modelo.</li>
+</ol>
+<h2 id="fase-2-driver-y-comprobacion-en-el-sistema-ce4f">Fase 2. Driver y comprobación en el sistema (CE4f)<a class="headerlink" href="#fase-2-driver-y-comprobacion-en-el-sistema-ce4f" title="Permanent link">&para;</a></h2>
+<p>El <strong>driver</strong> (controlador) es el software que permite al sistema operativo usar la tarjeta.</p>
+<ol>
+<li>Encended el equipo y abrid el <strong>Administrador de dispositivos</strong> (clic derecho en Inicio). En «Adaptadores de red» debe aparecer la tarjeta <strong>sin</strong> triángulo amarillo.</li>
+<li>Si aparece con aviso, o como «Dispositivo desconocido», instalad o actualizad el driver siguiendo la guía de Microsoft <a href="https://support.microsoft.com/es-es/windows/actualizar-controladores-manualmente-en-windows-ec62f46c-ff14-c91d-eead-d7126dc1f7b6">Actualizar controladores manualmente en Windows</a>. Si Windows no lo encuentra, buscadlo en la web del fabricante con el modelo que anotasteis, por ejemplo en el <a href="https://www.tp-link.com/es/support/download/">centro de descargas de TP‑Link</a> o en el <a href="https://www.dlink.com/es/es/support">soporte de D‑Link</a>.</li>
+<li>Abrid una consola (<code>cmd</code>) y ejecutad <code>ipconfig /all</code>. Comprobad que aparece el adaptador y anotad su dirección física (MAC).</li>
+<li>Haced una <strong>captura</strong> del Administrador de dispositivos y otra de <code>ipconfig /all</code>.</li>
+</ol>
+<h2 id="fase-3-restablecer-y-conectar-el-ap">Fase 3. Restablecer y conectar el AP<a class="headerlink" href="#fase-3-restablecer-y-conectar-el-ap" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Conectad el alimentador del router o AP y esperad a que arranque.</li>
+<li><strong>Restablecedlo a valores de fábrica</strong>: con un clip, mantened pulsado el botón <em>Reset</em> unos 10 segundos hasta que parpadeen los LED. Así borráis la configuración del grupo anterior.</li>
+<li>Mirad la <strong>etiqueta</strong> de la parte inferior: indica la dirección de acceso (por ejemplo <code>192.168.0.1</code>, <code>192.168.1.1</code> o <code>tplinkwifi.net</code>), el usuario y la contraseña de fábrica.</li>
+<li>Conectad el equipo a un puerto <strong>LAN</strong> del router con el latiguillo. El puerto <strong>WAN</strong> o <em>Internet</em> se queda <strong>libre</strong>.</li>
+<li>Abrid el navegador y entrad en la dirección de la etiqueta. Si el modelo os pide crear una contraseña de administración, poned una del grupo y anotadla.</li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Si no tenéis AP o queréis ver un modelo antes de tocarlo</p>
+<p>TP‑Link publica <a href="https://emulator.tp-link.com/">emuladores oficiales</a> del panel web de sus routers y AP. Buscad vuestro modelo para practicar la configuración sin el equipo real.</p>
+</div>
+<h2 id="fase-4-configurar-la-wlan-ce4ace4d-ce4i">Fase 4. Configurar la WLAN (CE4a–CE4d, CE4i)<a class="headerlink" href="#fase-4-configurar-la-wlan-ce4ace4d-ce4i" title="Permanent link">&para;</a></h2>
+<p>En el panel web, en el apartado <em>Wireless</em> o <em>Inalámbrico</em>:</p>
+<ol>
+<li><strong>Modo de funcionamiento</strong>: dejadlo como <strong>punto de acceso</strong> o <em>router</em>, según el modelo. Anotad qué otros modos ofrece (repetidor, cliente, puente) y para qué sirve cada uno.</li>
+<li><strong>SSID</strong> (<em>Service Set Identifier</em>, el nombre de la red): <code>RAL-GrupoX</code>, cambiando la X por el número de vuestro grupo.</li>
+<li><strong>Banda y canal</strong>: en 2,4 GHz usad solo los canales <strong>1, 6 u 11</strong>, que son los que no se solapan entre sí. Elegid el que tenga menos redes vecinas (fase 6). Si el equipo tiene 5 GHz, configurad también esa banda.</li>
+<li><strong>Seguridad</strong>: <strong>WPA2‑Personal</strong> con cifrado <strong>AES</strong>, o <strong>WPA3</strong> si el equipo lo admite. La clave tiene que tener al menos 12 caracteres. No uséis WEP ni WPA, porque son inseguros.</li>
+<li><strong>Red de invitados</strong>: si el equipo la tiene, activadla con otro SSID (<code>RAL-GrupoX-Invitados</code>) y su propia clave, y comprobad la opción que impide a los invitados ver la red principal.</li>
+<li>Guardad los cambios y haced una <strong>captura</strong> de cada pantalla de configuración.</li>
+</ol>
+<h2 id="fase-5-conectar-un-cliente-y-comprobar-ce4e">Fase 5. Conectar un cliente y comprobar (CE4e)<a class="headerlink" href="#fase-5-conectar-un-cliente-y-comprobar-ce4e" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Conectad un portátil o un móvil a vuestro SSID.</li>
+<li>Comprobad que el cliente ha recibido una IP del rango del router y anotadla.</li>
+<li>Desde el equipo de sobremesa, haced <code>ping</code> a la IP del cliente. Haced una captura del resultado.</li>
+<li>En el panel del router, buscad la <strong>lista de clientes conectados</strong> (<em>DHCP Clients</em> o <em>Wireless Clients</em>) y haced una captura en la que se vea el cliente.</li>
+</ol>
+<h2 id="fase-6-canales-e-interferencias">Fase 6. Canales e interferencias<a class="headerlink" href="#fase-6-canales-e-interferencias" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Con un móvil Android, instalad <a href="https://play.google.com/store/apps/details?id=com.vrem.wifianalyzer">WiFiAnalyzer</a> (gratuita y de código abierto) y mirad el gráfico de canales.</li>
+<li>En un portátil con Windows, podéis usar el comando <code>netsh wlan show networks mode=bssid</code>, que lista las redes cercanas con su canal y su intensidad. Está explicado en la <a href="https://learn.microsoft.com/es-es/windows-server/administration/windows-commands/netsh-wlan">documentación de <code>netsh wlan</code> de Microsoft</a>.</li>
+<li>Anotad en qué canales están las redes vecinas y justificad el canal que habéis elegido. Haced una captura.</li>
+</ol>
+<h2 id="fase-7-dejarlo-todo-como-estaba">Fase 7. Dejarlo todo como estaba<a class="headerlink" href="#fase-7-dejarlo-todo-como-estaba" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Restableced el router o AP a valores de fábrica con el botón <em>Reset</em>.</li>
+<li>Desconectad el latiguillo y el alimentador y guardad el material en su caja.</li>
+<li>Comprobad que el equipo de sobremesa arranca y sigue viendo su tarjeta de red.</li>
+</ol>
+<h2 id="ampliacion-opcional-firmware-dd-wrt">Ampliación opcional: firmware DD-WRT<a class="headerlink" href="#ampliacion-opcional-firmware-dd-wrt" title="Permanent link">&para;</a></h2>
+<p>Esta fase solo se hace si el profesor lo autoriza y sobre los modelos que él indique. <strong>DD‑WRT</strong> es un firmware libre (el software interno del router) que sustituye al del fabricante y añade funciones avanzadas. El objetivo es comparar las dos interfaces y sus opciones.</p>
+<div class="admonition danger">
+<p class="admonition-title">Riesgo de dejar el router inservible</p>
+<p>Si se carga un firmware que no corresponde exactamente al modelo <strong>y a la versión de hardware</strong> del router, o si se corta la corriente durante la carga, el equipo puede quedar inutilizado. Por eso:</p>
+<ul>
+<li>Comprobad el modelo y la versión (por ejemplo «V9») en la etiqueta del router.</li>
+<li>Buscadlo en la <a href="https://dd-wrt.com/support/router-database/">base de datos oficial de routers de DD‑WRT</a>. Si no aparece como compatible, <strong>no se instala</strong>.</li>
+<li>Antes de nada, descargad el <strong>firmware original</strong> del fabricante para ese modelo y versión, por ejemplo desde el <a href="https://www.tp-link.com/es/support/download/">centro de descargas de TP‑Link</a>, para poder volver atrás.</li>
+<li>Cargad el firmware <strong>siempre por cable</strong>, nunca por Wi‑Fi, y no toquéis el router hasta que termine.</li>
+</ul>
+</div>
+<ol>
+<li>Antes de instalar nada, explorad la <a href="https://dd-wrt.com/demo/">demostración oficial de la interfaz de DD‑WRT</a> para saber qué os vais a encontrar.</li>
+<li>Seguid la <a href="https://wiki.dd-wrt.com/wiki/index.php/Installation">guía oficial de instalación de DD‑WRT</a> y las instrucciones específicas que la base de datos indique para vuestro modelo. Algunos modelos necesitan primero un fichero de tipo <em>factory-to-ddwrt</em> y después otro de tipo <em>webflash</em>.</li>
+<li>Tras la instalación, la dirección de acceso suele pasar a ser <code>192.168.1.1</code>. Repetid la configuración de la fase 4 (SSID, canal, WPA2 y red de invitados) en DD‑WRT.</li>
+<li>Haced una <strong>tabla comparativa</strong> entre el firmware original y DD‑WRT: opciones de modo (AP, repetidor, cliente, puente), seguridad, red de invitados, control de potencia de emisión, estadísticas y facilidad de uso.</li>
+<li>Al terminar, volved a cargar el firmware original si el profesor lo pide.</li>
+</ol>
+<p>Añadid la tabla comparativa y las capturas de DD‑WRT al <code>PR301.md</code>. Como alternativa a DD‑WRT existe <a href="https://openwrt.org/toh/start">OpenWrt</a>, con su propia lista de equipos compatibles.</p>
+<h2 id="entrega">Entrega<a class="headerlink" href="#entrega" title="Permanent link">&para;</a></h2>
+<p>Un fichero <code>PR301.md</code> por grupo, subido a Aules, con:</p>
+<ul>
+<li>Las fotos de la tarjeta (antes, fuera de la ranura y montada) y sus datos: fabricante, modelo, ranura y MAC.</li>
+<li>Las capturas del Administrador de dispositivos y de <code>ipconfig /all</code>.</li>
+<li>Las capturas de la configuración: modo, SSID, banda, canal, seguridad y red de invitados.</li>
+<li>La IP del cliente, el <code>ping</code> y la lista de clientes del router.</li>
+<li>El análisis de canales y por qué elegisteis el vuestro.</li>
+<li>Si hicisteis la ampliación, la tabla comparativa entre el firmware original y DD‑WRT.</li>
+<li>Las incidencias que hayáis tenido y cómo las resolvisteis.</li>
+</ul>
+<p>La calificación sigue la rúbrica de la <a href="../03-cableado-estructurado/tema3.html#pr301-taller-nic-y-wlan-real">PR301 en el Tema 3</a>.</p>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Pie" >
+        
+          
+          <a href="pr201-guia-crimpado.html" class="md-footer__link md-footer__link--prev" aria-label="Anterior: PR201 — Crimpado de latiguillos UTP">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              <div class="md-ellipsis">
+                PR201 — Crimpado de latiguillos UTP
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../certificacion/index.html" class="md-footer__link md-footer__link--next" aria-label="Siguiente: Certificación CCNA y +1">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Siguiente
+              </span>
+              <div class="md-ellipsis">
+                Certificación CCNA y +1
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      2026-2027 Francisco Javier Hernández Illán - <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es">Licencia CC BY-NC-SA</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+    <a href="mailto:<fj.hernandez@edu.gva.es>" target="_blank" rel="noopener" title="" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4l208 156a48 48 0 0 0 57.6 0l208-156c12.1-9.1 19.2-23.3 19.2-38.4 0-26.5-21.5-48-48-48zM0 196v188c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V196L313.6 344.8c-34.1 25.6-81.1 25.6-115.2 0z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.linkedin.com/in/fjavier-hernandez-illan" target="_blank" rel="noopener" title="www.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77m282.1 320h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+      <div class="md-consent" data-md-component="consent" id="__consent" hidden>
+        <div class="md-consent__overlay"></div>
+        <aside class="md-consent__inner">
+          <form class="md-consent__form md-grid md-typeset" name="consent">
+            
+
+
+  
+
+
+<h4>Consentimiento de cookie</h4>
+<p>Esta página de apuntes utiliza cookies para reconocer las visitas, medir la efectividad de la documentación y averiguar si encuentras aquello que buscas o cómo has llegado a estos apuntes. Con tu consentimiento, me ayudas a mejorar estos materiales.</p>
+<input class="md-toggle" type="checkbox" id="__settings" >
+<div class="md-consent__settings">
+  <ul class="task-list">
+    
+    
+      
+        
+  
+  
+    
+    
+  
+  <li class="task-list-item">
+    <label class="task-list-control">
+      <input type="checkbox" name="analytics" checked>
+      <span class="task-list-indicator"></span>
+      Google Analytics
+    </label>
+  </li>
+
+      
+    
+    
+      
+    
+    
+  </ul>
+</div>
+<div class="md-consent__controls">
+  
+    
+      <button class="md-button md-button--primary">Aceptar</button>
+    
+    
+    
+  
+    
+    
+    
+      <label class="md-button" for="__settings">Gestionar cookies</label>
+    
+  
+</div>
+          </form>
+        </aside>
+      </div>
+      <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout((function(){document.querySelector("[data-md-component=consent]").hidden=!1}),250);var form=document.forms.consent;for(var action of["submit","reset"])form.addEventListener(action,(function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map((function(e){return[e,!0]})))),location.hash="",location.reload()}))</script>
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["header.autohide", "navigation.top", "navigation.tracking", "navigation.footer", "navigation.indexes", "content.code.annotate", "announce.dismiss", "toc.follow", "content.code.copy"], "search": "../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.c21346df.min.js"></script>
+      
+        <script src="../js/print-site.js"></script>
+      
+    
+  </body>
+</html>

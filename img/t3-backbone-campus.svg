@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 300" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+  <rect width="880" height="300" fill="#f7f9fb"/>
+  <text x="440" y="28" text-anchor="middle" font-size="16" font-weight="700" fill="#1a2332">Backbone y campus: FD  BD  CD</text>
+
+  <rect x="40" y="90" width="180" height="100" rx="8" fill="#e8f1fb" stroke="#3b6ea5"/>
+  <text x="130" y="128" text-anchor="middle" font-size="14" font-weight="700" fill="#1a2332">FD</text>
+  <text x="130" y="150" text-anchor="middle" font-size="12" fill="#4a5560">Distribuidor de planta</text>
+  <text x="130" y="170" text-anchor="middle" font-size="11" fill="#4a5560">Rack del aula / planta</text>
+
+  <rect x="350" y="90" width="180" height="100" rx="8" fill="#e8f5ee" stroke="#2f7d4a"/>
+  <text x="440" y="128" text-anchor="middle" font-size="14" font-weight="700" fill="#1a2332">BD</text>
+  <text x="440" y="150" text-anchor="middle" font-size="12" fill="#4a5560">Distribuidor de edificio</text>
+  <text x="440" y="170" text-anchor="middle" font-size="11" fill="#4a5560">Sala de telecomunicaciones</text>
+
+  <rect x="660" y="90" width="180" height="100" rx="8" fill="#f3e8f6" stroke="#6b4ea1"/>
+  <text x="750" y="128" text-anchor="middle" font-size="14" font-weight="700" fill="#1a2332">CD</text>
+  <text x="750" y="150" text-anchor="middle" font-size="12" fill="#4a5560">Distribuidor de campus</text>
+  <text x="750" y="170" text-anchor="middle" font-size="11" fill="#4a5560">Entre edificios</text>
+
+  <line x1="220" y1="140" x2="350" y2="140" stroke="#1a2332" stroke-width="3"/>
+  <line x1="530" y1="140" x2="660" y2="140" stroke="#1a2332" stroke-width="3"/>
+
+  <text x="285" y="80" text-anchor="middle" font-size="12" font-weight="600" fill="#1a2332">Backbone (vertical)</text>
+  <text x="285" y="230" text-anchor="middle" font-size="11" fill="#4a5560">Cobre o fibra</text>
+  <text x="595" y="80" text-anchor="middle" font-size="12" font-weight="600" fill="#1a2332">Campus</text>
+  <text x="595" y="230" text-anchor="middle" font-size="11" fill="#4a5560">Normalmente fibra</text>
+
+  <text x="440" y="270" text-anchor="middle" font-size="12" fill="#4a5560">Con fibra, backbone y campus cubren cientos de metros o kilómetros, según el tipo (Tema 2).</text>
+</svg>

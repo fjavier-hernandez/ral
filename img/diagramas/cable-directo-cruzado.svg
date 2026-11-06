@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 460" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+  <rect width="900" height="460" fill="#f7f9fb"/>
+  <text x="450" y="32" text-anchor="middle" font-size="18" font-weight="700" fill="#1a2332">Cable directo y cable cruzado (T568A / T568B)</text>
+  <text x="450" y="52" text-anchor="middle" font-size="12" fill="#5a6570">Vista del RJ-45 con la pestaña abajo y los contactos hacia ti</text>
+
+  <rect x="30" y="70" width="410" height="280" rx="8" fill="#fff" stroke="#2f7d4a" stroke-width="2"/>
+  <text x="235" y="98" text-anchor="middle" font-size="15" font-weight="700" fill="#2f7d4a">Cable directo</text>
+  <text x="235" y="118" text-anchor="middle" font-size="12" fill="#5a6570">Misma norma en ambos extremos</text>
+
+  <text x="90" y="150" text-anchor="middle" font-size="12" font-weight="600" fill="#1a2332">Extremo A</text>
+  <text x="90" y="168" text-anchor="middle" font-size="11" fill="#5a6570">T568B</text>
+  <text x="380" y="150" text-anchor="middle" font-size="12" font-weight="600" fill="#1a2332">Extremo B</text>
+  <text x="380" y="168" text-anchor="middle" font-size="11" fill="#5a6570">T568B</text>
+
+  <g font-size="11">
+    <text x="50" y="200" fill="#1a2332">1 Bl/Na</text>
+    <line x1="110" y1="196" x2="330" y2="196" stroke="#e67e22" stroke-width="2"/>
+    <text x="340" y="200" fill="#1a2332">1 Bl/Na</text>
+
+    <text x="50" y="222" fill="#1a2332">2 Naranja</text>
+    <line x1="110" y1="218" x2="330" y2="218" stroke="#e67e22" stroke-width="2"/>
+    <text x="340" y="222" fill="#1a2332">2 Naranja</text>
+
+    <text x="50" y="244" fill="#1a2332">3 Bl/Ve</text>
+    <line x1="110" y1="240" x2="330" y2="240" stroke="#27ae60" stroke-width="2"/>
+    <text x="340" y="244" fill="#1a2332">3 Bl/Ve</text>
+
+    <text x="50" y="266" fill="#1a2332">6 Verde</text>
+    <line x1="110" y1="262" x2="330" y2="262" stroke="#27ae60" stroke-width="2"/>
+    <text x="340" y="266" fill="#1a2332">6 Verde</text>
+  </g>
+  <text x="235" y="300" text-anchor="middle" font-size="12" fill="#1a2332">PC ↔ switch · TO ↔ panel</text>
+  <text x="235" y="320" text-anchor="middle" font-size="11" fill="#5a6570">(solo se muestran los pares TX/RX)</text>
+
+  <rect x="460" y="70" width="410" height="280" rx="8" fill="#fff" stroke="#b7791f" stroke-width="2"/>
+  <text x="665" y="98" text-anchor="middle" font-size="15" font-weight="700" fill="#b7791f">Cable cruzado</text>
+  <text x="665" y="118" text-anchor="middle" font-size="12" fill="#5a6570">Normas distintas en cada extremo</text>
+
+  <text x="520" y="150" text-anchor="middle" font-size="12" font-weight="600" fill="#1a2332">Extremo A</text>
+  <text x="520" y="168" text-anchor="middle" font-size="11" fill="#5a6570">T568B</text>
+  <text x="810" y="150" text-anchor="middle" font-size="12" font-weight="600" fill="#1a2332">Extremo B</text>
+  <text x="810" y="168" text-anchor="middle" font-size="11" fill="#5a6570">T568A</text>
+
+  <g font-size="11">
+    <text x="480" y="200" fill="#1a2332">1 Bl/Na</text>
+    <line x1="540" y1="196" x2="760" y2="240" stroke="#e67e22" stroke-width="2"/>
+    <text x="770" y="244" fill="#1a2332">3 Bl/Na</text>
+
+    <text x="480" y="222" fill="#1a2332">2 Naranja</text>
+    <line x1="540" y1="218" x2="760" y2="262" stroke="#e67e22" stroke-width="2"/>
+    <text x="770" y="266" fill="#1a2332">6 Naranja</text>
+
+    <text x="480" y="244" fill="#1a2332">3 Bl/Ve</text>
+    <line x1="540" y1="240" x2="760" y2="196" stroke="#27ae60" stroke-width="2"/>
+    <text x="770" y="200" fill="#1a2332">1 Bl/Ve</text>
+
+    <text x="480" y="266" fill="#1a2332">6 Verde</text>
+    <line x1="540" y1="262" x2="760" y2="218" stroke="#27ae60" stroke-width="2"/>
+    <text x="770" y="222" fill="#1a2332">2 Verde</text>
+  </g>
+  <text x="665" y="300" text-anchor="middle" font-size="12" fill="#1a2332">PC ↔ PC · switch ↔ switch (histórico)</text>
+  <text x="665" y="320" text-anchor="middle" font-size="11" fill="#5a6570">Hoy muchos puertos tienen Auto-MDIX</text>
+
+  <rect x="30" y="370" width="840" height="70" rx="6" fill="#eef0f2" stroke="#4a5560"/>
+  <text x="450" y="398" text-anchor="middle" font-size="13" font-weight="600" fill="#1a2332">Regla práctica</text>
+  <text x="450" y="420" text-anchor="middle" font-size="12" fill="#1a2332">Dispositivos distintos → directo. Mismo tipo (sin Auto-MDIX) → cruzado. En taller: T568B–T568B salvo que se pida lo contrario.</text>
+</svg>

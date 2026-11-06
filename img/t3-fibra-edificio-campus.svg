@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 640" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+  <rect width="1040" height="640" fill="#f7f9fb"/>
+  <text x="520" y="30" text-anchor="middle" font-size="16" font-weight="700" fill="#1a2332">Fibra y cobre en el edificio y en el campus</text>
+  <text x="520" y="52" text-anchor="middle" font-size="12" fill="#4a5560">El puesto y el horizontal van en cobre. La fibra empieza en el vertical y sigue en el campus.</text>
+
+  <!-- Main building -->
+  <rect x="470" y="78" width="540" height="470" rx="10" fill="#ffffff" stroke="#c5d0dc" stroke-width="2"/>
+  <text x="740" y="104" text-anchor="middle" font-size="13" font-weight="700" fill="#1a2332">Edificio</text>
+
+  <!-- Floor: work area -->
+  <rect x="490" y="118" width="500" height="168" rx="8" fill="#e8f1fb" stroke="#3b6ea5"/>
+  <text x="740" y="140" text-anchor="middle" font-size="12" font-weight="700" fill="#1a2332">Planta · área de trabajo y FD</text>
+
+  <rect x="508" y="168" width="108" height="44" rx="6" fill="#3b6ea5"/>
+  <text x="562" y="195" text-anchor="middle" fill="#fff" font-size="13" font-weight="700">Puesto</text>
+
+  <line x1="616" y1="190" x2="668" y2="190" stroke="#d68910" stroke-width="3"/>
+  <polygon points="668,184 682,190 668,196" fill="#d68910"/>
+  <text x="649" y="164" text-anchor="middle" font-size="11" font-weight="700" fill="#d68910">hasta 5 m</text>
+  <text x="649" y="214" text-anchor="middle" font-size="11" fill="#4a5560">latiguillo</text>
+
+  <rect x="682" y="168" width="80" height="44" rx="6" fill="#2f7d4a"/>
+  <text x="722" y="195" text-anchor="middle" fill="#fff" font-size="14" font-weight="700">TO</text>
+
+  <line x1="762" y1="190" x2="838" y2="190" stroke="#d68910" stroke-width="3"/>
+  <polygon points="838,184 852,190 838,196" fill="#d68910"/>
+
+  <rect x="852" y="158" width="120" height="64" rx="6" fill="#2f7d4a"/>
+  <text x="912" y="184" text-anchor="middle" fill="#fff" font-size="16" font-weight="700">FD</text>
+  <text x="912" y="204" text-anchor="middle" fill="#e8f5ee" font-size="11">distribuidor</text>
+  <text x="912" y="218" text-anchor="middle" fill="#e8f5ee" font-size="11">de planta</text>
+
+  <text x="700" y="262" text-anchor="middle" font-size="12" font-weight="700" fill="#d68910">Horizontal: cobre UTP · enlace permanente hasta 90 m</text>
+
+  <!-- Vertical fiber -->
+  <line x1="912" y1="222" x2="912" y2="430" stroke="#6b4ea1" stroke-width="4"/>
+  <polygon points="906,430 912,444 918,430" fill="#6b4ea1"/>
+  <text x="700" y="330" text-anchor="middle" font-size="13" font-weight="700" fill="#6b4ea1">Vertical FD–BD</text>
+  <text x="700" y="352" text-anchor="middle" font-size="12" fill="#1a2332">Fibra multimodo OM3 / OM4</text>
+  <text x="700" y="374" text-anchor="middle" font-size="12" fill="#4a5560">A 10 Gbit/s: OM3 ~300 m, OM4 ~400 m</text>
+
+  <!-- BD -->
+  <rect x="812" y="444" width="200" height="72" rx="8" fill="#6b4ea1"/>
+  <text x="912" y="474" text-anchor="middle" fill="#fff" font-size="16" font-weight="700">BD</text>
+  <text x="912" y="496" text-anchor="middle" fill="#f3e8f6" font-size="12">Distribuidor de edificio</text>
+
+  <!-- Campus building -->
+  <rect x="24" y="360" width="250" height="188" rx="10" fill="#f3e8f6" stroke="#6b4ea1" stroke-width="2"/>
+  <text x="149" y="388" text-anchor="middle" font-size="13" font-weight="700" fill="#1a2332">Otro edificio del campus</text>
+  <rect x="48" y="408" width="202" height="100" rx="8" fill="#6b4ea1"/>
+  <text x="149" y="452" text-anchor="middle" fill="#fff" font-size="18" font-weight="700">CD</text>
+  <text x="149" y="476" text-anchor="middle" fill="#f3e8f6" font-size="12">Distribuidor de campus</text>
+
+  <!-- Campus fiber -->
+  <line x1="250" y1="458" x2="430" y2="458" stroke="#6b4ea1" stroke-width="4"/>
+  <line x1="430" y1="458" x2="430" y2="500" stroke="#6b4ea1" stroke-width="4"/>
+  <line x1="430" y1="500" x2="812" y2="500" stroke="#6b4ea1" stroke-width="4"/>
+  <polygon points="800,494 812,500 800,506" fill="#6b4ea1"/>
+  <text x="360" y="418" text-anchor="middle" font-size="13" font-weight="700" fill="#6b4ea1">Campus BD–CD</text>
+  <text x="360" y="440" text-anchor="middle" font-size="12" fill="#1a2332">Fibra monomodo OS2 · kilómetros</text>
+
+  <!-- Legend -->
+  <line x1="620" y1="582" x2="668" y2="582" stroke="#d68910" stroke-width="4"/>
+  <text x="676" y="587" font-size="12" fill="#1a2332">Cobre (puesto y horizontal)</text>
+  <line x1="620" y1="610" x2="668" y2="610" stroke="#6b4ea1" stroke-width="4"/>
+  <text x="676" y="615" font-size="12" fill="#1a2332">Fibra (vertical y campus)</text>
+</svg>

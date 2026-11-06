@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 280" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+  <rect width="920" height="280" fill="#f7f9fb"/>
+  <text x="460" y="28" text-anchor="middle" font-size="16" font-weight="700" fill="#1a2332">Canal de cobre: 100 m (90 m permanentes + latiguillos)</text>
+
+  <rect x="20" y="90" width="70" height="44" rx="4" fill="#3b6ea5"/>
+  <text x="55" y="117" text-anchor="middle" fill="#fff" font-size="12">PC</text>
+
+  <rect x="120" y="90" width="70" height="44" rx="4" fill="#2f7d4a"/>
+  <text x="155" y="117" text-anchor="middle" fill="#fff" font-size="12">TO</text>
+
+  <rect x="430" y="78" width="90" height="68" rx="4" fill="#fff" stroke="#6b4ea1" stroke-dasharray="5 4"/>
+  <text x="475" y="108" text-anchor="middle" font-size="11" fill="#6b4ea1">Punto de</text>
+  <text x="475" y="124" text-anchor="middle" font-size="11" fill="#6b4ea1">consolidación</text>
+  <text x="475" y="140" text-anchor="middle" font-size="10" fill="#4a5560">(opcional)</text>
+
+  <rect x="720" y="90" width="70" height="44" rx="4" fill="#2f7d4a"/>
+  <text x="755" y="117" text-anchor="middle" fill="#fff" font-size="12">Panel</text>
+
+  <rect x="820" y="90" width="80" height="44" rx="4" fill="#2f7d4a"/>
+  <text x="860" y="117" text-anchor="middle" fill="#fff" font-size="12">Switch</text>
+
+  <line x1="90" y1="112" x2="120" y2="112" stroke="#1a2332" stroke-width="3"/>
+  <line x1="190" y1="112" x2="720" y2="112" stroke="#1a2332" stroke-width="3"/>
+  <line x1="790" y1="112" x2="820" y2="112" stroke="#1a2332" stroke-width="3"/>
+
+  <text x="105" y="80" text-anchor="middle" font-size="11" font-weight="700" fill="#1a2332">d 5 m</text>
+  <text x="455" y="70" text-anchor="middle" font-size="12" font-weight="700" fill="#1a2332">Enlace permanente 90 m (TO  panel)</text>
+  <text x="805" y="80" text-anchor="middle" font-size="11" font-weight="700" fill="#1a2332">d 5 m</text>
+
+  <rect x="190" y="170" width="530" height="36" rx="4" fill="#fff3d6" stroke="#d68910"/>
+  <text x="455" y="193" text-anchor="middle" font-size="13" font-weight="700" fill="#1a2332">Canal Ethernet de cobre = 100 m</text>
+
+  <text x="460" y="240" text-anchor="middle" font-size="12" fill="#4a5560">El punto de consolidación, si existe, queda dentro de los 90 m y a no menos de 15 m del FD.</text>
+</svg>

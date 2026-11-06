@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 240" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+  <rect width="960" height="240" fill="#f7f9fb"/>
+  <text x="480" y="28" text-anchor="middle" font-size="16" font-weight="700" fill="#1a2332">Empalme por fusión: secuencia de taller</text>
+
+  <rect x="16" y="70" width="130" height="90" rx="8" fill="#3b6ea5"/>
+  <text x="81" y="110" text-anchor="middle" fill="#fff" font-size="13" font-weight="700">1. Pelado</text>
+  <text x="81" y="132" text-anchor="middle" fill="#e8f1fb" font-size="11">cubierta y buffer</text>
+
+  <polygon points="154,115 170,123 154,131" fill="#4a5560"/>
+
+  <rect x="176" y="70" width="130" height="90" rx="8" fill="#3b6ea5"/>
+  <text x="241" y="110" text-anchor="middle" fill="#fff" font-size="13" font-weight="700">2. Limpieza</text>
+  <text x="241" y="132" text-anchor="middle" fill="#e8f1fb" font-size="11">alcohol isopropílico</text>
+
+  <polygon points="314,115 330,123 314,131" fill="#4a5560"/>
+
+  <rect x="336" y="70" width="130" height="90" rx="8" fill="#3b6ea5"/>
+  <text x="401" y="110" text-anchor="middle" fill="#fff" font-size="13" font-weight="700">3. Corte</text>
+  <text x="401" y="132" text-anchor="middle" fill="#e8f1fb" font-size="11">cleaver</text>
+
+  <polygon points="474,115 490,123 474,131" fill="#4a5560"/>
+
+  <rect x="496" y="70" width="130" height="90" rx="8" fill="#2f7d4a"/>
+  <text x="561" y="110" text-anchor="middle" fill="#fff" font-size="13" font-weight="700">4. Fusión</text>
+  <text x="561" y="132" text-anchor="middle" fill="#e8f5ee" font-size="11">arco eléctrico</text>
+
+  <polygon points="634,115 650,123 634,131" fill="#4a5560"/>
+
+  <rect x="656" y="70" width="130" height="90" rx="8" fill="#2f7d4a"/>
+  <text x="721" y="110" text-anchor="middle" fill="#fff" font-size="13" font-weight="700">5. Protector</text>
+  <text x="721" y="132" text-anchor="middle" fill="#e8f5ee" font-size="11">termorretráctil</text>
+
+  <polygon points="794,115 810,123 794,131" fill="#4a5560"/>
+
+  <rect x="816" y="70" width="130" height="90" rx="8" fill="#6b4ea1"/>
+  <text x="881" y="110" text-anchor="middle" fill="#fff" font-size="13" font-weight="700">6. Comprobación</text>
+  <text x="881" y="132" text-anchor="middle" fill="#f3e8f6" font-size="11">continuidad / potencia</text>
+
+  <text x="480" y="200" text-anchor="middle" font-size="12" fill="#4a5560">PRL: gafas, no mirar el haz y recoger restos de fibra. Un corte sucio deja el empalme inservible.</text>
+</svg>
