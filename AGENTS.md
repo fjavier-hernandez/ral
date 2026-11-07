@@ -103,5 +103,3 @@ La publicación se hace por fases y el tema se añade a la `nav` cuando se publi
 El horario interno está fuera de este repositorio, igual que la matriz de criterios de evaluación. Los demás calendarios también permanecen fuera.
 
 La excepción se refiere exclusivamente a la programación de aula pública, entendida como sesiones impartidas en cada fecha, y no autoriza conservar otros tipos de calendario por el mero hecho de llamarse públicos. No se escriben rutas locales.
-
-Neo corrige en Aules como si fuera el profesor, en RAL y en Cloud.
