@@ -402,11 +402,53 @@ El horizontal de cobre admite **90 m** de enlace permanente, de la toma de usuar
 
 ### Terminación en el rack
 
-El cable troncal no se enchufa al switch. Entra en el armario, se fija y se empalma en una **bandeja de empalmes**. Los conectores que quedan a la vista están en el **[ODF](#odf)** (*Optical Distribution Frame*, distribuidor óptico): un panel o un casete, a menudo en la misma bandeja, con adaptadores **[LC](#lc)** (*Lucent Connector*, conector Lucent) o **[SC](#sc)** (*Subscriber Connector*, conector de abonado). El LC es el habitual en los racks y en los módulos de fibra actuales, porque ocupa menos espacio en el panel. El SC, de cuerpo cuadrado, sigue presente en instalaciones anteriores. Los dos se enchufan a presión; no se giran como el conector ST antiguo.
+El cable troncal no se enchufa al switch. Entra en el armario, se fija y se empalma en una **bandeja de empalmes**. Los conectores que quedan a la vista están en el **[ODF](#odf)** (*Optical Distribution Frame*, distribuidor óptico): un panel o un casete, a menudo en la misma bandeja, con adaptadores **[LC](#lc)** (*Lucent Connector*, conector Lucent) o **[SC](#sc)** (*Subscriber Connector*, conector de abonado). Los dos se enchufan a presión; no se giran como el conector ST antiguo.
 
-Entre el troncal y el ODF se fusiona un **[pigtail](#pigtail)** (rabillo): un tramo corto de fibra con conector de fábrica en un extremo y fibra desnuda en el otro. El extremo desnudo se funde con una fibra del troncal; el extremo con conector se enchufa en el adaptador del ODF. Del ODF al puerto óptico del switch va un **latiguillo** de fibra, conectorizado en los dos extremos y de la misma clase que el troncal. No se mezcla multimodo con monomodo, ni un conector LC con un adaptador SC.
+En el backbone se usa el LC dúplex porque es pequeño, permite más puertos en el ODF y es el conector de los módulos SFP. El SC, de cuerpo cuadrado, sigue presente en instalaciones anteriores; el SC/APC es el propio de la red FTTH.
+
+Entre el troncal y el ODF se fusiona un **[pigtail](#pigtail)** (rabillo): un tramo corto de fibra con conector de fábrica en un extremo y fibra desnuda en el otro. El extremo desnudo se funde con una fibra del troncal; el extremo con conector se enchufa en el adaptador del ODF. Del ODF al puerto óptico del switch va un **latiguillo** de fibra, conectorizado en los dos extremos y de la misma clase que el troncal. En el backbone ese pigtail y ese latiguillo son LC; el SC/APC queda para la acometida FTTH. No se mezcla multimodo con monomodo, ni un conector LC con un adaptador SC.
+
+El switch no tiene la óptica soldada al chasis. La fibra llega a un módulo **[SFP](#sfp)** o **SFP+** (*Small Form-factor Pluggable*, transceptor enchufable de formato reducido) que se inserta en una ranura del equipo. Ese módulo convierte la luz en señal eléctrica y al revés, y debe coincidir con la clase de fibra y con la distancia del enlace. Un SFP de corto alcance sobre multimodo no sirve para un troncal monomodo de varios kilómetros; para ese caso se usa un módulo de largo alcance, por ejemplo **LR** (*Long Reach*, largo alcance) pensado para monomodo. Si el módulo y el cable no encajan, el puerto no enlaza aunque el ODF esté bien etiquetado.
+
+<figure markdown="span">
+  ![Frontal de un módulo SFP con las flechas de recepción RX y transmisión TX](../img/t3-foto-sfp.jpg){ width="520" }
+  <figcaption>Módulo SFP: la fibra entra por el transceptor enchufable del switch. Las flechas marcan RX (recepción) y TX (transmisión). Foto: <a href="https://commons.wikimedia.org/wiki/File:SFP-front.jpg">Adamantios</a> / trabajo derivado <a href="https://commons.wikimedia.org/wiki/File:SFP-front-RX-TX.jpg">MichaelFrey</a>, <a href="https://creativecommons.org/licenses/by-sa/2.5/deed.es">CC BY-SA 2.5</a>, Wikimedia Commons.</figcaption>
+</figure>
+
+<figure markdown="span">
+  ![Caja de empalme de fibra óptica abierta con la bandeja de empalmes y los protectores](../img/t3-foto-bandeja-empalmes.jpg){ width="640" }
+  <figcaption>Bandeja de empalmes en una caja de fibra abierta: aquí se asientan los protectores tras la fusión. Foto: <a href="https://commons.wikimedia.org/wiki/File:Fiber_Splice.jpg">Dhaluza</a>, <a href="https://creativecommons.org/licenses/by/3.0/deed.es">CC BY 3.0</a>, Wikimedia Commons.</figcaption>
+</figure>
+
+<figure markdown="span">
+  ![Armario con paneles de parcheo de fibra óptica en un rack](../img/t3-foto-odf-rack.jpg){ width="360" }
+  <figcaption>ODF en rack: el frontal concentra los adaptadores donde se enchufan los latiguillos hacia el switch. Foto: <a href="https://commons.wikimedia.org/wiki/File:Fiber-Panel-Rack.jpg">Lijorijo</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.es">CC BY-SA 3.0</a>, Wikimedia Commons.</figcaption>
+</figure>
+
+<figure markdown="span">
+  ![Conector LC dúplex de fibra óptica](../img/t3-foto-lc-duplex.jpg){ width="480" }
+  <figcaption>Latiguillo con conector LC dúplex: dos fibras en un solo cuerpo, una para cada sentido. Foto: <a href="https://commons.wikimedia.org/wiki/File:LC_Duplex_-_1.JPG">Christophe.Finot</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.es">CC BY-SA 3.0</a>, Wikimedia Commons.</figcaption>
+</figure>
+
+<figure markdown="span">
+  ![Dos racks del taller de RAL: el inferior de fibra óptica con cajas de empalme y distribución, y el superior del taller general](../img/t3-foto-taller-fibra-cableworld.png){ width="720" }
+  <figcaption>El rack de abajo es el de la fibra; el de arriba, el del taller general. En el panel se ven las cajas de empalme, la caja de distribución, la roseta óptica y el router. Crédito: Taller de RAL, IES Macià Abela, con Cableworld.</figcaption>
+</figure>
 
 La fusión del pigtail es la operación del apartado [Empalme por fusión](#empalme-por-fusion-vision-de-taller): corte con cleaver, arco de la fusionadora y protector. Una fusión deficiente no se aprecia al mirar el frontal del rack. Se aprecia en el balance de pérdidas.
+
+### Identificar la fibra
+
+Antes de fusionar o de enchufar un latiguillo, hay que reconocer qué fibra se tiene entre las manos. La **cubierta** del cable o del cordón suele colorearse según la clase: el monomodo **OS2** se identifica por el amarillo; el multimodo **OM3**, por el aguamarina; el **OM4**, por el violeta o, en muchos lotes, también por el aguamarina. Ese color no sustituye a la etiqueta del fabricante, pero evita el error de mezclar un troncal monomodo con un latiguillo multimodo.
+
+<figure markdown="span">
+  ![Latiguillos de fibra LC monomodo en amarillo y multimodo en aguamarina](../img/t3-foto-latiguillos-lc.jpg){ width="640" }
+  <figcaption>Cubiertas habituales: amarillo en monomodo y aguamarina en multimodo, con conectores LC. Foto: <a href="https://commons.wikimedia.org/wiki/File:Cordons_monomode-multimode_LC.JPG">Christophe.Finot</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.es">CC BY-SA 3.0</a>, Wikimedia Commons.</figcaption>
+</figure>
+
+El **pulido** del conector también importa. El **[UPC](#upc-apc)** (*Ultra Physical Contact*, contacto físico ultra) lleva casquillo azul y la cara del núcleo queda perpendicular al eje. El **APC** (*Angled Physical Contact*, contacto físico en ángulo) lleva casquillo verde y la cara está biselada; refleja menos luz hacia el emisor. Un UPC no se mezcla con un APC: el adaptador y el conector tienen que ser del mismo tipo, o el contacto queda mal y la pérdida sube.
+
+En el latiguillo **dúplex** hay dos fibras, una por sentido. La **polaridad** exige que la transmisión (**TX**) de un extremo entre en la recepción (**RX**) del otro. Si se cruza mal el dúplex, el indicador de enlace no aparece aunque la fusión y el ODF estén correctos: es el fallo típico de «no hay enlace» cuando se acaba de parchear.
 
 ### Balance de pérdidas de un enlace de backbone
 
@@ -433,11 +475,33 @@ Ese margen es el que se trabaja en el [empalme por fusión](#empalme-por-fusion-
 !!! warning "Errores frecuentes"
     Contar solo los kilómetros de fibra y olvidar conectores y fusiones: en este ejemplo los conectores (2,0 dB) pesan casi tanto como los 8 km de cable (2,8 dB). Dar por cerrada una fusión de 1 dB porque la fusionadora ha terminado el ciclo: el equipo muestra una estimación, y el empalme se repite si esa estimación se dispara. Mezclar en el mismo troncal un latiguillo multimodo con un cable monomodo.
 
+### FTTH/GPON en lo esencial
+
+La **fibra hasta el hogar** (**[FTTH](#ftth)**, *Fiber To The Home*) lleva la fibra óptica hasta el domicilio del abonado. En el taller de Cableworld se trabaja con una instalación de este tipo: las cajas de empalme, la caja de distribución, la roseta óptica y el router del tablero junto a los racks de la [foto del taller](#terminacion-en-el-rack) corresponden a esa planta.
+
+Esa arquitectura se llama **[GPON](#gpon)** (*Gigabit-capable Passive Optical Network*, red óptica pasiva con capacidad de gigabit). Es pasiva porque, entre la central y la casa, los **[divisores ópticos](#divisor-optico)** solo parten la luz y no necesitan alimentación eléctrica. La **[OLT](#olt)** (*Optical Line Terminal*, terminal de línea óptica) está en la central: genera la bajada y asigna el turno de subida. La **[ONT](#ont)** (*Optical Network Terminal*, terminal de red óptica) está en casa del abonado y entrega internet y telefonía.
+
+La televisión puede llegar aparte, por una longitud de onda propia de **1550 nm**, hasta un receptor óptico de televisión como el de la foto del taller. En esa instalación la ONT entrega internet y telefonía, y el receptor entrega la televisión.
+
+Los divisores habituales reparten en relaciones **1:8**, **1:16**, **1:32** o **1:64**. Los dos sentidos van por una sola fibra: la bajada a **1490 nm** y la subida a **1310 nm**. La clase **B+** admite entre **13 dB** y **28 dB** de pérdida en el enlace; por debajo satura el receptor y por encima la señal no basta. Ese intervalo es una referencia de la pérdida del enlace real, que el instalador mide con un medidor de potencia: no se comprueba en este taller con la fusionadora ni con el VFL.
+
+En FTTH/GPON el conector habitual es el **[SC](#sc)/APC**, con casquillo verde, tanto en el repartidor óptico como en la roseta y en los equipos del abonado. El pulido en ángulo reduce la luz que vuelve reflejada hacia el emisor, lo que importa en una red pasiva con muchos abonados. El **[LC](#lc)** dúplex queda para el ODF y el módulo SFP del backbone del edificio.
+
+<figure markdown="span">
+  ![Repartidor óptico del rack de fibra con adaptadores SC/APC verdes y un latiguillo SC/APC conectado](../img/t3-foto-taller-odf-sc-apc.jpg){ width="640" }
+  <figcaption>Repartidor óptico del rack de fibra, con adaptadores SC/APC verdes. Crédito: Taller de RAL, IES Macià Abela, con Cableworld.</figcaption>
+</figure>
+
+<figure markdown="span">
+  ![Roseta óptica y receptor óptico de televisión unidos con latiguillos SC/APC](../img/t3-foto-taller-roseta-receptor-sc-apc.jpg){ width="640" }
+  <figcaption>Roseta óptica y receptor óptico de televisión («Optical Receiver»), unidos con latiguillos SC/APC. Crédito: Taller de RAL, IES Macià Abela, con Cableworld.</figcaption>
+</figure>
+
 ---
 
 ## Empalme por fusión (visión de taller)
 
-En fibra, el **empalme por fusión** une dos núcleos fundiéndolos con un arco eléctrico controlado (**fusionadora**). No es un crimpado de RJ‑45: un corte sucio o una fibra sucia deja el enlace inservible. En el taller se trabaja, por este orden, la preparación (pelado, limpieza, corte con **cleaver**), la fusión, el protector termorretráctil y una comprobación básica (continuidad o potencia, según el equipo).
+En fibra, el **empalme por fusión** une dos núcleos fundiéndolos con un arco eléctrico controlado (**fusionadora**). No es un crimpado de RJ‑45: un corte sucio o una fibra sucia deja el enlace inservible. La secuencia del taller es la que sigue; cada paso se hace completo antes de pasar al siguiente.
 
 <figure markdown="span">
   ![Secuencia pelado, limpieza, corte, fusión, protector y comprobación](../img/t3-proceso-fusion.svg){ width="860" }
@@ -454,7 +518,26 @@ En fibra, el **empalme por fusión** une dos núcleos fundiéndolos con un arco 
   <figcaption>Cleaver: corte preciso de la fibra antes de fusionar. Foto: <a href="https://commons.wikimedia.org/wiki/File:Obcinarka_do_swiatlowodow_pg_eti_2007.jpg">Vmario</a>, dominio público, Wikimedia Commons.</figcaption>
 </figure>
 
-En **PRL** hacen falta gafas, no mirar el haz y recoger los restos de fibra en un recipiente específico: pinchan y apenas se ven.
+1. Se introduce el **protector** termorretráctil en una de las fibras **antes** de pelar. Si se fusiona primero, ya no se puede pasar el tubo por el empalme.
+2. Se quita el recubrimiento de la fibra con la **peladora**, en la longitud que indique el fabricante de la fusionadora, sin rayar el revestimiento primario.
+3. Se limpia el tramo pelado con **alcohol isopropílico** y toallitas sin pelusa, hasta que no quede polvo ni grasa.
+4. Se corta con el **cleaver**: la cara del núcleo tiene que quedar limpia y perpendicular. Un corte irregular arruina la fusión aunque la limpieza haya sido correcta.
+5. Se coloca cada fibra en la fusionadora. El equipo alinea los núcleos, dispara el arco y muestra una **pérdida estimada** en decibelios. Si esa estimación supera unos **0,1 dB**, se corta el empalme y se vuelve a fusionar: esas décimas son las que entran en el [balance de pérdidas](#balance-de-perdidas).
+6. Se hace la **prueba de tracción** que permita la máquina, para comprobar que el empalme no se abre al tensar con suavidad.
+7. Se desliza el protector hasta cubrir la zona fusionada y se contrae en el **horno** de la fusionadora.
+8. Se coloca el empalme en la **bandeja** respetando el radio de curvatura: un lazo demasiado cerrado atenúa o rompe la fibra.
+
+### PRL en el puesto de fusión
+
+- Se usan **gafas** de seguridad mientras se pela, se corta y se manipulan restos de fibra.
+- El alcohol isopropílico es **inflamable**: no se usa cerca del arco de la fusionadora ni de focos de calor.
+- En el puesto **no se come ni se bebe**: un resto de fibra en la mano o en la mesa puede acabar en la boca.
+- Los restos de fibra se recogen en un **recipiente específico** y se fijan con cinta adhesiva; no se tiran a la papelera sueltos, porque pinchan y apenas se ven.
+- **No se mira nunca** un conector conectado ni el haz del láser localizador: la luz de la fibra puede dañar la vista aunque no se perciba como un destello fuerte.
+
+### Comprobación en el taller
+
+En el taller de RAL la comprobación habitual son dos. La **pérdida estimada** que muestra la fusionadora tras cada arco indica si el empalme es aceptable o hay que repetirlo. El **láser localizador visual** (**[VFL](#vfl)**, *Visual Fault Locator*) inyecta luz visible en un extremo para ver si llega al otro y para localizar cortes o curvaturas fuertes. Existen además el medidor de potencia y el **OTDR** (*Optical Time Domain Reflectometer*, reflectómetro óptico en el dominio del tiempo), que en este taller no se usan de forma rutinaria.
 
 La práctica evaluable es **[PR303](#pr303-taller-fusion-de-fibra)**. El crimpado de cobre (conectores RJ‑45) ya se hizo en **PR201** (CE3c); aquí el mismo criterio se aplica a la fibra.
 
@@ -577,27 +660,29 @@ La práctica evaluable es **[PR303](#pr303-taller-fusion-de-fibra)**. El crimpad
 | **Sesiones estimadas** | **2** |
 | **Instrumento** | Checklist de fusión + rúbrica 0–10 |
 
-* :simple-neutralinojs: **PR303**. En taller, bajo supervisión: realizad un **empalme por fusión** (o la secuencia completa de preparación + fusión + protector que permita el material del centro).
+* :simple-neutralinojs: **PR303**. En taller, bajo supervisión: realizad un **empalme por fusión** (o la secuencia completa de preparación + fusión + protector que permita el material del centro). Anotad la pérdida estimada de cada fusión, elaborad un mini balance con esos valores y rellenad la checklist de PRL. La comprobación se hace con la fusionadora y el **VFL**.
 
   **Enunciado (pasos):**
 
-  1. EPI y normas: gafas; no mirar fuentes ópticas; recoger restos de fibra.
-  2. Preparar fibras (pelado, limpieza, corte con cleaver).
-  3. Ejecutar la fusión en la **fusionadora**; anotar la atenuación estimada si el equipo la muestra.
-  4. Colocar el **protector** termorretráctil y asentar el empalme.
-  5. Comprobación básica según el equipo disponible (continuidad / potencia / OK de la fusionadora).
-  6. Documentar errores típicos (corte malo, suciedad, protector mal colocado) y cómo se corrigieron.
+  1. Completar la checklist de PRL del apartado [Empalme por fusión](#empalme-por-fusion-vision-de-taller) antes de empezar.
+  2. Introducir el protector, pelar, limpiar con alcohol isopropílico y cortar con el cleaver.
+  3. Ejecutar la fusión; anotar la **pérdida estimada** que muestra la fusionadora. Si supera unos 0,1 dB, repetir el empalme.
+  4. Hacer la prueba de tracción, contraer el protector en el horno y asentar el empalme en la bandeja respetando el radio de curvatura.
+  5. Comprobar con el **VFL** que la luz llega al otro extremo.
+  6. Redactar un **mini balance** con las pérdidas estimadas de las fusiones hechas y relacionarlo con el margen del enlace.
+  7. Documentar errores típicos (corte malo, suciedad, protector mal colocado, polaridad del latiguillo) y cómo se corrigieron.
 
-  **Evidencia:** foto del puesto/fusionadora, captura o lectura de resultado, checklist PRL, `PR303.md`.
+  **Evidencia:** foto del puesto/fusionadora, lectura de la pérdida estimada, evidencia del VFL, checklist PRL cumplimentada, mini balance y `PR303.md`.
 
   **Entrega:** `PR303.md` + evidencias en Aules.
 
 | Criterio (rúbrica) | Descripción | Puntos |
 | --- | --- | --- |
-| PRL / EPI | Normas aplicadas y documentadas | 0–2 |
+| PRL / EPI | Checklist aplicada y documentada | 0–2 |
 | Preparación y corte | Cleaver / limpieza correctos | 0–2 |
-| Fusión + protector | Empalme válido / protector asentado | 0–3 |
-| Comprobación + informe | Evidencia de OK + `.md` | 0–3 |
+| Fusión + protector | Empalme válido / protector asentado | 0–2 |
+| Comprobación y balance | Pérdida estimada, VFL y mini balance | 0–2 |
+| Informe `.md` | Evidencias, errores y correcciones | 0–2 |
 | **Total** | | **/10** |
 
 ### PR304 — Diseño de cableado estructurado en diagrama { #pr304-diseno-cableado-estructurado }
@@ -682,7 +767,13 @@ La práctica de WLAN en Packet Tracer (punto de acceso, SSID, canal y seguridad 
 
 ## Para el examen
 
-El cableado estructurado es el sistema del edificio (TO, horizontal de 90 m, panel, rack, backbone), no el latiguillo suelto. La **NIC** (Tema 1) se **monta** aquí (PCIe o USB) y lleva **driver**. El **rack** es de 19″ y la altura se mide en **U**. El **panel** empareja cada TO con un puerto etiquetado; de ahí un latiguillo al **switch**. El **hub** queda para laboratorio; el **switch**, para la LAN; el **router** o **gateway**, para otras redes; el **AP**, para Wi‑Fi con SSID, canal y **WPA2/WPA3**, a menudo con **PoE**. En fusión de fibra: cleaver, fusionadora, protector y PRL. En la fibra del edificio, el horizontal sigue en cobre (90 m de enlace permanente y 5 m de latiguillo). El vertical FD–BD va en multimodo OM3/OM4 y el campus BD–CD en monomodo OS2. En el rack el troncal termina en la bandeja de empalmes y en el ODF, con pigtail fusionado y latiguillo LC o SC hasta el switch. El balance de pérdidas suma fibra, fusiones y conectores; una fusión mala reduce el margen y puede dejar el enlace por encima del máximo. CE clave de este tema: **CE2d, CE2f, CE2g, CE3a, CE3c, CE3f, CE4d, CE4i**.
+El cableado estructurado es el sistema del edificio (TO, horizontal de 90 m, panel, rack, backbone), no el latiguillo suelto. La **NIC** (Tema 1) se **monta** aquí (PCIe o USB) y lleva **driver**. El **rack** es de 19″ y la altura se mide en **U**. El **panel** empareja cada TO con un puerto etiquetado; de ahí un latiguillo al **switch**. El **hub** queda para laboratorio; el **switch**, para la LAN; el **router** o **gateway**, para otras redes; el **AP**, para Wi‑Fi con SSID, canal y **WPA2/WPA3**, a menudo con **PoE**.
+
+En la fibra del edificio, el horizontal sigue en cobre; el vertical FD–BD va en multimodo OM3/OM4 y el campus BD–CD en monomodo OS2. En el rack el troncal termina en la bandeja de empalmes y en el ODF, con pigtail y latiguillo **LC** hasta un módulo **SFP** o SFP+ adecuado a la fibra y a la distancia; el **SC/APC** es el propio de la red FTTH. Hay que reconocer la cubierta (OS2 amarilla, OM3/OM4 aguamarina o violeta), el pulido **UPC** (azul) frente a **APC** (verde) y la polaridad TX→RX del latiguillo dúplex.
+
+En fusión: protector antes de pelar, limpieza, cleaver, arco, tracción, horno y bandeja; se repite si la pérdida estimada supera unos 0,1 dB. En el taller se comprueba con la fusionadora y el **VFL**. En FTTH/GPON, la OLT está en la central, la ONT en casa entrega internet y telefonía, la televisión puede llegar a 1550 nm a un receptor óptico aparte, los divisores son pasivos y el conector habitual es **SC/APC** (casquillo verde), frente al **LC** dúplex del backbone. La clase B+ (13–28 dB) es una referencia del enlace real medida con medidor de potencia.
+
+CE clave de este tema: **CE2d, CE2f, CE2g, CE3a, CE3c, CE3f, CE4d, CE4i**.
 
 ## Autocheck del tema
 
@@ -708,6 +799,11 @@ Hazlo **después** de entregar el cuestionario inicial en Aules.
 15. ¿Qué compruebas en PR301 después de configurar SSID, canal y WPA2/WPA3?
 16. ¿Qué subsistema del cableado estructurado se tiende en cobre y cuáles en fibra? Nombra la clase habitual del vertical y la del campus.
 17. Un enlace de backbone suma 2,8 dB de fibra, 0,4 dB de fusiones y 2,0 dB de conectores. Si el máximo orientativo es 6,0 dB, ¿qué margen queda? Si las cuatro fusiones pasaran de 0,1 dB a 1 dB, ¿el total seguiría por debajo de 6,0 dB?
+18. ¿Para qué sirve el módulo SFP en el switch y qué tiene que coincidir con el cable?
+19. **V/F.** Un conector UPC azul se puede enchufar en un adaptador APC verde sin problema.
+20. En el taller de fusión, ¿qué dos comprobaciones se hacen de forma habitual?
+21. En GPON, ¿dónde está la OLT, dónde la ONT y qué entrega la ONT?
+22. ¿Qué conector se usa de forma habitual en FTTH/GPON y por qué el pulido es APC?
 
 !!! info "Soluciones"
     Las soluciones se publicarán aquí cuando cierre el cuestionario inicial en Aules.
@@ -774,7 +870,7 @@ Rabillo: tramo corto de fibra con conector de fábrica en un extremo y fibra des
 *Lucent Connector*, conector Lucent: conector óptico pequeño, habitual en paneles y en los módulos de fibra de los racks actuales.
 
 **SC**{: #sc}
-*Subscriber Connector*, conector de abonado: conector óptico de cuerpo cuadrado y enganche a presión. Frecuente en instalaciones anteriores.
+*Subscriber Connector*, conector de abonado: conector óptico de cuerpo cuadrado y enganche a presión. En FTTH/GPON el habitual es el **SC/APC** (casquillo verde); el LC dúplex queda para el ODF y el SFP del backbone.
 
 **OM3 / OM4**{: #om3-om4}
 Clases de fibra multimodo (*optical multimode*) para el backbone vertical del edificio. Distancias y núcleo en el [Tema 2](../02-medios-capa-fisica/tema2.md#multimodo-mm-y-monomodo-sm).
@@ -784,6 +880,30 @@ Clase de fibra monomodo (*optical singlemode*) para el enlace de campus. Detalle
 
 **balance de pérdidas**{: #balance-de-perdidas}
 Suma, en decibelios, de la atenuación de la fibra, las fusiones y los conectores de un enlace, comparada con el máximo que admite el equipo.
+
+**SFP**{: #sfp}
+*Small Form-factor Pluggable*: transceptor óptico (o de cobre) enchufable en el switch. El modelo debe coincidir con la clase de fibra y con la distancia del enlace (por ejemplo, LR en monomodo de largo alcance).
+
+**UPC / APC**{: #upc-apc}
+Tipos de pulido del conector óptico. UPC (*Ultra Physical Contact*) suele ir en casquillo azul; APC (*Angled Physical Contact*), en verde y con la cara en ángulo, para reducir la luz reflejada hacia el emisor. No se mezclan entre sí. En GPON se usa APC; en el backbone del edificio, el LC suele ir con UPC.
+
+**VFL**{: #vfl}
+*Visual Fault Locator*, láser localizador visual: inyecta luz visible para comprobar si llega al otro extremo y para localizar cortes o curvaturas fuertes.
+
+**FTTH**{: #ftth}
+*Fiber To The Home*, fibra hasta el hogar: la fibra óptica llega al domicilio del abonado y termina en la ONT.
+
+**GPON**{: #gpon}
+*Gigabit-capable Passive Optical Network*, red óptica pasiva con capacidad de gigabit: una OLT reparte la fibra entre varias ONT mediante divisores sin alimentación.
+
+**OLT**{: #olt}
+*Optical Line Terminal*, terminal de línea óptica: equipo de la central. Origina la bajada y asigna los turnos de subida.
+
+**ONT**{: #ont}
+*Optical Network Terminal*, terminal de red óptica: equipo en casa del abonado. Entrega internet, telefonía y televisión.
+
+**divisor óptico**{: #divisor-optico}
+Repartidor pasivo (*splitter*): parte la potencia de una fibra entre varias salidas (1:8, 1:16, 1:32, 1:64…). No se alimenta y concentra buena parte de la pérdida del enlace GPON.
 
 ---
 
