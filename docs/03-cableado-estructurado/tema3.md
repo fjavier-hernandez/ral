@@ -475,11 +475,23 @@ Ese margen es el que se trabaja en el [empalme por fusión](#empalme-por-fusion-
 
 ### FTTH/GPON en lo esencial
 
-La **fibra hasta el hogar** (**[FTTH](#ftth)**, *Fiber To The Home*) lleva la fibra óptica hasta el domicilio del abonado. En el taller de Cableworld se trabaja con una instalación de este tipo: las cajas de empalme, la caja de distribución, la roseta óptica y el router del panel inferior de la [foto del taller](#terminacion-en-el-rack) corresponden a esa planta.
+La **fibra hasta el hogar** (**[FTTH](#ftth)**, *Fiber To The Home*) lleva la fibra óptica hasta el domicilio del abonado. En el taller de Cableworld se trabaja con una instalación de este tipo: las cajas de empalme, la caja de distribución, la roseta óptica y el router del tablero junto a los racks de la [foto del taller](#terminacion-en-el-rack) corresponden a esa planta.
 
 Esa arquitectura se llama **[GPON](#gpon)** (*Gigabit-capable Passive Optical Network*, red óptica pasiva con capacidad de gigabit). Es pasiva porque, entre la central y la casa, los **[divisores ópticos](#divisor-optico)** solo parten la luz y no necesitan alimentación eléctrica. La **[OLT](#olt)** (*Optical Line Terminal*, terminal de línea óptica) está en la central: genera la bajada y asigna el turno de subida. La **[ONT](#ont)** (*Optical Network Terminal*, terminal de red óptica) está en casa del abonado y entrega internet, telefonía y televisión.
 
-Los divisores habituales reparten en relaciones **1:8**, **1:16**, **1:32** o **1:64**. Los dos sentidos van por una sola fibra: la bajada a **1490 nm** y la subida a **1310 nm**. La clase **B+** admite entre **13 dB** y **28 dB** de pérdida en el enlace; por debajo satura el receptor y por encima la señal no basta. Ese intervalo es el que hay que respetar cuando se fusiona y se comprueba en el taller.
+Los divisores habituales reparten en relaciones **1:8**, **1:16**, **1:32** o **1:64**. Los dos sentidos van por una sola fibra: la bajada a **1490 nm** y la subida a **1310 nm**. La clase **B+** admite entre **13 dB** y **28 dB** de pérdida en el enlace; por debajo satura el receptor y por encima la señal no basta. Ese intervalo es una referencia de la pérdida del enlace real, que el instalador mide con un medidor de potencia: no se comprueba en este taller con la fusionadora ni con el VFL.
+
+En FTTH/GPON el conector habitual es el **[SC](#sc)/APC**, con casquillo verde, tanto en el repartidor óptico como en la roseta y en los equipos del abonado. El pulido en ángulo reduce la luz que vuelve reflejada hacia el emisor, lo que importa en una red pasiva con muchos abonados. El **[LC](#lc)** dúplex queda para el ODF y el módulo SFP del backbone del edificio, donde el troncal Ethernet no sigue la misma lógica de acometida.
+
+<figure markdown="span">
+  ![Repartidor óptico del rack de fibra con adaptadores SC/APC verdes y un latiguillo SC/APC conectado](../img/t3-foto-taller-odf-sc-apc.jpg){ width="640" }
+  <figcaption>Repartidor óptico del rack de fibra, con adaptadores SC/APC verdes. Crédito: Taller de RAL, IES Macià Abela, con Cableworld.</figcaption>
+</figure>
+
+<figure markdown="span">
+  ![Roseta óptica y receptor óptico de televisión unidos con latiguillos SC/APC](../img/t3-foto-taller-roseta-receptor-sc-apc.jpg){ width="640" }
+  <figcaption>Roseta óptica y receptor óptico de televisión («Optical Receiver»), unidos con latiguillos SC/APC. Crédito: Taller de RAL, IES Macià Abela, con Cableworld.</figcaption>
+</figure>
 
 ---
 
@@ -755,7 +767,7 @@ El cableado estructurado es el sistema del edificio (TO, horizontal de 90 m, pan
 
 En la fibra del edificio, el horizontal sigue en cobre; el vertical FD–BD va en multimodo OM3/OM4 y el campus BD–CD en monomodo OS2. En el rack el troncal termina en la bandeja de empalmes y en el ODF, con pigtail fusionado y latiguillo LC o SC hasta un módulo **SFP** o SFP+ adecuado a la fibra y a la distancia. Hay que reconocer la cubierta (OS2 amarilla, OM3/OM4 aguamarina o violeta), el pulido **UPC** (azul) frente a **APC** (verde) y la polaridad TX→RX del latiguillo dúplex.
 
-En fusión: protector antes de pelar, limpieza, cleaver, arco, tracción, horno y bandeja; se repite si la pérdida estimada supera unos 0,1 dB. En el taller se comprueba con la fusionadora y el **VFL**. En FTTH/GPON, la OLT está en la central, la ONT en casa, los divisores son pasivos y la clase B+ admite entre 13 dB y 28 dB. CE clave de este tema: **CE2d, CE2f, CE2g, CE3a, CE3c, CE3f, CE4d, CE4i**.
+En fusión: protector antes de pelar, limpieza, cleaver, arco, tracción, horno y bandeja; se repite si la pérdida estimada supera unos 0,1 dB. En el taller se comprueba con la fusionadora y el **VFL**. En FTTH/GPON, la OLT está en la central, la ONT en casa, los divisores son pasivos y el conector habitual es **SC/APC** (casquillo verde), frente al **LC** dúplex del backbone del edificio. La clase B+ (13–28 dB) es una referencia del enlace real medida con medidor de potencia. CE clave de este tema: **CE2d, CE2f, CE2g, CE3a, CE3c, CE3f, CE4d, CE4i**.
 
 ## Autocheck del tema
 
@@ -785,6 +797,7 @@ Hazlo **después** de entregar el cuestionario inicial en Aules.
 19. **V/F.** Un conector UPC azul se puede enchufar en un adaptador APC verde sin problema.
 20. En el taller de fusión, ¿qué dos comprobaciones se hacen de forma habitual?
 21. En GPON, ¿dónde está la OLT, dónde la ONT y qué entrega la ONT?
+22. ¿Qué conector se usa de forma habitual en FTTH/GPON y por qué el pulido es APC?
 
 !!! info "Soluciones"
     Las soluciones se publicarán aquí cuando cierre el cuestionario inicial en Aules.
@@ -851,7 +864,7 @@ Rabillo: tramo corto de fibra con conector de fábrica en un extremo y fibra des
 *Lucent Connector*, conector Lucent: conector óptico pequeño, habitual en paneles y en los módulos de fibra de los racks actuales.
 
 **SC**{: #sc}
-*Subscriber Connector*, conector de abonado: conector óptico de cuerpo cuadrado y enganche a presión. Frecuente en instalaciones anteriores.
+*Subscriber Connector*, conector de abonado: conector óptico de cuerpo cuadrado y enganche a presión. En FTTH/GPON el habitual es el **SC/APC** (casquillo verde); el LC dúplex queda para el ODF y el SFP del backbone.
 
 **OM3 / OM4**{: #om3-om4}
 Clases de fibra multimodo (*optical multimode*) para el backbone vertical del edificio. Distancias y núcleo en el [Tema 2](../02-medios-capa-fisica/tema2.md#multimodo-mm-y-monomodo-sm).
@@ -866,7 +879,7 @@ Suma, en decibelios, de la atenuación de la fibra, las fusiones y los conectore
 *Small Form-factor Pluggable*: transceptor óptico (o de cobre) enchufable en el switch. El modelo debe coincidir con la clase de fibra y con la distancia del enlace (por ejemplo, LR en monomodo de largo alcance).
 
 **UPC / APC**{: #upc-apc}
-Tipos de pulido del conector óptico. UPC (*Ultra Physical Contact*) suele ir en casquillo azul; APC (*Angled Physical Contact*), en verde y con la cara en ángulo. No se mezclan entre sí.
+Tipos de pulido del conector óptico. UPC (*Ultra Physical Contact*) suele ir en casquillo azul; APC (*Angled Physical Contact*), en verde y con la cara en ángulo, para reducir la luz reflejada hacia el emisor. No se mezclan entre sí. En GPON se usa APC; en el backbone del edificio, el LC suele ir con UPC.
 
 **VFL**{: #vfl}
 *Visual Fault Locator*, láser localizador visual: inyecta luz visible para comprobar si llega al otro extremo y para localizar cortes o curvaturas fuertes.
