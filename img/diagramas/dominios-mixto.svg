@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+  <rect width="900" height="520" fill="#f7f9fb"/>
+  <text x="450" y="26" text-anchor="middle" font-size="15" font-weight="700" fill="#1a2332">Ejemplo mixto: contar dominios de colisión y de difusión</text>
+  <!-- broadcast left (router int1) -->
+  <rect x="20" y="50" width="520" height="320" rx="10" fill="#6b4ea1" fill-opacity="0.10" stroke="#6b4ea1" stroke-dasharray="5 3"/>
+  <text x="40" y="70" font-size="11" fill="#6b4ea1" font-weight="600">Dominio de difusión A (interfaz 1 del router)</text>
+  <!-- broadcast right -->
+  <rect x="560" y="50" width="320" height="250" rx="10" fill="#2f7d4a" fill-opacity="0.12" stroke="#2f7d4a" stroke-dasharray="5 3"/>
+  <text x="580" y="70" font-size="11" fill="#2f7d4a" font-weight="600">Dominio de difusión B (interfaz 2)</text>
+  <!-- router -->
+  <rect x="400" y="390" width="100" height="40" rx="6" fill="#b7791f" stroke="#1a2332"/>
+  <text x="450" y="415" text-anchor="middle" font-size="12" fill="#fff" font-weight="600">ROUTER</text>
+  <!-- SW1 left -->
+  <rect x="200" y="200" width="100" height="36" rx="5" fill="#2f7d4a"/><text x="250" y="223" text-anchor="middle" fill="#fff" font-size="12">SW1</text>
+  <line x1="250" y1="236" x2="420" y2="390" stroke="#4a5560" stroke-width="2"/>
+  <!-- hub -->
+  <rect x="60" y="200" width="80" height="36" rx="5" fill="#4a5560"/><text x="100" y="223" text-anchor="middle" fill="#fff" font-size="12">HUB</text>
+  <line x1="140" y1="218" x2="200" y2="218" stroke="#4a5560" stroke-width="2"/>
+  <!-- hub + PC1 + PC2 + puerto SW1: un solo dominio de colisión (incluye enlace hub–SW1) -->
+  <ellipse cx="130" cy="160" rx="130" ry="95" fill="#f5a623" fill-opacity="0.28" stroke="#d68910" stroke-width="1.5"/>
+  <rect x="40" y="90" width="50" height="30" rx="3" fill="#3b6ea5"/><text x="65" y="110" text-anchor="middle" fill="#fff" font-size="10">PC1</text>
+  <rect x="110" y="90" width="50" height="30" rx="3" fill="#3b6ea5"/><text x="135" y="110" text-anchor="middle" fill="#fff" font-size="10">PC2</text>
+  <line x1="65" y1="120" x2="90" y2="200" stroke="#4a5560"/>
+  <line x1="135" y1="120" x2="110" y2="200" stroke="#4a5560"/>
+  <!-- SW1 PCs collision -->
+  <ellipse cx="280" cy="120" rx="40" ry="45" fill="#f5a623" fill-opacity="0.28" stroke="#d68910"/>
+  <ellipse cx="360" cy="120" rx="40" ry="45" fill="#f5a623" fill-opacity="0.28" stroke="#d68910"/>
+  <ellipse cx="200" cy="95" rx="38" ry="40" fill="#f5a623" fill-opacity="0.28" stroke="#d68910"/>
+  <rect x="175" y="70" width="50" height="28" rx="3" fill="#3b6ea5"/><text x="200" y="88" text-anchor="middle" fill="#fff" font-size="10">PC3</text>
+  <rect x="255" y="80" width="50" height="28" rx="3" fill="#3b6ea5"/><text x="280" y="98" text-anchor="middle" fill="#fff" font-size="10">PC4</text>
+  <rect x="335" y="80" width="50" height="28" rx="3" fill="#3b6ea5"/><text x="360" y="98" text-anchor="middle" fill="#fff" font-size="10">PC5</text>
+  <line x1="200" y1="98" x2="230" y2="200" stroke="#4a5560"/>
+  <line x1="280" y1="108" x2="250" y2="200" stroke="#4a5560"/>
+  <line x1="360" y1="108" x2="280" y2="200" stroke="#4a5560"/>
+  <!-- SW1–router collision -->
+  <ellipse cx="335" cy="310" rx="40" ry="50" fill="#f5a623" fill-opacity="0.25" stroke="#d68910"/>
+  <!-- SW2 right -->
+  <rect x="660" y="180" width="100" height="36" rx="5" fill="#2f7d4a"/><text x="710" y="203" text-anchor="middle" fill="#fff" font-size="12">SW2</text>
+  <line x1="710" y1="216" x2="480" y2="390" stroke="#4a5560" stroke-width="2"/>
+  <ellipse cx="650" cy="120" rx="40" ry="45" fill="#f5a623" fill-opacity="0.28" stroke="#d68910"/>
+  <ellipse cx="760" cy="120" rx="40" ry="45" fill="#f5a623" fill-opacity="0.28" stroke="#d68910"/>
+  <ellipse cx="595" cy="300" rx="40" ry="50" fill="#f5a623" fill-opacity="0.25" stroke="#d68910"/>
+  <rect x="625" y="80" width="50" height="28" rx="3" fill="#3b6ea5"/><text x="650" y="98" text-anchor="middle" fill="#fff" font-size="10">PC6</text>
+  <rect x="735" y="80" width="50" height="28" rx="3" fill="#3b6ea5"/><text x="760" y="98" text-anchor="middle" fill="#fff" font-size="10">PC7</text>
+  <line x1="650" y1="108" x2="690" y2="180" stroke="#4a5560"/>
+  <line x1="760" y1="108" x2="730" y2="180" stroke="#4a5560"/>
+  <!-- result box -->
+  <rect x="20" y="450" width="860" height="55" rx="6" fill="#fff" stroke="#4a5560"/>
+  <text x="40" y="472" font-size="12" fill="#1a2332" font-weight="600">Resultado: 2 dominios de difusión (A y B) · 8 de colisión</text>
+  <text x="40" y="492" font-size="11" fill="#5a6570">Difusión A: hub+SW1+PC1–5. Difusión B: SW2+PC6–7. Colisión: 1 (hub+PC1–2+puerto SW1) + 3 (PC3–5–SW1) + 1 (SW1–router) + 2 (PC6–7–SW2) + 1 (SW2–router) = 8.</text>
+</svg>
