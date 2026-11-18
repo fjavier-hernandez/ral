@@ -386,29 +386,37 @@ Con **fibra**, backbone y campus cubren cientos de metros o kilómetros según e
 
 ## Fibra en el cableado estructurado {: #fibra-en-el-cableado-estructurado }
 
-En el cableado estructurado el puesto sigue en cobre. El latiguillo del área de trabajo y el horizontal, desde el equipo hasta el panel del distribuidor de planta (**[FD](#fd)**, *Floor Distributor*), se tienden en par trenzado. La fibra se reserva para los tramos en los que el cobre se queda corto: el **subsistema vertical**, entre el FD y el distribuidor de edificio (**[BD](#bd)**, *Building Distributor*), y el **subsistema de campus**, entre el BD y el distribuidor de campus (**[CD](#cd)**, *Campus Distributor*).
+En el cableado estructurado el puesto sigue en cobre, y la fibra se reserva para los tramos en los que el cobre se queda corto por la distancia. Cada subsistema lleva el medio que corresponde a su longitud:
 
-El horizontal de cobre admite **90 m** de enlace permanente, de la toma de usuario o **[TO](#to)** al panel, y el latiguillo del puesto no debe pasar de **5 m**. Esas cifras están en [Normas y distancias](#normas-y-distancias). Dentro del edificio, el vertical se hace en fibra **multimodo** de clase **[OM3](#om3-om4)** u **OM4** (*optical multimode*, multimodo óptico: el número indica la clase). Entre edificios, el campus se hace en fibra **monomodo** de clase **[OS2](#os2)** (*optical singlemode*, monomodo óptico). El diámetro del núcleo, el tipo de emisor y las distancias orientativas a 10 Gbit/s —OM3 unos 300 m, OM4 unos 400 m, y OS2 del orden de kilómetros— están en el [Tema 2, multimodo y monomodo](../02-medios-capa-fisica/tema2.md#multimodo-mm-y-monomodo-sm). En este tema interesa elegir la clase de cada tramo y saber cómo termina en el rack.
+- **Área de trabajo y horizontal:** par trenzado, desde el equipo hasta el panel del distribuidor de planta (**[FD](#fd)**, *Floor Distributor*), con **90 m** de enlace permanente de la toma de usuario o **[TO](#to)** al panel y un latiguillo de **5 m** como máximo, como se vio en [Normas y distancias](#normas-y-distancias).
+- **Vertical:** entre el FD y el distribuidor de edificio (**[BD](#bd)**, *Building Distributor*), en fibra **multimodo** de clase **[OM3](#om3-om4)** u **OM4** (*optical multimode*; el número indica la clase).
+- **Campus:** entre el BD y el distribuidor de campus (**[CD](#cd)**, *Campus Distributor*), en fibra **monomodo** de clase **[OS2](#os2)** (*optical singlemode*).
+
+A 10 Gbit/s, el OM3 alcanza unos 300 m, el OM4 unos 400 m y el OS2 del orden de kilómetros. El núcleo, el emisor y el porqué de esas cifras están en el [Tema 2, multimodo y monomodo](../02-medios-capa-fisica/tema2.md#multimodo-mm-y-monomodo-sm); aquí interesa elegir la clase de cada tramo y saber cómo termina en el rack.
 
 <figure markdown="span">
   ![Edificio y campus con CD, BD, FD y TO: el puesto y el horizontal en cobre, el vertical en fibra multimodo y el campus en fibra monomodo, con las distancias de cada tramo](../img/t3-fibra-edificio-campus.svg){ width="900" }
   <figcaption>El latiguillo (hasta 5 m) y el horizontal (hasta 90 m de enlace permanente) van en cobre. El vertical FD–BD va en multimodo OM3 u OM4. El campus BD–CD va en monomodo OS2 y se mide en kilómetros. Las distancias de la fibra son orientativas, a 10 Gbit/s.</figcaption>
 </figure>
 
-**Ejemplo.** En un instituto, el aula llega al FD de la planta por cable de pares. De ese armario al BD del edificio baja un troncal multimodo OM3 u OM4: cubre la altura del inmueble y un enlace a 10 Gbit/s de unos cientos de metros. Si el otro edificio queda más lejos de lo que alcanza el multimodo, el troncal del BD al CD es monomodo OS2.
+**Ejemplo.** En un instituto, el aula llega al FD de la planta por cable de pares. De ese armario al BD del edificio baja un troncal multimodo OM3 u OM4, que cubre de sobra la altura del inmueble. Si el otro edificio queda más lejos de lo que alcanza el multimodo, el troncal del BD al CD es monomodo OS2.
 
 !!! warning "Errores frecuentes"
-    Tender fibra en el horizontal del puesto, o dejar el vertical de un edificio en cobre porque la categoría «aguanta». El horizontal sigue en cobre y conserva el límite de 90 m. El vertical y el campus se proyectan en la fibra que corresponde a la distancia, no alargando un latiguillo de cobre.
+    - Tender fibra en el horizontal del puesto: el horizontal sigue en cobre y conserva el límite de 90 m.
+    - Dejar el vertical de un edificio en cobre porque la categoría «aguanta», o alargarlo con latiguillos de cobre.
 
 ### Terminación en el rack
 
-El cable troncal no se enchufa al switch. Entra en el armario, se fija y se empalma en una **bandeja de empalmes**. Los conectores que quedan a la vista están en el **[ODF](#odf)** (*Optical Distribution Frame*, distribuidor óptico): un panel o un casete, a menudo en la misma bandeja, con adaptadores **[LC](#lc)** (*Lucent Connector*, conector Lucent) o **[SC](#sc)** (*Subscriber Connector*, conector de abonado). Los dos se enchufan a presión; no se giran como el conector ST antiguo.
+El cable troncal no se enchufa directamente al switch, sino que pasa por varios elementos dentro del armario, siempre en el mismo orden:
 
-En el backbone se usa el LC dúplex porque es pequeño, permite más puertos en el ODF y es el conector de los módulos SFP. El SC, de cuerpo cuadrado, sigue presente en instalaciones anteriores; el SC/APC es el propio de la red FTTH.
+1. **Bandeja de empalmes:** el troncal entra en el armario, se fija y cada fibra se funde con un **[pigtail](#pigtail)** (rabillo), un tramo corto de fibra con conector de fábrica en un extremo y fibra desnuda en el otro.
+2. **[ODF](#odf)** (*Optical Distribution Frame*, distribuidor óptico): el conector del pigtail se enchufa en un adaptador de este panel o casete, que a menudo va en la misma bandeja y deja los conectores a la vista.
+3. **Latiguillo de fibra:** conectorizado en los dos extremos y de la misma clase que el troncal, une el ODF con el puerto óptico del switch.
+4. **Módulo [SFP](#sfp) o SFP+** (*Small Form-factor Pluggable*): el transceptor enchufable que se inserta en una ranura del switch y convierte la luz en señal eléctrica y al revés.
 
-Entre el troncal y el ODF se fusiona un **[pigtail](#pigtail)** (rabillo): un tramo corto de fibra con conector de fábrica en un extremo y fibra desnuda en el otro. El extremo desnudo se funde con una fibra del troncal; el extremo con conector se enchufa en el adaptador del ODF. Del ODF al puerto óptico del switch va un **latiguillo** de fibra, conectorizado en los dos extremos y de la misma clase que el troncal. En el backbone ese pigtail y ese latiguillo son LC; el SC/APC queda para la acometida FTTH. No se mezcla multimodo con monomodo, ni un conector LC con un adaptador SC.
+Los conectores habituales son el **[LC](#lc)** (*Lucent Connector*) y el **[SC](#sc)** (*Subscriber Connector*), y los dos se enchufan a presión, sin girarlos como el antiguo ST. En el backbone se usa el LC dúplex, porque es pequeño, permite más puertos en el ODF y es el conector de los módulos SFP. El SC, de cuerpo cuadrado, aparece en instalaciones anteriores, y el SC/APC es el propio de la red FTTH. No se mezcla multimodo con monomodo, ni un conector LC con un adaptador SC.
 
-El switch no tiene la óptica soldada al chasis. La fibra llega a un módulo **[SFP](#sfp)** o **SFP+** (*Small Form-factor Pluggable*, transceptor enchufable de formato reducido) que se inserta en una ranura del equipo. Ese módulo convierte la luz en señal eléctrica y al revés, y debe coincidir con la clase de fibra y con la distancia del enlace. Un SFP de corto alcance sobre multimodo no sirve para un troncal monomodo de varios kilómetros; para ese caso se usa un módulo de largo alcance, por ejemplo **LR** (*Long Reach*, largo alcance) pensado para monomodo. Si el módulo y el cable no encajan, el puerto no enlaza aunque el ODF esté bien etiquetado.
+El módulo SFP tiene que coincidir con la clase de fibra y con la distancia del enlace. Un SFP de corto alcance para multimodo no sirve en un troncal monomodo de varios kilómetros, que necesita un módulo de largo alcance, por ejemplo **LR** (*Long Reach*). Si el módulo y el cable no encajan, el puerto no enlaza aunque el ODF esté bien etiquetado.
 
 <figure markdown="span">
   ![Frontal de un módulo SFP con las flechas de recepción RX y transmisión TX](../img/t3-foto-sfp.jpg){ width="520" }
@@ -430,31 +438,32 @@ El switch no tiene la óptica soldada al chasis. La fibra llega a un módulo **[
   <figcaption>Latiguillo con conector LC dúplex: dos fibras en un solo cuerpo, una para cada sentido. Foto: <a href="https://commons.wikimedia.org/wiki/File:LC_Duplex_-_1.JPG">Christophe.Finot</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.es">CC BY-SA 3.0</a>, Wikimedia Commons.</figcaption>
 </figure>
 
-<figure markdown="span">
-  ![Dos racks del taller de RAL: el inferior de fibra óptica con cajas de empalme y distribución, y el superior del taller general](../img/t3-foto-taller-fibra-cableworld.png){ width="720" }
-  <figcaption>El rack de abajo es el de la fibra; el de arriba, el del taller general. En el panel se ven las cajas de empalme, la caja de distribución, la roseta óptica y el router. Crédito: Taller de RAL, IES Macià Abela, con Cableworld.</figcaption>
-</figure>
-
-La fusión del pigtail es la operación del apartado [Empalme por fusión](#empalme-por-fusion-vision-de-taller): corte con cleaver, arco de la fusionadora y protector. Una fusión deficiente no se aprecia al mirar el frontal del rack. Se aprecia en el balance de pérdidas.
+La fusión del pigtail es la operación que se explica en [Empalme por fusión](#empalme-por-fusion-vision-de-taller). Una fusión deficiente no se aprecia al mirar el frontal del rack, sino en el balance de pérdidas.
 
 ### Identificar la fibra
 
-Antes de fusionar o de enchufar un latiguillo, hay que reconocer qué fibra se tiene entre las manos. La **cubierta** del cable o del cordón suele colorearse según la clase: el monomodo **OS2** se identifica por el amarillo; el multimodo **OM3**, por el aguamarina; el **OM4**, por el violeta o, en muchos lotes, también por el aguamarina. Ese color no sustituye a la etiqueta del fabricante, pero evita el error de mezclar un troncal monomodo con un latiguillo multimodo.
+Antes de fusionar o de enchufar un latiguillo hay que reconocer qué fibra se tiene entre las manos. Hay tres cosas que mirar:
+
+- **Color de la cubierta:** el monomodo **OS2** suele ser amarillo; el multimodo **OM3**, aguamarina, y el **OM4**, violeta o, en muchos lotes, también aguamarina. El color no sustituye a la etiqueta del fabricante, pero evita mezclar un troncal monomodo con un latiguillo multimodo.
+- **Pulido del conector:** el **[UPC](#upc-apc)** (*Ultra Physical Contact*) lleva casquillo azul y la cara del núcleo perpendicular al eje; el **APC** (*Angled Physical Contact*) lleva casquillo verde y la cara biselada, por lo que refleja menos luz hacia el emisor. Un UPC no se mezcla con un APC, porque el contacto queda mal y la pérdida sube.
+- **Polaridad del dúplex:** el latiguillo dúplex lleva dos fibras, una por sentido, y la transmisión (**TX**) de un extremo tiene que entrar en la recepción (**RX**) del otro.
 
 <figure markdown="span">
   ![Latiguillos de fibra LC monomodo en amarillo y multimodo en aguamarina](../img/t3-foto-latiguillos-lc.jpg){ width="640" }
   <figcaption>Cubiertas habituales: amarillo en monomodo y aguamarina en multimodo, con conectores LC. Foto: <a href="https://commons.wikimedia.org/wiki/File:Cordons_monomode-multimode_LC.JPG">Christophe.Finot</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.es">CC BY-SA 3.0</a>, Wikimedia Commons.</figcaption>
 </figure>
 
-El **pulido** del conector también importa. El **[UPC](#upc-apc)** (*Ultra Physical Contact*, contacto físico ultra) lleva casquillo azul y la cara del núcleo queda perpendicular al eje. El **APC** (*Angled Physical Contact*, contacto físico en ángulo) lleva casquillo verde y la cara está biselada; refleja menos luz hacia el emisor. Un UPC no se mezcla con un APC: el adaptador y el conector tienen que ser del mismo tipo, o el contacto queda mal y la pérdida sube.
-
-En el latiguillo **dúplex** hay dos fibras, una por sentido. La **polaridad** exige que la transmisión (**TX**) de un extremo entre en la recepción (**RX**) del otro. Si se cruza mal el dúplex, el indicador de enlace no aparece aunque la fusión y el ODF estén correctos: es el fallo típico de «no hay enlace» cuando se acaba de parchear.
+Si se cruza mal el dúplex, el indicador de enlace no aparece aunque la fusión y el ODF estén correctos. Es el fallo típico de «no hay enlace» justo después de parchear, y se arregla invirtiendo las dos fibras en un extremo.
 
 ### Balance de pérdidas de un enlace de backbone
 
-El **[balance de pérdidas](#balance-de-perdidas)** suma, en **decibelios (dB)**, todo lo que atenúa la luz en un sentido del enlace y compara esa suma con el máximo que admite el equipo. Si la suma se pasa, el indicador de enlace puede encenderse y la comunicación fallar de todos modos, o el enlace puede funcionar un tiempo y caer cuando se añade otro empalme.
+El **[balance de pérdidas](#balance-de-perdidas)** suma, en **decibelios (dB)**, todo lo que atenúa la luz en un sentido del enlace y compara el resultado con el máximo que admite el equipo. Si la suma se pasa, el enlace puede no funcionar aunque el indicador se encienda, o funcionar un tiempo y caer cuando se añade otro empalme.
 
-Las cifras siguientes son **orientativas de proyecto**. El enlace del ejemplo es un backbone de campus de **8 km** de monomodo, a **1310 nm**, de un rack al otro, sin repartir la luz. La fibra se cuenta a **0,35 dB/km**. Cada fusión bien hecha, a **0,1 dB**. Cada conector —cada pareja enchufada—, a **0,5 dB**. En cada rack se cuentan dos conectores, el del latiguillo en el equipo y el del latiguillo en el ODF, y dos fusiones, la del pigtail en la bandeja y otra en la caja de empalme del tendido. Entre los dos racks son cuatro conectores y cuatro fusiones.
+En el ejemplo, un backbone de campus de **8 km** de monomodo a **1310 nm** une dos racks sin repartir la luz. Las cifras son orientativas de proyecto:
+
+- **Fibra:** 0,35 dB/km.
+- **Fusión bien hecha:** 0,1 dB cada una. En cada rack hay dos, la del pigtail en la bandeja y otra en la caja de empalme del tendido, así que son cuatro en total.
+- **Conector:** 0,5 dB por cada pareja enchufada. En cada rack hay dos, el del latiguillo en el equipo y el del latiguillo en el ODF, así que son cuatro en total.
 
 | Concepto | Cálculo | Pérdida |
 | --- | --- | --- |
@@ -463,9 +472,9 @@ Las cifras siguientes son **orientativas de proyecto**. El enlace del ejemplo es
 | 4 conectores | 4 × 0,5 dB | 2,0 dB |
 | **Total** | | **5,2 dB** |
 
-Para un enlace Ethernet de 10 Gbit/s sobre monomodo, con alcance nominal de unos 10 km (la aplicación se denomina **10GBASE-LR**), el canal se estima con 0,4 dB/km de fibra y 2 dB para conectores y empalmes: 10 × 0,4 + 2 = **6,0 dB**. Ese es el máximo orientativo de este ejemplo. En el taller prevalece la hoja del transceptor si indica otra cifra. El total de 5,2 dB cabe. El margen es 6,0 − 5,2 = **0,8 dB**.
+El máximo se calcula para un enlace Ethernet de 10 Gbit/s sobre monomodo con alcance de unos 10 km (**10GBASE-LR**), con 0,4 dB/km de fibra y 2 dB para conectores y empalmes: 10 × 0,4 + 2 = **6,0 dB**. En el taller prevalece la hoja del transceptor si indica otra cifra. Como 5,2 dB caben en 6,0 dB, el enlace cumple con un margen de **0,8 dB**.
 
-Ese margen es el que se trabaja en el [empalme por fusión](#empalme-por-fusion-vision-de-taller). Si las cuatro fusiones quedaran en 1 dB en lugar de 0,1 dB, aportarían 4,0 dB en vez de 0,4 dB. El total pasaría a **8,8 dB**, por encima de 6,0 dB, y el enlace saldría del presupuesto. Una fusión de 1 dB no es una desviación menor: en este ejemplo las cuatro suman 3,6 dB de más y dejan el troncal fuera de servicio aunque el cobre de la planta esté bien.
+Ese margen es el que se juega en el [empalme por fusión](#empalme-por-fusion-vision-de-taller). Si las cuatro fusiones quedaran en 1 dB en lugar de 0,1 dB, aportarían 4,0 dB y el total subiría a **8,8 dB**, muy por encima del máximo. Una fusión de 1 dB no es una desviación menor: en este caso deja el troncal fuera de servicio aunque el cobre de la planta esté perfecto.
 
 <figure markdown="span">
   ![Enlace de fibra de backbone entre dos racks: latiguillo, conectores, ODF, pigtail, fusiones y cable troncal, con la pérdida en decibelios de cada elemento](../img/t3-fibra-balance-backbone.svg){ width="900" }
@@ -473,19 +482,30 @@ Ese margen es el que se trabaja en el [empalme por fusión](#empalme-por-fusion-
 </figure>
 
 !!! warning "Errores frecuentes"
-    Contar solo los kilómetros de fibra y olvidar conectores y fusiones: en este ejemplo los conectores (2,0 dB) pesan casi tanto como los 8 km de cable (2,8 dB). Dar por cerrada una fusión de 1 dB porque la fusionadora ha terminado el ciclo: el equipo muestra una estimación, y el empalme se repite si esa estimación se dispara. Mezclar en el mismo troncal un latiguillo multimodo con un cable monomodo.
+    - Contar solo los kilómetros y olvidar conectores y fusiones: aquí los conectores (2,0 dB) pesan casi tanto como los 8 km de cable (2,8 dB).
+    - Dar por cerrada una fusión de 1 dB porque la fusionadora ha terminado el ciclo: si la estimación se dispara, el empalme se repite.
+    - Mezclar en el mismo troncal un latiguillo multimodo con un cable monomodo.
 
 ### FTTH/GPON en lo esencial
 
-La **fibra hasta el hogar** (**[FTTH](#ftth)**, *Fiber To The Home*) lleva la fibra óptica hasta el domicilio del abonado. En el taller de Cableworld se trabaja con una instalación de este tipo: las cajas de empalme, la caja de distribución, la roseta óptica y el router del tablero junto a los racks de la [foto del taller](#terminacion-en-el-rack) corresponden a esa planta.
+La **fibra hasta el hogar** (**[FTTH](#ftth)**, *Fiber To The Home*) lleva la fibra óptica hasta el domicilio del abonado. La arquitectura más extendida es **[GPON](#gpon)** (*Gigabit-capable Passive Optical Network*), que es pasiva porque entre la central y la casa no hay equipos alimentados, solo fibra y divisores. Sus elementos son estos:
 
-Esa arquitectura se llama **[GPON](#gpon)** (*Gigabit-capable Passive Optical Network*, red óptica pasiva con capacidad de gigabit). Es pasiva porque, entre la central y la casa, los **[divisores ópticos](#divisor-optico)** solo parten la luz y no necesitan alimentación eléctrica. La **[OLT](#olt)** (*Optical Line Terminal*, terminal de línea óptica) está en la central: genera la bajada y asigna el turno de subida. La **[ONT](#ont)** (*Optical Network Terminal*, terminal de red óptica) está en casa del abonado y entrega internet y telefonía.
+- **[OLT](#olt)** (*Optical Line Terminal*): está en la central, genera la bajada y asigna el turno de subida de cada abonado.
+- **[Divisores ópticos](#divisor-optico):** parten la luz sin alimentación eléctrica, en relaciones de **1:8**, **1:16**, **1:32** o **1:64**.
+- **Roseta óptica:** es la toma de fibra en casa del abonado.
+- **[ONT](#ont)** (*Optical Network Terminal*): en casa del abonado, entrega internet y telefonía.
+- **Receptor óptico de televisión:** recibe la televisión, que puede llegar aparte por una longitud de onda propia de **1550 nm**.
 
-La televisión puede llegar aparte, por una longitud de onda propia de **1550 nm**, hasta un receptor óptico de televisión como el de la foto del taller. En esa instalación la ONT entrega internet y telefonía, y el receptor entrega la televisión.
+En el taller de RAL, con Cableworld, se trabaja con una instalación de este tipo, montada en el rack de fibra junto al del taller general.
 
-Los divisores habituales reparten en relaciones **1:8**, **1:16**, **1:32** o **1:64**. Los dos sentidos van por una sola fibra: la bajada a **1490 nm** y la subida a **1310 nm**. La clase **B+** admite entre **13 dB** y **28 dB** de pérdida en el enlace; por debajo satura el receptor y por encima la señal no basta. Ese intervalo es una referencia de la pérdida del enlace real, que el instalador mide con un medidor de potencia: no se comprueba en este taller con la fusionadora ni con el VFL.
+<figure markdown="span">
+  ![Dos racks del taller de RAL: el inferior de fibra óptica con cajas de empalme y distribución, y el superior del taller general](../img/t3-foto-taller-fibra-cableworld.png){ width="720" }
+  <figcaption>El rack de abajo es el de la fibra; el de arriba, el del taller general. En el panel se ven las cajas de empalme, la caja de distribución, la roseta óptica y el router. Crédito: Taller de RAL, IES Macià Abela, con Cableworld.</figcaption>
+</figure>
 
-En FTTH/GPON el conector habitual es el **[SC](#sc)/APC**, con casquillo verde, tanto en el repartidor óptico como en la roseta y en los equipos del abonado. El pulido en ángulo reduce la luz que vuelve reflejada hacia el emisor, lo que importa en una red pasiva con muchos abonados. El **[LC](#lc)** dúplex queda para el ODF y el módulo SFP del backbone del edificio.
+Los dos sentidos van por una sola fibra: la bajada a **1490 nm** y la subida a **1310 nm**. La clase **B+** admite entre **13 dB** y **28 dB** de pérdida en el enlace, porque por debajo satura el receptor y por encima la señal no basta. Esa pérdida la mide el instalador con un medidor de potencia; no se comprueba con la fusionadora ni con el VFL.
+
+El conector habitual en FTTH/GPON es el **[SC](#sc)/APC**, con casquillo verde, tanto en el repartidor óptico como en la roseta y en los equipos del abonado. El pulido en ángulo reduce la luz que vuelve reflejada hacia el emisor, algo importante en una red pasiva compartida por muchos abonados. El **[LC](#lc)** dúplex queda para el ODF y el módulo SFP del backbone del edificio.
 
 <figure markdown="span">
   ![Repartidor óptico del rack de fibra con adaptadores SC/APC verdes y un latiguillo SC/APC conectado](../img/t3-foto-taller-odf-sc-apc.jpg){ width="640" }
