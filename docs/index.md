@@ -59,8 +59,8 @@ Las ^^competencias profesionales^^ asociadas al módulo:
 | ---: | --- | --- | --- | --- |
 | **1** | [Introducción. Arquitectura de redes](01-introduccion-arquitectura/tema1.md) | Tipos de redes, componentes, topologías, modelos OSI y TCP/IP | **Publicado** | RA1 |
 | **2** | [Medios de transmisión y capa física](02-medios-capa-fisica/tema2.md) | Par trenzado, fibra, Wi‑Fi básico y conectores | **Publicado** | RA2, RA3 |
-| **3** | Cableado estructurado y componentes | Racks, paneles, electrónica de red, WLAN | Se publicará cuando toque | RA2, RA3, RA4 |
-| **4** | Capa de enlace | Tramas, direcciones MAC, switches y dominios de colisión/difusión | Se publicará cuando toque | RA1, RA4 |
+| **3** | [Cableado estructurado y componentes](03-cableado-estructurado/tema3.md) | Racks, paneles, electrónica de red, WLAN | **Publicado** | RA2, RA3, RA4 |
+| **4** | [Capa de enlace](04-capa-enlace/tema4.md) | Tramas, direcciones MAC, switches y dominios de colisión/difusión | **Publicado** | RA1, RA4 |
 | **5** | Capa de red | IPv4, máscaras, CIDR, ARP, ICMP y DHCP | Se publicará cuando toque | RA1, RA4 |
 | **6** | Enrutamiento, subnetting y VLANs | Subnetting, supernetting, rutas estáticas, VLANs | Se publicará cuando toque | RA3, RA4 |
 | **7** | Capa de transporte | Puertos, TCP/UDP y herramientas básicas | Se publicará cuando toque | RA4, RA5 |

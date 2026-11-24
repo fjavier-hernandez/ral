@@ -18,6 +18,7 @@ nav:
   - "1. Introducción. Arquitectura de redes": "01-introduccion-arquitectura/tema1.md"
   - "2. Medios de transmisión y capa física": "02-medios-capa-fisica/tema2.md"
   - "3. Cableado estructurado y componentes": "03-cableado-estructurado/tema3.md"
+  - "4. Capa de enlace": "04-capa-enlace/tema4.md"
   - Taller:
       - "Normas del taller": "00-normas/normas_taller.md"
       - "PR201 — Crimpado de latiguillos UTP": "taller/pr201-guia-crimpado.md"

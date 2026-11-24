@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 370" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+<defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4a5560"/></marker></defs>
+<rect width="900" height="370" fill="#f7f9fb"/>
+<text x="450.0" y="28" text-anchor="middle" font-size="16" font-weight="700" fill="#1a2332">Métodos de control de acceso al medio compartido</text>
+<text x="450.0" y="50" text-anchor="middle" font-size="12" fill="#4a5560">Hoy, en cable, el switch en full-dúplex evita compartir; en Wi-Fi el aire sigue siendo compartido.</text>
+<rect x="330" y="66" width="240" height="44" rx="4" fill="#1a2332"/>
+<text x="450.0" y="92.9" text-anchor="middle" font-size="14" fill="#fff" font-weight="700">Acceso al medio compartido</text>
+<line x1="450" y1="110" x2="160" y2="150" stroke="#4a5560" stroke-width="2" marker-end="url(#ar)"/>
+<rect x="40" y="152" width="240" height="44" rx="4" fill="#3b6ea5"/>
+<text x="160.0" y="178.55" text-anchor="middle" font-size="13" fill="#fff" font-weight="700">Particionado del canal</text>
+<rect x="40" y="206" width="240" height="96" rx="4" fill="#fff" stroke="#3b6ea5" stroke-width="1.5"/>
+<text x="160" y="232" text-anchor="middle" font-size="12" fill="#1a2332">TDM: turnos de tiempo fijos</text>
+<text x="160" y="258" text-anchor="middle" font-size="12" fill="#1a2332">FDM: una frecuencia por usuario</text>
+<text x="160" y="284" text-anchor="middle" font-size="12" fill="#1a2332">Ejemplo: emisoras de radio FM</text>
+<line x1="450" y1="110" x2="450" y2="150" stroke="#4a5560" stroke-width="2" marker-end="url(#ar)"/>
+<rect x="330" y="152" width="240" height="44" rx="4" fill="#6b4ea1"/>
+<text x="450.0" y="178.55" text-anchor="middle" font-size="13" fill="#fff" font-weight="700">Toma de turnos</text>
+<rect x="330" y="206" width="240" height="96" rx="4" fill="#fff" stroke="#6b4ea1" stroke-width="1.5"/>
+<text x="450" y="232" text-anchor="middle" font-size="12" fill="#1a2332">Sondeo (polling): un maestro</text>
+<text x="450" y="258" text-anchor="middle" font-size="12" fill="#1a2332">da permiso a cada estación</text>
+<text x="450" y="284" text-anchor="middle" font-size="12" fill="#1a2332">Paso de testigo (Token Ring)</text>
+<line x1="450" y1="110" x2="740" y2="150" stroke="#4a5560" stroke-width="2" marker-end="url(#ar)"/>
+<rect x="620" y="152" width="240" height="44" rx="4" fill="#2f7d4a"/>
+<text x="740.0" y="178.55" text-anchor="middle" font-size="13" fill="#fff" font-weight="700">Acceso aleatorio (contienda)</text>
+<rect x="620" y="206" width="240" height="96" rx="4" fill="#fff" stroke="#2f7d4a" stroke-width="1.5"/>
+<text x="740" y="232" text-anchor="middle" font-size="12" fill="#1a2332">ALOHA: transmite sin escuchar</text>
+<text x="740" y="258" text-anchor="middle" font-size="12" fill="#1a2332">CSMA/CD: Ethernet clásico</text>
+<text x="740" y="284" text-anchor="middle" font-size="12" fill="#1a2332">CSMA/CA: Wi-Fi (802.11)</text>
+<text x="450" y="336" text-anchor="middle" font-size="12" fill="#4a5560" font-style="italic">Sin colisiones por diseño en los dos primeros grupos; en el tercero las colisiones se detectan (CD) o se intentan evitar (CA).</text>
+</svg>

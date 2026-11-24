@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 470" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+<defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4a5560"/></marker></defs>
+<rect width="900" height="470" fill="#f7f9fb"/>
+<text x="450.0" y="28" text-anchor="middle" font-size="16" font-weight="700" fill="#1a2332">STP: tres switches en triángulo y un puerto bloqueado</text>
+<text x="450.0" y="50" text-anchor="middle" font-size="12" fill="#4a5560">El cable redundante sigue conectado, pero STP lo deja en espera para que no haya bucle.</text>
+<rect x="370" y="80" width="160" height="56" rx="4" fill="#2f7d4a"/>
+<text x="450.0" y="104.2" text-anchor="middle" font-size="12" fill="#fff" font-weight="700">SW1 · PUENTE RAÍZ</text>
+<text x="450.0" y="120.2" text-anchor="middle" font-size="12" fill="#fff" font-weight="700">prioridad 4096</text>
+<rect x="120" y="320" width="160" height="56" rx="4" fill="#3b6ea5"/>
+<text x="200.0" y="344.2" text-anchor="middle" font-size="12" fill="#fff" font-weight="700">SW2</text>
+<text x="200.0" y="360.2" text-anchor="middle" font-size="12" fill="#fff" font-weight="700">prioridad 32768</text>
+<rect x="620" y="320" width="160" height="56" rx="4" fill="#3b6ea5"/>
+<text x="700.0" y="344.2" text-anchor="middle" font-size="12" fill="#fff" font-weight="700">SW3</text>
+<text x="700.0" y="360.2" text-anchor="middle" font-size="12" fill="#fff" font-weight="700">prioridad 32768</text>
+<line x1="400" y1="136" x2="230" y2="320" stroke="#1a2332" stroke-width="3"/>
+<line x1="500" y1="136" x2="670" y2="320" stroke="#1a2332" stroke-width="3"/>
+<line x1="280" y1="348" x2="520" y2="348" stroke="#1a2332" stroke-width="3"/>
+<line x1="560" y1="348" x2="620" y2="348" stroke="#1a2332" stroke-width="3" stroke-dasharray="8 6"/>
+<rect x="346" y="148" width="44" height="22" rx="10" fill="#2f7d4a"/>
+<text x="368" y="164" text-anchor="middle" font-size="11" fill="#fff" font-weight="700">DP</text>
+<rect x="510" y="148" width="44" height="22" rx="10" fill="#2f7d4a"/>
+<text x="532" y="164" text-anchor="middle" font-size="11" fill="#fff" font-weight="700">DP</text>
+<rect x="228" y="278" width="44" height="22" rx="10" fill="#6b4ea1"/>
+<text x="250" y="294" text-anchor="middle" font-size="11" fill="#fff" font-weight="700">RP</text>
+<rect x="628" y="278" width="44" height="22" rx="10" fill="#6b4ea1"/>
+<text x="650" y="294" text-anchor="middle" font-size="11" fill="#fff" font-weight="700">RP</text>
+<rect x="288" y="336" width="44" height="22" rx="10" fill="#2f7d4a"/>
+<text x="310" y="352" text-anchor="middle" font-size="11" fill="#fff" font-weight="700">DP</text>
+<rect x="560" y="334" width="32" height="28" rx="4" fill="#c0392b"/>
+<line x1="566" y1="340" x2="586" y2="356" stroke="#fff" stroke-width="3"/>
+<line x1="586" y1="340" x2="566" y2="356" stroke="#fff" stroke-width="3"/>
+<text x="576" y="390" text-anchor="middle" font-size="12" fill="#c0392b" font-weight="700">Puerto bloqueado</text>
+<text x="576" y="406" text-anchor="middle" font-size="12" fill="#c0392b">(alternativo)</text>
+<rect x="40" y="410" width="400" height="50" rx="4" fill="#fff" stroke="#4a5560" stroke-width="1.5"/>
+<text x="60" y="430" text-anchor="start" font-size="12" fill="#1a2332">RP: puerto raíz, el mejor camino hacia la raíz</text>
+<text x="60" y="450" text-anchor="start" font-size="12" fill="#1a2332">DP: puerto designado, reenvía en ese segmento</text>
+<text x="670" y="450" text-anchor="middle" font-size="11" fill="#4a5560" font-style="italic">Gana la raíz el ID de puente más bajo (prioridad + MAC).</text>
+<text x="670" y="466" text-anchor="middle" font-size="11" fill="#4a5560" font-style="italic">Si cae un enlace activo, el bloqueado pasa a reenviar.</text>
+</svg>
