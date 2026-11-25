@@ -5,9 +5,9 @@ description: Funciones de la capa 2, subcapas LLC y MAC, trama Ethernet, CRC, di
 
 # Tema 4. Capa de enlace
 
-En el Tema 3 dejamos montado el armario: tomas, panel, latiguillos y un switch con todos sus pilotos encendidos. Que el piloto esté verde solo dice que la capa física funciona, es decir, que hay señal en el cable. Lo que pasa después, cuando el PC tiene algo que enviar, es cosa de la **capa de enlace de datos** (capa 2): empaqueta los bits en **tramas**, les pone una dirección **MAC** de origen y de destino, comprueba que no lleguen dañadas y decide cuándo se puede transmitir. El switch es el equipo que vive en esta capa, así que entender la trama es entender qué hace el switch con cada una.
+En el Tema 3 dejamos montado el armario: tomas, panel, latiguillos y un switch con todos sus pilotos encendidos. Que el piloto esté verde solo dice que la capa física funciona, es decir, que hay señal en el cable. Lo que pasa después, cuando el PC tiene algo que enviar, corresponde a la **capa de enlace de datos** (capa 2): encapsula los datos en **tramas**, les añade las direcciones **MAC** de origen y de destino, comprueba que no lleguen dañadas y decide cuándo se puede transmitir. El switch es el dispositivo que opera en esta capa, así que entender la trama es entender qué hace el switch con cada una.
 
-En el taller esto se nota enseguida. Un PC con el cable bien crimpado puede no comunicarse porque las tramas llegan con errores y el switch las descarta. Un cable de más entre dos switches, que parece inofensivo, puede tumbar el aula entera en segundos por un bucle. Al acabar el tema sabrás explicar las dos situaciones y cómo se evitan.
+En el taller esto se comprueba en la práctica. Un PC con el cable bien crimpado puede no comunicarse porque las tramas llegan con errores y el switch las descarta. Un cable de más entre dos switches, que parece inofensivo, puede dejar sin servicio toda la red del aula en segundos por un bucle. Al acabar el tema sabrás explicar las dos situaciones y cómo se evitan.
 
 !!! tip "Primera clase"
     Empieza por el [cuestionario inicial](#cuestionario-inicial). No hace falta haber leído el tema entero: sirve para ver qué traes antes de estudiar. Entrégalo en Aules **antes** de mirar el Autocheck.
@@ -81,7 +81,7 @@ Entrega tus respuestas en **Aules** como tarea del cuestionario inicial **antes*
 
 ## Qué hace la capa de enlace {: #que-hace-la-capa-de-enlace }
 
-La capa física, que vimos en el Tema 2, solo sabe mover bits: unos y ceros convertidos en señal eléctrica, luz o radio. La **capa de enlace de datos** organiza esos bits para que tengan sentido. Agrupa los datos que le pasa la capa de red en bloques llamados **[tramas](#trama)**, les añade una cabecera con la dirección de quien envía y de quien recibe, y les pone al final un código para comprobar que han llegado bien. Si el medio lo comparten varios equipos, además decide quién puede transmitir en cada momento.
+La capa física, que vimos en el Tema 2, solo se encarga de transmitir los bits: unos y ceros convertidos en señal eléctrica, luz o radio. La **capa de enlace de datos** organiza esos bits para que tengan sentido. Agrupa los datos que le pasa la capa de red en bloques llamados **[tramas](#trama)**, les añade una cabecera con la dirección de quien envía y de quien recibe, y añade al final un código de comprobación de errores (FCS). Si el medio lo comparten varios equipos, además decide quién puede transmitir en cada momento.
 
 Hay una idea que conviene fijar desde el principio: **la trama solo viaja entre dos equipos vecinos**, es decir, conectados al mismo enlace. Cuando tu PC envía algo a un servidor de Internet, el paquete IP va de extremo a extremo sin cambiar sus direcciones, pero la trama que lo transporta se rehace en cada router. El switch, en cambio, no fabrica tramas nuevas: las reenvía tal como llegan, porque trabaja dentro de la misma LAN. Por eso decimos que la capa 2 se ocupa del **salto** y la capa 3 del **camino completo**.
 
@@ -149,7 +149,7 @@ La tabla siguiente resume cada campo, su tamaño y para qué sirve.
 
 El preámbulo y el SFD los genera la NIC y no se cuentan como parte de la trama; por eso una captura de Wireshark empieza directamente por la MAC de destino. Entre una trama y la siguiente, además, el emisor guarda un silencio obligatorio llamado **IFG** (*Inter-Frame Gap*), de 96 bits (12 bytes), aunque el medio esté libre.
 
-La trama tiene un **tamaño mínimo de 64 bytes** (de la MAC destino al FCS). Ese mínimo viene del Ethernet clásico de medio compartido: la trama tenía que durar lo suficiente como para que, si chocaba con otra en el punto más lejano del cable, el emisor todavía estuviera transmitiendo y se enterase de la colisión. Lo verás con más detalle en [CSMA/CD](#csma-cd). El **máximo es de 1518 bytes**, con 1500 de datos como mucho; ese límite de datos se llama **MTU** (*Maximum Transmission Unit*, unidad máxima de transmisión) y es el que verás en la configuración de cualquier interfaz. Con la etiqueta de VLAN, la trama puede llegar a 1522 bytes. Algunos equipos de centro de datos admiten **tramas gigantes** (*jumbo frames*) de hasta unos 9000 bytes, pero no es estándar y todos los equipos del camino tienen que admitirlas.
+La trama tiene un **tamaño mínimo de 64 bytes** (de la MAC destino al FCS). Ese mínimo viene del Ethernet clásico de medio compartido: la trama tenía que durar lo suficiente como para que, si colisionaba con otra en el punto más lejano del cable, el emisor todavía estuviera transmitiendo y pudiera detectar la colisión. Lo verás con más detalle en [CSMA/CD](#csma-cd). El **máximo es de 1518 bytes**, con 1500 de datos como mucho; ese límite de datos se llama **MTU** (*Maximum Transmission Unit*, unidad máxima de transmisión) y es el que verás en la configuración de cualquier interfaz. Con la etiqueta de VLAN, la trama puede llegar a 1522 bytes. Algunos equipos de centro de datos admiten **tramas gigantes** (*jumbo frames*) de hasta unos 9000 bytes, pero no es estándar y todos los equipos del camino tienen que admitirlas.
 
 **Ejemplo de aula.** Una petición ARP («¿quién tiene la IP 192.168.10.1?») ocupa solo 28 bytes. Como el campo de datos tiene que tener al menos 46, la NIC añade 18 bytes de relleno. Cuando la veas en Wireshark, esos ceros del final no son un error: son el relleno.
 
@@ -189,7 +189,7 @@ Los tres primeros bytes forman el **[OUI](#oui)** (*Organizationally Unique Iden
   <figcaption>OUI, identificador de tarjeta y los dos bits especiales del primer octeto.</figcaption>
 </figure>
 
-Dos bits del primer byte tienen un significado especial. El bit **I/G** (individual o grupo) es el menos significativo: si vale 0, la dirección es **unicast** y va a una sola interfaz; si vale 1, es **multicast** y va a un grupo de equipos. Un truco rápido es mirar el segundo dígito hexadecimal: si es impar, la dirección es de grupo. El bit **U/L** (universal o local) es el siguiente: si vale 0, la dirección es la que grabó el fabricante; si vale 1, se ha asignado en local, como hacen las máquinas virtuales o los móviles cuando usan una **MAC aleatoria** para que no se les pueda seguir de una red Wi‑Fi a otra. En ese caso, el segundo dígito es 2, 6, A o E.
+Dos bits del primer byte tienen un significado especial. El bit **I/G** (individual o grupo) es el menos significativo: si vale 0, la dirección es **unicast** y va a una sola interfaz; si vale 1, es **multicast** y va a un grupo de equipos. Una forma rápida de identificarlo es fijarse en el segundo dígito hexadecimal: si es impar, la dirección es de grupo. El bit **U/L** (universal o local) es el siguiente: si vale 0, la dirección es la que grabó el fabricante; si vale 1, se ha asignado en local, como hacen las máquinas virtuales o los móviles cuando usan una **MAC aleatoria** para que no se les pueda seguir de una red Wi‑Fi a otra. En ese caso, el segundo dígito es 2, 6, A o E.
 
 Hay una dirección especial que conviene saberse de memoria: **`FF:FF:FF:FF:FF:FF`** es la dirección de **difusión** (*broadcast*). Una trama con ese destino la recogen todos los equipos del dominio de difusión, y es la que usan, por ejemplo, ARP para preguntar por una IP o DHCP para buscar un servidor (Tema 5).
 
@@ -238,7 +238,7 @@ Aquí se entiende el tamaño mínimo de trama. El tiempo de ranura de 512 bits s
 
 ### CSMA/CA en Wi‑Fi
 
-En una red inalámbrica, la tarjeta no puede escuchar mientras transmite, porque su propia señal tapa cualquier otra, y además dos equipos pueden no oírse entre sí aunque los dos oigan al punto de acceso. Por eso Wi‑Fi (IEEE 802.11) usa **CSMA/CA** (*Collision Avoidance*, con prevención de colisiones): en lugar de detectar el choque, intenta evitarlo. Antes de transmitir, el equipo escucha y espera un tiempo aleatorio aunque el medio parezca libre, y cada trama recibida correctamente se confirma con un **acuse de recibo** (ACK). Si el ACK no llega, el emisor supone que hubo colisión y repite.
+En una red inalámbrica, la tarjeta no puede escuchar mientras transmite, porque su propia señal tapa cualquier otra, y además dos equipos pueden no oírse entre sí aunque los dos oigan al punto de acceso. Por eso Wi‑Fi (IEEE 802.11) usa **CSMA/CA** (*Collision Avoidance*, con prevención de colisiones): en lugar de detectar la colisión, intenta evitarlo. Antes de transmitir, el equipo escucha y espera un tiempo aleatorio aunque el medio parezca libre, y cada trama recibida correctamente se confirma con un **acuse de recibo** (ACK). Si el ACK no llega, el emisor supone que hubo colisión y repite.
 
 ### Half dúplex y full dúplex: por qué casi no hay colisiones
 
@@ -292,7 +292,7 @@ Fíjate en que PC4 todavía no aparece en la tabla, aunque ha recibido tres tram
 
 ### Métodos de conmutación
 
-No todos los switches esperan lo mismo antes de reenviar una trama. Con **almacenamiento y reenvío** (*store-and-forward*), el switch recibe la trama entera, comprueba el FCS y solo la reenvía si es correcta; añade algo de retardo, pero no propaga basura, y es lo habitual en los switches actuales. Con **corte** (*cut-through*), el switch empieza a reenviar en cuanto ha leído la MAC de destino; es el más rápido, pero puede propagar tramas dañadas, porque cuando llega el FCS la trama ya ha salido. El método **libre de fragmentos** (*fragment-free*) es un término medio: espera a los primeros 64 bytes, que es donde aparecen los restos de una colisión, y luego reenvía.
+No todos los switches esperan lo mismo antes de reenviar una trama. Con **almacenamiento y reenvío** (*store-and-forward*), el switch recibe la trama entera, comprueba el FCS y solo la reenvía si es correcta; añade algo de retardo, pero no propaga tramas erróneas, y es lo habitual en los switches actuales. Con **corte** (*cut-through*), el switch empieza a reenviar en cuanto ha leído la MAC de destino; es el más rápido, pero puede propagar tramas dañadas, porque cuando llega el FCS la trama ya ha salido. El método **libre de fragmentos** (*fragment-free*) es un término medio: espera a los primeros 64 bytes, que es donde aparecen los restos de una colisión, y luego reenvía.
 
 <figure markdown="span">
   ![Trama con tres marcas: corte tras la MAC destino, libre de fragmentos a los 64 bytes y almacenamiento y reenvío al final del FCS](../img/t4-metodos-conmutacion.svg){ width="820" }
@@ -335,9 +335,9 @@ Para decidir qué bloquear, los switches intercambian mensajes llamados **BPDU**
 2. **Cada switch elige su puerto raíz** (RP, *root port*): el que tiene el camino de menor coste hasta la raíz. El coste depende de la velocidad del enlace: cuanto más rápido, menor.
 3. **En cada segmento se elige un puerto designado** (DP, *designated port*), el que reenvía hacia ese segmento. Todos los puertos de la raíz son designados. Los puertos que no son ni raíz ni designados se **bloquean**.
 
-En el STP clásico, un puerto pasa por los estados de **bloqueo**, **escucha**, **aprendizaje** y **reenvío**, y desde que algo cambia hasta que la red vuelve a converger pueden pasar entre 30 y 50 segundos. Por eso, cuando conectas un PC a un switch con STP, el piloto se queda un rato en ámbar antes de ponerse verde. **RSTP** (*Rapid STP*, IEEE 802.1w) hace lo mismo pero converge en pocos segundos, y es lo que usan por defecto los switches actuales.
+En el STP clásico, un puerto pasa por los estados de **bloqueo**, **escucha**, **aprendizaje** y **reenvío**, y desde que algo cambia hasta que la red vuelve a converger pueden pasar entre 30 y 50 segundos. Por eso, cuando conectas un PC a un switch con STP, el led permanece en ámbar durante unos segundos antes de pasar a verde. **RSTP** (*Rapid STP*, IEEE 802.1w) hace lo mismo pero converge en pocos segundos, y es lo que usan por defecto los switches actuales.
 
-**Ejemplo de aula.** Si alguien conecta en el aula un latiguillo con los dos extremos en el mismo switch no gestionable, sin STP, la red se cae en segundos: todos los pilotos parpadean a la vez y nadie navega. Con un switch gestionable con STP activado, ese puerto se bloquea y la red sigue funcionando.
+**Ejemplo de aula.** Si alguien conecta en el aula un latiguillo con los dos extremos en el mismo switch no gestionable, sin STP, se produce una tormenta de difusión en segundos: todos los leds parpadean a la vez y la red queda inoperativa. Con un switch gestionable con STP activado, ese puerto se bloquea y la red sigue funcionando.
 
 !!! note "Para la certificación CCNA"
     `show spanning-tree` muestra quién es la raíz, el rol de cada puerto (*Root*, *Desg*, *Altn*) y su estado. La prioridad se cambia con `spanning-tree vlan 1 priority 4096` y debe ser múltiplo de 4096.
@@ -458,7 +458,7 @@ A veces un solo enlace entre dos switches se queda corto. Si pones dos cables, S
 | **Sesiones estimadas** | **2** en clase; se termina en casa |
 | **Instrumento** | Rúbrica 0–10 |
 
-* :simple-cisco: **PR402**. Individual, en [Cisco Packet Tracer](https://www.netacad.com/es/cisco-packet-tracer). Vas a ver con tus propios ojos cómo aprende un switch y cómo STP rompe un bucle.
+* :simple-cisco: **PR402**. Individual, en [Cisco Packet Tracer](https://www.netacad.com/es/cisco-packet-tracer). Vas a comprobar en la simulación cómo aprende un switch y cómo STP rompe un bucle.
 
   **Enunciado (pasos):**
 
