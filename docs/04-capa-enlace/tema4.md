@@ -9,38 +9,11 @@ En el Tema 3 dejamos montado el armario: tomas, panel, latiguillos y un switch c
 
 En el taller esto se nota enseguida. Un PC con el cable bien crimpado puede no comunicarse porque las tramas llegan con errores y el switch las descarta. Un cable de más entre dos switches, que parece inofensivo, puede tumbar el aula entera en segundos por un bucle. Al acabar el tema sabrás explicar las dos situaciones y cómo se evitan.
 
+!!! tip "Primera clase"
+    Empieza por el [cuestionario inicial](#cuestionario-inicial). No hace falta haber leído el tema entero: sirve para ver qué traes antes de estudiar. Entrégalo en Aules **antes** de mirar el Autocheck.
+
 !!! tip "Cómo leerlo"
     Lee cada apartado completo: primero el párrafo (qué es, para qué sirve y un ejemplo), después la tabla o la figura, y al final los errores frecuentes. No estudies solo las tablas. Los términos marcados enlazan al [glosario](#glosario). Cuando acabes el tema, haz el [Autocheck](#autocheck-del-tema).
-
-## Clases y tareas {: #clases-y-tareas }
-
-En este tema vamos viendo los contenidos por sesiones. Aquí tienes, para cada clase, qué trabajamos en el aula y qué tienes que entregar después en Aules.
-
-### Clase 1 {: #clase-1 }
-
-Hoy empezamos el Tema 4. En esta clase vemos la primera mitad, la que necesitas para entender qué hace el switch del armario con cada trama que le llega.
-
-**Qué vemos en clase**
-
-1. El [cuestionario inicial](#cuestionario-inicial), para ver qué sabes antes de empezar.
-2. [Qué hace la capa de enlace](#que-hace-la-capa-de-enlace) y por qué la trama solo viaja entre vecinos.
-3. Las [subcapas LLC y MAC](#subcapas-llc-y-mac).
-4. [La trama Ethernet](#la-trama-ethernet), campo a campo, y la [detección de errores con CRC](#crc).
-5. Las [direcciones MAC](#direcciones-mac): cómo se leen y cómo encuentras la de tu equipo.
-6. [El switch por dentro](#el-switch-por-dentro): aprender, filtrar, reenviar e inundar, con el ejemplo paso a paso.
-
-**Qué tienes que entregar**
-
-Todas las entregas van en **Aules**, en formato `.md`, dentro del plazo que marque cada tarea.
-
-| Tarea | Qué haces | Enlace |
-| --- | --- | --- |
-| **Cuestionario inicial** | Respondes con lo que sepas, antes de mirar el Autocheck | [Cuestionario](#cuestionario-inicial) |
-| **AC401** | Lees una trama real campo a campo y analizas la MAC de tu propia NIC | [AC401 — Leer una trama y una MAC](#ac401-leer-una-trama-y-una-mac) |
-| **AC403** | Sigues un switch trama a trama y rellenas su tabla MAC | [AC403 — El switch paso a paso](#ac403-el-switch-paso-a-paso) |
-
-!!! tip "Antes de la próxima clase"
-    Repasa el diagrama de decisión del switch y el ejemplo paso a paso: la AC403 sale sola si lo tienes claro. En la próxima clase seguimos con el acceso al medio (CSMA/CD y CSMA/CA) y el dúplex.
 
 ## Propuesta didáctica
 
