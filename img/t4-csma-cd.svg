@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+<defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4a5560"/></marker></defs>
+<rect width="900" height="560" fill="#f7f9fb"/>
+<text x="450.0" y="28" text-anchor="middle" font-size="16" font-weight="700" fill="#1a2332">CSMA/CD: escuchar, transmitir y, si hay colisión, esperar al azar</text>
+<text x="450.0" y="50" text-anchor="middle" font-size="12" fill="#4a5560">Solo en Ethernet half-dúplex (bus coaxial o hub). En un enlace full-dúplex con switch está desactivado.</text>
+<rect x="190" y="70" width="220" height="40" rx="4" fill="#3b6ea5"/>
+<text x="300.0" y="94.55" text-anchor="middle" font-size="13" fill="#fff" font-weight="700">Trama lista para enviar</text>
+<line x1="300" y1="110" x2="300" y2="130" stroke="#4a5560" stroke-width="2" marker-end="url(#ar)"/>
+<polygon points="300,132.0 415.0,170 300,208.0 185.0,170" fill="#fdf1d8" stroke="#1a2332" stroke-width="1.5"/>
+<text x="300" y="166.2" text-anchor="middle" font-size="12" fill="#1a2332" font-weight="700">¿Medio libre?</text>
+<text x="300" y="182.2" text-anchor="middle" font-size="12" fill="#1a2332" font-weight="700">(escucha portadora)</text>
+<line x1="415" y1="170" x2="500" y2="170" stroke="#4a5560" stroke-width="2"/>
+<line x1="500" y1="170" x2="500" y2="96" stroke="#4a5560" stroke-width="2"/>
+<line x1="500" y1="96" x2="410" y2="96" stroke="#4a5560" stroke-width="2" marker-end="url(#ar)"/>
+<text x="530" y="140" text-anchor="start" font-size="12" fill="#4a5560">No: espera</text>
+<text x="530" y="156" text-anchor="start" font-size="12" fill="#4a5560">y vuelve a escuchar</text>
+<text x="312" y="224" text-anchor="start" font-size="12" fill="#2f7d4a" font-weight="700">Sí</text>
+<line x1="300" y1="208" x2="300" y2="240" stroke="#4a5560" stroke-width="2" marker-end="url(#ar)"/>
+<rect x="160" y="242" width="280" height="40" rx="4" fill="#3b6ea5"/>
+<text x="300.0" y="266.2" text-anchor="middle" font-size="12" fill="#fff" font-weight="700">Espera el IFG (96 bits) y transmite</text>
+<line x1="300" y1="282" x2="300" y2="302" stroke="#4a5560" stroke-width="2" marker-end="url(#ar)"/>
+<polygon points="300,304.0 420.0,342 300,380.0 180.0,342" fill="#fdf1d8" stroke="#1a2332" stroke-width="1.5"/>
+<text x="300" y="338.2" text-anchor="middle" font-size="12" fill="#1a2332" font-weight="700">¿Detecta colisión</text>
+<text x="300" y="354.2" text-anchor="middle" font-size="12" fill="#1a2332" font-weight="700">mientras transmite?</text>
+<line x1="180" y1="342" x2="100" y2="342" stroke="#4a5560" stroke-width="2"/>
+<line x1="100" y1="342" x2="100" y2="420" stroke="#4a5560" stroke-width="2" marker-end="url(#ar)"/>
+<text x="100" y="334" text-anchor="middle" font-size="12" fill="#2f7d4a" font-weight="700">No</text>
+<rect x="20" y="422" width="160" height="44" rx="4" fill="#2f7d4a"/>
+<text x="100.0" y="440.2" text-anchor="middle" font-size="12" fill="#fff" font-weight="700">Transmisión</text>
+<text x="100.0" y="456.2" text-anchor="middle" font-size="12" fill="#fff" font-weight="700">correcta</text>
+<text x="312" y="396" text-anchor="start" font-size="12" fill="#c0392b" font-weight="700">Sí</text>
+<line x1="300" y1="380" x2="300" y2="420" stroke="#4a5560" stroke-width="2" marker-end="url(#ar)"/>
+<rect x="220" y="422" width="260" height="44" rx="4" fill="#c0392b"/>
+<text x="350.0" y="448.2" text-anchor="middle" font-size="12" fill="#fff" font-weight="700">Envía señal de atasco (jam, 32 bits)</text>
+<line x1="350" y1="466" x2="350" y2="486" stroke="#4a5560" stroke-width="2" marker-end="url(#ar)"/>
+<rect x="220" y="488" width="260" height="52" rx="4" fill="#6b4ea1"/>
+<text x="350.0" y="510.2" text-anchor="middle" font-size="12" fill="#fff" font-weight="700">Espera aleatoria (backoff):</text>
+<text x="350.0" y="526.2" text-anchor="middle" font-size="12" fill="#fff" font-weight="700">k × 512 bits, k entre 0 y 2^n - 1</text>
+<line x1="480" y1="514" x2="560" y2="514" stroke="#4a5560" stroke-width="2"/>
+<line x1="560" y1="514" x2="560" y2="262" stroke="#4a5560" stroke-width="2"/>
+<line x1="560" y1="262" x2="440" y2="262" stroke="#4a5560" stroke-width="2" marker-end="url(#ar)"/>
+<text x="570" y="400" text-anchor="start" font-size="12" fill="#4a5560">Reintenta</text>
+<rect x="650" y="70" width="230" height="250" rx="4" fill="#fff" stroke="#4a5560" stroke-width="1.5"/>
+<text x="765" y="94" text-anchor="middle" font-size="13" fill="#1a2332" font-weight="700">Las tres siglas</text>
+<text x="664" y="122" text-anchor="start" font-size="13" fill="#c0392b" font-weight="700">CS</text>
+<text x="700" y="122" text-anchor="start" font-size="12" fill="#1a2332">Carrier Sense: escucha</text>
+<text x="664" y="144" text-anchor="start" font-size="13" fill="#c0392b" font-weight="700"></text>
+<text x="700" y="144" text-anchor="start" font-size="12" fill="#1a2332">antes de hablar</text>
+<text x="664" y="166" text-anchor="start" font-size="13" fill="#c0392b" font-weight="700">MA</text>
+<text x="700" y="166" text-anchor="start" font-size="12" fill="#1a2332">Multiple Access: varios</text>
+<text x="664" y="188" text-anchor="start" font-size="13" fill="#c0392b" font-weight="700"></text>
+<text x="700" y="188" text-anchor="start" font-size="12" fill="#1a2332">comparten el medio</text>
+<text x="664" y="210" text-anchor="start" font-size="13" fill="#c0392b" font-weight="700">CD</text>
+<text x="700" y="210" text-anchor="start" font-size="12" fill="#1a2332">Collision Detection:</text>
+<text x="664" y="232" text-anchor="start" font-size="13" fill="#c0392b" font-weight="700"></text>
+<text x="700" y="232" text-anchor="start" font-size="12" fill="#1a2332">detecta el choque</text>
+<text x="765" y="262" text-anchor="middle" font-size="12" fill="#4a5560">n = número de colisiones</text>
+<text x="765" y="280" text-anchor="middle" font-size="12" fill="#4a5560">(el exponente se limita a 10)</text>
+<text x="765" y="298" text-anchor="middle" font-size="12" fill="#4a5560">Tras 16 intentos, descarta</text>
+</svg>

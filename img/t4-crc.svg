@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 320" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+<defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4a5560"/></marker></defs>
+<rect width="900" height="320" fill="#f7f9fb"/>
+<text x="450.0" y="28" text-anchor="middle" font-size="16" font-weight="700" fill="#1a2332">Detección de errores con CRC: el FCS viaja al final de la trama</text>
+<text x="450.0" y="50" text-anchor="middle" font-size="12" fill="#4a5560">El receptor repite el cálculo. Si no coincide, descarta la trama; Ethernet no la corrige ni la pide de nuevo.</text>
+<text x="200" y="82" text-anchor="middle" font-size="14" fill="#3b6ea5" font-weight="700">EMISOR</text>
+<rect x="60" y="95" width="200" height="44" rx="4" fill="#dce8f5" stroke="#3b6ea5" stroke-width="1.5"/>
+<text x="160.0" y="121.55" text-anchor="middle" font-size="13" fill="#1a2332" font-weight="700">Cabecera + datos</text>
+<line x1="160" y1="139" x2="160" y2="170" stroke="#4a5560" stroke-width="2" marker-end="url(#ar)"/>
+<rect x="60" y="172" width="200" height="44" rx="4" fill="#3b6ea5"/>
+<text x="160.0" y="198.55" text-anchor="middle" font-size="13" fill="#fff" font-weight="700">Calcula CRC-32</text>
+<line x1="260" y1="194" x2="300" y2="194" stroke="#4a5560" stroke-width="2" marker-end="url(#ar)"/>
+<text x="450" y="82" text-anchor="middle" font-size="14" fill="#1a2332" font-weight="700">TRAMA EN EL MEDIO</text>
+<rect x="300" y="172" width="200" height="44" rx="4" fill="#dce8f5" stroke="#3b6ea5" stroke-width="1.5"/>
+<text x="400.0" y="198.2" text-anchor="middle" font-size="12" fill="#1a2332" font-weight="700">Cabecera + datos</text>
+<rect x="500" y="172" width="60" height="44" rx="4" fill="#e3f1e8" stroke="#2f7d4a" stroke-width="1.5"/>
+<text x="530.0" y="198.2" text-anchor="middle" font-size="12" fill="#1a2332" font-weight="700">FCS</text>
+<line x1="560" y1="194" x2="600" y2="194" stroke="#4a5560" stroke-width="2" marker-end="url(#ar)"/>
+<text x="430" y="250" text-anchor="middle" font-size="12" fill="#c0392b" font-style="italic">Un pico de ruido puede cambiar algún bit por el camino</text>
+<text x="720" y="82" text-anchor="middle" font-size="14" fill="#2f7d4a" font-weight="700">RECEPTOR</text>
+<rect x="602" y="95" width="240" height="44" rx="4" fill="#2f7d4a"/>
+<text x="722.0" y="121.2" text-anchor="middle" font-size="12" fill="#fff" font-weight="700">Recalcula CRC sobre lo recibido</text>
+<polygon points="722,163.0 817.0,200 722,237.0 627.0,200" fill="#fdf1d8" stroke="#1a2332" stroke-width="1.5"/>
+<text x="722" y="196.2" text-anchor="middle" font-size="12" fill="#1a2332" font-weight="700">¿Coincide con</text>
+<text x="722" y="212.2" text-anchor="middle" font-size="12" fill="#1a2332" font-weight="700">el FCS?</text>
+<line x1="722" y1="139" x2="722" y2="163" stroke="#4a5560" stroke-width="2" marker-end="url(#ar)"/>
+<rect x="602" y="262" width="110" height="40" rx="4" fill="#2f7d4a"/>
+<text x="657.0" y="286.2" text-anchor="middle" font-size="12" fill="#fff" font-weight="700">Sí: la acepta</text>
+<rect x="732" y="262" width="110" height="40" rx="4" fill="#c0392b"/>
+<text x="787.0" y="286.2" text-anchor="middle" font-size="12" fill="#fff" font-weight="700">No: la descarta</text>
+<line x1="690" y1="226" x2="657" y2="262" stroke="#4a5560" stroke-width="2" marker-end="url(#ar)"/>
+<line x1="754" y1="226" x2="787" y2="262" stroke="#4a5560" stroke-width="2" marker-end="url(#ar)"/>
+</svg>
